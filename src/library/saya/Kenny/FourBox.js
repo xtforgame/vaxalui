@@ -1,14 +1,15 @@
 import React from 'react';
 import ImageBox from './ImageBox';
 import ClassicFibers from './ClassicFibers';
-import TopLeftBox from '../img/bg5.jpg';
-import TopRightBox from '../img/bg6.jpg';
-import BottomLeftBox from '../img/bg7.jpg';
-import BottomRightBox from '../img/bg8.jpg';
-
 
 class FourBox extends React.PureComponent {
   render() {
+    const {
+      topLeftImage,
+      topRightImage,
+      bottomLeftImage,
+      bottomRightImage,
+    } = this.props;
     return (
       <ClassicFibers
         height="1500px"
@@ -20,7 +21,7 @@ class FourBox extends React.PureComponent {
         <ImageBox
           title="CHROMUCH Solution Dyed"
           subtitle="Color without Compromise"
-          backgroundImage={TopLeftBox}
+          backgroundImage={topLeftImage}
           paddingTop="50px"
           fontColor="#ffffff"
         />
@@ -28,7 +29,7 @@ class FourBox extends React.PureComponent {
         <ImageBox
           title="UltraStretch"
           subtitle="Stretch with a Good Conscious"
-          backgroundImage={TopRightBox}
+          backgroundImage={topRightImage}
           paddingTop="105px"
           fontColor="#ffffff"
         />
@@ -36,7 +37,7 @@ class FourBox extends React.PureComponent {
         <ImageBox
           title="TopFresh"
           subtitle="lor sit amet, consectetuer ad"
-          backgroundImage={BottomLeftBox}
+          backgroundImage={bottomLeftImage}
           paddingTop="105px"
           fontColor="#ffffff"
         />
@@ -44,13 +45,11 @@ class FourBox extends React.PureComponent {
         <ImageBox
           title="MicroFilament"
           subtitle="lor sit amet, consectetuer ad"
-          backgroundImage={BottomRightBox}
+          backgroundImage={bottomRightImage}
           paddingTop="105px"
           fontColor="#ffffff"
         />
-
       </ClassicFibers>
-
     );
   }
 }

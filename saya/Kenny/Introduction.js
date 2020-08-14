@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _bg = _interopRequireDefault(require("../img/bg2.jpg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -21,7 +19,6 @@ const styles = {
     color: '#ffffff',
     display: 'flex',
     justifyContent: 'center',
-    backgroundImage: `url(${_bg.default})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100% 100%'
   },
@@ -57,10 +54,14 @@ const styles = {
 class Introduction extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: classes.root,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {

@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Background from '../img/bg2.jpg';
 
 const styles = {
   root: {
@@ -10,7 +9,6 @@ const styles = {
     color: '#ffffff',
     display: 'flex',
     justifyContent: 'center',
-    backgroundImage: `url(${Background})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: '100% 100%',
   },
@@ -47,9 +45,10 @@ class Introduction extends React.PureComponent {
   render() {
     const {
       classes,
+      backgroundImage,
     } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className={classes.section}>
           <div className={classes.title}>
             Design Consciously,

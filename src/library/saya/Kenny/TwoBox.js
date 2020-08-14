@@ -1,12 +1,13 @@
 import React from 'react';
 import ImageBox from './ImageBox';
 import ClassicFibers from './ClassicFibers';
-import LeftBox from '../img/bg3.jpg';
-import RightBox from '../img/bg4.jpg';
-
 
 class TwoBox extends React.PureComponent {
   render() {
+    const {
+      leftImage,
+      rightImage,
+    } = this.props;
     return (
       <ClassicFibers
         height="1000px"
@@ -18,14 +19,14 @@ class TwoBox extends React.PureComponent {
         <ImageBox
           title="FDY"
           subtitle="Fully drawn yarn"
-          backgroundImage={LeftBox}
+          backgroundImage={leftImage}
           paddingTop="105px"
           fontColor="#000000"
         />
         <ImageBox
           title="DTY"
           subtitle="Drawn-texturning yarn"
-          backgroundImage={RightBox}
+          backgroundImage={rightImage}
           paddingTop="105px"
           fontColor="#000000"
         />

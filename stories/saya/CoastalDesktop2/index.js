@@ -8,6 +8,11 @@ import Microfibers from 'library/saya/Kenny/Microfibers';
 import OceanCycle from 'library/saya/Kenny/OceanCycle';
 import SerialProjects from 'library/saya/Kenny/SerialProjects';
 
+import OceanCycleImg from '../img/ocean-cycle-218x300.png';
+import Project1Img from '../img/bg12.jpg';
+import Project2Img from '../img/bg13.jpg';
+
+
 storiesOf('saya|CoastalDesktop2', module)
   // .addParameters({
   //   info: {
@@ -30,8 +35,13 @@ storiesOf('saya|CoastalDesktop2', module)
           />
           <EightyPercent/>
           <Microfibers/>
-          <OceanCycle/>
-          <SerialProjects/>
+          <OceanCycle
+            backgroundImage={OceanCycleImg}
+          />
+          <SerialProjects
+            background1Image={Project1Img}
+            background2Image={Project2Img}
+          />
         </Layout>
       </div>
     )
