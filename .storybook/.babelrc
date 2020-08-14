@@ -19,9 +19,7 @@
           "extensions": [".js", ".ts", ".jsx", ".tsx"],
           "alias": {
             "~": "./src/library",
-            "common/config": "./src/common/configs/development",
-            "common": "./src/common",
-            "config": "./src/library/configs/development"
+            "library": "./src/library"
           }
         }]
       ]
@@ -32,9 +30,7 @@
           "extensions": [".js", ".ts", ".jsx", ".tsx"],
           "alias": {
             "~": "./src/library",
-            "common/config": "./src/common/configs/production",
-            "common": "./src/common",
-            "config": "./src/library/configs/production"
+            "library": "./src/library"
           }
         }]
       ]
@@ -45,9 +41,7 @@
           "extensions": [".js", ".ts", ".jsx", ".tsx"],
           "alias": {
             "~": "./src/library",
-            "common/config": "./src/common/configs/test",
-            "common": "./src/common",
-            "config": "./src/library/configs/test"
+            "library": "./src/library"
           }
         }]
       ]
