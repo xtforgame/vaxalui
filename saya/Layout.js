@@ -22,7 +22,6 @@ const Layout = ({
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
-    height: '100%',
     overflow: 'hidden'
   }
 }, _react.default.createElement(_reactHelmet.default, {
