@@ -5,12 +5,11 @@ import { withStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 import ItemList from './ItemList';
 import { MenuContext } from './MenuContext';
-import { constant } from './Item';
+import { getSize } from './Item';
 
 const styles = theme => ({
   root: {
-    width: constant.width,
-    height: constant.height,
+    ...getSize(theme),
     position: 'relative',
   },
   itemListRoot: {
@@ -45,9 +44,10 @@ class ExpandItem extends React.PureComponent {
   getTopOffset = () => {
     const {
       path,
+      theme,
     } = this.props;
     const ith = path.split('/').pop();
-    return ith * constant.height * -1;
+    return ith * getSize(theme).height * -1;
   }
 
   renderName = () => {
@@ -84,11 +84,12 @@ class ExpandItem extends React.PureComponent {
       path,
       items,
       listDirection,
+      theme,
     } = this.props;
     if (!this.isOpened()) return null;
 
     const listAtRight = {
-      left: constant.width,
+      left: getSize(theme).width,
       top: this.getTopOffset(),
     };
     const style = (listDirection === 'right') ? listAtRight : {};
@@ -134,7 +135,7 @@ ExpandItem.defaultProps = {
 
 ExpandItem.contextType = MenuContext;
 
-export default withStyles(styles)(ExpandItem);
+export default withStyles(styles, { withTheme: true })(ExpandItem);
 
 // export const pageQuery = graphql`
 //   query ABC {

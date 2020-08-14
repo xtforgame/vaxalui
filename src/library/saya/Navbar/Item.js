@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { graphql } from 'gatsby';
 import { MenuContext } from './MenuContext';
-import theme from '../theme';
 
-export const constant = {
+export const getSize = theme => ({
   width: theme.spacing(16),
   height: theme.spacing(3),
-};
+});
 
 class Item extends React.PureComponent {
   showMenu = (e) => {

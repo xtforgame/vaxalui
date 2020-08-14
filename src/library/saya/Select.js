@@ -22,7 +22,7 @@ const styles = theme => ({
   },
 });
 
-class Selects extends React.PureComponent {
+class Select extends React.PureComponent {
   render() {
     const {
       classes,
@@ -53,16 +53,10 @@ class Selects extends React.PureComponent {
   }
 }
 
-Selects.propTypes = {
+Select.propTypes = {
 };
 
-Selects.defaultProps = {
+Select.defaultProps = {
 };
 
-export default withStyles(styles)(Selects);
-
-// export const pageQuery = graphql`
-//   query ABC {
-//     abc
-//   }
-// `;
+export default withStyles(styles)(Select);

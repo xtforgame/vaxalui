@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
 import TextField from './TextField';
-import Selects from './Selects';
+import Select from './Select';
 import Button from './Button';
 
 const styles = theme => ({
@@ -94,7 +94,7 @@ class Footer extends React.PureComponent {
             onClick={this.signUpNewsletter}
           />
           <div>Select language</div>
-          <Selects
+          <Select
             options={['English', 'Traditional Chinese']}
             value={languange}
             onChange={this.handleLanguageChange}
