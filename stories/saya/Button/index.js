@@ -9,7 +9,7 @@ import {
   FlexColumn,
 } from '../../shared';
 
-storiesOf('saya|core/Buttons', module)
+storiesOf('saya|Buttons/Basic', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -24,35 +24,11 @@ storiesOf('saya|core/Buttons', module)
       <div style={{ margin: 16 }}>
         <FlexRow>
           <FlexColumn>
-            <Button onClick={null} style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
+            <Button
+              text="SUBMIT"
+              onClick={null}
+            />
           </FlexColumn>
-          <FlexColumn>
-            <Button onClick={null} style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-          </FlexColumn>
-          <FlexColumn>
-            <Button onClick={null} style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-          </FlexColumn>
-          <FlexColumn>
-            <Button onClick={null} style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
-            <Button onClick={null} style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-            <Button onClick={null} style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-          </FlexColumn>
-          {/* <FlexColumn>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-          </FlexColumn>
-          <FlexColumn>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} >{text('Text','Button')}</Button>
-            <Button onClick={null} variant="text" style={{ marginBottom: 16 }} size="small" >{text('Text','Button')}</Button>
-          </FlexColumn> */}
         </FlexRow>
       </div>
     )
