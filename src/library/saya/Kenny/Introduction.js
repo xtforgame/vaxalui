@@ -1,19 +1,26 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Background from '../img/bg2.jpg';
 
 const styles = {
   root: {
     width: '100%',
     height: 590,
     backgroundColor: '#000000',
-    textAlign: 'left',
-    paddingLeft: 40,
-    paddingTop: 80,
     color: '#ffffff',
     display: 'flex',
+    justifyContent: 'center',
+    backgroundImage: `url(${Background})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%',
+  },
+  section: {
+    width: 1024,
+    display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
     flexWrap: 'wrap',
+    paddingTop: 80,
+    paddingLeft: 40,
   },
   title: {
     fontSize: 40,
@@ -43,28 +50,29 @@ class Introduction extends React.PureComponent {
     } = this.props;
     return (
       <div className={classes.root}>
-        <div className={classes.title}>
-          Design Consciously,
-          <br />
-          Know What Goes Into Your Gears.
+        <div className={classes.section}>
+          <div className={classes.title}>
+            Design Consciously,
+            <br />
+            Know What Goes Into Your Gears.
+          </div>
+
+          <div className={classes.line} />
+
+          <div className={classes.subtitle}>
+            Smooth and Painless Transition to Smarter Fibers.
+          </div>
+
+          <div className={classes.description}>
+            Vestibulum rutrum quam vitae fringilla tincidunt.
+            Suspendisse nec tortor urna. Ut laoreet sodales nisi,
+            quis iaculis nulla iaculis vitae.
+            Donec sagittis faucibus lacus eget blandit.
+            Mauris vitae ultricies metus, at condimentum nulla.
+            Donec quis ornare lacus.
+            Etiam gravida mollis tortor quis porttitor.
+          </div>
         </div>
-
-        <div className={classes.line} />
-
-        <div className={classes.subtitle}>
-          Smooth and Painless Transition to Smarter Fibers.
-        </div>
-
-        <div className={classes.description}>
-          Vestibulum rutrum quam vitae fringilla tincidunt.
-          Suspendisse nec tortor urna. Ut laoreet sodales nisi,
-          quis iaculis nulla iaculis vitae.
-          Donec sagittis faucibus lacus eget blandit.
-          Mauris vitae ultricies metus, at condimentum nulla.
-          Donec quis ornare lacus.
-          Etiam gravida mollis tortor quis porttitor.
-        </div>
-
       </div>
 
     );

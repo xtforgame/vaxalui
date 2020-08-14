@@ -1,6 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageBox from './ImageBox';
+import LeftBox from '../img/bg12.jpg';
+import RightBox from '../img/bg13.jpg';
 
 const styles = {
   root: {
@@ -48,14 +50,14 @@ class SerialProjects extends React.PureComponent {
           <ImageBox
             title="SAYAGLOBAL"
             subtitle="lor sit amet, consectetuer ad"
-            backgroundColor="pink"
+            backgroundImage={LeftBox}
             paddingTop="105px"
             fontColor="#ffffff"
           />
           <ImageBox
             title="SAYAUSA"
             subtitle="USA-based fiber program"
-            backgroundColor="black"
+            backgroundImage={RightBox}
             paddingTop="105px"
             fontColor="#ffffff"
           />

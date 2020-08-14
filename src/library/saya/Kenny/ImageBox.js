@@ -44,16 +44,17 @@ class ImageBox extends React.PureComponent {
       classes,
       title,
       subtitle,
-      backgroundColor,
+      backgroundImage,
       fontColor,
       paddingTop,
     } = this.props;
+
 
     return (
       <div
         className={classes.root}
         style={{
-          backgroundColor,
+          backgroundImage: `url(${backgroundImage})`,
           color: fontColor,
         }}
       >

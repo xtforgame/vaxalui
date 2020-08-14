@@ -11,6 +11,8 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     textAlign: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%',
   },
   firstTitle: {
     fontSize: 15,
@@ -59,9 +61,15 @@ class TopSection extends React.PureComponent {
       secondTitle,
       secondTitleBack,
       thirdTitle,
+      backgroundImage,
     } = this.props;
     return (
-      <div className={classes.root}>
+      <div
+        className={classes.root}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
+      >
         <div className={classes.firstTitle}>
           {firstTitle}
         </div>

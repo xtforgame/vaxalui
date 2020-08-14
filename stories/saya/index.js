@@ -13,6 +13,9 @@ import './TextField';
 // Select
 import './Select';
 
+// Home
+import './Home';
+
 // CoastalDesktop1
 import './CoastalDesktop1';
 
