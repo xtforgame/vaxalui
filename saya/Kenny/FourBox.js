@@ -11,6 +11,14 @@ var _ImageBox = _interopRequireDefault(require("./ImageBox"));
 
 var _ClassicFibers = _interopRequireDefault(require("./ClassicFibers"));
 
+var _bg = _interopRequireDefault(require("../img/bg5.jpg"));
+
+var _bg2 = _interopRequireDefault(require("../img/bg6.jpg"));
+
+var _bg3 = _interopRequireDefault(require("../img/bg7.jpg"));
+
+var _bg4 = _interopRequireDefault(require("../img/bg8.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 class FourBox extends _react.default.PureComponent {
@@ -24,25 +32,25 @@ class FourBox extends _react.default.PureComponent {
     }, _react.default.createElement(_ImageBox.default, {
       title: "CHROMUCH Solution Dyed",
       subtitle: "Color without Compromise",
-      backgroundColor: "brown",
+      backgroundImage: _bg.default,
       paddingTop: "50px",
       fontColor: "#ffffff"
     }), _react.default.createElement(_ImageBox.default, {
       title: "UltraStretch",
       subtitle: "Stretch with a Good Conscious",
-      backgroundColor: "red",
+      backgroundImage: _bg2.default,
       paddingTop: "105px",
       fontColor: "#ffffff"
     }), _react.default.createElement(_ImageBox.default, {
       title: "TopFresh",
       subtitle: "lor sit amet, consectetuer ad",
-      backgroundColor: "green",
+      backgroundImage: _bg3.default,
       paddingTop: "105px",
       fontColor: "#ffffff"
     }), _react.default.createElement(_ImageBox.default, {
       title: "MicroFilament",
       subtitle: "lor sit amet, consectetuer ad",
-      backgroundColor: "orange",
+      backgroundImage: _bg4.default,
       paddingTop: "105px",
       fontColor: "#ffffff"
     }));

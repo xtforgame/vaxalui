@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _bg = _interopRequireDefault(require("../img/bg2.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -16,14 +18,20 @@ const styles = {
     width: '100%',
     height: 590,
     backgroundColor: '#000000',
-    textAlign: 'left',
-    paddingLeft: 40,
-    paddingTop: 80,
     color: '#ffffff',
     display: 'flex',
+    justifyContent: 'center',
+    backgroundImage: `url(${_bg.default})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%'
+  },
+  section: {
+    width: 1024,
+    display: 'flex',
     flexDirection: 'column',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 80,
+    paddingLeft: 40
   },
   title: {
     fontSize: 40,
@@ -54,6 +62,8 @@ class Introduction extends _react.default.PureComponent {
     return _react.default.createElement("div", {
       className: classes.root
     }, _react.default.createElement("div", {
+      className: classes.section
+    }, _react.default.createElement("div", {
       className: classes.title
     }, "Design Consciously,", _react.default.createElement("br", null), "Know What Goes Into Your Gears."), _react.default.createElement("div", {
       className: classes.line
@@ -61,7 +71,7 @@ class Introduction extends _react.default.PureComponent {
       className: classes.subtitle
     }, "Smooth and Painless Transition to Smarter Fibers."), _react.default.createElement("div", {
       className: classes.description
-    }, "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor."));
+    }, "Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.")));
   }
 
 }

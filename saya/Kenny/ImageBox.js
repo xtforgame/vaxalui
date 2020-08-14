@@ -54,14 +54,14 @@ class ImageBox extends _react.default.PureComponent {
       classes,
       title,
       subtitle,
-      backgroundColor,
+      backgroundImage,
       fontColor,
       paddingTop
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
       style: {
-        backgroundColor,
+        backgroundImage: `url(${backgroundImage})`,
         color: fontColor
       }
     }, _react.default.createElement("div", {

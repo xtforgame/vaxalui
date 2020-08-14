@@ -16,15 +16,17 @@ const styles = {
     width: '100%',
     height: 580,
     backgroundColor: 'pink',
-    paddingTop: 80,
-    paddingLeft: 40,
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%'
   },
   section: {
     width: 1024,
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 80,
+    paddingLeft: 40
   },
   title: {
     width: 630,
@@ -37,10 +39,14 @@ const styles = {
 class Microfibers extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: classes.root,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {

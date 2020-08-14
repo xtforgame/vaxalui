@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _oceanCycle218x = _interopRequireDefault(require("../img/ocean-cycle-218x300.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -23,7 +25,7 @@ const styles = {
   oceanCycle: {
     width: 220,
     height: 300,
-    backgroundColor: 'blue',
+    backgroundImage: `url(${_oceanCycle218x.default})`,
     marginTop: 75,
     marginRight: 90
   },

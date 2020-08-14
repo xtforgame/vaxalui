@@ -20,7 +20,9 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     flexWrap: 'wrap',
-    textAlign: 'center'
+    textAlign: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '100% 100%'
   },
   firstTitle: {
     fontSize: 15,
@@ -66,10 +68,14 @@ class TopSection extends _react.default.PureComponent {
       firstTitle,
       secondTitle,
       secondTitleBack,
-      thirdTitle
+      thirdTitle,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: classes.root,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
     }, _react.default.createElement("div", {
       className: classes.firstTitle
     }, firstTitle), _react.default.createElement("div", {

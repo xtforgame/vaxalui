@@ -11,6 +11,10 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageBox = _interopRequireDefault(require("./ImageBox"));
 
+var _bg = _interopRequireDefault(require("../img/bg12.jpg"));
+
+var _bg2 = _interopRequireDefault(require("../img/bg13.jpg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -60,13 +64,13 @@ class SerialProjects extends _react.default.PureComponent {
     }, _react.default.createElement(_ImageBox.default, {
       title: "SAYAGLOBAL",
       subtitle: "lor sit amet, consectetuer ad",
-      backgroundColor: "pink",
+      backgroundImage: _bg.default,
       paddingTop: "105px",
       fontColor: "#ffffff"
     }), _react.default.createElement(_ImageBox.default, {
       title: "SAYAUSA",
       subtitle: "USA-based fiber program",
-      backgroundColor: "black",
+      backgroundImage: _bg2.default,
       paddingTop: "105px",
       fontColor: "#ffffff"
     })));
