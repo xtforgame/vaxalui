@@ -12,3 +12,9 @@ import './TextField';
 
 // Select
 import './Select';
+
+// CoastalDesktop1
+import './CoastalDesktop1';
+
+// CoastalDesktop2
+import './CoastalDesktop2';
