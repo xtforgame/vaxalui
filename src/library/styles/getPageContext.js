@@ -49,7 +49,7 @@ export function getTheme(theme) {
     paletteType = 'light';
   }
 
-  return createMuiTheme({
+  const muiTheme = createMuiTheme({
     direction: theme.direction,
     typography: {
       useNextVariants: true,
@@ -79,6 +79,11 @@ export function getTheme(theme) {
       },
     },
   });
+
+  return {
+    ...muiTheme,
+    spacing: unit => unit * 8,
+  };
 }
 
 export const defaultUiTheme = {

@@ -9,6 +9,8 @@ import { withAzrmuiTheme, ThemeContainer } from './custom-addons/theme';
 withOptions({
   name: 'Azrmui',
   url: 'localhost:9001',
+  hierarchySeparator: /\//,
+  hierarchyRootSeparator: /\|/,
 });
 
 addDecorator(withKnobs);

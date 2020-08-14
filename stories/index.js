@@ -1,2 +1,5 @@
-// Buttons
-import './Button';
+// core
+import './core';
+
+// saya
+import './saya';

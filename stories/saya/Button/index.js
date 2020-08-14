@@ -2,14 +2,14 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import Button from '@material-ui/core/Button';
+import Button from 'library/saya/Button';
 
 import {
   FlexRow,
   FlexColumn,
-} from '../shared';
+} from '../../shared';
 
-storiesOf('Buttons', module)
+storiesOf('saya|core/Buttons', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -24,7 +24,6 @@ storiesOf('Buttons', module)
       <div style={{ margin: 16 }}>
         <FlexRow>
           <FlexColumn>
-            <Button variant="contained" color="primary">XX</Button>
             <Button onClick={null} style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
             <Button onClick={null} variant="outlined" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
             <Button onClick={null} variant="text" style={{ marginBottom: 16 }} size="large" >{text('Text','Button')}</Button>
