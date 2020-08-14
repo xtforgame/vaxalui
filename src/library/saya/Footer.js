@@ -113,8 +113,3 @@ Footer.defaultProps = {
 
 export default withStyles(styles)(Footer);
 
-// export const pageQuery = graphql`
-//   query ABC {
-//     abc
-//   }
-// `;
