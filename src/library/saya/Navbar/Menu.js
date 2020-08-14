@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { graphql } from 'gatsby';
-import { withStyles } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Item from './Item';
 import ExpandItem from './ExpandItem';
 import { MenuContext } from './MenuContext';
