@@ -19,7 +19,7 @@ import TopRightBox from '../img/bg6.jpg';
 import BottomLeftBox from '../img/bg7.jpg';
 import BottomRightBox from '../img/bg8.jpg';
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Mobile', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -29,7 +29,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('Home',
+  .add('MobileHome',
     ()=>(
       <div style={{ width: '100%' }}>
         <Layout>

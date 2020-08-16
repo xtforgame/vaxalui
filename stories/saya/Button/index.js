@@ -9,7 +9,7 @@ import {
   FlexColumn,
 } from '../../shared';
 
-storiesOf('saya|Buttons/Basic', module)
+storiesOf('saya|Compnents/Buttons', module)
   // .addParameters({
   //   info: {
   //     inline: true,

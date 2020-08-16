@@ -9,7 +9,7 @@ import {
   FlexColumn,
 } from '../../shared';
 
-storiesOf('core|Buttons/Buttons', module)
+storiesOf('core|Compnents/Buttons', module)
   // .addParameters({
   //   info: {
   //     inline: true,

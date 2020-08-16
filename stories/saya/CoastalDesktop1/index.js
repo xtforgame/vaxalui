@@ -13,7 +13,7 @@ import Project1Img from '../img/bg12.jpg';
 import Project2Img from '../img/bg13.jpg';
 
 
-storiesOf('saya|CoastalDesktop1', module)
+storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
   //   info: {
   //     inline: true,

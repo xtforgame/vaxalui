@@ -21,3 +21,6 @@ import './CoastalDesktop1';
 
 // CoastalDesktop2
 import './CoastalDesktop2';
+
+// MobileHome
+import './MobileHome';

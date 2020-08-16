@@ -9,7 +9,7 @@ import {
   FlexColumn,
 } from '../../shared';
 
-storiesOf('saya|Footer', module)
+storiesOf('saya|Compnents/Footer', module)
   // .addParameters({
   //   info: {
   //     inline: true,

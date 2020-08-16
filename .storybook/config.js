@@ -37,6 +37,7 @@ addDecorator((story) => {
 })
 
 addParameters({
+  categoryOrder: ['core', 'saya'],
   info: {
     disable: true,
     // inline: true,

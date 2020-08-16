@@ -9,7 +9,7 @@ import {
   FlexColumn,
 } from '../../shared';
 
-storiesOf('saya|TextField', module)
+storiesOf('saya|Compnents/TextField', module)
   // .addParameters({
   //   info: {
   //     inline: true,
