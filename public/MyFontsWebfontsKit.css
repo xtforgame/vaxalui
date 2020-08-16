@@ -1,0 +1,35 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3936313, 2020-08-16T07:25:59-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FilsonSoft-Bold by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/filson-soft/bold/
+ * 
+ * Webfont: FilsonSoftRegular by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/filson-soft/regular/
+ * 
+ * 
+ * Webfonts copyright: Copyright &amp;#x00A9; 2016 by Olivier Gourvat. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3c1039");
+  
+@font-face {
+  font-family: 'FilsonSoft-Bold';
+  src: url('webFonts/FilsonSoft-Bold/font.woff2') format('woff2'), url('webFonts/FilsonSoft-Bold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'FilsonSoftRegular';
+  src: url('webFonts/FilsonSoftRegular/font.woff2') format('woff2'), url('webFonts/FilsonSoftRegular/font.woff') format('woff');
+}
+
