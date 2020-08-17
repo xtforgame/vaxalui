@@ -22,14 +22,16 @@ class MainAppBar extends React.PureComponent {
   render() {
     const {
       classes,
+      children,
     } = this.props;
     return (
       <div className={classes.root}>
         <AppBar position="fixed" style={{ backgroundColor: '#000000' }}>
           <Toolbar>
-            <Typography variant="h6" color="inherit">
+            {children}
+            {/* <Typography variant="h6" color="inherit">
               logo
-            </Typography>
+            </Typography> */}
             <div className={classes.grow} />
             <IconButton color="inherit" onClick={() => {}} aria-label="NotificationList">
               <MenuIcon />

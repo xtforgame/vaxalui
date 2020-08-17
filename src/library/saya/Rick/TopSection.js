@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     fontFamily: 'FilsonSoft-Bold',
   },
   firstTitle: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold',
     lineHeight: 1.4,
     color: '#000000',
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 2,
   },
   secondTitle: {
-    fontSize: 55,
+    fontSize: 50,
     fontWeight: 'bold',
     color: '#000000',
     paddingTop: 10,
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 2,
   },
   thirdTitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#000000',
     paddingTop: 10,
   },
@@ -95,7 +95,7 @@ export default (props) => {
         </div>
 
         <div className={classes.thirdTitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>{thirdTitle}</pre>
+          <pre style={{ fontFamily: 'FilsonSoftRegular' }}>{thirdTitle}</pre>
         </div>
       </div>
     </CardMedia>

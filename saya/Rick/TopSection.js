@@ -29,7 +29,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     fontFamily: 'FilsonSoft-Bold'
   },
   firstTitle: {
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold',
     lineHeight: 1.4,
     color: '#000000',
@@ -42,7 +42,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     marginTop: 2
   },
   secondTitle: {
-    fontSize: 55,
+    fontSize: 50,
     fontWeight: 'bold',
     color: '#000000',
     paddingTop: 10
@@ -58,7 +58,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     marginTop: 2
   },
   thirdTitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: '#000000',
     paddingTop: 10
   }
@@ -112,7 +112,7 @@ var _default = props => {
     className: classes.thirdTitle
   }, _react.default.createElement("pre", {
     style: {
-      fontFamily: 'FilsonSoft-Bold'
+      fontFamily: 'FilsonSoftRegular'
     }
   }, thirdTitle))));
 };

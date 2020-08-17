@@ -33,7 +33,8 @@ const styles = theme => ({
 class MainAppBar extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      children
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -42,10 +43,7 @@ class MainAppBar extends _react.default.PureComponent {
       style: {
         backgroundColor: '#000000'
       }
-    }, _react.default.createElement(_Toolbar.default, null, _react.default.createElement(_Typography.default, {
-      variant: "h6",
-      color: "inherit"
-    }, "logo"), _react.default.createElement("div", {
+    }, _react.default.createElement(_Toolbar.default, null, children, _react.default.createElement("div", {
       className: classes.grow
     }), _react.default.createElement(_IconButton.default, {
       color: "inherit",

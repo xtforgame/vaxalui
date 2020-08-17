@@ -21,6 +21,9 @@ import BottomRightBox from '../img/bg8.jpg';
 import MobileBg1 from '../img/mobile/bg1.png'
 import MobileBg2 from '../img/mobile/bg2.png'
 
+import Logo from '../img/mobile/m_logo_w.svg'
+import FbIcon from '../img/mobile/fb_w.svg'
+import IgIcon from '../img/mobile/ig_w.svg'
 import NextCircle from '../img/mobile/m_now_next_circle.png'
 
 storiesOf('saya|Pages/Mobile', module)
@@ -36,10 +39,20 @@ storiesOf('saya|Pages/Mobile', module)
   .add('MobileHome',
     ()=>(
       <div style={{ width: '100%' }}>
-        <MobileLayout>
+        <MobileLayout
+          fbIcon={(
+            <img src={FbIcon} height={30} style={{}} />
+          )}
+          igIcon={(
+            <img src={IgIcon} height={30} style={{}} />
+          )}
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
           <TopSection
             firstTitle="PRODUCTS"
-            secondTitle={'SAYA\nRecycled\nFiber'}
+            secondTitle={'SAYA\nRenew\nFiber'}
             thirdTitle={'Design Consciously,\nKnow What Goes Into Your Gear'}
             backgroundImage={MobileBg1}
           />

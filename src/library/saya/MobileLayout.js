@@ -2,9 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { ThemeProvider } from '@material-ui/styles';
 import MobileNavbar from './MobileNavbar';
-import Footer from './Footer';
+import MobileFooter from './MobileFooter';
 
-const MobileLayout = ({ children }) => (
+const MobileLayout = ({
+  logo,
+  fbIcon,
+  igIcon,
+  children,
+}) => (
   <div
     style={{
       width: '100%',
@@ -13,7 +18,9 @@ const MobileLayout = ({ children }) => (
     }}
   >
     <Helmet title="SAYA homepage" />
-    <MobileNavbar />
+    <MobileNavbar>
+      {logo}
+    </MobileNavbar>
     <div
       style={{
         width: '100%',
@@ -30,7 +37,10 @@ const MobileLayout = ({ children }) => (
     >
       {children}
     </div>
-    <Footer />
+    <MobileFooter
+      fbIcon={fbIcon}
+      igIcon={igIcon}
+    />
   </div>
 );
 
