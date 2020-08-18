@@ -1,15 +1,5 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -19,43 +9,45 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%'
   },
   section: {
     width: 1024,
     display: 'flex',
     flexWrap: 'wrap',
     paddingTop: 80,
-    paddingLeft: 40
+    paddingLeft: 40,
   },
   title: {
     width: 630,
     fontSize: 40,
     fontWeight: 'bold',
-    color: '#000000'
-  }
+    color: '#000000',
+  },
 };
 
-class Microfibers extends _react.default.PureComponent {
+
+class Microfibers extends React.PureComponent {
   render() {
     const {
       classes,
       backgroundImage
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root,
-      style: {
-        backgroundImage: `url(${backgroundImage})`
-      }
-    }, _react.default.createElement("div", {
-      className: classes.section
-    }, _react.default.createElement("div", {
-      className: classes.title
-    }, "We Turn Potential Microplastics into Microfibers.")));
+    return (
+      <div 
+      className={classes.root}
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+      >
+        <div className={classes.section}>
+          <div className={classes.title}>
+            We Turn Potential Microplastics into Microfibers.
+        </div>
+        </div>
+      </div>
+    );
   }
-
 }
 
-var _default = (0, _styles.withStyles)(styles)(Microfibers);
 
-exports.default = _default;
+export default withStyles(styles)(Microfibers);

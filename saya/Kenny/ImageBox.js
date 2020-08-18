@@ -1,15 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
+import GreenButton from './GreenButton';
 
 const styles = {
   root: {
@@ -21,63 +12,71 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     borderRadius: 30,
-    marginBottom: 50
+    marginBottom: 50,
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+  },
+  titleBack:{
+    fontWeight: 'normal',
   },
   subtitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    paddingTop: 10
+    paddingTop: 10,
   },
   button: {
-    width: 130,
-    height: 45,
-    fontSize: 14,
-    color: '#ffffff',
-    fontWeight: 'bold',
-    backgroundColor: '#64703f',
-    border: 'none',
-    borderRadius: 22,
     marginTop: 160,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
+  },
 };
 
-class ImageBox extends _react.default.PureComponent {
+class ImageBox extends React.PureComponent {
   render() {
     const {
       classes,
       title,
+      titleBack,
       subtitle,
       backgroundImage,
       fontColor,
-      paddingTop
+      paddingTop,
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root,
-      style: {
-        backgroundImage: `url(${backgroundImage})`,
-        color: fontColor
-      }
-    }, _react.default.createElement("div", {
-      className: classes.title,
-      style: {
-        paddingTop
-      }
-    }, title), _react.default.createElement("div", {
-      className: classes.subtitle
-    }, subtitle), _react.default.createElement("button", {
-      className: classes.button
-    }, "Learn more"));
-  }
 
+
+    return (
+      <div
+        className={classes.root}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          color: fontColor,
+        }}
+      >
+        <div
+          className={classes.title}
+          style={{
+            paddingTop: paddingTop,
+          }}
+        >
+          {title}<span className={classes.titleBack}>{titleBack}</span>
+        </div>
+
+        <div className={classes.subtitle}>
+          {subtitle}
+        </div>
+
+        <div className={classes.button} >
+          <GreenButton
+            text="Learn more"
+          />
+        </div>
+
+
+      </div>
+
+    );
+  }
 }
 
-var _default = (0, _styles.withStyles)(styles)(ImageBox);
 
-exports.default = _default;
+export default withStyles(styles)(ImageBox);

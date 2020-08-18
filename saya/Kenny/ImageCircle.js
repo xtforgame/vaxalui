@@ -1,28 +1,18 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
     width: 715,
     height: 370,
-    position: 'relative'
+    position: 'relative',
   },
   leftCircle: {
     width: 370,
     height: 370,
     borderRadius: '50%',
     backgroundColor: 'pink',
-    position: 'absolute'
+    position: 'absolute',
   },
   rightCircle: {
     width: 370,
@@ -30,26 +20,23 @@ const styles = {
     borderRadius: '50%',
     backgroundColor: 'yellow',
     position: 'absolute',
-    right: 0
-  }
+    right: 0,
+  },
 };
 
-class ImageCircle extends _react.default.PureComponent {
+class ImageCircle extends React.PureComponent {
   render() {
     const {
-      classes
+      classes,
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
-    }, _react.default.createElement("div", {
-      className: classes.leftCircle
-    }), _react.default.createElement("div", {
-      className: classes.rightCircle
-    }));
+    return (
+      <div className={classes.root}>
+        <div className={classes.leftCircle}></div>
+        <div className={classes.rightCircle}></div>
+      </div>
+    );
   }
-
 }
 
-var _default = (0, _styles.withStyles)(styles)(ImageCircle);
 
-exports.default = _default;
+export default withStyles(styles)(ImageCircle);
