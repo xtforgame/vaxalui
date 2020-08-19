@@ -47,9 +47,9 @@ class ExpandItem extends React.PureComponent {
       name,
     } = this.props;
 
-    let endAdornment = '^';
+    let endAdornment = '>';
     if (this.isOpened()) {
-      endAdornment = '>';
+      endAdornment = '^';
     }
     return (
       <div
