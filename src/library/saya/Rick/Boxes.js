@@ -1,19 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CardMedia from '@material-ui/core/CardMedia';
+import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '100%',
     height: 320,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    flexWrap: 'wrap',
     textAlign: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%',
-    position: 'relative',
   },
   title: {
     fontSize: 33,
@@ -48,7 +40,7 @@ export default (props) => {
 
   return (
     <React.Fragment>
-      <CardMedia
+      <ImageContainer
         className={classes.root}
         style={{ width: '100%', height: 320, color, backgroundColor }}
       >
@@ -72,7 +64,7 @@ export default (props) => {
             <pre style={{ fontFamily: 'FilsonSoftRegular' }}>{content}</pre>
           </div>
         </div>
-      </CardMedia>
+      </ImageContainer>
       <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', backgroundColor }}>
         {children}
       </div>

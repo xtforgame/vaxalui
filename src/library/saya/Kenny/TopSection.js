@@ -1,17 +1,11 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
     height: 330,
-    backgroundColor: 'yellow',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    flexWrap: 'wrap',
     textAlign: 'center',
-    backgroundRepeat: 'no-repeat',
   },
   firstTitle: {
     fontSize: 15,
@@ -44,7 +38,6 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
     paddingTop: 10,
   },
-
 };
 
 
@@ -62,10 +55,10 @@ class TopSection extends React.PureComponent {
       firstLineWidth,
     } = this.props;
     return (
-      <div
+      <ImageContainer
+        image={backgroundImage}
         className={classes.root}
         style={{
-          backgroundImage: `url(${backgroundImage})`,
           color: fontColor,
         }}
       >
@@ -95,7 +88,7 @@ class TopSection extends React.PureComponent {
         <div className={classes.thirdTitle}>
           {thirdTitle}
         </div>
-      </div>
+      </ImageContainer>
     );
   }
 }

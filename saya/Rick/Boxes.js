@@ -23,7 +23,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     flexWrap: 'wrap',
     textAlign: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%',
     position: 'relative'
   },
   title: {

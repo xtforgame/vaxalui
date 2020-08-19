@@ -1,14 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
     height: 580,
-    backgroundColor: 'pink',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundRepeat: 'no-repeat',
   },
   section: {
     width: 1024,
@@ -30,21 +26,19 @@ class Microfibers extends React.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
+      backgroundImage,
     } = this.props;
     return (
-      <div 
-      className={classes.root}
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
+      <ImageContainer
+        image={backgroundImage}
+        className={classes.root}
       >
         <div className={classes.section}>
           <div className={classes.title}>
             We Turn Potential Microplastics into Microfibers.
+          </div>
         </div>
-        </div>
-      </div>
+      </ImageContainer>
     );
   }
 }

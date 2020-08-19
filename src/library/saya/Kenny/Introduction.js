@@ -1,23 +1,11 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundRepeat: 'no-repeat',
-  },
-  section: {
-    width: 1024,
-    display: 'flex',
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
     paddingTop: 80,
-    paddingLeft: 40,
   },
-
   title: {
     fontSize: 40,
     fontWeight: 'bold',
@@ -58,54 +46,53 @@ class Introduction extends React.PureComponent {
       children,
     } = this.props;
     return (
-      <div
+      <ImageContainer
         className={classes.root}
         style={{
-          height: height,
+          height,
           backgroundImage: `url(${backgroundImage})`,
-          backgroundColor: backgroundColor,
+          backgroundColor,
           color: fontColor,
         }}
       >
-        <div className={classes.section}>
-          <div
-            className={classes.title}
-            style={{
-              width: titleWidth,
-            }}
-          >
-            {title}<br />{titleBack}
-          </div>
-
-          <div
-            className={classes.line}
-            style={{
-              border: lineBorder,
-            }}
-          />
-
-          <div className={classes.subtitle}>
-            {subtitle}
-          </div>
-
-          <div
-            className={classes.description}
-            style={{
-              width: descriptionWidth,
-            }}
-          >
-            {description}
-          </div>
-
-          <div >
-            {children}
-          </div>
+        <div
+          className={classes.title}
+          style={{
+            width: titleWidth,
+          }}
+        >
+          {title}
+          <br />
+          {titleBack}
         </div>
-      </div>
+
+        <div
+          className={classes.line}
+          style={{
+            border: lineBorder,
+          }}
+        />
+
+        <div className={classes.subtitle}>
+          {subtitle}
+        </div>
+
+        <div
+          className={classes.description}
+          style={{
+            width: descriptionWidth,
+          }}
+        >
+          {description}
+        </div>
+
+        <div>
+          {children}
+        </div>
+      </ImageContainer>
     );
   }
 }
 
 
 export default withStyles(styles)(Introduction);
-
