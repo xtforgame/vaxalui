@@ -59,6 +59,7 @@ class Navbar extends React.PureComponent {
 
   render() {
     const {
+      onLinkClick,
       classes,
     } = this.props;
     const {
@@ -82,6 +83,7 @@ class Navbar extends React.PureComponent {
           <div>
             <Menu
               items={navItems}
+              onLinkClick={onLinkClick}
               onChange={this.handleMenuChange}
             />
           </div>
@@ -90,12 +92,6 @@ class Navbar extends React.PureComponent {
     )
   }
 }
-
-Navbar.propTypes = {
-};
-
-Navbar.defaultProps = {
-};
 
 export default withStyles(styles)(Navbar);
 

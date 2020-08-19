@@ -9,4 +9,7 @@ export const MenuContext = React.createContext({
   leavePath: (path) => {
     console.warn('default leavePath', path);
   },
+  onLinkClick: (path) => {
+    console.warn('default onLinkClick', path);
+  },
 });

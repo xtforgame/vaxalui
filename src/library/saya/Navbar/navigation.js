@@ -12,74 +12,85 @@ export default [{
       link: '/saya-now-overview',
     }, {
       name: 'SAYA Global',
-      link: '/saya-now-overview',
+      link: '/saya-global',
     }, {
       name: 'SAYA Coastal',
-      link: '/saya-now-overview',
+      link: '/saya-coastal',
     }, {
       name: 'SAYA USA',
-      link: '/saya-now-overview',
+      link: '/saya-usa',
     }],
   }, {
     name: 'SAYA Next',
     listDirection: 'right',
     items: [{
       name: 'Overview',
-      link: '/saya-now-overview',
+      link: '/saya-next-overview',
     }, {
       name: 'SAYA RSCUW',
-      link: '/saya-now-overview',
+      link: '/saya-rscuw',
     }, {
       name: 'SAYA Trace',
-      link: '/saya-now-overview',
+      link: '/saya-trace',
     }, {
       name: 'SAYA Garma',
-      link: '/saya-now-overview',
+      link: '/saya-garma',
     }],
   }],
 }, {
   name: 'PRODUCTS',
   items: [{
-    name: '1',
-    link: '/saya-now-overview',
+    name: 'Overview',
+    link: '/products-overview',
   }, {
-    name: '2',
-    link: '/saya-now-overview',
+    name: 'SAYA Classic',
+    link: '/saya-classic',
   }, {
-    name: '3',
-    link: '/saya-now-overview',
+    name: 'CHROMUCH',
+    link: '/chromuch',
   }, {
-    name: '4',
-    link: '/saya-now-overview',
+    name: 'Ultrastretch',
+    link: '/ultrastretch',
+  }, {
+    name: 'Topfresh',
+    link: '/topfresh',
+  }, {
+    name: 'Microfiber',
+    link: '/microfiber',
   }],
 }, {
   name: 'ABOUT',
   items: [{
-    name: '1',
-    link: '/saya-now-overview',
+    name: 'News',
+    link: '/news',
   }, {
-    name: '2',
-    link: '/saya-now-overview',
+    name: 'Version & Mission',
+    link: '/version-mission',
   }, {
-    name: '3',
-    link: '/saya-now-overview',
+    name: 'SAYA by Nan Ya',
+    link: '/saya-by-nan-ya',
   }, {
-    name: '4',
-    link: '/saya-now-overview',
+    name: 'Media & Downloads',
+    link: '/downloads',
+  }, {
+    name: 'Renewal Innovations',
+    link: '/innovations',
   }],
 }, {
   name: 'PARTNERS',
-  items: [{
-    name: '1',
-    link: '/saya-now-overview',
-  }, {
-    name: '2',
-    link: '/saya-now-overview',
-  }, {
-    name: '3',
-    link: '/saya-now-overview',
-  }, {
-    name: '4',
-    link: '/saya-now-overview',
-  }],
+  items: [
+    // {
+    //   name: '1',
+    //   link: '/saya-now-overview',
+    // }, {
+    //   name: '2',
+    //   link: '/saya-now-overview',
+    // }, {
+    //   name: '3',
+    //   link: '/saya-now-overview',
+    // }, {
+    //   name: '4',
+    //   link: '/saya-now-overview',
+    // },
+  ],
 }];

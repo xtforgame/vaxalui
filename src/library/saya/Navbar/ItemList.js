@@ -32,7 +32,7 @@ class ItemList extends React.PureComponent {
     const {
       name,
       link,
-      items,      
+      items,
       listDirection,
     } = item;
     const {

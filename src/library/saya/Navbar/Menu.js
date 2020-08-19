@@ -20,7 +20,7 @@ const styles = theme => ({
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
   },
-})
+});
 
 class Menu extends React.PureComponent {
   constructor(props) {
@@ -83,7 +83,7 @@ class Menu extends React.PureComponent {
             path={`${index}`}
           >
             <ExpandItem
-              name={name}              
+              name={name}
               path={`${index}`}
               items={items}
               listDirection="bottom"
@@ -99,10 +99,16 @@ class Menu extends React.PureComponent {
   render() {
     const {
       classes,
+      onLinkClick,
     } = this.props;
     return (
       <MenuContext.Provider
-        value={this.state}
+        value={{
+          ...this.state,
+          onLinkClick: onLinkClick || ((path) => {
+            console.warn('default onLinkClick', path);
+          }),
+        }}
       >
         <div
           className={classes.menuRoot}
@@ -113,12 +119,6 @@ class Menu extends React.PureComponent {
     );
   }
 }
-
-Menu.propTypes = {
-};
-
-Menu.defaultProps = {
-};
 
 export default withStyles(styles)(Menu);
 

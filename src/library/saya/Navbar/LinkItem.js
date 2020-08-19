@@ -28,6 +28,7 @@ class LinkItem extends React.PureComponent {
       to,
       name,
     } = this.props;
+    console.log('name :', name);
     return (
       <Link
         to={to}
