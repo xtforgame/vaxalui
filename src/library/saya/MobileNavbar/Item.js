@@ -12,6 +12,12 @@ export const getSize = theme => ({
 const styles = theme => ({
   root: {
     paddingLeft: getSize(theme).indent,
+    borderTopStyle: 'solid',
+    borderTopColor: '#828282',
+    borderTopWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: '#828282',
+    borderBottomWidth: 1,
   },
 });
 
