@@ -9,15 +9,12 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _now_next_circle_sample = _interopRequireDefault(require("../../../../stories/saya/img/now_next_circle_sample.jpg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     width: 710,
     height: 370,
-    backgroundImage: `url(${_now_next_circle_sample.default})`,
     display: 'flex',
     textAlign: 'center',
     color: '#ffffff'
@@ -60,10 +57,14 @@ class ImageCircle extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      linkText
+      linkText,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: classes.root,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
     }, _react.default.createElement("div", {
       className: classes.leftCircle
     }, _react.default.createElement("div", {

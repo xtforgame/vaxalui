@@ -10,6 +10,8 @@ import FourBox from 'library/saya/Kenny/FourBox';
 
 import background_TopSection from '../img/bg1.jpg';
 import background_Introduction from '../img/bg2.jpg';
+import backgroundNextCircle from '../img/now_next_circle_sample.jpg';
+
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -48,7 +50,9 @@ storiesOf('saya|Pages/Desktop', module)
             descriptionWidth="460px"
           />
 
-          <TwocircleSection />
+          <TwocircleSection
+            backgroundImage={backgroundNextCircle}
+          />
           <TwoBox />
           <FourBox />
 

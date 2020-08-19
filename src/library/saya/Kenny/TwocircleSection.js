@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageCircle from './ImageCircle';
 import { withStyles } from '@material-ui/styles';
+import ImageCircle from './ImageCircle';
 
 const styles = {
   root: {
@@ -20,24 +20,26 @@ const styles = {
   },
   circle: {
     marginTop: 110,
-  }
+  },
 };
 
 class TwocircleSection extends React.PureComponent {
   render() {
     const {
       classes,
+      backgroundImage,
     } = this.props;
     return (
       <div className={classes.root}>
         <div className={classes.title}>
-          All The Products are Available in<br />
+          All The Products are Available in
+          <br />
           SAYA Now & SAYA Next Technologies.
         </div>
-
         <div className={classes.circle}>
-          <ImageCircle 
-          linkText="Explore this Technology"
+          <ImageCircle
+            linkText="Explore this Technology"
+            backgroundImage={backgroundImage}
           />
         </div>
       </div>

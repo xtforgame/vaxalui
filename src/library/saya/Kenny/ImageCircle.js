@@ -1,13 +1,10 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
-import background from '../../../../stories/saya/img/now_next_circle_sample.jpg';
-
 const styles = {
   root: {
     width: 710,
     height: 370,
-    backgroundImage: `url(${background})`,
     display: 'flex',
     textAlign: 'center',
     color: '#ffffff',
@@ -51,9 +48,10 @@ class ImageCircle extends React.PureComponent {
     const {
       classes,
       linkText,
+      backgroundImage,
     } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className={classes.leftCircle}>
           <div className={classes.title}>
             SAYA<span className={classes.titleBack}>NOW</span>

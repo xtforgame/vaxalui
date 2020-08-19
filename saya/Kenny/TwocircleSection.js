@@ -7,9 +7,9 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _ImageCircle = _interopRequireDefault(require("./ImageCircle"));
-
 var _styles = require("@material-ui/styles");
+
+var _ImageCircle = _interopRequireDefault(require("./ImageCircle"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37,7 +37,8 @@ const styles = {
 class TwocircleSection extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -46,7 +47,8 @@ class TwocircleSection extends _react.default.PureComponent {
     }, "All The Products are Available in", _react.default.createElement("br", null), "SAYA Now & SAYA Next Technologies."), _react.default.createElement("div", {
       className: classes.circle
     }, _react.default.createElement(_ImageCircle.default, {
-      linkText: "Explore this Technology"
+      linkText: "Explore this Technology",
+      backgroundImage: backgroundImage
     })));
   }
 
