@@ -6,9 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Menu from './Menu';
 import navItems from './navigation';
+import MenuIcon from './MenuIcon';
 
 const styles = theme => ({
   root: {
@@ -43,7 +43,7 @@ class MobileNavbar extends React.PureComponent {
   }
 
   handleMenuChange = (e, value) => {
-    console.log('handleMenuChange, link clicked', value);
+    console.log('[TODO] handleMenuChange, link clicked', value);
     this.setState({
       isOpen: false,
     });
@@ -64,7 +64,9 @@ class MobileNavbar extends React.PureComponent {
             {children}
             <div className={classes.grow} />
             <IconButton color="inherit" onClick={this.handleMenuOpen} aria-label="NotificationList">
-              <MenuIcon />
+              <MenuIcon
+                open={isOpen}
+              />
             </IconButton>
           </Toolbar>
         </AppBar>
