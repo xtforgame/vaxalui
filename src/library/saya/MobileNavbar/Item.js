@@ -16,8 +16,10 @@ const styles = theme => ({
 });
 
 class Item extends React.PureComponent {
-  handleClick = () => {
-    this.context.enterPath(this.props.path);
+  handleClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    this.context.enterPath(this.props.path, this.props.type);
   }
 
   render() {
@@ -39,6 +41,7 @@ class Item extends React.PureComponent {
 
 Item.propTypes = {
   path: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['link', 'expand']).isRequired,
   children: PropTypes.node.isRequired,
 };
 

@@ -37,14 +37,16 @@ class MobileNavbar extends React.PureComponent {
   }
 
   handleMenuOpen = () => {
-    console.log('onclick');
     this.setState({
       isOpen: !this.state.isOpen,
     });
   }
 
   handleMenuChange = (e, value) => {
-    console.log('handleMenuChange', value);
+    console.log('handleMenuChange, link clicked', value);
+    this.setState({
+      isOpen: false,
+    });
   }
 
   render() {
@@ -55,7 +57,6 @@ class MobileNavbar extends React.PureComponent {
     const {
       isOpen,
     } = this.state;
-    console.log(isOpen);
     return (
       <div className={classes.root}>
         <AppBar position="fixed" style={{ backgroundColor: '#000000' }}>

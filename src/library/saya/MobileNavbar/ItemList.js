@@ -45,6 +45,7 @@ class ItemList extends React.PureComponent {
       body = (
         <Item
           path={path}
+          type="link"
         >
           <LinkItem
             to={link}
@@ -59,6 +60,7 @@ class ItemList extends React.PureComponent {
       body = (
         <Item
           path={path}
+          type="expand"
         >
           <ExpandItem
             name={name}
