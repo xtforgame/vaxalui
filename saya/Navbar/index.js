@@ -76,7 +76,9 @@ class Navbar extends _react.default.PureComponent {
 
   render() {
     const {
-      classes
+      onLinkClick,
+      classes,
+      items
     } = this.props;
     const {
       isOpen
@@ -91,15 +93,13 @@ class Navbar extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.logo
     }, "Logo"), _react.default.createElement("div", null, _react.default.createElement(_Menu.default, {
-      items: _navigation.default,
+      items: items || _navigation.default,
+      onLinkClick: onLinkClick,
       onChange: this.handleMenuChange
     }))));
   }
 
 }
-
-Navbar.propTypes = {};
-Navbar.defaultProps = {};
 
 var _default = (0, _styles.withStyles)(styles)(Navbar);
 

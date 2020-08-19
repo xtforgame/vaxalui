@@ -1,54 +1,61 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import ImageNumber from './ImageNumber';
-import LeftBox from '../img/bg32.jpg';
-import RightBox from '../img/bg33.jpg';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _ImageNumber = _interopRequireDefault(require("./ImageNumber"));
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg32.jpg"));
+
+var _bg2 = _interopRequireDefault(require("../../../../stories/saya/img/bg33.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     width: '100%',
     height: 565,
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   section: {
     width: 860,
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
-  },
+    alignItems: 'center'
+  }
 };
 
-class ImageNumberSection extends React.PureComponent {
+class ImageNumberSection extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.section}>
-
-          <ImageNumber
-            backgroundImage={LeftBox}
-            number="13"
-            topTile="PET recycling facilities "
-            bottomTitle="worldwide"
-          />
-          <ImageNumber
-            backgroundImage={RightBox}
-            number="75"
-            topTile="billion bottles "
-            bottomTitle="every year"
-          />
-        </div>
-      </div>
-    );
-
-
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.section
+    }, _react.default.createElement(_ImageNumber.default, {
+      backgroundImage: _bg.default,
+      number: "13",
+      topTile: "PET recycling facilities ",
+      bottomTitle: "worldwide"
+    }), _react.default.createElement(_ImageNumber.default, {
+      backgroundImage: _bg2.default,
+      number: "75",
+      topTile: "billion bottles ",
+      bottomTitle: "every year"
+    })));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(ImageNumberSection);
 
-export default withStyles(styles)(ImageNumberSection);
+exports.default = _default;

@@ -1,6 +1,15 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -10,59 +19,58 @@ const styles = {
     flexDirection: 'column',
     color: '#ffffff',
     paddingTop: 85,
-    paddingLeft: 90,
+    paddingLeft: 90
   },
   number: {
     fontSize: 180,
-    lineHeight: 0.74,
+    fontFamily: 'FilsonSoftRegular',
+    lineHeight: 0.74
   },
   topTile: {
     fontSize: 20,
-    paddingTop: 20,
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 20
   },
   line: {
     width: 210,
     height: 2,
     border: '3px solid #ffffff',
-    marginTop: 15,
+    marginTop: 15
   },
   bottomTitle: {
     fontSize: 20,
-    paddingTop: 10,
-  },
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 10
+  }
 };
 
-class ImageNumber extends React.PureComponent {
+class ImageNumber extends _react.default.PureComponent {
   render() {
     const {
       classes,
       backgroundImage,
       number,
       topTile,
-      bottomTitle,
+      bottomTitle
     } = this.props;
-
-
-    return (
-      <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
-      >
-        <div className={classes.number}> {number} </div>
-
-        <div className={classes.topTile}> {topTile} </div>
-
-        <div className={classes.line} />
-
-        <div className={classes.bottomTitle}> {bottomTitle} </div>
-      </div>
-    );
-
-    
+    return _react.default.createElement("div", {
+      className: classes.root,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
+    }, _react.default.createElement("div", {
+      className: classes.number
+    }, " ", number, " "), _react.default.createElement("div", {
+      className: classes.topTile
+    }, " ", topTile, " "), _react.default.createElement("div", {
+      className: classes.line
+    }), _react.default.createElement("div", {
+      className: classes.bottomTitle
+    }, " ", bottomTitle, " "));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(ImageNumber);
 
-export default withStyles(styles)(ImageNumber);
+exports.default = _default;

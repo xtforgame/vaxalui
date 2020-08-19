@@ -9,21 +9,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _CardMedia = _interopRequireDefault(require("@material-ui/core/CardMedia"));
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    width: '100%',
     height: 320,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    textAlign: 'center',
-    backgroundRepeat: 'no-repeat',
-    position: 'relative'
+    textAlign: 'center'
   },
   title: {
     fontSize: 33,
@@ -54,7 +47,7 @@ var _default = props => {
     children
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_CardMedia.default, {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
     className: classes.root,
     style: {
       width: '100%',

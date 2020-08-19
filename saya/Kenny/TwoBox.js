@@ -1,44 +1,46 @@
-import React from 'react';
-import ImageBox from '../components/ImageBox';
-import ClassicFibers from '../components/ClassicFibers';
-import LeftBox from '../img/bg3.jpg';
-import RightBox from '../img/bg4.jpg';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-const styles = {
-  
-};
+var _react = _interopRequireDefault(require("react"));
 
-class TwoBox extends React.PureComponent {
+var _ImageBox = _interopRequireDefault(require("./ImageBox"));
+
+var _ClassicFibers = _interopRequireDefault(require("./ClassicFibers"));
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg3.jpg"));
+
+var _bg2 = _interopRequireDefault(require("../../../../stories/saya/img/bg4.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class TwoBox extends _react.default.PureComponent {
   render() {
-    return (
-      <ClassicFibers
-        height="1000px"
-        backgroundColor="#444343"
-        fontColor="#ffffff"
-        marginTop="0"
-        borderStyle="1px solid #ffffff"
-      >
-        <ImageBox         
-          title="FDY"
-          subtitle="Fully drawn yarn"
-          backgroundImage= {LeftBox}
-          paddingTop="105px"
-          fontColor="#000000"
-        />
-        
-        <ImageBox
-          title="DTY"
-          subtitle="Drawn-texturning yarn"
-          backgroundImage= {RightBox}   
-          paddingTop="105px"
-          fontColor="#000000"
-        />
-      </ClassicFibers>
-
-    );
+    return _react.default.createElement(_ClassicFibers.default, {
+      height: "1000px",
+      backgroundColor: "#444343",
+      fontColor: "#ffffff",
+      marginTop: "0",
+      borderStyle: "1px solid #ffffff"
+    }, _react.default.createElement(_ImageBox.default, {
+      title: "FDY",
+      subtitle: "Fully drawn yarn",
+      backgroundImage: _bg.default,
+      paddingTop: "105px",
+      fontColor: "#000000"
+    }), _react.default.createElement(_ImageBox.default, {
+      title: "DTY",
+      subtitle: "Drawn-texturning yarn",
+      backgroundImage: _bg2.default,
+      paddingTop: "105px",
+      fontColor: "#000000"
+    }));
   }
+
 }
 
-
-export default TwoBox;
+var _default = TwoBox;
+exports.default = _default;

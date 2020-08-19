@@ -1,8 +1,17 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
-
   button: {
     width: 130,
     height: 45,
@@ -16,25 +25,23 @@ const styles = {
     fontSize: 14,
     color: '#ffffff',
     fontWeight: 'bold',
-
-  },
+    fontFamily: 'FilsonSoft-Bold'
+  }
 };
 
-
-class GreenButton extends React.PureComponent {
+class GreenButton extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      text,
+      text
     } = this.props;
-    return (
-      <button className={classes.button}>
-        {text}
-      </button>
-
-    );
+    return _react.default.createElement("button", {
+      className: classes.button
+    }, text);
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(GreenButton);
 
-export default withStyles(styles)(GreenButton);
+exports.default = _default;

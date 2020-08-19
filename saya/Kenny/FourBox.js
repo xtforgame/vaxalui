@@ -1,60 +1,62 @@
-import React from 'react';
-import ImageBox from '../components/ImageBox';
-import ClassicFibers from '../components/ClassicFibers';
-import TopLeftBox from '../img/bg5.jpg';
-import TopRightBox from '../img/bg6.jpg';
-import BottomLeftBox from '../img/bg7.jpg';
-import BottomRightBox from '../img/bg8.jpg';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
 
-class FourBox extends React.PureComponent {
+var _ImageBox = _interopRequireDefault(require("./ImageBox"));
+
+var _ClassicFibers = _interopRequireDefault(require("./ClassicFibers"));
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg5.jpg"));
+
+var _bg2 = _interopRequireDefault(require("../../../../stories/saya/img/bg6.jpg"));
+
+var _bg3 = _interopRequireDefault(require("../../../../stories/saya/img/bg7.jpg"));
+
+var _bg4 = _interopRequireDefault(require("../../../../stories/saya/img/bg8.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+class FourBox extends _react.default.PureComponent {
   render() {
-    return (
-      <ClassicFibers
-        height="1500px"
-        backgroundColor="#c8c6c6"
-        fontColor="#000000"
-        marginTop="35px"
-        borderStyle="1px solid #000000"
-      >
-        <ImageBox
-          title="CHROMUCH Solution Dyed"
-          subtitle="Color without Compromise"
-          backgroundImage= {TopLeftBox}
-          paddingTop='50px'
-          fontColor="#ffffff"
-        />
-
-        <ImageBox
-          title="UltraStretch"
-          subtitle="Stretch with a Good Conscious"
-          backgroundImage= {TopRightBox}
-          paddingTop="105px"
-          fontColor="#ffffff"
-        />
-
-        <ImageBox
-          title="TopFresh"
-          subtitle="lor sit amet, consectetuer ad"
-          backgroundImage= {BottomLeftBox}
-          paddingTop="105px"
-          fontColor="#ffffff"
-        />
-
-        <ImageBox
-          title="MicroFilament"
-          subtitle="lor sit amet, consectetuer ad"
-          backgroundImage= {BottomRightBox}
-          paddingTop="105px"
-          fontColor="#ffffff"
-        />
-
-      </ClassicFibers>
-
-    );
+    return _react.default.createElement(_ClassicFibers.default, {
+      height: "1500px",
+      backgroundColor: "#c8c6c6",
+      fontColor: "#000000",
+      marginTop: "35px",
+      borderStyle: "1px solid #000000"
+    }, _react.default.createElement(_ImageBox.default, {
+      title: "CHROMUCH Solution Dyed",
+      subtitle: "Color without Compromise",
+      backgroundImage: _bg.default,
+      paddingTop: "50px",
+      fontColor: "#ffffff"
+    }), _react.default.createElement(_ImageBox.default, {
+      title: "UltraStretch",
+      subtitle: "Stretch with a Good Conscious",
+      backgroundImage: _bg2.default,
+      paddingTop: "105px",
+      fontColor: "#ffffff"
+    }), _react.default.createElement(_ImageBox.default, {
+      title: "TopFresh",
+      subtitle: "lor sit amet, consectetuer ad",
+      backgroundImage: _bg3.default,
+      paddingTop: "105px",
+      fontColor: "#ffffff"
+    }), _react.default.createElement(_ImageBox.default, {
+      title: "MicroFilament",
+      subtitle: "lor sit amet, consectetuer ad",
+      backgroundImage: _bg4.default,
+      paddingTop: "105px",
+      fontColor: "#ffffff"
+    }));
   }
+
 }
 
-
-export default FourBox;
+var _default = FourBox;
+exports.default = _default;

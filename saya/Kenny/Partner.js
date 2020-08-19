@@ -1,133 +1,150 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import GreenButton from './GreenButton';
-import TextField from './TextField';
-import Background from '../img/bg16.jpg';
-import Bottle from '../img/bottle_w.svg';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+
+var _TextField = _interopRequireDefault(require("./TextField"));
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg16.jpg"));
+
+var _bottle_w = _interopRequireDefault(require("../../../../stories/saya/img/bottle_w.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 const styles = {
   root: {
     width: '100%',
     height: 500,
-    backgroundImage: `url(${Background})`,
+    backgroundImage: `url(${_bg.default})`,
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   bottle: {
     width: 880,
     height: 320,
-    backgroundImage: `url(${Bottle})`,
+    backgroundImage: `url(${_bottle_w.default})`,
     color: '#000000',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
     paddingTop: 50,
-    paddingLeft: 110,
+    paddingLeft: 110
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    lineHeight: 1.25,
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.25
   },
   line: {
     width: 420,
     height: 1,
     marginTop: 2.5,
-    border: ' solid 1px #000000',
+    border: ' solid 1px #000000'
   },
   subtitle: {
     width: 420,
     fontSize: 14,
-    paddingTop: 25,
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 25
   },
   email: {
     display: 'flex',
-    marginTop: 10,
+    marginTop: 10
   },
   emailInput: {
     width: 420,
     fontSize: 10,
-
     color: '#000000',
-    borderColor: '#000000',
+    borderColor: '#000000'
   },
   button: {
-    marginLeft: 15,
+    marginLeft: 15
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 20,
+    paddingTop: 20
   },
   box: {
     width: 30,
-    height: 30,
+    height: 30
   },
   labelContent: {
     width: 340,
     fontSize: 10,
-    paddingLeft: 10,
-  },
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10
+  }
 };
 
+class Partner extends _react.default.PureComponent {
+  constructor(...args) {
+    super(...args);
 
-class Partner extends React.PureComponent {
-  state = {
-    email: '',
-  }
+    _defineProperty(this, "state", {
+      email: ''
+    });
 
-  handleEmailChange = (e) => {
-    this.setState({
-      email: e.target.value,
+    _defineProperty(this, "handleEmailChange", e => {
+      this.setState({
+        email: e.target.value
+      });
     });
   }
+
   render() {
     const {
-      email,
+      email
     } = this.state;
     const {
-      classes,
+      classes
     } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <div className={classes.bottle}>
-          <div className={classes.title}>Become our partner</div>
-
-          <div className={classes.line} />
-
-          <div className={classes.subtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</div>
-
-          <div className={classes.email}>
-            <TextField
-              className={classes.emailInput}
-              value={email}
-              onChange={this.handleEmailChange}
-              placeholder="Your email address"
-            />
-            <div className={classes.button}>
-              <GreenButton
-                text="SUBMIT"
-              /></div>
-          </div>
-
-          <div className={classes.checkbox}>
-            <input className={classes.box} type="checkbox" value="checkbox" />
-            <div className={classes.labelContent}>
-              <label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</label>
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
-
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.bottle
+    }, _react.default.createElement("div", {
+      className: classes.title
+    }, "Become our partner"), _react.default.createElement("div", {
+      className: classes.line
+    }), _react.default.createElement("div", {
+      className: classes.subtitle
+    }, "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."), _react.default.createElement("div", {
+      className: classes.email
+    }, _react.default.createElement(_TextField.default, {
+      className: classes.emailInput,
+      value: email,
+      onChange: this.handleEmailChange,
+      placeholder: "Your email address"
+    }), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
+      text: "SUBMIT"
+    }))), _react.default.createElement("div", {
+      className: classes.checkbox
+    }, _react.default.createElement("input", {
+      className: classes.box,
+      type: "checkbox",
+      value: "checkbox"
+    }), _react.default.createElement("div", {
+      className: classes.labelContent
+    }, _react.default.createElement("label", null, "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.")))));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(Partner);
 
-export default withStyles(styles)(Partner);
+exports.default = _default;

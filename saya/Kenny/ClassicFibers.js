@@ -1,5 +1,15 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -7,33 +17,34 @@ const styles = {
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    paddingTop: 160,
+    fontFamily: 'FilsonSoft-Bold',
+    paddingTop: 160
   },
   line: {
     width: 420,
     height: 1,
-    marginTop: 20,
+    marginTop: 20
   },
   subtitle: {
     fontSize: 20,
-    paddingTop: 20,
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 20
   },
   box: {
     width: 780,
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: 115,
-    flexWrap: 'wrap',
-
-  },
+    flexWrap: 'wrap'
+  }
 };
 
-class ClassicFibers extends React.PureComponent {
+class ClassicFibers extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -42,40 +53,32 @@ class ClassicFibers extends React.PureComponent {
       fontColor,
       marginTop,
       children,
-      borderStyle,
+      borderStyle
     } = this.props;
-    return (
-      <div
-        className={classes.root}
-        style={{
-          height: height,
-          backgroundColor: backgroundColor,
-          color: fontColor,
-          marginTop: marginTop,
-        }}
-      >
-        <div className={classes.title}>
-          SAYA Classic Fibers
-          </div>
-
-        <div
-          className={classes.line}
-          style={{
-            border: borderStyle,
-          }}
-        />
-
-        <div className={classes.subtitle}>
-          Nam dapibus nisl vitae elit.
-        </div>
-
-        <div className={classes.box}>
-          {children}
-        </div>
-      </div>
-
-    );
+    return _react.default.createElement("div", {
+      className: classes.root,
+      style: {
+        height: height,
+        backgroundColor: backgroundColor,
+        color: fontColor,
+        marginTop: marginTop
+      }
+    }, _react.default.createElement("div", {
+      className: classes.title
+    }, "SAYA Classic Fibers"), _react.default.createElement("div", {
+      className: classes.line,
+      style: {
+        border: borderStyle
+      }
+    }), _react.default.createElement("div", {
+      className: classes.subtitle
+    }, "Nam dapibus nisl vitae elit."), _react.default.createElement("div", {
+      className: classes.box
+    }, children));
   }
+
 }
 
-export default withStyles(styles)(ClassicFibers);
+var _default = (0, _styles.withStyles)(styles)(ClassicFibers);
+
+exports.default = _default;

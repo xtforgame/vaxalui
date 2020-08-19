@@ -1,43 +1,45 @@
-import React, { Children } from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundRepeat: 'no-repeat',
+    paddingTop: 80
   },
-  section: {
-    width: 1024,
-    display: 'flex',
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    paddingTop: 80,
-    paddingLeft: 40,
-  },
-
   title: {
     fontSize: 40,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold'
   },
   line: {
     width: 420,
     height: 1,
-    marginTop: 20,
+    marginTop: 20
   },
   subtitle: {
     fontSize: 20,
-    marginTop: 20,
+    fontFamily: 'FilsonSoftRegular',
+    marginTop: 20
   },
   description: {
     fontSize: 14,
-    marginTop: 20,
-  },
+    fontFamily: 'FilsonSoftRegular',
+    marginTop: 20
+  }
 };
 
-class Introduction extends React.PureComponent {
+class Introduction extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -52,56 +54,38 @@ class Introduction extends React.PureComponent {
       descriptionWidth,
       fontColor,
       lineBorder,
-      children,
+      children
     } = this.props;
-    return (
-      <div
-        className={classes.root}
-        style={{
-          height: height,
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundColor: backgroundColor,
-          color: fontColor,
-        }}
-      >
-        <div className={classes.section}>
-          <div
-            className={classes.title}
-            style={{
-              width: titleWidth,
-            }}
-          >
-            {title}<br />{titleBack}
-          </div>
-
-          <div className={classes.line} style={{
-            border: lineBorder,
-          }}
-          />
-
-          <div className={classes.subtitle}>
-            {subtitle}
-          </div>
-
-          <div
-            className={classes.description}
-            style={{
-              width: descriptionWidth,
-            }}
-          >
-            {description}
-          </div>
-
-          <div >
-            {children}
-          </div>
-        </div>
-
-      </div>
-
-    );
+    return _react.default.createElement(_ImageContainer.default, {
+      className: classes.root,
+      style: {
+        height,
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundColor,
+        color: fontColor
+      }
+    }, _react.default.createElement("div", {
+      className: classes.title,
+      style: {
+        width: titleWidth
+      }
+    }, title, _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
+      className: classes.line,
+      style: {
+        border: lineBorder
+      }
+    }), _react.default.createElement("div", {
+      className: classes.subtitle
+    }, subtitle), _react.default.createElement("div", {
+      className: classes.description,
+      style: {
+        width: descriptionWidth
+      }
+    }, description), _react.default.createElement("div", null, children));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(Introduction);
 
-export default withStyles(styles)(Introduction);
+exports.default = _default;

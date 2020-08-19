@@ -1,8 +1,21 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import GreenButton from './GreenButton';
-import LeftIcon from '../img/icon11.svg';
-import RightIcon from '../img/icon12.svg';
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+
+var _icon = _interopRequireDefault(require("../../../../stories/saya/img/icon11.svg"));
+
+var _icon2 = _interopRequireDefault(require("../../../../stories/saya/img/icon12.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -11,77 +24,81 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     textAlign: 'center',
+    fontFamily: 'FilsonSoft-Bold'
   },
   leftColumn: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     paddingRight: 110,
-    paddingTop: 85,
+    paddingTop: 85
   },
   rightColumn: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     paddingLeft: 110,
-    paddingTop: 85,
+    paddingTop: 85
   },
   leftIcon: {
-    width: 90,
+    width: 90
   },
-  rightIcon:{
-    width: 85,
+  rightIcon: {
+    width: 85
   },
   leftTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000000',
-    paddingTop: 10,
+    paddingTop: 10
   },
   rightTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000000',
-    paddingTop: 15,
+    paddingTop: 15
   },
   button: {
-    marginTop: 40,
-  },
+    marginTop: 40
+  }
 };
 
-
-class TwoIconSection extends React.PureComponent {
+class TwoIconSection extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.leftColumn}>
-          <div className={classes.leftIcon}><img src={LeftIcon} /></div>
-          <div className={classes.leftTitle}>Mechanical Recycling</div>
-          <div className={classes.button}>
-            <GreenButton
-              text="Learn More"
-            />
-          </div>
-
-        </div>
-        <div className={classes.rightColumn}>
-          <div className={classes.rightIcon}><img src={RightIcon} /></div>
-          <div className={classes.rightTitle}>Mechanical Recycling</div>
-          <div className={classes.button}>
-            <GreenButton
-              text="Learn More"
-            />
-          </div>
-        </div>
-
-      </div>
-
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.leftColumn
+    }, _react.default.createElement("div", {
+      className: classes.leftIcon
+    }, _react.default.createElement("img", {
+      src: _icon.default
+    })), _react.default.createElement("div", {
+      className: classes.leftTitle
+    }, "Mechanical Recycling"), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
+      text: "Learn More"
+    }))), _react.default.createElement("div", {
+      className: classes.rightColumn
+    }, _react.default.createElement("div", {
+      className: classes.rightIcon
+    }, _react.default.createElement("img", {
+      src: _icon2.default
+    })), _react.default.createElement("div", {
+      className: classes.rightTitle
+    }, "Mechanical Recycling"), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
+      text: "Learn More"
+    }))));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(TwoIconSection);
 
-export default withStyles(styles)(TwoIconSection);
+exports.default = _default;

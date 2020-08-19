@@ -43,6 +43,7 @@ class LinkItem extends _react.default.PureComponent {
       to,
       name
     } = this.props;
+    console.log('name :', name);
     return _react.default.createElement(_Link.default, {
       to: to
     }, _react.default.createElement("div", {

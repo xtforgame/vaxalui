@@ -1,8 +1,19 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import GreenButton from './GreenButton';
-import Background from '../img/bg14.jpg';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg14.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -11,8 +22,8 @@ const styles = {
     color: '#000000',
     display: 'flex',
     justifyContent: 'center',
-    backgroundImage: `url(${Background})`,
-    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${_bg.default})`,
+    backgroundRepeat: 'no-repeat'
   },
   section: {
     width: 1024,
@@ -20,70 +31,72 @@ const styles = {
     flexDirection: 'column',
     flexWrap: 'wrap',
     paddingTop: 65,
-    paddingLeft: 40,
+    paddingLeft: 40
   },
   firstTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    lineHeight: 1.31,
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.31
   },
   firstLine: {
     width: 85,
     height: 1,
     border: '1px solid #000000',
-    marginTop: 2,
+    marginTop: 2
   },
   secondTitle: {
     width: 425,
     fontSize: 54,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1,
-    paddingTop: 45,
+    paddingTop: 45
   },
   secondLine: {
     width: 420,
     height: 1,
     border: '1px solid #000000',
-    marginTop: 20,
+    marginTop: 20
   },
   thirdTitle: {
     fontSize: 20,
-    paddingTop: 20,
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 20
   },
   button: {
-    marginTop: 50,
-  },
+    marginTop: 50
+  }
 };
 
-
-class MacroChanges extends React.PureComponent {
+class MacroChanges extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.section}>
-          <div className={classes.firstTitle}>PRODUCTS</div>
-
-          <div className={classes.firstLine} />
-
-          <div className={classes.secondTitle}>Micro fibers. Macro changes.</div>
-
-          <div className={classes.secondLine} />
-
-          <div className={classes.thirdTitle}>Functional Fibers for Every Challenge.</div>
-
-          <div className={classes.button}>
-            <GreenButton
-              text="READ MORE"
-            />
-          </div>
-        </div>
-      </div>
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.section
+    }, _react.default.createElement("div", {
+      className: classes.firstTitle
+    }, "PRODUCTS"), _react.default.createElement("div", {
+      className: classes.firstLine
+    }), _react.default.createElement("div", {
+      className: classes.secondTitle
+    }, "Micro fibers. Macro changes."), _react.default.createElement("div", {
+      className: classes.secondLine
+    }), _react.default.createElement("div", {
+      className: classes.thirdTitle
+    }, "Functional Fibers for Every Challenge."), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
+      text: "READ MORE"
+    }))));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(MacroChanges);
 
-export default withStyles(styles)(MacroChanges);
+exports.default = _default;

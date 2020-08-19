@@ -1,36 +1,46 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     width: '100%',
     paddingTop: 90,
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   section: {
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    alignSelf:'flex-start',
+    fontFamily: 'FilsonSoft-Bold',
+    alignSelf: 'flex-start'
   },
   line: {
     height: 1,
-    marginTop: 25,
+    marginTop: 25
   },
   box: {
     display: 'flex',
     marginTop: 90,
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between'
+  }
 };
 
-class TitleLineBox extends React.PureComponent {
+class TitleLineBox extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -38,45 +48,37 @@ class TitleLineBox extends React.PureComponent {
       fontColor,
       boxWidth,
       lineBorder,
-      children,
+      children
     } = this.props;
-    return (
-      <div
-        className={classes.root}
-        style={{
-          height: height,
-          color: fontColor,
-        }}
-      >
-        <div 
-        className={classes.section}
-        style={{
-          width: boxWidth,
-        }}
-        >
-          <div className={classes.title}>
-            <div>SAYA NOW Serial Projects</div>
-          </div>
-          <div
-            className={classes.line}
-            style={{
-              width: boxWidth,
-              border: lineBorder,
-            }}
-          />
-          <div
-            className={classes.box}
-            style={{
-              width: boxWidth,
-            }}
-          >
-            {children}
-          </div>
-        </div>
-      </div>
-    );
+    return _react.default.createElement("div", {
+      className: classes.root,
+      style: {
+        height: height,
+        color: fontColor
+      }
+    }, _react.default.createElement("div", {
+      className: classes.section,
+      style: {
+        width: boxWidth
+      }
+    }, _react.default.createElement("div", {
+      className: classes.title
+    }, _react.default.createElement("div", null, "SAYA NOW Serial Projects")), _react.default.createElement("div", {
+      className: classes.line,
+      style: {
+        width: boxWidth,
+        border: lineBorder
+      }
+    }), _react.default.createElement("div", {
+      className: classes.box,
+      style: {
+        width: boxWidth
+      }
+    }, children)));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(TitleLineBox);
 
-export default withStyles(styles)(TitleLineBox);
+exports.default = _default;

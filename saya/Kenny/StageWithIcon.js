@@ -1,16 +1,25 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
+"use strict";
 
-import topImg from '../img/fig1.svg';
-import bottomImg from '../img/fig2.svg';
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
+var _react = _interopRequireDefault(require("react"));
 
+var _styles = require("@material-ui/styles");
+
+var _fig = _interopRequireDefault(require("../../../../stories/saya/img/fig1.svg"));
+
+var _fig2 = _interopRequireDefault(require("../../../../stories/saya/img/fig2.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     display: 'flex',
     flexDirection: 'column',
-    marginTop: 30,
+    marginTop: 30
   },
   circle: {
     width: 120,
@@ -24,47 +33,48 @@ const styles = {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#ffffff',
+    fontFamily: 'FilsonSoft-Bold'
   },
   topRaw: {
     display: 'flex',
-    marginTop: 30,
+    marginTop: 30
   },
   bottomRaw: {
     marginTop: 55,
-    display: 'flex',
+    display: 'flex'
   },
   img: {
     height: 120,
-    marginLeft: 40,
-  },
+    marginLeft: 40
+  }
 };
 
-class StageWithIcon extends React.PureComponent {
+class StageWithIcon extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.topRaw}>
-          <div className={classes.circle}>
-            5 Stage<br />Filtration
-          </div>
-          <img className={classes.img} src={topImg} />
-
-        </div>
-
-        <div className={classes.bottomRaw}>
-          <div className={classes.circle}>
-            2 Stage<br />Purification
-          </div>
-          <img className={classes.img} src={bottomImg} />
-
-        </div>
-      </div>
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.topRaw
+    }, _react.default.createElement("div", {
+      className: classes.circle
+    }, "5 Stage", _react.default.createElement("br", null), "Filtration"), _react.default.createElement("img", {
+      className: classes.img,
+      src: _fig.default
+    })), _react.default.createElement("div", {
+      className: classes.bottomRaw
+    }, _react.default.createElement("div", {
+      className: classes.circle
+    }, "2 Stage", _react.default.createElement("br", null), "Purification"), _react.default.createElement("img", {
+      className: classes.img,
+      src: _fig2.default
+    })));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(StageWithIcon);
 
-export default withStyles(styles)(StageWithIcon);
+exports.default = _default;

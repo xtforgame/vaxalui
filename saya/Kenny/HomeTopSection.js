@@ -1,16 +1,28 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import Background from '../img/bg0.jpg';
-import roundArrow from '../img/round_arrow.svg';
-import scrollArrow from '../img/scroll arrow.png';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg0.jpg"));
+
+var _round_arrow = _interopRequireDefault(require("../../../../stories/saya/img/round_arrow.svg"));
+
+var _scrollArrow = _interopRequireDefault(require("../../../../stories/saya/img/scroll arrow.png"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     width: '100%',
     height: 500,
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   section: {
     width: 1024,
@@ -20,67 +32,71 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     textAlign: 'center',
-    backgroundImage: `url(${Background})`,
-    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${_bg.default})`,
+    backgroundRepeat: 'no-repeat'
   },
   scrollArrow: {
     width: 1024,
     height: 50,
-    marginTop: 225,
+    marginTop: 225
   },
   title: {
     fontSize: 44,
     fontWeight: 300,
-    paddingTop: 30,
+    paddingTop: 30
   },
   titleBack: {
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold'
   },
   line: {
     width: 420,
     height: 1,
     marginTop: 10,
-    border: ' solid 1px #000000',
+    border: ' solid 1px #000000'
   },
   subtitle: {
     fontSize: 18,
-    paddingTop: 20,
+    fontFamily: 'FilsonSoftRegular',
+    paddingTop: 20
   },
   roundArrow: {
     width: 50,
     height: 50,
-    marginTop: 30,
-  },
+    marginTop: 30
+  }
 };
 
-
-class HomeTopSection extends React.PureComponent {
+class HomeTopSection extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.section}>
-          <div className={classes.scrollArrow}><img src={scrollArrow} /></div>
-
-          <div className={classes.title}>
-            In the Business of <span className={classes.titleBack}>Renewal</span>
-          </div>
-
-          <div className={classes.line} />
-
-          <div className={classes.subtitle}>
-            The next of recycled goods.
-             </div>
-
-          <div className={classes.roundArrow}><img src={roundArrow} /></div>
-
-        </div>
-      </div>
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.section
+    }, _react.default.createElement("div", {
+      className: classes.scrollArrow
+    }, _react.default.createElement("img", {
+      src: _scrollArrow.default
+    })), _react.default.createElement("div", {
+      className: classes.title
+    }, "In the Business of ", _react.default.createElement("span", {
+      className: classes.titleBack
+    }, "Renewal")), _react.default.createElement("div", {
+      className: classes.line
+    }), _react.default.createElement("div", {
+      className: classes.subtitle
+    }, "The next of recycled goods."), _react.default.createElement("div", {
+      className: classes.roundArrow
+    }, _react.default.createElement("img", {
+      src: _round_arrow.default
+    }))));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(HomeTopSection);
 
-export default withStyles(styles)(HomeTopSection);
+exports.default = _default;

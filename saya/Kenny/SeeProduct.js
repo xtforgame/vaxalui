@@ -1,7 +1,17 @@
-import React from 'react';
-import { withStyles } from '@material-ui/styles';
-import GreenButton from '../components/GreenButton';
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _styles = require("@material-ui/styles");
+
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -9,45 +19,44 @@ const styles = {
     height: 255,
     backgroundColor: '#444343',
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   section: {
     width: 1024,
     display: 'flex',
     alignItems: 'center',
-    paddingLeft: 120,
+    paddingLeft: 120
   },
   title: {
     fontSize: 32,
     color: '#ffffff',
-
+    fontFamily: 'FilsonSoftRegular'
   },
   button: {
-    marginLeft: 135,
-  },
+    marginLeft: 135
+  }
 };
 
-class SeeProduct extends React.PureComponent {
+class SeeProduct extends _react.default.PureComponent {
   render() {
     const {
-      classes,
+      classes
     } = this.props;
-    return (
-      <div className={classes.root}>
-        <div className={classes.section}>
-          <div className={classes.title}>See our Products Section<br />for more details on yarn selection.</div>
-          <div className={classes.button}>
-            <GreenButton
-
-              text="Learn more"
-            />
-          </div>
-        </div>
-      </div>
-
-    );
+    return _react.default.createElement("div", {
+      className: classes.root
+    }, _react.default.createElement("div", {
+      className: classes.section
+    }, _react.default.createElement("div", {
+      className: classes.title
+    }, "See our Products Section", _react.default.createElement("br", null), "for more details on yarn selection."), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
+      text: "Learn more"
+    }))));
   }
+
 }
 
+var _default = (0, _styles.withStyles)(styles)(SeeProduct);
 
-export default withStyles(styles)(SeeProduct);
+exports.default = _default;
