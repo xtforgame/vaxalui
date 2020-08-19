@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -12,41 +12,36 @@ const styles = {
     flexWrap: 'wrap',
     textAlign: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%',
   },
   firstTitle: {
     fontSize: 15,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.31,
-    color: '#000000',
     paddingTop: 90,
   },
   firstLine: {
-    width: 85,
     height: 1,
-    border: '1px solid #000000',
     marginTop: 2,
   },
   secondTitle: {
     fontSize: 55,
     fontWeight: 'bold',
-    color: '#000000',
+    fontFamily: 'FilsonSoft-Bold',
     paddingTop: 10,
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    color: '#000000',
   },
   secondLine: {
     width: 420,
     height: 1,
-    border: '1px solid #000000',
     marginTop: 2,
   },
   thirdTitle: {
     width: 390,
     fontSize: 20,
-    color: '#000000',
+    fontFamily: 'FilsonSoftRegular',
     paddingTop: 10,
   },
 
@@ -62,28 +57,40 @@ class TopSection extends React.PureComponent {
       secondTitleBack,
       thirdTitle,
       backgroundImage,
+      fontColor,
+      lineBorder,
+      firstLineWidth,
     } = this.props;
     return (
       <div
         className={classes.root}
         style={{
           backgroundImage: `url(${backgroundImage})`,
+          color: fontColor,
         }}
       >
         <div className={classes.firstTitle}>
           {firstTitle}
         </div>
 
-        <div className={classes.firstLine} />
+        <div
+          className={classes.firstLine}
+          style={{
+            width: firstLineWidth,
+            border: lineBorder,
+          }}
+        />
 
         <div className={classes.secondTitle}>
-          {secondTitle}
-          <a className={classes.secondTitleBack}>
-            {secondTitleBack}
-          </a>
+          {secondTitle} <span className={classes.secondTitleBack}> {secondTitleBack} </span>
         </div>
 
-        <div className={classes.secondLine} />
+        <div
+          className={classes.secondLine}
+          style={{
+            border: lineBorder,
+          }}
+        />
 
         <div className={classes.thirdTitle}>
           {thirdTitle}

@@ -1,17 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-var _ImageCircle = _interopRequireDefault(require("./ImageCircle"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import ImageCircle from '../components/ImageCircle';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -20,37 +9,40 @@ const styles = {
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
     color: '#000000',
-    paddingTop: 110
+    paddingTop: 110,
   },
   circle: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginTop: 110
+    
+    marginTop: 110,
   }
 };
 
-class TwocircleSection extends _react.default.PureComponent {
+class TwocircleSection extends React.PureComponent {
   render() {
     const {
-      classes
+      classes,
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
-    }, _react.default.createElement("div", {
-      className: classes.title
-    }, "All The Products are Available in", _react.default.createElement("br", null), "SAYA Now & SAYA Next Technologies."), _react.default.createElement("div", {
-      className: classes.circle
-    }, _react.default.createElement(_ImageCircle.default, null)));
-  }
+    return (
+      <div className={classes.root}>
+        <div className={classes.title}>
+          All The Products are Available in<br />
+          SAYA Now & SAYA Next Technologies.
+        </div>
 
+        <div className={classes.circle}>
+          <ImageCircle />
+        </div>
+      </div>
+
+    );
+  }
 }
 
-var _default = (0, _styles.withStyles)(styles)(TwocircleSection);
 
-exports.default = _default;
+export default withStyles(styles)(TwocircleSection);

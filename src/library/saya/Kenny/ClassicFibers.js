@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -12,6 +12,7 @@ const styles = {
   title: {
     fontSize: 40,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
     paddingTop: 160,
   },
   line: {
@@ -21,6 +22,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
+    fontFamily: 'FilsonSoftRegular',
     paddingTop: 20,
   },
   box: {
@@ -29,7 +31,6 @@ const styles = {
     justifyContent: 'space-between',
     marginTop: 115,
     flexWrap: 'wrap',
-
   },
 };
 
@@ -48,15 +49,15 @@ class ClassicFibers extends React.PureComponent {
       <div
         className={classes.root}
         style={{
-          height,
-          backgroundColor,
+          height: height,
+          backgroundColor: backgroundColor,
           color: fontColor,
-          marginTop,
+          marginTop: marginTop,
         }}
       >
         <div className={classes.title}>
           SAYA Classic Fibers
-        </div>
+          </div>
 
         <div
           className={classes.line}
@@ -73,7 +74,6 @@ class ClassicFibers extends React.PureComponent {
           {children}
         </div>
       </div>
-
     );
   }
 }

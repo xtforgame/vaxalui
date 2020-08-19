@@ -1,46 +1,44 @@
-"use strict";
+import React from 'react';
+import ImageBox from '../components/ImageBox';
+import ClassicFibers from '../components/ClassicFibers';
+import LeftBox from '../img/bg3.jpg';
+import RightBox from '../img/bg4.jpg';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+const styles = {
+  
+};
 
-var _ImageBox = _interopRequireDefault(require("./ImageBox"));
-
-var _ClassicFibers = _interopRequireDefault(require("./ClassicFibers"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-class TwoBox extends _react.default.PureComponent {
+class TwoBox extends React.PureComponent {
   render() {
-    const {
-      leftImage,
-      rightImage
-    } = this.props;
-    return _react.default.createElement(_ClassicFibers.default, {
-      height: "1000px",
-      backgroundColor: "#444343",
-      fontColor: "#ffffff",
-      marginTop: "0",
-      borderStyle: "1px solid #ffffff"
-    }, _react.default.createElement(_ImageBox.default, {
-      title: "FDY",
-      subtitle: "Fully drawn yarn",
-      backgroundImage: leftImage,
-      paddingTop: "105px",
-      fontColor: "#000000"
-    }), _react.default.createElement(_ImageBox.default, {
-      title: "DTY",
-      subtitle: "Drawn-texturning yarn",
-      backgroundImage: rightImage,
-      paddingTop: "105px",
-      fontColor: "#000000"
-    }));
-  }
+    return (
+      <ClassicFibers
+        height="1000px"
+        backgroundColor="#444343"
+        fontColor="#ffffff"
+        marginTop="0"
+        borderStyle="1px solid #ffffff"
+      >
+        <ImageBox         
+          title="FDY"
+          subtitle="Fully drawn yarn"
+          backgroundImage= {LeftBox}
+          paddingTop="105px"
+          fontColor="#000000"
+        />
+        
+        <ImageBox
+          title="DTY"
+          subtitle="Drawn-texturning yarn"
+          backgroundImage= {RightBox}   
+          paddingTop="105px"
+          fontColor="#000000"
+        />
+      </ClassicFibers>
 
+    );
+  }
 }
 
-var _default = TwoBox;
-exports.default = _default;
+
+export default TwoBox;

@@ -1,5 +1,7 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/styles';
+
+import background from '../../../../stories/saya/img/ocean-cycle-218x300.png';
 
 const styles = {
   root: {
@@ -13,6 +15,7 @@ const styles = {
   oceanCycle: {
     width: 220,
     height: 300,
+    backgroundImage: `url(${background})`,
     marginTop: 75,
     marginRight: 90,
   },
@@ -27,11 +30,13 @@ const styles = {
   rightTitle: {
     fontSize: 20,
     color: '#000000',
+    fontFamily: 'FilsonSoftRegular',
   },
   description: {
     fontSize: 14,
     color: '#000000',
     paddingTop: 20,
+    fontFamily: 'FilsonSoftRegular',
   },
 };
 
@@ -40,11 +45,10 @@ class OceanCycle extends React.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage,
     } = this.props;
     return (
       <div className={classes.root}>
-        <div className={classes.oceanCycle} style={{ backgroundImage: `url(${backgroundImage})` }} />
+        <div className={classes.oceanCycle}></div>
 
         <div className={classes.rightColumn}>
           <div className={classes.rightTitle}>Lorem ipsum dolor sit amet.</div>

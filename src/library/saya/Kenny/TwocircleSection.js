@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import ImageCircle from './ImageCircle';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -14,14 +14,13 @@ const styles = {
   title: {
     fontSize: 40,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
     color: '#000000',
     paddingTop: 110,
   },
   circle: {
-    display: 'flex',
-    justifyContent: 'center',
     marginTop: 110,
-  },
+  }
 };
 
 class TwocircleSection extends React.PureComponent {
@@ -32,13 +31,14 @@ class TwocircleSection extends React.PureComponent {
     return (
       <div className={classes.root}>
         <div className={classes.title}>
-          All The Products are Available in
-          <br />
+          All The Products are Available in<br />
           SAYA Now & SAYA Next Technologies.
         </div>
 
         <div className={classes.circle}>
-          <ImageCircle />
+          <ImageCircle 
+          linkText="Explore this Technology"
+          />
         </div>
       </div>
 

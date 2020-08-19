@@ -1,15 +1,5 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -22,46 +12,40 @@ const styles = {
     flexWrap: 'wrap',
     textAlign: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%'
   },
   firstTitle: {
     fontSize: 15,
     fontWeight: 'bold',
     lineHeight: 1.31,
-    color: '#000000',
-    paddingTop: 90
+    paddingTop: 90,
   },
   firstLine: {
-    width: 85,
     height: 1,
-    border: '1px solid #000000',
-    marginTop: 2
+    marginTop: 2,
   },
   secondTitle: {
     fontSize: 55,
     fontWeight: 'bold',
-    color: '#000000',
-    paddingTop: 10
+    paddingTop: 10,
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    color: '#000000'
   },
   secondLine: {
     width: 420,
     height: 1,
-    border: '1px solid #000000',
-    marginTop: 2
+    marginTop: 2,
   },
   thirdTitle: {
     width: 390,
     fontSize: 20,
-    color: '#000000',
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
+
 };
 
-class TopSection extends _react.default.PureComponent {
+
+class TopSection extends React.PureComponent {
   render() {
     const {
       classes,
@@ -69,30 +53,49 @@ class TopSection extends _react.default.PureComponent {
       secondTitle,
       secondTitleBack,
       thirdTitle,
-      backgroundImage
+      backgroundImage,
+      fontColor,
+      lineBorder,
+      firstLineWidth,
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root,
-      style: {
-        backgroundImage: `url(${backgroundImage})`
-      }
-    }, _react.default.createElement("div", {
-      className: classes.firstTitle
-    }, firstTitle), _react.default.createElement("div", {
-      className: classes.firstLine
-    }), _react.default.createElement("div", {
-      className: classes.secondTitle
-    }, secondTitle, _react.default.createElement("a", {
-      className: classes.secondTitleBack
-    }, secondTitleBack)), _react.default.createElement("div", {
-      className: classes.secondLine
-    }), _react.default.createElement("div", {
-      className: classes.thirdTitle
-    }, thirdTitle));
-  }
+    return (
+      <div
+        className={classes.root}
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          color: fontColor,
+        }}
+      >
+        <div className={classes.firstTitle}>
+          {firstTitle}
+        </div>
 
+        <div 
+        className={classes.firstLine} 
+        style={{
+          width:firstLineWidth,
+         border:lineBorder,
+        }}
+        />
+
+        <div className={classes.secondTitle}>
+          {secondTitle} <span className={classes.secondTitleBack}> {secondTitleBack} </span>
+        </div>
+
+        <div 
+        className={classes.secondLine} 
+        style={{
+          border:lineBorder,
+         }}
+        />
+
+        <div className={classes.thirdTitle}>
+          {thirdTitle}
+        </div>
+      </div>
+    );
+  }
 }
 
-var _default = (0, _styles.withStyles)(styles)(TopSection);
 
-exports.default = _default;
+export default withStyles(styles)(TopSection);

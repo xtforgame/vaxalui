@@ -1,15 +1,5 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
 
 const styles = {
   root: {
@@ -17,32 +7,33 @@ const styles = {
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    paddingTop: 160
+    paddingTop: 160,
   },
   line: {
     width: 420,
     height: 1,
-    marginTop: 20
+    marginTop: 20,
   },
   subtitle: {
     fontSize: 20,
-    paddingTop: 20
+    paddingTop: 20,
   },
   box: {
     width: 780,
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: 115,
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+
+  },
 };
 
-class ClassicFibers extends _react.default.PureComponent {
+class ClassicFibers extends React.PureComponent {
   render() {
     const {
       classes,
@@ -51,32 +42,40 @@ class ClassicFibers extends _react.default.PureComponent {
       fontColor,
       marginTop,
       children,
-      borderStyle
+      borderStyle,
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root,
-      style: {
-        height,
-        backgroundColor,
-        color: fontColor,
-        marginTop
-      }
-    }, _react.default.createElement("div", {
-      className: classes.title
-    }, "SAYA Classic Fibers"), _react.default.createElement("div", {
-      className: classes.line,
-      style: {
-        border: borderStyle
-      }
-    }), _react.default.createElement("div", {
-      className: classes.subtitle
-    }, "Nam dapibus nisl vitae elit."), _react.default.createElement("div", {
-      className: classes.box
-    }, children));
-  }
+    return (
+      <div
+        className={classes.root}
+        style={{
+          height: height,
+          backgroundColor: backgroundColor,
+          color: fontColor,
+          marginTop: marginTop,
+        }}
+      >
+        <div className={classes.title}>
+          SAYA Classic Fibers
+          </div>
 
+        <div
+          className={classes.line}
+          style={{
+            border: borderStyle,
+          }}
+        />
+
+        <div className={classes.subtitle}>
+          Nam dapibus nisl vitae elit.
+        </div>
+
+        <div className={classes.box}>
+          {children}
+        </div>
+      </div>
+
+    );
+  }
 }
 
-var _default = (0, _styles.withStyles)(styles)(ClassicFibers);
-
-exports.default = _default;
+export default withStyles(styles)(ClassicFibers);

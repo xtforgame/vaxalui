@@ -7,7 +7,7 @@ import Button from 'library/saya/Button';
 import {
   FlexRow,
   FlexColumn,
-} from '../../shared';
+} from '../shared';
 
 storiesOf('saya|Compnents/Buttons', module)
   // .addParameters({
@@ -20,7 +20,7 @@ storiesOf('saya|Compnents/Buttons', module)
   //   },
   // })
   .add('Button',
-    ()=>(
+    () => (
       <div style={{ margin: 16 }}>
         <FlexRow>
           <FlexColumn>

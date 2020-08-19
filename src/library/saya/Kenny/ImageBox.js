@@ -1,5 +1,6 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/styles';
+import GreenButton from './GreenButton';
 
 const styles = {
   root: {
@@ -16,25 +17,20 @@ const styles = {
   title: {
     fontSize: 40,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+  },
+  titleBack: {
+    fontWeight: 'normal',
   },
   subtitle: {
     fontSize: 18,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
     paddingTop: 10,
   },
   button: {
-    width: 130,
-    height: 45,
-    fontSize: 14,
-    color: '#ffffff',
-    fontWeight: 'bold',
-    backgroundColor: '#64703f',
-    border: 'none',
-    borderRadius: 22,
     marginTop: 160,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    fontFamily: 'FilsonSoft-Bold',
   },
 };
 
@@ -43,13 +39,12 @@ class ImageBox extends React.PureComponent {
     const {
       classes,
       title,
+      titleBack,
       subtitle,
       backgroundImage,
       fontColor,
       paddingTop,
     } = this.props;
-
-
     return (
       <div
         className={classes.root}
@@ -61,21 +56,22 @@ class ImageBox extends React.PureComponent {
         <div
           className={classes.title}
           style={{
-            paddingTop,
+            paddingTop: paddingTop,
           }}
         >
-          {title}
+          {title}<span className={classes.titleBack}>{titleBack}</span>
         </div>
 
         <div className={classes.subtitle}>
           {subtitle}
         </div>
 
-        <button className={classes.button}>
-          Learn more
-        </button>
+        <div className={classes.button} >
+          <GreenButton
+            text="Learn more"
+          />
+        </div>
       </div>
-
     );
   }
 }

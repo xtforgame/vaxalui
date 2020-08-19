@@ -1,15 +1,6 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _styles = require("@material-ui/core/styles");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import React from 'react';
+import { withStyles } from '@material-ui/styles';
+import Background from '../img/ocean-cycle-218x300.png';
 
 const styles = {
   root: {
@@ -18,13 +9,14 @@ const styles = {
     backgroundColor: '#c8c6c6',
     border: 'solid 1px #979797',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   oceanCycle: {
     width: 220,
     height: 300,
+    backgroundImage: `url(${Background})`,
     marginTop: 75,
-    marginRight: 90
+    marginRight: 90,
   },
   rightColumn: {
     width: 470,
@@ -32,43 +24,42 @@ const styles = {
     flexDirection: 'column',
     paddingTop: 165,
     paddingLeft: 90,
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   rightTitle: {
     fontSize: 20,
-    color: '#000000'
+    color: '#000000',
   },
   description: {
     fontSize: 14,
     color: '#000000',
-    paddingTop: 20
-  }
+    paddingTop: 20,
+  },
 };
 
-class OceanCycle extends _react.default.PureComponent {
+
+class OceanCycle extends React.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
-    }, _react.default.createElement("div", {
-      className: classes.oceanCycle,
-      style: {
-        backgroundImage: `url(${backgroundImage})`
-      }
-    }), _react.default.createElement("div", {
-      className: classes.rightColumn
-    }, _react.default.createElement("div", {
-      className: classes.rightTitle
-    }, "Lorem ipsum dolor sit amet."), _react.default.createElement("div", {
-      className: classes.description
-    }, "We work with OceanCycle\u2019s network of certified coastal recyclers. Treated with SAYA Now\u2019s proprietary renewing technology, we turn potential microplastics into microfibers.")));
-  }
+    return (
+      <div className={classes.root}>
+        <div className={classes.oceanCycle}></div>
 
+        <div className={classes.rightColumn}>
+          <div className={classes.rightTitle}>Lorem ipsum dolor sit amet.</div>
+          <div className={classes.description}>
+            We work with OceanCycle’s network of
+            certified coastal recyclers. Treated with
+            SAYA Now’s proprietary renewing technology,
+            we turn potential microplastics into microfibers.
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-var _default = (0, _styles.withStyles)(styles)(OceanCycle);
 
-exports.default = _default;
+export default withStyles(styles)(OceanCycle);

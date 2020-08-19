@@ -1,5 +1,5 @@
 // Buttons
-import './Button';
+import './Buttons';
 
 // Navbar
 import './Navbar';
@@ -16,11 +16,17 @@ import './Select';
 // Home
 import './Home';
 
+// Products
+import './Products';
+
 // CoastalDesktop1
-import './CoastalDesktop1';
+import './TechnologiesNowCoastal1';
 
 // CoastalDesktop2
-import './CoastalDesktop2';
+import './TechnologiesNowCoastal2';
+
+// TechnologiesNow1
+import './TechnologiesNow1';
 
 // MobileHome
 import './MobileHome';
