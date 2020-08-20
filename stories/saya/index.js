@@ -28,5 +28,11 @@ import './TechnologiesNowCoastal2';
 // TechnologiesNow1
 import './TechnologiesNow1';
 
+// TechnologiesNow2
+import './TechnologiesNow2';
+
+// TechnologiesNow2
+import './TechnologiesNextRscuw';
+
 // MobileHome
 import './MobileHome';

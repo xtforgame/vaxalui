@@ -40,6 +40,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#ffffff"
             lineBorder="1px solid #ffffff"
             firstLineWidth="135px"
+            thirdTitleWidth="390px"
           />
 
           <GreenNumberSection
@@ -53,6 +54,8 @@ storiesOf('saya|Pages/Desktop', module)
             rightPaddingTop="248px"
             leftPaddingRight="65px"
             rightPaddingLeft="65px"
+            numberColor="#64703f"
+            percentColor="##64703f"
           />
 
           <Microfibers

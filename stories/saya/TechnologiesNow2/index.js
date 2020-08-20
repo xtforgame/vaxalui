@@ -11,28 +11,16 @@ import GreenIconBottom from 'library/saya/Kenny/GreenIconBottom';
 import SeeProduct from 'library/saya/Kenny/SeeProduct';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
-import StageWithIcon from 'library/saya/Kenny/StageWithIcon';
-import ImageNumber from 'library/saya/Kenny/ImageNumber';
 
 import topSection from '../img/bg1.jpg';
 import introduction1 from '../img/bg34.jpg';
-import introduction2 from '../img/bg35.jpg';
+import introduction2 from '../img/bg36.jpg';
 import introduction3 from '../img/bg37.jpg';
 import leftBox from '../img/bg27.jpg';
 import midBox from '../img/bg19.jpg';
 import rightBox from '../img/bg28.jpg';
+import threeIcon from '../img/fig3.svg';
 
-import greenLeftIcon from '../img/icon13.svg';
-import greenRightIcon from '../img/icon14.svg';
-
-import leftBoxImage from '../img/bg32.jpg';
-import rightBoxImage from '../img/bg33.jpg';
-
-import topImg from '../img/fig1.svg';
-import bottomImg from '../img/fig2.svg';
-
-import leftIcon from '../img/icon11.svg';
-import rightIcon from '../img/icon12.svg';
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -44,7 +32,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('TechnologiesNow1',
+  .add('TechnologiesNow2',
     () => (
       <div style={{ width: '100%' }}>
         <Layout>
@@ -60,20 +48,7 @@ storiesOf('saya|Pages/Desktop', module)
             thirdTitleWidth="390px"
           />
 
-          <ImageNumberSection>
-            <ImageNumber
-              backgroundImage={leftBoxImage}
-              number="13"
-              topTile="PET recycling facilities "
-              bottomTitle="worldwide"
-            />
-            <ImageNumber
-              backgroundImage={rightBoxImage}
-              number="75"
-              topTile="billion bottles "
-              bottomTitle="every year"
-            />
-          </ImageNumberSection>
+          <ImageNumberSection />
 
           <Introduction
             height="600px"
@@ -109,23 +84,24 @@ storiesOf('saya|Pages/Desktop', module)
             backgroundImage={introduction2}
             title="Not all Recycled Fibers are Created Equal, "
             titleBack="SAYA Just Get More TLC"
-            subtitle="Five-stage Filtration and Two-stage Purification"
-            description="SAYA continues to perfect the process of renewing water bottles into yarns for multiple uses. Discarded water bottles are renewed through our proprietary, five-stage filtration process which are followed by two stages of purification."
+            subtitle="Enhanced Process"
+            description="The resulting flakes are then transported to in-house facilities where they are batch-optimized to control color and tenacity and transformed into pellets ready to be extruded into recycled yarns designated for a specific end-use."
             titleWidth="540px"
             descriptionWidth="940px"
             fontColor="#ffffff"
             lineBorder="solid 1px #ffffff"
           >
-            <StageWithIcon
-              topImg={topImg}
-              bottomImg={bottomImg}
-            />
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src={threeIcon}
+                style={{
+                  width: 675,
+                  marginTop: 60,
+                }}
+              />
+            </div>
           </Introduction>
 
-          <TwoIconSection
-            leftIcon={leftIcon}
-            rightIcon={rightIcon}
-          />
+          <TwoIconSection />
 
           <Introduction
             height="570px"
@@ -138,10 +114,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#000000"
             lineBorder="solid 1px #000000"
           >
-            <GreenIconBottom
-              leftIcon={greenLeftIcon}
-              rightIcon={greenRightIcon}
-            />
+            <GreenIconBottom />
           </Introduction>
 
           <div style={{ marginTop: 35 }}>

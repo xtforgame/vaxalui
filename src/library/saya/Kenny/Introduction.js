@@ -43,8 +43,10 @@ class Introduction extends React.PureComponent {
       subtitle,
       description,
       descriptionWidth,
+      secondDescription,
       fontColor,
       lineBorder,
+      backgroundColor,
       children,
     } = this.props;
     return (
@@ -54,11 +56,12 @@ class Introduction extends React.PureComponent {
         style={{
           height,
           color: fontColor,
+          backgroundColor:backgroundColor,
         }}
       >
         <div
           className={classes.container}
-        >
+        > 
           <div
             className={classes.title}
             style={{
@@ -88,6 +91,9 @@ class Introduction extends React.PureComponent {
             }}
           >
             {description}
+            <div>
+             <br/> {secondDescription}
+            </div>
           </div>
 
           <div>
