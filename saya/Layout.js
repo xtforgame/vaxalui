@@ -19,6 +19,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const Layout = ({
   children,
+  onLinkClick,
   navBarItems
 }) => _react.default.createElement("div", {
   style: {
@@ -28,6 +29,7 @@ const Layout = ({
 }, _react.default.createElement(_reactHelmet.default, {
   title: "SAYA homepage"
 }), _react.default.createElement(_Navbar.default, {
+  onLinkClick: onLinkClick,
   items: navBarItems
 }), _react.default.createElement("div", {
   style: {
