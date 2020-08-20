@@ -18,7 +18,8 @@ var _Footer = _interopRequireDefault(require("./Footer"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Layout = ({
-  children
+  children,
+  navBaritems
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
@@ -26,7 +27,9 @@ const Layout = ({
   }
 }, _react.default.createElement(_reactHelmet.default, {
   title: "SAYA homepage"
-}), _react.default.createElement(_Navbar.default, null), _react.default.createElement("div", {
+}), _react.default.createElement(_Navbar.default, {
+  items: navBaritems
+}), _react.default.createElement("div", {
   style: {
     width: '100%',
     height: 64
