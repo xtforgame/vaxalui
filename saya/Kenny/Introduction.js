@@ -17,6 +17,9 @@ const styles = {
   root: {
     paddingTop: 80
   },
+  container: {
+    width: '80%'
+  },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
@@ -44,9 +47,8 @@ class Introduction extends _react.default.PureComponent {
     const {
       classes,
       height,
-      backgroundImage,
-      backgroundColor,
       title,
+      backgroundImage,
       titleWidth,
       titleBack,
       subtitle,
@@ -57,13 +59,14 @@ class Introduction extends _react.default.PureComponent {
       children
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
+      image: backgroundImage,
       className: classes.root,
       style: {
         height,
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundColor,
         color: fontColor
       }
+    }, _react.default.createElement("div", {
+      className: classes.container
     }, _react.default.createElement("div", {
       className: classes.title,
       style: {
@@ -81,7 +84,7 @@ class Introduction extends _react.default.PureComponent {
       style: {
         width: descriptionWidth
       }
-    }, description), _react.default.createElement("div", null, children));
+    }, description), _react.default.createElement("div", null, children)));
   }
 
 }

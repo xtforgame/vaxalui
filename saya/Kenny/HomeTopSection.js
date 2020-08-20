@@ -9,31 +9,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg0.jpg"));
-
-var _round_arrow = _interopRequireDefault(require("../../../../stories/saya/img/round_arrow.svg"));
-
-var _scrollArrow = _interopRequireDefault(require("../../../../stories/saya/img/scroll arrow.png"));
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: '100%',
     height: 500,
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  section: {
-    width: 1024,
-    height: 500,
-    color: '#000000',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    backgroundImage: `url(${_bg.default})`,
-    backgroundRepeat: 'no-repeat'
+    color: '#000000'
   },
   scrollArrow: {
     width: 1024,
@@ -70,19 +53,21 @@ const styles = {
 class HomeTopSection extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage,
+      scrollArrowImage,
+      roundArrowImage
     } = this.props;
-    return _react.default.createElement("div", {
+    return _react.default.createElement(_ImageContainer.default, {
+      image: backgroundImage,
       className: classes.root
-    }, _react.default.createElement("div", {
-      className: classes.section
     }, _react.default.createElement("div", {
       className: classes.scrollArrow
     }, _react.default.createElement("img", {
-      src: _scrollArrow.default
+      src: scrollArrowImage
     })), _react.default.createElement("div", {
       className: classes.title
-    }, "In the Business of ", _react.default.createElement("span", {
+    }, "In the Business of", ' ', _react.default.createElement("span", {
       className: classes.titleBack
     }, "Renewal")), _react.default.createElement("div", {
       className: classes.line
@@ -91,8 +76,8 @@ class HomeTopSection extends _react.default.PureComponent {
     }, "The next of recycled goods."), _react.default.createElement("div", {
       className: classes.roundArrow
     }, _react.default.createElement("img", {
-      src: _round_arrow.default
-    }))));
+      src: roundArrowImage
+    })));
   }
 
 }

@@ -34,7 +34,7 @@ const styles = {
   }
 };
 
-class TwoCircleSection extends _react.default.PureComponent {
+class TwoCireSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -54,6 +54,6 @@ class TwoCircleSection extends _react.default.PureComponent {
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(TwoCircleSection);
+var _default = (0, _styles.withStyles)(styles)(TwoCireSection);
 
 exports.default = _default;

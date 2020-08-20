@@ -12,6 +12,7 @@ import SeeProduct from 'library/saya/Kenny/SeeProduct';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 import StageWithIcon from 'library/saya/Kenny/StageWithIcon';
+import ImageNumber from 'library/saya/Kenny/ImageNumber';
 
 import topSection from '../img/bg1.jpg';
 import introduction1 from '../img/bg34.jpg';
@@ -20,6 +21,13 @@ import introduction3 from '../img/bg37.jpg';
 import leftBox from '../img/bg27.jpg';
 import midBox from '../img/bg19.jpg';
 import rightBox from '../img/bg28.jpg';
+
+import greenLeftIcon from '../img/icon13.svg';
+import greenRightIcon from '../img/icon14.svg';
+
+import leftBoxImage from '../img/bg32.jpg';
+import rightBoxImage from '../img/bg33.jpg';
+
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -46,7 +54,20 @@ storiesOf('saya|Pages/Desktop', module)
             firstLineWidth="125px"
           />
 
-          <ImageNumberSection />
+          <ImageNumberSection>
+            <ImageNumber
+              backgroundImage={leftBoxImage}
+              number="13"
+              topTile="PET recycling facilities "
+              bottomTitle="worldwide"
+            />
+            <ImageNumber
+              backgroundImage={rightBoxImage}
+              number="75"
+              topTile="billion bottles "
+              bottomTitle="every year"
+            />
+          </ImageNumberSection>
 
           <Introduction
             height="600px"
@@ -103,7 +124,10 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#000000"
             lineBorder="solid 1px #000000"
           >
-            <GreenIconBottom />
+            <GreenIconBottom
+              leftIcon={greenLeftIcon}
+              rightIcon={greenRightIcon}
+            />
           </Introduction>
 
           <div style={{ marginTop: 35 }}>

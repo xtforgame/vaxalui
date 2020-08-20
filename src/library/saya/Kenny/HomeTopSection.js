@@ -1,27 +1,11 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
-
-import background from '../../../../stories/saya/img/bg0.jpg';
-import roundArrow from '../../../../stories/saya/img/round_arrow.svg';
-import scrollArrow from '../../../../stories/saya/img/scroll arrow.png';
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
-    height: 500,
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  section: {
-    width: 1024,
     height: 500,
     color: '#000000',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    textAlign: 'center',
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: 'no-repeat',
   },
   scrollArrow: {
     width: 1024,
@@ -60,26 +44,34 @@ class HomeTopSection extends React.PureComponent {
   render() {
     const {
       classes,
+      backgroundImage,
+      scrollArrowImage,
+      roundArrowImage,
     } = this.props;
     return (
-      <div className={classes.root}>
-        <div className={classes.section}>
-          <div className={classes.scrollArrow}><img src={scrollArrow} /></div>
-
-          <div className={classes.title}>
-            In the Business of <span className={classes.titleBack}>Renewal</span>
-          </div>
-
-          <div className={classes.line} />
-
-          <div className={classes.subtitle}>
-            The next of recycled goods.
-             </div>
-
-          <div className={classes.roundArrow}><img src={roundArrow} /></div>
-
+      <ImageContainer
+        image={backgroundImage}
+        className={classes.root}
+      >
+        <div className={classes.scrollArrow}>
+          <img src={scrollArrowImage} />
         </div>
-      </div>
+        <div className={classes.title}>
+          In the Business of
+          {' '}
+          <span className={classes.titleBack}>Renewal</span>
+        </div>
+
+        <div className={classes.line} />
+
+        <div className={classes.subtitle}>
+          The next of recycled goods.
+        </div>
+
+        <div className={classes.roundArrow}>
+          <img src={roundArrowImage} />
+        </div>
+      </ImageContainer>
     );
   }
 }

@@ -1,9 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
-import leftIcon from '../../../../stories/saya/img/icon13.svg';
-import rightIcon from '../../../../stories/saya/img/icon14.svg';
-
 const styles = {
   root: {
     display: 'flex',
@@ -25,6 +22,8 @@ class GreenIconBottom extends React.PureComponent {
   render() {
     const {
       classes,
+      leftIcon,
+      rightIcon,
     } = this.props;
     return (
       <div className={classes.root}>

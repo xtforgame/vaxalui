@@ -9,10 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _icon = _interopRequireDefault(require("../../../../stories/saya/img/icon13.svg"));
-
-var _icon2 = _interopRequireDefault(require("../../../../stories/saya/img/icon14.svg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -35,18 +31,20 @@ const styles = {
 class GreenIconBottom extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      leftIcon,
+      rightIcon
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
     }, _react.default.createElement("div", {
       className: classes.leftIcon
     }, _react.default.createElement("img", {
-      src: _icon.default
+      src: leftIcon
     })), _react.default.createElement("div", {
       className: classes.rightIcon
     }, _react.default.createElement("img", {
-      src: _icon2.default
+      src: rightIcon
     })));
   }
 

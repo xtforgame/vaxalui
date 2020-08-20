@@ -13,9 +13,7 @@ var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 var _TextField = _interopRequireDefault(require("./TextField"));
 
-var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg16.jpg"));
-
-var _bottle_w = _interopRequireDefault(require("../../../../stories/saya/img/bottle_w.svg"));
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,18 +21,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const styles = {
   root: {
-    width: '100%',
     height: 500,
-    backgroundImage: `url(${_bg.default})`,
-    backgroundRepeat: 'no-repeat',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    paddingTop: 90
   },
   bottle: {
     width: 880,
     height: 320,
-    backgroundImage: `url(${_bottle_w.default})`,
     color: '#000000',
     display: 'flex',
     flexDirection: 'column',
@@ -109,12 +101,18 @@ class Partner extends _react.default.PureComponent {
       email
     } = this.state;
     const {
-      classes
+      classes,
+      backgroundImage,
+      bottleImage
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
+    return _react.default.createElement(_ImageContainer.default, {
+      className: classes.root,
+      image: backgroundImage
     }, _react.default.createElement("div", {
-      className: classes.bottle
+      className: classes.bottle,
+      style: {
+        backgroundImage: `url(${bottleImage})`
+      }
     }, _react.default.createElement("div", {
       className: classes.title
     }, "Become our partner"), _react.default.createElement("div", {

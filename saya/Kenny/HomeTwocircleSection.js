@@ -27,7 +27,6 @@ const styles = {
     fontSize: 16,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    color: '#000000',
     lineHeight: 1.31,
     color: '#000000',
     paddingTop: 88
@@ -46,7 +45,8 @@ const styles = {
 class HomeTwoCircleSection extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -56,7 +56,9 @@ class HomeTwoCircleSection extends _react.default.PureComponent {
       className: classes.line
     }), _react.default.createElement("div", {
       className: classes.circle
-    }, _react.default.createElement(_ImageCircle.default, null)));
+    }, _react.default.createElement(_ImageCircle.default, {
+      backgroundImage: backgroundImage
+    })));
   }
 
 }

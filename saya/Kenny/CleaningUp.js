@@ -11,47 +11,32 @@ var _styles = require("@material-ui/styles");
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
-var _ImageBoxSmall = _interopRequireDefault(require("./ImageBoxSmall"));
-
-var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg15.jpg"));
-
-var _bg2 = _interopRequireDefault(require("../../../../stories/saya/img/bg17.jpg"));
-
-var _bg3 = _interopRequireDefault(require("../../../../stories/saya/img/bg18.jpg"));
-
-var _bg4 = _interopRequireDefault(require("../../../../stories/saya/img/bg19.jpg"));
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: '100%',
     height: 1330,
-    color: '#ffffff',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundImage: `url(${_bg.default})`,
-    backgroundRepeat: 'no-repeat'
+    color: '#ffffff'
   },
   sction: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column'
   },
   topColumn: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 90,
-    paddingLeft: 40
+    paddingTop: 90
   },
   bottomColumn: {
-    width: 1024,
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    paddingTop: 400,
-    paddingLeft: 60
+    paddingTop: 400
   },
   firstTitle: {
     width: 540,
@@ -96,9 +81,12 @@ const styles = {
 class CleaningUp extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage,
+      children
     } = this.props;
-    return _react.default.createElement("div", {
+    return _react.default.createElement(_ImageContainer.default, {
+      image: backgroundImage,
       className: classes.root
     }, _react.default.createElement("div", {
       className: classes.section
@@ -122,26 +110,7 @@ class CleaningUp extends _react.default.PureComponent {
       className: classes.secondLine
     }), _react.default.createElement("div", {
       className: classes.box
-    }, _react.default.createElement(_ImageBoxSmall.default, {
-      title: "About SAYA",
-      backgroundImage: _bg2.default,
-      paddingTop: "75px",
-      fontColor: "#ffffff",
-      marginTop: "150px"
-    }), _react.default.createElement(_ImageBoxSmall.default, {
-      title: "Partners in Sustainability",
-      backgroundImage: _bg3.default,
-      paddingTop: "60px",
-      fontColor: "#ffffff",
-      marginTop: "125px"
-    }), _react.default.createElement(_ImageBoxSmall.default, {
-      title: "SAYA",
-      titleBack: "COASTAL",
-      backgroundImage: _bg4.default,
-      paddingTop: "75px",
-      fontColor: "#ffffff",
-      marginTop: "150px"
-    }))))));
+    }, children)))));
   }
 
 }

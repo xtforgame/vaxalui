@@ -9,24 +9,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _bg = _interopRequireDefault(require("../../../../stories/saya/img/bg14.jpg"));
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: '100%',
     height: 610,
-    color: '#000000',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundImage: `url(${_bg.default})`,
-    backgroundRepeat: 'no-repeat'
+    color: '#000000'
   },
   section: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
@@ -72,10 +67,12 @@ const styles = {
 class MacroChanges extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
+    return _react.default.createElement(_ImageContainer.default, {
+      className: classes.root,
+      image: backgroundImage
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {

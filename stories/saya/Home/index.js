@@ -21,6 +21,12 @@ import rightBox from '../img/bg19.jpg';
 import backgroundPartner from '../img/bg16.jpg';
 import bottle from '../img/bottle_w.svg';
 
+import backgroundHomeTopSection from '../img/bg0.jpg';
+
+import roundArrowImage from '../img/round_arrow.svg';
+import scrollArrowImage from '../img/scroll arrow.png';
+
+
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -37,7 +43,11 @@ storiesOf('saya|Pages/Desktop', module)
       <div style={{ width: '100%' }}>
         <Layout>
 
-          <HomeTopSection />
+          <HomeTopSection
+            backgroundImage={backgroundHomeTopSection}
+            roundArrowImage={roundArrowImage}
+            scrollArrowImage={scrollArrowImage}
+          />
           <HomeTwoCircleSection
             backgroundImage={backgroundNextCircle}
           />
