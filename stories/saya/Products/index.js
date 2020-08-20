@@ -42,6 +42,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#000000"
             lineBorder="1px solid #000000"
             firstLineWidth="85px"
+            thirdTitleWidth="390px"
           />
 
           <Introduction

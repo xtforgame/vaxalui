@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 
+
 const styles = {
   root: {
     height: 330,
@@ -33,7 +34,6 @@ const styles = {
     marginTop: 2,
   },
   thirdTitle: {
-    width: 390,
     fontSize: 20,
     fontFamily: 'FilsonSoftRegular',
     paddingTop: 10,
@@ -53,6 +53,7 @@ class TopSection extends React.PureComponent {
       fontColor,
       lineBorder,
       firstLineWidth,
+      thirdTitleWidth,
     } = this.props;
     return (
       <ImageContainer
@@ -85,7 +86,12 @@ class TopSection extends React.PureComponent {
           }}
         />
 
-        <div className={classes.thirdTitle}>
+        <div
+          className={classes.thirdTitle}
+          style={{
+            width: thirdTitleWidth,
+          }}
+        >
           {thirdTitle}
         </div>
       </ImageContainer>
