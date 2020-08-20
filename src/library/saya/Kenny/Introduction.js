@@ -6,6 +6,9 @@ const styles = {
   root: {
     paddingTop: 80,
   },
+  container: {
+    width: '80%',
+  },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
@@ -33,9 +36,8 @@ class Introduction extends React.PureComponent {
     const {
       classes,
       height,
-      backgroundImage,
-      backgroundColor,
       title,
+      backgroundImage,
       titleWidth,
       titleBack,
       subtitle,
@@ -47,47 +49,50 @@ class Introduction extends React.PureComponent {
     } = this.props;
     return (
       <ImageContainer
+        image={backgroundImage}
         className={classes.root}
         style={{
           height,
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundColor,
           color: fontColor,
         }}
       >
         <div
-          className={classes.title}
-          style={{
-            width: titleWidth,
-          }}
+          className={classes.container}
         >
-          {title}
-          <br />
-          {titleBack}
-        </div>
+          <div
+            className={classes.title}
+            style={{
+              width: titleWidth,
+            }}
+          >
+            {title}
+            <br />
+            {titleBack}
+          </div>
 
-        <div
-          className={classes.line}
-          style={{
-            border: lineBorder,
-          }}
-        />
+          <div
+            className={classes.line}
+            style={{
+              border: lineBorder,
+            }}
+          />
 
-        <div className={classes.subtitle}>
-          {subtitle}
-        </div>
+          <div className={classes.subtitle}>
+            {subtitle}
+          </div>
 
-        <div
-          className={classes.description}
-          style={{
-            width: descriptionWidth,
-          }}
-        >
-          {description}
-        </div>
+          <div
+            className={classes.description}
+            style={{
+              width: descriptionWidth,
+            }}
+          >
+            {description}
+          </div>
 
-        <div>
-          {children}
+          <div>
+            {children}
+          </div>
         </div>
       </ImageContainer>
     );
