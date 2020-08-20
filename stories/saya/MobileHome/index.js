@@ -7,8 +7,6 @@ import Introduction from 'library/saya/Rick/Introduction';
 import Boxes from 'library/saya/Rick/Boxes';
 import ImageBox from 'library/saya/Rick/ImageBox';
 import TwoCircleSection from 'library/saya/Rick/TwoCircleSection';
-import TwoBox from 'library/saya/Kenny/TwoBox';
-import FourBox from 'library/saya/Kenny/FourBox';
 
 import LeftBox from '../img/bg3.jpg';
 import RightBox from '../img/bg4.jpg';

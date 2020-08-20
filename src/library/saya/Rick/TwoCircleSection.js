@@ -24,7 +24,7 @@ const styles = {
   },
 };
 
-class TwocircleSection extends React.PureComponent {
+class TwoCircleSection extends React.PureComponent {
   render() {
     const {
       classes,
@@ -57,4 +57,4 @@ class TwocircleSection extends React.PureComponent {
     );
   }
 }
-export default withStyles(styles)(TwocircleSection);
+export default withStyles(styles)(TwoCircleSection);

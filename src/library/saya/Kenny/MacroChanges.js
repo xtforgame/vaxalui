@@ -1,22 +1,15 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
+import ImageContainer from '../ImageContainer';
 import GreenButton from './GreenButton';
-
-import background from '../../../../stories/saya/img/bg14.jpg';
-
 
 const styles = {
   root: {
-    width: '100%',
     height: 610,
     color: '#000000',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: 'no-repeat',
   },
   section: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
@@ -64,9 +57,13 @@ class MacroChanges extends React.PureComponent {
   render() {
     const {
       classes,
+      backgroundImage,
     } = this.props;
     return (
-      <div className={classes.root}>
+      <ImageContainer
+        className={classes.root}
+        image={backgroundImage}
+      >
         <div className={classes.section}>
           <div className={classes.firstTitle}>PRODUCTS</div>
           <div className={classes.firstLine} />
@@ -79,7 +76,7 @@ class MacroChanges extends React.PureComponent {
             />
           </div>
         </div>
-      </div>
+      </ImageContainer>
     );
   }
 }

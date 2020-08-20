@@ -5,8 +5,6 @@ import ImageNumber from './ImageNumber';
 import LeftBox from '../../../../stories/saya/img/bg32.jpg';
 import RightBox from '../../../../stories/saya/img/bg33.jpg';
 
-
-
 const styles = {
   root: {
     width: '100%',

@@ -1,43 +1,30 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import GreenButton from './GreenButton';
-import ImageBoxSmall from './ImageBoxSmall';
-
-import background from '../../../../stories/saya/img/bg15.jpg';
-import leftBox from '../../../../stories/saya/img/bg17.jpg';
-import midBox from '../../../../stories/saya/img/bg18.jpg';
-import rightBox from '../../../../stories/saya/img/bg19.jpg';
-
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
     height: 1330,
     color: '#ffffff',
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: 'no-repeat',
   },
   sction: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
   },
   topColumn: {
-    width: 1024,
+    width: '80%',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
     paddingTop: 90,
-    paddingLeft: 40,
   },
   bottomColumn: {
-    width: 1024,
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     paddingTop: 400,
-    paddingLeft: 60,
   },
   firstTitle: {
     width: 540,
@@ -84,9 +71,14 @@ class CleaningUp extends React.PureComponent {
   render() {
     const {
       classes,
+      backgroundImage,
+      children,
     } = this.props;
     return (
-      <div className={classes.root}>
+      <ImageContainer
+        image={backgroundImage}
+        className={classes.root}
+      >
         <div className={classes.section}>
           <div className={classes.topColumn}>
             <div className={classes.firstTitle}>Cleaning Up the World,<br/> 75 Billion Bottles at a Time.</div>
@@ -102,33 +94,12 @@ class CleaningUp extends React.PureComponent {
               <div className={classes.thirdTitle}>Featured Content</div>
               <div className={classes.secondLine} />
               <div className={classes.box}>
-                <ImageBoxSmall
-                  title="About SAYA"
-                  backgroundImage={leftBox}
-                  paddingTop='75px'
-                  fontColor="#ffffff"
-                  marginTop="150px"
-                />
-                <ImageBoxSmall
-                  title="Partners in Sustainability"
-                  backgroundImage={midBox}
-                  paddingTop='60px'
-                  fontColor="#ffffff"
-                  marginTop="125px"
-                />
-                <ImageBoxSmall
-                  title="SAYA"
-                  titleBack="COASTAL"
-                  backgroundImage={rightBox}
-                  paddingTop='75px'
-                  fontColor="#ffffff"
-                  marginTop="150px"
-                />
+                {children}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </ImageContainer>
     );
   }
 }

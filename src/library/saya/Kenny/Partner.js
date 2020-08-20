@@ -2,25 +2,16 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import GreenButton from './GreenButton';
 import TextField from './TextField';
-
-import background from '../../../../stories/saya/img/bg16.jpg';
-import bottle from '../../../../stories/saya/img/bottle_w.svg';
-
+import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: '100%',
     height: 500,
-    backgroundImage: `url(${background})`,
-    backgroundRepeat: 'no-repeat',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 90,
   },
   bottle: {
     width: 880,
     height: 320,
-    backgroundImage: `url(${bottle})`,
     color: '#000000',
     display: 'flex',
     flexDirection: 'column',
@@ -80,21 +71,28 @@ class Partner extends React.PureComponent {
   state = {
     email: '',
   }
+
   handleEmailChange = (e) => {
     this.setState({
       email: e.target.value,
     });
   }
+
   render() {
     const {
       email,
     } = this.state;
     const {
       classes,
+      backgroundImage,
+      bottleImage,
     } = this.props;
     return (
-      <div className={classes.root}>
-        <div className={classes.bottle}>
+      <ImageContainer
+        className={classes.root}
+        image={backgroundImage}
+      >
+        <div className={classes.bottle} style={{ backgroundImage: `url(${bottleImage})` }}>
           <div className={classes.title}>Become our partner</div>
           <div className={classes.line} />
           <div className={classes.subtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</div>
@@ -119,7 +117,7 @@ class Partner extends React.PureComponent {
             </div>
           </div>
         </div>
-      </div>
+      </ImageContainer>
     );
   }
 }

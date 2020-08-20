@@ -4,14 +4,21 @@ import { storiesOf } from '@storybook/react';
 import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
-import TwocircleSection from 'library/saya/Kenny/TwocircleSection';
-import TwoBox from 'library/saya/Kenny/TwoBox';
-import FourBox from 'library/saya/Kenny/FourBox';
+import TwoCircleSection from 'library/saya/Kenny/TwoCircleSection';
+import ImageBox from 'library/saya/Kenny/ImageBox';
+import ClassicFibers from 'library/saya/Kenny/ClassicFibers';
 
 import background_TopSection from '../img/bg1.jpg';
 import background_Introduction from '../img/bg2.jpg';
 import backgroundNextCircle from '../img/now_next_circle_sample.jpg';
 
+import leftBox from '../img/bg3.jpg';
+import rightBox from '../img/bg4.jpg';
+
+import topLeftBox from '../img/bg5.jpg';
+import topRightBox from '../img/bg6.jpg';
+import bottomLeftBox from '../img/bg7.jpg';
+import bottomRightBox from '../img/bg8.jpg';
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -27,7 +34,6 @@ storiesOf('saya|Pages/Desktop', module)
     () => (
       <div style={{ width: '100%' }}>
         <Layout>
-
           <TopSection
             firstTitle="PRODUCTS"
             secondTitle="SAYA Recycled Fiber"
@@ -50,11 +56,71 @@ storiesOf('saya|Pages/Desktop', module)
             descriptionWidth="460px"
           />
 
-          <TwocircleSection
+          <TwoCircleSection
             backgroundImage={backgroundNextCircle}
           />
-          <TwoBox />
-          <FourBox />
+          <ClassicFibers
+            height="1000px"
+            backgroundColor="#444343"
+            fontColor="#ffffff"
+            marginTop="0"
+            borderStyle="1px solid #ffffff"
+          >
+            <ImageBox
+              title="FDY"
+              subtitle="Fully drawn yarn"
+              backgroundImage={leftBox}
+              paddingTop="105px"
+              fontColor="#000000"
+            />
+
+            <ImageBox
+              title="DTY"
+              subtitle="Drawn-texturning yarn"
+              backgroundImage={rightBox}
+              paddingTop="105px"
+              fontColor="#000000"
+            />
+          </ClassicFibers>
+          <ClassicFibers
+            height="1500px"
+            backgroundColor="#c8c6c6"
+            fontColor="#000000"
+            marginTop="35px"
+            borderStyle="1px solid #000000"
+          >
+            <ImageBox
+              title="CHROMUCH Solution Dyed"
+              subtitle="Color without Compromise"
+              backgroundImage={topLeftBox}
+              paddingTop='50px'
+              fontColor="#ffffff"
+            />
+
+            <ImageBox
+              title="UltraStretch"
+              subtitle="Stretch with a Good Conscious"
+              backgroundImage={topRightBox}
+              paddingTop="105px"
+              fontColor="#ffffff"
+            />
+
+            <ImageBox
+              title="TopFresh"
+              subtitle="lor sit amet, consectetuer ad"
+              backgroundImage={bottomLeftBox}
+              paddingTop="105px"
+              fontColor="#ffffff"
+            />
+
+            <ImageBox
+              title="MicroFilament"
+              subtitle="lor sit amet, consectetuer ad"
+              backgroundImage={bottomRightBox}
+              paddingTop="105px"
+              fontColor="#ffffff"
+            />
+          </ClassicFibers>
 
         </Layout>
       </div>
