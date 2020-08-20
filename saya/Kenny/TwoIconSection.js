@@ -11,15 +11,11 @@ var _styles = require("@material-ui/styles");
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
-var _icon = _interopRequireDefault(require("../../../../stories/saya/img/icon11.svg"));
-
-var _icon2 = _interopRequireDefault(require("../../../../stories/saya/img/icon12.svg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
     height: 360,
     display: 'flex',
     justifyContent: 'center',
@@ -66,7 +62,9 @@ const styles = {
 class TwoIconSection extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      leftIcon,
+      rightIcon
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -75,7 +73,7 @@ class TwoIconSection extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.leftIcon
     }, _react.default.createElement("img", {
-      src: _icon.default
+      src: leftIcon
     })), _react.default.createElement("div", {
       className: classes.leftTitle
     }, "Mechanical Recycling"), _react.default.createElement("div", {
@@ -87,7 +85,7 @@ class TwoIconSection extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.rightIcon
     }, _react.default.createElement("img", {
-      src: _icon2.default
+      src: rightIcon
     })), _react.default.createElement("div", {
       className: classes.rightTitle
     }, "Mechanical Recycling"), _react.default.createElement("div", {

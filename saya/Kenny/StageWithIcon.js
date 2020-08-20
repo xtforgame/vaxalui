@@ -9,10 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _fig = _interopRequireDefault(require("../../../../stories/saya/img/fig1.svg"));
-
-var _fig2 = _interopRequireDefault(require("../../../../stories/saya/img/fig2.svg"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -52,7 +48,9 @@ const styles = {
 class StageWithIcon extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      topImg,
+      bottomImg
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -62,14 +60,14 @@ class StageWithIcon extends _react.default.PureComponent {
       className: classes.circle
     }, "5 Stage", _react.default.createElement("br", null), "Filtration"), _react.default.createElement("img", {
       className: classes.img,
-      src: _fig.default
+      src: topImg
     })), _react.default.createElement("div", {
       className: classes.bottomRaw
     }, _react.default.createElement("div", {
       className: classes.circle
     }, "2 Stage", _react.default.createElement("br", null), "Purification"), _react.default.createElement("img", {
       className: classes.img,
-      src: _fig2.default
+      src: bottomImg
     })));
   }
 

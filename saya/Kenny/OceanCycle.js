@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/styles");
 
-var _oceanCycle218x = _interopRequireDefault(require("../../../../stories/saya/img/ocean-cycle-218x300.png"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -25,7 +23,6 @@ const styles = {
   oceanCycle: {
     width: 220,
     height: 300,
-    backgroundImage: `url(${_oceanCycle218x.default})`,
     marginTop: 75,
     marginRight: 90
   },
@@ -53,12 +50,16 @@ const styles = {
 class OceanCycle extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      backgroundImage
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
     }, _react.default.createElement("div", {
-      className: classes.oceanCycle
+      className: classes.oceanCycle,
+      style: {
+        backgroundImage: `url(${backgroundImage})`
+      }
     }), _react.default.createElement("div", {
       className: classes.rightColumn
     }, _react.default.createElement("div", {
