@@ -1,11 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/styles';
 
-import topImg from '../../../../stories/saya/img/fig1.svg';
-import bottomImg from '../../../../stories/saya/img/fig2.svg';
-
-
-
 const styles = {
   root: {
     display: 'flex',
@@ -44,19 +39,25 @@ class StageWithIcon extends React.PureComponent {
   render() {
     const {
       classes,
+      topImg,
+      bottomImg,
     } = this.props;
     return (
       <div className={classes.root}>
         <div className={classes.topRaw}>
           <div className={classes.circle}>
-            5 Stage<br />Filtration
+            5 Stage
+            <br />
+            Filtration
           </div>
           <img className={classes.img} src={topImg} />
         </div>
 
         <div className={classes.bottomRaw}>
           <div className={classes.circle}>
-            2 Stage<br />Purification
+            2 Stage
+            <br />
+            Purification
           </div>
           <img className={classes.img} src={bottomImg} />
 

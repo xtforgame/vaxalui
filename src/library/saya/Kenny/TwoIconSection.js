@@ -2,12 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/styles';
 import GreenButton from './GreenButton';
 
-import leftIcon from '../../../../stories/saya/img/icon11.svg';
-import rightIcon from '../../../../stories/saya/img/icon12.svg';
-
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
     height: 360,
     display: 'flex',
     justifyContent: 'center',
@@ -56,6 +53,8 @@ class TwoIconSection extends React.PureComponent {
   render() {
     const {
       classes,
+      leftIcon,
+      rightIcon,
     } = this.props;
     return (
       <div className={classes.root}>

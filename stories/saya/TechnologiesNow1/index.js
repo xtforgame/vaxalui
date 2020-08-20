@@ -28,6 +28,11 @@ import greenRightIcon from '../img/icon14.svg';
 import leftBoxImage from '../img/bg32.jpg';
 import rightBoxImage from '../img/bg33.jpg';
 
+import topImg from '../img/fig1.svg';
+import bottomImg from '../img/fig2.svg';
+
+import leftIcon from '../img/icon11.svg';
+import rightIcon from '../img/icon12.svg';
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -108,10 +113,16 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#ffffff"
             lineBorder="solid 1px #ffffff"
           >
-            <StageWithIcon />
+            <StageWithIcon
+              topImg={topImg}
+              bottomImg={bottomImg}
+            />
           </Introduction>
 
-          <TwoIconSection />
+          <TwoIconSection
+            leftIcon={leftIcon}
+            rightIcon={rightIcon}
+          />
 
           <Introduction
             height="570px"

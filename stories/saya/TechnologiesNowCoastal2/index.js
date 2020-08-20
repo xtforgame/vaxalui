@@ -14,6 +14,9 @@ import background_Microfibers from '../img/bg10.jpg';
 import leftBox from '../img/bg12.jpg';
 import rightBox from '../img/bg13.jpg';
 
+import backgroundOceanCycle from '../img/ocean-cycle-218x300.png';
+
+
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
   //   info: {
@@ -56,7 +59,9 @@ storiesOf('saya|Pages/Desktop', module)
           <Microfibers
             backgroundImage={background_Microfibers}
           />
-          <OceanCycle />
+          <OceanCycle
+            backgroundImage={backgroundOceanCycle}
+          />
 
           <TitleLineBox
             height="785px"
