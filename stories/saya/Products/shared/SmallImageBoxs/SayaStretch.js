@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
-import backgroundImage from '../../img/bg6.jpg';
+import backgroundImage from '../../../img/bg6.jpg';
 
 export default () => (
   <ImageBoxSmall

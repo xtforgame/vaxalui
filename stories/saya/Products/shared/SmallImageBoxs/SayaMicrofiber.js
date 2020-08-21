@@ -1,14 +1,15 @@
 import React from 'react';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
-import backgroundImage from '../../img/bg7.jpg';
+import backgroundImage from '../../../img/bg8.jpg';
 
 export default () => (
   <ImageBoxSmall
-    title="SAYAFRESH"
-    subtitle={'Lorem ipsum\ndolor sit amet'}
+    title="SAYA"
+    secondTitle="MICROFIBER"
     backgroundImage={backgroundImage}
-    titleWidth="105px"
+    subtitle={'Microfiber Good,\nMicro-plastic Bad'}
+    titleWidth="155px"
     paddingTop='50px'
     fontColor="#ffffff"
     marginTop="125px"

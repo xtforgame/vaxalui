@@ -10,19 +10,18 @@ import Table from 'library/saya/Rick/Table';
 
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 
-import SayaStretch from '../shared/SmallImageBoxs/SayaStretch';
 import Chromuch from '../shared/SmallImageBoxs/Chromuch';
 import SayaFresh from '../shared/SmallImageBoxs/SayaFresh';
 import SayaMicrofiber from '../shared/SmallImageBoxs/SayaMicrofiber';
 
-import background_TopSection from '../img/bg82.jpg';
-import introduction1 from '../img/bg78.jpg';
-import material from '../img/bg83.jpg';
+import background_TopSection from '../../img/bg20.jpg';
+import introduction1 from '../../img/bg78.jpg';
+import material from '../../img/bg21.jpg';
 
 
-import Logo from '../img/mobile/m_logo_w.svg'
+import Logo from '../../img/mobile/m_logo_w.svg'
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/Products', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -32,7 +31,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('SayaMicrofiber',
+  .add('SayaStretch',
     () => (
       <div style={{ width: '100%' }}>
         <Layout
@@ -107,8 +106,8 @@ storiesOf('saya|Pages/Desktop', module)
             backgroundColor="transparent"
           >
             <Chromuch />
-            <SayaStretch />
             <SayaFresh />
+            <SayaMicrofiber />
           </TitleLineBox>
 
         </Layout>

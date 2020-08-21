@@ -18,14 +18,14 @@ import Chromuch from '../shared/SmallImageBoxs/Chromuch';
 import SayaFresh from '../shared/SmallImageBoxs/SayaFresh';
 import SayaMicrofiber from '../shared/SmallImageBoxs/SayaMicrofiber';
 
-import background_TopSection from '../img/bg85.jpg';
-import introduction1 from '../img/bg78.jpg';
-import introduction2 from '../img/bg87.jpg';
-import introduction3 from '../img/bg88.jpg';
+import background_TopSection from '../../img/bg85.jpg';
+import introduction1 from '../../img/bg78.jpg';
+import introduction2 from '../../img/bg87.jpg';
+import introduction3 from '../../img/bg88.jpg';
 
-import Logo from '../img/mobile/m_logo_w.svg'
+import Logo from '../../img/mobile/m_logo_w.svg'
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/Products', module)
   // .addParameters({
   //   info: {
   //     inline: true,

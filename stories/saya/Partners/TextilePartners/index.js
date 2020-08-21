@@ -10,14 +10,14 @@ import ImageContainer from 'library/saya/ImageContainer';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 
-import background_TopSection from '../img/bg50.jpg';
-import introduction1 from '../img/bg51.jpg';
-import leftBox from '../img/bg52.jpg';
-import rightBox from '../img/bg53.jpg';
+import background_TopSection from '../../img/bg50.jpg';
+import introduction1 from '../../img/bg51.jpg';
+import leftBox from '../../img/bg52.jpg';
+import rightBox from '../../img/bg53.jpg';
 
-import Logo from '../img/mobile/m_logo_w.svg'
+import Logo from '../../img/mobile/m_logo_w.svg'
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/Partners', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -27,7 +27,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('PartnersTextilePartners',
+  .add('TextilePartners',
     () => (
       <div style={{ width: '100%' }}>
         <Layout

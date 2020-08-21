@@ -1,16 +1,16 @@
 import React from 'react';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
-import backgroundImage from '../../img/bg5.jpg';
+import backgroundImage from '../../../img/bg7.jpg';
 
 export default () => (
   <ImageBoxSmall
-    title="CHROMUCH"
-    secondTitle="Solution Dyed"
-    subtitle={'Color without\nCompromise.'}
+    title="SAYAFRESH"
+    subtitle={'Lorem ipsum\ndolor sit amet'}
     backgroundImage={backgroundImage}
-    paddingTop='75px'
+    titleWidth="105px"
+    paddingTop='50px'
     fontColor="#ffffff"
-    marginTop="150px"
+    marginTop="125px"
   />
 );

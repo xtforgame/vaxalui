@@ -19,30 +19,11 @@ import './Home';
 // Products
 import './Products';
 
-import './Saya365';
-
-import './SayaStretch';
-
-import './ChromuchSolutionDyed';
-
-import './SayaFresh';
-
-import './SayaMicrofiber';
-
 // Technologies
 import './Technologies';
 
 // Partners
 import './Partners';
-
-// PartnersCertifications
-import './PartnersCertifications';
-
-// PartnersBrandPartners
-import './PartnersBrandPartners';
-
-// PartnersTextilePartners
-import './PartnersTextilePartners';
 
 // AboutVisionMission
 import './AboutVisionMission';
