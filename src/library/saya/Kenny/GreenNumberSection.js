@@ -59,6 +59,7 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
   },
   description: {
+    paddingTop: 20,
     width: 380,
     fontSize: 14,
     color: '#000000',

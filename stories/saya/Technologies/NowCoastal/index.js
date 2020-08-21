@@ -9,19 +9,19 @@ import OceanCycle from 'library/saya/Kenny/OceanCycle';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 
-import background_TopSection from '../img/bg9.jpg';
-import backgroundMicrofibers1 from '../img/bg10.jpg';
-import backgroundMicrofibers2 from '../img/bg11.jpg';
-import leftBox from '../img/bg12.jpg';
-import rightBox from '../img/bg13.jpg';
+import background_TopSection from '../../img/bg9.jpg';
+import backgroundMicrofibers1 from '../../img/bg10.jpg';
+import backgroundMicrofibers2 from '../../img/bg11.jpg';
+import leftBox from '../../img/bg12.jpg';
+import rightBox from '../../img/bg13.jpg';
 
-import backgroundOceanCycle from '../img/ocean-cycle-218x300.png';
-import scrollArrowLeftImage from '../img/scroll_left.svg';
-import scrollArrowRightImage from '../img/scroll_right.svg';
+import backgroundOceanCycle from '../../img/ocean-cycle-218x300.png';
+import scrollArrowLeftImage from '../../img/scroll_left.svg';
+import scrollArrowRightImage from '../../img/scroll_right.svg';
 
-import Logo from '../img/mobile/m_logo_w.svg'
+import Logo from '../../img/mobile/m_logo_w.svg'
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/Technologies/Now', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -31,7 +31,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('TechnologiesNowCoastal1',
+  .add('Coastal',
     () => (
       <div style={{ width: '100%' }}>
         <Layout
@@ -64,7 +64,7 @@ storiesOf('saya|Pages/Desktop', module)
             leftPaddingRight="65px"
             rightPaddingLeft="65px"
             numberColor="#64703f"
-            percentColor="##64703f"
+            percentColor="#64703f"
           />
 
           <Microfibers

@@ -29,20 +29,8 @@ import './SayaFresh';
 
 import './SayaMicrofiber';
 
-// CoastalDesktop1
-import './TechnologiesNowCoastal1';
-
-// TechnologiesNow1
-import './TechnologiesNow1';
-
-// TechnologiesNow2
-import './TechnologiesNow2';
-
-// TechnologiesNow2
-import './TechnologiesNextRscuw';
-
-// TechnologiesNowUsa
-import './TechnologiesNowUsa';
+// Technologies
+import './Technologies';
 
 // Partners
 import './Partners';

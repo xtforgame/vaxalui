@@ -7,14 +7,14 @@ import Introduction from 'library/saya/Kenny/Introduction';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 
-import background_TopSection from '../img/bg46.jpg';
-import introduction1 from '../img/bg47.jpg';
-import leftBox from '../img/bg12.jpg';
-import rightBox from '../img/bg48.jpg';
+import background_TopSection from '../../img/bg46.jpg';
+import introduction1 from '../../img/bg47.jpg';
+import leftBox from '../../img/bg12.jpg';
+import rightBox from '../../img/bg48.jpg';
 
-import Logo from '../img/mobile/m_logo_w.svg'
+import Logo from '../../img/mobile/m_logo_w.svg'
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/Technologies/Now', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -24,7 +24,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('TechnologiesNowUsa',
+  .add('Usa',
     () => (
       <div style={{ width: '100%' }}>
         <Layout

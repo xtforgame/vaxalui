@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import BreakAllContentText from '../BreakAllContentText';
 
 
 const styles = {
@@ -27,7 +28,6 @@ const styles = {
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    fontWeight: 300,
     fontFamily: 'FilsonSoftLight',
   },
   secondLine: {
@@ -65,9 +65,9 @@ class TopSection extends React.PureComponent {
           color: fontColor,
         }}
       >
-        <div className={classes.firstTitle}>
+        <BreakAllContentText className={classes.firstTitle}>
           {firstTitle}
-        </div>
+        </BreakAllContentText>
 
         <div
           className={classes.firstLine}
@@ -88,14 +88,14 @@ class TopSection extends React.PureComponent {
           }}
         />
 
-        <div
+        <BreakAllContentText
           className={classes.thirdTitle}
           style={{
             width: thirdTitleWidth,
           }}
         >
           {thirdTitle}
-        </div>
+        </BreakAllContentText>
       </ImageContainer>
     );
   }
