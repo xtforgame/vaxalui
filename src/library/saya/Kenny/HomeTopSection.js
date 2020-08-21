@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import SwipperT1 from '../SwipperT1';
 import ImageContainer from '../ImageContainer';
 
 const styles = {
@@ -35,26 +36,30 @@ const styles = {
   roundArrow: {
     width: 50,
     height: 50,
-    marginTop: 30,
+    marginTop: 10,
   },
 };
 
 
 class HomeTopSection extends React.PureComponent {
+
   render() {
     const {
       classes,
       backgroundImage,
-      scrollArrowImage,
+      scrollArrowLeftImage,
+      scrollArrowRightImage,
       roundArrowImage,
     } = this.props;
-    return (
+
+    const renderContent = slideInfo => (
       <ImageContainer
+        key={slideInfo.index}
         image={backgroundImage}
         className={classes.root}
       >
         <div className={classes.scrollArrow}>
-          <img src={scrollArrowImage} />
+          {/* <img src={scrollArrowImage} /> */}
         </div>
         <div className={classes.title}>
           In the Business of
@@ -72,6 +77,14 @@ class HomeTopSection extends React.PureComponent {
           <img src={roundArrowImage} />
         </div>
       </ImageContainer>
+    );
+    return (
+      <SwipperT1
+        height={500}
+        scrollArrowLeftImage={scrollArrowLeftImage}
+        scrollArrowRightImage={scrollArrowRightImage}
+        slideRenderer={renderContent}
+      />
     );
   }
 }

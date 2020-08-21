@@ -26,6 +26,8 @@ import backgroundHomeTopSection from '../img/bg0.jpg';
 import roundArrowImage from '../img/round_arrow.svg';
 import scrollArrowImage from '../img/scroll arrow.png';
 
+import scrollArrowLeftImage from '../img/scroll_left.svg';
+import scrollArrowRightImage from '../img/scroll_right.svg';
 
 
 storiesOf('saya|Pages/Desktop', module)
@@ -47,6 +49,8 @@ storiesOf('saya|Pages/Desktop', module)
             backgroundImage={backgroundHomeTopSection}
             roundArrowImage={roundArrowImage}
             scrollArrowImage={scrollArrowImage}
+            scrollArrowLeftImage={scrollArrowLeftImage}
+            scrollArrowRightImage={scrollArrowRightImage}
           />
           <HomeTwoCircleSection
             backgroundImage={backgroundNextCircle}

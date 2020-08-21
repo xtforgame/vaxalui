@@ -10,11 +10,14 @@ import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 
 import background_TopSection from '../img/bg9.jpg';
-import background_Microfibers from '../img/bg11.jpg';
+import backgroundMicrofibers1 from '../img/bg10.jpg';
+import backgroundMicrofibers2 from '../img/bg11.jpg';
 import leftBox from '../img/bg12.jpg';
 import rightBox from '../img/bg13.jpg';
 
 import backgroundOceanCycle from '../img/ocean-cycle-218x300.png';
+import scrollArrowLeftImage from '../img/scroll_left.svg';
+import scrollArrowRightImage from '../img/scroll_right.svg';
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -56,7 +59,12 @@ storiesOf('saya|Pages/Desktop', module)
           />
 
           <Microfibers
-            backgroundImage={background_Microfibers}
+            backgroundImages={[
+              backgroundMicrofibers2,
+              backgroundMicrofibers1,
+            ]}
+            scrollArrowLeftImage={scrollArrowLeftImage}
+            scrollArrowRightImage={scrollArrowRightImage}
           />
           <OceanCycle
             backgroundImage={backgroundOceanCycle}

@@ -1,13 +1,14 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import SwipperT1 from '../SwipperT1';
 
 const styles = {
   root: {
     height: 580,
   },
   section: {
-    width: 1024,
+    width: 900,
     display: 'flex',
     flexWrap: 'wrap',
     paddingTop: 80,
@@ -26,19 +27,35 @@ class Microfibers extends React.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage,
+      backgroundImages,
+      scrollArrowLeftImage,
+      scrollArrowRightImage,
     } = this.props;
-    return (
+    const renderContent = slideInfo => (
       <ImageContainer
-        image={backgroundImage}
+        key={slideInfo.index}
+        image={(backgroundImages && backgroundImages.length) ? backgroundImages[Math.abs(slideInfo.index % backgroundImages.length)] : null}
         className={classes.root}
+      />
+    );
+
+    return (
+      <SwipperT1
+        height={580}
+        scrollArrowLeftImage={scrollArrowLeftImage}
+        scrollArrowRightImage={scrollArrowRightImage}
+        slideRenderer={renderContent}
       >
-        <div className={classes.section}>
-          <div className={classes.title}>
-            We Turn Potential Microplastics into Microfibers.
+        <ImageContainer
+          className={classes.root}
+        >
+          <div className={classes.section}>
+            <div className={classes.title}>
+              We Turn Potential Microplastics into Microfibers.
+            </div>
           </div>
-        </div>
-      </ImageContainer>
+        </ImageContainer>
+      </SwipperT1>
     );
   }
 }
