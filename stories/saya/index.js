@@ -31,5 +31,26 @@ import './TechnologiesNow2';
 // TechnologiesNow2
 import './TechnologiesNextRscuw';
 
+// TechnologiesNowUsa
+import './TechnologiesNowUsa';
+
+// Partners
+import './Partners';
+
+// PartnersCertifications
+import './PartnersCertifications';
+
+// PartnersBrandPartners
+import './PartnersBrandPartners';
+
+// PartnersTextilePartners
+import './PartnersTextilePartners';
+
+// AboutVisionMission
+import './AboutVisionMission';
+
+// AboutSayaByNanYa
+import './AboutSayaByNanYa';
+
 // MobileHome
 import './MobileHome';

@@ -27,6 +27,8 @@ const styles = {
   },
   secondTitleBack: {
     fontWeight: 'normal',
+    fontWeight: 300,
+    fontFamily: 'FilsonSoftLight',
   },
   secondLine: {
     width: 420,
@@ -76,7 +78,7 @@ class TopSection extends React.PureComponent {
         />
 
         <div className={classes.secondTitle}>
-          {secondTitle} <span className={classes.secondTitleBack}> {secondTitleBack} </span>
+          {secondTitle}<span className={classes.secondTitleBack}>{secondTitleBack} </span>
         </div>
 
         <div

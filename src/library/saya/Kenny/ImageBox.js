@@ -21,6 +21,8 @@ const styles = {
   },
   titleBack: {
     fontWeight: 'normal',
+    fontWeight: 300,
+    fontFamily: 'FilsonSoftLight',
   },
   subtitle: {
     fontSize: 18,
@@ -44,6 +46,7 @@ class ImageBox extends React.PureComponent {
       backgroundImage,
       fontColor,
       paddingTop,
+      buttonDisplay,
     } = this.props;
     return (
       <div
@@ -66,7 +69,7 @@ class ImageBox extends React.PureComponent {
           {subtitle}
         </div>
 
-        <div className={classes.button} >
+        <div className={classes.button} style={{display:buttonDisplay}}>
           <GreenButton
             text="Learn more"
           />

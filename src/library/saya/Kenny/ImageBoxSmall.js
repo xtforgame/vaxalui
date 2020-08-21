@@ -17,10 +17,14 @@ const styles = {
     fontSize: 28,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.07,
   },
   titleBack: {
     fontWeight: 300,
-    },
+  },
+  secondTitle: {
+    lineHeight: 1.07,
+  },
   subtitle: {
     width: 125,
     fontSize: 18,
@@ -35,6 +39,8 @@ class ImageBoxSmall extends React.PureComponent {
       classes,
       title,
       titleBack,
+      secondTitle,
+      titleWidth,
       subtitle,
       backgroundImage,
       fontColor,
@@ -55,20 +61,22 @@ class ImageBoxSmall extends React.PureComponent {
           className={classes.title}
           style={{
             paddingTop: paddingTop,
+            width: titleWidth,
           }}
         >
           {title}<span className={classes.titleBack}>{titleBack} </span>
+          <div className={classes.secondTitle}>{secondTitle}</div>
         </div>
 
         <div className={classes.subtitle}>
           {subtitle}
         </div>
 
-        <div 
-        className={classes.button} 
-        style={{
-          marginTop: marginTop,
-        }}
+        <div
+          className={classes.button}
+          style={{
+            marginTop: marginTop,
+          }}
         >
           <GreenButton
             text="Learn more"

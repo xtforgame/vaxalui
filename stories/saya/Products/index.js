@@ -60,12 +60,16 @@ storiesOf('saya|Pages/Desktop', module)
           <TwoCircleSection
             backgroundImage={backgroundNextCircle}
           />
+
           <ClassicFibers
+            title="SAYA Classic Fibers"
+            subtitle="Nam dapibus nisl vitae elit."
             height="1000px"
             backgroundColor="#444343"
             fontColor="#ffffff"
             marginTop="0"
             borderStyle="1px solid #ffffff"
+            boxWidth="780px"
           >
             <ImageBox
               title="FDY"
@@ -83,12 +87,16 @@ storiesOf('saya|Pages/Desktop', module)
               fontColor="#000000"
             />
           </ClassicFibers>
+
           <ClassicFibers
+            title="SAYA Classic Fibers"
+            subtitle="Nam dapibus nisl vitae elit."
             height="1500px"
             backgroundColor="#c8c6c6"
             fontColor="#000000"
             marginTop="35px"
             borderStyle="1px solid #000000"
+            boxWidth="780px"
           >
             <ImageBox
               title="CHROMUCH Solution Dyed"
