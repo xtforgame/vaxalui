@@ -72,6 +72,7 @@ class MobileNavbar extends React.PureComponent {
         </AppBar>
         <div className={classes.menuRoot}>
           <Menu
+            key={isOpen.toString()}
             className={clsx({
               [classes.openedMenu]: isOpen,
               [classes.closedMenu]: !isOpen,
