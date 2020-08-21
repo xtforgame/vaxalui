@@ -141,7 +141,7 @@ storiesOf('saya|Pages/Desktop', module)
             title="SAYA NOW Serial Projects"
             height="730px"
             fontColor="#000000"
-            boxWidth="820px"
+            boxWidth={900}
             lineBorder="solid 1px #979797"
           >
             <ImageBoxSmall

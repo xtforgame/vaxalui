@@ -19,6 +19,8 @@ import './Home';
 // Products
 import './Products';
 
+import './Saya365';
+
 import './SayaStretch';
 
 import './ChromuchSolutionDyed';

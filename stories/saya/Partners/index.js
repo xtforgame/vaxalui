@@ -68,7 +68,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#000000"
             marginTop="0"
             borderStyle="1px solid #000000"
-            boxWidth="820px"
+            boxWidth={900}
           >
             <ImageBoxSmall
               title="Textile Partners"
