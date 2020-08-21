@@ -55,6 +55,36 @@ export const isOpened = (path, currentPath) => {
   return true;
 };
 
+const triangleStyles = theme => ({
+  up: {
+    width: 0,
+    height: 0,
+    borderLeft: '5px solid transparent',
+    borderRight: '5px solid transparent',
+    borderBottom: '5px solid white',
+    transform: 'rotate(0deg)',
+    transitionProperty: 'transform',
+    transitionDuration: '0.1s',
+    transitionDelay: '0s',
+  },
+  right: {
+    transform: 'rotate(90deg)',
+    transitionProperty: 'transform',
+    transitionDuration: '0.1s',
+    transitionDelay: '0s',
+  },
+});
+const UpTriangle = withStyles(triangleStyles)(({
+  classes,
+  up,
+}) => (
+  <div
+    className={clsx(classes.up, {
+      [classes.right]: !up,
+    })}
+  />
+));
+
 class ExpandItem extends React.PureComponent {
   isOpened = () => {
     const {
@@ -72,10 +102,11 @@ class ExpandItem extends React.PureComponent {
       name,
     } = this.props;
 
-    let endAdornment = '>';
-    if (this.isOpened()) {
-      endAdornment = '^';
-    }
+    const endAdornment = (
+      <UpTriangle
+        up={this.isOpened()}
+      />
+    );
     return (
       <div
         className={classes.name}
