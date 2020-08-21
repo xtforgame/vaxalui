@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _SwipperT = _interopRequireDefault(require("../SwipperT1"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -18,7 +20,7 @@ const styles = {
     height: 580
   },
   section: {
-    width: 1024,
+    width: 900,
     display: 'flex',
     flexWrap: 'wrap',
     paddingTop: 80,
@@ -36,16 +38,29 @@ class Microfibers extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
+      backgroundImages,
+      scrollArrowLeftImage,
+      scrollArrowRightImage
     } = this.props;
-    return _react.default.createElement(_ImageContainer.default, {
-      image: backgroundImage,
+
+    const renderContent = slideInfo => _react.default.createElement(_ImageContainer.default, {
+      key: slideInfo.index,
+      image: backgroundImages && backgroundImages.length ? backgroundImages[Math.abs(slideInfo.index % backgroundImages.length)] : null,
+      className: classes.root
+    });
+
+    return _react.default.createElement(_SwipperT.default, {
+      height: 580,
+      scrollArrowLeftImage: scrollArrowLeftImage,
+      scrollArrowRightImage: scrollArrowRightImage,
+      slideRenderer: renderContent
+    }, _react.default.createElement(_ImageContainer.default, {
       className: classes.root
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "We Turn Potential Microplastics into Microfibers.")));
+    }, "We Turn Potential Microplastics into Microfibers."))));
   }
 
 }

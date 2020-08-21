@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _SwipperT = _interopRequireDefault(require("../SwipperT1"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -46,7 +48,7 @@ const styles = {
   roundArrow: {
     width: 50,
     height: 50,
-    marginTop: 30
+    marginTop: 10
   }
 };
 
@@ -55,17 +57,18 @@ class HomeTopSection extends _react.default.PureComponent {
     const {
       classes,
       backgroundImage,
-      scrollArrowImage,
+      scrollArrowLeftImage,
+      scrollArrowRightImage,
       roundArrowImage
     } = this.props;
-    return _react.default.createElement(_ImageContainer.default, {
+
+    const renderContent = slideInfo => _react.default.createElement(_ImageContainer.default, {
+      key: slideInfo.index,
       image: backgroundImage,
       className: classes.root
     }, _react.default.createElement("div", {
       className: classes.scrollArrow
-    }, _react.default.createElement("img", {
-      src: scrollArrowImage
-    })), _react.default.createElement("div", {
+    }), _react.default.createElement("div", {
       className: classes.title
     }, "In the Business of", ' ', _react.default.createElement("span", {
       className: classes.titleBack
@@ -78,6 +81,13 @@ class HomeTopSection extends _react.default.PureComponent {
     }, _react.default.createElement("img", {
       src: roundArrowImage
     })));
+
+    return _react.default.createElement(_SwipperT.default, {
+      height: 500,
+      scrollArrowLeftImage: scrollArrowLeftImage,
+      scrollArrowRightImage: scrollArrowRightImage,
+      slideRenderer: renderContent
+    });
   }
 
 }

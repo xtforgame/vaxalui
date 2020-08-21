@@ -7,19 +7,25 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
 var _styles = require("@material-ui/core/styles");
 
 var _AppBar = _interopRequireDefault(require("@material-ui/core/AppBar"));
 
 var _Toolbar = _interopRequireDefault(require("@material-ui/core/Toolbar"));
 
-var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
-
 var _IconButton = _interopRequireDefault(require("@material-ui/core/IconButton"));
 
-var _Menu = _interopRequireDefault(require("@material-ui/icons/Menu"));
+var _Menu = _interopRequireDefault(require("./Menu"));
+
+var _navigation = _interopRequireDefault(require("./navigation"));
+
+var _MenuIcon = _interopRequireDefault(require("./MenuIcon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 const styles = theme => ({
   root: {
@@ -27,15 +33,51 @@ const styles = theme => ({
   },
   grow: {
     flexGrow: 1
+  },
+  openedMenu: {
+    width: '100%'
+  },
+  closedMenu: {
+    display: 'none'
+  },
+  menuRoot: {
+    position: 'fixed',
+    zIndex: 2048,
+    top: theme.spacing(8),
+    width: '100%'
   }
 });
 
-class MainAppBar extends _react.default.PureComponent {
+class MobileNavbar extends _react.default.PureComponent {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "state", {
+      isOpen: false
+    });
+
+    _defineProperty(this, "handleMenuOpen", () => {
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
+    });
+
+    _defineProperty(this, "handleMenuChange", (e, value) => {
+      console.log('[TODO] handleMenuChange, link clicked', value);
+      this.setState({
+        isOpen: false
+      });
+    });
+  }
+
   render() {
     const {
       classes,
       children
     } = this.props;
+    const {
+      isOpen
+    } = this.state;
     return _react.default.createElement("div", {
       className: classes.root
     }, _react.default.createElement(_AppBar.default, {
@@ -47,13 +89,24 @@ class MainAppBar extends _react.default.PureComponent {
       className: classes.grow
     }), _react.default.createElement(_IconButton.default, {
       color: "inherit",
-      onClick: () => {},
+      onClick: this.handleMenuOpen,
       "aria-label": "NotificationList"
-    }, _react.default.createElement(_Menu.default, null)))));
+    }, _react.default.createElement(_MenuIcon.default, {
+      open: isOpen
+    })))), _react.default.createElement("div", {
+      className: classes.menuRoot
+    }, _react.default.createElement(_Menu.default, {
+      className: (0, _clsx.default)({
+        [classes.openedMenu]: isOpen,
+        [classes.closedMenu]: !isOpen
+      }),
+      items: _navigation.default,
+      onChange: this.handleMenuChange
+    })));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(MainAppBar);
+var _default = (0, _styles.withStyles)(styles)(MobileNavbar);
 
 exports.default = _default;
