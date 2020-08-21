@@ -57,7 +57,7 @@ storiesOf('saya|Pages/Desktop', module)
           title="Related Informations"
           height="785px"
           fontColor="#000000"
-          boxWidth="780px"
+          boxWidth={850}
           lineBorder="solid 1px #979797"
         >
           <ImageBox

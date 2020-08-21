@@ -12,6 +12,7 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     borderRadius: 30,
+    margin: 20,
     marginBottom: 50,
   },
   title: {

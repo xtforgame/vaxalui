@@ -75,7 +75,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#ffffff"
             marginTop="0"
             borderStyle="1px solid #ffffff"
-            boxWidth="780px"
+            boxWidth={850}
           >
             <ImageBox
               title="FDY"
@@ -102,7 +102,7 @@ storiesOf('saya|Pages/Desktop', module)
             fontColor="#000000"
             marginTop="35px"
             borderStyle="1px solid #000000"
-            boxWidth="780px"
+            boxWidth={850}
           >
             <ImageBox
               title="CHROMUCH Solution Dyed"
