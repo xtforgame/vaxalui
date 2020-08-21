@@ -7,18 +7,18 @@ import Introduction from 'library/saya/Kenny/Introduction';
 import Features from 'library/saya/Kenny/Features';
 import TitleWithContent from 'library/saya/Kenny/TitleWithContent';
 import Table from 'library/saya/Rick/Table';
-import ImageContainer from 'library/saya/ImageContainer';
-
 
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
-import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
-import background_TopSection from '../img/bg20.jpg';
+import SayaStretch from '../shared/SmallImageBoxs/SayaStretch';
+import Chromuch from '../shared/SmallImageBoxs/Chromuch';
+import SayaFresh from '../shared/SmallImageBoxs/SayaFresh';
+import SayaMicrofiber from '../shared/SmallImageBoxs/SayaMicrofiber';
+
+import background_TopSection from '../img/bg82.jpg';
 import introduction1 from '../img/bg78.jpg';
-import material from '../img/bg21.jpg';
-import leftBox from '../img/bg69.jpg';
-import midBox from '../img/bg70.jpg';
-import rightBox from '../img/bg71.jpg';
+import material from '../img/bg83.jpg';
+
 
 import Logo from '../img/mobile/m_logo_w.svg'
 
@@ -32,7 +32,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('SayaStrecth',
+  .add('SayaMicrofiber',
     () => (
       <div style={{ width: '100%' }}>
         <Layout
@@ -106,34 +106,9 @@ storiesOf('saya|Pages/Desktop', module)
             lineBorder="solid 1px #979797"
             backgroundColor="transparent"
           >
-            <ImageBoxSmall
-              title="CHROMUCU"
-              secondTitle="Solution Dyed"
-              subtitle={'Color without\nCompromise.'}
-              backgroundImage={leftBox}
-              paddingTop='75px'
-              fontColor="#ffffff"
-              marginTop="150px"
-
-            />
-            <ImageBoxSmall
-              title="SAYAFRESH"
-              subtitle={'Lorem ipsum\ndolor sit amet'}
-              backgroundImage={midBox}
-              titleWidth="105px"
-              paddingTop='50px'
-              fontColor="#000000"
-              marginTop="125px"
-            />
-            <ImageBoxSmall
-              title="SAYASTRETCH"
-              backgroundImage={rightBox}
-              subtitle={'Stretch with\na Good Conscious'}
-              titleWidth="155px"
-              paddingTop='50px'
-              fontColor="#ffffff"
-              marginTop="125px"
-            />
+            <Chromuch />
+            <SayaStretch />
+            <SayaFresh />
           </TitleLineBox>
 
         </Layout>

@@ -19,7 +19,13 @@ import './Home';
 // Products
 import './Products';
 
-import './SayaStrecth';
+import './SayaStretch';
+
+import './ChromuchSolutionDyed';
+
+import './SayaFresh';
+
+import './SayaMicrofiber';
 
 // CoastalDesktop1
 import './TechnologiesNowCoastal1';
