@@ -9,10 +9,11 @@ import { getSize } from './Item';
 const styles = theme => ({
   root: {
     width: '100%',
-    height: 'auto',
+    // height: controlled by below maxHeight styles
     position: 'relative',
   },
   itemListRoot: {
+    opacity: 0,
   },
   name: {
     display: 'flex',
@@ -22,6 +23,30 @@ const styles = theme => ({
     paddingRight: theme.spacing(3),
     height: getSize(theme).height,
   },
+  openedMaxHeight: {
+    maxHeight: 1000, // arbitrary impossible value
+    transitionProperty: 'max-height',
+    transitionDuration: '1s',
+    transitionDelay: '0s',
+  },
+  openedOpacity: {
+    opacity: 1,
+    transitionProperty: 'opacity',
+    transitionDuration: '0.1s',
+    transitionDelay: '0.25s',
+  },
+  closedMaxHeight: {
+    maxHeight: getSize(theme).height,
+    transitionProperty: 'max-height',
+    transitionDuration: '0.5s',
+    transitionDelay: '0s',
+  },
+  closedOpacity: {
+    opacity: 0,
+    transitionProperty: 'opacity',
+    transitionDuration: '0.1s',
+    transitionDelay: '0s',
+  },
 });
 
 export const isOpened = (path, currentPath) => {
@@ -29,6 +54,36 @@ export const isOpened = (path, currentPath) => {
   if (!currentPath.startsWith(path)) return false;
   return true;
 };
+
+const triangleStyles = theme => ({
+  up: {
+    width: 0,
+    height: 0,
+    borderLeft: '5px solid transparent',
+    borderRight: '5px solid transparent',
+    borderBottom: '5px solid white',
+    transform: 'rotate(0deg)',
+    transitionProperty: 'transform',
+    transitionDuration: '0.1s',
+    transitionDelay: '0s',
+  },
+  right: {
+    transform: 'rotate(90deg)',
+    transitionProperty: 'transform',
+    transitionDuration: '0.1s',
+    transitionDelay: '0s',
+  },
+});
+const UpTriangle = withStyles(triangleStyles)(({
+  classes,
+  up,
+}) => (
+  <div
+    className={clsx(classes.up, {
+      [classes.right]: !up,
+    })}
+  />
+));
 
 class ExpandItem extends React.PureComponent {
   isOpened = () => {
@@ -47,10 +102,11 @@ class ExpandItem extends React.PureComponent {
       name,
     } = this.props;
 
-    let endAdornment = '>';
-    if (this.isOpened()) {
-      endAdornment = '^';
-    }
+    const endAdornment = (
+      <UpTriangle
+        up={this.isOpened()}
+      />
+    );
     return (
       <div
         className={classes.name}
@@ -68,15 +124,20 @@ class ExpandItem extends React.PureComponent {
       items,
       theme,
     } = this.props;
-    if (!this.isOpened()) return null;
+
     return (
       <div
-        className={classes.itemListRoot}
+        className={clsx(classes.itemListRoot, {
+          [classes.openedOpacity]: this.isOpened(),
+          [classes.closedOpacity]: !this.isOpened(),
+        })}
       >
-        <ItemList
-          items={items}
-          root={path}
-        />
+        {this.isOpened() && (
+          <ItemList
+            items={items}
+            root={path}
+          />
+        )}
       </div>
     );
   }
@@ -88,7 +149,10 @@ class ExpandItem extends React.PureComponent {
     } = this.props;
     return (
       <div
-        className={clsx(classes.root, className)}
+        className={clsx(classes.root, className, {
+          [classes.openedMaxHeight]: this.isOpened(),
+          [classes.closedMaxHeight]: !this.isOpened(),
+        })}
       >
         {this.renderName()}
         {this.renderItemList()}
