@@ -18,6 +18,8 @@ const styles = theme => ({
     borderBottomStyle: 'solid',
     borderBottomColor: '#828282',
     borderBottomWidth: 1,
+    userSelect: 'none',
+    cursor: 'pointer',
   },
 });
 

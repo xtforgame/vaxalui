@@ -99,11 +99,12 @@ class ItemList extends React.PureComponent {
 
   render() {
     const {
+      className,
       classes,
     } = this.props;
     return (
       <div
-        className={classes.root}
+        className={clsx(classes.root, className)}
       >
         {this.renderItems()}
       </div>
