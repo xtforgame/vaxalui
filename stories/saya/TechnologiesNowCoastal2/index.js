@@ -67,6 +67,7 @@ storiesOf('saya|Pages/Desktop', module)
           />
 
           <TitleLineBox
+            title="SAYA NOW Serial Projects"
             height="785px"
             fontColor="#000000"
             boxWidth="780px"

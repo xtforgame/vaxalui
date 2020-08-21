@@ -26,7 +26,6 @@ const styles = {
     paddingTop: 20,
   },
   box: {
-    width: 780,
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: 115,
@@ -44,6 +43,9 @@ class ClassicFibers extends React.PureComponent {
       marginTop,
       children,
       borderStyle,
+      subtitle,
+      title,
+      boxWidth,
     } = this.props;
     return (
       <div
@@ -56,7 +58,7 @@ class ClassicFibers extends React.PureComponent {
         }}
       >
         <div className={classes.title}>
-          SAYA Classic Fibers
+          {title}
           </div>
 
         <div
@@ -67,10 +69,15 @@ class ClassicFibers extends React.PureComponent {
         />
 
         <div className={classes.subtitle}>
-          Nam dapibus nisl vitae elit.
+          {subtitle}
         </div>
 
-        <div className={classes.box}>
+        <div 
+        className={classes.box} 
+        style={{
+          width: boxWidth,
+        }}
+        >
           {children}
         </div>
       </div>

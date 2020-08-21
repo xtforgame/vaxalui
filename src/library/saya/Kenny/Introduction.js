@@ -41,9 +41,12 @@ class Introduction extends React.PureComponent {
       titleWidth,
       titleBack,
       subtitle,
+      subtitleWidth,
       description,
       descriptionWidth,
       secondDescription,
+      thirdDescription,
+      fourthDescription,
       fontColor,
       lineBorder,
       backgroundColor,
@@ -80,7 +83,12 @@ class Introduction extends React.PureComponent {
             }}
           />
 
-          <div className={classes.subtitle}>
+          <div 
+          className={classes.subtitle}
+          style={{
+            width: subtitleWidth,
+          }}
+          >
             {subtitle}
           </div>
 
@@ -90,10 +98,11 @@ class Introduction extends React.PureComponent {
               width: descriptionWidth,
             }}
           >
-            {description}
-            <div>
-             <br/> {secondDescription}
-            </div>
+            {description}    
+             <br/><br/>  {secondDescription}
+             <br/><br/>  {thirdDescription}
+             <br/><br/>  {fourthDescription}
+        
           </div>
 
           <div>

@@ -35,10 +35,12 @@ class TitleLineBox extends React.PureComponent {
   render() {
     const {
       classes,
+      title,
       height,
       fontColor,
       boxWidth,
       lineBorder,
+      backgroundColor,
       children,
     } = this.props;
     return (
@@ -47,6 +49,7 @@ class TitleLineBox extends React.PureComponent {
         style={{
           height: height,
           color: fontColor,
+          backgroundColor:backgroundColor,
         }}
       >
         <div
@@ -56,7 +59,7 @@ class TitleLineBox extends React.PureComponent {
           }}
         >
           <div className={classes.title}>
-            <div>SAYA NOW Serial Projects</div>
+            <div>{title}</div>
           </div>
           <div
             className={classes.line}
