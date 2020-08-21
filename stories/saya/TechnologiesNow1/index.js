@@ -42,6 +42,7 @@ import rightIcon from '../img/icon12.svg';
 import scrollArrowLeftImage from '../img/scroll_w_left.svg';
 import scrollArrowRightImage from '../img/scroll_w_right.svg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
 
 const IntroductionX1 = index => (
   <Introduction
@@ -97,7 +98,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('TechnologiesNow1',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
 
           <TopSection
             firstTitle="TECHNOLOGIES"

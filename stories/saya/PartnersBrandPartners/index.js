@@ -15,7 +15,7 @@ import introduction1 from '../img/bg38.jpg';
 import leftBox from '../img/bg56.jpg';
 import rightBox from '../img/bg53.jpg';
 
-
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -30,7 +30,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('PartnersBrandPartners',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
 
 
 

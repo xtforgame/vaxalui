@@ -21,6 +21,7 @@ import midBox from '../img/bg19.jpg';
 import rightBox from '../img/bg28.jpg';
 import threeIcon from '../img/fig3.svg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -35,7 +36,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('TechnologiesNow2',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
 
           <TopSection
             firstTitle="TECHNOLOGIES"

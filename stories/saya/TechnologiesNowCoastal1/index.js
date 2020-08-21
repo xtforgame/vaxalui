@@ -19,6 +19,8 @@ import backgroundOceanCycle from '../img/ocean-cycle-218x300.png';
 import scrollArrowLeftImage from '../img/scroll_left.svg';
 import scrollArrowRightImage from '../img/scroll_right.svg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
+
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
   //   info: {
@@ -32,7 +34,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('TechnologiesNowCoastal1',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
 
           <TopSection
             firstTitle="SAYA NOW Series"

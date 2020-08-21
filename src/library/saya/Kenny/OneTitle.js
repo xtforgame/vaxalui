@@ -22,7 +22,7 @@ class OneTitle extends React.PureComponent {
         className={classes.root}
         style={{
           height,
-          color:fontColor,
+          color: fontColor,
         }}
       >
         {title}

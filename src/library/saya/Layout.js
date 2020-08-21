@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({ children, onLinkClick, navBarItems }) => (
+const Layout = ({ children, onLinkClick, navBarItems, logo }) => (
   <div
     style={{
       width: '100%',
@@ -13,7 +13,9 @@ const Layout = ({ children, onLinkClick, navBarItems }) => (
     }}
   >
     <Helmet title="SAYA homepage" />
-    <Navbar onLinkClick={onLinkClick} items={navBarItems} />
+    <Navbar onLinkClick={onLinkClick} items={navBarItems}>
+      {logo}
+    </Navbar>
     <div
       style={{
         width: '100%',

@@ -29,6 +29,7 @@ import scrollArrowImage from '../img/scroll arrow.png';
 import scrollArrowLeftImage from '../img/scroll_left.svg';
 import scrollArrowRightImage from '../img/scroll_right.svg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -43,7 +44,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('Home',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
 
           <HomeTopSection
             backgroundImage={backgroundHomeTopSection}

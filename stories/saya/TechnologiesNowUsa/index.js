@@ -12,7 +12,7 @@ import introduction1 from '../img/bg47.jpg';
 import leftBox from '../img/bg12.jpg';
 import rightBox from '../img/bg48.jpg';
 
-
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -27,7 +27,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('TechnologiesNowUsa',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
           <TopSection
             firstTitle="SAYA NOW Series"
             secondTitle="SAYA"

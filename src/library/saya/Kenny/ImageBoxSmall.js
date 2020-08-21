@@ -60,22 +60,26 @@ class ImageBoxSmall extends React.PureComponent {
         <div
           className={classes.title}
           style={{
-            paddingTop: paddingTop,
+            paddingTop,
             width: titleWidth,
           }}
         >
-          {title}<span className={classes.titleBack}>{titleBack} </span>
+          {title}
+          <span className={classes.titleBack}>
+            {titleBack}
+            {' '}
+          </span>
           <div className={classes.secondTitle}>{secondTitle}</div>
         </div>
 
         <div className={classes.subtitle}>
-          {subtitle}
+          <pre style={{ fontFamily: 'FilsonSoftegular' }}>{subtitle}</pre>
         </div>
 
         <div
           className={classes.button}
           style={{
-            marginTop: marginTop,
+            marginTop,
           }}
         >
           <GreenButton

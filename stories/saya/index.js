@@ -19,6 +19,8 @@ import './Home';
 // Products
 import './Products';
 
+import './SayaStrecth';
+
 // CoastalDesktop1
 import './TechnologiesNowCoastal1';
 

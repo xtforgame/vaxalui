@@ -13,7 +13,7 @@ import leftBox from '../img/bg69.jpg';
 import midBox from '../img/bg70.jpg';
 import rightBox from '../img/bg71.jpg';
 
-
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -28,7 +28,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('AboutSayaByNanYa',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
           <TopSection
             firstTitle="ABOUT"
             secondTitle="SAYA by Nan Ya"

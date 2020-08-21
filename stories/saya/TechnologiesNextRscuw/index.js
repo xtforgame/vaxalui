@@ -20,6 +20,8 @@ import topRightBox from '../img/bg6.jpg';
 import bottomLeftBox from '../img/bg7.jpg';
 import bottomRightBox from '../img/bg8.jpg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
+
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
   //   info: {
@@ -33,7 +35,11 @@ storiesOf('saya|Pages/Desktop', module)
   .add('TechnologiesNextRscuw',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
           <TopSection
             firstTitle="PRODUCTS"
             secondTitle="SAYA Recycled Fiber"

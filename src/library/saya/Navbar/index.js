@@ -26,7 +26,6 @@ const styles = theme => ({
     paddingRight: theme.spacing(5),
   },
   logo: {
-    width: theme.spacing(20),
     marginRight: 'auto', // TODO make a global style covering this
   },
   closing: {
@@ -62,6 +61,7 @@ class Navbar extends React.PureComponent {
       onLinkClick,
       classes,
       items,
+      children,
     } = this.props;
     const {
       isOpen,
@@ -79,7 +79,7 @@ class Navbar extends React.PureComponent {
           <div
             className={classes.logo}
           >
-            Logo
+            {children}
           </div>
           <div>
             <Menu

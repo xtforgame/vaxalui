@@ -13,6 +13,7 @@ import leftBox from '../img/bg60.jpg';
 import midBox from '../img/bg61.jpg';
 import rightBox from '../img/bg62.jpg';
 
+import Logo from '../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -27,9 +28,13 @@ storiesOf('saya|Pages/Desktop', module)
   .add('Partners',
     () => (
       <div style={{ width: '100%' }}>
-      <Layout>
+        <Layout
+          logo={(
+            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
+          )}
+        >
    
-        <TopSection
+          <TopSection
             firstTitle="PARTNERS"
             secondTitle="Partners in Sustainability "
             thirdTitle="It takes a village to achieve sustainability."
