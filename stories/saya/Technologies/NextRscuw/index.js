@@ -21,8 +21,8 @@ import introduction5 from '../../img/bg43.jpg';
 
 import circle from '../../img/bg41.jpg';
 import sevenIcons from '../../img/fig4.svg';
-import leftBox from '../../img/bg12.jpg';
-import rightBox from '../../img/bg48.jpg';
+import leftBox from '../../img/bg44.jpg';
+import rightBox from '../../img/bg45.jpg';
 
 storiesOf('saya|Pages/Desktop/Technologies/Next', module)
   // .addParameters({
@@ -40,8 +40,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Next', module)
         <Layout>
           <TopSection
             firstTitle="SAYA NEXT Series"
-            secondTitle="SAYA"
-            secondTitleBack="RSCUW"
+            secondTitle="RSCUW"
             thirdTitle={'Cutting Scraps and Overstocks, Addressing the Real Elephant In the Room\nWe seek out the high hanging fruits to capture what really matters.'}
             backgroundImage={background_TopSection}
             fontColor="#000000"
@@ -210,23 +209,26 @@ storiesOf('saya|Pages/Desktop/Technologies/Next', module)
             />
           </Introduction>
 
-          <Introduction
-            height="585px"
-            backgroundImage={introduction5}
-            title="What’s Next?"
-            fontColor="#ffffff"
-            lineBorder="solid 1px #ffffff"
-            backDescriptionDisplay="none"
-          >
-            <TransparentBlock
-              leftDescription="We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021."
-              rightDescription="Removing colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics."
-              marginTop="125px"
-            />
-          </Introduction>
+          <div style={{ marginTop: 35 }}>
+            <Introduction
+              height="585px"
+              backgroundImage={introduction5}
+              title="What’s Next?"
+              fontColor="#ffffff"
+              lineBorder="solid 1px #ffffff"
+              backDescriptionDisplay="none"
+            >
+              <TransparentBlock
+                leftDescription="We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021."
+                rightDescription="Removing colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics."
+                marginTop="125px"
+              />
+            </Introduction>
+          </div>
 
+          
           <TitleLineBox
-            TitleLineBox="SAYA NOW Serial Projects"
+            title="SAYA NOW Serial Projects"
             height="785px"
             fontColor="#000000"
             boxWidth={850}
@@ -261,6 +263,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Next', module)
               </div>
             </ImageBox>
           </TitleLineBox>
+
         </Layout>
       </div>
     )

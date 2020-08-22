@@ -12,7 +12,7 @@ import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import Layout from '../../shared/Layout';
 
 import background_TopSection from '../../img/bg54.jpg';
-import introduction1 from '../../img/bg38.jpg';
+import introduction1 from '../../img/bg55.jpg';
 import leftBox from '../../img/bg56.jpg';
 import rightBox from '../../img/bg53.jpg';
 import icon1 from '../../img/icon15.svg';
