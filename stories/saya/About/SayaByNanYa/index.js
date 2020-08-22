@@ -6,15 +6,15 @@ import Introduction from 'library/saya/Kenny/Introduction';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
-import Layout from '../shared/Layout';
+import Layout from '../../shared/Layout';
 
-import background_TopSection from '../img/bg67.jpg';
-import introduction1 from '../img/bg68.jpg';
-import leftBox from '../img/bg69.jpg';
-import midBox from '../img/bg70.jpg';
-import rightBox from '../img/bg71.jpg';
+import background_TopSection from '../../img/bg67.jpg';
+import introduction1 from '../../img/bg68.jpg';
+import leftBox from '../../img/bg69.jpg';
+import midBox from '../../img/bg70.jpg';
+import rightBox from '../../img/bg71.jpg';
 
-storiesOf('saya|Pages/Desktop', module)
+storiesOf('saya|Pages/Desktop/About', module)
   // .addParameters({
   //   info: {
   //     inline: true,
@@ -24,7 +24,7 @@ storiesOf('saya|Pages/Desktop', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('AboutSayaByNanYa',
+  .add('SayaByNanYa',
     () => (
       <div style={{ width: '100%' }}>
         <Layout>

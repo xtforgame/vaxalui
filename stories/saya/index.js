@@ -22,14 +22,11 @@ import './Products';
 // Technologies
 import './Technologies';
 
+// About
+import './About';
+
 // Partners
 import './Partners';
-
-// AboutVisionMission
-import './AboutVisionMission';
-
-// AboutSayaByNanYa
-import './AboutSayaByNanYa';
 
 // MobileHome
 import './MobileHome';
