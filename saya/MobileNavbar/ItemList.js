@@ -109,10 +109,11 @@ class ItemList extends _react.default.PureComponent {
 
   render() {
     const {
+      className,
       classes
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: (0, _clsx.default)(classes.root, className)
     }, this.renderItems());
   }
 

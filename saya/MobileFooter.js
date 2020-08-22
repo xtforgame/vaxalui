@@ -114,7 +114,7 @@ var _default = props => {
   }), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 40
+      height: 20
     }
   }), _react.default.createElement("div", null, "Select language"), _react.default.createElement("div", {
     style: {
@@ -129,6 +129,13 @@ var _default = props => {
     value: language,
     onChange: e => setLanguage(e.target.value)
   }), _react.default.createElement("div", {
+    style: {
+      width: 10,
+      height: 20
+    }
+  }), _react.default.createElement(_Button.default, {
+    width: 310
+  }, "SUBMIT"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 80

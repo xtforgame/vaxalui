@@ -27,15 +27,19 @@ const styles = {
     flexDirection: 'column',
     flexWrap: 'wrap'
   },
+  numberUpTitle: {
+    fontSize: 20,
+    color: '#000000',
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10
+  },
   number: {
     fontSize: 180,
-    color: '#64703f',
     lineHeight: 0.74,
     fontFamily: 'FilsonSoftRegular'
   },
   percent: {
     fontSize: 20,
-    color: '#64703f',
     fontFamily: 'FilsonSoftRegular'
   },
   topTile: {
@@ -65,6 +69,7 @@ const styles = {
     fontFamily: 'FilsonSoftRegular'
   },
   description: {
+    paddingTop: 20,
     width: 380,
     fontSize: 14,
     color: '#000000',
@@ -76,6 +81,7 @@ class GreenNumberSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      numberUpTitle,
       number,
       topTile,
       bottomTitle,
@@ -83,17 +89,22 @@ class GreenNumberSection extends _react.default.PureComponent {
       description,
       lineWidth,
       height,
+      numberPaddingTop,
       leftPaddingTop,
       rightPaddingTop,
       leftPaddingRight,
       rightPaddingLeft,
       descriptionPaddingTop,
-      percentDisplay
+      percentDisplay,
+      backgroundColor,
+      numberColor,
+      percentColor
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
       style: {
-        height: height
+        height: height,
+        backgroundColor: backgroundColor
       }
     }, _react.default.createElement("div", {
       className: classes.leftColumn,
@@ -102,11 +113,18 @@ class GreenNumberSection extends _react.default.PureComponent {
         paddingRight: leftPaddingRight
       }
     }, _react.default.createElement("div", {
-      className: classes.number
+      className: classes.numberUpTitle
+    }, " ", numberUpTitle, " "), _react.default.createElement("div", {
+      className: classes.number,
+      style: {
+        paddingtTop: numberPaddingTop,
+        color: numberColor
+      }
     }, number, _react.default.createElement("span", {
       className: classes.percent,
       style: {
-        display: percentDisplay
+        display: percentDisplay,
+        color: percentColor
       }
     }, "%")), _react.default.createElement("div", {
       className: classes.topTile

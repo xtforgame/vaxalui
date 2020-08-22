@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -36,7 +38,8 @@ const styles = {
     paddingTop: 10
   },
   secondTitleBack: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    fontFamily: 'FilsonSoftLight'
   },
   secondLine: {
     width: 420,
@@ -44,7 +47,6 @@ const styles = {
     marginTop: 2
   },
   thirdTitle: {
-    width: 390,
     fontSize: 20,
     fontFamily: 'FilsonSoftRegular',
     paddingTop: 10
@@ -62,7 +64,8 @@ class TopSection extends _react.default.PureComponent {
       backgroundImage,
       fontColor,
       lineBorder,
-      firstLineWidth
+      firstLineWidth,
+      thirdTitleWidth
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
@@ -70,7 +73,7 @@ class TopSection extends _react.default.PureComponent {
       style: {
         color: fontColor
       }
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
     }, firstTitle), _react.default.createElement("div", {
       className: classes.firstLine,
@@ -80,15 +83,18 @@ class TopSection extends _react.default.PureComponent {
       }
     }), _react.default.createElement("div", {
       className: classes.secondTitle
-    }, secondTitle, " ", _react.default.createElement("span", {
+    }, secondTitle, _react.default.createElement("span", {
       className: classes.secondTitleBack
-    }, " ", secondTitleBack, " ")), _react.default.createElement("div", {
+    }, secondTitleBack, " ")), _react.default.createElement("div", {
       className: classes.secondLine,
       style: {
         border: lineBorder
       }
-    }), _react.default.createElement("div", {
-      className: classes.thirdTitle
+    }), _react.default.createElement(_BreakAllContentText.default, {
+      className: classes.thirdTitle,
+      style: {
+        width: thirdTitleWidth
+      }
     }, thirdTitle));
   }
 

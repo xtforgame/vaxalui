@@ -96,6 +96,7 @@ class MobileNavbar extends _react.default.PureComponent {
     })))), _react.default.createElement("div", {
       className: classes.menuRoot
     }, _react.default.createElement(_Menu.default, {
+      key: isOpen.toString(),
       className: (0, _clsx.default)({
         [classes.openedMenu]: isOpen,
         [classes.closedMenu]: !isOpen

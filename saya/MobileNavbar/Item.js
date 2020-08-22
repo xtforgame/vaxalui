@@ -31,9 +31,8 @@ const styles = theme => ({
     borderTopStyle: 'solid',
     borderTopColor: '#828282',
     borderTopWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: '#828282',
-    borderBottomWidth: 1
+    userSelect: 'none',
+    cursor: 'pointer'
   }
 });
 

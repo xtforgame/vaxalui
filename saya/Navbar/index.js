@@ -41,7 +41,6 @@ const styles = theme => ({
     paddingRight: theme.spacing(5)
   },
   logo: {
-    width: theme.spacing(20),
     marginRight: 'auto'
   },
   closing: {
@@ -78,7 +77,8 @@ class Navbar extends _react.default.PureComponent {
     const {
       onLinkClick,
       classes,
-      items
+      items,
+      children
     } = this.props;
     const {
       isOpen
@@ -92,7 +92,7 @@ class Navbar extends _react.default.PureComponent {
       className: classes.body
     }, _react.default.createElement("div", {
       className: classes.logo
-    }, "Logo"), _react.default.createElement("div", null, _react.default.createElement(_Menu.default, {
+    }, children), _react.default.createElement("div", null, _react.default.createElement(_Menu.default, {
       items: items || _navigation.default,
       onLinkClick: onLinkClick,
       onChange: this.handleMenuChange

@@ -36,7 +36,8 @@ const styles = {
   box: {
     display: 'flex',
     marginTop: 90,
-    justifyContent: 'space-between'
+    justifyContent: 'center',
+    flexWrap: 'wrap'
   }
 };
 
@@ -44,17 +45,20 @@ class TitleLineBox extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      title,
       height,
       fontColor,
       boxWidth,
       lineBorder,
+      backgroundColor,
       children
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
       style: {
         height: height,
-        color: fontColor
+        color: fontColor,
+        backgroundColor: backgroundColor
       }
     }, _react.default.createElement("div", {
       className: classes.section,
@@ -63,7 +67,7 @@ class TitleLineBox extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.title
-    }, _react.default.createElement("div", null, "SAYA NOW Serial Projects")), _react.default.createElement("div", {
+    }, _react.default.createElement("div", null, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
         width: boxWidth,

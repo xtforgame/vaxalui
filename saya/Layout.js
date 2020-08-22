@@ -20,7 +20,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const Layout = ({
   children,
   onLinkClick,
-  navBarItems
+  navBarItems,
+  logo,
+  fbIcon,
+  igIcon
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
@@ -31,7 +34,7 @@ const Layout = ({
 }), _react.default.createElement(_Navbar.default, {
   onLinkClick: onLinkClick,
   items: navBarItems
-}), _react.default.createElement("div", {
+}, logo), _react.default.createElement("div", {
   style: {
     width: '100%',
     height: 64
@@ -42,7 +45,10 @@ const Layout = ({
     overflowX: 'hidden',
     overflowY: 'auto'
   }
-}, children), _react.default.createElement(_Footer.default, null));
+}, children), _react.default.createElement(_Footer.default, {
+  fbIcon: fbIcon,
+  igIcon: igIcon
+}));
 
 var _default = Layout;
 exports.default = _default;

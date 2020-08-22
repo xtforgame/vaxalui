@@ -11,8 +11,6 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -25,7 +23,8 @@ const styles = {
   title: {
     fontSize: 40,
     fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold'
+    fontFamily: 'FilsonSoft-Bold',
+    textAlign: 'center'
   },
   line: {
     width: 420,
@@ -52,18 +51,9 @@ class Introduction extends _react.default.PureComponent {
       title,
       backgroundImage,
       titleWidth,
-      titleBack,
-      subtitle,
-      subtitleWidth,
-      description,
-      descriptionWidth,
-      secondDescription,
-      thirdDescription,
-      fourthDescription,
+      children,
       fontColor,
-      lineBorder,
-      backgroundColor,
-      children
+      backgroundColor
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
@@ -76,30 +66,8 @@ class Introduction extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.container
     }, _react.default.createElement("div", {
-      className: classes.title,
-      style: {
-        width: titleWidth
-      }
-    }, title, _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
-      className: classes.line,
-      style: {
-        border: lineBorder
-      }
-    }), _react.default.createElement("div", {
-      className: classes.subtitle,
-      style: {
-        width: subtitleWidth
-      }
-    }, subtitle), _react.default.createElement("div", {
-      className: classes.description,
-      style: {
-        width: descriptionWidth
-      }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoftRegular'
-      }
-    }, description), _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', secondDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', thirdDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', fourthDescription), _react.default.createElement("div", null, children)));
+      className: classes.title
+    }, title), _react.default.createElement("div", null, children)));
   }
 
 }

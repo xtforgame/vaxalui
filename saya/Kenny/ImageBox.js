@@ -23,6 +23,7 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     borderRadius: 30,
+    margin: 20,
     marginBottom: 50
   },
   title: {
@@ -31,7 +32,9 @@ const styles = {
     fontFamily: 'FilsonSoft-Bold'
   },
   titleBack: {
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    fontWeight: 300,
+    fontFamily: 'FilsonSoftLight'
   },
   subtitle: {
     fontSize: 18,
@@ -54,7 +57,8 @@ class ImageBox extends _react.default.PureComponent {
       subtitle,
       backgroundImage,
       fontColor,
-      paddingTop
+      paddingTop,
+      buttonDisplay
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -72,7 +76,10 @@ class ImageBox extends _react.default.PureComponent {
     }, titleBack)), _react.default.createElement("div", {
       className: classes.subtitle
     }, subtitle), _react.default.createElement("div", {
-      className: classes.button
+      className: classes.button,
+      style: {
+        display: buttonDisplay
+      }
     }, _react.default.createElement(_GreenButton.default, {
       text: "Learn more"
     })));

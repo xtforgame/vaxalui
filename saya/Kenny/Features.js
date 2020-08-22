@@ -11,8 +11,6 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -38,8 +36,8 @@ const styles = {
     marginTop: 20
   },
   description: {
-    fontSize: 14,
-    fontFamily: 'FilsonSoftRegular',
+    fontSize: 24,
+    fontFamily: 'FilsonSoft-Bold',
     marginTop: 20
   }
 };
@@ -53,8 +51,6 @@ class Introduction extends _react.default.PureComponent {
       backgroundImage,
       titleWidth,
       titleBack,
-      subtitle,
-      subtitleWidth,
       description,
       descriptionWidth,
       secondDescription,
@@ -86,20 +82,15 @@ class Introduction extends _react.default.PureComponent {
         border: lineBorder
       }
     }), _react.default.createElement("div", {
-      className: classes.subtitle,
-      style: {
-        width: subtitleWidth
-      }
-    }, subtitle), _react.default.createElement("div", {
       className: classes.description,
       style: {
         width: descriptionWidth
       }
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement("pre", {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft-Bold'
       }
-    }, description), _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', secondDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', thirdDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', fourthDescription), _react.default.createElement("div", null, children)));
+    }, description)), _react.default.createElement("div", null, children)));
   }
 
 }

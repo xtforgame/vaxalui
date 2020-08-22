@@ -92,7 +92,6 @@ export default (props) => {
         <div style={{ textAlign: 'left' }}>
           <div>Sign up to newsletter</div>
           <div style={{ width: 10, height: 8 }} />
-          
           <div style={{ width: '100%' }}>
             <div
               style={{

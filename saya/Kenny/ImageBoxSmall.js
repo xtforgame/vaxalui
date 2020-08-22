@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -21,22 +23,42 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    flexWrap: 'wrap',
-    borderRadius: 30
+    borderRadius: 30,
+    margin: 20,
+    position: 'relative'
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold'
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.07,
+    display: 'flex',
+    flexDirection: 'column',
+    height: 116
+  },
+  titleText: {
+    flexGrow: 0
   },
   titleBack: {
-    fontWeight: 300
+    flexGrow: 0,
+    fontWeight: 300,
+    fontFamily: 'FilsonSoftLight'
+  },
+  secondTitle: {
+    flexGrow: 0,
+    lineHeight: 1.07
   },
   subtitle: {
-    width: 125,
     fontSize: 18,
-    fontWeight: 'bold',
-    paddingTop: 10
+    fontFamily: 'FilsonSoft-Bold',
+    position: 'absolute',
+    top: 124
+  },
+  space: {
+    flex: 1
+  },
+  button: {
+    flexShrink: 0,
+    marginBottom: 58
   }
 };
 
@@ -46,11 +68,10 @@ class ImageBoxSmall extends _react.default.PureComponent {
       classes,
       title,
       titleBack,
+      secondTitle,
       subtitle,
       backgroundImage,
-      fontColor,
-      paddingTop,
-      marginTop
+      fontColor
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -58,20 +79,26 @@ class ImageBoxSmall extends _react.default.PureComponent {
         backgroundImage: `url(${backgroundImage})`,
         color: fontColor
       }
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      className: classes.title
     }, _react.default.createElement("div", {
-      className: classes.title,
-      style: {
-        paddingTop: paddingTop
-      }
+      className: classes.space
+    }), _react.default.createElement("div", {
+      className: classes.titleText
     }, title, _react.default.createElement("span", {
       className: classes.titleBack
-    }, titleBack, " ")), _react.default.createElement("div", {
+    }, titleBack)), _react.default.createElement("div", {
+      className: classes.secondTitle
+    }, secondTitle)), _react.default.createElement("div", {
       className: classes.subtitle
-    }, subtitle), _react.default.createElement("div", {
-      className: classes.button,
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        marginTop: marginTop
+        fontFamily: 'FilsonSoftegular'
       }
+    }, subtitle)), _react.default.createElement("div", {
+      className: classes.space
+    }), _react.default.createElement("div", {
+      className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Learn more"
     })));

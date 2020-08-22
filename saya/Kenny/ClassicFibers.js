@@ -36,7 +36,6 @@ const styles = {
     paddingTop: 20
   },
   box: {
-    width: 780,
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: 115,
@@ -53,7 +52,10 @@ class ClassicFibers extends _react.default.PureComponent {
       fontColor,
       marginTop,
       children,
-      borderStyle
+      borderStyle,
+      subtitle,
+      title,
+      boxWidth
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -65,15 +67,18 @@ class ClassicFibers extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "SAYA Classic Fibers"), _react.default.createElement("div", {
+    }, title), _react.default.createElement("div", {
       className: classes.line,
       style: {
         border: borderStyle
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle
-    }, "Nam dapibus nisl vitae elit."), _react.default.createElement("div", {
-      className: classes.box
+    }, subtitle), _react.default.createElement("div", {
+      className: classes.box,
+      style: {
+        width: boxWidth
+      }
     }, children));
   }
 
