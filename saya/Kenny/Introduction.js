@@ -57,9 +57,6 @@ class Introduction extends _react.default.PureComponent {
       subtitleWidth,
       description,
       descriptionWidth,
-      secondDescription,
-      thirdDescription,
-      fourthDescription,
       fontColor,
       lineBorder,
       backgroundColor,
@@ -99,7 +96,7 @@ class Introduction extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description), _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', secondDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', thirdDescription, _react.default.createElement("br", null), _react.default.createElement("br", null), ' ', fourthDescription), _react.default.createElement("div", null, children)));
+    }, description)), _react.default.createElement("div", null, children)));
   }
 
 }
