@@ -1,19 +1,17 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 
+import Layout from '../shared/Layout';
+
 import background_TopSection from '../img/bg72.jpg';
 import leftBox from '../img/bg69.jpg';
 import midBox from '../img/bg73.jpg';
 import rightBox from '../img/bg71.jpg';
-
-import Logo from '../img/mobile/m_logo_w.svg'
-
 
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
@@ -28,11 +26,7 @@ storiesOf('saya|Pages/Desktop', module)
   .add('AboutSayaByNanYa',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
           <TopSection
             firstTitle="ABOUT"
             secondTitle="Vision & Mission"

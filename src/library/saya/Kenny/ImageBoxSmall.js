@@ -57,11 +57,9 @@ class ImageBoxSmall extends React.PureComponent {
       title,
       titleBack,
       secondTitle,
-      titleWidth,
       subtitle,
       backgroundImage,
       fontColor,
-      paddingTop,
     } = this.props;
 
 

@@ -103,7 +103,7 @@ export default (props) => {
           text="SUBMIT"
           onClick={this.signUpNewsletter}
         /> */}
-        <div style={{ width: 10, height: 40 }} />
+        <div style={{ width: 10, height: 20 }} />
         <div>Select language</div>
         <div style={{ width: 10, height: 8 }} />
         <Select
@@ -112,6 +112,12 @@ export default (props) => {
           value={language}
           onChange={e => setLanguage(e.target.value)}
         />
+        <div style={{ width: 10, height: 20 }} />
+        <Button
+          width={310}
+        >
+          SUBMIT
+        </Button>
         <div style={{ width: 10, height: 80 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
         <div style={{ fontSize: 18 }}><u>service@sayanow.com</u></div>

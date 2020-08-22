@@ -1,16 +1,15 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 
+import Layout from '../../shared/Layout';
+
 import background_TopSection from '../../img/bg57.jpg';
 import leftBox from '../../img/bg56.jpg';
 import rightBox from '../../img/bg52.jpg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop/Partners', module)
   // .addParameters({
@@ -25,11 +24,7 @@ storiesOf('saya|Pages/Desktop/Partners', module)
   .add('Certifications',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
 
           <TopSection
             firstTitle="PARTNERS"

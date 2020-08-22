@@ -1,54 +1,46 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
-// import { graphql } from 'gatsby';
+/* eslint-disable react/button-has-type */
 
-const styles = theme => ({
-  root: {
-    height: theme.spacing(5.5),
-    paddingLeft: theme.spacing(3),
-    paddingRight: theme.spacing(3),
-    paddingTop: theme.spacing(1.5),
-    paddingBottom: theme.spacing(1.5),
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
+
+const styles = {
+
+  button: {
+    textAlign: 'center',
+    backgroundColor: '#000000',
+    border: 'solid 2px #ffffff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 12,
+    color: '#ffffff',
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+    paddingTop: 4,
   },
-});
+};
 
 class Button extends React.PureComponent {
   render() {
     const {
       classes,
-      className,
-      text,
-      onClick,
-      ...others
+      children,
+      width,
+      height = 40,
     } = this.props;
     return (
       <button
-        className={clsx(classes.root, className)}
-        type="button"
-        onClick={onClick}
-        {...others}
+        className={classes.button}
+        style={{
+          width,
+          height,
+          borderRadius: height / 2,
+        }}
       >
-        {text}
+        {children}
       </button>
     );
   }
 }
 
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-  onClick: () => {},
-};
-
 export default withStyles(styles)(Button);
-
-// export const pageQuery = graphql`
-//   query ABC {
-//     abc
-//   }
-// `;

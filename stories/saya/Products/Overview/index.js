@@ -1,12 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
 import TwoCircleSection from 'library/saya/Kenny/TwoCircleSection';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 import ClassicFibers from 'library/saya/Kenny/ClassicFibers';
+
+import Layout from '../../shared/Layout';
 
 import background_TopSection from '../../img/bg1.jpg';
 import background_Introduction from '../../img/bg2.jpg';
@@ -19,8 +20,6 @@ import topLeftBox from '../../img/bg5.jpg';
 import topRightBox from '../../img/bg6.jpg';
 import bottomLeftBox from '../../img/bg7.jpg';
 import bottomRightBox from '../../img/bg8.jpg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop/Products', module)
   // .addParameters({
@@ -35,11 +34,7 @@ storiesOf('saya|Pages/Desktop/Products', module)
   .add('Overview',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
           <TopSection
             firstTitle="PRODUCTS"
             secondTitle="SAYA Recycled Fiber"

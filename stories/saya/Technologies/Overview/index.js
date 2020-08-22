@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import ImageNumberSection from 'library/saya/Kenny/ImageNumberSection';
 import Introduction from 'library/saya/Kenny/Introduction';
@@ -15,6 +14,8 @@ import StageWithIcon from 'library/saya/Kenny/StageWithIcon';
 import EnhancedProcess from 'library/saya/Kenny/EnhancedProcess';
 import ImageNumber from 'library/saya/Kenny/ImageNumber';
 import SwipperT1 from 'library/saya/SwipperT1';
+
+import Layout from '../../shared/Layout';
 
 import topSection from '../../img/bg1.jpg';
 import introduction1 from '../../img/bg34.jpg';
@@ -41,8 +42,6 @@ import rightIcon from '../../img/icon12.svg';
 
 import scrollArrowLeftImage from '../../img/scroll_w_left.svg';
 import scrollArrowRightImage from '../../img/scroll_w_right.svg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 const IntroductionX1 = index => (
   <Introduction
@@ -98,11 +97,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Now', module)
   .add('Overview',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
 
           <TopSection
             firstTitle="TECHNOLOGIES"

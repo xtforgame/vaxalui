@@ -1,19 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
 import ClassicFibers from 'library/saya/Kenny/ClassicFibers';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
+
+import Layout from '../../shared/Layout';
 
 import background_TopSection from '../../img/bg58.jpg';
 import introduction1 from '../../img/bg59.jpg';
 import leftBox from '../../img/bg60.jpg';
 import midBox from '../../img/bg61.jpg';
 import rightBox from '../../img/bg62.jpg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop/Partners', module)
   // .addParameters({
@@ -28,11 +27,7 @@ storiesOf('saya|Pages/Desktop/Partners', module)
   .add('Overview',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
    
           <TopSection
             firstTitle="PARTNERS"

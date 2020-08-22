@@ -4,7 +4,14 @@ import { ThemeProvider } from '@material-ui/styles';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({ children, onLinkClick, navBarItems, logo }) => (
+const Layout = ({
+  children,
+  onLinkClick,
+  navBarItems,
+  logo,
+  fbIcon,
+  igIcon,
+}) => (
   <div
     style={{
       width: '100%',
@@ -32,7 +39,10 @@ const Layout = ({ children, onLinkClick, navBarItems, logo }) => (
     >
       {children}
     </div>
-    <Footer />
+    <Footer
+      fbIcon={fbIcon}
+      igIcon={igIcon}
+    />
   </div>
 );
 

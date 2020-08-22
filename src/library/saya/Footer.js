@@ -1,28 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
 import TextField from './TextField';
 import Select from './Select';
 import Button from './Button';
 
-const styles = theme => ({
-  root: {
-    width: '100%',
-    height: theme.spacing(38),
-    paddingLeft: theme.spacing(5),
-    paddingRight: theme.spacing(16),
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(4),
+const useStyles = makeStyles(theme => ({
+  rowFlex: {
     backgroundColor: 'black',
-    color: 'white',
-  },
-  rowFlex: { // TODO use global class, maybe?
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    padding: 42,
+  },
+  root: {
+    flex: 1,
+    paddingLeft: 32,
+    paddingRight: 32,
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    fontFamily: 'FilsonSoftRegular', // 'FilsonSoft-Bold',
+    position: 'relative',
+    color: 'white',
   },
   leftColumn: {
     flexGrow: 1,
@@ -37,79 +38,95 @@ const styles = theme => ({
   emailInput: {
     width: '100%',
   },
-});
+}));
 
-class Footer extends React.PureComponent {
-  state = {
-    email: '',
-    language: '',
-  }
+export default (props) => {
+  const {
+    fbIcon,
+    igIcon,
+  } = props;
 
-  handleEmailChange = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  }
+  const classes = useStyles();
 
-  handleLanguageChange = (e) => {
-    this.setState({
-      language: e.target.value,
-    });
-  }
+  const [email, setEmail] = useState('');
+  const [language, setLanguage] = useState('');
 
-  signUpNewsletter = () => {
-    console.warn('Implement signUpNewsletter', this.state.email);
-  }
-
-  render() {
-    const {
-      classes,
-    } = this.props;
-    const {
-      email,
-      languange,
-    } = this.state;
-    return (
-      <div className={clsx(classes.root, classes.rowFlex)}>
-        <div className={classes.leftColumn}>
-          <div>Follow SAYA</div>
-          <div className={classes.rowFlex}>
-            <div>FB__</div>
-            <div>IG__</div>
-          </div>
-          <div>Contact: xx@xx.com</div>
-          <div>Also visit...</div>
-          <div>Copyright 2020</div>
+  return (
+    <div className={clsx(classes.rowFlex)}>
+      <div className={clsx(classes.root)}>
+        <div className={classes.subtitle}>
+          <pre
+            style={{
+              fontSize: 14,
+              margin: 0,
+              fontFamily: 'FilsonSoftRegular',
+            }}
+          >
+            Follow SAYA
+          </pre>
         </div>
-        <div className={classes.rightColumn}>
+        <div style={{ width: '100%' }}>
+          <div
+            style={{
+              paddingTop: 20,
+              display: 'flex',
+            }}
+          >
+            {fbIcon}
+            <div style={{ width: 10, height: 1 }} />
+            {igIcon}
+          </div>
+        </div>
+        <div style={{ textAlign: 'left' }}>
+          <div style={{ width: 10, height: 40 }} />
+          <div style={{ fontSize: 18 }}>Contact:</div>
+          <div style={{ fontSize: 18 }}><u>service@sayanow.com</u></div>
+          <div style={{ width: 10, height: 10 }} />
+          <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
+          <div style={{ fontSize: 18 }}><u>https://www.npc.com.tw/</u></div>
+          <div style={{ width: 10, height: 40 }} />
+          <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
+        </div>
+      </div>
+      <div className={clsx(classes.root)}>
+        <div style={{ textAlign: 'left' }}>
           <div>Sign up to newsletter</div>
-          <TextField
-            className={classes.emailInput}
-            value={email}
-            onChange={this.handleEmailChange}
-            placeholder="Your email address"
-          />
-          <Button
+          <div style={{ width: 10, height: 8 }} />
+          
+          <div style={{ width: '100%' }}>
+            <div
+              style={{
+                paddingTop: 20,
+                display: 'flex',
+              }}
+            >
+              <TextField
+                className={classes.emailInput}
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder="Your email address"
+              />
+              <div style={{ width: 20, height: 20 }} />
+              <Button width={100}>
+                SUBMIT
+              </Button>
+            </div>
+          </div>
+          {/* <Button
             text="SUBMIT"
             onClick={this.signUpNewsletter}
-          />
+          /> */}
+          <div style={{ width: 10, height: 20 }} />
           <div>Select language</div>
+          <div style={{ width: 10, height: 8 }} />
           <Select
+            style={{ width: '100%' }}
             options={['English', 'Traditional Chinese']}
-            value={languange}
-            onChange={this.handleLanguageChange}
+            value={language}
+            onChange={e => setLanguage(e.target.value)}
           />
         </div>
       </div>
-    );
-  }
-}
-
-Footer.propTypes = {
+    </div>
+  );
 };
-
-Footer.defaultProps = {
-};
-
-export default withStyles(styles)(Footer);
-

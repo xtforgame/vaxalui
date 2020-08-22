@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
@@ -9,14 +8,14 @@ import ImageBox from 'library/saya/Kenny/ImageBox';
 import ImageContainer from 'library/saya/ImageContainer';
 import GreenNumberSection from 'library/saya/Kenny/GreenNumberSection';
 
+import Layout from '../../shared/Layout';
+
 import background_TopSection from '../../img/bg49.jpg';
 import introduction1 from '../../img/bg38.jpg';
 import introduction2 from '../../img/bg39.jpg';
 import introduction3 from '../../img/bg40.jpg';
 import leftBox from '../../img/bg12.jpg';
 import rightBox from '../../img/bg48.jpg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop/Technologies/Next', module)
   // .addParameters({
@@ -31,11 +30,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Next', module)
   .add('Rscuw',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
           <TopSection
             firstTitle="SAYA NEXT Series"
             secondTitle="SAYA"

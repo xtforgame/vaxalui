@@ -1,13 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import TopSection from 'library/saya/Kenny/TopSection';
 import GreenNumberSection from 'library/saya/Kenny/GreenNumberSection';
 import Microfibers from 'library/saya/Kenny/Microfibers';
 import OceanCycle from 'library/saya/Kenny/OceanCycle';
 import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
+
+import Layout from '../../shared/Layout';
 
 import background_TopSection from '../../img/bg9.jpg';
 import backgroundMicrofibers1 from '../../img/bg10.jpg';
@@ -18,8 +19,6 @@ import rightBox from '../../img/bg13.jpg';
 import backgroundOceanCycle from '../../img/ocean-cycle-218x300.png';
 import scrollArrowLeftImage from '../../img/scroll_left.svg';
 import scrollArrowRightImage from '../../img/scroll_right.svg';
-
-import Logo from '../../img/mobile/m_logo_w.svg'
 
 storiesOf('saya|Pages/Desktop/Technologies/Now', module)
   // .addParameters({
@@ -34,11 +33,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Now', module)
   .add('Coastal',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
 
           <TopSection
             firstTitle="SAYA NOW Series"

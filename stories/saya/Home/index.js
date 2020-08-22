@@ -1,13 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import Layout from 'library/saya/Layout';
 import HomeTopSection from 'library/saya/Kenny/HomeTopSection';
 import HomeTwoCircleSection from 'library/saya/Kenny/HomeTwoCircleSection';
 import MacroChanges from 'library/saya/Kenny/MacroChanges';
 import CleaningUp from 'library/saya/Kenny/CleaningUp';
 import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
 import Partner from 'library/saya/Kenny/Partner';
+
+import Layout from '../shared/Layout';
 
 import backgroundMacroChanges from '../img/bg14.jpg';
 import backgroundCleaningUp from '../img/bg15.jpg';
@@ -29,8 +30,6 @@ import scrollArrowImage from '../img/scroll arrow.png';
 import scrollArrowLeftImage from '../img/scroll_left.svg';
 import scrollArrowRightImage from '../img/scroll_right.svg';
 
-import Logo from '../img/mobile/m_logo_w.svg'
-
 storiesOf('saya|Pages/Desktop', module)
   // .addParameters({
   //   info: {
@@ -44,11 +43,7 @@ storiesOf('saya|Pages/Desktop', module)
   .add('Home',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout
-          logo={(
-            <img src={Logo} height={18} style={{ paddingLeft: 12 }} />
-          )}
-        >
+        <Layout>
 
           <HomeTopSection
             backgroundImage={backgroundHomeTopSection}
