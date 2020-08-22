@@ -45,8 +45,7 @@ storiesOf('saya|Pages/Desktop', module)
               backgroundImage={introduction1}
               title="Look Beyond the Label and Into the Conscience"
               subtitle="lor sit amet, consectetuer"
-              description="SAYA is able to push the boundaries thanks to its parent company Nan Ya Plastics, a branch of the Formosa Plastics Group, a family business founded by two brothers in 1954. More than 60 years later, Formosa has become one of the largest privately-held companies in Taiwan, and Forbes’ 1000 Largest Public Companies in the world."
-              secondDescription="As a global leader in performance fibers, Nan Ya has committed to reliably deliver quality, innovative products through a transparent supply chain. By fostering close partnerships, creating responsible solutions and improving the environmental performance of all their products, Nan Ya continues to innovate to stay ahead of fast-moving market trends and raise the bar of the entire industry."
+              description={'SAYA is able to push the boundaries thanks to its parent company Nan Ya Plastics, a branch of the Formosa Plastics Group, a family business founded by two brothers in 1954. More than 60 years later, Formosa has become one of the largest privately-held companies in Taiwan, and Forbes’ 1000 Largest Public Companies in the world.\n\nAs a global leader in performance fibers, Nan Ya has committed to reliably deliver quality, innovative products through a transparent supply chain. By fostering close partnerships, creating responsible solutions and improving the environmental performance of all their products, Nan Ya continues to innovate to stay ahead of fast-moving market trends and raise the bar of the entire industry.'}
               titleWidth="540px"
               fontColor="#ffffff"
               lineBorder="solid 1px #ffffff"

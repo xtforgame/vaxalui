@@ -40,8 +40,7 @@ const styles = {
   },
   titleBack: {
     flexGrow: 0,
-    fontWeight: 300,
-    fontFamily: 'FilsonSoftLight'
+    fontFamily: 'FilsonSoft-Light'
   },
   secondTitle: {
     flexGrow: 0,

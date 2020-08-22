@@ -45,8 +45,7 @@ storiesOf('saya|Pages/Desktop/Technologies/Now', module)
               title="Turnkey Solution to 
               Made in USA Strategy"
               subtitle="Facility in South Carolina"
-              description="SAYA USA is a special collection of recycled polyester fibers made in our facility in South Carolina, USA. Here we provide the options to use locally or internationally recycled bottles and wastes. If you are looking for a USA-based fiber program, SAYA is here to help with not only quality, delivery, but also global traceability and transparency."
-              secondDescription="We partner with mills and finishing facilities around the USA to provide turnkey solutions to complete your sustainable and circular design product needs."
+              description={'SAYA USA is a special collection of recycled polyester fibers made in our facility in South Carolina, USA. Here we provide the options to use locally or internationally recycled bottles and wastes. If you are looking for a USA-based fiber program, SAYA is here to help with not only quality, delivery, but also global traceability and transparency.\n\nWe partner with mills and finishing facilities around the USA to provide turnkey solutions to complete your sustainable and circular design product needs.'}
               fontColor="#ffffff"
               titleWidth="440px"
               lineBorder="solid 1px #ffffff"

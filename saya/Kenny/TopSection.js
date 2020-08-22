@@ -39,7 +39,7 @@ const styles = {
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    fontFamily: 'FilsonSoftLight'
+    fontFamily: 'FilsonSoft-Light'
   },
   secondLine: {
     width: 420,

@@ -50,8 +50,7 @@ storiesOf('saya|Pages/Desktop/Partners', module)
               backgroundImage={introduction1}
               title="From One Professional to Another"
               subtitle="We know how to make your job easier."
-              description="SAYA supplies the best-in-class performance fibers to top fabric manufacturers around the world. SAYA recycled fibers retain the best strength, dyeability, and overall A Grade yield."
-              secondDescription="Whether you need better fabric tenacity, color matching or simply hassle-free transition to recycled content, we got your back."
+              description={'SAYA supplies the best-in-class performance fibers to top fabric manufacturers around the world. SAYA recycled fibers retain the best strength, dyeability, and overall A Grade yield.\n\nWhether you need better fabric tenacity, color matching or simply hassle-free transition to recycled content, we got your back.'}
               descriptionWidth="460px"
               fontColor="#ffffff"
               lineBorder="solid 1px #ffffff"

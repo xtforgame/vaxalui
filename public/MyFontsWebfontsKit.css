@@ -1,6 +1,6 @@
 /**
  * @license
- * MyFonts Webfont Build ID 3936313, 2020-08-16T07:25:59-0400
+ * MyFonts Webfont Build ID 3938757, 2020-08-21T21:49:59-0400
  * 
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are 
@@ -10,23 +10,32 @@
  * 
  * Webfont: FilsonSoft-Bold by Mostardesign
  * URL: https://www.myfonts.com/fonts/mostardesign/filson-soft/bold/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Olivier Gourvat. All rights reserved.
+ * 
+ * Webfont: FilsonSoft-Light by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/filson-soft/light/
+ * Copyright: Copyright (c) 2016 by Mostardesign Type Foundry. All rights reserved.
  * 
  * Webfont: FilsonSoftRegular by Mostardesign
  * URL: https://www.myfonts.com/fonts/mostardesign/filson-soft/regular/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Olivier Gourvat. All rights reserved.
  * 
  * 
- * Webfonts copyright: Copyright &amp;#x00A9; 2016 by Olivier Gourvat. All rights reserved.
  * 
  * © 2020 MyFonts Inc
 */
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3c1039");
+@import url("//hello.myfonts.net/count/3c19c5");
   
 @font-face {
   font-family: 'FilsonSoft-Bold';
   src: url('webFonts/FilsonSoft-Bold/font.woff2') format('woff2'), url('webFonts/FilsonSoft-Bold/font.woff') format('woff');
+}
+@font-face {
+  font-family: 'FilsonSoft-Light';
+  src: url('webFonts/FilsonSoft-Light/font.woff2') format('woff2'), url('webFonts/FilsonSoft-Light/font.woff') format('woff');
 }
 @font-face {
   font-family: 'FilsonSoftRegular';

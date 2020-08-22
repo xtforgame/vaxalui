@@ -45,9 +45,6 @@ class Introduction extends React.PureComponent {
       subtitleWidth,
       description,
       descriptionWidth,
-      secondDescription,
-      thirdDescription,
-      fourthDescription,
       fontColor,
       lineBorder,
       backgroundColor,
@@ -100,19 +97,6 @@ class Introduction extends React.PureComponent {
             }}
           >
             <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-            <br />
-            <br />
-            {' '}
-            {secondDescription}
-            <br />
-            <br />
-            {' '}
-            {thirdDescription}
-            <br />
-            <br />
-            {' '}
-            {fourthDescription}
-
           </div>
 
           <div>

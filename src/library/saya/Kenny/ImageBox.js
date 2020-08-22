@@ -22,8 +22,7 @@ const styles = {
   },
   titleBack: {
     fontWeight: 'normal',
-    fontWeight: 300,
-    fontFamily: 'FilsonSoftLight',
+    fontFamily: 'FilsonSoft-Light',
   },
   subtitle: {
     fontSize: 18,

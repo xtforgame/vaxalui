@@ -42,10 +42,7 @@ storiesOf('saya|Pages/Desktop', module)
             height="540px"
             title="Recover, Renew, Rebuild"
             subtitle="lor sit amet, consectetuer"
-            description="We manufacture sustainable fibers from recycled resources to lessen our impacts, grow our partners and better our world."
-            secondDescription="Our motto is recover, renew, rebuild and our mission is to bring new life to what was once discarded."
-            thirdDescription="We innovate to bring better manufacturing methods, cleaner processes and more sustainable products to market. We don’t shy away from more challenging endeavors as we seek to redefine what’s possible in textile renewal."
-            fourthDescription="At Saya, we believe that raising the bar, within the supply chain, elevates us all."
+            description={'We manufacture sustainable fibers from recycled resources to lessen our impacts, grow our partners and better our world.\n\nOur motto is recover, renew, rebuild and our mission is to bring new life to what was once discarded.\n\nWe innovate to bring better manufacturing methods, cleaner processes and more sustainable products to market. We don’t shy away from more challenging endeavors as we seek to redefine what’s possible in textile renewal.\n\nAt Saya, we believe that raising the bar, within the supply chain, elevates us all.'}
             fontColor="#000000"
             lineBorder="solid 1px #000000"
             descriptionWidth="460px"
