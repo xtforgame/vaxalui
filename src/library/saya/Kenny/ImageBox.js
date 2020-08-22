@@ -47,6 +47,7 @@ class ImageBox extends React.PureComponent {
       fontColor,
       paddingTop,
       buttonDisplay,
+      children,
     } = this.props;
     return (
       <div
@@ -69,10 +70,14 @@ class ImageBox extends React.PureComponent {
           {subtitle}
         </div>
 
-        <div className={classes.button} style={{display:buttonDisplay}}>
+        <div className={classes.button} style={{ display: buttonDisplay }}>
           <GreenButton
             text="Learn more"
           />
+        </div>
+        
+        <div>
+          {children}
         </div>
       </div>
     );

@@ -40,6 +40,7 @@ class Introduction extends React.PureComponent {
       title,
       backgroundImage,
       titleWidth,
+      titlMarginTop,
       titleBack,
       subtitle,
       subtitleWidth,
@@ -67,6 +68,7 @@ class Introduction extends React.PureComponent {
             className={classes.title}
             style={{
               width: titleWidth,
+              marginTop: titlMarginTop,
             }}
           >
             {title}
