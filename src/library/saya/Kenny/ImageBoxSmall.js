@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from './GreenButton';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
@@ -10,27 +11,42 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    flexWrap: 'wrap',
     borderRadius: 30,
     margin: 20,
+    position: 'relative',
   },
   title: {
     fontSize: 28,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.07,
+    display: 'flex',
+    flexDirection: 'column',
+    height: 116,
+  },
+  titleText: {
+    flexGrow: 0,
   },
   titleBack: {
+    flexGrow: 0,
     fontWeight: 300,
+    fontFamily: 'FilsonSoftLight',
   },
   secondTitle: {
+    flexGrow: 0,
     lineHeight: 1.07,
   },
   subtitle: {
-    width: 125,
     fontSize: 18,
-    fontWeight: 'bold',
-    paddingTop: 10,
+    fontFamily: 'FilsonSoft-Bold',
+    position: 'absolute',
+    top: 124,
+  },
+  space: {
+    flex: 1,
+  },
+  button: {
+    flexShrink: 0,
+    marginBottom: 58,
   },
 };
 
@@ -46,7 +62,6 @@ class ImageBoxSmall extends React.PureComponent {
       backgroundImage,
       fontColor,
       paddingTop,
-      marginTop,
     } = this.props;
 
 
@@ -58,37 +73,32 @@ class ImageBoxSmall extends React.PureComponent {
           color: fontColor,
         }}
       >
-        <div
+        <BreakAllContentText
           className={classes.title}
-          style={{
-            paddingTop,
-            width: titleWidth,
-          }}
         >
-          {title}
-          <span className={classes.titleBack}>
-            {titleBack}
-            {' '}
-          </span>
+          <div className={classes.space} />
+          <div className={classes.titleText}>
+            {title}
+            <span className={classes.titleBack}>
+              {titleBack}
+            </span>
+          </div>
           <div className={classes.secondTitle}>{secondTitle}</div>
-        </div>
+        </BreakAllContentText>
 
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoftegular' }}>{subtitle}</pre>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftegular' }}>
+            {subtitle}
+          </BreakAllContentText>
         </div>
 
-        <div
-          className={classes.button}
-          style={{
-            marginTop,
-          }}
-        >
+        <div className={classes.space} />
+
+        <div className={classes.button}>
           <GreenButton
             text="Learn more"
           />
         </div>
-
-
       </div>
 
     );

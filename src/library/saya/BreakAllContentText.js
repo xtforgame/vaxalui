@@ -6,7 +6,8 @@ export default ({ style, ...props }) => (
     style={{
       wordWrap: 'break-word',
       whiteSpace: 'pre-wrap',
-      wordBreak: 'break-all',
+      // wordBreak: 'break-all',
+      margin: 0,
       ...style,
     }}
   />

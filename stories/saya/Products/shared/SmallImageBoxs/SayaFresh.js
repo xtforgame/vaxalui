@@ -5,7 +5,8 @@ import backgroundImage from '../../../img/bg7.jpg';
 
 export default () => (
   <ImageBoxSmall
-    title="SAYAFRESH"
+    title="SAYA"
+    titleBack="FRESH"
     subtitle={'Lorem ipsum\ndolor sit amet'}
     backgroundImage={backgroundImage}
     titleWidth="105px"
