@@ -23,7 +23,7 @@ storiesOf('saya|Pages/Desktop/About', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('SayaByNanYa',
+  .add('VisionMission',
     () => (
       <div style={{ width: '100%' }}>
         <Layout>

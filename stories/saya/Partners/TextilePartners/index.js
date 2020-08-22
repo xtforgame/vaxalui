@@ -11,15 +11,15 @@ import IconBoxSection from 'library/saya/Kenny/IconBoxSection';
 
 import Layout from '../../shared/Layout';
 
-import background_TopSection from '../img/bg50.jpg';
-import introduction1 from '../img/bg51.jpg';
-import leftBox from '../img/bg52.jpg';
-import rightBox from '../img/bg53.jpg';
-import icon1 from '../img/icon15.svg';
-import icon2 from '../img/icon16.svg';
-import icon3 from '../img/icon17.svg';
-import icon4 from '../img/icon18.svg';
-import icon5 from '../img/icon19.svg';
+import background_TopSection from '../../img/bg50.jpg';
+import introduction1 from '../../img/bg51.jpg';
+import leftBox from '../../img/bg52.jpg';
+import rightBox from '../../img/bg53.jpg';
+import icon1 from '../../img/icon15.svg';
+import icon2 from '../../img/icon16.svg';
+import icon3 from '../../img/icon17.svg';
+import icon4 from '../../img/icon18.svg';
+import icon5 from '../../img/icon19.svg';
 
 storiesOf('saya|Pages/Desktop/Partners', module)
   // .addParameters({

@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TopSection from 'library/saya/Kenny/TopSection';
-import TitleLineBox from 'library/saya/Kenny/TitleLineBox';import ImageBox from 'library/saya/Kenny/ImageBox';
+import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
 import IconBox from 'library/saya/Kenny/IconBox';
 import IconBoxSection from 'library/saya/Kenny/IconBoxSection';
@@ -10,14 +10,14 @@ import ImageContainer from 'library/saya/ImageContainer';
 
 import Layout from '../../shared/Layout';
 
-import background_TopSection from '../img/bg57.jpg';
-import leftBox from '../img/bg56.jpg';
-import rightBox from '../img/bg52.jpg';
-import icon1 from '../img/icon20.svg';
-import icon2 from '../img/icon21.svg';
-import icon3 from '../img/icon23.svg';
-import icon4 from '../img/icon24.svg';
-import icon5 from '../img/icon22.svg';
+import background_TopSection from '../../img/bg57.jpg';
+import leftBox from '../../img/bg56.jpg';
+import rightBox from '../../img/bg52.jpg';
+import icon1 from '../../img/icon20.svg';
+import icon2 from '../../img/icon21.svg';
+import icon3 from '../../img/icon23.svg';
+import icon4 from '../../img/icon24.svg';
+import icon5 from '../../img/icon22.svg';
 
 
 storiesOf('saya|Pages/Desktop/Partners', module)
