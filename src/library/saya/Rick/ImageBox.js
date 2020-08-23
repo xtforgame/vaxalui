@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = {
   root: {
     width: 325,
-    height: 460,
+    height: 405,
     textAlign: 'center',
     // display: 'flex',
     // flexDirection: 'column',

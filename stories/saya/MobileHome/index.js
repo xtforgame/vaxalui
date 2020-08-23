@@ -17,10 +17,10 @@ import TopRightBox from '../img/bg6.jpg';
 import BottomLeftBox from '../img/bg7.jpg';
 import BottomRightBox from '../img/bg8.jpg';
 
-import MobileBg1 from '../img/mobile/bg1.png'
-import MobileBg2 from '../img/mobile/bg2.png'
+import MobileBg1 from '../img/mobile/bg1.png';
+import MobileBg2 from '../img/mobile/bg2.png';
 
-import NextCircle from '../img/mobile/m_now_next_circle.png'
+import NextCircle from '../img/mobile/m_now_next_circle.png';
 
 storiesOf('saya|Pages/Mobile', module)
   // .addParameters({
@@ -33,7 +33,7 @@ storiesOf('saya|Pages/Mobile', module)
   //   },
   // })
   .add('MobileHome',
-    ()=>(
+    () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
           <TopSection
@@ -45,13 +45,13 @@ storiesOf('saya|Pages/Mobile', module)
           <Introduction
             title={'Not all Recycled\nFibers are\nCreated Equal,'}
             subtitle={'Work with the Best to Transition\nto Sustainable Fibers.'}
-            content={`SAYA has the industry’s widest selection of\nPET recycled fiber specifications to meet all\nyour design needs and budget. Find out how\nwe can help to make your transition a smooth one.`}
+            content={'SAYA has the industry’s widest selection of\nPET recycled fiber specifications to meet all\nyour design needs and budget. Find out how\nwe can help to make your transition a smooth one.'}
             backgroundImage={MobileBg2}
           />
           <Boxes
-            title={'SAYA 365'}
-            subtitle={'Under SAYA Now Technology.'}
-            content={`Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget`}
+            title="SAYA 365"
+            subtitle="Under SAYA Now Technology."
+            content={'Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget'}
             backgroundColor="#444343"
             color="#ffffff"
           >
@@ -65,8 +65,8 @@ storiesOf('saya|Pages/Mobile', module)
           </Boxes>
           <Boxes
             title={'Re Performance\nFibers'}
-            subtitle={'Under SAYA Now Technology.'}
-            content={`Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget`}
+            subtitle="Under SAYA Now Technology."
+            content={'Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget'}
             backgroundColor="#c8c6c6"
             color="#000000"
           >
@@ -104,5 +104,4 @@ storiesOf('saya|Pages/Mobile', module)
           />
         </MobileLayout>
       </div>
-    )
-  );
+    ));
