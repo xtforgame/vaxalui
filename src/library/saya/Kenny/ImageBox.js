@@ -9,7 +9,7 @@ const styles = {
     marginBottom: 50,
   },
   root: {
-    width: 370,
+    width: 368,
     height: 460,
     textAlign: 'center',
     display: 'flex',

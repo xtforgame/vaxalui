@@ -13,24 +13,8 @@ const useStyles = makeStyles(() => ({
   table: {
     tableLayout: 'fixed',
     borderCollapse: 'collapse',
-    // border: '1px solid #979797',
+    border: '1px solid #979797',
     width: 20,
-  },
-  tr0base: {
-    borderTop: '1px solid #434343',
-    borderBottom: '1px solid #434343',
-  },
-  tr1base: {
-    borderTop: '1px solid #434343',
-    // borderBottom: '1px solid #d8d8d8',
-  },
-  tr2base: {
-    borderTop: '1px solid #d8d8d8',
-    borderBottom: '1px solid #d8d8d8',
-  },
-  tr3base: {
-    borderTop: '1px solid #d8d8d8',
-    borderBottom: '1px solid #434343',
   },
   tr: {
     lineHeight: '8px',
@@ -38,14 +22,9 @@ const useStyles = makeStyles(() => ({
   },
   tdth: {
     overflow: 'hidden',
-    // border: '1px solid #979797',
+    border: '1px solid #979797',
     padding: 11,
     height: 40,
-  },
-  itemTh: {
-    paddingLeft: 42,
-    paddingRight: 42,
-    textAlign: 'left',
   },
   itemTd: {
     backgroundColor: '#d8d8d8',
@@ -155,26 +134,13 @@ export default (props) => {
     </td>
   );
 
-  const getTrClass = (types, i) => {
-    if (i === 0 && types.length === 1) {
-      return classes.tr0base;
-    }
-    if (i === 0) {
-      return classes.tr1base;
-    }
-    if (i === types.length - 1) {
-      return classes.tr3base;
-    }
-    return classes.tr2base;
-  };
-
-  const renderRow = (row, i1) => row.types.map((typeData, i2, types) => (
-    <tr className={getTrClass(types, i2)} key={`${i1}-${i2}`}>
+  const renderRow = (row, i1) => row.types.map((typeData, i2) => (
+    <tr key={`${i1}-${i2}`}>
       {i2 === 0 && renderItemTd(row)}
-      <td className={clsx(classes.tdth, classes.typeTd)} style={{ borderRight: '1px solid #d8d8d8' }}>
+      <td className={clsx(classes.tdth, classes.typeTd)} style={{ borderRight: 'none' }}>
         {typeData.type}
       </td>
-      <td className={clsx(classes.tdth, classes.typeTd)} style={{ borderLeft: '1px solid #d8d8d8' }} />
+      <td className={clsx(classes.tdth, classes.typeTd)} style={{ borderLeft: 'none' }} />
       {columnOrder.map((columnName, i) => {
         const valueTable = typeData[columnName];
         return (
@@ -203,14 +169,14 @@ export default (props) => {
     >
       <table className={classes.table}>
         <tbody>
-          <tr className={clsx(classes.tr)}>
-            <th width={264} className={clsx(classes.tdth, classes.itemTh)}>Item</th>
-            <th width={100} className={classes.tdth}>Type</th>
-            <th width={12} className={classes.tdth} />
+          <tr className={classes.tr}>
+            <th width={264} className={classes.tdth}>Item</th>
+            <th width={100} className={classes.tdth} style={{ borderRight: 'none' }}>Type</th>
+            <th width={12} className={classes.tdth} style={{ borderLeft: 'none' }} />
             <th width={80} className={classes.tdth}>Denie</th>
             <th width={80} className={classes.tdth}>Filame</th>
-            <th width={80} className={classes.tdth}>Luster</th>
-            <th width={12} className={classes.tdth} />
+            <th width={80} className={classes.tdth} style={{ borderRight: 'none' }}>Luster</th>
+            <th width={12} className={classes.tdth} style={{ borderLeft: 'none' }} />
             {/* <th width={80} className={classes.tdth}>Stock</th>
             <th width={80} className={classes.tdth}>Remark</th> */}
           </tr>
