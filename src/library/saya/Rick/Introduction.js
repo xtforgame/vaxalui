@@ -4,30 +4,28 @@ import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 590,
     textAlign: 'center',
-    color: '#ffffff',
   },
   title: {
     textAlign: 'left',
     fontSize: 33,
-    paddingTop: 10,
+    paddingTop: 47,
   },
-  secondLine: {
+  line: {
     width: '100%',
     height: 1,
-    backgroundColor: '#ffffff',
-    marginTop: 2,
+    marginTop: 23,
   },
   subtitle: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 10,
+    paddingTop: 4,
   },
   content: {
     textAlign: 'left',
     fontSize: 14,
     paddingTop: 10,
+    lineHeight:1.5,
   },
 }));
 
@@ -36,7 +34,13 @@ export default (props) => {
     title,
     subtitle,
     content,
+    height,
     backgroundImage,
+    backgroundColor,
+    color,
+    lineColor,
+    lineDisplay,
+    children,
   } = props;
 
   const classes = useStyles();
@@ -45,25 +49,29 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ width: '100%', height: 590 }}
+      style={{
+        height, color, width: '100%', backgroundColor: backgroundColor
+      }}
     >
       <div
         style={{ position: 'absolute' }}
       >
         <div className={classes.title}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</pre>
+          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{title}</pre>
         </div>
 
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.secondLine} />
+          <div className={classes.line} style={{ backgroundColor: lineColor, display: lineDisplay, }} />
         </div>
 
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</pre>
+          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{subtitle}</pre>
         </div>
-        <div style={{ flex: 0, height: 40, width: '100%' }} />
         <div className={classes.content}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular' }}>{content}</pre>
+          <pre style={{ fontFamily: 'FilsonSoftRegular', marginBottom: 0, }}>{content}</pre>
+        </div>
+        <div>
+          {children}
         </div>
       </div>
     </ImageContainer>

@@ -29,22 +29,20 @@ const useStyles = makeStyles(theme => ({
     fontSize: 50,
     fontWeight: 'bold',
     color: '#000000',
-    paddingTop: 10,
   },
   secondTitleBack: {
     fontWeight: 'normal',
+    fontFamily: 'FilsonSoftLight',
     color: '#000000',
   },
   secondLine: {
-    width: 220,
+    width: 230,
     height: 1,
     backgroundColor: '#000000',
-    marginTop: 2,
   },
   thirdTitle: {
     fontSize: 18,
     color: '#000000',
-    paddingTop: 10,
   },
 }));
 
@@ -53,6 +51,8 @@ export default (props) => {
     firstTitle,
     secondTitle,
     secondTitleBack,
+    secondTitlePaddingTop,
+    secondLineMarginTop,
     thirdTitle,
     backgroundImage,
   } = props;
@@ -68,7 +68,7 @@ export default (props) => {
       <div
         style={{ position: 'absolute' }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center'  }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={classes.firstTitle}>
             {firstTitle}
             <div className={classes.firstLine} />
@@ -76,13 +76,23 @@ export default (props) => {
         </div>
 
         <div className={classes.secondTitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>{secondTitle}</pre>
-          <a className={classes.secondTitleBack}>
-            {secondTitleBack}
-          </a>
+          <pre style={{
+            fontFamily: 'FilsonSoft-Bold',
+            paddingTop: secondTitlePaddingTop
+          }}
+          >
+            {secondTitle}
+            <a className={classes.secondTitleBack}>
+              {secondTitleBack}
+            </a></pre>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: secondLineMarginTop,
+        }}
+        >
           <div className={classes.secondLine} />
         </div>
 

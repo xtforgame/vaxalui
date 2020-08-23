@@ -17,8 +17,8 @@ import TopRightBox from '../img/bg6.jpg';
 import BottomLeftBox from '../img/bg7.jpg';
 import BottomRightBox from '../img/bg8.jpg';
 
-import MobileBg1 from '../img/mobile/bg1.png';
-import MobileBg2 from '../img/mobile/bg2.png';
+import MobileBg1 from '../img/mobile/m_bg1.png'
+import MobileBg2 from '../img/mobile/bg2.jpg'
 
 import NextCircle from '../img/mobile/m_now_next_circle.png';
 
@@ -41,13 +41,18 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitle={'SAYA\nRenew\nFiber'}
             thirdTitle={'Design Consciously,\nKnow What Goes Into Your Gear'}
             backgroundImage={MobileBg1}
+            secondTitlePaddingTop={40}
+            secondLineMarginTop={32}
           />
           <Introduction
+            height={570}
             title={'Not all Recycled\nFibers are\nCreated Equal,'}
             subtitle={'Work with the Best to Transition\nto Sustainable Fibers.'}
-            content={'SAYA has the industry’s widest selection of\nPET recycled fiber specifications to meet all\nyour design needs and budget. Find out how\nwe can help to make your transition a smooth one.'}
+            content={`SAYA has the industry’s widest selection of\nPET recycled fiber specifications to meet all\nyour design needs and budget. Find out how\nwe can help to make your transition a smooth\none.`}
             backgroundImage={MobileBg2}
-          />
+            color="#ffffff"
+            lineColor="#ffffff"
+          />          
           <Boxes
             title="SAYA 365"
             subtitle="Under SAYA Now Technology."
