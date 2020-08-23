@@ -27,7 +27,7 @@ const styles = {
   box: {
     display: 'flex',
     marginTop: 90,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     flexWrap: 'wrap',
   },
 };

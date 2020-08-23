@@ -4,17 +4,22 @@ import { storiesOf } from '@storybook/react';
 import TopSection from 'library/saya/Kenny/TopSection';
 import Introduction from 'library/saya/Kenny/Introduction';
 import ImageContainer from 'library/saya/ImageContainer';
-
-
-import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 import ImageBox from 'library/saya/Kenny/ImageBox';
+import IconBox from 'library/saya/Kenny/IconBox';
+import IconBoxSection from 'library/saya/Kenny/IconBoxSection';
+import TitleLineBox from 'library/saya/Kenny/TitleLineBox';
 
 import Layout from '../../shared/Layout';
 
 import background_TopSection from '../../img/bg54.jpg';
-import introduction1 from '../../img/bg38.jpg';
+import introduction1 from '../../img/bg55.jpg';
 import leftBox from '../../img/bg56.jpg';
 import rightBox from '../../img/bg53.jpg';
+import icon1 from '../../img/icon15.svg';
+import icon2 from '../../img/icon16.svg';
+import icon3 from '../../img/icon17.svg';
+import icon4 from '../../img/icon18.svg';
+import icon5 from '../../img/icon19.svg';
 
 storiesOf('saya|Pages/Desktop/Partners', module)
   // .addParameters({
@@ -69,6 +74,44 @@ storiesOf('saya|Pages/Desktop/Partners', module)
             }}
           >
             Industry Professionals<br />Using SAYA
+          </ImageContainer>
+
+          <ImageContainer
+            style={{
+              height: 700,
+              justifyContent: 'center',
+              backgroundColor: '#444343'
+            }}
+          >
+            <IconBoxSection>
+              <IconBox width="162px" />
+              <IconBox imgUrl={icon1} width="140px" />
+              <IconBox imgUrl={icon2} width="140px" />
+              <IconBox imgUrl={icon3} width="140px" />
+              <IconBox imgUrl={icon4} width="140px" />
+              <IconBox imgUrl={icon5} width="140px" />
+              <IconBox width="162px" />
+            </IconBoxSection>
+
+            <IconBoxSection>
+              <IconBox width="162px" />
+              <IconBox imgUrl={icon1} width="140px" />
+              <IconBox imgUrl={icon2} width="140px" />
+              <IconBox imgUrl={icon3} width="140px" />
+              <IconBox imgUrl={icon4} width="140px" />
+              <IconBox imgUrl={icon5} width="140px" />
+              <IconBox width="162px" />
+            </IconBoxSection>
+
+            <IconBoxSection>
+              <IconBox width="162px" />
+              <IconBox imgUrl={icon1} width="140px" />
+              <IconBox imgUrl={icon2} width="140px" />
+              <IconBox imgUrl={icon3} width="140px" />
+              <IconBox width="140px" />
+              <IconBox width="140px" />
+              <IconBox width="162px" />
+            </IconBoxSection>
           </ImageContainer>
 
 

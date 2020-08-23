@@ -1,18 +1,18 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import ImageContainer from '../ImageContainer';
 
 const styles = {
   root: {
-    width: 940,
+    width: '100%',
     height: 235,
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'space-around',
     backgroundColor: 'rgba(0, 0, 0, 0.3)',
   },
   block: {
     width: 350,
-    marginLeft: 80,
+    marginLeft: 0,
   },
   title: {
     fontSize: 20,
@@ -37,11 +37,10 @@ class TransparentBlock extends React.PureComponent {
       marginTop,
     } = this.props;
     return (
-      <div className={classes.root} style={{marginTop:marginTop}}>
+      <div className={classes.root} style={{ marginTop: marginTop }}>
         <div className={classes.block}>
           <div className={classes.title}>Type of Materials and Finishing</div>
           <div className={classes.description}>{leftDescription}</div>
-
         </div>
         <div className={classes.block}>
           <div className={classes.title}>Content Percentage</div>
