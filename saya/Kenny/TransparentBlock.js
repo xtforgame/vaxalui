@@ -9,21 +9,20 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
-    width: 940,
+    width: '100%',
     height: 235,
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'space-around',
     backgroundColor: 'rgba(0, 0, 0, 0.3)'
   },
   block: {
     width: 350,
-    marginLeft: 80
+    marginLeft: 0
   },
   title: {
     fontSize: 20,

@@ -23,7 +23,6 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     borderRadius: 30,
-    margin: 20,
     marginBottom: 50
   },
   title: {
@@ -57,7 +56,8 @@ class ImageBox extends _react.default.PureComponent {
       backgroundImage,
       fontColor,
       paddingTop,
-      buttonDisplay
+      buttonDisplay,
+      children
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -81,7 +81,7 @@ class ImageBox extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_GreenButton.default, {
       text: "Learn more"
-    })));
+    })), _react.default.createElement("div", null, children));
   }
 
 }

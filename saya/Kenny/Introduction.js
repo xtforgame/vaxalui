@@ -52,6 +52,7 @@ class Introduction extends _react.default.PureComponent {
       title,
       backgroundImage,
       titleWidth,
+      titlMarginTop,
       titleBack,
       subtitle,
       subtitleWidth,
@@ -75,7 +76,8 @@ class Introduction extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.title,
       style: {
-        width: titleWidth
+        width: titleWidth,
+        marginTop: titlMarginTop
       }
     }, title, _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
       className: classes.line,
