@@ -9,6 +9,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
+var _styles = require("@material-ui/core/styles");
+
 var _MenuContext = require("./MenuContext");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -21,6 +25,15 @@ const getSize = theme => ({
 });
 
 exports.getSize = getSize;
+
+const styles = theme => ({
+  firstLayer: {
+    fontFamily: 'FilsonSoft-Bold'
+  },
+  otherLayer: {
+    fontFamily: 'FilsonSoftRegulat'
+  }
+});
 
 class Item extends _react.default.PureComponent {
   constructor(...args) {
@@ -37,9 +50,15 @@ class Item extends _react.default.PureComponent {
 
   render() {
     const {
+      firstLayer,
+      classes,
       children
     } = this.props;
     return _react.default.createElement("div", {
+      className: (0, _clsx.default)({
+        [classes.firstLayer]: firstLayer,
+        [classes.otherLayer]: !firstLayer
+      }),
       "data-id": "menu-item",
       onMouseEnter: this.showMenu,
       onMouseLeave: this.closeMenu
@@ -48,11 +67,8 @@ class Item extends _react.default.PureComponent {
 
 }
 
-Item.propTypes = {
-  path: _propTypes.default.string.isRequired,
-  children: _propTypes.default.node.isRequired
-};
-Item.defaultProps = {};
 Item.contextType = _MenuContext.MenuContext;
-var _default = Item;
+
+var _default = (0, _styles.withStyles)(styles)(Item);
+
 exports.default = _default;

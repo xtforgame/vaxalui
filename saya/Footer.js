@@ -30,15 +30,14 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    fontFamily: 'FilsonSoftRegular',
     padding: 42
   },
   root: {
     flex: 1,
-    paddingLeft: 32,
     paddingRight: 32,
     flexDirection: 'column',
     flexWrap: 'wrap',
-    fontFamily: 'FilsonSoftRegular',
     position: 'relative',
     color: 'white'
   },
@@ -53,7 +52,21 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     flexBasis: theme.spacing(38)
   },
   emailInput: {
-    width: '100%'
+    width: 300
+  },
+  checkbox: {
+    display: 'flex',
+    paddingTop: 12
+  },
+  box: {
+    width: 30,
+    height: 30
+  },
+  labelContent: {
+    width: 400,
+    fontSize: 10,
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10
   }
 }));
 
@@ -75,7 +88,7 @@ var _default = props => {
     style: {
       fontSize: 14,
       margin: 0,
-      fontFamily: 'FilsonSoftRegular'
+      fontFamily: 'FilsonSoft-Bold'
     }
   }, "Follow SAYA")), _react.default.createElement("div", {
     style: {
@@ -83,12 +96,12 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     style: {
-      paddingTop: 20,
+      paddingTop: 50,
       display: 'flex'
     }
   }, fbIcon, _react.default.createElement("div", {
     style: {
-      width: 10,
+      width: 20,
       height: 1
     }
   }), igIcon)), _react.default.createElement("div", {
@@ -98,33 +111,39 @@ var _default = props => {
   }, _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 40
+      height: 50
     }
   }), _react.default.createElement("div", {
     style: {
-      fontSize: 18
+      display: 'inline',
+      fontSize: 12,
+      marginRight: 4
     }
   }, "Contact:"), _react.default.createElement("div", {
     style: {
-      fontSize: 18
+      display: 'inline',
+      fontSize: 12
     }
-  }, _react.default.createElement("u", null, "service@sayanow.com")), _react.default.createElement("div", {
+  }, _react.default.createElement("u", null, "change@sayarenew.com")), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 10
+      height: 0
     }
   }), _react.default.createElement("div", {
     style: {
-      fontSize: 18
+      display: 'inline',
+      fontSize: 12,
+      marginRight: 4
     }
   }, "Also visit Nan Ya Plastic:"), _react.default.createElement("div", {
     style: {
-      fontSize: 18
+      display: 'inline',
+      fontSize: 12
     }
   }, _react.default.createElement("u", null, "https://www.npc.com.tw/")), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 40
+      height: 72
     }
   }), _react.default.createElement("div", {
     style: {
@@ -136,7 +155,12 @@ var _default = props => {
     style: {
       textAlign: 'left'
     }
-  }, _react.default.createElement("div", null, "Sign up to newsletter"), _react.default.createElement("div", {
+  }, _react.default.createElement("div", {
+    style: {
+      fontSize: 14,
+      fontFamily: 'FilsonSoft-Bold'
+    }
+  }, "Sign up to newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 8
@@ -147,7 +171,6 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     style: {
-      paddingTop: 20,
       display: 'flex'
     }
   }, _react.default.createElement(_TextField.default, {
@@ -163,18 +186,31 @@ var _default = props => {
   }), _react.default.createElement(_Button.default, {
     width: 100
   }, "SUBMIT"))), _react.default.createElement("div", {
+    className: classes.checkbox
+  }, _react.default.createElement("input", {
+    className: classes.box,
+    type: "checkbox",
+    value: "checkbox"
+  }), _react.default.createElement("div", {
+    className: classes.labelContent
+  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 20
     }
-  }), _react.default.createElement("div", null, "Select language"), _react.default.createElement("div", {
+  }), _react.default.createElement("div", {
+    style: {
+      fontSize: 14,
+      fontFamily: 'FilsonSoft-Bold'
+    }
+  }, "Select language"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 8
     }
   }), _react.default.createElement(_Select.default, {
     style: {
-      width: '100%'
+      width: 300
     },
     options: ['English', 'Traditional Chinese'],
     value: language,

@@ -88,7 +88,7 @@ class MacroChanges extends _react.default.PureComponent {
     }, "Functional Fibers for Every Challenge."), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "READ MORE"
+      text: "Read More"
     }))));
   }
 

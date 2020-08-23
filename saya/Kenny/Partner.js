@@ -31,33 +31,33 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 50,
-    paddingLeft: 110
+    paddingTop: 75,
+    paddingLeft: 85
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.25
+    lineHeight: 0.6
   },
   line: {
-    width: 420,
+    width: 468,
     height: 1,
     marginTop: 2.5,
     border: ' solid 1px #000000'
   },
   subtitle: {
-    width: 420,
+    width: 465,
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 25
+    paddingTop: 10
   },
   email: {
     display: 'flex',
     marginTop: 10
   },
   emailInput: {
-    width: 420,
+    width: 465,
     fontSize: 10,
     color: '#000000',
     borderColor: '#000000'
@@ -74,7 +74,7 @@ const styles = {
     height: 30
   },
   labelContent: {
-    width: 340,
+    width: 440,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 10
@@ -115,11 +115,11 @@ class Partner extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "Become our partner"), _react.default.createElement("div", {
+    }, "Stay in Touch with SAYA"), _react.default.createElement("div", {
       className: classes.line
     }), _react.default.createElement("div", {
       className: classes.subtitle
-    }, "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod."), _react.default.createElement("div", {
+    }, "Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology."), _react.default.createElement("div", {
       className: classes.email
     }, _react.default.createElement(_TextField.default, {
       className: classes.emailInput,
@@ -138,7 +138,7 @@ class Partner extends _react.default.PureComponent {
       value: "checkbox"
     }), _react.default.createElement("div", {
       className: classes.labelContent
-    }, _react.default.createElement("label", null, "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.")))));
+    }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.")))));
   }
 
 }

@@ -38,7 +38,7 @@ class SeeProduct extends React.PureComponent {
           <div className={classes.title}>See our Products Section<br />for more details on yarn selection.</div>
           <div className={classes.button}>
             <GreenButton
-              text="Learn more"
+              text="Learn More"
             />
           </div>
         </div>

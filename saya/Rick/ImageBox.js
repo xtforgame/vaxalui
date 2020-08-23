@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const styles = {
   root: {
     width: 325,
-    height: 460,
+    height: 405,
     textAlign: 'center',
     borderRadius: 30,
     marginBottom: 50,
@@ -80,7 +80,7 @@ class ImageBox extends _react.default.PureComponent {
       }
     }, _react.default.createElement("button", {
       className: classes.button
-    }, "Learn more")));
+    }, "Learn More")));
   }
 
 }

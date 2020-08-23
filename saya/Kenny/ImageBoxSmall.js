@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _Box = _interopRequireDefault(require("@material-ui/core/Box"));
+
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
@@ -16,6 +18,10 @@ var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentTex
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
+  box: {
+    borderRadius: 30,
+    margin: 20
+  },
   root: {
     width: 255,
     height: 370,
@@ -24,7 +30,6 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     borderRadius: 30,
-    margin: 20,
     position: 'relative'
   },
   title: {
@@ -72,7 +77,10 @@ class ImageBoxSmall extends _react.default.PureComponent {
       backgroundImage,
       fontColor
     } = this.props;
-    return _react.default.createElement("div", {
+    return _react.default.createElement(_Box.default, {
+      className: classes.box,
+      boxShadow: 8
+    }, _react.default.createElement("div", {
       className: classes.root,
       style: {
         backgroundImage: `url(${backgroundImage})`,
@@ -99,8 +107,8 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "Learn more"
-    })));
+      text: "Learn More"
+    }))));
   }
 
 }

@@ -13,15 +13,15 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    fontFamily: 'FilsonSoftRegular', // 'FilsonSoft-Bold',
     padding: 42,
   },
   root: {
     flex: 1,
-    paddingLeft: 32,
+    // paddingLeft: 32,
     paddingRight: 32,
     flexDirection: 'column',
     flexWrap: 'wrap',
-    fontFamily: 'FilsonSoftRegular', // 'FilsonSoft-Bold',
     position: 'relative',
     color: 'white',
   },
@@ -36,7 +36,22 @@ const useStyles = makeStyles(theme => ({
     flexBasis: theme.spacing(38),
   },
   emailInput: {
-    width: '100%',
+    width: 300,
+  },
+
+  checkbox: {
+    display: 'flex',
+    paddingTop: 12,
+  },
+  box: {
+    width: 30,
+    height: 30,
+  },
+  labelContent: {
+    width: 400,
+    fontSize: 10,
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10,
   },
 }));
 
@@ -59,7 +74,7 @@ export default (props) => {
             style={{
               fontSize: 14,
               margin: 0,
-              fontFamily: 'FilsonSoftRegular',
+              fontFamily: 'FilsonSoft-Bold',
             }}
           >
             Follow SAYA
@@ -68,34 +83,40 @@ export default (props) => {
         <div style={{ width: '100%' }}>
           <div
             style={{
-              paddingTop: 20,
+              paddingTop: 50,
               display: 'flex',
             }}
           >
             {fbIcon}
-            <div style={{ width: 10, height: 1 }} />
+            <div style={{ width: 20, height: 1 }} />
             {igIcon}
           </div>
         </div>
         <div style={{ textAlign: 'left' }}>
-          <div style={{ width: 10, height: 40 }} />
-          <div style={{ fontSize: 18 }}>Contact:</div>
-          <div style={{ fontSize: 18 }}><u>service@sayanow.com</u></div>
-          <div style={{ width: 10, height: 10 }} />
-          <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
-          <div style={{ fontSize: 18 }}><u>https://www.npc.com.tw/</u></div>
-          <div style={{ width: 10, height: 40 }} />
+          <div style={{ width: 10, height: 50 }} />
+          <div style={{ display: 'inline', fontSize: 12, marginRight: 4 }}>Contact:</div>
+          <div style={{ display: 'inline', fontSize: 12 }}><u>change@sayarenew.com</u></div>
+          <div style={{ width: 10, height: 0 }} />
+          <div style={{ display: 'inline', fontSize: 12, marginRight: 4 }}>Also visit Nan Ya Plastic:</div>
+          <div style={{ display: 'inline', fontSize: 12 }}><u>https://www.npc.com.tw/</u></div>
+          <div style={{ width: 10, height: 72 }} />
           <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
         </div>
       </div>
       <div className={clsx(classes.root)}>
         <div style={{ textAlign: 'left' }}>
-          <div>Sign up to newsletter</div>
+          <div
+            style={{
+              fontSize: 14,
+              fontFamily: 'FilsonSoft-Bold',
+            }}
+          >
+            Sign up to newsletter
+          </div>
           <div style={{ width: 10, height: 8 }} />
           <div style={{ width: '100%' }}>
             <div
               style={{
-                paddingTop: 20,
                 display: 'flex',
               }}
             >
@@ -111,15 +132,29 @@ export default (props) => {
               </Button>
             </div>
           </div>
+
+          <div className={classes.checkbox}>
+            <input className={classes.box} type="checkbox" value="checkbox" />
+            <div className={classes.labelContent}>
+              <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
+            </div>
+          </div>
           {/* <Button
             text="SUBMIT"
             onClick={this.signUpNewsletter}
           /> */}
           <div style={{ width: 10, height: 20 }} />
-          <div>Select language</div>
+          <div
+            style={{
+              fontSize: 14,
+              fontFamily: 'FilsonSoft-Bold',
+            }}
+          >
+            Select language
+          </div>
           <div style={{ width: 10, height: 8 }} />
           <Select
-            style={{ width: '100%' }}
+            style={{ width: 300 }}
             options={['English', 'Traditional Chinese']}
             value={language}
             onChange={e => setLanguage(e.target.value)}

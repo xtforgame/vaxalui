@@ -101,7 +101,7 @@ class CleaningUp extends _react.default.PureComponent {
     }, "World\u2019s largest recycling and renewing network."), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "READ MORE"
+      text: "Read More"
     })), _react.default.createElement("div", {
       className: classes.bottomColumn
     }, _react.default.createElement("div", {

@@ -148,7 +148,7 @@ var _default = props => {
     style: {
       fontSize: 18
     }
-  }, _react.default.createElement("u", null, "service@sayanow.com")), _react.default.createElement("div", {
+  }, _react.default.createElement("u", null, "change@sayarenew.com")), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 10

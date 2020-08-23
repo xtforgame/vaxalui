@@ -16,33 +16,33 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 50,
-    paddingLeft: 110,
+    paddingTop: 75,
+    paddingLeft: 85,
   },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.25,
+    lineHeight: 0.6,
   },
   line: {
-    width: 420,
+    width: 468,
     height: 1,
     marginTop: 2.5,
     border: ' solid 1px #000000',
   },
   subtitle: {
-    width: 420,
+    width: 465,
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 25,
+    paddingTop: 10,
   },
   email: {
     display: 'flex',
     marginTop: 10,
   },
   emailInput: {
-    width: 420,
+    width: 465,
     fontSize: 10,
     color: '#000000',
     borderColor: '#000000',
@@ -59,7 +59,7 @@ const styles = {
     height: 30,
   },
   labelContent: {
-    width: 340,
+    width: 440,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 10,
@@ -93,9 +93,9 @@ class Partner extends React.PureComponent {
         image={backgroundImage}
       >
         <div className={classes.bottle} style={{ backgroundImage: `url(${bottleImage})` }}>
-          <div className={classes.title}>Become our partner</div>
+          <div className={classes.title}>Stay in Touch with SAYA</div>
           <div className={classes.line} />
-          <div className={classes.subtitle}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</div>
+          <div className={classes.subtitle}>Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.</div>
           <div className={classes.email}>
             <TextField
               className={classes.emailInput}
@@ -113,7 +113,7 @@ class Partner extends React.PureComponent {
           <div className={classes.checkbox}>
             <input className={classes.box} type="checkbox" value="checkbox" />
             <div className={classes.labelContent}>
-              <label>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</label>
+              <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
             </div>
           </div>
         </div>

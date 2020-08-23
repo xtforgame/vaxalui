@@ -30,7 +30,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)({
   root: {
     width: 368,
-    margin: 20
+    margin: 20,
+    borderRadius: 30
   },
   media: {
     height: 324,
@@ -51,6 +52,12 @@ const useStyles = (0, _styles.makeStyles)({
     paddingTop: 60,
     paddingRight: 30,
     paddingLeft: 30
+  },
+  cardAction: {
+    paddingTop: 0,
+    paddingRight: 16,
+    paddingLeft: 16,
+    paddingBottom: 16
   }
 });
 
@@ -61,7 +68,8 @@ var _default = ({
 }) => {
   const classes = useStyles();
   return _react.default.createElement(_Card.default, {
-    className: classes.root
+    className: classes.root,
+    elevation: 8
   }, _react.default.createElement(_CardActionArea.default, null, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
     image: image,
@@ -81,7 +89,9 @@ var _default = ({
       fontSize: 14,
       lineHeight: 1.5
     }
-  }, description))), _react.default.createElement(_CardActions.default, null, _react.default.createElement("div", {
+  }, description))), _react.default.createElement(_CardActions.default, {
+    className: classes.cardAction
+  }, _react.default.createElement("div", {
     style: {
       flex: 1
     }
@@ -91,7 +101,7 @@ var _default = ({
     style: {
       color: '#c0c823'
     }
-  }, "Read More")));
+  }, _react.default.createElement("u", null, "Read More"))));
 };
 
 exports.default = _default;

@@ -76,7 +76,7 @@ class ImageBox extends React.PureComponent {
 
           <div className={classes.button} style={{ display: buttonDisplay }}>
             <GreenButton
-              text="Learn more"
+              text="Learn More"
             />
           </div>
           <div>

@@ -34,7 +34,7 @@ const styles = {
   line: {
     width: 210,
     height: 2,
-    border: '3px solid #ffffff',
+    backgroundColor: '#ffffff',
     marginTop: 15
   },
   bottomTitle: {

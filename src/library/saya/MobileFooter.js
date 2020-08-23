@@ -120,7 +120,7 @@ export default (props) => {
         </Button>
         <div style={{ width: 10, height: 80 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
-        <div style={{ fontSize: 18 }}><u>service@sayanow.com</u></div>
+        <div style={{ fontSize: 18 }}><u>change@sayarenew.com</u></div>
         <div style={{ width: 10, height: 10 }} />
         <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
         <div style={{ fontSize: 18 }}><u>https://www.npc.com.tw/</u></div>

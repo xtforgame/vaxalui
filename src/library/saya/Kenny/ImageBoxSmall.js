@@ -98,7 +98,7 @@ class ImageBoxSmall extends React.PureComponent {
 
           <div className={classes.button}>
             <GreenButton
-              text="Learn more"
+              text="Learn More"
             />
           </div>
         </div>

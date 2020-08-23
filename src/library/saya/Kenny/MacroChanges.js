@@ -72,7 +72,7 @@ class MacroChanges extends React.PureComponent {
           <div className={classes.thirdTitle}>Functional Fibers for Every Challenge.</div>
           <div className={classes.button}>
             <GreenButton
-              text="READ MORE"
+              text="Read More"
             />
           </div>
         </div>

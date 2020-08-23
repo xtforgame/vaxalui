@@ -24,22 +24,8 @@ const useStyles = (0, _styles.makeStyles)(() => ({
   table: {
     tableLayout: 'fixed',
     borderCollapse: 'collapse',
+    border: '1px solid #979797',
     width: 20
-  },
-  tr0base: {
-    borderTop: '1px solid #434343',
-    borderBottom: '1px solid #434343'
-  },
-  tr1base: {
-    borderTop: '1px solid #434343'
-  },
-  tr2base: {
-    borderTop: '1px solid #d8d8d8',
-    borderBottom: '1px solid #d8d8d8'
-  },
-  tr3base: {
-    borderTop: '1px solid #d8d8d8',
-    borderBottom: '1px solid #434343'
   },
   tr: {
     lineHeight: '8px',
@@ -47,13 +33,9 @@ const useStyles = (0, _styles.makeStyles)(() => ({
   },
   tdth: {
     overflow: 'hidden',
+    border: '1px solid #979797',
     padding: 11,
     height: 40
-  },
-  itemTh: {
-    paddingLeft: 42,
-    paddingRight: 42,
-    textAlign: 'left'
   },
   itemTd: {
     backgroundColor: '#d8d8d8',
@@ -148,34 +130,17 @@ var _default = props => {
     }
   }, row.item));
 
-  const getTrClass = (types, i) => {
-    if (i === 0 && types.length === 1) {
-      return classes.tr0base;
-    }
-
-    if (i === 0) {
-      return classes.tr1base;
-    }
-
-    if (i === types.length - 1) {
-      return classes.tr3base;
-    }
-
-    return classes.tr2base;
-  };
-
-  const renderRow = (row, i1) => row.types.map((typeData, i2, types) => _react.default.createElement("tr", {
-    className: getTrClass(types, i2),
+  const renderRow = (row, i1) => row.types.map((typeData, i2) => _react.default.createElement("tr", {
     key: `${i1}-${i2}`
   }, i2 === 0 && renderItemTd(row), _react.default.createElement("td", {
     className: (0, _clsx.default)(classes.tdth, classes.typeTd),
     style: {
-      borderRight: '1px solid #d8d8d8'
+      borderRight: 'none'
     }
   }, typeData.type), _react.default.createElement("td", {
     className: (0, _clsx.default)(classes.tdth, classes.typeTd),
     style: {
-      borderLeft: '1px solid #d8d8d8'
+      borderLeft: 'none'
     }
   }), columnOrder.map((columnName, i) => {
     const valueTable = typeData[columnName];
@@ -201,16 +166,22 @@ var _default = props => {
   }, _react.default.createElement("table", {
     className: classes.table
   }, _react.default.createElement("tbody", null, _react.default.createElement("tr", {
-    className: (0, _clsx.default)(classes.tr)
+    className: classes.tr
   }, _react.default.createElement("th", {
     width: 264,
-    className: (0, _clsx.default)(classes.tdth, classes.itemTh)
+    className: classes.tdth
   }, "Item"), _react.default.createElement("th", {
     width: 100,
-    className: classes.tdth
+    className: classes.tdth,
+    style: {
+      borderRight: 'none'
+    }
   }, "Type"), _react.default.createElement("th", {
     width: 12,
-    className: classes.tdth
+    className: classes.tdth,
+    style: {
+      borderLeft: 'none'
+    }
   }), _react.default.createElement("th", {
     width: 80,
     className: classes.tdth
@@ -219,10 +190,16 @@ var _default = props => {
     className: classes.tdth
   }, "Filame"), _react.default.createElement("th", {
     width: 80,
-    className: classes.tdth
+    className: classes.tdth,
+    style: {
+      borderRight: 'none'
+    }
   }, "Luster"), _react.default.createElement("th", {
     width: 12,
-    className: classes.tdth
+    className: classes.tdth,
+    style: {
+      borderLeft: 'none'
+    }
   })), rows.map(renderRow))));
 };
 

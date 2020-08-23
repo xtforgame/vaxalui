@@ -84,7 +84,7 @@ class ImageBox extends React.PureComponent {
           }}
         >
           <button className={classes.button}>
-            Learn more
+            Learn More
           </button>
         </div>
       </div>

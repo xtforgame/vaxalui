@@ -25,7 +25,8 @@ const MobileLayout = ({
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontFamily: 'FilsonSoftRegular'
   }
 }, _react.default.createElement(_reactHelmet.default, {
   title: "SAYA homepage"

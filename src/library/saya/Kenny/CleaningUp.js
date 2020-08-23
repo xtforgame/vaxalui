@@ -86,7 +86,7 @@ class CleaningUp extends React.PureComponent {
             <div className={classes.secondTitle}>World’s largest recycling and renewing network.</div>
             <div className={classes.button}>
               <GreenButton
-                text="READ MORE"
+                text="Read More"
               />
             </div>
 

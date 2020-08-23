@@ -6,6 +6,7 @@ const styles = {
   button: {
     width: 130,
     height: 45,
+    paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
     border: 'none',

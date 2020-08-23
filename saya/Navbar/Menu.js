@@ -80,7 +80,8 @@ class Menu extends _react.default.PureComponent {
         }, _react.default.createElement(_Item.default, {
           name: name,
           index: index,
-          path: `${index}`
+          path: `${index}`,
+          firstLayer: true
         }, _react.default.createElement(_ExpandItem.default, {
           name: name,
           path: `${index}`,
