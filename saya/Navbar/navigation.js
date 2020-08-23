@@ -17,8 +17,8 @@ var _default = [{
       name: 'Overview',
       link: '/saya-now-overview'
     }, {
-      name: 'SAYA Global',
-      link: '/saya-global'
+      name: 'SAYA 365',
+      link: '/saya-365'
     }, {
       name: 'SAYA Coastal',
       link: '/saya-coastal'
@@ -30,18 +30,15 @@ var _default = [{
     name: 'SAYA Next',
     listDirection: 'right',
     items: [{
-      name: 'Overview',
-      link: '/saya-next-overview'
-    }, {
       name: 'SAYA RSCUW',
       link: '/saya-rscuw'
     }, {
-      name: 'SAYA Trace',
-      link: '/saya-trace'
-    }, {
-      name: 'SAYA Garma',
-      link: '/saya-garma'
+      name: 'SAYA RSCUW Raw',
+      link: '/saya-rscuw-raw'
     }]
+  }, {
+    name: 'Sustainability\nInnovations',
+    link: '/sustainability-innovations'
   }]
 }, {
   name: 'PRODUCTS',
@@ -49,20 +46,23 @@ var _default = [{
     name: 'Overview',
     link: '/products-overview'
   }, {
-    name: 'SAYA Classic',
-    link: '/saya-classic'
+    name: 'SAYA 365',
+    link: '/saya-365'
   }, {
-    name: 'CHROMUCH',
-    link: '/chromuch'
-  }, {
-    name: 'Ultrastretch',
-    link: '/ultrastretch'
-  }, {
-    name: 'Topfresh',
-    link: '/topfresh'
-  }, {
-    name: 'Microfiber',
-    link: '/microfiber'
+    name: 'SAYA Performance Fiber',
+    items: [{
+      name: 'CHROMUCH\nSolution Dyed',
+      link: 'chromuch-solution-dyed'
+    }, {
+      name: 'SAYA Stretch',
+      link: 'saya-stretch'
+    }, {
+      name: 'SAYA Fresh',
+      link: 'saya-fresh'
+    }, {
+      name: 'SAYA Microfiber',
+      link: 'saya-microfiber'
+    }]
   }]
 }, {
   name: 'ABOUT',
@@ -70,20 +70,26 @@ var _default = [{
     name: 'News',
     link: '/news'
   }, {
-    name: 'Version & Mission',
-    link: '/version-mission'
-  }, {
-    name: 'SAYA by Nan Ya',
-    link: '/saya-by-nan-ya'
+    name: 'SAYA',
+    link: '/about-saya'
   }, {
     name: 'Media & Downloads',
-    link: '/downloads'
-  }, {
-    name: 'Renewal Innovations',
-    link: '/innovations'
+    link: '/media-downloads'
   }]
 }, {
   name: 'PARTNERS',
-  items: []
+  items: [{
+    name: 'Overview',
+    link: 'partners-overview'
+  }, {
+    name: 'Textile Partners',
+    link: 'partners-textile-partners'
+  }, {
+    name: 'Brand Partners',
+    link: 'partners-brand-partners'
+  }, {
+    name: 'Certifications',
+    link: 'partners-certifications'
+  }]
 }];
 exports.default = _default;

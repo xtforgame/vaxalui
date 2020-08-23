@@ -1,96 +1,106 @@
 export default [{
   name: 'TECHNOLOGIES',
   listDirection: 'bottom',
-  items: [{
-    name: 'Overview',
-    link: '/overview',
-  }, {
-    name: 'SAYA Now',
-    listDirection: 'right',
-    items: [{
+  items: [
+    {
       name: 'Overview',
-      link: '/saya-now-overview',
+      link: '/overview',
     }, {
-      name: 'SAYA Global',
-      link: '/saya-global',
+      name: 'SAYA Now',
+      listDirection: 'right',
+      items: [{
+        name: 'Overview',
+        link: '/saya-now-overview',
+      }, {
+        name: 'SAYA 365',
+        link: '/saya-365',
+      }, {
+        name: 'SAYA Coastal',
+        link: '/saya-coastal',
+      }, {
+        name: 'SAYA USA',
+        link: '/saya-usa',
+      }],
     }, {
-      name: 'SAYA Coastal',
-      link: '/saya-coastal',
+      name: 'SAYA Next',
+      listDirection: 'right',
+      items: [
+        {
+          name: 'SAYA RSCUW',
+          link: '/saya-rscuw',
+        }, {
+          name: 'SAYA RSCUW Raw',
+          link: '/saya-rscuw-raw',
+        },
+      ],
     }, {
-      name: 'SAYA USA',
-      link: '/saya-usa',
-    }],
-  }, {
-    name: 'SAYA Next',
-    listDirection: 'right',
-    items: [{
-      name: 'Overview',
-      link: '/saya-next-overview',
-    }, {
-      name: 'SAYA RSCUW',
-      link: '/saya-rscuw',
-    }, {
-      name: 'SAYA Trace',
-      link: '/saya-trace',
-    }, {
-      name: 'SAYA Garma',
-      link: '/saya-garma',
-    }],
-  }],
+      name: 'Sustainability\nInnovations',
+      link: '/sustainability-innovations',
+    },
+  ],
 }, {
   name: 'PRODUCTS',
-  items: [{
-    name: 'Overview',
-    link: '/products-overview',
-  }, {
-    name: 'SAYA Classic',
-    link: '/saya-classic',
-  }, {
-    name: 'CHROMUCH',
-    link: '/chromuch',
-  }, {
-    name: 'Ultrastretch',
-    link: '/ultrastretch',
-  }, {
-    name: 'Topfresh',
-    link: '/topfresh',
-  }, {
-    name: 'Microfiber',
-    link: '/microfiber',
-  }],
+  items: [
+    {
+      name: 'Overview',
+      link: '/products-overview',
+    }, {
+      name: 'SAYA 365',
+      link: '/saya-365',
+    }, {
+      name: 'SAYA Performance Fiber',
+      items: [
+        {
+          name: 'CHROMUCH\nSolution Dyed',
+          link: 'chromuch-solution-dyed',
+        },
+        {
+          name: 'SAYA Stretch',
+          link: 'saya-stretch',
+        },
+        {
+          name: 'SAYA Fresh',
+          link: 'saya-fresh',
+        },
+        {
+          name: 'SAYA Microfiber',
+          link: 'saya-microfiber',
+        },
+      ],
+    },
+  ],
 }, {
   name: 'ABOUT',
-  items: [{
-    name: 'News',
-    link: '/news',
-  }, {
-    name: 'Version & Mission',
-    link: '/version-mission',
-  }, {
-    name: 'SAYA by Nan Ya',
-    link: '/saya-by-nan-ya',
-  }, {
-    name: 'Media & Downloads',
-    link: '/downloads',
-  }, {
-    name: 'Renewal Innovations',
-    link: '/innovations',
-  }],
+  items: [
+    {
+      name: 'News',
+      link: '/news',
+    }, {
+      name: 'SAYA',
+      link: '/about-saya',
+    }, {
+      name: 'Media & Downloads',
+      link: '/media-downloads',
+    },
+  ],
 }, {
   name: 'PARTNERS',
   items: [
-    // {
-    //   name: '1',
-    //   link: '/saya-now-overview',
-    // }, {
-    //   name: '2',
-    //   link: '/saya-now-overview',
-    // }, {
-    //   name: '3',
-    //   link: '/saya-now-overview',
-    // }, {
-    //   name: '4',
-    //   link: '/saya-now-overview',
-    // },
+    {
+      name: 'Overview',
+      link: 'partners-overview',
+    },
+    {
+      name: 'Textile Partners',
+      link: 'partners-textile-partners',
+    },
+    {
+      name: 'Brand Partners',
+      link: 'partners-brand-partners',
+    },
+    {
+      name: 'Certifications',
+      link: 'partners-certifications',
+    },
   ],
 }];
