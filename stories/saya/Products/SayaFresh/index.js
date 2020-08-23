@@ -36,8 +36,9 @@ storiesOf('saya|Pages/Desktop/Products', module)
         <Layout>
           <TopSection
             firstTitle="SAYA Performance Fiber"
-            secondTitle="SAYAFRESH"
-            thirdTitle="lor sit amet, consectetuer"
+            secondTitle="SAYA"
+            secondTitleBack="FRESH"
+            thirdTitle={'lor sit amet, consectetuer\nlor sit amet, consectetuer'}
             backgroundImage={background_TopSection}
             fontColor="#ffffff"
             lineBorder="1px solid #ffffff"

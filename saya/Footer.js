@@ -31,7 +31,10 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     fontFamily: 'FilsonSoftRegular',
-    padding: 42
+    paddingTop: 42,
+    paddingBottom: 42,
+    paddingLeft: 80,
+    paddingRight: 80
   },
   root: {
     flex: 1,

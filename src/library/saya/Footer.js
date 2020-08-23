@@ -14,7 +14,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     fontFamily: 'FilsonSoftRegular', // 'FilsonSoft-Bold',
-    padding: 42,
+    paddingTop: 42,
+    paddingBottom: 42,
+    paddingLeft: 80,
+    paddingRight: 80,
   },
   root: {
     flex: 1,

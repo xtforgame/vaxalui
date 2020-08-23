@@ -24,8 +24,7 @@ const styles = {
     fontSize: 15,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.31,
-    paddingTop: 90
+    lineHeight: 1
   },
   firstLine: {
     height: 1,
@@ -48,8 +47,11 @@ const styles = {
   },
   thirdTitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
-    paddingTop: 10
+    lineHeight: 1.2,
+    fontFamily: 'FilsonSoftRegular'
+  },
+  flex1: {
+    flex: 1
   }
 };
 
@@ -73,29 +75,41 @@ class TopSection extends _react.default.PureComponent {
       style: {
         color: fontColor
       }
+    }, _react.default.createElement("div", {
+      style: {
+        position: 'absolute',
+        top: 55,
+        height: 72
+      }
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
     }, firstTitle), _react.default.createElement("div", {
       className: classes.firstLine,
       style: {
-        width: firstLineWidth,
+        width: '100%',
         border: lineBorder
       }
+    })), _react.default.createElement("div", {
+      className: classes.flex1
     }), _react.default.createElement("div", {
       className: classes.secondTitle
     }, secondTitle, _react.default.createElement("span", {
       className: classes.secondTitleBack
     }, secondTitleBack, " ")), _react.default.createElement("div", {
-      className: classes.secondLine,
+      className: classes.flex1
+    }), _react.default.createElement("div", {
       style: {
-        border: lineBorder
+        position: 'absolute',
+        bottom: 0,
+        height: 72
       }
-    }), _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle,
       style: {
-        width: thirdTitleWidth
+        width: thirdTitleWidth,
+        margin: 0
       }
-    }, thirdTitle));
+    }, thirdTitle)));
   }
 
 }

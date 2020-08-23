@@ -13,8 +13,7 @@ const styles = {
     fontSize: 15,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.31,
-    paddingTop: 90,
+    lineHeight: 1,
   },
   firstLine: {
     height: 1,
@@ -37,8 +36,11 @@ const styles = {
   },
   thirdTitle: {
     fontSize: 20,
+    lineHeight: 1.2,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 10,
+  },
+  flex1: {
+    flex: 1,
   },
 };
 
@@ -65,37 +67,50 @@ class TopSection extends React.PureComponent {
           color: fontColor,
         }}
       >
-        <BreakAllContentText className={classes.firstTitle}>
-          {firstTitle}
-        </BreakAllContentText>
-
         <div
-          className={classes.firstLine}
           style={{
-            width: firstLineWidth,
-            border: lineBorder,
+            position: 'absolute',
+            top: 55,
+            height: 72,
           }}
-        />
+        >
+          <BreakAllContentText className={classes.firstTitle}>
+            {firstTitle}
+          </BreakAllContentText>
+          <div
+            className={classes.firstLine}
+            style={{
+              width: '100%',
+              border: lineBorder,
+            }}
+          />
+        </div>
+
+        <div className={classes.flex1} />
 
         <div className={classes.secondTitle}>
           {secondTitle}<span className={classes.secondTitleBack}>{secondTitleBack} </span>
         </div>
 
-        <div
-          className={classes.secondLine}
-          style={{
-            border: lineBorder,
-          }}
-        />
+        <div className={classes.flex1} />
 
-        <BreakAllContentText
-          className={classes.thirdTitle}
+        <div
           style={{
-            width: thirdTitleWidth,
+            position: 'absolute',
+            bottom: 0,
+            height: 72,
           }}
         >
-          {thirdTitle}
-        </BreakAllContentText>
+          <BreakAllContentText
+            className={classes.thirdTitle}
+            style={{
+              width: thirdTitleWidth,
+              margin: 0,
+            }}
+          >
+            {thirdTitle}
+          </BreakAllContentText>
+        </div>
       </ImageContainer>
     );
   }

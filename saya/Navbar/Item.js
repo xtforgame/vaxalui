@@ -31,7 +31,7 @@ const styles = theme => ({
     fontFamily: 'FilsonSoft-Bold'
   },
   otherLayer: {
-    fontFamily: 'FilsonSoftRegulat'
+    fontFamily: 'FilsonSoftRegular'
   }
 });
 
