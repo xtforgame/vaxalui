@@ -1,8 +1,13 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import GreenButton from './GreenButton';
 
 const styles = {
+  box: {
+    borderRadius: 30,
+    marginBottom: 50,
+  },
   root: {
     width: 370,
     height: 460,
@@ -12,7 +17,6 @@ const styles = {
     alignItems: 'center',
     flexWrap: 'wrap',
     borderRadius: 30,
-    marginBottom: 50,
   },
   title: {
     fontSize: 40,
@@ -49,36 +53,37 @@ class ImageBox extends React.PureComponent {
       children,
     } = this.props;
     return (
-      <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          color: fontColor,
-        }}
-      >
+      <Box className={classes.box} boxShadow={8}>
         <div
-          className={classes.title}
+          className={classes.root}
           style={{
-            paddingTop: paddingTop,
+            backgroundImage: `url(${backgroundImage})`,
+            color: fontColor,
           }}
         >
-          {title}<span className={classes.titleBack}>{titleBack}</span>
-        </div>
+          <div
+            className={classes.title}
+            style={{
+              paddingTop: paddingTop,
+            }}
+          >
+            {title}<span className={classes.titleBack}>{titleBack}</span>
+          </div>
 
-        <div className={classes.subtitle}>
-          {subtitle}
-        </div>
+          <div className={classes.subtitle}>
+            {subtitle}
+          </div>
 
-        <div className={classes.button} style={{ display: buttonDisplay }}>
-          <GreenButton
-            text="Learn more"
-          />
+          <div className={classes.button} style={{ display: buttonDisplay }}>
+            <GreenButton
+              text="Learn more"
+            />
+          </div>
+          <div>
+            {children}
+          </div>
         </div>
-        
-        <div>
-          {children}
-        </div>
-      </div>
+      </Box>
     );
   }
 }

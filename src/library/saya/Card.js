@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   root: {
     width: 368,
     margin: 20,
+    borderRadius: 30,
   },
   media: {
     height: 324,
@@ -34,6 +35,12 @@ const useStyles = makeStyles({
     paddingRight: 30,
     paddingLeft: 30,
   },
+  cardAction: {
+    paddingTop: 0,
+    paddingRight: 16,
+    paddingLeft: 16,
+    paddingBottom: 16,
+  },
 });
 
 export default ({
@@ -44,7 +51,7 @@ export default ({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} elevation={8}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
@@ -71,10 +78,10 @@ export default ({
           </BreakAllContentText>
         </CardContent>
       </CardActionArea>
-      <CardActions>
+      <CardActions className={classes.cardAction}>
         <div style={{ flex: 1 }} />
         <Button size="small" color="primary" style={{ color: '#c0c823' }}>
-          Read More
+          <u>Read More</u>
         </Button>
       </CardActions>
     </Card>

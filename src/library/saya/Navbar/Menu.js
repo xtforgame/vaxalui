@@ -81,6 +81,7 @@ class Menu extends React.PureComponent {
             name={name}
             index={index}
             path={`${index}`}
+            firstLayer
           >
             <ExpandItem
               name={name}

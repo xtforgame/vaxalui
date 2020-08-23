@@ -1,11 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 // import { graphql } from 'gatsby';
+import { withStyles } from '@material-ui/core/styles';
 import { MenuContext } from './MenuContext';
 
 export const getSize = theme => ({
   width: theme.spacing(16),
   height: theme.spacing(3),
+});
+
+const styles = theme => ({
+  firstLayer: {
+    fontFamily: 'FilsonSoft-Bold',
+  },
+  otherLayer: {
+    fontFamily: 'FilsonSoftRegulat',
+  },
 });
 
 class Item extends React.PureComponent {
@@ -19,10 +30,13 @@ class Item extends React.PureComponent {
 
   render() {
     const {
+      firstLayer,
+      classes,
       children,
     } = this.props;
     return (
       <div
+        className={clsx({ [classes.firstLayer]: firstLayer, [classes.otherLayer]: !firstLayer })}
         data-id="menu-item"
         onMouseEnter={this.showMenu}
         onMouseLeave={this.closeMenu}
@@ -33,17 +47,9 @@ class Item extends React.PureComponent {
   }
 }
 
-Item.propTypes = {
-  path: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
-Item.defaultProps = {
-};
-
 Item.contextType = MenuContext;
 
-export default Item;
+export default withStyles(styles)(Item);
 
 // export const pageQuery = graphql`
 //   query ABC {

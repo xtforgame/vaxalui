@@ -92,7 +92,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
       className: classes.subtitle
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftegular'
+        fontFamily: 'FilsonSoftRegular'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.space

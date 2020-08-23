@@ -1,9 +1,14 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
+  box: {
+    borderRadius: 30,
+    margin: 20,
+  },
   root: {
     width: 255,
     height: 370,
@@ -12,7 +17,6 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'center',
     borderRadius: 30,
-    margin: 20,
     position: 'relative',
   },
   title: {
@@ -63,41 +67,42 @@ class ImageBoxSmall extends React.PureComponent {
 
 
     return (
-      <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          color: fontColor,
-        }}
-      >
-        <BreakAllContentText
-          className={classes.title}
+      <Box className={classes.box} boxShadow={8}>
+        <div
+          className={classes.root}
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            color: fontColor,
+          }}
         >
-          <div className={classes.space} />
-          <div className={classes.titleText}>
-            {title}
-            <span className={classes.titleBack}>
-              {titleBack}
-            </span>
-          </div>
-          <div className={classes.secondTitle}>{secondTitle}</div>
-        </BreakAllContentText>
-
-        <div className={classes.subtitle}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftegular' }}>
-            {subtitle}
+          <BreakAllContentText
+            className={classes.title}
+          >
+            <div className={classes.space} />
+            <div className={classes.titleText}>
+              {title}
+              <span className={classes.titleBack}>
+                {titleBack}
+              </span>
+            </div>
+            <div className={classes.secondTitle}>{secondTitle}</div>
           </BreakAllContentText>
+
+          <div className={classes.subtitle}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>
+              {subtitle}
+            </BreakAllContentText>
+          </div>
+
+          <div className={classes.space} />
+
+          <div className={classes.button}>
+            <GreenButton
+              text="Learn more"
+            />
+          </div>
         </div>
-
-        <div className={classes.space} />
-
-        <div className={classes.button}>
-          <GreenButton
-            text="Learn more"
-          />
-        </div>
-      </div>
-
+      </Box>
     );
   }
 }

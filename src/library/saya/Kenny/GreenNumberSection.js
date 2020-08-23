@@ -41,7 +41,6 @@ const styles = {
   },
   line: {
     height: 2,
-    border: '3px solid #000000',
     backgroundColor: '#000000',
     marginTop: 15,
     marginLeft: 10,
