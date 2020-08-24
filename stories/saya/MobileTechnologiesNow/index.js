@@ -27,22 +27,16 @@ import icon4 from '../img/mobile/m_icon1.svg'
 
 
 
-import Boxes from 'library/saya/Rick/Boxes';
-import ImageBox from 'library/saya/Rick/ImageBox';
-import TwoCircleSection from 'library/saya/Rick/TwoCircleSection';
+import TitleLineBox from 'library/saya/Rick/TitleLineBox';
+import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
 
 import MobileLayout from '../shared/MobileLayout';
 
-import LeftBox from '../img/bg3.jpg';
-import RightBox from '../img/bg4.jpg';
 
-import TopLeftBox from '../img/bg5.jpg';
-import TopRightBox from '../img/bg6.jpg';
-import BottomLeftBox from '../img/bg7.jpg';
-import BottomRightBox from '../img/bg8.jpg';
+import leftBox from '../img/mobile/m_bg15.jpg';
+import midBox from '../img/mobile/m_bg16.jpg';
+import rightBox from '../img/mobile/m_bg17.jpg';
 
-
-import NextCircle from '../img/mobile/m_now_next_circle.png'
 
 storiesOf('saya|Pages/Mobile', module)
   // .addParameters({
@@ -184,6 +178,37 @@ storiesOf('saya|Pages/Mobile', module)
               text="Learn More"
             />
           </ImageContainer>
+
+          <TitleLineBox
+            title="SAYA Now Serial Projects"
+            backgroundColor="#d8d8d8"
+            color="#000000"
+          >
+            <ImageBoxSmall
+              title="SAYA"
+              titleBack="GLOBAL"
+              subtitle="Lorem ipsum dolor sit amet."
+              backgroundImage={leftBox}
+              paddingTop={70}
+              fontColor="#ffffff"
+            />
+            <ImageBoxSmall
+              title="SAYA"
+              titleBack="COASTAL"
+              subtitle="Lorem ipsum dolor sit amet."
+              backgroundImage={midBox}
+              paddingTop={70}
+              fontColor="#ffffff"
+            />
+            <ImageBoxSmall
+              title="SAYA"
+              titleBack="USA"
+              subtitle="USA-based fiber program"
+              backgroundImage={rightBox}
+              paddingTop={70}
+              fontColor="#ffffff"
+            />
+          </TitleLineBox>
         </MobileLayout>
       </div>
     )
