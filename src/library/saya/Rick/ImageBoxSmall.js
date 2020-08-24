@@ -3,37 +3,38 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   root: {
-    width: 325,
-    height: 405,
+    width: 260,
+    height: 325,
     textAlign: 'center',
     // display: 'flex',
     // flexDirection: 'column',
     // alignItems: 'center',
     // flexWrap: 'wrap',
     borderRadius: 30,
-    marginBottom: 50,
+    marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
     position: 'relative',
+
   },
   title: {
-    fontSize: 33,
+    fontSize: 27,
     fontWeight: 'bold',
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 'bold',
-    paddingTop: 10,
+    paddingTop: 4,
   },
   button: {
-    width: 130,
-    height: 45,
-    fontSize: 14,
+    width: 160,
+    height: 50,
+    fontSize: 15,
     color: '#ffffff',
     fontWeight: 'bold',
     backgroundColor: '#64703f',
     border: 'none',
-    borderRadius: 22,
-    marginTop: 160,
+    borderRadius: 25,
+    marginTop: 97,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -41,11 +42,12 @@ const styles = {
   },
 };
 
-class ImageBox extends React.PureComponent {
+class ImageBoxSmall extends React.PureComponent {
   render() {
     const {
       classes,
       title,
+      titleBack,
       subtitle,
       backgroundImage,
       fontColor,
@@ -59,6 +61,7 @@ class ImageBox extends React.PureComponent {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           color: fontColor,
+          
         }}
       >
         <div
@@ -68,6 +71,9 @@ class ImageBox extends React.PureComponent {
           }}
         >
           {title}
+          <span style={{
+            fontFamily: 'FilsonSoftLight', fontWeight: 'normal',
+          }}>{titleBack}</span>
         </div>
 
         <div className={classes.subtitle}>
@@ -80,7 +86,7 @@ class ImageBox extends React.PureComponent {
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            bottom: 62,
+            bottom: 50,
           }}
         >
           <button className={classes.button}>
@@ -94,4 +100,4 @@ class ImageBox extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(ImageBox);
+export default withStyles(styles)(ImageBoxSmall);

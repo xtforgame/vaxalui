@@ -17,8 +17,8 @@ import TopRightBox from '../img/bg6.jpg';
 import BottomLeftBox from '../img/bg7.jpg';
 import BottomRightBox from '../img/bg8.jpg';
 
-import MobileBg1 from '../img/mobile/m_bg1.png'
-import MobileBg2 from '../img/mobile/bg2.jpg'
+import MobileBg1 from '../img/mobile/m_bg1.jpg'
+import MobileBg2 from '../img/mobile/m_bg2.jpg'
 
 import NextCircle from '../img/mobile/m_now_next_circle.png';
 
