@@ -5,16 +5,13 @@ import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import { MenuContext } from './MenuContext';
 
-export const getSize = theme => ({
-  width: theme.spacing(16),
-  height: theme.spacing(3),
-});
-
 const styles = theme => ({
   firstLayer: {
     fontFamily: 'FilsonSoft-Bold',
   },
   otherLayer: {
+    paddingTop: 4,
+    paddingBottom: 4,
     fontFamily: 'FilsonSoftRegular',
   },
 });
@@ -39,7 +36,7 @@ class Item extends React.PureComponent {
         className={clsx({ [classes.firstLayer]: firstLayer, [classes.otherLayer]: !firstLayer })}
         data-id="menu-item"
         onMouseEnter={this.showMenu}
-        onMouseLeave={this.closeMenu}
+        // onMouseLeave={this.closeMenu}
       >
         {children}
       </div>

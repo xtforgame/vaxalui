@@ -107,7 +107,7 @@ class ItemList extends React.PureComponent {
       >
         {this.renderItems()}
       </div>
-    )
+    );
   }
 }
 

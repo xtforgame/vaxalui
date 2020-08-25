@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.getSize = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -19,18 +19,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const getSize = theme => ({
-  width: theme.spacing(16),
-  height: theme.spacing(3)
-});
-
-exports.getSize = getSize;
-
 const styles = theme => ({
   firstLayer: {
     fontFamily: 'FilsonSoft-Bold'
   },
   otherLayer: {
+    paddingTop: 4,
+    paddingBottom: 4,
     fontFamily: 'FilsonSoftRegular'
   }
 });
@@ -60,8 +55,7 @@ class Item extends _react.default.PureComponent {
         [classes.otherLayer]: !firstLayer
       }),
       "data-id": "menu-item",
-      onMouseEnter: this.showMenu,
-      onMouseLeave: this.closeMenu
+      onMouseEnter: this.showMenu
     }, children);
   }
 
