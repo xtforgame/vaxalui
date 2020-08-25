@@ -40,7 +40,7 @@ class Introduction extends React.PureComponent {
       height,
       title,
       backgroundImage,
-      titleWidth,
+      fontSize,
       children,
       fontColor,
       backgroundColor,
@@ -60,6 +60,7 @@ class Introduction extends React.PureComponent {
         >
           <BreakAllContentText
             className={classes.title}
+            style={{ fontSize: fontSize, }}
           >
             {title}
           </BreakAllContentText>

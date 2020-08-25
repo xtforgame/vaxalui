@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({
     fontSize: 14,
     fontFamily: 'FilsonSoft-Bold',
     display: 'flex',
-    justifyContent: 'center',
+    // justifyContent: 'center',
   },
   table: {
     tableLayout: 'fixed',
