@@ -36,7 +36,7 @@ class Item extends React.PureComponent {
         className={clsx({ [classes.firstLayer]: firstLayer, [classes.otherLayer]: !firstLayer })}
         data-id="menu-item"
         onMouseEnter={this.showMenu}
-        // onMouseLeave={this.closeMenu}
+        onMouseLeave={this.closeMenu}
       >
         {children}
       </div>

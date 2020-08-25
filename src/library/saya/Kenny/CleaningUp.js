@@ -83,7 +83,7 @@ class CleaningUp extends React.PureComponent {
           <div className={classes.topColumn}>
             <div className={classes.firstTitle}>Cleaning Up the World,<br/> 75 Billion Bottles at a Time.</div>
             <div className={classes.firstLine} />
-            <div className={classes.secondTitle}>World’s largest recycling and renewing network.</div>
+            <div className={classes.secondTitle}>World’s Largest Recycling and Renewing Network</div>
             <div className={classes.button}>
               <GreenButton
                 text="Read More"

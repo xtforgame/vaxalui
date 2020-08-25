@@ -35,10 +35,10 @@ class SeeProduct extends React.PureComponent {
     return (
       <div className={classes.root}>
         <div className={classes.section}>
-          <div className={classes.title}>See our Products Section<br />for more details on yarn selection.</div>
+          <div className={classes.title}>Apply your favorite recycling technology to Fibers.</div>
           <div className={classes.button}>
             <GreenButton
-              text="Learn More"
+              text="SAYA Products"
             />
           </div>
         </div>

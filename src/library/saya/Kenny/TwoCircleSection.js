@@ -32,9 +32,9 @@ class TwoCireSection extends React.PureComponent {
     return (
       <div className={classes.root}>
         <div className={classes.title}>
-          All The Products are Available in
+          SAYA Recycling Technologies
           <br />
-          SAYA Now & SAYA Next Technologies.
+          from Bottles to Garments and Beyond
         </div>
         <div className={classes.circle}>
           <ImageCircle

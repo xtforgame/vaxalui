@@ -48,10 +48,10 @@ class SeeProduct extends _react.default.PureComponent {
       className: classes.section
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "See our Products Section", _react.default.createElement("br", null), "for more details on yarn selection."), _react.default.createElement("div", {
+    }, "Apply your favorite recycling technology to Fibers."), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "Learn More"
+      text: "SAYA Products"
     }))));
   }
 

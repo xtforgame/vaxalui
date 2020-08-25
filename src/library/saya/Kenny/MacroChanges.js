@@ -69,7 +69,7 @@ class MacroChanges extends React.PureComponent {
           <div className={classes.firstLine} />
           <div className={classes.secondTitle}>Micro fibers. Macro changes.</div>
           <div className={classes.secondLine} />
-          <div className={classes.thirdTitle}>Functional Fibers for Every Challenge.</div>
+          <div className={classes.thirdTitle}>Sustainable Fiber Solutions for Every Budget and Design.</div>
           <div className={classes.button}>
             <GreenButton
               text="Read More"

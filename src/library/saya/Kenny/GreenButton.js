@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   button: {
-    width: 130,
+    minWidth: 130,
     height: 45,
     paddingTop: 6,
     textAlign: 'center',
