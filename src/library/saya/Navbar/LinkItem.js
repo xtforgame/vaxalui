@@ -1,13 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Link from './Link';
-import { getSize } from './Item';
 
 const styles = theme => ({
   root: {
-    ...getSize(theme),
     position: 'relative',
     color: 'white',
     '&:hover': {
@@ -28,7 +25,6 @@ class LinkItem extends React.PureComponent {
       to,
       name,
     } = this.props;
-    console.log('name :', name);
     return (
       <Link
         to={to}
@@ -43,18 +39,4 @@ class LinkItem extends React.PureComponent {
   }
 }
 
-LinkItem.propTypes = {
-  to: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-};
-
-LinkItem.defaultProps = {
-};
-
 export default withStyles(styles)(LinkItem);
-
-// export const pageQuery = graphql`
-//   query ABC {
-//     abc
-//   }
-// `;

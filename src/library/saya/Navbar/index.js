@@ -24,6 +24,7 @@ const styles = theme => ({
     paddingTop: (theme.spacing(8) - theme.spacing(3)) / 2,
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
+    whiteSpace: 'pre',
   },
   logo: {
     marginRight: 'auto', // TODO make a global style covering this
@@ -90,7 +91,7 @@ class Navbar extends React.PureComponent {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useContext, useRef, useLayoutEffect } from 'react';
 import PropTypes from 'prop-types';
 // import { graphql } from 'gatsby';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import ItemList from './ItemList';
 import { MenuContext } from './MenuContext';
-import { getSize } from './Item';
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    ...getSize(theme),
     position: 'relative',
   },
   itemListRoot: {
@@ -20,43 +18,50 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingRight: theme.spacing(3),
+    // paddingRight: theme.spacing(3),
   },
-});
+  rightArrow: {
+    width: 0,
+    height: 0,
+    borderTop: '4px solid transparent',
+    borderBottom: '4px solid transparent',
+    borderLeft: '4px solid #ffffff',
+    // backgroundColor: '#ffffff',
+  },
+  xxx: {
+    width: 8,
+    height: 8,
+  },
+}));
 
 export const isOpened = (path, currentPath) => {
   if (currentPath === '') return false;
   if (!currentPath.startsWith(path)) return false;
   return true;
-}
+};
 
-class ExpandItem extends React.PureComponent {
-  isOpened = () => {
-    const {
-      path,
-    } = this.props;
-    const {
-      currentPath,
-    } = this.context;
-    return isOpened(path, currentPath);
-  }
+export default (props) => {
+  const {
+    path,
+    name: inName,
+    listDirection,
+    items,
+    theme,
+    className,
+  } = props;
 
-  getTopOffset = () => {
-    const {
-      path,
-      theme,
-    } = this.props;
-    const ith = path.split('/').pop();
-    return ith * getSize(theme).height * -1;
-  }
+  const {
+    currentPath,
+  } = useContext(MenuContext);
+  const classes = useStyles();
+  const textItem = useRef();
 
-  renderName = () => {
-    const {
-      classes,
-      name: inName,
-      listDirection,
-    } = this.props;
+  useLayoutEffect(() => {
+    // console.log('textItem :', textItem);
+    // console.log('textItem.current.offsetHeight :', textItem.current.offsetHeight);
+  });
 
+  const renderName = () => {
     let name;
     if (listDirection === 'bottom') {
       name = inName;
@@ -66,31 +71,27 @@ class ExpandItem extends React.PureComponent {
           className={classes.specialNameRoot}
         >
           <div>{inName}</div>
-          <div>—</div>
+          <div className={classes.xxx} />
+          <div
+            className={classes.rightArrow}
+          />
         </div>
       );
     }
 
     return (
-      <div>
+      <div ref={textItem}>
         {name}
       </div>
     );
-  }
+  };
 
-  renderItemList = () => {
-    const {
-      classes,
-      path,
-      items,
-      listDirection,
-      theme,
-    } = this.props;
-    if (!this.isOpened()) return null;
+  const renderItemList = () => {
+    if (!isOpened(path, currentPath)) return null;
 
     const listAtRight = {
-      left: getSize(theme).width,
-      top: this.getTopOffset(),
+      left: (textItem.current && textItem.current.offsetWidth) + 8,
+      top: -4,
     };
     const style = (listDirection === 'right') ? listAtRight : {};
     return (
@@ -104,41 +105,14 @@ class ExpandItem extends React.PureComponent {
         />
       </div>
     );
-  }
+  };
 
-  render() {
-    const {
-      classes,
-      className,
-    } = this.props;
-    return (
-      <div
-        className={clsx(classes.root, className)}
-      >
-        {this.renderName()}
-        {this.renderItemList()}
-      </div>
-    );
-  }
-}
-
-ExpandItem.propTypes = {
-  path: PropTypes.string.isRequired, // decide isOpen and pass down to ItemList
-  name: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired, // pass down
-  listDirection: PropTypes.oneOf(['bottom', 'right']),
+  return (
+    <div
+      className={clsx(classes.root, className)}
+    >
+      {renderName()}
+      {renderItemList()}
+    </div>
+  );
 };
-
-ExpandItem.defaultProps = {
-  listDirection: 'bottom',
-};
-
-ExpandItem.contextType = MenuContext;
-
-export default withStyles(styles, { withTheme: true })(ExpandItem);
-
-// export const pageQuery = graphql`
-//   query ABC {
-//     abc
-//   }
-// `;

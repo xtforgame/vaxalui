@@ -50,6 +50,7 @@ var _default = [{
     link: '/saya-365'
   }, {
     name: 'SAYA Performance Fiber',
+    listDirection: 'right',
     items: [{
       name: 'CHROMUCH\nSolution Dyed',
       link: 'chromuch-solution-dyed'
