@@ -15,8 +15,8 @@ class IconBoxSection extends React.PureComponent {
       children,
     } = this.props;
     return (
-      <div className={classes.root}>
-        {children}
+      <div className={classes.root}>        
+      {children}      
       </div>
     );
   }
