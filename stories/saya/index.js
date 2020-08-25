@@ -39,3 +39,6 @@ import './MobileTextilePartners';
 
 // MobileNextRscuw
 import './MobileNextRscuw';
+
+// MobileSustainabilityInnovations
+import './MobileSustainabilityInnovations';

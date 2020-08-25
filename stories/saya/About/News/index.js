@@ -35,7 +35,7 @@ storiesOf('saya|Pages/Desktop/About', module)
     () => (
       <div style={{ width: '100%' }}>
         <Layout>
-          <TopSection
+          {/* <TopSection
             firstTitle="ABOUT"
             secondTitle="News"
             thirdTitle="Lorem ipsum dolor sit amet  "
@@ -51,7 +51,7 @@ storiesOf('saya|Pages/Desktop/About', module)
               image={articlePic1}
             />
           </div>
-
+ */}
 
           <TitleLineBox
             title="SAYA NOW Serial Projects"
@@ -65,21 +65,29 @@ storiesOf('saya|Pages/Desktop/About', module)
               title="What is Post-consumer Recycled Polyester"
               description="Recycled polyester (rPET) is obtained by melting down existing plastic and re-spinning it into new polyester fiber."
               image={articlePic1}
+              width={368}
+              height={324}
             />
             <Card
               title="Recycled vs. Recyclable"
               description="Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash..."
               image={articlePic2}
+              width={368}
+              height={324}
             />
             <Card
               title="Mechanical Recycling"
               description='Mechanical recycling transforms materials into "new" secondary raw materials without changing the base...'
               image={articlePic3}
+              width={368}
+              height={324}
             />
             <Card
               title="Chemical Recycling"
               description="Chemical recycling, also called advanced recycling,  is taking  plastic waste  and reducing it back to its..."
               image={articlePic4}
+              width={368}
+              height={324}
             />
           </TitleLineBox>
 
