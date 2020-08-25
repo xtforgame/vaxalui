@@ -48,7 +48,7 @@ storiesOf('saya|Pages/Mobile', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('MobileTechnologiesNow',
+  .add('MobileNow',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
@@ -59,7 +59,7 @@ storiesOf('saya|Pages/Mobile', module)
             thirdTitle={'Backbone of our\nsustainable textile business'}
             backgroundImage={MobileBg1}
             secondTitlePaddingTop={100}
-            secondLineMarginTop={138}
+            secondLineMarginTop={88}
           />
 
           <ImageContainer
@@ -101,6 +101,7 @@ storiesOf('saya|Pages/Mobile', module)
             topTile="years"
             bottomTitle="experience"
             height={633}
+            numberColor="#64703f"
             percentDisplay="none"
             subtitle={`Transparency and the ability and\ncapacity to scale`}
             content={`Based in Taiwan, SAYA’s PET bottle recovery\nand renewal map spans throughout Asia\n qincluding China, Japan, Philippines, Thailand\nand Vietnam. In recent years, collection\nefforts have expanded into regions of the\nUSA and South America. SAYA continues to\ninnovate our manufacturing processes and\nexpand our sources for recycled fiber.`}
@@ -134,6 +135,7 @@ storiesOf('saya|Pages/Mobile', module)
             fontColor="#ffffff"
             subtitle={'Enhanced Process'}
             content={`The resulting flakes are then transported to\nin-house facilities where they are batch-\noptimized to control color and tenacity and\ntransformed into pellets ready to be\nextruded into recycled yarns designated for a\nspecific end-use.`}
+            paddingTop={80}
           >
             <img src={icon3} style={{ width: '100%', marginTop: 96, }} />
           </SubtitleContent>

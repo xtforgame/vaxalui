@@ -32,6 +32,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const {
     title,
+    titlePaddingTop,
     subtitle,
     content,
     height,

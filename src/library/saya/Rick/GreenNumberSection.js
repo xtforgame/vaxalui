@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: 121,
     fontFamily: 'FilsonSoftRegular',
     lineHeight: 0.83,
-    color: '#64703f',
     textAlign: 'left',
   },
   percent: {
@@ -52,6 +51,7 @@ export default (props) => {
   const {
     numberUpTitle,
     number,
+    numberColor,
     topTile,
     bottomTitle,
     subtitle,
@@ -73,7 +73,7 @@ export default (props) => {
         style={{ position: 'absolute', width: 310, marginTop: marginTop, }}
       >
         <div className={classes.numberUpTitle}> {numberUpTitle} </div>
-        <div className={classes.number}>
+        <div className={classes.number} style={{color:numberColor,}} >
           {number}
           <span
             className={classes.percent}

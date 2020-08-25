@@ -31,5 +31,11 @@ import './Partners';
 // MobileHome
 import './MobileHome';
 
-// MobileTechnologiesNow
-import './MobileTechnologiesNow';
+// MobileNow
+import './MobileNow';
+
+// MobileTextilePartners
+import './MobileTextilePartners';
+
+// MobileNextRscuw
+import './MobileNextRscuw';

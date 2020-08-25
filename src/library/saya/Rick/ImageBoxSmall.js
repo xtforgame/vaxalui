@@ -14,7 +14,7 @@ const styles = {
     marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
     position: 'relative',
-
+backgroundSize:'cover',
   },
   title: {
     fontSize: 27,

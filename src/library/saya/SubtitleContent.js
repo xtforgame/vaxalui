@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 80,
   },
   content: {
     textAlign: 'left',
@@ -18,7 +17,9 @@ const useStyles = makeStyles(theme => ({
 
 export default (props) => {
   const {
+    paddingTop,
     backgroundImage,
+    backgroundColor,
     fontColor,
     height,
     content,
@@ -32,14 +33,14 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height, width: '100%', }}
+      style={{ height,backgroundColor, width: '100%', paddingTop:paddingTop,}}
     >
       <div
         style={{ position: 'absolute' ,color:fontColor,}}
       >
      
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{subtitle}</pre>
+          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0,marginTop:  0,  }}>{subtitle}</pre>
         </div>
         <div className={classes.content}>
           <pre style={{ fontFamily: 'FilsonSoftRegular',marginBottom: 0, }}>{content}</pre>
