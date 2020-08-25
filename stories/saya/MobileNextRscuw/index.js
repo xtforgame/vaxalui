@@ -5,11 +5,8 @@ import TopSection from 'library/saya/Rick/TopSection';
 import Introduction from 'library/saya/Rick/Introduction';
 import ImageContainer from 'library/saya/ImageContainer';
 import SubtitleContent from 'library/saya/SubtitleContent';
-
 import GreenNumberSection from 'library/saya/Rick/GreenNumberSection';
-
-
-
+import TransparentSection from 'library/saya/Rick/TransparentSection';
 import TitleLineBox from 'library/saya/Rick/TitleLineBox';
 import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
 
@@ -20,14 +17,12 @@ import MobileBg2 from '../img/mobile/m_bg23.jpg';
 import MobileBg3 from '../img/mobile/m_bg24.jpg';
 import MobileBg4 from '../img/mobile/m_bg25.jpg';
 import MobileBg5 from '../img/mobile/m_bg27.jpg';
+import MobileBg6 from '../img/mobile/m_bg28.jpg';
 
 import icon1 from '../img/mobile/m_fig4.svg';
 import icon2 from '../img/mobile/m_fig5.svg';
-import icon3 from '../img/icon17.svg';
-import icon4 from '../img/icon18.svg';
 import leftBox from '../img/mobile/m_bg20.jpg';
 import rightBox from '../img/mobile/m_bg21.jpg';
-
 import circle from '../img/mobile/m_bg26.jpg';
 
 
@@ -45,53 +40,7 @@ storiesOf('saya|Pages/Mobile', module)
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
-
-          <Introduction
-            height={796}
-            title={'Where we are?'}
-            subtitle={'Recruiting like-minded brands\nand garment manufacturers'}
-            content={`SAYA is working on pilot projects with key\nbrand partners on recovering and recycling\ncutting scrap from their garment factories.`}
-            backgroundImage={MobileBg5}
-            color="#ffffff"
-            lineColor="#ffffff"
-          >
-
-            <div style={{
-              width: '100%',
-              height: 442,
-              position:'absolute',
-              display:'flex',
-              alignItems:'flex-start',
-              backgroundColor:" rgba(0, 0, 0, 0.3)",
-            }}>
-
-
-              <SubtitleContent
-                height={190}
-
-                fontColor="#ffffff"
-                subtitle={'Type of Materials and Finishing'}
-                content={`Right now we are limited to 100% Polyester\nfabric cutting scraps without coating not\nfinishing, including water repellent.`}
-                paddingTop={25}
-              />
-            </div>
-          </Introduction>
-
-
-
-          {/* <SubtitleContent
-                height={252}
-                backgroundColor=" rgba(0, 0, 0, 0.3)"
-                fontColor="#ffffff"
-                subtitle={'Content Percentage'}
-                content={`SAYA RSCUW Fibers consist of 3 types of\nrecycled components. Garment cutting scrap,\noverstock fabric, waste yarn, and post-\nconsumer PET bottles. Post industrial wastes\nmake up a minimum of 15%, and post\nconsumer bottles about 80-85%.`}
-                paddingTop={0}
-              /> */}
-
-
-
-
-          {/* <TopSection
+          <TopSection
             firstTitle="SAYA NEXT Series"
             secondTitle={'RSCUW'}
             thirdTitle={'Cutting Scraps and Overstocks,\nAddressing the Real Elephant In\nthe Room. We seek out the high\nhanging fruits to capture what\nreally matters.'}
@@ -201,6 +150,62 @@ storiesOf('saya|Pages/Mobile', module)
             </div>
           </Introduction>
 
+          <TransparentSection
+            height={796}
+            title={'Where we are?'}
+            subtitle={'Recruiting like-minded brands\nand garment manufacturers'}
+            content={`SAYA is working on pilot projects with key\nbrand partners on recovering and recycling\ncutting scrap from their garment factories.`}
+            backgroundImage={MobileBg5}
+            titlePaddingTop={85}
+            marginTop={32}
+          >
+            <div style={{ marginTop: 30, }}>
+              <SubtitleContent
+                height={190}
+                backgroundColor=" rgba(0, 0, 0, 0.3)"
+                fontColor="#ffffff"
+                subtitle={'Type of Materials and Finishing'}
+                content={`Right now we are limited to 100% Polyester\nfabric cutting scraps without coating not\nfinishing, including water repellent.`}
+                paddingTop={25}
+              />
+              <SubtitleContent
+                height={227}
+                backgroundColor=" rgba(0, 0, 0, 0.3)"
+                fontColor="#ffffff"
+                subtitle={'Content Percentage'}
+                content={`SAYA RSCUW Fibers consist of 3 types of\nrecycled components. Garment cutting scrap,\noverstock fabric, waste yarn, and post-\nconsumer PET bottles. Post industrial wastes\nmake up a minimum of 15%, and post\nconsumer bottles about 80-85%.`}
+                paddingTop={0}
+              />
+            </div>
+          </TransparentSection>
+
+          <TransparentSection
+            height={555}
+            title={'What’s Next?'}
+            backgroundImage={MobileBg6}
+            titlePaddingTop={47}
+            marginTop={23}
+          >
+            <div style={{ marginTop: 0, }}>
+              <SubtitleContent
+                height={190}
+                backgroundColor=" rgba(0, 0, 0, 0.3)"
+                fontColor="#ffffff"
+                subtitle={'Type of Materials and Finishing'}
+                content={`We aim to start recovering and recycling\nuncoated 100% Polyester fabrics with WR or\nDWR finishing by 1H 2021.`}
+                paddingTop={25}
+              />
+              <SubtitleContent
+                height={168}
+                backgroundColor=" rgba(0, 0, 0, 0.3)"
+                fontColor="#ffffff"
+                subtitle={'Content Percentage'}
+                content={`Removing colors and pigments We aim to\ncontinuously increase the percentage of\ngarment cutting scrap and overstock fabrics.`}
+                paddingTop={0}
+              />
+            </div>
+          </TransparentSection>
+
           <TitleLineBox
             title="SAYA NEXT Serial Projects"
             backgroundColor="#d8d8d8"
@@ -222,7 +227,7 @@ storiesOf('saya|Pages/Mobile', module)
               paddingTop={70}
               fontColor="#ffffff"
             />
-          </TitleLineBox> */}
+          </TitleLineBox>
         </MobileLayout>
       </div>
     )
