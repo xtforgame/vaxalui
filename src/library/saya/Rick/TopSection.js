@@ -8,12 +8,13 @@ const useStyles = makeStyles(theme => ({
     height: 590,
     textAlign: 'center',
     fontFamily: 'FilsonSoft-Bold',
+    color: '#000000',
   },
   firstTitle: {
     fontSize: 18,
     fontWeight: 'bold',
     lineHeight: 1.4,
-    color: '#000000',
+
     paddingTop: 57,
     // borderBottomStyle: 'solid',
     // borderBottomWidth: 2,
@@ -28,12 +29,12 @@ const useStyles = makeStyles(theme => ({
   secondTitle: {
     fontSize: 50,
     fontWeight: 'bold',
-    color: '#000000',
+
   },
   secondTitleBack: {
     fontWeight: 'normal',
     fontFamily: 'FilsonSoftLight',
-    color: '#000000',
+
   },
   secondLine: {
     width: 230,
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   thirdTitle: {
     fontSize: 18,
-    color: '#000000',
+
   },
 }));
 
@@ -55,6 +56,8 @@ export default (props) => {
     secondLineMarginTop,
     thirdTitle,
     backgroundImage,
+    lineBackgroundColor,
+    color,
   } = props;
 
   const classes = useStyles();
@@ -63,7 +66,7 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height: 590 }}
+      style={{ color, height: 590 }}
     >
       <div
         style={{ position: 'absolute' }}
@@ -71,7 +74,7 @@ export default (props) => {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={classes.firstTitle}>
             {firstTitle}
-            <div className={classes.firstLine} />
+            <div className={classes.firstLine} style={{ backgroundColor: lineBackgroundColor, }} />
           </div>
         </div>
 
@@ -93,7 +96,7 @@ export default (props) => {
           marginTop: secondLineMarginTop,
         }}
         >
-          <div className={classes.secondLine} />
+          <div className={classes.secondLine} style={{ backgroundColor: lineBackgroundColor, }} />
         </div>
 
         <div className={classes.thirdTitle}>
