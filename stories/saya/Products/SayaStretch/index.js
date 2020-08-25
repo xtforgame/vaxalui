@@ -87,7 +87,9 @@ storiesOf('saya|Pages/Desktop/Products', module)
               fontColor="#000000"
               lineBorder="solid 1px #000000"
             >
+              <div style={{ display:'flex',justifyContent: 'center', }}>
               <Table />
+              </div>
             </TitleWithContent>
           </div>
 

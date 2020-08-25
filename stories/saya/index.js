@@ -42,3 +42,6 @@ import './MobileNextRscuw';
 
 // MobileSustainabilityInnovations
 import './MobileSustainabilityInnovations';
+
+// MobileSayaStretch
+import './MobileSayaStretch';
