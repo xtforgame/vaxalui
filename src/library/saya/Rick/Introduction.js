@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'left',
     fontSize: 14,
     paddingTop: 10,
-    lineHeight:1.5,
+    lineHeight: 1.5,
   },
 }));
 
@@ -55,7 +55,7 @@ export default (props) => {
       }}
     >
       <div
-        style={{ position: 'absolute' }}
+        style={{ position: 'absolute', }}
       >
         <div className={classes.title}>
           <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{title}</pre>

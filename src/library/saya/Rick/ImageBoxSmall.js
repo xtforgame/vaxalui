@@ -14,7 +14,7 @@ const styles = {
     marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
     position: 'relative',
-backgroundSize:'cover',
+    backgroundSize: 'cover',
   },
   title: {
     fontSize: 27,
@@ -50,6 +50,7 @@ class ImageBoxSmall extends React.PureComponent {
       titleBack,
       subtitle,
       backgroundImage,
+      subtitleFontFamily,
       fontColor,
       paddingTop,
     } = this.props;
@@ -61,24 +62,28 @@ class ImageBoxSmall extends React.PureComponent {
         style={{
           backgroundImage: `url(${backgroundImage})`,
           color: fontColor,
-          
+
         }}
       >
-        <div
+        <pre
           className={classes.title}
           style={{
-            paddingTop,
+            paddingTop, marginTop: 0, marginBottom: 0,
           }}
         >
           {title}
           <span style={{
             fontFamily: 'FilsonSoftLight', fontWeight: 'normal',
           }}>{titleBack}</span>
-        </div>
+        </pre>
 
-        <div className={classes.subtitle}>
+        <pre
+          className={classes.subtitle}
+          style={{
+            marginTop: 0, marginBottom: 0,
+          }}>
           {subtitle}
-        </div>
+        </pre>
 
         <div
           style={{
