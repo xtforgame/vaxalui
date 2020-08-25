@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   button: {
-    width: 130,
+    minWidth: 130,
     height: 45,
     paddingTop: 6,
     textAlign: 'center',

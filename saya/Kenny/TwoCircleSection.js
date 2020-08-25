@@ -44,7 +44,7 @@ class TwoCireSection extends _react.default.PureComponent {
       className: classes.root
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "All The Products are Available in", _react.default.createElement("br", null), "SAYA Now & SAYA Next Technologies."), _react.default.createElement("div", {
+    }, "SAYA Recycling Technologies", _react.default.createElement("br", null), "from Bottles to Garments and Beyond"), _react.default.createElement("div", {
       className: classes.circle
     }, _react.default.createElement(_ImageCircle.default, {
       linkText: "Explore this Technology",

@@ -51,7 +51,7 @@ class Navbar extends React.PureComponent {
   }
 
   handleMenuChange = (e, value) => {
-    const isOpening = (value !== '')    
+    const isOpening = (value !== '');
     this.setState({
       isOpen: isOpening,
     });

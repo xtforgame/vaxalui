@@ -55,7 +55,8 @@ class Item extends _react.default.PureComponent {
         [classes.otherLayer]: !firstLayer
       }),
       "data-id": "menu-item",
-      onMouseEnter: this.showMenu
+      onMouseEnter: this.showMenu,
+      onMouseLeave: this.closeMenu
     }, children);
   }
 

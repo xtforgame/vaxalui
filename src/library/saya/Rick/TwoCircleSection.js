@@ -31,9 +31,7 @@ class TwoCircleSection extends React.PureComponent {
       backgroundImage,
     } = this.props;
 
-    const content = `All The Products are Available in
-    SAYA Now & SAYA Next
-    Technologies.`;
+    const content = 'SAYA Recycling Technologies\nfrom Bottles to Garments and Beyond';
     return (
       <div className={classes.root}>
         <div style={{ width: '100%', marginTop: 40 }}>
