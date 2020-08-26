@@ -45,3 +45,12 @@ import './MobileSustainabilityInnovations';
 
 // MobileSayaStretch
 import './MobileSayaStretch';
+
+// MobileSayaFresh
+import './MobileSayaFresh';
+
+// MobileSayaMicrodiber
+import './MobileSayaMicrodiber';
+
+// MobileSayaChromuchSolutionDyed
+import './MobileSayaChromuchSolutionDyed';
