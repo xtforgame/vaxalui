@@ -75,7 +75,8 @@ class ImageBoxSmall extends _react.default.PureComponent {
       secondTitle,
       subtitle,
       backgroundImage,
-      fontColor
+      fontColor,
+      onClick
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -107,7 +108,8 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "Learn More"
+      text: "Learn More",
+      onClick: onClick
     }))));
   }
 

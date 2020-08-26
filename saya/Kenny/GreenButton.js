@@ -34,9 +34,11 @@ class GreenButton extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      text
+      text,
+      onClick = () => {}
     } = this.props;
     return _react.default.createElement("button", {
+      onClick: onClick,
       className: classes.button
     }, text);
   }
