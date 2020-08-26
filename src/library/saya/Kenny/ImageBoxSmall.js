@@ -63,6 +63,7 @@ class ImageBoxSmall extends React.PureComponent {
       subtitle,
       backgroundImage,
       fontColor,
+      onClick,
     } = this.props;
 
 
@@ -99,6 +100,7 @@ class ImageBoxSmall extends React.PureComponent {
           <div className={classes.button}>
             <GreenButton
               text="Learn More"
+              onClick={onClick}
             />
           </div>
         </div>

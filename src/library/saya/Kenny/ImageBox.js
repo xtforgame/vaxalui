@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import GreenButton from './GreenButton';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   box: {
@@ -50,6 +51,7 @@ class ImageBox extends React.PureComponent {
       fontColor,
       paddingTop,
       buttonDisplay,
+      onClick,
       children,
     } = this.props;
     return (
@@ -70,12 +72,13 @@ class ImageBox extends React.PureComponent {
             {title}<span className={classes.titleBack}>{titleBack}</span>
           </div>
 
-          <div className={classes.subtitle}>
+          <BreakAllContentText className={classes.subtitle}>
             {subtitle}
-          </div>
+          </BreakAllContentText>
 
           <div className={classes.button} style={{ display: buttonDisplay }}>
             <GreenButton
+              onClick={onClick}
               text="Learn More"
             />
           </div>

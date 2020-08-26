@@ -26,9 +26,10 @@ class GreenButton extends React.PureComponent {
     const {
       classes,
       text,
+      onClick = () => {},
     } = this.props;
     return (
-      <button className={classes.button}>
+      <button onClick={onClick} className={classes.button}>
         {text}
       </button>
 

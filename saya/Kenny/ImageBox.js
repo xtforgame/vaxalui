@@ -13,6 +13,8 @@ var _Box = _interopRequireDefault(require("@material-ui/core/Box"));
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -62,6 +64,7 @@ class ImageBox extends _react.default.PureComponent {
       fontColor,
       paddingTop,
       buttonDisplay,
+      onClick,
       children
     } = this.props;
     return _react.default.createElement(_Box.default, {
@@ -80,7 +83,7 @@ class ImageBox extends _react.default.PureComponent {
       }
     }, title, _react.default.createElement("span", {
       className: classes.titleBack
-    }, titleBack)), _react.default.createElement("div", {
+    }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subtitle
     }, subtitle), _react.default.createElement("div", {
       className: classes.button,
@@ -88,6 +91,7 @@ class ImageBox extends _react.default.PureComponent {
         display: buttonDisplay
       }
     }, _react.default.createElement(_GreenButton.default, {
+      onClick: onClick,
       text: "Learn More"
     })), _react.default.createElement("div", null, children)));
   }

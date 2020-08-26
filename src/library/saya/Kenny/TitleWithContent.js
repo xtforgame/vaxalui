@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
@@ -57,12 +58,12 @@ class Introduction extends React.PureComponent {
         <div
           className={classes.container}
         >
-          <div
+          <BreakAllContentText
             className={classes.title}
             style={{ fontSize: fontSize, }}
           >
             {title}
-          </div>
+          </BreakAllContentText>
           <div>
             {children}
           </div>

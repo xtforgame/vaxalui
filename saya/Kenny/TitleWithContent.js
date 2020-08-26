@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -65,7 +67,7 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
     }, title), _react.default.createElement("div", null, children)));
   }
