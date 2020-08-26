@@ -90,8 +90,9 @@ export default (props) => {
     if (!isOpened(path, currentPath)) return null;
 
     const listAtRight = {
-      left: (textItem.current && textItem.current.offsetWidth) + 8,
+      left: (textItem.current && textItem.current.offsetWidth),
       top: -4,
+      paddingLeft: 8,
     };
     const style = (listDirection === 'right') ? listAtRight : {};
     return (
