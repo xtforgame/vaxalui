@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 // import { graphql } from 'gatsby';
 import { withStyles } from '@material-ui/core/styles';
 import Item from './Item';
@@ -17,8 +16,8 @@ const styles = theme => ({
     alignItems: 'center',
   },
   itemRoot: {
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
+    marginLeft: 30,
+    marginRight: 30,
   },
 });
 

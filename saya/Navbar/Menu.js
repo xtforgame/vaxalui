@@ -7,8 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _styles = require("@material-ui/core/styles");
 
 var _Item = _interopRequireDefault(require("./Item"));
@@ -36,8 +34,8 @@ const styles = theme => ({
     alignItems: 'center'
   },
   itemRoot: {
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2)
+    marginLeft: 30,
+    marginRight: 30
   }
 });
 

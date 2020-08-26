@@ -96,8 +96,9 @@ var _default = props => {
   const renderItemList = () => {
     if (!isOpened(path, currentPath)) return null;
     const listAtRight = {
-      left: (textItem.current && textItem.current.offsetWidth) + 8,
-      top: -4
+      left: textItem.current && textItem.current.offsetWidth,
+      top: -4,
+      paddingLeft: 8
     };
     const style = listDirection === 'right' ? listAtRight : {};
     return _react.default.createElement("div", {
