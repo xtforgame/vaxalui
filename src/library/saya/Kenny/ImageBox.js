@@ -7,7 +7,7 @@ import BreakAllContentText from '../BreakAllContentText';
 const styles = {
   box: {
     borderRadius: 30,
-    marginBottom: 50,
+    margin: 20,
   },
   root: {
     width: 368,
@@ -16,44 +16,57 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    flexWrap: 'wrap',
     borderRadius: 30,
+    position: 'relative',
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.07,
+    display: 'flex',
+    flexDirection: 'column',
+    height: 157,
+  },
+  titleText: {
+    flexGrow: 0,
   },
   titleBack: {
-    fontWeight: 'normal',
+    flexGrow: 0,
     fontFamily: 'FilsonSoft-Light',
+  },
+  secondTitle: {
+    flexGrow: 0,
+    lineHeight: 1.07,
   },
   subtitle: {
     fontSize: 18,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    paddingTop: 10,
+    position: 'absolute',
+    top: 164,
+  },
+  space: {
+    flex: 1,
   },
   button: {
-    marginTop: 160,
-    fontFamily: 'FilsonSoft-Bold',
+    flexShrink: 0,
+    marginBottom: 46,
   },
 };
 
-class ImageBox extends React.PureComponent {
+class ImageBoxSmall extends React.PureComponent {
   render() {
     const {
       classes,
       title,
       titleBack,
+      secondTitle,
       subtitle,
       backgroundImage,
       fontColor,
-      paddingTop,
-      buttonDisplay,
       onClick,
-      children,
     } = this.props;
+
+
     return (
       <Box className={classes.box} boxShadow={8}>
         <div
@@ -63,27 +76,32 @@ class ImageBox extends React.PureComponent {
             color: fontColor,
           }}
         >
-          <div
+          <BreakAllContentText
             className={classes.title}
-            style={{
-              paddingTop: paddingTop,
-            }}
           >
-            {title}<span className={classes.titleBack}>{titleBack}</span>
-          </div>
-
-          <BreakAllContentText className={classes.subtitle}>
-            {subtitle}
+            <div className={classes.space} />
+            <div className={classes.titleText}>
+              {title}
+              <span className={classes.titleBack}>
+                {titleBack}
+              </span>
+            </div>
+            <div className={classes.secondTitle}>{secondTitle}</div>
           </BreakAllContentText>
 
-          <div className={classes.button} style={{ display: buttonDisplay }}>
-            <GreenButton
-              onClick={onClick}
-              text="Learn More"
-            />
+          <div className={classes.subtitle}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>
+              {subtitle}
+            </BreakAllContentText>
           </div>
-          <div>
-            {children}
+
+          <div className={classes.space} />
+
+          <div className={classes.button}>
+            <GreenButton
+              text="Learn More"
+              onClick={onClick}
+            />
           </div>
         </div>
       </Box>
@@ -92,4 +110,4 @@ class ImageBox extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(ImageBox);
+export default withStyles(styles)(ImageBoxSmall);
