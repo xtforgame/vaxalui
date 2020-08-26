@@ -20,7 +20,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const styles = {
   box: {
     borderRadius: 30,
-    marginBottom: 50
+    margin: 20
   },
   root: {
     width: 368,
@@ -29,43 +29,54 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    flexWrap: 'wrap',
-    borderRadius: 30
+    borderRadius: 30,
+    position: 'relative'
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold'
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.07,
+    display: 'flex',
+    flexDirection: 'column',
+    height: 157
+  },
+  titleText: {
+    flexGrow: 0
   },
   titleBack: {
-    fontWeight: 'normal',
+    flexGrow: 0,
     fontFamily: 'FilsonSoft-Light'
+  },
+  secondTitle: {
+    flexGrow: 0,
+    lineHeight: 1.07
   },
   subtitle: {
     fontSize: 18,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    paddingTop: 10
+    position: 'absolute',
+    top: 164
+  },
+  space: {
+    flex: 1
   },
   button: {
-    marginTop: 160,
-    fontFamily: 'FilsonSoft-Bold'
+    flexShrink: 0,
+    marginBottom: 46
   }
 };
 
-class ImageBox extends _react.default.PureComponent {
+class ImageBoxSmall extends _react.default.PureComponent {
   render() {
     const {
       classes,
       title,
       titleBack,
+      secondTitle,
       subtitle,
       backgroundImage,
       fontColor,
-      paddingTop,
-      buttonDisplay,
-      onClick,
-      children
+      onClick
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -76,28 +87,34 @@ class ImageBox extends _react.default.PureComponent {
         backgroundImage: `url(${backgroundImage})`,
         color: fontColor
       }
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      className: classes.title
     }, _react.default.createElement("div", {
-      className: classes.title,
-      style: {
-        paddingTop: paddingTop
-      }
+      className: classes.space
+    }), _react.default.createElement("div", {
+      className: classes.titleText
     }, title, _react.default.createElement("span", {
       className: classes.titleBack
-    }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
+    }, titleBack)), _react.default.createElement("div", {
+      className: classes.secondTitle
+    }, secondTitle)), _react.default.createElement("div", {
       className: classes.subtitle
-    }, subtitle), _react.default.createElement("div", {
-      className: classes.button,
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        display: buttonDisplay
+        fontFamily: 'FilsonSoft-Bold'
       }
+    }, subtitle)), _react.default.createElement("div", {
+      className: classes.space
+    }), _react.default.createElement("div", {
+      className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      onClick: onClick,
-      text: "Learn More"
-    })), _react.default.createElement("div", null, children)));
+      text: "Learn More",
+      onClick: onClick
+    }))));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(ImageBox);
+var _default = (0, _styles.withStyles)(styles)(ImageBoxSmall);
 
 exports.default = _default;
