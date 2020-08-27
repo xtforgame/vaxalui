@@ -1,6 +1,10 @@
 {
   "name": "vaxalui",
+<<<<<<< HEAD
   "version": "0.1.28",
+=======
+  "version": "0.1.25",
+>>>>>>> af40d3e... release for v0.1.25
   "description": "Vaxal ui",
   "main": "index.js",
   "repository": {
