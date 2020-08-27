@@ -76,13 +76,18 @@ class ImageBoxSmall extends _react.default.PureComponent {
       subtitle,
       backgroundImage,
       fontColor,
+<<<<<<< HEAD
       onClick
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a529698... no message
 =======
       paddingTop,
       buttonDisplay,
       onClick,
       children
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
@@ -90,6 +95,9 @@ class ImageBoxSmall extends _react.default.PureComponent {
 >>>>>>> b5028bb... no message
 =======
 >>>>>>> 53ed284... no message
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> a529698... no message
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -108,6 +116,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
       className: classes.titleText
     }, title, _react.default.createElement("span", {
       className: classes.titleBack
+<<<<<<< HEAD
 
     }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
 <<<<<<< HEAD
@@ -118,7 +127,19 @@ class ImageBoxSmall extends _react.default.PureComponent {
 >>>>>>> b5028bb... no message
 =======
 
+<<<<<<< HEAD
 >>>>>>> 53ed284... no message
+=======
+=======
+<<<<<<< HEAD
+    }, titleBack)), _react.default.createElement("div", {
+      className: classes.secondTitle
+    }, secondTitle)), _react.default.createElement("div", {
+=======
+    }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
+>>>>>>> a529698... no message
       className: classes.subtitle
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -129,6 +150,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
+<<<<<<< HEAD
       onClick: onClick,
       text: "Learn More"
     })), _react.default.createElement("div", null, children)));
@@ -140,7 +162,21 @@ class ImageBoxSmall extends _react.default.PureComponent {
 >>>>>>> b5028bb... no message
 =======
 
+<<<<<<< HEAD
 >>>>>>> 53ed284... no message
+=======
+=======
+<<<<<<< HEAD
+      text: "Learn More",
+      onClick: onClick
+    }))));
+=======
+      onClick: onClick,
+      text: "Learn More"
+    })), _react.default.createElement("div", null, children)));
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
+>>>>>>> a529698... no message
   }
 
 }

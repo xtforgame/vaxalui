@@ -76,6 +76,7 @@ class ImageBoxSmall extends React.PureComponent {
       children,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
@@ -85,6 +86,12 @@ class ImageBoxSmall extends React.PureComponent {
 =======
 >>>>>>> 912fd83... release for v0.1.25
 >>>>>>> 53ed284... no message
+=======
+>>>>>>> 912fd83... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
+>>>>>>> a529698... no message
     } = this.props;
 
 
@@ -126,6 +133,7 @@ class ImageBoxSmall extends React.PureComponent {
           </BreakAllContentText>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
@@ -135,6 +143,12 @@ class ImageBoxSmall extends React.PureComponent {
 =======
 >>>>>>> 912fd83... release for v0.1.25
 >>>>>>> 53ed284... no message
+=======
+>>>>>>> 912fd83... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
+>>>>>>> a529698... no message
 
           <div className={classes.space} />
 
