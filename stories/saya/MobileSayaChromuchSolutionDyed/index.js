@@ -38,7 +38,7 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitle={'Chromuch\nSolution\nDyed'}
             thirdTitle={'Color without Compromise'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={42}
+            secondTitlePaddingTop={92}
             secondLineMarginTop={83}
             lineBackgroundColor="#ffffff"
             color="#ffffff"

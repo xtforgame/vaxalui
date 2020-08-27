@@ -39,7 +39,7 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitleBack={'TRETCH'}
             thirdTitle={'Stretch with Good Conscious'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={100}
+            secondTitlePaddingTop={148}
             secondLineMarginTop={138}
             lineBackgroundColor="#ffffff"
             color="#ffffff"

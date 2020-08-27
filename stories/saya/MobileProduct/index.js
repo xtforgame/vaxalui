@@ -41,8 +41,8 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitle={'SAYA\nRenew\nFiber'}
             thirdTitle={'Design Consciously,\nKnow What Goes Into Your Gear'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={40}
-            secondLineMarginTop={32}
+            secondTitlePaddingTop={91}
+            secondLineMarginTop={82}
           />
           <Introduction
             height={570}

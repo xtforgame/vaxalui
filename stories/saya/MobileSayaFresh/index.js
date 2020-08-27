@@ -39,7 +39,7 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitleBack={'FRESH'}
             thirdTitle={'High Performance Antibacterial Fiber'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={100}
+            secondTitlePaddingTop={148}
             secondLineMarginTop={138}
             lineBackgroundColor="#ffffff" 
             color="#ffffff"

@@ -38,7 +38,7 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitleBack={'MICROFIBER'}
             thirdTitle={'Microfiber Good,  Micro-plastic Bad'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={65}
+            secondTitlePaddingTop={115}
             secondLineMarginTop={106}
             lineBackgroundColor="#ffffff"
             color="#ffffff"

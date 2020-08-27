@@ -58,8 +58,8 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitleBack={'NOW'}
             thirdTitle={'Backbone of our\nsustainable textile business'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={100}
-            secondLineMarginTop={88}
+            secondTitlePaddingTop={147}
+            secondLineMarginTop={138}
           />
 
           <ImageContainer

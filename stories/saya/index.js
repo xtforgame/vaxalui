@@ -57,3 +57,7 @@ import './MobileSayaMicrodiber';
 
 // MobileSayaChromuchSolutionDyed
 import './MobileSayaChromuchSolutionDyed';
+
+// MobileNews
+import './MobileNews';
+

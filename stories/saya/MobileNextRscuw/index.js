@@ -45,8 +45,8 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitle={'RSCUW'}
             thirdTitle={'Cutting Scraps and Overstocks,\nAddressing the Real Elephant In\nthe Room. We seek out the high\nhanging fruits to capture what\nreally matters.'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={100}
-            secondLineMarginTop={88}
+            secondTitlePaddingTop={93}
+            secondLineMarginTop={82}
           />
 
           <div style={{ marginTop: 23 }}>

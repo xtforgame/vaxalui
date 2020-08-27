@@ -4,15 +4,19 @@ import { storiesOf } from '@storybook/react';
 import TopSection from 'library/saya/Rick/TopSection';
 import ImageContainer from 'library/saya/ImageContainer';
 import Card from 'library/saya/Card';
+import TitleLineBox from 'library/saya/Rick/TitleLineBox';
+import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
+
 
 import MobileLayout from '../shared/MobileLayout';
 
-import MobileBg1 from '../img/mobile/m_bg31.jpg'
+import MobileBg1 from '../img/mobile/m_bg52.jpg'
 import articlePic1 from '../img/mobile/m_pic1.jpg';
 import articlePic2 from '../img/mobile/m_pic2.jpg';
 import articlePic3 from '../img/mobile/m_pic3.jpg';
 import articlePic4 from '../img/mobile/m_pic4.jpg';
-
+import leftBox from '../img/mobile/m_bg40.jpg';
+import rightBox from '../img/mobile/m_bg67.jpg';
 
 
 storiesOf('saya|Pages/Mobile', module)
@@ -25,17 +29,17 @@ storiesOf('saya|Pages/Mobile', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('MobileSustainabilityInnovations',
+  .add('MobileNews',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
           <TopSection
-            firstTitle="TECHNOLOGIES"
-            secondTitle={'Sustainability\nInnovations'}
+            firstTitle="ABOUT"
+            secondTitle={'News'}
             thirdTitle={'The Keywords of SAYA'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={115}
-            secondLineMarginTop={106}
+            secondTitlePaddingTop={148}
+            secondLineMarginTop={138}
             color="#ffffff"
             lineBackgroundColor="#ffffff"
           />
@@ -53,9 +57,9 @@ storiesOf('saya|Pages/Mobile', module)
                 paddingBottom: 20,
               }}
             >
-              Technologies /
+              About /
             <span style={{ fontFamily: 'FilsonSoft-Bold', }}>
-                Sustainability Innovations
+                News
            </span>
             </div>
             <Card
@@ -87,6 +91,26 @@ storiesOf('saya|Pages/Mobile', module)
               height={270}
             />
           </ImageContainer>
+
+          <TitleLineBox
+            title="About SAYA"
+            backgroundColor="#e5e5e5"
+            color="#000000"
+          >
+            <ImageBoxSmall
+              title={'About\nSAYA'}
+              backgroundImage={leftBox}
+              paddingTop={53}
+              fontColor="#000000"
+            />
+            <ImageBoxSmall
+              title={'Media\n&\nDownloads'}
+              backgroundImage={rightBox}
+              paddingTop={35}
+              fontColor="#ffffff"
+            />
+          </TitleLineBox>
+
         </MobileLayout>
       </div>
     )

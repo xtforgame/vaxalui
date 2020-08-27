@@ -40,8 +40,8 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitle={'Textile\nPartners'}
             thirdTitle={'Backbone of our\nsustainable textile business'}
             backgroundImage={MobileBg1}
-            secondTitlePaddingTop={65}
-            secondLineMarginTop={56}
+            secondTitlePaddingTop={115}
+            secondLineMarginTop={106}
           />
 
           <Introduction
