@@ -6,3 +6,5 @@ import './VisionMission';
 
 // SayaByNanYa
 import './SayaByNanYa';
+
+import './MediaDownloads';
