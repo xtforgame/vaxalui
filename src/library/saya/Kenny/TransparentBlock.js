@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = {
   root: {
     width: '100%',
-    height: 235,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
@@ -25,27 +24,29 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
     color: '#ffffff',
     paddingTop: 20,
-  }
+  },
 };
 
 class TransparentBlock extends React.PureComponent {
   render() {
     const {
       classes,
+      height = 235,
+      leftTitle,
       leftDescription,
+      rightTitle,
       rightDescription,
       marginTop,
     } = this.props;
     return (
-      <div className={classes.root} style={{ marginTop: marginTop }}>
+      <div className={classes.root} style={{ marginTop, height }}>
         <div className={classes.block}>
-          <div className={classes.title}>Type of Materials and Finishing</div>
+          <div className={classes.title}>{leftTitle}</div>
           <div className={classes.description}>{leftDescription}</div>
         </div>
         <div className={classes.block}>
-          <div className={classes.title}>Content Percentage</div>
+          <div className={classes.title}>{rightTitle}</div>
           <div className={classes.description}>{rightDescription}</div>
-
         </div>
       </div>
     );

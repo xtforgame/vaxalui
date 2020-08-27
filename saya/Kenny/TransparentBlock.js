@@ -14,7 +14,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const styles = {
   root: {
     width: '100%',
-    height: 235,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
@@ -42,26 +41,30 @@ class TransparentBlock extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      height = 235,
+      leftTitle,
       leftDescription,
+      rightTitle,
       rightDescription,
       marginTop
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
       style: {
-        marginTop: marginTop
+        marginTop,
+        height
       }
     }, _react.default.createElement("div", {
       className: classes.block
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "Type of Materials and Finishing"), _react.default.createElement("div", {
+    }, leftTitle), _react.default.createElement("div", {
       className: classes.description
     }, leftDescription)), _react.default.createElement("div", {
       className: classes.block
     }, _react.default.createElement("div", {
       className: classes.title
-    }, "Content Percentage"), _react.default.createElement("div", {
+    }, rightTitle), _react.default.createElement("div", {
       className: classes.description
     }, rightDescription)));
   }
