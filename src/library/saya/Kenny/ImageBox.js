@@ -63,13 +63,18 @@ class ImageBoxSmall extends React.PureComponent {
       subtitle,
       backgroundImage,
       fontColor,
+<<<<<<< HEAD
       onClick,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 53ed284... no message
 =======
       paddingTop,
       buttonDisplay,
       onClick,
       children,
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
@@ -77,6 +82,9 @@ class ImageBoxSmall extends React.PureComponent {
 >>>>>>> b5028bb... no message
 =======
 >>>>>>> f26bc25... add page Mobile_Home
+=======
+>>>>>>> 912fd83... release for v0.1.25
+>>>>>>> 53ed284... no message
     } = this.props;
 
 
@@ -102,16 +110,21 @@ class ImageBoxSmall extends React.PureComponent {
             <div className={classes.secondTitle}>{secondTitle}</div>
           </BreakAllContentText>
 
+<<<<<<< HEAD
           <div className={classes.subtitle}>
             <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>
               {subtitle}
             </BreakAllContentText>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 53ed284... no message
 =======
           <BreakAllContentText className={classes.subtitle}>
             {subtitle}
           </BreakAllContentText>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
@@ -119,6 +132,9 @@ class ImageBoxSmall extends React.PureComponent {
 >>>>>>> b5028bb... no message
 =======
 >>>>>>> f26bc25... add page Mobile_Home
+=======
+>>>>>>> 912fd83... release for v0.1.25
+>>>>>>> 53ed284... no message
 
           <div className={classes.space} />
 

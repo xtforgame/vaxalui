@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.1.28",
 =======
   "version": "0.1.25",
@@ -16,6 +17,12 @@
 =======
   "version": "0.1.27",
 >>>>>>> f26bc25... add page Mobile_Home
+=======
+  "version": "0.1.27",
+=======
+  "version": "0.1.25",
+>>>>>>> 912fd83... release for v0.1.25
+>>>>>>> 53ed284... no message
   "description": "Vaxal ui",
   "main": "index.js",
   "repository": {
