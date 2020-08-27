@@ -70,7 +70,11 @@ class ImageBoxSmall extends React.PureComponent {
       buttonDisplay,
       onClick,
       children,
+<<<<<<< HEAD
 >>>>>>> 912fd83... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
     } = this.props;
 
 
@@ -106,7 +110,11 @@ class ImageBoxSmall extends React.PureComponent {
           <BreakAllContentText className={classes.subtitle}>
             {subtitle}
           </BreakAllContentText>
+<<<<<<< HEAD
 >>>>>>> 912fd83... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> 62bbf5a... no message
 
           <div className={classes.space} />
 
