@@ -15,9 +15,9 @@ var _TextField = _interopRequireDefault(require("./TextField"));
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _PartnerForm = _interopRequireDefault(require("./PartnerForm"));
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
@@ -82,24 +82,7 @@ const styles = {
 };
 
 class Partner extends _react.default.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "state", {
-      email: ''
-    });
-
-    _defineProperty(this, "handleEmailChange", e => {
-      this.setState({
-        email: e.target.value
-      });
-    });
-  }
-
   render() {
-    const {
-      email
-    } = this.state;
     const {
       classes,
       backgroundImage,
@@ -117,28 +100,7 @@ class Partner extends _react.default.PureComponent {
       className: classes.title
     }, "Stay in Touch with SAYA"), _react.default.createElement("div", {
       className: classes.line
-    }), _react.default.createElement("div", {
-      className: classes.subtitle
-    }, "Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology."), _react.default.createElement("div", {
-      className: classes.email
-    }, _react.default.createElement(_TextField.default, {
-      className: classes.emailInput,
-      value: email,
-      onChange: this.handleEmailChange,
-      placeholder: "Your email address"
-    }), _react.default.createElement("div", {
-      className: classes.button
-    }, _react.default.createElement(_GreenButton.default, {
-      text: "SUBMIT"
-    }))), _react.default.createElement("div", {
-      className: classes.checkbox
-    }, _react.default.createElement("input", {
-      className: classes.box,
-      type: "checkbox",
-      value: "checkbox"
-    }), _react.default.createElement("div", {
-      className: classes.labelContent
-    }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.")))));
+    }), _react.default.createElement(_PartnerForm.default, null)));
   }
 
 }

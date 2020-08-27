@@ -2,24 +2,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from './GreenButton';
 import TextField from './TextField';
-import ImageContainer from '../ImageContainer';
-import PartnerForm from './PartnerForm';
 
 const styles = {
-  root: {
-    height: 500,
-    paddingTop: 90,
-  },
-  bottle: {
-    width: 880,
-    height: 320,
-    color: '#000000',
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    paddingTop: 75,
-    paddingLeft: 85,
-  },
   title: {
     fontSize: 40,
     fontWeight: 'bold',
@@ -69,23 +53,47 @@ const styles = {
 
 
 class Partner extends React.PureComponent {
+  state = {
+    email: '',
+  }
+
+  handleEmailChange = (e) => {
+    this.setState({
+      email: e.target.value,
+    });
+  }
+
   render() {
     const {
+      email,
+    } = this.state;
+    const {
       classes,
-      backgroundImage,
-      bottleImage,
     } = this.props;
     return (
-      <ImageContainer
-        className={classes.root}
-        image={backgroundImage}
-      >
-        <div className={classes.bottle} style={{ backgroundImage: `url(${bottleImage})` }}>
-          <div className={classes.title}>Stay in Touch with SAYA</div>
-          <div className={classes.line} />
-          <PartnerForm />
+      <React.Fragment>
+        <div className={classes.subtitle}>Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.</div>
+        <div className={classes.email}>
+          <TextField
+            className={classes.emailInput}
+            value={email}
+            onChange={this.handleEmailChange}
+            placeholder="Your email address"
+          />
+          <div className={classes.button}>
+            <GreenButton
+              text="SUBMIT"
+            />
+          </div>
         </div>
-      </ImageContainer>
+
+        <div className={classes.checkbox}>
+          <input className={classes.box} type="checkbox" value="checkbox" />
+          <div className={classes.labelContent}>
+            <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }
