@@ -17,18 +17,10 @@ import TopRightBox from '../img/bg6.jpg';
 import BottomLeftBox from '../img/bg7.jpg';
 import BottomRightBox from '../img/bg8.jpg';
 
-import MobileBg1 from '../img/mobile/m_bg38.jpg'
-
-
-
+import MobileBg1 from '../img/mobile/m_bg1.jpg'
 import MobileBg2 from '../img/mobile/m_bg2.jpg'
 
 import NextCircle from '../img/mobile/m_now_next_circle.png';
-
-import HomeTopSection from 'library/saya/Rick/HomeTopSection';
-import roundArrow from '../img/mobile/m_round_arrow.svg'
-
-
 
 storiesOf('saya|Pages/Mobile', module)
   // .addParameters({
@@ -40,20 +32,11 @@ storiesOf('saya|Pages/Mobile', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('MobileHome',
+  .add('MobileProduct',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
-
-
-          <HomeTopSection
-            backgroundImage={MobileBg1}
-            img={roundArrow}
-          />
-
-
-
-          {/* <TopSection
+          <TopSection
             firstTitle="PRODUCTS"
             secondTitle={'SAYA\nRenew\nFiber'}
             thirdTitle={'Design Consciously,\nKnow What Goes Into Your Gear'}
@@ -61,7 +44,6 @@ storiesOf('saya|Pages/Mobile', module)
             secondTitlePaddingTop={40}
             secondLineMarginTop={32}
           />
-          
           <Introduction
             height={570}
             title={'Not all Recycled\nFibers are\nCreated Equal,'}
@@ -124,7 +106,7 @@ storiesOf('saya|Pages/Mobile', module)
           </Boxes>
           <TwoCircleSection
             backgroundImage={NextCircle}
-          /> */}
+          />
         </MobileLayout>
       </div>
     ));
