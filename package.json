@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": "0.1.28",
 =======
   "version": "0.1.25",
@@ -27,10 +28,13 @@
 >>>>>>> a529698... no message
 =======
 >>>>>>> a78145c... no message
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
   "version": "0.1.27",
 =======
   "version": "0.1.25",
 >>>>>>> 912fd83... release for v0.1.25
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 53ed284... no message
 =======
@@ -40,6 +44,11 @@
 <<<<<<< HEAD
 >>>>>>> 422859f... no message
 =======
+=======
+=======
+  "version": "0.1.28",
+>>>>>>> b93a037... release for v0.1.28
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 =======
 =======
 >>>>>>> 8f2c70b... no message
@@ -54,14 +63,20 @@
 <<<<<<< HEAD
 >>>>>>> 62bbf5a... no message
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> a529698... no message
 =======
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 =======
 =======
   "version": "0.1.27",
 >>>>>>> f26bc25... add page Mobile_Home
 >>>>>>> 8f2c70b... no message
+<<<<<<< HEAD
 >>>>>>> a78145c... no message
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
   "description": "Vaxal ui",
   "main": "index.js",
   "repository": {

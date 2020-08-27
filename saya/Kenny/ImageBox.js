@@ -80,13 +80,17 @@ class ImageBoxSmall extends _react.default.PureComponent {
       onClick
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> a529698... no message
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 =======
       paddingTop,
       buttonDisplay,
       onClick,
       children
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
@@ -98,6 +102,9 @@ class ImageBoxSmall extends _react.default.PureComponent {
 =======
 >>>>>>> b81bf0c... release for v0.1.25
 >>>>>>> a529698... no message
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -121,6 +128,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
@@ -131,6 +139,9 @@ class ImageBoxSmall extends _react.default.PureComponent {
 >>>>>>> 53ed284... no message
 =======
 =======
+
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
+=======
 <<<<<<< HEAD
     }, titleBack)), _react.default.createElement("div", {
       className: classes.secondTitle
@@ -139,7 +150,10 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
 >>>>>>> b81bf0c... release for v0.1.25
 >>>>>>> 62bbf5a... no message
+<<<<<<< HEAD
 >>>>>>> a529698... no message
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
       className: classes.subtitle
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -156,6 +170,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
     })), _react.default.createElement("div", null, children)));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
@@ -165,6 +180,9 @@ class ImageBoxSmall extends _react.default.PureComponent {
 <<<<<<< HEAD
 >>>>>>> 53ed284... no message
 =======
+=======
+
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 =======
 <<<<<<< HEAD
       text: "Learn More",
@@ -176,7 +194,10 @@ class ImageBoxSmall extends _react.default.PureComponent {
     })), _react.default.createElement("div", null, children)));
 >>>>>>> b81bf0c... release for v0.1.25
 >>>>>>> 62bbf5a... no message
+<<<<<<< HEAD
 >>>>>>> a529698... no message
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
   }
 
 }

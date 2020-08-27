@@ -67,15 +67,19 @@ class ImageBoxSmall extends React.PureComponent {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 53ed284... no message
 =======
 >>>>>>> a78145c... no message
 =======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
+=======
       paddingTop,
       buttonDisplay,
       onClick,
       children,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,16 +93,23 @@ class ImageBoxSmall extends React.PureComponent {
 >>>>>>> 912fd83... release for v0.1.25
 >>>>>>> 53ed284... no message
 =======
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 >>>>>>> 912fd83... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
 >>>>>>> 62bbf5a... no message
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a529698... no message
 =======
 =======
 >>>>>>> 8f2c70b... no message
 >>>>>>> a78145c... no message
+=======
+=======
+>>>>>>> 8f2c70b... no message
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
     } = this.props;
 
 
@@ -132,14 +143,18 @@ class ImageBoxSmall extends React.PureComponent {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 53ed284... no message
 =======
 >>>>>>> a78145c... no message
 =======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
+=======
           <BreakAllContentText className={classes.subtitle}>
             {subtitle}
           </BreakAllContentText>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -153,16 +168,23 @@ class ImageBoxSmall extends React.PureComponent {
 >>>>>>> 912fd83... release for v0.1.25
 >>>>>>> 53ed284... no message
 =======
+=======
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 >>>>>>> 912fd83... release for v0.1.25
 =======
 >>>>>>> b81bf0c... release for v0.1.25
 >>>>>>> 62bbf5a... no message
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> a529698... no message
 =======
 =======
 >>>>>>> 8f2c70b... no message
 >>>>>>> a78145c... no message
+=======
+=======
+>>>>>>> 8f2c70b... no message
+>>>>>>> a78145c517218727181ab8e23b49f90b15a6f29f
 
           <div className={classes.space} />
 
