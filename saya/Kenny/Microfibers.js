@@ -17,7 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    height: 580
+    height: 580,
+    fontFamily: 'FilsonSoftRegular'
   },
   section: {
     width: 900,

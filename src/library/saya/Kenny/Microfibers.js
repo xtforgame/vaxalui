@@ -6,6 +6,7 @@ import SwipperT1 from '../SwipperT1';
 const styles = {
   root: {
     height: 580,
+    fontFamily: 'FilsonSoftRegular',
   },
   section: {
     width: 900,
