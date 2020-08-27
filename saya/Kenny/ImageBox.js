@@ -83,7 +83,11 @@ class ImageBoxSmall extends _react.default.PureComponent {
       buttonDisplay,
       onClick,
       children
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> b5028bb... no message
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -108,7 +112,11 @@ class ImageBoxSmall extends _react.default.PureComponent {
     }, secondTitle)), _react.default.createElement("div", {
 =======
     }, titleBack)), _react.default.createElement(_BreakAllContentText.default, {
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> b5028bb... no message
       className: classes.subtitle
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -127,7 +135,11 @@ class ImageBoxSmall extends _react.default.PureComponent {
       onClick: onClick,
       text: "Learn More"
     })), _react.default.createElement("div", null, children)));
+<<<<<<< HEAD
 >>>>>>> af40d3e... release for v0.1.25
+=======
+>>>>>>> b81bf0c... release for v0.1.25
+>>>>>>> b5028bb... no message
   }
 
 }
