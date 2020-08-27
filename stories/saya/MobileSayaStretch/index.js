@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TopSection from 'library/saya/Rick/TopSection';
-<<<<<<< HEAD
 import Introduction from 'library/saya/Rick/Introduction';
 import Table from 'library/saya/Rick/Table';
 import TitleWithContent from 'library/saya/Kenny/TitleWithContent';
@@ -18,21 +17,6 @@ import MobileBg3 from '../img/mobile/m_bg34.jpg'
 import leftBox from '../img/mobile/m_bg35.jpg';
 import midBox from '../img/mobile/m_bg36.jpg';
 import rightBox from '../img/mobile/m_bg37.jpg';
-=======
-import ImageContainer from 'library/saya/ImageContainer';
-import Card from 'library/saya/Card';
-
-import MobileLayout from '../shared/MobileLayout';
-
-import MobileBg1 from '../img/mobile/m_bg31.jpg'
-import articlePic1 from '../img/mobile/m_pic1.jpg';
-import articlePic2 from '../img/mobile/m_pic2.jpg';
-import articlePic3 from '../img/mobile/m_pic3.jpg';
-import articlePic4 from '../img/mobile/m_pic4.jpg';
-
-import Table from 'library/saya/Rick/Table';
-import TitleWithContent from 'library/saya/Kenny/TitleWithContent';
->>>>>>> 4427ec1... fix page MobileSayaStretch <Table>
 
 
 storiesOf('saya|Pages/Mobile', module)
@@ -49,7 +33,6 @@ storiesOf('saya|Pages/Mobile', module)
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
-<<<<<<< HEAD
           <TopSection
             firstTitle="SAYA Performance Fiber"
             secondTitle={'SAYA'}
@@ -91,11 +74,6 @@ storiesOf('saya|Pages/Mobile', module)
             />
           </div>
 
-=======
-          
-
-          
->>>>>>> 4427ec1... fix page MobileSayaStretch <Table>
           <div style={{ paddingTop: 10, }}>
             <TitleWithContent
               height={900}
@@ -109,7 +87,6 @@ storiesOf('saya|Pages/Mobile', module)
               </div>
             </TitleWithContent>
           </div>
-<<<<<<< HEAD
 
           <TitleLineBox
             title={'Other SAYA\nPerformance Fibers'}
@@ -140,8 +117,6 @@ storiesOf('saya|Pages/Mobile', module)
               fontColor="#ffffff"
             />
           </TitleLineBox>
-=======
->>>>>>> 4427ec1... fix page MobileSayaStretch <Table>
         </MobileLayout>
       </div>
     )
