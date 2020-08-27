@@ -31,6 +31,9 @@ import './Partners';
 // MobileHome
 import './MobileHome';
 
+// MobileProduct
+import './MobileProduct';
+
 // MobileNow
 import './MobileNow';
 
