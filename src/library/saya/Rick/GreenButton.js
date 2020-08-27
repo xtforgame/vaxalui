@@ -23,13 +23,14 @@ class ImageBox extends React.PureComponent {
     const {
       classes,
       marginTop,
+      width,
       text,
     } = this.props;
 
 
     return (
       <div>
-        <button className={classes.button} style={{ marginTop: marginTop }} >
+        <button className={classes.button} style={{ marginTop: marginTop, width: width, }} >
           {text}
         </button>
       </div>

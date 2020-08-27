@@ -9,12 +9,12 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     fontFamily: 'FilsonSoft-Bold',
     color: '#000000',
+    lineHeight: '1.18',
   },
   firstTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    lineHeight: 1.4,
-
+    lineHeight: '1.18',
     paddingTop: 57,
     // borderBottomStyle: 'solid',
     // borderBottomWidth: 2,
@@ -43,21 +43,28 @@ const useStyles = makeStyles(theme => ({
   },
   thirdTitle: {
     fontSize: 18,
-
+    paddingTop: 10,
+    fontFamily: 'FilsonSoftRegular',
   },
 }));
 
 export default (props) => {
   const {
     firstTitle,
+    firsrtTitlePaddingTop,
     secondTitle,
     secondTitleBack,
+    secondTitleFontSize,
     secondTitlePaddingTop,
+    lineDisplay,
     secondLineMarginTop,
     thirdTitle,
     backgroundImage,
     lineBackgroundColor,
     color,
+    height,
+    thirdTitleFontFamily,
+    children,
   } = props;
 
   const classes = useStyles();
@@ -66,21 +73,24 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ color, height: 590 }}
+      style={{ color, height, }}
     >
       <div
         style={{ position: 'absolute' }}
       >
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.firstTitle}>
+          <div className={classes.firstTitle} style={{ paddingTop: firsrtTitlePaddingTop, }}>
             {firstTitle}
-            <div className={classes.firstLine} style={{ backgroundColor: lineBackgroundColor, }} />
+            <div className={classes.firstLine} style={{ backgroundColor: lineBackgroundColor, display: lineDisplay, }} />
           </div>
         </div>
 
         <div className={classes.secondTitle}>
           <pre style={{
             fontFamily: 'FilsonSoft-Bold',
+            fontSize: secondTitleFontSize,
+            marginBottom: 0,
+            marginTop: 0,
             paddingTop: secondTitlePaddingTop
           }}
           >
@@ -100,8 +110,20 @@ export default (props) => {
         </div>
 
         <div className={classes.thirdTitle}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular' }}>{thirdTitle}</pre>
+          <pre
+            style={{
+              fontFamily: thirdTitleFontFamily,
+              marginBottom: 0,
+              marginTop: 0,
+            }}
+          >
+            {thirdTitle}
+          </pre>
         </div>
+        <div>
+          {children}
+        </div>
+
       </div>
     </ImageContainer>
   );

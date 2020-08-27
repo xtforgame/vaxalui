@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 17,
     lineHeight: 1.35,
     fontFamily: 'FilsonSoftRegular ',
-    paddingTop: 4,
+    paddingTop: 10,
   },
 }));
 
@@ -67,8 +67,8 @@ export default (props) => {
           <div className={classes.line} />
         </div>
 
-        <div className={classes.thirdTitle}>
-          <pre >
+        <div className={classes.thirdTitle} >
+          <pre style={{ marginBottom: 0, marginTop: 0, }}>
             {'Addressing Garment\nIndustry Waste -\nA true and inconvenient reality'}
           </pre>
         </div>
