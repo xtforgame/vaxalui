@@ -47,6 +47,7 @@ import './MobileNextRscuw';
 import './MobileSustainabilityInnovations';
 
 // MobileSayaStretch
+<<<<<<< HEAD
 import './MobileSayaStretch';
 
 // MobileSayaFresh
@@ -57,3 +58,6 @@ import './MobileSayaMicrodiber';
 
 // MobileSayaChromuchSolutionDyed
 import './MobileSayaChromuchSolutionDyed';
+=======
+import './MobileSayaStretch';
+>>>>>>> 4427ec1... fix page MobileSayaStretch <Table>
