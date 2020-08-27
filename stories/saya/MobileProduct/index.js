@@ -52,7 +52,7 @@ storiesOf('saya|Pages/Mobile', module)
             backgroundImage={MobileBg2}
             color="#ffffff"
             lineColor="#ffffff"
-          />          
+          />
           <Boxes
             title="SAYA 365"
             subtitle="Under SAYA Now Technology."
@@ -104,9 +104,19 @@ storiesOf('saya|Pages/Mobile', module)
               fontColor="#ffffff"
             />
           </Boxes>
+
           <TwoCircleSection
             backgroundImage={NextCircle}
-          />
+            height={888}
+            circleMarginTop={45}
+          >
+            <div style={{ fontSize: 18, fontFamily: 'FilsonSoftRegular', paddingTop: 72, }}>
+              All The Products are Available in
+              <div style={{ fontFamily: 'FilsonSoft-Bold', }}>SAYA Now & SAYA Next</div>
+              <div>Technologies.</div>
+            </div>
+
+          </TwoCircleSection>
         </MobileLayout>
       </div>
     ));
