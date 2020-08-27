@@ -70,4 +70,10 @@ import './MobilePartners';
 // MobileNowUsa
 import './MobileNowUsa';
 
+// MobileBrandPartners
+import './MobileBrandPartners';
+
+// MobileCertifications
+import './MobileCertifications';
+
 

@@ -11,13 +11,13 @@ import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
 
 import MobileLayout from '../shared/MobileLayout';
 
-import MobileBg1 from '../img/mobile/m_bg18.jpg'
-import MobileBg2 from '../img/mobile/m_bg19.jpg'
+import MobileBg1 from '../img/mobile/m_bg53.jpg'
+import MobileBg2 from '../img/mobile/m_bg54.jpg'
 import icon1 from '../img/icon15.svg'
 import icon2 from '../img/icon16.svg';
 import icon3 from '../img/icon17.svg';
 import icon4 from '../img/icon18.svg';
-import leftBox from '../img/mobile/m_bg20.jpg';
+import leftBox from '../img/mobile/m_bg58.jpg';
 import rightBox from '../img/mobile/m_bg21.jpg';
 
 
@@ -31,33 +31,37 @@ storiesOf('saya|Pages/Mobile', module)
   //     maxPropArrayLength: 10,
   //   },
   // })
-  .add('MobileTextilePartners',
+  .add('MobileBrandPartners',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
           <TopSection
             firstTitle="PARTNERS"
-            secondTitle={'Textile\nPartners'}
-            thirdTitle={'Backbone of our\nsustainable textile business'}
+            secondTitle={'Brand\nPartners'}
+            thirdTitle={'Design with Peace of Mind,\nand Good Conscience'}
             backgroundImage={MobileBg1}
             secondTitlePaddingTop={115}
             secondLineMarginTop={106}
+            lineBackgroundColor="#ffffff"
+            color="#ffffff"
           />
 
-          <Introduction
-            height={575}
-            title={'From One\nProfessional to\nAnother'}
-            subtitle={'We know how to make your job\neasier'}
-            content={`SAYA supplies the best-in-class performance\nfibers to top fabric manufacturers around the\nworld. SAYA recycled fibers retain the best\nstrength, dyeability, and overall A Grade yield.\n\nWhether you need better fabric tenacity, color\nmatching or simply hassle-free transition to\nrecycled content, we got your back.`}
-            backgroundImage={MobileBg2}
-            color="#ffffff"
-            lineColor="#ffffff"
-          />
+          <div style={{ marginTop: 23, }}>
+            <Introduction
+              height={575}
+              title={'Design with Peace\nof Mind, and Good\nConscience'}
+              subtitle={'Building Blocks Behind Every\nGreat Product'}
+              content={`Cras quis nulla commodo, aliquam lectus sed,\nblandit augue. Cras ullamcorper bibendum\nbibendum.Duis tincidunt urna non pretium\nporta. Nam condimentum vitae ligula vel\nornare. Phasellus at semper turpis. Nunc eu\ntellus tortor. Etiam at condimentum nisl, vitae\nsagittis orci. Donec id dignissim nunc. Donec\nelit ante, eleifend a dolor et, venenatis facilisis\ndolor.`}
+              backgroundImage={MobileBg2}
+              color="#ffffff"
+              lineColor="#ffffff"
+            />
+          </div>
 
           <ImageContainer
             style={{
               height: 165,
-              backgroundColor: '#64703f',
+              backgroundColor: '#c0c823',
               fontSize: 27,
               fontWeight: 'bold',
               fontFamily: 'FilsonSoft-Bold',
@@ -73,9 +77,9 @@ storiesOf('saya|Pages/Mobile', module)
 
           <ImageContainer
             style={{
-              height: 666,
+              height: 486,
               justifyContent: 'center',
-              backgroundColor: '#231f20'
+              backgroundColor: '#444343'
             }}
           >
             <IconBoxSection>
@@ -92,15 +96,6 @@ storiesOf('saya|Pages/Mobile', module)
               <IconBox imgUrl={icon4} width={90} />
             </IconBoxSection>
 
-
-            <IconBoxSection>
-              <IconBox imgUrl={icon1} width={90} />
-              <IconBox imgUrl={icon2} width={90} />
-              <IconBox imgUrl={icon3} width={90} />
-              <IconBox imgUrl={icon4} width={90} />
-            </IconBoxSection>
-
-
             <IconBoxSection>
               <IconBox imgUrl={icon1} width={90} />
               <IconBox imgUrl={icon2} width={90} />
@@ -111,18 +106,9 @@ storiesOf('saya|Pages/Mobile', module)
             <IconBoxSection>
               <IconBox imgUrl={icon1} width={90} />
               <IconBox imgUrl={icon2} width={90} />
-              <IconBox imgUrl={icon3} width={90} />
-              <IconBox imgUrl={icon4} width={90} />
-            </IconBoxSection>
-            
-            <IconBoxSection>
-              <IconBox imgUrl={icon1} width={90} />
-              <IconBox imgUrl={icon2} width={90} />
-              <IconBox imgUrl={icon3} width={90} />
+              <IconBox width={90} />
               <IconBox width={90} />
             </IconBoxSection>
-
-
           </ImageContainer>
 
           <TitleLineBox
@@ -131,7 +117,7 @@ storiesOf('saya|Pages/Mobile', module)
             color="#000000"
           >
             <ImageBoxSmall
-              title="Brand Partners"
+              title="Textile Partners"
               backgroundImage={leftBox}
               paddingTop={70}
               fontColor="#ffffff"
