@@ -61,3 +61,13 @@ import './MobileSayaChromuchSolutionDyed';
 // MobileNews
 import './MobileNews';
 
+// MobileAboutSaya
+import './MobileAboutSaya';
+
+// MobilePartners
+import './MobilePartners';
+
+// MobileNowUsa
+import './MobileNowUsa';
+
+

@@ -19,12 +19,12 @@ const useStyles = makeStyles(theme => ({
   subtitle: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 4,
+    paddingTop: 22,
   },
   content: {
     textAlign: 'left',
     fontSize: 14,
-    paddingTop: 10,
+    paddingTop: 23,
     lineHeight: 1.5,
   },
 }));
@@ -66,10 +66,10 @@ export default (props) => {
         </div>
 
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{subtitle}</pre>
+          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, marginTop: 0 }}>{subtitle}</pre>
         </div>
         <div className={classes.content}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular', marginBottom: 0, }}>{content}</pre>
+          <pre style={{ fontFamily: 'FilsonSoftRegular', marginBottom: 0, marginTop: 0, }}>{content}</pre>
         </div>
         <div>
           {children}
