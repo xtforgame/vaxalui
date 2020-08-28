@@ -79,3 +79,5 @@ import './MobileCertifications';
 // MobileTechnologies
 import './MobileTechnologies';
 
+// MobileNowCoastal
+import './MobileNowCoastal';
