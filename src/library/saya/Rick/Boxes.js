@@ -29,6 +29,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const {
     title,
+    titleBack,
     subtitle,
     content,
     color,
@@ -50,7 +51,10 @@ export default (props) => {
           style={{ position: 'absolute', width: '80%', }}
         >
           <div className={classes.title}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0}}>{title}</pre>
+            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>
+              {title}
+              <span style={{ fontFamily: 'FilsonSoftLight', }}>{titleBack}</span>
+            </pre>
           </div>
 
           <div className={classes.subtitle}>
@@ -63,12 +67,12 @@ export default (props) => {
 
           {/* <div style={{ flex: 0, height: 40, width: '100%' }} /> */}
           <div className={classes.content}>
-            <pre style={{ fontFamily: 'FilsonSoftRegular' ,margin: 0}}>{content}</pre>
+            <pre style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{content}</pre>
           </div>
 
 
           <div style={{
-            display: 'flex', position: 'absolute', backgroundColor,marginTop:57,
+            display: 'flex', position: 'absolute', backgroundColor, marginTop: 57,
           }}>
             {children}
           </div>

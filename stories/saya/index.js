@@ -76,4 +76,6 @@ import './MobileBrandPartners';
 // MobileCertifications
 import './MobileCertifications';
 
+// MobileTechnologies
+import './MobileTechnologies';
 

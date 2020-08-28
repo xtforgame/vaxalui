@@ -212,17 +212,17 @@ storiesOf('saya|Pages/Mobile', module)
             color="#000000"
           >
             <ImageBoxSmall
-              title="RSCUW"
-              titleBack="RAW"
-              subtitle="lor sit amet, consectetuer ad"
+              title="SAYA"
+              titleBack="RSCUW RAW"
+              subtitle={'Unbleached Renew FIbers\nRaw from the Source'}
               backgroundImage={leftBox}
-              paddingTop={70}
-              fontColor="#ffffff"
+              paddingTop={35}
+              fontColor="#000000"
             />
             <ImageBoxSmall
               title="SAYA"
               titleBack="GARMA"
-              subtitle="lor sit amet, consectetuer ad"
+              subtitle={'One Stop Used\nGarment to Fiber Solution'}
               backgroundImage={rightBox}
               paddingTop={70}
               fontColor="#ffffff"
