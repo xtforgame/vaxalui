@@ -58,6 +58,7 @@ export default (props) => {
     secondTitlePaddingTop,
     lineDisplay,
     secondLineMarginTop,
+    secondLineDisplay,  
     thirdTitle,
     backgroundImage,
     lineBackgroundColor,
@@ -91,7 +92,7 @@ export default (props) => {
             fontSize: secondTitleFontSize,
             marginBottom: 0,
             marginTop: 0,
-            paddingTop: secondTitlePaddingTop
+            paddingTop: secondTitlePaddingTop,
           }}
           >
             {secondTitle}
@@ -106,7 +107,9 @@ export default (props) => {
           marginTop: secondLineMarginTop,
         }}
         >
-          <div className={classes.secondLine} style={{ backgroundColor: lineBackgroundColor, }} />
+          <div className={classes.secondLine} style={{
+            backgroundColor: lineBackgroundColor, display: secondLineDisplay,
+          }} />
         </div>
 
         <div className={classes.thirdTitle}>

@@ -84,3 +84,12 @@ import './MobileNowCoastal';
 
 // MobileSaya365
 import './MobileSaya365';
+
+// MobileSustainabilityInnovationsArticle
+import './MobileSustainabilityInnovationsArticle';
+
+// MobileNewsArticle
+import './MobileNewsArticle';
+
+// MobileMediaDownloads
+import './MobileMediaDownloads';

@@ -5,25 +5,26 @@ import TextField from './TextField';
 
 const styles = {
   subtitle: {
-    width: 245,
+    width: 280,
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 30,
+    paddingTop: 23,
   },
   email: {
     display: 'flex',
-    marginTop: 10,
+    marginTop: 15,
   },
   emailInput: {
-    width: 245,
-    fontSize: 10,
+    width: 280,
+    fontSize: 12,
     color: '#000000',
-    borderColor: '#000000',
+    borderColor: '#ffffff',
+    backgroundColor:'#ffffff'
   },
   button: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop:23,
+    marginTop: 23,
   },
   checkbox: {
     display: 'flex',
@@ -34,10 +35,10 @@ const styles = {
     height: 25,
   },
   labelContent: {
-    width: 201,
+    width: 231,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 20,
+    paddingLeft: 18,
   },
 };
 
@@ -63,7 +64,7 @@ class Partner extends React.PureComponent {
     return (
       <React.Fragment>
         <pre className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0, }}>
-          {'Sign up to stay in touch on the newest\nrenewal technologies, products,\nevents, and news from SAYA. '}
+          {'Sign up to stay in touch on the newest\nrenewal technologies, products, events, and\nnews from SAYA.'}
         </pre>
         <div className={classes.email}>
           <TextField
@@ -84,7 +85,8 @@ class Partner extends React.PureComponent {
         <div className={classes.button}>
           <GreenButton
             text="SUBMIT"
-            width={245}
+            width={280}
+            height={44}
           />
         </div>
       </React.Fragment>
