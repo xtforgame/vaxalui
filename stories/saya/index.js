@@ -81,3 +81,6 @@ import './MobileTechnologies';
 
 // MobileNowCoastal
 import './MobileNowCoastal';
+
+// MobileSaya365
+import './MobileSaya365';
