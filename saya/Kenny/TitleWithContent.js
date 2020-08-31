@@ -52,10 +52,11 @@ class Introduction extends _react.default.PureComponent {
       height,
       title,
       backgroundImage,
-      titleWidth,
+      fontSize,
       children,
       fontColor,
-      backgroundColor
+      backgroundColor,
+      width
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
@@ -68,7 +69,11 @@ class Introduction extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.container
     }, _react.default.createElement(_BreakAllContentText.default, {
-      className: classes.title
+      className: classes.title,
+      style: {
+        fontSize: fontSize,
+        width: width
+      }
     }, title), _react.default.createElement("div", null, children)));
   }
 

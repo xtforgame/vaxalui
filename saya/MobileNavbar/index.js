@@ -63,7 +63,6 @@ class MobileNavbar extends _react.default.PureComponent {
     });
 
     _defineProperty(this, "handleMenuChange", (e, value) => {
-      console.log('[TODO] handleMenuChange, link clicked', value);
       this.setState({
         isOpen: false
       });
@@ -72,7 +71,9 @@ class MobileNavbar extends _react.default.PureComponent {
 
   render() {
     const {
+      onLinkClick,
       classes,
+      items,
       children
     } = this.props;
     const {
@@ -101,7 +102,8 @@ class MobileNavbar extends _react.default.PureComponent {
         [classes.openedMenu]: isOpen,
         [classes.closedMenu]: !isOpen
       }),
-      items: _navigation.default,
+      items: items || _navigation.default,
+      onLinkClick: onLinkClick,
       onChange: this.handleMenuChange
     })));
   }

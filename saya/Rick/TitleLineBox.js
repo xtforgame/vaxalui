@@ -15,34 +15,23 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    height: 717,
-    textAlign: 'center'
+    height: 631,
+    textAlign: 'left',
+    paddingTop: 70
   },
   title: {
-    fontSize: 33,
-    paddingTop: 88
+    fontSize: 18
   },
-  secondLine: {
+  line: {
     width: '100%',
     height: 1,
-    marginTop: 2
-  },
-  subtitle: {
-    fontSize: 18,
-    paddingTop: 10
-  },
-  content: {
-    fontSize: 18,
-    paddingTop: 22
+    marginTop: 5
   }
 }));
 
 var _default = props => {
   const {
     title,
-    titleBack,
-    subtitle,
-    content,
     color,
     backgroundColor,
     children
@@ -65,43 +54,22 @@ var _default = props => {
     className: classes.title
   }, _react.default.createElement("pre", {
     style: {
-      fontFamily: 'FilsonSoft-Bold',
-      margin: 0
+      fontFamily: 'FilsonSoft-Bold'
     }
-  }, title, _react.default.createElement("span", {
+  }, title)), _react.default.createElement("div", {
     style: {
-      fontFamily: 'FilsonSoftLight'
-    }
-  }, titleBack))), _react.default.createElement("div", {
-    className: classes.subtitle
-  }, _react.default.createElement("pre", {
-    style: {
-      fontFamily: 'FilsonSoft-Bold',
-      margin: 0
-    }
-  }, subtitle)), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
+      display: 'flex'
     }
   }, _react.default.createElement("div", {
-    className: classes.secondLine,
+    className: classes.line,
     style: {
       backgroundColor: color
     }
   })), _react.default.createElement("div", {
-    className: classes.content
-  }, _react.default.createElement("pre", {
     style: {
-      fontFamily: 'FilsonSoftRegular',
-      margin: 0
-    }
-  }, content)), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
       position: 'absolute',
-      backgroundColor,
-      marginTop: 57
+      display: 'flex',
+      marginTop: 56
     }
   }, children))));
 };

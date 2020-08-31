@@ -15,94 +15,85 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'FilsonSoft-Bold',
+    color: '#000000'
   },
-  title: {
-    textAlign: 'left',
-    fontSize: 33,
-    paddingTop: 47
+  firstTitle: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    lineHeight: 1.18,
+    paddingTop: 112
+  },
+  secondTitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    paddingTop: 31
   },
   line: {
-    width: '100%',
+    width: 230,
     height: 1,
-    marginTop: 23
+    backgroundColor: '#000000',
+    marginTop: 31
   },
-  subtitle: {
-    textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 22
-  },
-  content: {
-    textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 23,
-    lineHeight: 1.5
+  thirdTitle: {
+    fontSize: 17,
+    lineHeight: 1.35,
+    fontFamily: 'FilsonSoftRegular ',
+    paddingTop: 10
   }
 }));
 
 var _default = props => {
   const {
-    title,
-    titlePaddingTop,
-    subtitle,
-    content,
-    height,
     backgroundImage,
-    backgroundColor,
-    color,
-    lineColor,
-    lineDisplay,
-    children
+    img
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
     image: backgroundImage,
     className: classes.root,
     style: {
-      height,
-      color,
-      width: '100%',
-      backgroundColor: backgroundColor
+      height: 590
     }
   }, _react.default.createElement("div", {
     style: {
       position: 'absolute'
     }
   }, _react.default.createElement("div", {
-    className: classes.title
-  }, _react.default.createElement("pre", {
     style: {
-      fontFamily: 'FilsonSoft-Bold',
+      display: 'flex',
+      justifyContent: 'center'
+    }
+  }, _react.default.createElement("pre", {
+    className: classes.firstTitle,
+    style: {
       marginBottom: 0
     }
-  }, title)), _react.default.createElement("div", {
+  }, 'SAYA\nRSCUW\nProject')), _react.default.createElement("div", {
+    className: classes.secondTitle
+  }, "- Recycled Scrap & Cutting Waste -"), _react.default.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
     }
   }, _react.default.createElement("div", {
-    className: classes.line,
-    style: {
-      backgroundColor: lineColor,
-      display: lineDisplay
-    }
+    className: classes.line
   })), _react.default.createElement("div", {
-    className: classes.subtitle
+    className: classes.thirdTitle
   }, _react.default.createElement("pre", {
     style: {
-      fontFamily: 'FilsonSoft-Bold',
       marginBottom: 0,
       marginTop: 0
     }
-  }, subtitle)), _react.default.createElement("div", {
-    className: classes.content
-  }, _react.default.createElement("pre", {
+  }, 'Addressing Garment\nIndustry Waste -\nA true and inconvenient reality')), _react.default.createElement("img", {
+    src: img,
     style: {
-      fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0,
-      marginTop: 0
+      width: 55,
+      height: 55,
+      marginTop: 24
     }
-  }, content)), _react.default.createElement("div", null, children)));
+  })));
 };
 
 exports.default = _default;

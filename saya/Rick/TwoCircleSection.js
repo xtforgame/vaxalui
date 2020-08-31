@@ -14,23 +14,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const styles = {
   root: {
     width: '100%',
-    height: 888,
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     fontSize: 18
   },
-  title: {
-    fontSize: 33,
-    fontWeight: 'bold',
-    color: '#000000',
-    paddingTop: 110
-  },
   circle: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 60
+    marginTop: 45
   }
 };
 
@@ -38,22 +31,23 @@ class TwoCircleSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
+      height,
+      backgroundImage,
+      backgroundColor,
+      circleMarginTop,
+      children
     } = this.props;
-    const content = 'SAYA Recycling Technologies\nfrom Bottles to Garments and Beyond';
     return _react.default.createElement("div", {
-      className: classes.root
-    }, _react.default.createElement("div", {
+      className: classes.root,
       style: {
-        width: '100%',
-        marginTop: 40
+        height: height,
+        backgroundColor: backgroundColor
       }
-    }, _react.default.createElement("pre", {
+    }, _react.default.createElement("div", null, children), _react.default.createElement("div", {
+      className: classes.circle,
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        marginTop: circleMarginTop
       }
-    }, content)), _react.default.createElement("div", {
-      className: classes.circle
     }, _react.default.createElement("img", {
       src: backgroundImage,
       height: 610

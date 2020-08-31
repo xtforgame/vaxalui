@@ -9,49 +9,31 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
+var _ImageContainer = _interopRequireDefault(require("./ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
-  root: {
-    textAlign: 'center'
-  },
-  title: {
-    textAlign: 'left',
-    fontSize: 33,
-    paddingTop: 47
-  },
-  line: {
-    width: '100%',
-    height: 1,
-    marginTop: 23
-  },
   subtitle: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 22
+    fontSize: 18
   },
   content: {
     textAlign: 'left',
     fontSize: 14,
-    paddingTop: 23,
-    lineHeight: 1.5
+    paddingTop: 7
   }
 }));
 
 var _default = props => {
   const {
-    title,
-    titlePaddingTop,
-    subtitle,
-    content,
-    height,
+    paddingTop,
     backgroundImage,
     backgroundColor,
-    color,
-    lineColor,
-    lineDisplay,
+    fontColor,
+    height,
+    content,
+    subtitle,
     children
   } = props;
   const classes = useStyles();
@@ -60,33 +42,16 @@ var _default = props => {
     className: classes.root,
     style: {
       height,
-      color,
+      backgroundColor,
       width: '100%',
-      backgroundColor: backgroundColor
+      paddingTop: paddingTop
     }
   }, _react.default.createElement("div", {
     style: {
-      position: 'absolute'
+      position: 'absolute',
+      color: fontColor
     }
   }, _react.default.createElement("div", {
-    className: classes.title
-  }, _react.default.createElement("pre", {
-    style: {
-      fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0
-    }
-  }, title)), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, _react.default.createElement("div", {
-    className: classes.line,
-    style: {
-      backgroundColor: lineColor,
-      display: lineDisplay
-    }
-  })), _react.default.createElement("div", {
     className: classes.subtitle
   }, _react.default.createElement("pre", {
     style: {
@@ -99,8 +64,7 @@ var _default = props => {
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0,
-      marginTop: 0
+      marginBottom: 0
     }
   }, content)), _react.default.createElement("div", null, children)));
 };

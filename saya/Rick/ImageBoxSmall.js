@@ -13,33 +13,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    width: 325,
-    height: 405,
+    width: 260,
+    height: 325,
     textAlign: 'center',
     borderRadius: 30,
-    marginBottom: 50,
+    marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
-    position: 'relative'
+    position: 'relative',
+    backgroundSize: 'cover'
   },
   title: {
-    fontSize: 33,
+    fontSize: 27,
     fontWeight: 'bold'
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 14,
     fontWeight: 'bold',
-    paddingTop: 10
+    paddingTop: 4
   },
   button: {
-    width: 130,
-    height: 45,
-    fontSize: 14,
+    width: 160,
+    height: 50,
+    fontSize: 15,
     color: '#ffffff',
     fontWeight: 'bold',
     backgroundColor: '#64703f',
     border: 'none',
-    borderRadius: 22,
-    marginTop: 160,
+    borderRadius: 25,
+    marginTop: 97,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -47,13 +48,15 @@ const styles = {
   }
 };
 
-class ImageBox extends _react.default.PureComponent {
+class ImageBoxSmall extends _react.default.PureComponent {
   render() {
     const {
       classes,
       title,
+      titleBack,
       subtitle,
       backgroundImage,
+      subtitleFontFamily,
       fontColor,
       paddingTop
     } = this.props;
@@ -63,20 +66,31 @@ class ImageBox extends _react.default.PureComponent {
         backgroundImage: `url(${backgroundImage})`,
         color: fontColor
       }
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement("pre", {
       className: classes.title,
       style: {
-        paddingTop
+        paddingTop,
+        marginTop: 0,
+        marginBottom: 0
       }
-    }, title), _react.default.createElement("div", {
-      className: classes.subtitle
+    }, title, _react.default.createElement("span", {
+      style: {
+        fontFamily: 'FilsonSoftLight',
+        fontWeight: 'normal'
+      }
+    }, titleBack)), _react.default.createElement("pre", {
+      className: classes.subtitle,
+      style: {
+        marginTop: 0,
+        marginBottom: 0
+      }
     }, subtitle), _react.default.createElement("div", {
       style: {
         position: 'absolute',
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        bottom: 62
+        bottom: 50
       }
     }, _react.default.createElement("button", {
       className: classes.button
@@ -85,6 +99,6 @@ class ImageBox extends _react.default.PureComponent {
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(ImageBox);
+var _default = (0, _styles.withStyles)(styles)(ImageBoxSmall);
 
 exports.default = _default;

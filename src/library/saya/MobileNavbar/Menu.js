@@ -98,10 +98,16 @@ class Menu extends React.PureComponent {
     const {
       classes,
       className,
+      onLinkClick,
     } = this.props;
     return (
       <MenuContext.Provider
-        value={this.state}
+        value={{
+          ...this.state,
+          onLinkClick: onLinkClick || ((path) => {
+            console.warn('default onLinkClick', path);
+          }),
+        }}
       >
         <div
           className={clsx(classes.menuRoot, className)}

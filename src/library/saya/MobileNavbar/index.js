@@ -43,7 +43,6 @@ class MobileNavbar extends React.PureComponent {
   }
 
   handleMenuChange = (e, value) => {
-    console.log('[TODO] handleMenuChange, link clicked', value);
     this.setState({
       isOpen: false,
     });
@@ -51,7 +50,9 @@ class MobileNavbar extends React.PureComponent {
 
   render() {
     const {
+      onLinkClick,
       classes,
+      items,
       children,
     } = this.props;
     const {
@@ -77,7 +78,8 @@ class MobileNavbar extends React.PureComponent {
               [classes.openedMenu]: isOpen,
               [classes.closedMenu]: !isOpen,
             })}
-            items={navItems}
+            items={items || navItems}
+            onLinkClick={onLinkClick}
             onChange={this.handleMenuChange}
           />
         </div>

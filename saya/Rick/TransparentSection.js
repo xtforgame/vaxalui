@@ -15,27 +15,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    textAlign: 'center'
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'left',
+    alignItems: 'left',
+    color: '#ffffff',
+    width: '100%',
+    backgroundSize: 'cover'
   },
   title: {
     textAlign: 'left',
-    fontSize: 33,
-    paddingTop: 47
+    fontSize: 33
   },
   line: {
-    width: '100%',
+    width: 305,
+    backgroundColor: '#ffffff',
     height: 1,
     marginTop: 23
   },
   subtitle: {
     textAlign: 'left',
     fontSize: 18,
-    paddingTop: 22
+    paddingTop: 4
   },
   content: {
     textAlign: 'left',
     fontSize: 14,
-    paddingTop: 23,
+    paddingTop: 10,
     lineHeight: 1.5
   }
 }));
@@ -44,29 +50,25 @@ var _default = props => {
   const {
     title,
     titlePaddingTop,
+    marginTop,
     subtitle,
     content,
     height,
     backgroundImage,
-    backgroundColor,
-    color,
-    lineColor,
-    lineDisplay,
     children
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_ImageContainer.default, {
-    image: backgroundImage,
+  return _react.default.createElement("div", {
     className: classes.root,
     style: {
-      height,
-      color,
-      width: '100%',
-      backgroundColor: backgroundColor
+      height: height,
+      backgroundImage: `url(${backgroundImage})`,
+      paddingTop: titlePaddingTop,
+      marginTop: marginTop
     }
   }, _react.default.createElement("div", {
     style: {
-      position: 'absolute'
+      alignSelf: 'center'
     }
   }, _react.default.createElement("div", {
     className: classes.title
@@ -81,28 +83,22 @@ var _default = props => {
       justifyContent: 'center'
     }
   }, _react.default.createElement("div", {
-    className: classes.line,
-    style: {
-      backgroundColor: lineColor,
-      display: lineDisplay
-    }
+    className: classes.line
   })), _react.default.createElement("div", {
     className: classes.subtitle
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0,
-      marginTop: 0
+      marginBottom: 0
     }
   }, subtitle)), _react.default.createElement("div", {
     className: classes.content
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0,
-      marginTop: 0
+      marginBottom: 0
     }
-  }, content)), _react.default.createElement("div", null, children)));
+  }, content))), _react.default.createElement("div", null, children));
 };
 
 exports.default = _default;
