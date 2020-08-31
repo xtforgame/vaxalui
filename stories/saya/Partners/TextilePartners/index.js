@@ -35,9 +35,6 @@ storiesOf('saya|Pages/Desktop/Partners', module)
     () => (
       <div style={{ width: '100%' }}>
         <Layout>
-
-
-
           <TopSection
             firstTitle="PARTNERS"
             secondTitle="Textile Partners"
@@ -47,7 +44,6 @@ storiesOf('saya|Pages/Desktop/Partners', module)
             lineBorder="1px solid #000000"
             firstLineWidth="85px"
           />
-
 
           <div style={{ marginTop: 35, }}>
             <Introduction

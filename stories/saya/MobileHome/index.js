@@ -2,25 +2,26 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TopSection from 'library/saya/Rick/TopSection';
-import Introduction from 'library/saya/Rick/Introduction';
-import Boxes from 'library/saya/Rick/Boxes';
-import ImageBox from 'library/saya/Rick/ImageBox';
 import TwoCircleSection from 'library/saya/Rick/TwoCircleSection';
+import HomeTopSection from 'library/saya/Rick/HomeTopSection';
+import GreenButton from 'library/saya/Rick/GreenButton';
+import TitleLineBox from 'library/saya/Rick/TitleLineBox';
+import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
+import Partner from 'library/saya/Rick/Partner';
 
 import MobileLayout from '../shared/MobileLayout';
 
-import LeftBox from '../img/bg3.jpg';
-import RightBox from '../img/bg4.jpg';
-
-import TopLeftBox from '../img/bg5.jpg';
-import TopRightBox from '../img/bg6.jpg';
-import BottomLeftBox from '../img/bg7.jpg';
-import BottomRightBox from '../img/bg8.jpg';
-
-import MobileBg1 from '../img/mobile/bg1.png';
-import MobileBg2 from '../img/mobile/bg2.png';
+import MobileBg1 from '../img/mobile/m_bg38.jpg'
+import MobileBg2 from '../img/mobile/m_bg1.jpg'
+import MobileBg3 from '../img/mobile/m_bg39.jpg'
 
 import NextCircle from '../img/mobile/m_now_next_circle.png';
+import roundArrow from '../img/mobile/m_round_arrow.svg'
+import leftBox from '../img/mobile/m_bg40.jpg';
+import midBox from '../img/mobile/m_bg41.jpg';
+import rightBox from '../img/mobile/m_bg16.jpg';
+import backgroundPartner from '../img/mobile/m_bg42.jpg';
+
 
 storiesOf('saya|Pages/Mobile', module)
   // .addParameters({
@@ -36,72 +37,100 @@ storiesOf('saya|Pages/Mobile', module)
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
+          <HomeTopSection
+            backgroundImage={MobileBg1}
+            img={roundArrow}
+          />
+
+          <div style={{ paddingTop: 33, backgroundColor: "#f4f4f4", }}>
+            <TwoCircleSection
+              backgroundImage={NextCircle}
+              height={1176}
+              circleMarginTop={0}
+            >
+              <TopSection
+                height={473}
+                firstTitle="TECHNOLOGIES"
+                secondTitle={'In the\nBusiness of\nRenewal'}
+                thirdTitle={'The Next of Recycled Goods'}
+                secondTitlePaddingTop={40}
+                secondLineMarginTop={40}
+                firsrtTitlePaddingTop={90}
+              />
+            </TwoCircleSection>
+          </div>
+
           <TopSection
             firstTitle="PRODUCTS"
-            secondTitle={'SAYA\nRenew\nFiber'}
-            thirdTitle={'Design Consciously,\nKnow What Goes Into Your Gear'}
-            backgroundImage={MobileBg1}
-          />
-          <Introduction
-            title={'Not all Recycled\nFibers are\nCreated Equal,'}
-            subtitle={'Work with the Best to Transition\nto Sustainable Fibers.'}
-            content={'SAYA has the industry’s widest selection of\nPET recycled fiber specifications to meet all\nyour design needs and budget. Find out how\nwe can help to make your transition a smooth one.'}
+            secondTitle={'Micro fibers,\nMacro\nChanges'}
+            thirdTitle={'Functional Fibers for\nEvery Challenge'}
             backgroundImage={MobileBg2}
-          />
-          <Boxes
-            title="SAYA 365"
-            subtitle="Under SAYA Now Technology."
-            content={'Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget'}
-            backgroundColor="#444343"
-            color="#ffffff"
+            secondTitlePaddingTop={40}
+            secondLineMarginTop={40}
+            firsrtTitlePaddingTop={90}
+            thirdTitleFontFamily="FilsonSoft-Bold"
           >
-            <ImageBox
-              title="SAYA 365"
-              subtitle="Lorem ipsum dolor sit amet."
-              backgroundImage={LeftBox}
-              paddingTop={80}
-              fontColor="#000000"
-            />
-          </Boxes>
-          <Boxes
-            title={'Re Performance\nFibers'}
-            subtitle="Under SAYA Now Technology."
-            content={'Industry’s Favorite* Recycle\nPET Bottle Fiber for Every\nApplication and Budget'}
-            backgroundColor="#c8c6c6"
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <GreenButton
+                marginTop={45}
+                text="Learn More"
+              />
+            </div>
+          </TopSection>
+
+          <div style={{ marginTop: 23 }}>
+            <TopSection
+              secondTitle={'Cleaning Up\nthe World,\n75 Billion Bottles\nat a Time.'}
+              thirdTitle={'World’s Largest Recycling\nand Renewing Network'}
+              backgroundImage={MobileBg3}
+              secondTitlePaddingTop={0}
+              secondLineMarginTop={40}
+              firsrtTitlePaddingTop={90}
+              thirdTitleFontFamily="FilsonSoft-Bold"
+              lineDisplay="none"
+              lineBackgroundColor="#ffffff"
+              color="#ffffff"
+              secondTitleFontSize={33}
+            >
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <GreenButton
+                  marginTop={90}
+                  text="Learn More"
+                />
+              </div>
+            </TopSection>
+          </div>
+
+          <TitleLineBox
+            title={'Featured Content'}
+            backgroundColor="#f3f3f3"
             color="#000000"
           >
-            <ImageBox
-              title={'CHROMUCH\nSolution Dyed'}
-              subtitle="Lorem ipsum dolor sit amet."
-              backgroundImage={TopLeftBox}
-              paddingTop={40}
+            <ImageBoxSmall
+              title={'About\nSAYA'}
+              backgroundImage={leftBox}
+              paddingTop={52}
+              fontColor="#000000"
+            />
+            <ImageBoxSmall
+              title={'Partners in\nSustainability'}
+              backgroundImage={midBox}
+              paddingTop={52}
               fontColor="#ffffff"
             />
-            <ImageBox
-              title="SAYA 365"
-              subtitle="Lorem ipsum dolor sit amet."
-              backgroundImage={TopRightBox}
-              paddingTop={80}
-              fontColor="#ffffff"
+            <ImageBoxSmall
+              title={'SAYA'}
+              titleBack="COASTAL"
+              subtitle={'Traceable Ocean\nPreventing Plastic Fibers'}
+              backgroundImage={rightBox}
+              paddingTop={70}
+              fontColor="#000000"
             />
-            <ImageBox
-              title="SAYA 365"
-              subtitle="Lorem ipsum dolor sit amet."
-              backgroundImage={BottomLeftBox}
-              paddingTop={80}
-              fontColor="#ffffff"
-            />
-            <ImageBox
-              title="SAYA 365"
-              subtitle="Lorem ipsum dolor sit amet."
-              backgroundImage={BottomRightBox}
-              paddingTop={80}
-              fontColor="#ffffff"
-            />
-          </Boxes>
-          <TwoCircleSection
-            backgroundImage={NextCircle}
+          </TitleLineBox>
+
+          <Partner
+            backgroundImage={backgroundPartner}
           />
         </MobileLayout>
-      </div>
+      </div >
     ));

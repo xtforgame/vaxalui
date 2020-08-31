@@ -95,10 +95,14 @@ class ImageBoxSmall extends React.PureComponent {
             </BreakAllContentText>
           </div>
 
+          <BreakAllContentText className={classes.subtitle}>
+            {subtitle}
+          </BreakAllContentText>
           <div className={classes.space} />
 
           <div className={classes.button}>
             <GreenButton
+              onClick={onClick}
               text="Learn More"
               onClick={onClick}
             />

@@ -11,12 +11,10 @@ import BreakAllContentText from './BreakAllContentText';
 
 const useStyles = makeStyles({
   root: {
-    width: 368,
     margin: 20,
     borderRadius: 30,
   },
   media: {
-    height: 324,
     position: 'relative',
   },
   mask: {
@@ -44,6 +42,8 @@ const useStyles = makeStyles({
 });
 
 export default ({
+  height,
+  width,
   title,
   description,
   image,
@@ -51,17 +51,18 @@ export default ({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} elevation={8}>
+    <Card className={classes.root} style={{ width: width }} elevation={8}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
+          style={{ height: height }}
           image={image}
           title="Contemplative Reptile"
         >
           <div className={classes.mask} />
           <div className={classes.title}>
             <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
-              {title}
+              {title} 
             </BreakAllContentText>
           </div>
         </CardMedia>

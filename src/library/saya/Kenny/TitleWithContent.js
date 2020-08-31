@@ -40,10 +40,11 @@ class Introduction extends React.PureComponent {
       height,
       title,
       backgroundImage,
-      titleWidth,
+      fontSize,
       children,
       fontColor,
       backgroundColor,
+      width,
     } = this.props;
     return (
       <ImageContainer
@@ -60,6 +61,7 @@ class Introduction extends React.PureComponent {
         >
           <BreakAllContentText
             className={classes.title}
+            style={{ fontSize: fontSize, width: width, }}
           >
             {title}
           </BreakAllContentText>

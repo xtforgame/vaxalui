@@ -30,3 +30,15 @@ import './Partners';
 
 // MobileHome
 import './MobileHome';
+
+// MobileProducts
+import './MobileProducts';
+
+// MobileTechnologies
+import './MobileTechnologies';
+
+// MobileAbout
+import './MobileAbout';
+
+// MobilePartners
+import './MobilePartners';

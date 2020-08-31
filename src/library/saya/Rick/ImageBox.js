@@ -80,7 +80,7 @@ class ImageBox extends React.PureComponent {
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            bottom: 40,
+            bottom: 62,
           }}
         >
           <button className={classes.button}>

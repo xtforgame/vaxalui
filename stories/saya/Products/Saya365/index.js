@@ -106,7 +106,7 @@ storiesOf('saya|Pages/Desktop/Products', module)
               }}
             >
               Learn more about SAYA Now Technology.
-              <GreenButton text="GO"/>
+              <GreenButton text="GO" />
             </div>
           </ImageContainer>
 
@@ -118,7 +118,9 @@ storiesOf('saya|Pages/Desktop/Products', module)
               fontColor="#000000"
               lineBorder="solid 1px #000000"
             >
-              <Table />
+              <div style={{ display: 'flex', justifyContent: 'center', }}>
+                <Table />
+              </div>
             </TitleWithContent>
           </div>
           <ImageContainer

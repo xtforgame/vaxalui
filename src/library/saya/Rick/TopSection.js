@@ -8,12 +8,13 @@ const useStyles = makeStyles(theme => ({
     height: 590,
     textAlign: 'center',
     fontFamily: 'FilsonSoft-Bold',
+    color: '#000000',
+    lineHeight: '1.18',
   },
   firstTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    lineHeight: 1.4,
-    color: '#000000',
+    lineHeight: '1.18',
     paddingTop: 57,
     // borderBottomStyle: 'solid',
     // borderBottomWidth: 2,
@@ -28,33 +29,43 @@ const useStyles = makeStyles(theme => ({
   secondTitle: {
     fontSize: 50,
     fontWeight: 'bold',
-    color: '#000000',
-    paddingTop: 10,
+
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    color: '#000000',
+    fontFamily: 'FilsonSoftLight',
+
   },
   secondLine: {
-    width: 220,
+    width: 230,
     height: 1,
     backgroundColor: '#000000',
-    marginTop: 2,
   },
   thirdTitle: {
     fontSize: 18,
-    color: '#000000',
     paddingTop: 10,
+    fontFamily: 'FilsonSoftRegular',
   },
 }));
 
 export default (props) => {
   const {
     firstTitle,
+    firsrtTitlePaddingTop,
     secondTitle,
     secondTitleBack,
+    secondTitleFontSize,
+    secondTitlePaddingTop,
+    lineDisplay,
+    secondLineMarginTop,
+    secondLineDisplay,  
     thirdTitle,
     backgroundImage,
+    lineBackgroundColor,
+    color,
+    height,
+    thirdTitleFontFamily,
+    children,
   } = props;
 
   const classes = useStyles();
@@ -63,32 +74,59 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height: 590 }}
+      style={{ color, height, }}
     >
       <div
         style={{ position: 'absolute' }}
       >
-        <div style={{ display: 'flex', justifyContent: 'center'  }}>
-          <div className={classes.firstTitle}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={classes.firstTitle} style={{ paddingTop: firsrtTitlePaddingTop, }}>
             {firstTitle}
-            <div className={classes.firstLine} />
+            <div className={classes.firstLine} style={{ backgroundColor: lineBackgroundColor, display: lineDisplay, }} />
           </div>
         </div>
 
         <div className={classes.secondTitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>{secondTitle}</pre>
-          <a className={classes.secondTitleBack}>
-            {secondTitleBack}
-          </a>
+          <pre style={{
+            fontFamily: 'FilsonSoft-Bold',
+            fontSize: secondTitleFontSize,
+            marginBottom: 0,
+            marginTop: 0,
+            paddingTop: secondTitlePaddingTop,
+          }}
+          >
+            {secondTitle}
+            <a className={classes.secondTitleBack}>
+              {secondTitleBack}
+            </a></pre>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.secondLine} />
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: secondLineMarginTop,
+        }}
+        >
+          <div className={classes.secondLine} style={{
+            backgroundColor: lineBackgroundColor, display: secondLineDisplay,
+          }} />
         </div>
 
         <div className={classes.thirdTitle}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular' }}>{thirdTitle}</pre>
+          <pre
+            style={{
+              fontFamily: thirdTitleFontFamily,
+              marginBottom: 0,
+              marginTop: 0,
+            }}
+          >
+            {thirdTitle}
+          </pre>
         </div>
+        <div>
+          {children}
+        </div>
+
       </div>
     </ImageContainer>
   );
