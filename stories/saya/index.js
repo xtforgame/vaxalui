@@ -31,65 +31,14 @@ import './Partners';
 // MobileHome
 import './MobileHome';
 
-// MobileProduct
-import './MobileProduct';
-
-// MobileNow
-import './MobileNow';
-
-// MobileTextilePartners
-import './MobileTextilePartners';
-
-// MobileNextRscuw
-import './MobileNextRscuw';
-
-// MobileSustainabilityInnovations
-import './MobileSustainabilityInnovations';
-
-// MobileSayaStretch
-import './MobileSayaStretch';
-
-// MobileSayaFresh
-import './MobileSayaFresh';
-
-// MobileSayaMicrodiber
-import './MobileSayaMicrodiber';
-
-// MobileSayaChromuchSolutionDyed
-import './MobileSayaChromuchSolutionDyed';
-
-// MobileNews
-import './MobileNews';
-
-// MobileAboutSaya
-import './MobileAboutSaya';
-
-// MobilePartners
-import './MobilePartners';
-
-// MobileNowUsa
-import './MobileNowUsa';
-
-// MobileBrandPartners
-import './MobileBrandPartners';
-
-// MobileCertifications
-import './MobileCertifications';
+// MobileProducts
+import './MobileProducts';
 
 // MobileTechnologies
 import './MobileTechnologies';
 
-// MobileNowCoastal
-import './MobileNowCoastal';
+// MobileAbout
+import './MobileAbout';
 
-// MobileSaya365
-import './MobileSaya365';
-
-// MobileSustainabilityInnovationsArticle
-import './MobileSustainabilityInnovationsArticle';
-
-// MobileNewsArticle
-import './MobileNewsArticle';
-
-// MobileMediaDownloads
-import './MobileMediaDownloads';
+// MobilePartners
+import './MobilePartners';
