@@ -18,10 +18,12 @@ var _MobileFooter = _interopRequireDefault(require("./MobileFooter"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const MobileLayout = ({
+  children,
+  onLinkClick,
+  navBarItems,
   logo,
   fbIcon,
-  igIcon,
-  children
+  igIcon
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
@@ -30,7 +32,10 @@ const MobileLayout = ({
   }
 }, _react.default.createElement(_reactHelmet.default, {
   title: "SAYA homepage"
-}), _react.default.createElement(_MobileNavbar.default, null, logo), _react.default.createElement("div", {
+}), _react.default.createElement(_MobileNavbar.default, {
+  onLinkClick: onLinkClick,
+  items: navBarItems
+}, logo), _react.default.createElement("div", {
   style: {
     width: '100%',
     height: 56

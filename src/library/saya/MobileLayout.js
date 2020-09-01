@@ -5,10 +5,12 @@ import MobileNavbar from './MobileNavbar';
 import MobileFooter from './MobileFooter';
 
 const MobileLayout = ({
+  children,
+  onLinkClick,
+  navBarItems,
   logo,
   fbIcon,
   igIcon,
-  children,
 }) => (
   <div
     style={{
@@ -19,7 +21,7 @@ const MobileLayout = ({
     }}
   >
     <Helmet title="SAYA homepage" />
-    <MobileNavbar>
+    <MobileNavbar onLinkClick={onLinkClick} items={navBarItems}>
       {logo}
     </MobileNavbar>
     <div
