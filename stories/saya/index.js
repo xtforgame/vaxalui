@@ -4,9 +4,6 @@ import './Buttons';
 // Navbar
 import './Navbar';
 
-// MobileNavbar
-import './MobileNavbar';
-
 // Footer
 import './Footer';
 

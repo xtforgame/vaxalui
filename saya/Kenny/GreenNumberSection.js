@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -147,7 +149,11 @@ class GreenNumberSection extends _react.default.PureComponent {
       style: {
         paddingTop: descriptionPaddingTop
       }
-    }, description)));
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular'
+      }
+    }, description))));
   }
 
 }

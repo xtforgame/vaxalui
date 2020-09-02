@@ -71,7 +71,7 @@ class Introduction extends React.PureComponent {
               marginTop: titlMarginTop,
             }}
           >
-            {title}
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
             <br />
             {titleBack}
           </div>
@@ -89,7 +89,7 @@ class Introduction extends React.PureComponent {
               width: subtitleWidth,
             }}
           >
-            {subtitle}
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
           </div>
 
           <div

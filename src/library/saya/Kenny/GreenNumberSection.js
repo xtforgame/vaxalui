@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
@@ -150,7 +151,8 @@ class GreenNumberSection extends React.PureComponent {
               paddingTop: descriptionPaddingTop,
             }}
 
-          >{description}</div>
+          >
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText></div>
         </div>
       </div>
     );

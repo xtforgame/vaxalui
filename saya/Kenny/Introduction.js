@@ -79,7 +79,11 @@ class Introduction extends _react.default.PureComponent {
         width: titleWidth,
         marginTop: titlMarginTop
       }
-    }, title, _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoft-Bold'
+      }
+    }, title), _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
       className: classes.line,
       style: {
         border: lineBorder
@@ -89,7 +93,11 @@ class Introduction extends _react.default.PureComponent {
       style: {
         width: subtitleWidth
       }
-    }, subtitle), _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular'
+      }
+    }, subtitle)), _react.default.createElement("div", {
       className: classes.description,
       style: {
         width: descriptionWidth
