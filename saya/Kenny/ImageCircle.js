@@ -76,11 +76,11 @@ class ImageCircle extends _react.default.PureComponent {
       className: classes.titleBack
     }, "NOW")), _react.default.createElement("div", {
       className: classes.subtitle
-    }, "Fabric Made by", _react.default.createElement("br", null), "Used and Recycled PET Bottles"), _react.default.createElement("a", {
+    }, "Premium Fibers from", _react.default.createElement("br", null), "Recycled PET Bottles"), _react.default.createElement("a", {
       className: classes.link,
       onClick: oc1,
       href: "#"
-    }, linkText1)), _react.default.createElement("div", {
+    }, "Find Out the SAYA Difference")), _react.default.createElement("div", {
       className: classes.rightCircle
     }, _react.default.createElement("div", {
       className: classes.title
@@ -88,11 +88,11 @@ class ImageCircle extends _react.default.PureComponent {
       className: classes.titleBack
     }, "NEXT")), _react.default.createElement("div", {
       className: classes.subtitle
-    }, "Fabric Made of", _react.default.createElement("br", null), "Garments, Fabrics, and Other Wastes"), _react.default.createElement("a", {
+    }, "Advanced Fibers from", _react.default.createElement("br", null), "Garments, Overstocks, and More"), _react.default.createElement("a", {
       className: classes.link,
       onClick: oc2,
       href: "#"
-    }, linkText2)));
+    }, "Recycling Solution with Real Impact")));
   }
 
 }

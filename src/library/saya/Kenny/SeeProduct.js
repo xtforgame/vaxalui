@@ -31,6 +31,7 @@ class SeeProduct extends React.PureComponent {
   render() {
     const {
       classes,
+      onClick,
     } = this.props;
     return (
       <div className={classes.root}>
@@ -39,6 +40,7 @@ class SeeProduct extends React.PureComponent {
           <div className={classes.button}>
             <GreenButton
               text="SAYA Products"
+              onClick={onClick}
             />
           </div>
         </div>

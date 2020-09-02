@@ -59,16 +59,15 @@ class ImageCircle extends React.PureComponent {
           <div className={classes.title}>
             SAYA<span className={classes.titleBack}>NOW</span>
           </div>
-          <div className={classes.subtitle}>Fabric Made by<br />Used and Recycled PET Bottles</div>
-          <a className={classes.link} onClick={oc1} href="#">{linkText1}</a>
+          <div className={classes.subtitle}>Premium Fibers from<br />Recycled PET Bottles</div>
+          <a className={classes.link} onClick={oc1} href="#">Find Out the SAYA Difference</a>
         </div>
-
         <div className={classes.rightCircle}>
           <div className={classes.title}>
             SAYA<span className={classes.titleBack}>NEXT</span>
           </div>
-          <div className={classes.subtitle}>Fabric Made of<br />Garments, Fabrics, and Other Wastes</div>
-          <a className={classes.link} onClick={oc2} href="#">{linkText2}</a>
+          <div className={classes.subtitle}>Advanced Fibers from<br />Garments, Overstocks, and More</div>
+          <a className={classes.link} onClick={oc2} href="#">Recycling Solution with Real Impact</a>
         </div>
       </div>
     );

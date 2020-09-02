@@ -58,6 +58,7 @@ class MacroChanges extends React.PureComponent {
     const {
       classes,
       backgroundImage,
+      onClick,
     } = this.props;
     return (
       <ImageContainer
@@ -73,6 +74,7 @@ class MacroChanges extends React.PureComponent {
           <div className={classes.button}>
             <GreenButton
               text="Read More"
+              onClick={onClick}
             />
           </div>
         </div>

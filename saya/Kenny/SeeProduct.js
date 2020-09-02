@@ -40,7 +40,8 @@ const styles = {
 class SeeProduct extends _react.default.PureComponent {
   render() {
     const {
-      classes
+      classes,
+      onClick
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -51,7 +52,8 @@ class SeeProduct extends _react.default.PureComponent {
     }, "Apply your favorite recycling technology to Fibers."), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "SAYA Products"
+      text: "SAYA Products",
+      onClick: onClick
     }))));
   }
 

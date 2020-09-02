@@ -68,7 +68,8 @@ class MacroChanges extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
+      backgroundImage,
+      onClick
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
@@ -88,7 +89,8 @@ class MacroChanges extends _react.default.PureComponent {
     }, "Sustainable Fiber Solutions for Every Budget and Design."), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "Read More"
+      text: "Read More",
+      onClick: onClick
     }))));
   }
 
