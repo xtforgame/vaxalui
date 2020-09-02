@@ -83,6 +83,7 @@ class CleaningUp extends _react.default.PureComponent {
     const {
       classes,
       backgroundImage,
+      onClick,
       children
     } = this.props;
     return _react.default.createElement(_ImageContainer.default, {
@@ -101,7 +102,8 @@ class CleaningUp extends _react.default.PureComponent {
     }, "World\u2019s Largest Recycling and Renewing Network"), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
-      text: "Read More"
+      text: "Read More",
+      onClick: onClick
     })), _react.default.createElement("div", {
       className: classes.bottomColumn
     }, _react.default.createElement("div", {

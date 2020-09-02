@@ -72,6 +72,7 @@ class CleaningUp extends React.PureComponent {
     const {
       classes,
       backgroundImage,
+      onClick,
       children,
     } = this.props;
     return (
@@ -87,6 +88,7 @@ class CleaningUp extends React.PureComponent {
             <div className={classes.button}>
               <GreenButton
                 text="Read More"
+                onClick={onClick}
               />
             </div>
 
