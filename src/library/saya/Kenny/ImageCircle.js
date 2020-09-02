@@ -50,8 +50,8 @@ class ImageCircle extends React.PureComponent {
       linkText1,
       linkText2,
       backgroundImage,
-      link1,
-      link2,
+      oc1,
+      oc2,
     } = this.props;
     return (
       <div className={classes.root} style={{ backgroundImage: `url(${backgroundImage})` }}>
@@ -60,7 +60,7 @@ class ImageCircle extends React.PureComponent {
             SAYA<span className={classes.titleBack}>NOW</span>
           </div>
           <div className={classes.subtitle}>Fabric Made by<br />Used and Recycled PET Bottles</div>
-          <a className={classes.link} href={link1}>{linkText1}</a>
+          <a className={classes.link} onClick={oc1} href="#">{linkText1}</a>
         </div>
 
         <div className={classes.rightCircle}>
@@ -68,7 +68,7 @@ class ImageCircle extends React.PureComponent {
             SAYA<span className={classes.titleBack}>NEXT</span>
           </div>
           <div className={classes.subtitle}>Fabric Made of<br />Garments, Fabrics, and Other Wastes</div>
-          <a className={classes.link} href={link2}>{linkText2}</a>
+          <a className={classes.link} onClick={oc2} href="#">{linkText2}</a>
         </div>
       </div>
     );

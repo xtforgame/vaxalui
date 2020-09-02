@@ -102,7 +102,7 @@ class ImageBoxSmall extends React.PureComponent {
           </BreakAllContentText>
           <div className={classes.space} />
           {
-            hideButton && (
+            !hideButton && (
               <div className={classes.button}>
                 <GreenButton
                   onClick={onClick}

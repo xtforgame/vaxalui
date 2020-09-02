@@ -13,8 +13,7 @@ import Layout from '../shared/Layout';
 import backgroundMacroChanges from '../img/bg14.jpg';
 import backgroundCleaningUp from '../img/bg15.jpg';
 
-import backgroundNowCircle from '../img/saya_now_circle_420.jpg';
-import backgroundNextCircle from '../img/saya_next_circle_420.jpg';
+import backgroundNextCircle from '../img/now_next_circle_sample.jpg';
 
 import leftBox from '../img/bg17.jpg';
 import midBox from '../img/bg18.jpg';
@@ -54,8 +53,6 @@ storiesOf('saya|Pages/Desktop', module)
             scrollArrowRightImage={scrollArrowRightImage}
           />
           <HomeTwoCircleSection
-            backgroundNowCircle={backgroundNowCircle}
-            backgroundNextCircle={backgroundNextCircle}
             backgroundImage={backgroundNextCircle}
           />
           <MacroChanges

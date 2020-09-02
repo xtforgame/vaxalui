@@ -36,13 +36,19 @@ class HomeTwoCircleSection extends React.PureComponent {
     const {
       classes,
       backgroundImage,
+      oc1,
+      oc2,
     } = this.props;
     return (
       <div className={classes.root}>
         <div className={classes.title}> TECHNOLOGIES </div>
         <div className={classes.line} />
         <div className={classes.circle}>
-          <ImageCircle backgroundImage={backgroundImage} />
+          <ImageCircle
+            oc1={oc1}
+            oc2={oc2}
+            backgroundImage={backgroundImage}
+          />
         </div>
       </div>
     );

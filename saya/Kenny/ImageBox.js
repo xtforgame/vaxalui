@@ -109,7 +109,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
       className: classes.subtitle
     }, subtitle), _react.default.createElement("div", {
       className: classes.space
-    }), hideButton && _react.default.createElement("div", {
+    }), !hideButton && _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       onClick: onClick,

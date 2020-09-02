@@ -46,7 +46,9 @@ class HomeTwoCircleSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage
+      backgroundImage,
+      oc1,
+      oc2
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root
@@ -57,6 +59,8 @@ class HomeTwoCircleSection extends _react.default.PureComponent {
     }), _react.default.createElement("div", {
       className: classes.circle
     }, _react.default.createElement(_ImageCircle.default, {
+      oc1: oc1,
+      oc2: oc2,
       backgroundImage: backgroundImage
     })));
   }
