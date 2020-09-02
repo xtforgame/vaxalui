@@ -76,7 +76,9 @@ class ImageBoxSmall extends _react.default.PureComponent {
       subtitle,
       backgroundImage,
       fontColor,
-      onClick
+      onClick,
+      hideButton,
+      children
     } = this.props;
     return _react.default.createElement(_Box.default, {
       className: classes.box,
@@ -107,13 +109,12 @@ class ImageBoxSmall extends _react.default.PureComponent {
       className: classes.subtitle
     }, subtitle), _react.default.createElement("div", {
       className: classes.space
-    }), _react.default.createElement("div", {
+    }), hideButton && _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       onClick: onClick,
-      text: "Learn More",
-      onClick: onClick
-    }))));
+      text: "Learn More"
+    })), children));
   }
 
 }

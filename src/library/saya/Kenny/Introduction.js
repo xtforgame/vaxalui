@@ -72,8 +72,6 @@ class Introduction extends React.PureComponent {
             }}
           >
             <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-            <br />
-            {titleBack}
           </div>
 
           <div

@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -16,8 +18,7 @@ const styles = {
     width: '100%',
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)'
+    justifyContent: 'space-around'
   },
   block: {
     width: 350,
@@ -60,13 +61,21 @@ class TransparentBlock extends _react.default.PureComponent {
       className: classes.title
     }, leftTitle), _react.default.createElement("div", {
       className: classes.description
-    }, leftDescription)), _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular'
+      }
+    }, leftDescription))), _react.default.createElement("div", {
       className: classes.block
     }, _react.default.createElement("div", {
       className: classes.title
     }, rightTitle), _react.default.createElement("div", {
       className: classes.description
-    }, rightDescription)));
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular'
+      }
+    }, rightDescription))));
   }
 
 }

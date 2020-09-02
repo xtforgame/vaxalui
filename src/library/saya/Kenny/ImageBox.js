@@ -64,6 +64,8 @@ class ImageBoxSmall extends React.PureComponent {
       backgroundImage,
       fontColor,
       onClick,
+      hideButton,
+      children,
     } = this.props;
 
 
@@ -99,14 +101,17 @@ class ImageBoxSmall extends React.PureComponent {
             {subtitle}
           </BreakAllContentText>
           <div className={classes.space} />
-
-          <div className={classes.button}>
-            <GreenButton
-              onClick={onClick}
-              text="Learn More"
-              onClick={onClick}
-            />
-          </div>
+          {
+            hideButton && (
+              <div className={classes.button}>
+                <GreenButton
+                  onClick={onClick}
+                  text="Learn More"
+                />
+              </div>
+            )
+          }
+          {children}
         </div>
       </Box>
     );

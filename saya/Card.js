@@ -78,8 +78,7 @@ var _default = ({
     style: {
       height: height
     },
-    image: image,
-    title: "Contemplative Reptile"
+    image: image
   }, _react.default.createElement("div", {
     className: classes.mask
   }), _react.default.createElement("div", {

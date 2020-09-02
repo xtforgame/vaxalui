@@ -57,7 +57,7 @@ export default ({
           className={classes.media}
           style={{ height: height }}
           image={image}
-          title="Contemplative Reptile"
+          // title="Contemplative Reptile"
         >
           <div className={classes.mask} />
           <div className={classes.title}>

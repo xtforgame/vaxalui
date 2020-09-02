@@ -57,8 +57,11 @@ class ImageCircle extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      linkText,
-      backgroundImage
+      linkText1,
+      linkText2,
+      backgroundImage,
+      link1,
+      link2
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -75,8 +78,8 @@ class ImageCircle extends _react.default.PureComponent {
       className: classes.subtitle
     }, "Fabric Made by", _react.default.createElement("br", null), "Used and Recycled PET Bottles"), _react.default.createElement("a", {
       className: classes.link,
-      href: ""
-    }, linkText)), _react.default.createElement("div", {
+      href: link1
+    }, linkText1)), _react.default.createElement("div", {
       className: classes.rightCircle
     }, _react.default.createElement("div", {
       className: classes.title
@@ -86,8 +89,8 @@ class ImageCircle extends _react.default.PureComponent {
       className: classes.subtitle
     }, "Fabric Made of", _react.default.createElement("br", null), "Garments, Fabrics, and Other Wastes"), _react.default.createElement("a", {
       className: classes.link,
-      href: ""
-    }, linkText)));
+      href: link2
+    }, linkText2)));
   }
 
 }

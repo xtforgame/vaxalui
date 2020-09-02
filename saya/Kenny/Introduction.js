@@ -83,7 +83,7 @@ class Introduction extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
-    }, title), _react.default.createElement("br", null), titleBack), _react.default.createElement("div", {
+    }, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
         border: lineBorder

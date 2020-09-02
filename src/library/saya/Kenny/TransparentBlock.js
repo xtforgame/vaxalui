@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
@@ -7,7 +8,7 @@ const styles = {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    // backgroundColor: 'rgba(0, 0, 0, 0.3)',
   },
   block: {
     width: 350,
@@ -42,11 +43,15 @@ class TransparentBlock extends React.PureComponent {
       <div className={classes.root} style={{ marginTop, height }}>
         <div className={classes.block}>
           <div className={classes.title}>{leftTitle}</div>
-          <div className={classes.description}>{leftDescription}</div>
+          <div className={classes.description}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{leftDescription}</BreakAllContentText>
+          </div>
         </div>
         <div className={classes.block}>
           <div className={classes.title}>{rightTitle}</div>
-          <div className={classes.description}>{rightDescription}</div>
+          <div className={classes.description}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{rightDescription}</BreakAllContentText>
+          </div>
         </div>
       </div>
     );
