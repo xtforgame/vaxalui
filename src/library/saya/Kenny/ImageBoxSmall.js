@@ -11,7 +11,7 @@ const styles = {
   },
   root: {
     width: 255,
-    height: 370,
+    height: 368,
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',

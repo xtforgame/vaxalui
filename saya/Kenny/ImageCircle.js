@@ -28,16 +28,15 @@ const styles = {
   rightCircle: {
     display: 'flex',
     flexDirection: 'column',
-    paddingLeft: 115,
+    paddingLeft: 130,
     paddingTop: 140
   },
   title: {
     fontSize: 40,
-    fontFamily: 'FilsonSoft-Bold',
-    fontWeight: 'bold'
+    fontFamily: 'FilsonSoft-Bold'
   },
   titleBack: {
-    fontWeight: 300
+    fontFamily: 'FilsonSoft-Light'
   },
   subtitle: {
     fontSize: 14,
@@ -92,7 +91,7 @@ class ImageCircle extends _react.default.PureComponent {
       className: classes.link,
       onClick: oc2,
       href: "#"
-    }, "Recycling Solution with Real Impact")));
+    }, "Recycling Solution", _react.default.createElement("br", null), "with Real Impact")));
   }
 
 }

@@ -43,7 +43,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     borderBottom: '4px solid transparent',
     borderLeft: '4px solid #ffffff'
   },
-  xxx: {
+  space: {
     width: 8,
     height: 8
   }
@@ -82,7 +82,7 @@ var _default = props => {
       name = _react.default.createElement("div", {
         className: classes.specialNameRoot
       }, _react.default.createElement("div", null, inName), _react.default.createElement("div", {
-        className: classes.xxx
+        className: classes.space
       }), _react.default.createElement("div", {
         className: classes.rightArrow
       }));

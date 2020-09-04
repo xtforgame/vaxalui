@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     borderLeft: '4px solid #ffffff',
     // backgroundColor: '#ffffff',
   },
-  xxx: {
+  space: {
     width: 8,
     height: 8,
   },
@@ -71,7 +71,7 @@ export default (props) => {
           className={classes.specialNameRoot}
         >
           <div>{inName}</div>
-          <div className={classes.xxx} />
+          <div className={classes.space} />
           <div
             className={classes.rightArrow}
           />
