@@ -47,22 +47,23 @@ export default ({
   title,
   description,
   image,
+  onClick,
 }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{ width: width }} elevation={8}>
-      <CardActionArea>
+    <Card className={classes.root} style={{ width }} elevation={8}>
+      <CardActionArea onClick={onClick}>
         <CardMedia
           className={classes.media}
-          style={{ height: height }}
+          style={{ height }}
           image={image}
           // title="Contemplative Reptile"
         >
           <div className={classes.mask} />
           <div className={classes.title}>
             <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
-              {title} 
+              {title}
             </BreakAllContentText>
           </div>
         </CardMedia>
@@ -81,7 +82,7 @@ export default ({
       </CardActionArea>
       <CardActions className={classes.cardAction}>
         <div style={{ flex: 1 }} />
-        <Button size="small" color="primary" style={{ color: '#c0c823' }}>
+        <Button size="small" color="primary" style={{ color: '#c0c823' }} onClick={onClick}>
           <u>Read More</u>
         </Button>
       </CardActions>

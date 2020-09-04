@@ -64,19 +64,22 @@ var _default = ({
   width,
   title,
   description,
-  image
+  image,
+  onClick
 }) => {
   const classes = useStyles();
   return _react.default.createElement(_Card.default, {
     className: classes.root,
     style: {
-      width: width
+      width
     },
     elevation: 8
-  }, _react.default.createElement(_CardActionArea.default, null, _react.default.createElement(_CardMedia.default, {
+  }, _react.default.createElement(_CardActionArea.default, {
+    onClick: onClick
+  }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
     style: {
-      height: height
+      height
     },
     image: image
   }, _react.default.createElement("div", {
@@ -105,7 +108,8 @@ var _default = ({
     color: "primary",
     style: {
       color: '#c0c823'
-    }
+    },
+    onClick: onClick
   }, _react.default.createElement("u", null, "Read More"))));
 };
 
