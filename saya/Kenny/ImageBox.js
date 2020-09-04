@@ -17,6 +17,12 @@ var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentTex
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 const styles = {
   box: {
     borderRadius: 30,
@@ -78,6 +84,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
       fontColor,
       onClick,
       hideButton,
+      rootStyle,
       children
     } = this.props;
     return _react.default.createElement(_Box.default, {
@@ -85,10 +92,10 @@ class ImageBoxSmall extends _react.default.PureComponent {
       boxShadow: 8
     }, _react.default.createElement("div", {
       className: classes.root,
-      style: {
+      style: _objectSpread({
         backgroundImage: `url(${backgroundImage})`,
         color: fontColor
-      }
+      }, rootStyle)
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
     }, _react.default.createElement("div", {

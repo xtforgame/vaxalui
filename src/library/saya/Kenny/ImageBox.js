@@ -65,6 +65,7 @@ class ImageBoxSmall extends React.PureComponent {
       fontColor,
       onClick,
       hideButton,
+      rootStyle,
       children,
     } = this.props;
 
@@ -76,6 +77,7 @@ class ImageBoxSmall extends React.PureComponent {
           style={{
             backgroundImage: `url(${backgroundImage})`,
             color: fontColor,
+            ...rootStyle,
           }}
         >
           <BreakAllContentText
