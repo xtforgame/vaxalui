@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-
+import Paper from '@material-ui/core/Paper';
 import TopSection from 'library/saya/Kenny/TopSection';
 import ImageNumberSection from 'library/saya/Kenny/ImageNumberSection';
 import Introduction from 'library/saya/Kenny/Introduction';
@@ -111,18 +111,22 @@ storiesOf('saya|Pages/Desktop/Technologies/Now', module)
           />
 
           <ImageNumberSection>
-            <ImageNumber
-              backgroundImage={leftBoxImage}
-              number="13"
-              topTile="PET recycling facilities "
-              bottomTitle="worldwide"
-            />
-            <ImageNumber
-              backgroundImage={rightBoxImage}
-              number="75"
-              topTile="billion bottles "
-              bottomTitle="every year"
-            />
+            <Paper elevation={8} style={{ overflow: 'hidden', borderRadius: 30 }}>
+              <ImageNumber
+                backgroundImage={leftBoxImage}
+                number="13"
+                topTile="PET recycling facilities "
+                bottomTitle="worldwide"
+              />
+            </Paper>
+            <Paper elevation={8} style={{ overflow: 'hidden', borderRadius: 30 }}>
+              <ImageNumber
+                backgroundImage={rightBoxImage}
+                number="75"
+                topTile="billion bottles "
+                bottomTitle="every year"
+              />
+            </Paper>
           </ImageNumberSection>
 
           <Introduction

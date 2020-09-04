@@ -88,7 +88,7 @@ class TwoIconSection extends _react.default.PureComponent {
       src: rightIcon
     })), _react.default.createElement("div", {
       className: classes.rightTitle
-    }, "Mechanical Recycling"), _react.default.createElement("div", {
+    }, "Chemical Recycling"), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Learn More"

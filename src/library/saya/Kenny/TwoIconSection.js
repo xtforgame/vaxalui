@@ -70,7 +70,7 @@ class TwoIconSection extends React.PureComponent {
         </div>
         <div className={classes.rightColumn}>
           <div className={classes.rightIcon}><img src={rightIcon} /></div>
-          <div className={classes.rightTitle}>Mechanical Recycling</div>
+          <div className={classes.rightTitle}>Chemical Recycling</div>
           <div className={classes.button}>
             <GreenButton
               text="Learn More"

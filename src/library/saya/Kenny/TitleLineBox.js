@@ -43,14 +43,17 @@ class TitleLineBox extends React.PureComponent {
       lineBorder,
       backgroundColor,
       children,
+      rootStyle,
+      boxStyle,
     } = this.props;
     return (
       <div
         className={classes.root}
         style={{
-          height: height,
+          height,
           color: fontColor,
-          backgroundColor:backgroundColor,
+          backgroundColor,
+          ...rootStyle,
         }}
       >
         <div
@@ -73,6 +76,7 @@ class TitleLineBox extends React.PureComponent {
             className={classes.box}
             style={{
               width: boxWidth,
+              ...boxStyle,
             }}
           >
             {children}
