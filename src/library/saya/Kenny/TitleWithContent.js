@@ -33,7 +33,7 @@ const styles = {
   },
 };
 
-class Introduction extends React.PureComponent {
+class TitleWithContent extends React.PureComponent {
   render() {
     const {
       classes,
@@ -45,6 +45,7 @@ class Introduction extends React.PureComponent {
       fontColor,
       backgroundColor,
       width,
+      containerStyle,
     } = this.props;
     return (
       <ImageContainer
@@ -58,6 +59,7 @@ class Introduction extends React.PureComponent {
       >
         <div
           className={classes.container}
+          style={{ ...containerStyle }}
         >
           <BreakAllContentText
             className={classes.title}
@@ -75,4 +77,4 @@ class Introduction extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(Introduction);
+export default withStyles(styles)(TitleWithContent);
