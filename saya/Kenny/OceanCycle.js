@@ -64,7 +64,7 @@ class OceanCycle extends _react.default.PureComponent {
       className: classes.rightColumn
     }, _react.default.createElement("div", {
       className: classes.rightTitle
-    }, "Lorem ipsum dolor sit amet."), _react.default.createElement("div", {
+    }, "Certified Ocean Plastic"), _react.default.createElement("div", {
       className: classes.description
     }, "We work with OceanCycle\u2019s network of certified coastal recyclers. Treated with SAYA Now\u2019s proprietary renewing technology, we turn potential microplastics into microfibers.")));
   }

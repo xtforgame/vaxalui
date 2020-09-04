@@ -50,6 +50,7 @@ class Introduction extends React.PureComponent {
       lineBorder,
       backgroundColor,
       children,
+      containerStyle,
     } = this.props;
     return (
       <ImageContainer
@@ -63,6 +64,7 @@ class Introduction extends React.PureComponent {
       >
         <div
           className={classes.container}
+          style={{ ...containerStyle }}
         >
           <div
             className={classes.title}

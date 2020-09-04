@@ -48,7 +48,7 @@ class OceanCycle extends React.PureComponent {
       <div className={classes.root}>
         <div className={classes.oceanCycle} style={{ backgroundImage: `url(${backgroundImage})` }} />
         <div className={classes.rightColumn}>
-          <div className={classes.rightTitle}>Lorem ipsum dolor sit amet.</div>
+          <div className={classes.rightTitle}>Certified Ocean Plastic</div>
           <div className={classes.description}>
             We work with OceanCycle’s network of
             certified coastal recyclers. Treated with
