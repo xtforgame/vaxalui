@@ -91,59 +91,61 @@ const useStyles = makeStyles(() => ({
 
 export default (props) => {
   const classes = useStyles();
-  const rows = [
-    {
-      item: 'STRETCH - Carefree\n(PTT/PET)',
-      types: [
-        {
-          type: 'DTY',
-          denie: [36, 36, 36, 36, 100, 150],
-          filame: [36, 36, 36, 36, 108, 36],
-          luster: ['SD', 'SD', 'SD', 'FD', 'FD', 'SD'],
-        },
-        {
-          type: 'FDY',
-          denie: [36, 36, 36, 36],
-          filame: [36, 36, 36, 36],
-          luster: ['SD', 'SD', 'SD', 'FD'],
-        },
-      ],
-    },
-    {
-      item: 'STRETCH - HCR',
-      types: [
-        {
-          type: 'DTY',
-          denie: [36, 36, 36],
-          filame: [36, 36, 36],
-          luster: ['SD', 'SD', 'SD'],
-        },
-        {
-          type: 'FDY',
-          denie: [36, 36],
-          filame: [36, 36],
-          luster: ['SD', 'SD'],
-        },
-        {
-          type: 'FDY',
-          denie: [36],
-          filame: [36],
-          luster: ['SD'],
-        },
-      ],
-    },
-    {
-      item: 'STRETCH - Carefree2\n(PTT/PET)',
-      types: [
-        {
-          type: 'FDY',
-          denie: [36],
-          filame: [36],
-          luster: ['SD'],
-        },
-      ],
-    },
-  ];
+  const {
+    rows = [
+      {
+        item: 'STRETCH - Carefree\n(PTT/PET)',
+        types: [
+          {
+            type: 'DTY',
+            denie: [36, 36, 36, 36, 100, 150],
+            filame: [36, 36, 36, 36, 108, 36],
+            luster: ['SD', 'SD', 'SD', 'FD', 'FD', 'SD'],
+          },
+          {
+            type: 'FDY',
+            denie: [36, 36, 36, 36],
+            filame: [36, 36, 36, 36],
+            luster: ['SD', 'SD', 'SD', 'FD'],
+          },
+        ],
+      },
+      {
+        item: 'STRETCH - HCR',
+        types: [
+          {
+            type: 'DTY',
+            denie: [36, 36, 36],
+            filame: [36, 36, 36],
+            luster: ['SD', 'SD', 'SD'],
+          },
+          {
+            type: 'FDY',
+            denie: [36, 36],
+            filame: [36, 36],
+            luster: ['SD', 'SD'],
+          },
+          {
+            type: 'FDY',
+            denie: [36],
+            filame: [36],
+            luster: ['SD'],
+          },
+        ],
+      },
+      {
+        item: 'STRETCH - Carefree2\n(PTT/PET)',
+        types: [
+          {
+            type: 'FDY',
+            denie: [36],
+            filame: [36],
+            luster: ['SD'],
+          },
+        ],
+      },
+    ],
+  } = props;
 
   const columnOrder = ['denie', 'filame', 'luster'];
 
