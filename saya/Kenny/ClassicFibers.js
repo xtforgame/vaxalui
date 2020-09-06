@@ -21,9 +21,11 @@ const styles = {
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 160
+  },
+  titleBack: {
+    fontFamily: 'FilsonSoft-Light'
   },
   line: {
     width: 420,
@@ -55,6 +57,7 @@ class ClassicFibers extends _react.default.PureComponent {
       borderStyle,
       subtitle,
       title,
+      titleBack,
       boxWidth
     } = this.props;
     return _react.default.createElement("div", {
@@ -67,7 +70,9 @@ class ClassicFibers extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.title
-    }, title), _react.default.createElement("div", {
+    }, title, _react.default.createElement("span", {
+      className: classes.titleBack
+    }, titleBack)), _react.default.createElement("div", {
       className: classes.line,
       style: {
         border: borderStyle

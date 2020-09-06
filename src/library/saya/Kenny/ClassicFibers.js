@@ -11,9 +11,11 @@ const styles = {
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 160,
+  },
+  titleBack: {
+    fontFamily: 'FilsonSoft-Light',
   },
   line: {
     width: 420,
@@ -45,6 +47,7 @@ class ClassicFibers extends React.PureComponent {
       borderStyle,
       subtitle,
       title,
+      titleBack,
       boxWidth,
     } = this.props;
     return (
@@ -59,7 +62,10 @@ class ClassicFibers extends React.PureComponent {
       >
         <div className={classes.title}>
           {title}
-          </div>
+          <span className={classes.titleBack}>
+            {titleBack}
+          </span>
+        </div>
 
         <div
           className={classes.line}

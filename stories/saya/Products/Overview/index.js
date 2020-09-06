@@ -63,7 +63,8 @@ storiesOf('saya|Pages/Desktop/Products', module)
           />
 
           <ClassicFibers
-            title="SAYA Classic Fibers"
+            title="SAYA"
+            titleBack="365"
             subtitle="Nam dapibus nisl vitae elit."
             height="1000px"
             backgroundColor="#444343"
@@ -90,7 +91,8 @@ storiesOf('saya|Pages/Desktop/Products', module)
           </ClassicFibers>
 
           <ClassicFibers
-            title="SAYA Classic Fibers"
+            title="SAYA"
+            titleBack="365"
             subtitle="Nam dapibus nisl vitae elit."
             height="1500px"
             backgroundColor="#c8c6c6"
