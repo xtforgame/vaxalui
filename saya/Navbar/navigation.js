@@ -62,7 +62,8 @@ var _default = [{
       link: 'saya-fresh'
     }, {
       name: 'SAYA Microfiber',
-      link: 'saya-microfiber'
+      link: 'saya-microfiber',
+      disabled: true
     }]
   }]
 }, {

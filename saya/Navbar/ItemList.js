@@ -39,7 +39,10 @@ const styles = theme => ({
     color: '#808080',
     transitionProperty: 'color',
     transitionDuration: '0.2s',
-    transitionDelay: '0s'
+    transitionDelay: '0s',
+    '&:hover': {
+      color: '808080'
+    }
   }
 });
 
@@ -48,6 +51,7 @@ class ItemList extends _react.default.PureComponent {
     super(...args);
 
     _defineProperty(this, "renderItem", (item, index) => {
+      console.log('item :', item);
       const {
         classes,
         root
@@ -70,8 +74,9 @@ class ItemList extends _react.default.PureComponent {
         }, _react.default.createElement(_LinkItem.default, {
           to: link,
           name: name,
+          disabled: item.disabled,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath)
+            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
           })
         }));
       } else if (items) {
@@ -83,7 +88,7 @@ class ItemList extends _react.default.PureComponent {
           items: items,
           listDirection: listDirection,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath)
+            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
           })
         }));
       }

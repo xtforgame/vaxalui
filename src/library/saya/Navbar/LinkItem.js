@@ -7,13 +7,13 @@ const styles = theme => ({
   root: {
     position: 'relative',
     color: 'white',
-    '&:hover': {
-      color: 'white',
-      // backgroundColor: 'aqua',
-      // transitionProperty: 'background-color',
-      // transitionDuration: '0.1s',
-      // transitionDelay: '0s',
-    },
+    // '&:hover': {
+    //   color: 'white',
+    //   // backgroundColor: 'aqua',
+    //   // transitionProperty: 'background-color',
+    //   // transitionDuration: '0.1s',
+    //   // transitionDelay: '0s',
+    // },
   },
 });
 
@@ -24,10 +24,12 @@ class LinkItem extends React.PureComponent {
       className,
       to,
       name,
+      disabled,
     } = this.props;
     return (
       <Link
         to={to}
+        disabled={disabled}
       >
         <div
           className={clsx(classes.root, className)}

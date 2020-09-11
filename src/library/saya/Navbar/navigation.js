@@ -66,6 +66,7 @@ export default [{
         {
           name: 'SAYA Microfiber',
           link: 'saya-microfiber',
+          disabled: true,
         },
       ],
     },

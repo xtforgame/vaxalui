@@ -20,11 +20,21 @@ const styles = theme => ({
     transitionProperty: 'color',
     transitionDuration: '0.2s',
     transitionDelay: '0s',
+    '&:hover': {
+      color: '808080',
+      // backgroundColor: 'aqua',
+      // transitionProperty: 'background-color',
+      // transitionDuration: '0.1s',
+      // transitionDelay: '0s',
+    },
   },
 });
 
 class ItemList extends React.PureComponent {
   renderItem = (item, index) => {
+
+    console.log('item :', item);
+
     const {
       classes,
       root,
@@ -50,8 +60,9 @@ class ItemList extends React.PureComponent {
           <LinkItem
             to={link}
             name={name}
+            disabled={item.disabled}
             className={clsx({
-              [classes.darkItem]: !this.allClosed && !isExpanded(path, currentPath),
+              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
             })}
           />
         </Item>
@@ -67,7 +78,7 @@ class ItemList extends React.PureComponent {
             items={items}
             listDirection={listDirection}
             className={clsx({
-              [classes.darkItem]: !this.allClosed && !isExpanded(path, currentPath),
+              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
             })}
           />
         </Item>
