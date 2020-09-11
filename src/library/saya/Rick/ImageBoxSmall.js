@@ -73,7 +73,7 @@ class ImageBoxSmall extends React.PureComponent {
         >
           {title}
           <span style={{
-            fontFamily: 'FilsonSoftLight', fontWeight: 'normal',
+            fontFamily: 'FilsonSoft-Light', fontWeight: 'normal',
           }}>{titleBack}</span>
         </pre>
 

@@ -53,7 +53,7 @@ export default (props) => {
           <div className={classes.title}>
             <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>
               {title}
-              <span style={{ fontFamily: 'FilsonSoftLight', }}>{titleBack}</span>
+              <span style={{ fontFamily: 'FilsonSoft-Light', }}>{titleBack}</span>
             </pre>
           </div>
 

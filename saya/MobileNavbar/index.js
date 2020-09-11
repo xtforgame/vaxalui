@@ -43,7 +43,10 @@ const styles = theme => ({
   menuRoot: {
     position: 'fixed',
     zIndex: 2048,
-    top: theme.spacing(8),
+    top: 56,
+    [theme.breakpoints.up('sm')]: {
+      top: 64
+    },
     width: '100%'
   }
 });

@@ -75,7 +75,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
       }
     }, title, _react.default.createElement("span", {
       style: {
-        fontFamily: 'FilsonSoftLight',
+        fontFamily: 'FilsonSoft-Light',
         fontWeight: 'normal'
       }
     }, titleBack)), _react.default.createElement("pre", {

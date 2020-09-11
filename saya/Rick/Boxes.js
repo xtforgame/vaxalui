@@ -70,7 +70,7 @@ var _default = props => {
     }
   }, title, _react.default.createElement("span", {
     style: {
-      fontFamily: 'FilsonSoftLight'
+      fontFamily: 'FilsonSoft-Light'
     }
   }, titleBack))), _react.default.createElement("div", {
     className: classes.subtitle

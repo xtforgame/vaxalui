@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    fontFamily: 'FilsonSoftLight',
+    fontFamily: 'FilsonSoft-Light',
 
   },
   secondLine: {

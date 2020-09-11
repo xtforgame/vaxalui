@@ -41,7 +41,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   secondTitleBack: {
     fontWeight: 'normal',
-    fontFamily: 'FilsonSoftLight'
+    fontFamily: 'FilsonSoft-Light'
   },
   secondLine: {
     width: 230,
