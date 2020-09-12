@@ -13,6 +13,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _MenuContext = require("./MenuContext");
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -27,12 +29,16 @@ exports.getSize = getSize;
 
 const styles = theme => ({
   root: {
+    fontFamily: 'FilsonSoftRegular',
     paddingLeft: getSize(theme).indent,
     borderTopStyle: 'solid',
     borderTopColor: '#828282',
     borderTopWidth: 1,
     userSelect: 'none',
     cursor: 'pointer'
+  },
+  firstLayerItem: {
+    fontFamily: 'FilsonSoft-Bold'
   }
 });
 
@@ -50,11 +56,14 @@ class Item extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      children
+      children,
+      firstLayerItem
     } = this.props;
     return _react.default.createElement("div", {
       "data-id": "menu-item",
-      className: classes.root,
+      className: (0, _clsx.default)(classes.root, {
+        [classes.firstLayerItem]: firstLayerItem
+      }),
       onClick: this.handleClick
     }, children);
   }

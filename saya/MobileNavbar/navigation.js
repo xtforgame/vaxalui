@@ -7,7 +7,7 @@ exports.default = void 0;
 var _default = [{
   name: 'TECHNOLOGIES',
   items: [{
-    name: 'Overview',
+    name: '',
     link: '/overview'
   }, {
     name: 'SAYA Now',
@@ -50,7 +50,8 @@ var _default = [{
     link: '/saya-now-overview'
   }, {
     name: '3',
-    link: '/saya-now-overview'
+    link: '/saya-now-overview',
+    disabled: true
   }, {
     name: '4',
     link: '/saya-now-overview'

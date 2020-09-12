@@ -21,18 +21,25 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 var _default = (_ref) => {
   let {
-    to
+    to,
+    disabled
   } = _ref,
-      props = _objectWithoutProperties(_ref, ["to"]);
+      props = _objectWithoutProperties(_ref, ["to", "disabled"]);
 
   const {
     onLinkClick
   } = (0, _react.useContext)(_MenuContext.MenuContext);
+  const style = {
+    cursor: 'pointer'
+  };
+
+  if (disabled) {
+    delete style.cursor;
+  }
+
   return _react.default.createElement("div", _extends({}, props, {
-    style: {
-      cursor: 'pointer'
-    },
-    onClick: e => onLinkClick(to)
+    style: style,
+    onClick: e => !disabled && onLinkClick(to)
   }));
 };
 

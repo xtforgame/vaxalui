@@ -1,7 +1,7 @@
 export default [{ // could use same file with Desktop
   name: 'TECHNOLOGIES',
   items: [{
-    name: 'Overview',
+    name: '',
     link: '/overview',
   }, {
     name: 'SAYA Now',
@@ -45,6 +45,7 @@ export default [{ // could use same file with Desktop
   }, {
     name: '3',
     link: '/saya-now-overview',
+    disabled: true,
   }, {
     name: '4',
     link: '/saya-now-overview',

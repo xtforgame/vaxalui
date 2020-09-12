@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { MenuContext } from './MenuContext';
+import clsx from 'clsx';
 
 export const getSize = theme => ({
   width: theme.spacing(16),
@@ -11,12 +12,16 @@ export const getSize = theme => ({
 
 const styles = theme => ({
   root: {
+    fontFamily: 'FilsonSoftRegular',
     paddingLeft: getSize(theme).indent,
     borderTopStyle: 'solid',
     borderTopColor: '#828282',
     borderTopWidth: 1,
     userSelect: 'none',
     cursor: 'pointer',
+  },
+  firstLayerItem: {
+    fontFamily: 'FilsonSoft-Bold',
   },
 });
 
@@ -31,11 +36,12 @@ class Item extends React.PureComponent {
     const {
       classes,
       children,
+      firstLayerItem,
     } = this.props;
     return (
       <div
         data-id="menu-item"
-        className={classes.root}
+        className={clsx(classes.root, { [classes.firstLayerItem]: firstLayerItem })}
         onClick={this.handleClick}
       >
         {children}

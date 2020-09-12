@@ -37,6 +37,7 @@ const styles = theme => ({
     color: 'white'
   },
   itemRoot: {
+    fontFamily: 'FilsonSoftRegular',
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2)
   }
@@ -89,11 +90,12 @@ class Menu extends _react.default.PureComponent {
         } = item;
         return _react.default.createElement("div", {
           key: index.toString(),
-          className: classes.itemRoot
+          className: (0, _clsx.default)(classes.itemRoot, classes.firstLayerItem)
         }, _react.default.createElement(_Item.default, {
           name: name,
           index: index,
           path: `${index}`,
+          firstLayerItem: true,
           type: "expand"
         }, _react.default.createElement(_ExpandItem.default, {
           name: name,

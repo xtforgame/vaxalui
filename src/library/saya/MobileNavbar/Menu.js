@@ -16,6 +16,7 @@ const styles = theme => ({
     color: 'white',
   },
   itemRoot: {
+    fontFamily: 'FilsonSoftRegular',
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
   },
@@ -73,12 +74,13 @@ class Menu extends React.PureComponent {
       return (
         <div
           key={index.toString()}
-          className={classes.itemRoot}
+          className={clsx(classes.itemRoot, classes.firstLayerItem)}
         >
           <Item
             name={name}
             index={index}
             path={`${index}`}
+            firstLayerItem
             type="expand"
           >
             <ExpandItem

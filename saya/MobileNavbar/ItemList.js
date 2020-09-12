@@ -70,8 +70,9 @@ class ItemList extends _react.default.PureComponent {
         }, _react.default.createElement(_LinkItem.default, {
           to: link,
           name: name,
+          disabled: item.disabled,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath)
+            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
           })
         }));
       } else if (items) {
@@ -83,7 +84,7 @@ class ItemList extends _react.default.PureComponent {
           path: path,
           items: items,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath)
+            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
           })
         }));
       }
@@ -103,7 +104,7 @@ class ItemList extends _react.default.PureComponent {
         currentPath
       } = this.context;
       this.allClosed = items.every((item, index) => item.link || !(0, _ExpandItem.isOpened)(`${root}/${index}`, currentPath));
-      return items.map(this.renderItem);
+      return items.filter(i => i.name).map(this.renderItem);
     });
   }
 

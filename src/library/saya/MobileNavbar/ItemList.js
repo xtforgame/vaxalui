@@ -50,8 +50,9 @@ class ItemList extends React.PureComponent {
           <LinkItem
             to={link}
             name={name}
+            disabled={item.disabled}
             className={clsx({
-              [classes.darkItem]: !this.allClosed && !isExpanded(path, currentPath),
+              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
             })}
           />
         </Item>
@@ -67,7 +68,7 @@ class ItemList extends React.PureComponent {
             path={path}
             items={items}
             className={clsx({
-              [classes.darkItem]: !this.allClosed && !isExpanded(path, currentPath),
+              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
             })}
           />
         </Item>
@@ -94,7 +95,7 @@ class ItemList extends React.PureComponent {
     this.allClosed = items.every(
       (item, index) => item.link || !isExpanded(`${root}/${index}`, currentPath)
     );
-    return items.map(this.renderItem);
+    return items.filter(i => i.name).map(this.renderItem);
   }
 
   render() {
