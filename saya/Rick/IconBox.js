@@ -9,12 +9,17 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
   root: {
     height: 90,
     border: 'solid 1px #888888'
+  },
+  clickable: {
+    cursor: 'pointer'
   }
 };
 
@@ -23,15 +28,19 @@ class IconBox extends _react.default.PureComponent {
     const {
       classes,
       imgUrl,
-      width
+      width,
+      onClick
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: (0, _clsx.default)(classes.root, {
+        [classes.clickable]: !!onClick
+      })
     }, _react.default.createElement("img", {
       src: imgUrl,
       style: {
         width: width
-      }
+      },
+      onClick: onClick
     }));
   }
 
