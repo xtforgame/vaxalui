@@ -5,6 +5,7 @@ import clsx from 'clsx';
 import TextField from './TextField';
 import Select from './Select';
 import Button from './Button';
+import Checkbox from './Checkbox';
 
 const useStyles = makeStyles(theme => ({
   rowFlex: {
@@ -49,6 +50,13 @@ const useStyles = makeStyles(theme => ({
   box: {
     width: 30,
     height: 30,
+    '&$checked': {
+      backgroundColor: 'white',
+    },
+    '&:after': {
+      backgroundColor: '#ff0000',
+      color: '#fff',
+    },
   },
   labelContent: {
     width: 400,
@@ -137,7 +145,8 @@ export default (props) => {
           </div>
 
           <div className={classes.checkbox}>
-            <input className={classes.box} type="checkbox" value="checkbox" />
+            <Checkbox />
+            {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
             <div className={classes.labelContent}>
               <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
             </div>

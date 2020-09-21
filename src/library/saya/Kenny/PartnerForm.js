@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from './GreenButton';
 import TextField from './TextField';
+import Checkbox from '../Checkbox';
 
 const styles = {
   title: {
@@ -88,7 +89,7 @@ class Partner extends React.PureComponent {
         </div>
 
         <div className={classes.checkbox}>
-          <input className={classes.box} type="checkbox" value="checkbox" />
+          <Checkbox />
           <div className={classes.labelContent}>
             <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
           </div>

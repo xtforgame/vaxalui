@@ -17,6 +17,8 @@ var _Select = _interopRequireDefault(require("./Select"));
 
 var _Button = _interopRequireDefault(require("./Button"));
 
+var _Checkbox = _interopRequireDefault(require("./Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -63,7 +65,14 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   box: {
     width: 30,
-    height: 30
+    height: 30,
+    '&$checked': {
+      backgroundColor: 'white'
+    },
+    '&:after': {
+      backgroundColor: '#ff0000',
+      color: '#fff'
+    }
   },
   labelContent: {
     width: 400,
@@ -190,11 +199,7 @@ var _default = props => {
     width: 100
   }, "SUBMIT"))), _react.default.createElement("div", {
     className: classes.checkbox
-  }, _react.default.createElement("input", {
-    className: classes.box,
-    type: "checkbox",
-    value: "checkbox"
-  }), _react.default.createElement("div", {
+  }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
     className: classes.labelContent
   }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
     style: {

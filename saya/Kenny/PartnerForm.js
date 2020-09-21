@@ -13,6 +13,8 @@ var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 var _TextField = _interopRequireDefault(require("./TextField"));
 
+var _Checkbox = _interopRequireDefault(require("../Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -102,11 +104,7 @@ class Partner extends _react.default.PureComponent {
       text: "SUBMIT"
     }))), _react.default.createElement("div", {
       className: classes.checkbox
-    }, _react.default.createElement("input", {
-      className: classes.box,
-      type: "checkbox",
-      value: "checkbox"
-    }), _react.default.createElement("div", {
+    }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
       className: classes.labelContent
     }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))));
   }
