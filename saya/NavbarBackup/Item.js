@@ -21,14 +21,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const styles = theme => ({
   firstLayer: {
-    fontFamily: 'FilsonSoft-Bold',
-    cursor: 'pointer'
+    fontFamily: 'FilsonSoft-Bold'
   },
   otherLayer: {
     paddingTop: 4,
     paddingBottom: 4,
-    fontFamily: 'FilsonSoftRegular',
-    cursor: 'pointer'
+    fontFamily: 'FilsonSoftRegular'
   }
 });
 
@@ -57,7 +55,8 @@ class Item extends _react.default.PureComponent {
         [classes.otherLayer]: !firstLayer
       }),
       "data-id": "menu-item",
-      onMouseEnter: this.showMenu
+      onMouseEnter: this.showMenu,
+      onMouseLeave: this.closeMenu
     }, children);
   }
 
