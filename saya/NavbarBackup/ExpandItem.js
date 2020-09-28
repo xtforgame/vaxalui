@@ -71,7 +71,7 @@ var _default = props => {
   } = (0, _react.useContext)(_MenuContext.MenuContext);
   const classes = useStyles();
   const textItem = (0, _react.useRef)();
-  (0, _react.useLayoutEffect)(() => {});
+  (0, _react.useEffect)(() => {});
 
   const renderName = () => {
     let name;

@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useLayoutEffect } from 'react';
+import React, { useContext, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 // import { graphql } from 'gatsby';
 import { makeStyles } from '@material-ui/core/styles';
@@ -56,7 +56,7 @@ export default (props) => {
   const classes = useStyles();
   const textItem = useRef();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // console.log('textItem :', textItem);
     // console.log('textItem.current.offsetHeight :', textItem.current.offsetHeight);
   });
