@@ -28,7 +28,7 @@ export default (props) => {
           </span>
         </Link>
       );
-    } else if (index != breadcrumbs.length - 1) {
+    } else if (index !== breadcrumbs.length - 1) {
       return (
         <Link key={index} color="inherit" href="/" onClick={handleClick}>
           <span style={{ fontSize: 14, fontFamily: 'FilsonSoftRegular', color: 'black' }}>

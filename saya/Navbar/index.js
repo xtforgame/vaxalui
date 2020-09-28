@@ -31,7 +31,8 @@ const styles = theme => ({
   root: {
     width: '100%',
     position: 'fixed',
-    zIndex: 1024
+    zIndex: 1024,
+    fontSize: 12
   },
   body: {
     width: '100%',

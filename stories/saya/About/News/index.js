@@ -100,7 +100,6 @@ storiesOf('saya|Pages/Desktop/About', module)
               height={324}
             />
           </TitleLineBox>
-
         </Layout>
       </div>
     )

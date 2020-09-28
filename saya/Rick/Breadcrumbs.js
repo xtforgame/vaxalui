@@ -44,7 +44,7 @@ var _default = props => {
           color: 'black'
         }
       }, breadcrumb.label));
-    } else if (index != breadcrumbs.length - 1) {
+    } else if (index !== breadcrumbs.length - 1) {
       return _react.default.createElement(_Link.default, {
         key: index,
         color: "inherit",
