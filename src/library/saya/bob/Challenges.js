@@ -5,6 +5,7 @@ import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   title: {
+    width: 320,
     fontSize: 32,
     fontFamily: 'FilsonSoft-Bold',
   },
@@ -12,6 +13,7 @@ const styles = {
     fontSize: 20,
     marginTop: 40,
     fontFamily: 'FilsonSoft',
+    fontWeight: 300,
   },
   titleWhite: {
     color: '#ffffff',
@@ -130,7 +132,7 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.subtitle}
               >
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft' }}>{subtitle}</BreakAllContentText>
               </div>
               <div
                 className={classes.description}
