@@ -89,7 +89,7 @@ class TopSection extends React.PureComponent {
         <div className={classes.flex1} />
 
         <div className={classes.secondTitle}>
-          {secondTitle}<span className={classes.secondTitleBack}>{secondTitleBack} </span>
+          {secondTitle}<span className={classes.secondTitleBack}>{secondTitleBack}</span>
         </div>
 
         <div className={classes.flex1} />
