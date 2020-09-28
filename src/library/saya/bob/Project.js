@@ -11,6 +11,7 @@ const styles = {
     justifyContent: 'space-evenly',
     alignItems: 'center',
     border: '1px solid #000000',
+    backgroundColor: '#FFFFFF',
     marginBottom: 20,
   },
   disabledBackground: {

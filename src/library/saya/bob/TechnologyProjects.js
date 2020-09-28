@@ -34,11 +34,15 @@ class TechnologyProjects extends React.PureComponent {
       classes,
       title,
       list,
+      backgroundColor,
     } = this.props;
     return (
       <>
         <div
           className={classes.root}
+          style={{
+            backgroundColor,
+          }}
         >
           <div style={{ width: 940 }}>
             <div>{title}</div>
