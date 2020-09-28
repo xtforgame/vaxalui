@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
@@ -20,10 +21,14 @@ const styles = {
     '&:hover': {
       backgroundColor: '#c0c823',
     },
-    '&:inactive': {
-      backgroundColor: '#444343',
-    }
   },
+  disabledButton: {
+    color: '#ffffff',
+    backgroundColor: '#444343',
+    '&:hover': {
+      backgroundColor: '#444343',
+    },
+  }
 };
 
 
@@ -32,10 +37,15 @@ class GreenButton extends React.PureComponent {
     const {
       classes,
       text,
+      disabled = false,
       onClick = () => {},
     } = this.props;
     return (
-      <button onClick={onClick} className={classes.button}>
+      <button
+        disabled
+        onClick={onClick}
+        className={clsx(classes.button, { [classes.disabledButton]: disabled })}
+      >
         {text}
       </button>
 

@@ -19,14 +19,19 @@ const styles = {
   line: {
     width: 461,
     height: 1,
-    marginTop: 36,
+    marginTop: 16,
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
-    marginTop: 20,
+    fontFamily: 'FilsonSoft',
+    fontWeight: 300,
+    marginTop: 40,
   },
   description: {
+    width: 460,
+    marginTop: 8,
+  },
+  bottomContent: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
     marginTop: 32,
@@ -36,7 +41,7 @@ const styles = {
   },
 };
 
-class Introduction extends React.PureComponent {
+class Methodology extends React.PureComponent {
   render() {
     const {
       classes,
@@ -49,6 +54,7 @@ class Introduction extends React.PureComponent {
       subtitle,
       subtitleWidth,
       description,
+      bottomContent,
       descriptionWidth,
       fontColor,
       lineBorder,
@@ -90,21 +96,24 @@ class Introduction extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft' }}>{subtitle}</BreakAllContentText>
+            </div>
+            <div className={classes.description}>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
             </div>
             <div
-              className={classes.description}
+              className={classes.bottomContent}
               style={{
                 width: descriptionWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{bottomContent}</BreakAllContentText>
+            </div>
+            <div>
+              {children}
             </div>
           </div>
         </ImageContainer>
-        <div>
-          {children}
-        </div>
         <div className={classes.space} />
       </>
     );
@@ -112,4 +121,4 @@ class Introduction extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(Introduction);
+export default withStyles(styles)(Methodology);
