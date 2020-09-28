@@ -8,7 +8,7 @@ const styles = {
   button: {
     textAlign: 'center',
     backgroundColor: '#000000',
-    border: 'solid 2px #ffffff',
+    border: 'solid 2px #FFFFFF',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -17,6 +17,10 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 4,
+    '&:hover': {
+      color: '#000000',
+      backgroundColor: '#FFFFFF',
+    },
   },
 };
 

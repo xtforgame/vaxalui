@@ -42,3 +42,5 @@ import './MobileAbout';
 
 // MobilePartners
 import './MobilePartners';
+
+import './Pages/NewDesktop';

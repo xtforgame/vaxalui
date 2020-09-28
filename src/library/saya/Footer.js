@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
-import TextField from './TextField';
+import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
 import Checkbox from './Checkbox';
@@ -41,6 +41,9 @@ const useStyles = makeStyles(theme => ({
   },
   emailInput: {
     width: 300,
+    '&::placeholder': {
+      color: '#FFFFFF',
+    },
   },
 
   checkbox: {
@@ -145,10 +148,12 @@ export default (props) => {
           </div>
 
           <div className={classes.checkbox}>
-            <Checkbox />
+            <Checkbox darkTheme />
             {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
             <div className={classes.labelContent}>
-              <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
+              <label>
+                SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.
+              </label>
             </div>
           </div>
           {/* <Button
