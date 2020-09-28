@@ -8,13 +8,11 @@ import { MenuContext } from './MenuContext';
 const styles = theme => ({
   firstLayer: {
     fontFamily: 'FilsonSoft-Bold',
-    cursor: 'pointer',
   },
   otherLayer: {
     paddingTop: 4,
     paddingBottom: 4,
     fontFamily: 'FilsonSoftRegular',
-    cursor: 'pointer',
   },
 });
 
@@ -38,7 +36,7 @@ class Item extends React.PureComponent {
         className={clsx({ [classes.firstLayer]: firstLayer, [classes.otherLayer]: !firstLayer })}
         data-id="menu-item"
         onMouseEnter={this.showMenu}
-        // onMouseLeave={this.closeMenu}
+        onMouseLeave={this.closeMenu}
       >
         {children}
       </div>

@@ -13,11 +13,17 @@ var _styles = require("@material-ui/core/styles");
 
 var _clsx = _interopRequireDefault(require("clsx"));
 
+var _MenuContext = require("./MenuContext");
+
 var _navigation = _interopRequireDefault(require("./navigation"));
 
 var _Menu = _interopRequireDefault(require("./Menu"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -48,10 +54,10 @@ const styles = theme => ({
     height: theme.spacing(8),
     transitionProperty: 'height',
     transitionDuration: '0.33s',
-    transitionDelay: '0.33s'
+    transitionDelay: '0.1s'
   },
   opening: {
-    height: theme.spacing(8) * 6,
+    height: theme.spacing(8) * 4,
     transitionProperty: 'height',
     transitionDuration: '0.33s',
     transitionDelay: '0s'
@@ -59,12 +65,8 @@ const styles = theme => ({
 });
 
 class Navbar extends _react.default.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "state", {
-      isOpen: false
-    });
+  constructor(props) {
+    super(props);
 
     _defineProperty(this, "handleMenuChange", (e, value) => {
       const isOpening = value !== '';
@@ -72,6 +74,42 @@ class Navbar extends _react.default.PureComponent {
         isOpen: isOpening
       });
     });
+
+    this.state = {
+      currentPath: '',
+      enterPath: path => {
+        const stack = this.state.pathStack;
+        stack.push(path);
+        this.setState({
+          currentPath: path,
+          pathStack: [...stack]
+        });
+      },
+      leavePath: path => {
+        const stack = this.state.pathStack;
+        stack[stack.length - 1] !== path && console.error('Path leaving incorrect');
+        stack.pop();
+        this.setState({
+          currentPath: stack.length === 0 ? '' : stack[stack.length - 1],
+          pathStack: [...stack]
+        });
+      },
+      clearPath: () => {
+        this.setState({
+          currentPath: '',
+          pathStack: []
+        });
+      },
+      pathStack: [],
+      isOpen: false
+    };
+  }
+
+  componentDidUpdate() {
+    const {
+      currentPath
+    } = this.state;
+    this.handleMenuChange(null, currentPath);
   }
 
   render() {
@@ -84,20 +122,29 @@ class Navbar extends _react.default.PureComponent {
     const {
       isOpen
     } = this.state;
+    console.log('isOpen :', isOpen);
     return _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.root, {
         [classes.closing]: !isOpen,
         [classes.opening]: isOpen
-      })
+      }),
+      onMouseLeave: () => {
+        console.log('handleMenuChange');
+        this.state.clearPath();
+      }
     }, _react.default.createElement("div", {
       className: classes.body
     }, _react.default.createElement("div", {
       className: classes.logo
-    }, children), _react.default.createElement("div", null, _react.default.createElement(_Menu.default, {
-      items: items || _navigation.default,
-      onLinkClick: onLinkClick,
-      onChange: this.handleMenuChange
-    }))));
+    }, children), _react.default.createElement("div", null, _react.default.createElement(_MenuContext.MenuContext.Provider, {
+      value: _objectSpread({}, this.state, {
+        onLinkClick: onLinkClick || (path => {
+          console.warn('default onLinkClick', path);
+        })
+      })
+    }, _react.default.createElement(_Menu.default, {
+      items: items || _navigation.default
+    })))));
   }
 
 }
