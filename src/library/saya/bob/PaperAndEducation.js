@@ -51,7 +51,6 @@ class PaperAndEducation extends React.PureComponent {
     const {
       classes,
       backgroundImage,
-      bottleImage,
     } = this.props;
     return (
       <>
