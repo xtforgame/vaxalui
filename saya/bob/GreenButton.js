@@ -13,44 +13,44 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   button: {
+    minWidth: 128,
+    height: 44,
+    paddingTop: 6,
     textAlign: 'center',
-    backgroundColor: '#000000',
-    border: 'solid 2px #FFFFFF',
+    backgroundColor: '#64703f',
+    border: 'none',
+    borderRadius: 22,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 12,
+    fontSize: 14,
     color: '#ffffff',
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    paddingTop: 4,
     '&:hover': {
-      color: '#000000',
-      backgroundColor: '#FFFFFF'
+      backgroundColor: '#c0c823'
+    },
+    '&:inactive': {
+      backgroundColor: '#444343'
     }
   }
 };
 
-class Button extends _react.default.PureComponent {
+class GreenButton extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      children,
-      width,
-      height = 40
+      text,
+      onClick = () => {}
     } = this.props;
     return _react.default.createElement("button", {
-      className: classes.button,
-      style: {
-        width,
-        height,
-        borderRadius: height / 2
-      }
-    }, children);
+      onClick: onClick,
+      className: classes.button
+    }, text);
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Button);
+var _default = (0, _styles.withStyles)(styles)(GreenButton);
 
 exports.default = _default;

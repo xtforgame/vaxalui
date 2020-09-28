@@ -42,7 +42,7 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    paddingTop: (theme.spacing(8) - theme.spacing(3)) / 2,
+    paddingTop: (theme.spacing(8) - theme.spacing(2)) / 2,
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     whiteSpace: 'pre'

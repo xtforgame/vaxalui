@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _clsx = _interopRequireDefault(require("clsx"));
 
-var _TextField = _interopRequireDefault(require("./TextField"));
+var _TextField = _interopRequireDefault(require("./bob/TextField"));
 
 var _Select = _interopRequireDefault(require("./Select"));
 
@@ -57,7 +57,10 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     flexBasis: theme.spacing(38)
   },
   emailInput: {
-    width: 300
+    width: 300,
+    '&::placeholder': {
+      color: '#FFFFFF'
+    }
   },
   checkbox: {
     display: 'flex',
@@ -199,7 +202,9 @@ var _default = props => {
     width: 100
   }, "SUBMIT"))), _react.default.createElement("div", {
     className: classes.checkbox
-  }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
+  }, _react.default.createElement(_Checkbox.default, {
+    darkTheme: true
+  }), _react.default.createElement("div", {
     className: classes.labelContent
   }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
     style: {

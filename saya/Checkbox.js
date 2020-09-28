@@ -30,21 +30,32 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     borderColor: 'black',
     backgroundColor: 'white'
   },
+  darkTheme: {
+    color: '#000000',
+    borderColor: '#FFFFFF',
+    backgroundColor: '#000000'
+  },
   checked: {
-    color: 'black'
+    color: '#000000'
+  },
+  darkThemeChecked: {
+    color: '#FFFFFF'
   }
 }));
 
 var _default = props => {
   const {
     checked: c,
-    onChecked = () => {}
+    onChecked = () => {},
+    darkTheme
   } = props;
   const classes = useStyles();
   const [checked, setChecked] = (0, _react.useState)(c || false);
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.checkbox, {
-      [classes.checked]: checked
+      [classes.checked]: !darkTheme && checked,
+      [classes.darkThemeChecked]: darkTheme && checked,
+      [classes.darkTheme]: darkTheme
     }),
     onClick: () => {
       setChecked(!checked);

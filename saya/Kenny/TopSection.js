@@ -95,7 +95,7 @@ class TopSection extends _react.default.PureComponent {
       className: classes.secondTitle
     }, secondTitle, _react.default.createElement("span", {
       className: classes.secondTitleBack
-    }, secondTitleBack, " ")), _react.default.createElement("div", {
+    }, secondTitleBack)), _react.default.createElement("div", {
       className: classes.flex1
     }), _react.default.createElement("div", {
       style: {
