@@ -2,19 +2,25 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { AddCircle } from '@material-ui/icons';
 import TopSection from 'library/saya/bob/TopSection';
+import Section from 'library/saya/bob/Section';
+import Breadcrumbs from 'library/saya/bob/Breadcrumbs';
 import Introduction from 'library/saya/bob/Introduction';
 import GreenNumberSection from 'library/saya/bob/GreenNumberSection';
 import Challenges from 'library/saya/bob/Challenges';
-import ClassicFibers from 'library/saya/Kenny/ClassicFibers';
-import ImageBoxSmall from 'library/saya/Kenny/ImageBoxSmall';
+import Methodology from 'library/saya/bob/Methodology';
+import ChallengesAndTransparency from 'library/saya/bob/ChallengesAndTransparency';
+import TechnologyProjects from 'library/saya/bob/TechnologyProjects';
 
 import Layout from '../../../shared/Layout';
 
-import background_TopSection from '../../../img/bg58.jpg';
-import introduction1 from '../../../img/bg59.jpg';
-import leftBox from '../../../img/bg60.jpg';
-import midBox from '../../../img/bg61.jpg';
-import rightBox from '../../../img/bg62.jpg';
+import background_TopSection from '../../../img/banner03.jpg';
+import timeline from '../../../img/fig01.svg';
+import GreenNumberSectionBG1 from '../../../img/bg04.jpg';
+import GreenNumberSectionBG2 from '../../../img/bg05.jpg';
+import SectionBG from '../../../img/bg07.jpg';
+import ChallengeImg from '../../../img/image01.png';
+import ChallengesAndTransparencyBG from '../../../img/bg43.jpg';
+import ProudlyImg from '../../../img/image03.png';
 
 storiesOf('saya|Pages/NewDesktop', module)
   .add('Module1',
@@ -36,7 +42,6 @@ storiesOf('saya|Pages/NewDesktop', module)
           />
           <Introduction
             height="465px"
-            // backgroundImage={introduction1}
             backgroundColor="#64703f"
             title="RSCUW provides a renewal solution for rolls of fabric and offcuts that don’t make it into a garment"
             subtitle="RSCUW = Recycled Scrap and Cutting Waste"
@@ -45,11 +50,11 @@ storiesOf('saya|Pages/NewDesktop', module)
             lineBorder="solid 1px #ffffff"
             subtitleWidth="620px"
             descriptionWidth="460px"
-            description={<AddCircle style={{ width: 46, height: 46, color: '#e3e3e3' }} />}
+            description={<AddCircle onClick={()=>{}} style={{ width: 46, height: 46, color: '#e3e3e3' }} />}
           />
           <GreenNumberSection
             topTitle="Offcut Waste, a Big Inconvenient Reality"
-            backgroundImage={introduction1}
+            backgroundImage={GreenNumberSectionBG1}
             backgroundColor="#e3e3e3"
             number="20"
             topTile="industrial waste"
@@ -59,7 +64,6 @@ storiesOf('saya|Pages/NewDesktop', module)
             height="450px"
             lineWidth="220px"
             leftPaddingTop="110px"
-            rightPaddingTop="145px"
             leftPaddingRight="80px"
             rightPaddingLeft="80px"
             descriptionPaddingTop="22px"
@@ -69,7 +73,7 @@ storiesOf('saya|Pages/NewDesktop', module)
           />
           <GreenNumberSection
             topTitle="Offcut Waste, a Big Inconvenient Reality"
-            backgroundImage={introduction1}
+            backgroundImage={GreenNumberSectionBG2}
             backgroundColor="#e3e3e3"
             number="34"
             topTile="overstock"
@@ -81,7 +85,6 @@ These deadstock and overstock creates millions of yards of our industry’s unac
             height="450px"
             lineWidth="220px"
             leftPaddingTop="110px"
-            rightPaddingTop="145px"
             leftPaddingRight="80px"
             rightPaddingLeft="80px"
             descriptionPaddingTop="22px"
@@ -90,17 +93,121 @@ These deadstock and overstock creates millions of yards of our industry’s unac
             percentColor="#000000"
           />
           <Challenges
-            topTitle="Offcut Waste, a Big Inconvenient Reality"
-            topTile="industrial waste"
             title="Challenges"
             subtitle="Make it available and affordable"
             description="Removing colors, pigments and finishings from fabrics is a difficult task. Previous technology has been extremely expensive and price prohibitive. SAYA’s team was able to make this commercially available and affordable."
-            height="450px"
+            height="520px"
             lineWidth="220px"
             leftPaddingTop="110px"
             leftPaddingRight="80px"
             descriptionPaddingTop="22px"
-            image={introduction1}
+            image={ChallengeImg}
+          />
+          <Methodology
+            height="756px"
+            backgroundColor="#64703f"
+            title="Methodology"
+            subtitle="SAYA’s advanced methods"
+            description="The complex input stream of sources requires SAYA’s engineering team to innovate new proprietary and advanced methods of sorting, cleaning, mechanical and chemical recycling."
+            fontColor="#ffffff"
+            titleWidth="780px"
+            lineBorder="solid 1px #ffffff"
+            subtitleWidth="620px"
+            descriptionWidth="460px"
+            bottomContent={<div><img style={{ height: 321 }} src={timeline} /></div>}
+          />
+          <ChallengesAndTransparency
+            height='496px'
+            backgroundImage={ChallengesAndTransparencyBG}
+            backgroundColor="#64703f"
+            title="Challenges and Transparency"
+            subtitle="Recruiting like-minded brands and garment manufacturers"
+            fontColor="#ffffff"
+            titleWidth="780px"
+            lineBorder="solid 1px #ffffff"
+            subtitleWidth="620px"
+            descriptionWidth="780px"
+            description="SAYA is working on pilot projects with key brand partners to recover and recycle deadstock and cutting scrap from their mills and garment factories."
+          />
+          <Section
+            color="#FFFFFF"
+            breadCrumbs={
+              <Breadcrumbs
+                bread={[
+                  { name: <span style={{ fontFamily: 'FilsonSoft-Bold' }}>RSCUW RAW</span>, path: '/RSCUWRAW' },
+                ]}
+              />
+            }
+            title={`Unbleached Recycled Fibers, Created Raw From the Source`}
+            subTitle="Less Chemicals, Less CO2, More Identity"
+            backgroundImage={SectionBG}
+            onClick={() => { console.log('read More') }}
+            showButton={false}
+            height="500px"
+          />
+          <Challenges
+            title="Carbon Footprints Reduced"
+            subtitle="xx% compared to other bleached product lines "
+            description="Fibers made of offcuts, deadstock and/or tinted PET bottles retaining its original source color. These fibers are recycled without the bleaching process, and hence are the most energy efficient and carbon friendly. "
+            height="520px"
+            lineWidth="220px"
+            leftPaddingTop="110px"
+            leftPaddingRight="80px"
+            descriptionPaddingTop="22px"
+            image={ChallengeImg}
+          />
+          <Introduction
+            height="417px"
+            backgroundColor="#64703f"
+            title="Proudly Show Off Your Recycled Content"
+            subtitle="Lightly Tinted Shade is Part of its True DNA"
+            fontColor="#ffffff"
+            titleWidth="780px"
+            lineBorder="solid 1px #ffffff"
+            subtitleWidth="620px"
+            descriptionWidth="460px"
+            description={<AddCircle onClick={()=>{}} style={{ width: 46, height: 46, color: '#e3e3e3' }} />}
+          >
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                position: 'relative',
+                marginTop: -184,
+                marginBottom: 52
+                }}
+              >
+              <img src={ProudlyImg} style={{ marginRight: 102 }} />
+            </div>
+          </Introduction>
+          <TechnologyProjects
+            title="Other Technology Projects"
+            list={[
+              {
+                title: "Backbone of our sustainable textile business",
+                buttonText: "Learn More",
+                disabled: false,
+                type: <span>BOTTLES</span>,
+              },
+              {
+                title: "Backbone of our sustainable textile business",
+                buttonText: "Coming Soon",
+                disabled: true,
+                type: <span>BOTTLES</span>,
+              },
+              {
+                title:"One Stop Used Garment to Fiber Solution",
+                buttonText: "Learn More",
+                disabled: false,
+                type: <span>GARMA / SAYANEXT</span>,
+              },
+              {
+                title: "One Stop Used Garment to Fiber Solution",
+                buttonText: "Coming Soon",
+                disabled: true,
+                type: <span>GARMA / SAYANEXT</span>,
+              }
+            ]}
           />
         </Layout>
       </div>
