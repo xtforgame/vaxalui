@@ -91,6 +91,7 @@ class GreenNumberSection extends React.PureComponent {
       classes,
       numberUpTitle,
       number,
+      suffix = '%',
       topTile,
       bottomTitle,
       rightTitle,
@@ -147,10 +148,11 @@ class GreenNumberSection extends React.PureComponent {
                 className={classes.percent}
                 style={{
                   display: percentDisplay,
-                  color:percentColor,
+                  color: percentColor,
                 }}
               >
-                %</span>
+                {suffix}
+              </span>
             </div>
             <div className={classes.topTile}>{topTile}</div>
             <div
