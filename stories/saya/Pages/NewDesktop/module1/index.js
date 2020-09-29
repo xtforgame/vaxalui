@@ -5,7 +5,7 @@ import TopSection from 'library/saya/bob/TopSection';
 import Section from 'library/saya/bob/Section';
 import Breadcrumbs from 'library/saya/bob/Breadcrumbs';
 import Introduction from 'library/saya/bob/Introduction';
-import GreenCollapse from 'library/saya/bob/GreenCollapse';
+import CollapseSection from 'library/saya/bob/CollapseSection';
 import GreenNumberSection from 'library/saya/bob/GreenNumberSection';
 import Challenges from 'library/saya/bob/Challenges';
 import Methodology from 'library/saya/bob/Methodology';
@@ -41,9 +41,35 @@ storiesOf('saya|Pages/NewDesktop', module)
             thirdTitle="Addressing the Industry’s Real Elephant In the Room"
             backgroundImage={background_TopSection}
           />
-          <GreenCollapse
+          <CollapseSection
             height="465px"
-            backgroundColor="#64703f"
+            backgroundColor="#e3e3e3"
+            color="#000000"
+            buttonColor="#64703f"
+            title="RSCUW provides a renewal solution for rolls of fabric and offcuts that don’t make it into a garment"
+            subtitle="RSCUW = Recycled Scrap and Cutting Waste"
+            fontColor="#ffffff"
+            titleWidth="780px"
+            lineBorder="solid 1px #ffffff"
+            // image={<div style={{ width: 340, height: 440, backgroundColor: 'black' }} />}
+            description={'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'}
+            
+          />
+          <CollapseSection
+            height="465px"
+            backgroundColor="#e3e3e3"
+            color="#000000"
+            buttonColor="#64703f"
+            title="RSCUW provides a renewal solution for rolls of fabric and offcuts that don’t make it into a garment"
+            subtitle="RSCUW = Recycled Scrap and Cutting Waste"
+            fontColor="#ffffff"
+            titleWidth="780px"
+            lineBorder="solid 1px #ffffff"
+            // image={<div style={{ width: 340, height: 440, backgroundColor: 'black' }} />}
+            description={'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'}
+          />
+          <CollapseSection
+            height="465px"
             title="RSCUW provides a renewal solution for rolls of fabric and offcuts that don’t make it into a garment"
             subtitle="RSCUW = Recycled Scrap and Cutting Waste"
             fontColor="#ffffff"

@@ -9,23 +9,20 @@ const useStyle = makeStyles(theme => ({
   upperPart: {
     paddingTop: 80,
     color: '#ffffff',
-    backgroundColor: '#64703f',
   },
   lowerPart: {
+    color: '#ffffff',
     display: 'flex',
     justifyContent: 'flex-start',
     marginBottom: 12,
   },
   lowerLeft: {
-    color: '#ffffff',
-    backgroundColor: '#64703f',
     display: 'flex',
     justifyContent: 'center',
     flex: 1,
     height: 'fit-content',
   },
   lowerRight: {
-    color: '#ffffff',
     width: 0,
     position: 'relative',
     left: 'calc(-50% - 10px)',
@@ -49,7 +46,6 @@ const useStyle = makeStyles(theme => ({
     width: '100%',
     height: 1,
     marginTop: 36,
-    backgroundColor: '#ffffff',
     marginBottom: 20,
   },
   leftContainer: {
@@ -91,26 +87,29 @@ export default (props) => {
     description,
     image,
     expended: e,
+    color = '#ffffff',
+    backgroundColor = '#64703f',
+    buttonColor = '#e3e3e3',
   } = props;
   const classes = useStyle();
   const [expended, setExpanded] = useState(!!e);
   return (
     <>
-      <CenteredContainer className={classes.upperPart}>
+      <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>
         <div className={classes.container}>
           <Text className={classes.title} family="bold">{title}</Text>
           <div className={classes.leftContainer}>
-            <div className={classes.line} />
+            <div className={classes.line} style={{ backgroundColor: color }} />
           </div>
         </div>
       </CenteredContainer>
-      <div className={classes.lowerPart}>
-        <div className={classes.lowerLeft}>
+      <div className={classes.lowerPart} style={{ color }}>
+        <div className={classes.lowerLeft} style={{ backgroundColor }}>
           <div className={classes.container2}>
             <div className={classes.leftContainer}>
               <Text className={classes.subtitle}>{subtitle}</Text>
-              {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: '#e3e3e3' }} />}
-              {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: '#e3e3e3' }} />}
+              {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
+              {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
               <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
                 <Text className={classes.description}>{description}</Text>
               </div>

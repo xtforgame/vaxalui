@@ -26,24 +26,21 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 const useStyle = (0, _styles.makeStyles)(theme => ({
   upperPart: {
     paddingTop: 80,
-    color: '#ffffff',
-    backgroundColor: '#64703f'
+    color: '#ffffff'
   },
   lowerPart: {
+    color: '#ffffff',
     display: 'flex',
     justifyContent: 'flex-start',
     marginBottom: 12
   },
   lowerLeft: {
-    color: '#ffffff',
-    backgroundColor: '#64703f',
     display: 'flex',
     justifyContent: 'center',
     flex: 1,
     height: 'fit-content'
   },
   lowerRight: {
-    color: '#ffffff',
     width: 0,
     position: 'relative',
     left: 'calc(-50% - 10px)'
@@ -67,7 +64,6 @@ const useStyle = (0, _styles.makeStyles)(theme => ({
     width: '100%',
     height: 1,
     marginTop: 36,
-    backgroundColor: '#ffffff',
     marginBottom: 20
   },
   leftContainer: {
@@ -106,12 +102,19 @@ var _default = props => {
     subtitle,
     description,
     image,
-    expended: e
+    expended: e,
+    color = '#ffffff',
+    backgroundColor = '#64703f',
+    buttonColor = '#e3e3e3'
   } = props;
   const classes = useStyle();
   const [expended, setExpanded] = (0, _react.useState)(!!e);
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_CenteredContainer.default, {
-    className: classes.upperPart
+    className: classes.upperPart,
+    style: {
+      backgroundColor,
+      color
+    }
   }, _react.default.createElement("div", {
     className: classes.container
   }, _react.default.createElement(_Text.default, {
@@ -120,11 +123,20 @@ var _default = props => {
   }, title), _react.default.createElement("div", {
     className: classes.leftContainer
   }, _react.default.createElement("div", {
-    className: classes.line
+    className: classes.line,
+    style: {
+      backgroundColor: color
+    }
   })))), _react.default.createElement("div", {
-    className: classes.lowerPart
+    className: classes.lowerPart,
+    style: {
+      color
+    }
   }, _react.default.createElement("div", {
-    className: classes.lowerLeft
+    className: classes.lowerLeft,
+    style: {
+      backgroundColor
+    }
   }, _react.default.createElement("div", {
     className: classes.container2
   }, _react.default.createElement("div", {
@@ -139,7 +151,7 @@ var _default = props => {
     style: {
       width: 46,
       height: 46,
-      color: '#e3e3e3'
+      color: buttonColor
     }
   }), expended && _react.default.createElement(_icons.RemoveCircle, {
     className: classes.button,
@@ -149,7 +161,7 @@ var _default = props => {
     style: {
       width: 46,
       height: 46,
-      color: '#e3e3e3'
+      color: buttonColor
     }
   }), _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.expandedArea, {
