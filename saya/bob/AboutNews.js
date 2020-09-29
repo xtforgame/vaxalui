@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _Card = _interopRequireDefault(require("./Card"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
@@ -17,7 +19,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    paddingTop: 80
+    paddingTop: 60,
+    textAlign: 'center'
   },
   container: {
     width: '80%'
@@ -28,95 +31,57 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
-  line: {
-    width: 461,
-    height: 1,
-    marginTop: 36
-  },
-  subtitle: {
-    fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
-    marginTop: 20
-  },
-  description: {
-    fontSize: 14,
-    fontFamily: 'FilsonSoftRegular',
-    marginTop: 32
+  boxRoot: {
+    marginTop: 72,
+    marginBottom: 88,
+    textAlign: 'left'
   },
   space: {
     height: 12
   }
 };
 
-class Introduction extends _react.default.PureComponent {
+class AboutNews extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      height,
       title,
       backgroundImage,
-      titleWidth,
-      titlMarginTop,
-      titleBack,
-      subtitle,
-      subtitleWidth,
-      description,
-      descriptionWidth,
       fontColor,
-      lineBorder,
       backgroundColor,
-      children
+      item = []
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
       className: classes.root,
       style: {
-        height,
         color: fontColor,
         backgroundColor
       }
     }, _react.default.createElement("div", {
       className: classes.container
     }, _react.default.createElement("div", {
-      className: classes.title,
-      style: {
-        width: titleWidth,
-        marginTop: titlMarginTop
-      }
+      className: classes.title
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
     }, title)), _react.default.createElement("div", {
-      className: classes.line,
-      style: {
-        border: lineBorder
-      }
-    }), _react.default.createElement("div", {
-      className: classes.subtitle,
-      style: {
-        width: subtitleWidth
-      }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoftRegular'
-      }
-    }, subtitle)), _react.default.createElement("div", {
-      className: classes.description,
-      style: {
-        width: descriptionWidth
-      }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoftRegular'
-      }
-    }, description)))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
+      className: classes.boxRoot
+    }, item.map(i => _react.default.createElement(_Card.default, {
+      height: i.height,
+      width: i.width,
+      title: i.title,
+      description: i.description,
+      image: i.image,
+      onClick: i.onClick
+    }))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Introduction);
+var _default = (0, _styles.withStyles)(styles)(AboutNews);
 
 exports.default = _default;

@@ -28,7 +28,8 @@ const styles = {
   },
   title: {
     fontSize: 50,
-    fontWeight: 300
+    fontWeight: 300,
+    textAlign: 'center'
   },
   titleBack: {
     fontWeight: 'bold',
@@ -43,7 +44,7 @@ const styles = {
     width: 560,
     height: 1,
     marginTop: 8,
-    border: ' solid 1px #ffffff'
+    border: 'solid 1px #ffffff'
   },
   subtitle: {
     color: '#ffffff',

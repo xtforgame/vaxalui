@@ -41,12 +41,12 @@ const styles = {
     marginTop: 2
   },
   title: {
+    width: 920,
     color: '#FFFFFF',
     fontSize: 72,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontStyle: 'normal',
-    lineHeight: 'normal',
+    fontFamily: 'FilsonSoft',
     lineHeight: 1,
     paddingTop: 45,
     whiteSpace: 'pre-line'
@@ -71,13 +71,18 @@ class Section extends _react.default.PureComponent {
       classes,
       backgroundImage,
       onClick,
+      showButton = true,
       breadCrumbs,
       title,
-      subTitle
+      subTitle,
+      height = 590
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage
+      image: backgroundImage,
+      style: {
+        height
+      }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
@@ -88,7 +93,7 @@ class Section extends _react.default.PureComponent {
       className: classes.title
     }, title), _react.default.createElement("div", {
       className: classes.subTitle
-    }, subTitle), _react.default.createElement("div", {
+    }, subTitle), showButton && _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Read More",

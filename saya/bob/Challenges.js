@@ -17,13 +17,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   title: {
+    width: 320,
     fontSize: 32,
     fontFamily: 'FilsonSoft-Bold'
   },
   subtitle: {
     fontSize: 20,
     marginTop: 40,
-    fontFamily: 'FilsonSoft'
+    fontFamily: 'FilsonSoft',
+    fontWeight: 300
   },
   titleWhite: {
     color: '#ffffff',
@@ -137,7 +139,7 @@ class Challenges extends _react.default.PureComponent {
       className: classes.subtitle
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description

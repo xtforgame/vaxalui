@@ -41,7 +41,8 @@ const styles = {
   rightColumn: {
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   numberUpTitle: {
     fontSize: 20,
@@ -109,7 +110,6 @@ class GreenNumberSection extends _react.default.PureComponent {
       height,
       numberPaddingTop,
       leftPaddingTop,
-      rightPaddingTop,
       leftPaddingRight,
       rightPaddingLeft,
       descriptionPaddingTop,
@@ -163,7 +163,6 @@ class GreenNumberSection extends _react.default.PureComponent {
     }, bottomTitle)), _react.default.createElement("div", {
       className: classes.rightColumn,
       style: {
-        paddingTop: rightPaddingTop,
         paddingLeft: rightPaddingLeft
       }
     }, _react.default.createElement("div", {

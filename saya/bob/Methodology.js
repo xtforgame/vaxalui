@@ -31,14 +31,19 @@ const styles = {
   line: {
     width: 461,
     height: 1,
-    marginTop: 36
+    marginTop: 16
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
-    marginTop: 20
+    fontFamily: 'FilsonSoft',
+    fontWeight: 300,
+    marginTop: 40
   },
   description: {
+    width: 460,
+    marginTop: 8
+  },
+  bottomContent: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
     marginTop: 32
@@ -48,7 +53,7 @@ const styles = {
   }
 };
 
-class Introduction extends _react.default.PureComponent {
+class Methodology extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -61,6 +66,7 @@ class Introduction extends _react.default.PureComponent {
       subtitle,
       subtitleWidth,
       description,
+      bottomContent,
       descriptionWidth,
       fontColor,
       lineBorder,
@@ -99,10 +105,16 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft'
       }
     }, subtitle)), _react.default.createElement("div", {
-      className: classes.description,
+      className: classes.description
+    }, _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular'
+      }
+    }, description)), _react.default.createElement("div", {
+      className: classes.bottomContent,
       style: {
         width: descriptionWidth
       }
@@ -110,13 +122,13 @@ class Introduction extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description)))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
+    }, bottomContent)), _react.default.createElement("div", null, children))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Introduction);
+var _default = (0, _styles.withStyles)(styles)(Methodology);
 
 exports.default = _default;
