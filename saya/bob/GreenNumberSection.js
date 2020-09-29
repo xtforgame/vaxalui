@@ -119,9 +119,10 @@ class GreenNumberSection extends _react.default.PureComponent {
       numberColor,
       percentColor,
       backgroundImage,
-      topTitle
+      topTitle,
+      hideTop
     } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
+    return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
       className: classes.topSection
     }, _react.default.createElement("div", null, _react.default.createElement("span", {

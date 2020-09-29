@@ -109,17 +109,22 @@ class GreenNumberSection extends React.PureComponent {
       percentColor,
       backgroundImage,
       topTitle,
+      hideTop,
     } = this.props;
     return (
       <>
-        <ImageContainer
-          image={backgroundImage}
-          className={classes.topSection}
-        >
-          <div>
-            <span className={classes.titleWhite}>{topTitle}</span>
-          </div>
-        </ImageContainer>
+        {
+          !hideTop && (
+            <ImageContainer
+              image={backgroundImage}
+              className={classes.topSection}
+            >
+              <div>
+                <span className={classes.titleWhite}>{topTitle}</span>
+              </div>
+            </ImageContainer>
+          )
+        }
         <div
           className={classes.root}
           style={{
