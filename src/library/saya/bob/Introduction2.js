@@ -9,33 +9,37 @@ const styles = {
   },
   container: {
     width: 940,
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column',
   },
   title: {
     fontSize: 32,
     lineHeight: 1.2,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   line: {
-    width: 461,
+    width: 780,
     height: 1,
-    marginTop: 36,
+    marginTop: 16,
   },
   subtitle: {
     fontSize: 20,
-    marginTop: 20,
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 39,
   },
   description: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    marginTop: 32,
+    marginTop: 10,
+    paddingBottom: 250,
   },
   space: {
     height: 12,
   },
 };
 
-class BigGreenSection extends React.PureComponent {
+class Introduction extends React.PureComponent {
   render() {
     const {
       classes,
@@ -75,7 +79,7 @@ class BigGreenSection extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              {title}
             </div>
             <div
               className={classes.line}
@@ -89,7 +93,7 @@ class BigGreenSection extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
+              {subtitle}
             </div>
             <div
               className={classes.description}
@@ -97,9 +101,7 @@ class BigGreenSection extends React.PureComponent {
                 width: descriptionWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>
-                {description}
-              </BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
             </div>
           </div>
         </ImageContainer>
@@ -113,4 +115,4 @@ class BigGreenSection extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(BigGreenSection);
+export default withStyles(styles)(Introduction);
