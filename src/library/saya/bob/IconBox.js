@@ -4,6 +4,7 @@ import clsx from 'clsx';
 
 const styles = {
   root: {
+    width: 140,
     height: 140,
     border: 'solid 1px #e3e3e3',
     borderBottom: 0,
@@ -23,13 +24,15 @@ class IconBox extends React.PureComponent {
     } = this.props;
     return (
       <div className={clsx(classes.root, { [classes.clickable]: !!onClick })}>
-        <img
-          src={imgUrl}
-          style={{
-            width: width,
-          }}
-          onClick={onClick}
-        />
+        {imgUrl && (
+          <img
+            src={imgUrl}
+            style={{
+              width,
+            }}
+            onClick={onClick}
+          />
+        )}
       </div>
     );
   }

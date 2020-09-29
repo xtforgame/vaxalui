@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
+    width: 140,
     height: 140,
     border: 'solid 1px #e3e3e3',
     borderBottom: 0,
@@ -37,10 +38,10 @@ class IconBox extends _react.default.PureComponent {
       className: (0, _clsx.default)(classes.root, {
         [classes.clickable]: !!onClick
       })
-    }, _react.default.createElement("img", {
+    }, imgUrl && _react.default.createElement("img", {
       src: imgUrl,
       style: {
-        width: width
+        width
       },
       onClick: onClick
     }));
