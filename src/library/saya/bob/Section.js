@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import GreenButton from './GreenButton';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
@@ -77,8 +78,8 @@ class Section extends React.PureComponent {
               {breadCrumbs}
               <div className={classes.firstLine} />
             </div>
-            <div className={classes.title}>{title}</div>
-            <div className={classes.subTitle}>{subTitle}</div>
+            <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
+            <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
             {showButton && <div className={classes.button}>
               <GreenButton
                 text="Read More"

@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -88,9 +90,9 @@ class Section extends _react.default.PureComponent {
       className: classes.breadCrumbs
     }, breadCrumbs, _react.default.createElement("div", {
       className: classes.firstLine
-    })), _react.default.createElement("div", {
+    })), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
-    }, title), _react.default.createElement("div", {
+    }, title), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subTitle
     }, subTitle), showButton && _react.default.createElement("div", {
       className: classes.button

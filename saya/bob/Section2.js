@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -82,7 +84,7 @@ class Section2 extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.section
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
     }, title))), _react.default.createElement("div", {
       className: classes.space
