@@ -5,7 +5,8 @@ const styles = {
   root: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'left',
+    border: '1px solid #e8e8e8',
   },
 };
 class IconBoxSection extends React.PureComponent {
@@ -15,8 +16,8 @@ class IconBoxSection extends React.PureComponent {
       children,
     } = this.props;
     return (
-      <div className={classes.root}>        
-      {children}      
+      <div className={classes.root}>
+        {children}
       </div>
     );
   }

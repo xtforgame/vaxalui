@@ -5,40 +5,40 @@ import TextField from './TextField';
 
 const styles = {
   subtitle: {
-    width: 280,
+    width: 240,
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 23,
+    paddingTop: 32,
   },
   email: {
     display: 'flex',
-    marginTop: 15,
+    marginTop: 11,
   },
   emailInput: {
-    width: 280,
-    fontSize: 12,
+    width: 240,
+    fontSize: 10,
     color: '#000000',
-    borderColor: '#ffffff',
-    backgroundColor:'#ffffff'
+    border: 'solid 1px #000000',
+    backgroundColor: '#ffffff',
   },
   button: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 23,
+    marginTop: 32,
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 23,
+    paddingTop: 11,
   },
   box: {
     width: 25,
     height: 25,
   },
   labelContent: {
-    width: 231,
+    width: 200,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 18,
+    paddingLeft: 20,
   },
 };
 
@@ -60,11 +60,12 @@ class Partner extends React.PureComponent {
     } = this.state;
     const {
       classes,
+      onClick,
     } = this.props;
     return (
       <React.Fragment>
-        <pre className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0, }}>
-          {'Sign up to stay in touch on the newest\nrenewal technologies, products, events, and\nnews from SAYA.'}
+        <pre className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
+          {'Sign up to stay in touch on the newest\nrenewal technologies, products,\nevents, and news from SAYA. '}
         </pre>
         <div className={classes.email}>
           <TextField
@@ -78,15 +79,16 @@ class Partner extends React.PureComponent {
         <div className={classes.checkbox}>
           <input className={classes.box} type="checkbox" value="checkbox" />
           <div className={classes.labelContent}>
-            <label>SAYA  may use my email address provided above to send me relevant marketing communications. I understand that I can unsubscribe from these communications at any time. </label>
+            <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
           </div>
 
         </div>
         <div className={classes.button}>
           <GreenButton
             text="SUBMIT"
-            width={280}
+            width={240}
             height={44}
+            onClick={onClick}
           />
         </div>
       </React.Fragment>

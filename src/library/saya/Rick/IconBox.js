@@ -4,8 +4,10 @@ import clsx from 'clsx';
 
 const styles = {
   root: {
-    height: 90,
-    border: 'solid 1px #888888',
+    height: 80,
+    border: 'solid 1px #e3e3e3',
+    borderBottom: 0,
+    borderTop: 0,
   },
   clickable: {
     cursor: 'pointer',

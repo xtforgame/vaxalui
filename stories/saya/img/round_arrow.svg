@@ -1,1 +1,12 @@
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:1.47px;}.cls-2{fill:#231f20;}</style></defs><title>round_arrow</title><polyline class="cls-1" points="14.49 23.03 25 31.25 35.51 23.03"/><path class="cls-2" d="M25,1A24,24,0,1,1,1,25,24,24,0,0,1,25,1m0-1A25,25,0,1,0,50,25,25,25,0,0,0,25,0Z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>round_arrow</title>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="saya_home_Desktop" transform="translate(-488.000000, -462.000000)">
+            <g id="round_arrow" transform="translate(488.000000, 462.000000)">
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="1.47" points="14.49 23.03 25 31.25 35.51 23.03"></polyline>
+                <path d="M25,1 C38.254834,1 49,11.745166 49,25 C49,38.254834 38.254834,49 25,49 C11.745166,49 1,38.254834 1,25 C1,11.745166 11.745166,1 25,1 M25,0 C11.1928813,0 0,11.1928813 0,25 C0,38.8071187 11.1928813,50 25,50 C38.8071187,50 50,38.8071187 50,25 C50,18.3695878 47.366079,12.0107399 42.6776695,7.32233047 C37.9892601,2.63392101 31.6304122,0 25,0 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

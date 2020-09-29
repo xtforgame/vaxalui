@@ -3,8 +3,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   button: {
-    width: 130,
-    height: 45,
+    width: 160,
+    height: 50,
     fontSize: 14,
     color: '#ffffff',
     fontWeight: 'bold',
@@ -26,12 +26,13 @@ class ImageBox extends React.PureComponent {
       width,
       height,
       text,
+      onClick,
     } = this.props;
 
 
     return (
       <div>
-        <button className={classes.button} style={{ marginTop: marginTop, width: width, height: height, }} >
+        <button className={classes.button} style={{ marginTop: marginTop, width: width, height: height, }} onClick={onClick} >
           {text}
         </button>
       </div>

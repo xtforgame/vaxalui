@@ -1,1 +1,11 @@
-<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><defs><style>.cls-1{fill:#fff;}</style></defs><title>triangle_right</title><path class="cls-1" d="M21,14,7,26V2Z"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="24px" viewBox="0 0 14 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>m_triangle_right</title>
+    <g id="Navibar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m_navibar_all_close" transform="translate(-664.000000, -164.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="m_triangle_right" transform="translate(664.000000, 164.000000)">
+                <polygon id="Path" points="14 12 0 24 0 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
