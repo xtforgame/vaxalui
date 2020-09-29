@@ -51,7 +51,6 @@ const useStyle = makeStyles(theme => ({
   },
   leftContainer: {
     width: 460,
-    paddingBottom: 48,
   },
   rightContainer: {
     width: 480,

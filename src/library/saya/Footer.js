@@ -41,6 +41,7 @@ const useStyles = makeStyles(theme => ({
   },
   emailInput: {
     width: 300,
+    height: 38,
     '&::placeholder': {
       color: '#FFFFFF',
     },
@@ -171,7 +172,7 @@ export default (props) => {
           </div>
           <div style={{ width: 10, height: 8 }} />
           <Select
-            style={{ width: 300 }}
+            style={{ width: 300, height: 38 }}
             options={['English', 'Traditional Chinese']}
             value={language}
             onChange={e => setLanguage(e.target.value)}

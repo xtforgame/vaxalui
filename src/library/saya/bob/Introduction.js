@@ -8,7 +8,7 @@ const styles = {
     paddingTop: 80,
   },
   container: {
-    width: '80%',
+    width: 940,
   },
   title: {
     fontSize: 40,
@@ -74,7 +74,7 @@ class Introduction extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftLight' }}>{title}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
             </div>
             <div
               className={classes.line}
@@ -88,7 +88,7 @@ class Introduction extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</BreakAllContentText>
             </div>
             <div
               className={classes.description}
