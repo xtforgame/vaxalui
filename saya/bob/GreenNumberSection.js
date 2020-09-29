@@ -102,6 +102,7 @@ class GreenNumberSection extends _react.default.PureComponent {
       classes,
       numberUpTitle,
       number,
+      suffix = '%',
       topTile,
       bottomTitle,
       rightTitle,
@@ -151,7 +152,7 @@ class GreenNumberSection extends _react.default.PureComponent {
         display: percentDisplay,
         color: percentColor
       }
-    }, "%")), _react.default.createElement("div", {
+    }, suffix)), _react.default.createElement("div", {
       className: classes.topTile
     }, topTile), _react.default.createElement("div", {
       className: classes.line,

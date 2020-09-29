@@ -20,34 +20,38 @@ const styles = {
     paddingTop: 80
   },
   container: {
-    width: 940
+    width: 940,
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'column'
   },
   title: {
     fontSize: 32,
     lineHeight: 1.2,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   line: {
-    width: 461,
+    width: 780,
     height: 1,
-    marginTop: 36
+    marginTop: 16
   },
   subtitle: {
     fontSize: 20,
-    marginTop: 20
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 39
   },
   description: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    marginTop: 32
+    marginTop: 10,
+    paddingBottom: 250
   },
   space: {
     height: 12
   }
 };
 
-class BigGreenSection extends _react.default.PureComponent {
+class Introduction extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -82,11 +86,7 @@ class BigGreenSection extends _react.default.PureComponent {
         width: titleWidth,
         marginTop: titlMarginTop
       }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoft-Bold'
-      }
-    }, title)), _react.default.createElement("div", {
+    }, title), _react.default.createElement("div", {
       className: classes.line,
       style: {
         border: lineBorder
@@ -96,12 +96,7 @@ class BigGreenSection extends _react.default.PureComponent {
       style: {
         width: subtitleWidth
       }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoft',
-        fontWeight: 300
-      }
-    }, subtitle)), _react.default.createElement("div", {
+    }, subtitle), _react.default.createElement("div", {
       className: classes.description,
       style: {
         width: descriptionWidth
@@ -117,6 +112,6 @@ class BigGreenSection extends _react.default.PureComponent {
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(BigGreenSection);
+var _default = (0, _styles.withStyles)(styles)(Introduction);
 
 exports.default = _default;
