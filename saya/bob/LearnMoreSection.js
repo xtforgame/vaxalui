@@ -17,8 +17,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    height: 590,
-    color: '#000000'
+    height: 590
   },
   section: {
     width: 940,
@@ -29,7 +28,6 @@ const styles = {
     height: '100%'
   },
   breadCrumbs: {
-    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -43,7 +41,6 @@ const styles = {
   },
   title: {
     width: 540,
-    color: '#FFFFFF',
     fontSize: 32,
     fontWeight: 300,
     fontStretch: 'normal',
@@ -52,7 +49,6 @@ const styles = {
     marginRight: 120
   },
   subTitle: {
-    color: '#FFFFFF',
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 24
@@ -81,6 +77,7 @@ class LearnMoreSection extends _react.default.PureComponent {
       image: background,
       style: {
         height,
+        color,
         backgroundColor: background
       }
     }, _react.default.createElement("div", {
