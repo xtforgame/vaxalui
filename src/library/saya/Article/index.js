@@ -12,23 +12,21 @@ const useStyles = makeStyles(theme => ({
     color: '#000000',
   },
   container: {
-    width: 780,
+    width: 940,
   },
   title: {
     textAlign: 'left',
     fontSize: 40,
     marginTop: 10,
-    marginBottom: 60,
+    marginBottom: 72,
   },
   paragraph: {
     textAlign: 'left',
     fontSize: 14,
-    marginTop: 30,
-    marginBottom: 30,
+    marginBottom: 72,
   },
   image: {
-    marginTop: 30,
-    marginBottom: 30,
+    marginBottom: 72,
   },
 }));
 
@@ -52,7 +50,7 @@ export default (props) => {
       return (
         <div className={classes.image}>
           <img
-            width={780}
+            width="100%"
             src={content.src}
           />
         </div>

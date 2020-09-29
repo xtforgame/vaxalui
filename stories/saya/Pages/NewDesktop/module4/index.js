@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 import TopSection2 from 'library/saya/bob/TopSection2';
 import AboutNews from 'library/saya/bob/AboutNews';
+import TechnologyProjects from 'library/saya/bob/TechnologyProjects';
 
 import Layout from '../../../shared/Layout';
 
@@ -65,6 +66,24 @@ storiesOf('saya|Pages/NewDesktop', module)
                 image: background_TopSection,
                 onClick: () => {}
               }
+            ]}
+          />
+          <TechnologyProjects
+            title="More About SAYA"
+            backgroundColor="#e3e3e3"
+            list={[
+              {
+                title: "Renewed Fiber is the Name of the Game",
+                buttonText: "Learn More",
+                disabled: false,
+                type: <span>SAYA</span>,
+              },
+              {
+                title: "Backbone of our sustainable textile business",
+                buttonText: "Learn More",
+                disabled: false,
+                type: '',
+              },
             ]}
           />
         </Layout>

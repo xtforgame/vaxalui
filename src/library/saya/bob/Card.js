@@ -11,7 +11,7 @@ import BreakAllContentText from '../BreakAllContentText';
 
 const useStyles = makeStyles({
   root: {
-    margin: 10,
+    marginBottom: 72,
     display: 'inline-block',
   },
   media: {

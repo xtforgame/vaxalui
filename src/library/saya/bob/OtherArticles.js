@@ -6,33 +6,37 @@ import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   root: {
-    paddingTop: 60,
-    textAlign: 'center',
+    paddingTop: 90,
   },
   container: {
     width: 940,
   },
   title: {
-    fontSize: 40,
+    fontSize: 20,
     lineHeight: 1.2,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
+  },
+  line: {
+    width: 781,
+    borderBottom: '1px solid #979797',
+    height: 1,
+    marginTop: 26,
   },
   boxRoot: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    marginTop: 72,
-    marginBottom: 16,
+    marginTop: 90,
+    marginBottom: 62,
     textAlign: 'left',
   },
   space: {
     height: 12,
-    backgroundColor: '#FFFFFF',
   },
 };
 
-class AboutNews extends React.PureComponent {
+class OtherArticles extends React.PureComponent {
   render() {
     const {
       classes,
@@ -54,8 +58,9 @@ class AboutNews extends React.PureComponent {
         >
           <div className={classes.container}>
             <div className={classes.title}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>Other Articles</BreakAllContentText>
             </div>
+            <div className={classes.line} />
             <div className={classes.boxRoot}>
             {item.map(i => (
               <Card
@@ -77,4 +82,4 @@ class AboutNews extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(AboutNews);
+export default withStyles(styles)(OtherArticles);
