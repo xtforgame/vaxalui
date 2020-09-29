@@ -23,11 +23,13 @@ const styles = {
   section: {
     width: 940,
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 88
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
   },
   breadCrumbs: {
+    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -40,15 +42,14 @@ const styles = {
     marginTop: 2
   },
   title: {
-    width: 920,
+    width: 540,
     color: '#FFFFFF',
-    fontSize: 72,
+    fontSize: 32,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontFamily: 'FilsonSoft',
-    lineHeight: 1,
-    paddingTop: 45,
-    whiteSpace: 'pre-line'
+    fontFamily: 'FilsonSoftRegular',
+    whiteSpace: 'pre-line',
+    marginRight: 120
   },
   subTitle: {
     color: '#FFFFFF',
@@ -64,46 +65,38 @@ const styles = {
   }
 };
 
-class Section extends _react.default.PureComponent {
+class LearnMoreSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage,
-      onClick,
-      showButton = true,
-      breadCrumbs,
+      background,
       title,
-      subTitle,
-      height = 590
+      color,
+      height = 256,
+      label = 'Learn More',
+      onClick
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage,
+      image: background,
       style: {
-        height
+        height,
+        backgroundColor: background
       }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
-      className: classes.breadCrumbs
-    }, breadCrumbs, _react.default.createElement("div", {
-      className: classes.firstLine
-    })), _react.default.createElement("div", {
       className: classes.title
-    }, title), _react.default.createElement("div", {
-      className: classes.subTitle
-    }, subTitle), showButton && _react.default.createElement("div", {
-      className: classes.button
-    }, _react.default.createElement(_GreenButton.default, {
-      text: "Read More",
+    }, title), _react.default.createElement(_GreenButton.default, {
+      text: label,
       onClick: onClick
-    })))), _react.default.createElement("div", {
+    }))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Section);
+var _default = (0, _styles.withStyles)(styles)(LearnMoreSection);
 
 exports.default = _default;

@@ -19,33 +19,37 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    paddingTop: 60,
-    textAlign: 'center'
+    paddingTop: 90
   },
   container: {
     width: 940
   },
   title: {
-    fontSize: 40,
+    fontSize: 20,
     lineHeight: 1.2,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
+  },
+  line: {
+    width: 781,
+    borderBottom: '1px solid #979797',
+    height: 1,
+    marginTop: 26
   },
   boxRoot: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    marginTop: 72,
-    marginBottom: 16,
+    marginTop: 90,
+    marginBottom: 62,
     textAlign: 'left'
   },
   space: {
-    height: 12,
-    backgroundColor: '#FFFFFF'
+    height: 12
   }
 };
 
-class AboutNews extends _react.default.PureComponent {
+class OtherArticles extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -70,7 +74,9 @@ class AboutNews extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
-    }, title)), _react.default.createElement("div", {
+    }, "Other Articles")), _react.default.createElement("div", {
+      className: classes.line
+    }), _react.default.createElement("div", {
       className: classes.boxRoot
     }, item.map(i => _react.default.createElement(_Card.default, {
       height: i.height,
@@ -86,6 +92,6 @@ class AboutNews extends _react.default.PureComponent {
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(AboutNews);
+var _default = (0, _styles.withStyles)(styles)(OtherArticles);
 
 exports.default = _default;

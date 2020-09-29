@@ -21,6 +21,9 @@ const styles = {
     fontSize: 20,
     marginTop: -3
   },
+  ol: {
+    alignItems: 'baseline'
+  },
   link: {
     color: '#FFFFFF',
     fontSize: 20
@@ -32,12 +35,19 @@ class Breadcrumbs extends _react.default.PureComponent {
     const {
       classes,
       color = '#FFFFFF',
-      bread = []
+      bread = [],
+      separatorColor
     } = this.props;
     return _react.default.createElement(_core.Breadcrumbs, {
       classes: {
+        ol: classes.ol,
         separator: classes.separator
-      }
+      },
+      separator: _react.default.createElement("span", {
+        style: {
+          color: separatorColor
+        }
+      }, "/")
     }, bread.map(b => _react.default.createElement(_Link.default, {
       className: classes.link,
       style: {

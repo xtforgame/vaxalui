@@ -28,6 +28,7 @@ const styles = {
     paddingTop: 88
   },
   breadCrumbs: {
+    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -40,12 +41,12 @@ const styles = {
     marginTop: 2
   },
   title: {
-    width: 920,
+    width: 780,
     color: '#FFFFFF',
-    fontSize: 72,
+    fontSize: 40,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1,
     paddingTop: 45,
     whiteSpace: 'pre-line'
@@ -64,17 +65,14 @@ const styles = {
   }
 };
 
-class Section extends _react.default.PureComponent {
+class Section2 extends _react.default.PureComponent {
   render() {
     const {
       classes,
       backgroundImage,
-      onClick,
-      showButton = true,
-      breadCrumbs,
       title,
-      subTitle,
-      height = 590
+      color,
+      height = 586
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
@@ -85,25 +83,14 @@ class Section extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
-      className: classes.breadCrumbs
-    }, breadCrumbs, _react.default.createElement("div", {
-      className: classes.firstLine
-    })), _react.default.createElement("div", {
       className: classes.title
-    }, title), _react.default.createElement("div", {
-      className: classes.subTitle
-    }, subTitle), showButton && _react.default.createElement("div", {
-      className: classes.button
-    }, _react.default.createElement(_GreenButton.default, {
-      text: "Read More",
-      onClick: onClick
-    })))), _react.default.createElement("div", {
+    }, title))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Section);
+var _default = (0, _styles.withStyles)(styles)(Section2);
 
 exports.default = _default;

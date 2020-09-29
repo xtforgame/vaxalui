@@ -23,9 +23,9 @@ const styles = {
   root: {
     display: 'flex',
     justifyContent: 'center',
-    height: 380,
-    color: '#FFFFFF',
-    textAlign: 'center'
+    height: 461,
+    textAlign: 'center',
+    backgroundColor: '#e3e3e3'
   },
   firstTitle: {
     fontSize: 20,
@@ -34,15 +34,17 @@ const styles = {
   },
   firstLine: {
     height: 1,
-    border: '1px solid #ffffff',
-    width: '100%'
+    margin: '14px auto',
+    border: '1px solid #000000',
+    width: 462
   },
   secondTitle: {
     width: 780,
     fontSize: 72,
-    fontWeight: 300,
-    fontFamily: 'FilsonSoftLight',
-    marginTop: 34
+    lineHeight: 1.11,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 38
   },
   secondLine: {
     width: 420,
@@ -50,26 +52,24 @@ const styles = {
     marginTop: 2
   },
   thirdTitle: {
-    marginTop: 16,
+    marginTop: 24,
     fontSize: 20,
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoft-Bold',
     fontWeight: 300
-  },
-  flex1: {
-    flex: 1
   },
   space: {
     height: 12
   }
 };
 
-class TopSection2 extends _react.default.PureComponent {
+class TopSection3 extends _react.default.PureComponent {
   render() {
     const {
       classes,
       firstTitle,
       secondTitle,
-      thirdTitle,
+      topTitle,
+      bottomTitle,
       backgroundImage,
       thirdTitleWidth
     } = this.props;
@@ -78,23 +78,26 @@ class TopSection2 extends _react.default.PureComponent {
       className: classes.root
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
-    }, firstTitle, _react.default.createElement("div", {
-      className: classes.firstLine
-    })), _react.default.createElement("div", null, _react.default.createElement("div", {
+    }, firstTitle), _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle
     }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle,
       style: {
-        width: thirdTitleWidth,
-        margin: 0
+        width: thirdTitleWidth
       }
-    }, thirdTitle))), _react.default.createElement("div", {
+    }, _react.default.createElement("div", {
+      style: {
+        marginTop: 24
+      }
+    }, topTitle), _react.default.createElement("div", {
+      className: classes.firstLine
+    }), _react.default.createElement("div", null, bottomTitle)))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(TopSection2);
+var _default = (0, _styles.withStyles)(styles)(TopSection3);
 
 exports.default = _default;

@@ -23,8 +23,10 @@ const styles = {
     width: '80%'
   },
   title: {
-    fontSize: 40,
-    lineHeight: 1.2
+    fontSize: 32,
+    lineHeight: 1.2,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold'
   },
   line: {
     width: 461,
@@ -33,7 +35,6 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
     marginTop: 20
   },
   description: {
@@ -46,7 +47,7 @@ const styles = {
   }
 };
 
-class Introduction extends _react.default.PureComponent {
+class BigGreenSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
@@ -83,7 +84,7 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftLight'
+        fontFamily: 'FilsonSoft-Bold'
       }
     }, title)), _react.default.createElement("div", {
       className: classes.line,
@@ -97,7 +98,8 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft',
+        fontWeight: 300
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description,
@@ -115,6 +117,6 @@ class Introduction extends _react.default.PureComponent {
 
 }
 
-var _default = (0, _styles.withStyles)(styles)(Introduction);
+var _default = (0, _styles.withStyles)(styles)(BigGreenSection);
 
 exports.default = _default;

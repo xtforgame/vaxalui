@@ -29,7 +29,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)({
   root: {
-    margin: 10,
+    marginBottom: 72,
     display: 'inline-block'
   },
   media: {

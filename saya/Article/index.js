@@ -21,23 +21,21 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     color: '#000000'
   },
   container: {
-    width: 780
+    width: 940
   },
   title: {
     textAlign: 'left',
     fontSize: 40,
     marginTop: 10,
-    marginBottom: 60
+    marginBottom: 72
   },
   paragraph: {
     textAlign: 'left',
     fontSize: 14,
-    marginTop: 30,
-    marginBottom: 30
+    marginBottom: 72
   },
   image: {
-    marginTop: 30,
-    marginBottom: 30
+    marginBottom: 72
   }
 }));
 
@@ -62,7 +60,7 @@ var _default = props => {
       return _react.default.createElement("div", {
         className: classes.image
       }, _react.default.createElement("img", {
-        width: 780,
+        width: "100%",
         src: content.src
       }));
     }
