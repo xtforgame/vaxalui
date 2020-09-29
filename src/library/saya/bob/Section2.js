@@ -16,6 +16,7 @@ const styles = {
     paddingTop: 88,
   },
   breadCrumbs: {
+    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -28,12 +29,12 @@ const styles = {
     marginTop: 2,
   },
   title: {
-    width: 920,
+    width: 780,
     color: '#FFFFFF',
-    fontSize: 72,
+    fontSize: 40,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1,
     paddingTop: 45,
     whiteSpace: 'pre-line',
@@ -53,17 +54,14 @@ const styles = {
 };
 
 
-class Section extends React.PureComponent {
+class Section2 extends React.PureComponent {
   render() {
     const {
       classes,
       backgroundImage,
-      onClick,
-      showButton = true,
-      breadCrumbs,
       title,
-      subTitle,
-      height = 590,
+      color,
+      height = 586,
     } = this.props;
     return (
       <>
@@ -73,18 +71,7 @@ class Section extends React.PureComponent {
           style={{ height }}
         >
           <div className={classes.section}>
-            <div className={classes.breadCrumbs}>
-              {breadCrumbs}
-              <div className={classes.firstLine} />
-            </div>
-            <div className={classes.title}>{title}</div>
-            <div className={classes.subTitle}>{subTitle}</div>
-            {showButton && <div className={classes.button}>
-              <GreenButton
-                text="Read More"
-                onClick={onClick}
-              />
-            </div>}
+            <div className={classes.title}>{title}</div>    
           </div>
         </ImageContainer>
         <div className={classes.space} />
@@ -94,4 +81,4 @@ class Section extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(Section);
+export default withStyles(styles)(Section2);

@@ -51,6 +51,7 @@ storiesOf('saya|Pages/NewDesktop', module)
             color="#FFFFFF"
             breadCrumbs={
               <Breadcrumbs
+                separatorColor="#FFFFFF"
                 bread={[
                   { name: <Rscuw />, path: '/' },
                   { name: <Sayanext />, path: '/sayanext' }
@@ -58,7 +59,7 @@ storiesOf('saya|Pages/NewDesktop', module)
               />
             }
             title="The industry’s most advanced mix content recycling project yet."
-            subTitle="RSCUW = Recycled Scrap and Cutting Waste"
+            subTitle="The SAYA RSCUW Project"
             backgroundImage={backgroundMacroChanges}
             onClick={() => { console.log('read More') }}
           />

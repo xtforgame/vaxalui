@@ -9,6 +9,9 @@ const styles = {
     fontSize: 20,
     marginTop: -3,
   },
+  ol: {
+    alignItems: 'baseline',
+  },
   link: {
     color: '#FFFFFF',
     fontSize: 20,
@@ -22,12 +25,16 @@ class Breadcrumbs extends React.PureComponent {
       classes,
       color = '#FFFFFF',
       bread = [],
+      separatorColor,
     } = this.props;
+
     return (
       <MUIBreadcrumbs
         classes={{
+          ol: classes.ol,
           separator: classes.separator,
         }}
+        separator={<span style={{ color: separatorColor }}>/</span>}
       >
         {bread.map(b => (
           <Link className={classes.link} style={{ color }} key={b.path} href={b.path} underline="none">

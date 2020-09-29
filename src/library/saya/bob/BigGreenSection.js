@@ -11,8 +11,10 @@ const styles = {
     width: '80%',
   },
   title: {
-    fontSize: 40,
+    fontSize: 32,
     lineHeight: 1.2,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
   },
   line: {
     width: 461,
@@ -21,7 +23,6 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
     marginTop: 20,
   },
   description: {
@@ -34,7 +35,7 @@ const styles = {
   },
 };
 
-class Introduction extends React.PureComponent {
+class BigGreenSection extends React.PureComponent {
   render() {
     const {
       classes,
@@ -74,7 +75,7 @@ class Introduction extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftLight' }}>{title}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
             </div>
             <div
               className={classes.line}
@@ -88,7 +89,7 @@ class Introduction extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
             </div>
             <div
               className={classes.description}
@@ -110,4 +111,4 @@ class Introduction extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(Introduction);
+export default withStyles(styles)(BigGreenSection);

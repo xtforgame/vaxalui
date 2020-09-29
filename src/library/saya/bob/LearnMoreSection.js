@@ -11,11 +11,13 @@ const styles = {
   section: {
     width: 940,
     display: 'flex',
-    flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 88,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
   },
   breadCrumbs: {
+    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -28,15 +30,14 @@ const styles = {
     marginTop: 2,
   },
   title: {
-    width: 920,
+    width: 540,
     color: '#FFFFFF',
-    fontSize: 72,
+    fontSize: 32,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontFamily: 'FilsonSoft',
-    lineHeight: 1,
-    paddingTop: 45,
+    fontFamily: 'FilsonSoftRegular',
     whiteSpace: 'pre-line',
+    marginRight: 120,
   },
   subTitle: {
     color: '#FFFFFF',
@@ -53,38 +54,27 @@ const styles = {
 };
 
 
-class Section extends React.PureComponent {
+class LearnMoreSection extends React.PureComponent {
   render() {
     const {
       classes,
-      backgroundImage,
-      onClick,
-      showButton = true,
-      breadCrumbs,
+      background,
       title,
-      subTitle,
-      height = 590,
+      color,
+      height = 256,
+      label = 'Learn More',
+      onClick,
     } = this.props;
     return (
       <>
         <ImageContainer
           className={classes.root}
-          image={backgroundImage}
-          style={{ height }}
+          image={background}
+          style={{ height, backgroundColor: background }}
         >
           <div className={classes.section}>
-            <div className={classes.breadCrumbs}>
-              {breadCrumbs}
-              <div className={classes.firstLine} />
-            </div>
             <div className={classes.title}>{title}</div>
-            <div className={classes.subTitle}>{subTitle}</div>
-            {showButton && <div className={classes.button}>
-              <GreenButton
-                text="Read More"
-                onClick={onClick}
-              />
-            </div>}
+            <GreenButton text={label} onClick={onClick} />
           </div>
         </ImageContainer>
         <div className={classes.space} />
@@ -94,4 +84,4 @@ class Section extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(Section);
+export default withStyles(styles)(LearnMoreSection);
