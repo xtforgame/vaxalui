@@ -16,7 +16,6 @@ const styles = {
     paddingTop: 88,
   },
   breadCrumbs: {
-    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',

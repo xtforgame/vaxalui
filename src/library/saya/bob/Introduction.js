@@ -13,8 +13,6 @@ const styles = {
   title: {
     fontSize: 40,
     lineHeight: 1.2,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold',
   },
   line: {
     width: 461,
@@ -76,7 +74,7 @@ class Introduction extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftLight' }}>{title}</BreakAllContentText>
             </div>
             <div
               className={classes.line}
