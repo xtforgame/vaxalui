@@ -8,7 +8,7 @@ const styles = {
     paddingTop: 80,
   },
   container: {
-    width: '80%',
+    width: 940,
   },
   title: {
     fontSize: 32,
@@ -97,7 +97,9 @@ class BigGreenSection extends React.PureComponent {
                 width: descriptionWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>
+                {description}
+              </BreakAllContentText>
             </div>
           </div>
         </ImageContainer>
