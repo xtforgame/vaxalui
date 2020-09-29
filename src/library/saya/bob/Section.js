@@ -29,12 +29,12 @@ const styles = {
     marginTop: 2,
   },
   title: {
+    width: 920,
     color: '#FFFFFF',
     fontSize: 72,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontStyle: 'normal',
-    lineHeight: 'normal',
+    fontFamily: 'FilsonSoft',
     lineHeight: 1,
     paddingTop: 45,
     whiteSpace: 'pre-line',
@@ -60,15 +60,18 @@ class Section extends React.PureComponent {
       classes,
       backgroundImage,
       onClick,
+      showButton = true,
       breadCrumbs,
       title,
       subTitle,
+      height = 590,
     } = this.props;
     return (
       <>
         <ImageContainer
           className={classes.root}
           image={backgroundImage}
+          style={{ height }}
         >
           <div className={classes.section}>
             <div className={classes.breadCrumbs}>
@@ -77,12 +80,12 @@ class Section extends React.PureComponent {
             </div>
             <div className={classes.title}>{title}</div>
             <div className={classes.subTitle}>{subTitle}</div>
-            <div className={classes.button}>
+            {showButton && <div className={classes.button}>
               <GreenButton
                 text="Read More"
                 onClick={onClick}
               />
-            </div>
+            </div>}
           </div>
         </ImageContainer>
         <div className={classes.space} />

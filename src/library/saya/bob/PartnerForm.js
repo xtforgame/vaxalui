@@ -34,7 +34,7 @@ const styles = {
     borderColor: '#000000',
   },
   button: {
-    marginLeft: 15,
+    marginLeft: 32,
   },
   checkbox: {
     display: 'flex',
@@ -70,11 +70,14 @@ class Partner extends React.PureComponent {
     } = this.state;
     const {
       classes,
+      subtitle = "Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.",
+      labelContent = "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.",
+      emailTextInputWidth = 420,
     } = this.props;
     return (
       <React.Fragment>
         <div className={classes.subtitle}>
-          Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.
+          {subtitle}
         </div>
         <div className={classes.email}>
           <TextField
@@ -82,6 +85,7 @@ class Partner extends React.PureComponent {
             value={email}
             onChange={this.handleEmailChange}
             placeholder="Your email address"
+            style={{ width: emailTextInputWidth }}
           />
           <div className={classes.button}>
             <GreenButton
@@ -94,7 +98,7 @@ class Partner extends React.PureComponent {
           <Checkbox />
           <div className={classes.labelContent}>
             <label>
-              SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.
+              {labelContent}
             </label>
           </div>
         </div>

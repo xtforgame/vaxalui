@@ -1,0 +1,96 @@
+import React, { Fragment } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import ImageContainer from '../ImageContainer';
+import BreakAllContentText from '../BreakAllContentText';
+
+
+const styles = {
+  root: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 380,
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
+  firstTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+  },
+  firstLine: {
+    height: 1,
+    border: '1px solid #ffffff',
+    width: '100%',
+  },
+  secondTitle: {
+    width: 780,
+    fontSize: 72,
+    fontWeight: 300,
+    fontFamily: 'FilsonSoftLight',
+    marginTop: 34,
+  },
+  secondLine: {
+    width: 420,
+    height: 1,
+    marginTop: 2,
+  },
+  thirdTitle: {
+    marginTop: 16,
+    fontSize: 20,
+    fontFamily: 'FilsonSoft',
+    fontWeight: 300,
+  },
+  flex1: {
+    flex: 1,
+  },
+  space: {
+    height: 12,
+  },
+};
+
+
+class TopSection extends React.PureComponent {
+  render() {
+    const {
+      classes,
+      firstTitle,
+      secondTitle,
+      thirdTitle,
+      backgroundImage,
+      thirdTitleWidth,
+    } = this.props;
+    return (
+      <React.Fragment>
+        <ImageContainer
+          image={backgroundImage}
+          className={classes.root}
+        >
+          <BreakAllContentText className={classes.firstTitle}>
+            {firstTitle}
+            <div
+              className={classes.firstLine}
+            />
+          </BreakAllContentText>
+          <div>
+            <div className={classes.secondTitle}>
+              {secondTitle}
+            </div>
+            <BreakAllContentText
+              className={classes.thirdTitle}
+              style={{
+                width: thirdTitleWidth,
+                margin: 0,
+              }}
+            >
+              {thirdTitle}
+            </BreakAllContentText>
+          </div>
+        </ImageContainer>
+        <div className={classes.space} />
+      </React.Fragment>
+    );
+  }
+}
+
+
+export default withStyles(styles)(TopSection);
