@@ -6,7 +6,6 @@ import GreenButton from './GreenButton';
 const styles = {
   root: {
     height: 590,
-    color: '#000000',
   },
   section: {
     width: 940,
@@ -17,7 +16,6 @@ const styles = {
     height: '100%',
   },
   breadCrumbs: {
-    color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
     fontWeight: 'bold',
@@ -31,7 +29,6 @@ const styles = {
   },
   title: {
     width: 540,
-    color: '#FFFFFF',
     fontSize: 32,
     fontWeight: 300,
     fontStretch: 'normal',
@@ -40,7 +37,6 @@ const styles = {
     marginRight: 120,
   },
   subTitle: {
-    color: '#FFFFFF',
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 24,
@@ -70,7 +66,7 @@ class LearnMoreSection extends React.PureComponent {
         <ImageContainer
           className={classes.root}
           image={background}
-          style={{ height, backgroundColor: background }}
+          style={{ height, color, backgroundColor: background }}
         >
           <div className={classes.section}>
             <div className={classes.title}>{title}</div>

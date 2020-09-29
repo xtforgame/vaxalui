@@ -84,6 +84,13 @@ storiesOf('saya|Pages/NewDesktop', module)
             label="Learn More"
             background="#444343"
           />
+          <LearnMoreSection
+            color="#000000"
+            title={`See our Product Section\nfor more details on yarn selection.`}
+            onClick={()=> {}}
+            label="Learn More"
+            background="#ffffff"
+          />
           <TitleWithContent
             height={900}
             title="CHROMUCH Product Specs"
