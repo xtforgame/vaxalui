@@ -8,9 +8,9 @@ const styles = {
   root: {
     display: 'flex',
     justifyContent: 'center',
-    height: 380,
-    color: '#FFFFFF',
+    height: 461,
     textAlign: 'center',
+    backgroundColor: '#e3e3e3',
   },
   firstTitle: {
     fontSize: 20,
@@ -19,15 +19,17 @@ const styles = {
   },
   firstLine: {
     height: 1,
-    border: '1px solid #ffffff',
-    width: '100%',
+    margin: '14px auto',
+    border: '1px solid #000000',
+    width: 462,
   },
   secondTitle: {
     width: 780,
     fontSize: 72,
-    fontWeight: 300,
-    fontFamily: 'FilsonSoftLight',
-    marginTop: 34,
+    lineHeight: 1.11,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 38,
   },
   secondLine: {
     width: 420,
@@ -35,13 +37,10 @@ const styles = {
     marginTop: 2,
   },
   thirdTitle: {
-    marginTop: 16,
+    marginTop: 24,
     fontSize: 20,
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoft-Bold',
     fontWeight: 300,
-  },
-  flex1: {
-    flex: 1,
   },
   space: {
     height: 12,
@@ -49,13 +48,14 @@ const styles = {
 };
 
 
-class TopSection2 extends React.PureComponent {
+class TopSection3 extends React.PureComponent {
   render() {
     const {
       classes,
       firstTitle,
       secondTitle,
-      thirdTitle,
+      topTitle,
+      bottomTitle,
       backgroundImage,
       thirdTitleWidth,
     } = this.props;
@@ -67,9 +67,6 @@ class TopSection2 extends React.PureComponent {
         >
           <BreakAllContentText className={classes.firstTitle}>
             {firstTitle}
-            <div
-              className={classes.firstLine}
-            />
           </BreakAllContentText>
           <div>
             <div className={classes.secondTitle}>
@@ -79,10 +76,11 @@ class TopSection2 extends React.PureComponent {
               className={classes.thirdTitle}
               style={{
                 width: thirdTitleWidth,
-                margin: 0,
               }}
             >
-              {thirdTitle}
+              <div style={{ marginTop: 24 }}>{topTitle}</div>
+              <div className={classes.firstLine} />
+              <div>{bottomTitle}</div>
             </BreakAllContentText>
           </div>
         </ImageContainer>
@@ -93,4 +91,4 @@ class TopSection2 extends React.PureComponent {
 }
 
 
-export default withStyles(styles)(TopSection2);
+export default withStyles(styles)(TopSection3);
