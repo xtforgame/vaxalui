@@ -20,7 +20,6 @@ const styles = {
   firstLine: {
     height: 1,
     margin: '14px auto',
-    border: '1px solid #000000',
     width: 462,
   },
   secondTitle: {
@@ -58,12 +57,15 @@ class TopSection3 extends React.PureComponent {
       bottomTitle,
       backgroundImage,
       thirdTitleWidth,
+
+      color = '#ffffff',
     } = this.props;
     return (
       <React.Fragment>
         <ImageContainer
           image={backgroundImage}
           className={classes.root}
+          style={{ color }}
         >
           <BreakAllContentText className={classes.firstTitle}>
             {firstTitle}
@@ -79,7 +81,7 @@ class TopSection3 extends React.PureComponent {
               }}
             >
               <div style={{ marginTop: 24 }}>{topTitle}</div>
-              <div className={classes.firstLine} />
+              <div className={classes.firstLine} style={{ backgroundColor: color }} />
               <div>{bottomTitle}</div>
             </BreakAllContentText>
           </div>

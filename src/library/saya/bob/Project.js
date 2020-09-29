@@ -41,6 +41,7 @@ class Project extends React.PureComponent {
       buttonText = "Learn More",
       disabled,
       type,
+      onClick,
     } = this.props;
     return (
       <div
@@ -50,7 +51,7 @@ class Project extends React.PureComponent {
           <div className={classes.title}>{title}</div>
           <div className={classes.type}>{type}</div>
         </div>
-        <GreenButton disabled={disabled} text={buttonText} />
+        <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
       </div>
     );
   }

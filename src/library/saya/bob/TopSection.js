@@ -9,7 +9,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     height: 500,
-    color: '#FFFFFF',
     textAlign: 'center',
   },
   firstTitle: {
@@ -20,7 +19,6 @@ const styles = {
   firstLine: {
     height: 1,
     marginTop: 2,
-    border: '1px solid #ffffff',
     width: '100%',
   },
   secondTitle: {
@@ -60,17 +58,21 @@ class TopSection extends React.PureComponent {
       thirdTitle,
       backgroundImage,
       thirdTitleWidth,
+
+      color = '#ffffff',
     } = this.props;
     return (
       <React.Fragment>
         <ImageContainer
           image={backgroundImage}
           className={classes.root}
+          style={{ color }}
         >
           <BreakAllContentText className={classes.firstTitle}>
             {firstTitle}
             <div
               className={classes.firstLine}
+              style={{ backgroundColor: color }}
             />
           </BreakAllContentText>
           <div>

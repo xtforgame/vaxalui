@@ -24,7 +24,6 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     height: 380,
-    color: '#FFFFFF',
     textAlign: 'center'
   },
   firstTitle: {
@@ -34,7 +33,6 @@ const styles = {
   },
   firstLine: {
     height: 1,
-    border: '1px solid #ffffff',
     width: '100%'
   },
   secondTitle: {
@@ -71,16 +69,23 @@ class TopSection2 extends _react.default.PureComponent {
       secondTitle,
       thirdTitle,
       backgroundImage,
-      thirdTitleWidth
+      thirdTitleWidth,
+      color = '#ffffff'
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
-      className: classes.root
+      className: classes.root,
+      style: {
+        color
+      }
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
     }, firstTitle, _react.default.createElement("div", {
-      className: classes.firstLine
-    })), _react.default.createElement("div", null, _react.default.createElement("div", {
+      className: classes.firstLine,
+      style: {
+        backgroundColor: color
+      }
+    })), _react.default.createElement("div", null, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.secondTitle
     }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle,

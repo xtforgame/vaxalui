@@ -35,7 +35,6 @@ const styles = {
   firstLine: {
     height: 1,
     margin: '14px auto',
-    border: '1px solid #000000',
     width: 462
   },
   secondTitle: {
@@ -71,11 +70,15 @@ class TopSection3 extends _react.default.PureComponent {
       topTitle,
       bottomTitle,
       backgroundImage,
-      thirdTitleWidth
+      thirdTitleWidth,
+      color = '#ffffff'
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
-      className: classes.root
+      className: classes.root,
+      style: {
+        color
+      }
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
     }, firstTitle), _react.default.createElement("div", null, _react.default.createElement("div", {
@@ -90,7 +93,10 @@ class TopSection3 extends _react.default.PureComponent {
         marginTop: 24
       }
     }, topTitle), _react.default.createElement("div", {
-      className: classes.firstLine
+      className: classes.firstLine,
+      style: {
+        backgroundColor: color
+      }
     }), _react.default.createElement("div", null, bottomTitle)))), _react.default.createElement("div", {
       className: classes.space
     }));

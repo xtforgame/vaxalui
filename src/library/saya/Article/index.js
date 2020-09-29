@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     color: '#000000',
   },
   container: {
-    width: 940,
+    width: 780,
   },
   title: {
     textAlign: 'left',

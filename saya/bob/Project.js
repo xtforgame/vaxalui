@@ -52,7 +52,8 @@ class Project extends _react.default.PureComponent {
       title = "Backbone of our sustainable textile business",
       buttonText = "Learn More",
       disabled,
-      type
+      type,
+      onClick
     } = this.props;
     return _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.root, {
@@ -66,7 +67,8 @@ class Project extends _react.default.PureComponent {
       className: classes.type
     }, type)), _react.default.createElement(_GreenButton.default, {
       disabled: disabled,
-      text: buttonText
+      text: buttonText,
+      onClick: onClick
     }));
   }
 
