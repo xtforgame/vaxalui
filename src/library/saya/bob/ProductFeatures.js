@@ -83,7 +83,7 @@ class ProductFeatures extends React.PureComponent {
             </div>
             <div className={classes.subtitle}>
               {list.map(l => (
-                <BreakAllContentText style={{ fontSize: 28, fontFamily: 'FilsonSoftRegular' }}>{`* ${l}`}</BreakAllContentText>
+                <BreakAllContentText style={{ fontSize: 28, fontFamily: 'FilsonSoftRegular' }}>{`・ ${l}`}</BreakAllContentText>
               ))}
             </div>
           </div>
@@ -106,7 +106,7 @@ class ProductFeatures extends React.PureComponent {
             </div>
           ))}
         </div>
-        <div className={classes.space} />
+        {/* <div className={classes.space} /> */}
       </>
     );
   }

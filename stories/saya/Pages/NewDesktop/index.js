@@ -6,3 +6,7 @@ import module5 from './module5';
 import module6 from './module6';
 import module7 from './module7';
 import module8 from './module8';
+import page1 from './page1';
+import page2 from './page2';
+import page3 from './page3';
+import page4 from './page4';

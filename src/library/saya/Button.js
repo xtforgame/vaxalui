@@ -17,6 +17,8 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 4,
+    // I have no idea why outline appeared.
+    outline: 'none',
     '&:hover': {
       color: '#000000',
       backgroundColor: '#FFFFFF',

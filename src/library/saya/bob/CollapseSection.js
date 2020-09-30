@@ -51,7 +51,6 @@ const useStyle = makeStyles(theme => ({
   },
   leftContainer: {
     width: 460,
-    paddingBottom: 48,
   },
   rightContainer: {
     width: 480,
@@ -62,6 +61,7 @@ const useStyle = makeStyles(theme => ({
   },
   subtitle: {
     fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold',
   },
   button: {
     marginTop: 32,
