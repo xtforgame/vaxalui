@@ -86,7 +86,8 @@ const useStyle = (0, _styles.makeStyles)(theme => ({
     marginBottom: 32
   },
   description: {
-    fontSize: 14
+    fontSize: 14,
+    marginBottom: 80
   },
   expandedArea: {
     overflow: 'hidden',
