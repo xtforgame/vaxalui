@@ -17,14 +17,14 @@ const useStyles = makeStyles({
   media: {
     position: 'relative',
   },
-  mask: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-    opacity: 0.5,
-    backgroundColor: '#000000',
-  },
+  // mask: {
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   width: '100%',
+  //   height: '100%',
+  //   opacity: 0.5,
+  //   backgroundColor: '#000000',
+  // },
   title: {
     display: 'flex',
     alignItems: 'center',
@@ -62,12 +62,10 @@ export default ({
           style={{ height }}
           image={image}
         >
-          <div className={classes.mask}>
-            <div className={classes.title}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28, textAlign: 'left' }}>
-                {title}
-              </BreakAllContentText>
-            </div>
+          <div className={classes.title}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28, textAlign: 'left' }}>
+              {title}
+            </BreakAllContentText>
           </div>
         </CardMedia>
         <CardContent>
