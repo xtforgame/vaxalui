@@ -35,14 +35,6 @@ const useStyles = (0, _styles.makeStyles)({
   media: {
     position: 'relative'
   },
-  mask: {
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    height: '100%',
-    opacity: 0.5,
-    backgroundColor: '#000000'
-  },
   title: {
     display: 'flex',
     alignItems: 'center',
@@ -86,8 +78,6 @@ var _default = ({
     },
     image: image
   }, _react.default.createElement("div", {
-    className: classes.mask
-  }, _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
@@ -95,7 +85,7 @@ var _default = ({
       fontSize: 28,
       textAlign: 'left'
     }
-  }, title)))), _react.default.createElement(_CardContent.default, null, _react.default.createElement(_BreakAllContentText.default, {
+  }, title))), _react.default.createElement(_CardContent.default, null, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,

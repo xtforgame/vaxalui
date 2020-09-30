@@ -16,7 +16,9 @@ const styles = {
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    border: '1px solid #e8e8e8'
+    borderTop: '1px solid #e8e8e8',
+    borderBottom: '1px solid #e8e8e8',
+    marginBottom: -1
   }
 };
 
