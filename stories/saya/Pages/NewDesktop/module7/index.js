@@ -4,6 +4,7 @@ import ClassicFibers from 'library/saya/bob/ClassicFibers';
 import ImageBoxSmall from 'library/saya/bob/ImageBoxSmall';
 import BigGreenSection from 'library/saya/bob/BigGreenSection';
 import StageWithIcon from 'library/saya/bob/StageWithIcon';
+import CollapseTable from 'library/saya/bob/CollapseTable';
 
 import leftBox from '../../../img/bg60.jpg';
 import midBox from '../../../img/bg61.jpg';
@@ -81,6 +82,9 @@ storiesOf('saya|Pages/NewDesktop', module)
               marginTop="150px"
             />
           </ClassicFibers>
+          <CollapseTable
+            title="CHROMUCH Product Specs"
+          />
         </Layout>
       </div>
     )
