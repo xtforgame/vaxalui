@@ -1,39 +1,44 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import TopSection from 'library/saya/bob/TopSection';
-import TopSection3 from 'library/saya/bob/TopSection3';
-import ProductFeatures from 'library/saya/bob/ProductFeatures';
-import Section2 from 'library/saya/bob/Section2';
-import LearnMoreSection from 'library/saya/bob/LearnMoreSection';
+import TopSection from 'library/saya/Rick/TopSection';
+import TopSection4 from 'library/saya/Rick/TopSection4';
+import ProductFeatures from 'library/saya/Rick/ProductFeatures';
+import ImageNumberBox from 'library/saya/Rick/ImageNumberBox';
+import Section2 from 'library/saya/Rick/Section2';
+import TitleButton from 'library/saya/Rick/TitleButton';
 import TitleWithContent from 'library/saya/Kenny/TitleWithContent';
-import Table from 'library/saya/bob/Table';
+import Table from 'library/saya/Rick/Table';
 
-import Layout from '../../../shared/Layout';
+import MobileLayout from '../../../shared/MobileLayout';
 
-import background_TopSection from '../../../img/banner03.jpg';
-import SectionBG from '../../../img/bg07.jpg';
+import background_TopSection from '../../../img/mobile/m_banner02.jpg';
+import SectionBG from '../../../img/mobile/m_product01.jpg';
 
-storiesOf('saya|Pages/NewDesktop', module)
+storiesOf('saya|Pages/NewMobile', module)
   .add('Module6',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <MobileLayout>
           <TopSection
-            firstTitle={
-              <span style={{ fontFamily: 'FilsonSoft-Bold' }}>BOTTLE</span>
-            }
-            secondTitle="Next Generation of Recycing Technology"
-            thirdTitle="Recycle - Renew - Repeat"
+            height={555}
+            firstTitle="BOTTLES"
+            title="Upgrade Your Bottle Renewal Technology"
+            subtitle="Advanced Recycled Fibers"
             backgroundImage={background_TopSection}
+            titleFontFamily="bold"
+            subtitleFontFamily="light"
           />
-          <TopSection3
-            firstTitle={
-              <span style={{ fontFamily: 'FilsonSoft-Bold' }}>SAYA recycles over</span>
-            }
-            secondTitle="10,000,000,000"
-            topTitle="single us plastic bottles per year "
-            bottomTitle="into functional and recyclable fibers"
-          />
+
+          <div style={{ marginTop: 6 }}>
+            <TopSection4
+              height={350}
+              firstTitle="SAYA recycles over"
+              title="75,000,000,000"
+              topTitle="single-use plastic bottles per year"
+              bottomTitle="into functional and recyclable fibers"
+            />
+          </div>
+
           <ProductFeatures
             title="PRODUCT FEATURES"
             list={[
@@ -41,69 +46,41 @@ storiesOf('saya|Pages/NewDesktop', module)
               '50% Recycled PET + 50% Bio-Based PTT',
               'Inherent moisture management stays cool and dry'
             ]}
-            block={[
-              {
-                color: '#000000',
-                num: '100',
-                top: 'Post Consumer',
-                bottom: 'Recycled Fiber by SAYA Now',
-                bg: '#d8d8d8',
-              },
-              {
-                color: '#FFFFFF',
-                num: '100',
-                top: 'Post Consumer',
-                bottom: 'Recycled Fiber by SAYA Now',
-                bg: background_TopSection,
-              },
-              {
-                color: '#FFFFFF',
-                num: '100',
-                top: 'Post Consumer',
-                bottom: 'Recycled Fiber by SAYA Now',
-                bg: background_TopSection,
-              },
-              {
-                color: '#000000',
-                num: '100',
-                top: 'Post Consumer',
-                bottom: 'Recycled Fiber by SAYA Now',
-                bg: '#d8d8d8',
-              }
-            ]}
+          />
+
+          <ImageNumberBox
+            number="100"
+            topTile="Post Consumer "
+            bottomTitle="Recycled Fiber"
+            backgroundColor="#d8d8d8"
+            color="#000000"
+            lineColor="#000000"
+          // backgroundImage={}
           />
           <Section2
             color="#FFFFFF"
             title="Most Vibrant Color Spectrum in Recycled Solution Dye"
             backgroundImage={SectionBG}
           />
-          <LearnMoreSection
-            color="#FFFFFF"
+          <TitleButton
+            color="#ffffff"
             title={`Learn more about\nSAYA Next Technology.`}
-            onClick={()=> {}}
+            onClick={() => { }}
             label="Learn More"
             background="#444343"
-          />
-          <LearnMoreSection
-            color="#000000"
-            title={`See our Product Section\nfor more details on yarn selection.`}
-            onClick={()=> {}}
-            label="Learn More"
-            background="#ffffff"
           />
           <TitleWithContent
             height={900}
             title="CHROMUCH Product Specs"
-            titleWidth={600}
             fontColor="#000000"
             lineBorder="solid 1px #000000"
+            fontSize={30}
           >
-            <div style={{ display: 'flex', justifyContent: 'center', }}>
+            <div style={{ overflow: 'scroll', marginTop: 5, }}>
               <Table />
             </div>
           </TitleWithContent>
-        </Layout>
+        </MobileLayout>
       </div>
     )
   );
-  

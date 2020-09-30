@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     // lineHeight: 1,
     // fontFamily: 'FilsonSoft-Bold',
   },
-  subTitle: {
+  subtitle: {
     fontSize: 20,
     paddingTop: 16,
     lineHeight: 1.6,
@@ -52,7 +52,7 @@ export default (props) => {
     firstTitle,
     firstTitleBack,
     title,
-    subTitle,
+    subtitle,
     height,
     children,
     color,
@@ -77,7 +77,7 @@ export default (props) => {
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
         <Text family={titleFontFamily} className={classes.title}>{title}</Text>
-        <Text family={subtitleFontFamily} className={classes.subTitle}>{subTitle}</Text>
+        <Text family={subtitleFontFamily} className={classes.subtitle}>{subtitle}</Text>
         <div>{children}</div>
       </div>
     </ImageContainer>

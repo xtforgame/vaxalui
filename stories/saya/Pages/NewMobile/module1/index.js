@@ -32,7 +32,7 @@ storiesOf('saya|Pages/NewMobile', module)
             firstTitle="RSCUW / SAYA"
             firstTitleBack="NEXT"
             title="Cutting Scraps and Overstocks"
-            subTitle="Addressing the Industry’s Real Elephant In the Room."
+            subtitle="Addressing the Industry’s Real Elephant In the Room."
             backgroundImage={background_TopSection1}
           />
           <div style={{ marginTop: 6 }}>
