@@ -1,15 +1,21 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import TopSection2 from 'library/saya/bob/TopSection2';
-import Article from 'library/saya/Article';
-import SayaBreadcrumbs from 'library/saya/Rick/Breadcrumbs';
-import Breadcrumbs from 'library/saya/bob/Breadcrumbs';
-import OtherArticles from 'library/saya/bob/OtherArticles';
-import Layout from '../../../shared/Layout';
+import TopSection3 from 'library/saya/Rick/TopSection3';
+import MobileArticle from 'library/saya/MobileArticle';
+// import SayaBreadcrumbs from 'library/saya/Rick/Breadcrumbs';
+import Breadcrumbs from 'library/saya/Rick/Breadcrumbs';
+import ImageContainer from 'library/saya/ImageContainer';
+import MobileCardSmall from 'library/saya/MobileCardSmall';
+import TechnologyProjects from 'library/saya/Rick/TechnologyProjects';
 
-import background_TopSection from '../../../img/banner12.jpg';
-import articlePic1 from '../../../img/pic1_1.jpg';
+import MobileLayout from '../../../shared/MobileLayout';
+
+import background_TopSection from '../../../img/mobile/m_pic1_0.jpg';
+import articlePic1 from '../../../img/mobile/m_pic1_1.jpg';
+import articlePic2 from '../../../img/mobile/m_pic2.jpg';
+import articlePic3 from '../../../img/mobile/m_pic3.jpg';
+import articlePic4 from '../../../img/mobile/m_pic4.jpg';
 
 const article = {
   id: 1,
@@ -22,78 +28,109 @@ const article = {
   ],
 };
 
-storiesOf('saya|Pages/NewDesktop', module)
+storiesOf('saya|Pages/NewMobile', module)
   .add('Module5',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
-          <TopSection2
-            firstTitle={
-              <>
-                <span style={{ fontFamily: 'FilsonSoft-Bold' }}>ABOUT</span>
-              </>
-            }
-            secondTitle="News"
+        <MobileLayout>
+          <TopSection3
+            height={555}
+            firstTitle="NEWS"
+            title="What is post-consumer recycled polyester"
             backgroundImage={background_TopSection}
+            titleFontFamily="bold"
           />
-          {/* <SayaBreadcrumbs
-            data={[
-              { label: 'About' },
-              { label: 'News' },
-              { label: 'What is post-consumer recycled polyester' },
-            ]}
-          /> */}
           <div
             style={{
               display: 'flex',
               justifyContent: 'center',
-              marginTop: 60,
+              width: '100%',
+              marginTop: 40,
             }}
           >
             <Breadcrumbs
               separatorColor="#000000"
               bread={[
-                { name: <span style={{ fontSize: 14, fontFamily: 'FilsonSoftRegular', color: 'black' }}>About</span>, path: '/about' },
-                { name: <span style={{ fontSize: 14, fontFamily: 'FilsonSoftRegular', color: 'black' }}>News</span>, path: '/news' },
-                { name: <span style={{ fontSize: 14, fontFamily: 'FilsonSoft-Bold', color: 'black' }}>What is post-consumer recycled polyester</span>, path: '/wiprp' }
+                { name: <span style={{ fontSize: 12, fontFamily: 'FilsonSoftRegular', color: 'black' }}>About</span>, path: '/about' },
+                { name: <span style={{ fontSize: 12, fontFamily: 'FilsonSoftRegular', color: 'black' }}>News</span>, path: '/news' },
+                { name: <span style={{ fontSize: 12, fontFamily: 'FilsonSoft-Bold', color: 'black' }}>What is post-consumer recycled polyester</span>, path: '/wiprp' }
               ]}
             />
           </div>
-          <div style={{ marginTop: 72, marginBottom: 20 }}>
-            <Article
+          <div style={{ marginTop: 40, marginBottom: 60 }}>
+            <MobileArticle
               data={article}
             />
           </div>
-          <OtherArticles
-            backgroundColor="#c8c6c6"
-            item={[
-              {
-                height: 290,
-                width: 300,
-                title: 'Recycled vs. Recyclable',
-                description: 'Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash...',
-                image: background_TopSection,
-                onClick: () => {}
-              },
-              {
-                height: 290,
-                width: 300,
-                title: 'Recycled vs. Recyclable',
-                description: 'Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash...',
-                image: background_TopSection,
-                onClick: () => {}
-              },
-              {
-                height: 290,
-                width: 300,
-                title: 'Recycled vs. Recyclable',
-                description: 'Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash...',
-                image: background_TopSection,
-                onClick: () => {}
-              },
-            ]}
-          />
-        </Layout>
+          <ImageContainer
+            style={{
+              height: 582,
+              backgroundColor: '#c8c6c6',
+              overflow: 'scroll',
+              marginTop: 6,
+            }}
+          >
+            <div
+              style={{
+                height: 0,
+                fontFamily: 'FilsonSoft-Bold',
+                fontSize: 18,
+                paddingTop: 60,
+                position: 'absolute',
+                width: '80%',
+              }}
+            >
+              Other Articles
+              <div style={{ width: '100%', height: 1, marginTop: 14, backgroundColor: '#000000' }} />
+            </div>
+            <div style={{ display: 'flex', width: '90%', marginTop: 138, }}>
+              <div style={{ position: 'absolute', display: 'flex', }}>
+                <MobileCardSmall
+                  title="Recycled vs. Recyclable"
+                  description="Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash..."
+                  image={articlePic2}
+                  width={260}
+                  height={205}
+                />
+                <MobileCardSmall
+                  title="Mechanical Recycling"
+                  description='Mechanical recycling transforms materials into "new" secondary raw materials without changing the base...'
+                  image={articlePic3}
+                  width={260}
+                  height={205}
+                />
+                <MobileCardSmall
+                  title="Chemical Recycling"
+                  description="Chemical recycling, also called advanced recycling,  is taking  plastic waste  and reducing it back to its..."
+                  image={articlePic4}
+                  width={260}
+                  height={205}
+                />
+              </div>
+            </div>
+          </ImageContainer>
+
+          <div style={{ marginTop: 6 }}>
+            <TechnologyProjects
+              title="More About SAYA"
+              backgroundColor="#e3e3e3"
+              list={[
+                {
+                  title: "Renewed Fiber is the Name of the Game",
+                  buttonText: "Learn More",
+                  disabled: false,
+                  type: <span>SAYA</span>,
+                },
+                {
+                  title: "MEDIA & DOWNLOADS",
+                  buttonText: "Learn More",
+                  disabled: false,
+                  type: '',
+                },
+              ]}
+            />
+          </div>
+        </MobileLayout>
       </div>
     )
   );

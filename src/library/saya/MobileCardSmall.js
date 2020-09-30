@@ -11,7 +11,7 @@ import BreakAllContentText from './BreakAllContentText';
 
 const useStyles = makeStyles({
   root: {
-    margin: 20,
+    margin: 24,
     borderRadius: 0,
   },
   media: {
@@ -23,21 +23,26 @@ const useStyles = makeStyles({
   //   opacity: 0.5,
   //   backgroundColor: '#000000',
   // },
-  title: {
+  titleSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
     height: '100%',
-    position: 'absolute',
+  },
+  title: {
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'left',
+    width: 220,
+    height: 150,
     color: '#ffffff',
-    top: 0,
-    paddingTop: 60,
-    paddingRight: 30,
-    paddingLeft: 30,
   },
   cardAction: {
     paddingTop: 0,
-    paddingRight: 16,
-    paddingLeft: 16,
-    paddingBottom: 16,
+    paddingRight: 0,
+    paddingLeft: 20,
+    paddingBottom: 0,
   },
 });
 
@@ -52,40 +57,39 @@ export default ({
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{ width }} elevation={8}>
+    <Card className={classes.root} style={{ width }} elevation={0}>
       <CardActionArea onClick={onClick}>
         <CardMedia
           className={classes.media}
           style={{ height }}
           image={image}
-          // title="Contemplative Reptile"
+        // title="Contemplative Reptile"
         >
-          <div className={classes.mask} />
-          <div className={classes.title}>
-            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
-              {title}
-            </BreakAllContentText>
+          <div className={classes.titleSection}>
+            <div className={classes.title}>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 23 }}>
+                {title}
+              </BreakAllContentText>
+            </div>
           </div>
         </CardMedia>
-        <CardContent>
-          {/* <Typography gutterBottom variant="h5" component="h2">
+        {/* <Typography gutterBottom variant="h5" component="h2">
             Lizard
           </Typography> */}
-          {/* <Typography variant="body2" color="textSecondary" component="p">
+        {/* <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
           </Typography> */}
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
-            {description}
-          </BreakAllContentText>
-        </CardContent>
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, lineHeight: 1.54, paddingTop: 16, paddingBottom: 10, paddingLeft: 20, paddingRight: 20, }}>
+          {description}
+        </BreakAllContentText>
       </CardActionArea>
-      <CardActions className={classes.cardAction}>
+      <div className={classes.cardAction}>
         <div style={{ flex: 1 }} />
         <Button size="small" color="primary" style={{ color: '#c0c823' }} onClick={onClick}>
           <u>Read More</u>
         </Button>
-      </CardActions>
+      </div>
     </Card>
   );
 };
