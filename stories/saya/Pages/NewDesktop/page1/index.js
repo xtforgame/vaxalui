@@ -76,7 +76,7 @@ storiesOf('saya|Pages/NewDesktop', module)
             titleWidth="780px"
             lineBorder="solid 1px #ffffff"
             // image={<div style={{ width: 340, height: 440, backgroundColor: 'black' }} />}
-            description={<div style={{ marginBottom: 80 }}>CHROMUCH advances a new standard in sustainable color design that takes the compromises out of the equation. For the deepest blacks, richest reds and the brightest blues, CHROMUCH uses a patented ChromShield™ Technology to provide ultra-rich color and superior fade resistance from the elements like UV, machine washing and general wear and tear. Our water-free, eco-colors stay brighter and more vibrant longer.</div>}
+            description="CHROMUCH advances a new standard in sustainable color design that takes the compromises out of the equation. For the deepest blacks, richest reds and the brightest blues, CHROMUCH uses a patented ChromShield™ Technology to provide ultra-rich color and superior fade resistance from the elements like UV, machine washing and general wear and tear. Our water-free, eco-colors stay brighter and more vibrant longer."
             
           />
           <Section2
