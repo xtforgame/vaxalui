@@ -6,7 +6,9 @@ const styles = {
   root: {
     width: 140,
     height: 140,
-    border: 'solid 1px #e3e3e3',
+    borderLeft: 'solid 1px #e3e3e3',
+    borderRight: 'solid 1px #e3e3e3',
+    marginLeft: -1,
     borderBottom: 0,
     borderTop: 0,
   },
