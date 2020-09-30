@@ -1,87 +1,65 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import Introduction from './Introduction';
+import BreakAllContentText from '../BreakAllContentText';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
+    height: 548,
+    // display: 'flex',
+    // flexDirection: 'column',
     textAlign: 'left',
-    alignItems: 'left',
     color: '#ffffff',
-    width: '100%',
-    backgroundSize: 'cover',
+    width: 320,
   },
   title: {
     textAlign: 'left',
-    fontSize: 33,
+    fontSize: 20,
+    lineHeight: 1.6,
+    paddingTop: 40,
+    fontFamily: 'FilsonSoft-Light',
   },
-  line: {
-    width: 305,
-    backgroundColor: '#ffffff',
-    height: 1,
-    marginTop: 23,
-  },
-  subtitle: {
+  description: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 4,
-  },
-  content: {
-    textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 10,
-    lineHeight: 1.5,
+    fontSize: 13,
+    paddingTop: 12,
+    lineHeight: 1.54,
+    fontFamily: 'FilsonSoftRegular',
   },
 }));
 
 export default (props) => {
   const {
-    title,
-    titlePaddingTop,
-    marginTop,
-    subtitle,
-    content,
-    height,
     backgroundImage,
-    children,
   } = props;
 
   const classes = useStyles();
 
   return (
-    <div
-      className={classes.root}
-      style={{
-        height: height,
-        backgroundImage: `url(${backgroundImage})`,
-        paddingTop: titlePaddingTop,
-        marginTop:marginTop,
-      }} >
-      <div
-        style={{
-          alignSelf: 'center',
-        }}
-      >
-        <div className={classes.title}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{title}</pre>
+    <>
+      <Introduction
+        height={355}
+        title={'Challenges and\nTransparency'}
+        subtitle={'Recruiting like-minded brands\nand garment manufacturers'}
+        description="SAYA is working on pilot projects with key brand partners to recover and recycle deadstock and cutting scrap from their mills and garment factories."
+        color="#ffffff"
+        lineColor="#ffffff"
+        subtitleFontFamily="bold"
+        backgroundImage={backgroundImage}
+      />
+      <ImageContainer style={{ backgroundColor: '#444343' }}>
+        <div className={classes.root}>
+          <div className={classes.title}>SAYA’s advanced methods</div>
+          <BreakAllContentText className={classes.description}>
+            {'Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.\n\nWe aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021.'}
+          </BreakAllContentText>
+          <div className={classes.title}>Content Percentage</div>
+          <BreakAllContentText className={classes.description}>
+            {'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nRemoving colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics.'}
+          </BreakAllContentText>
         </div>
-
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.line} />
-        </div>
-
-        <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{subtitle}</pre>
-        </div>
-        <div className={classes.content}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular', marginBottom: 0, }}>{content}</pre>
-        </div>
-      </div>
-      <div>
-        {children}
-      </div>
-
-    </div>
+      </ImageContainer>
+    </>
   );
 };

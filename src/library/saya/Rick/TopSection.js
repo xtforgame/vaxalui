@@ -1,132 +1,84 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import CardMedia from '@material-ui/core/CardMedia';
 import ImageContainer from '../ImageContainer';
+import Text from './Text';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 590,
-    textAlign: 'center',
-    fontFamily: 'FilsonSoft-Bold',
-    color: '#000000',
-    lineHeight: '1.18',
+    color: '#ffffff',
+  },
+  section: {
+    width: 320,
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    paddingTop: 122,
   },
   firstTitle: {
-    fontSize: 18,
+    width: 'fit-content',
+    fontSize: 15,
     fontWeight: 'bold',
-    lineHeight: '1.18',
-    paddingTop: 57,
-    // borderBottomStyle: 'solid',
-    // borderBottomWidth: 2,
-    // borderBottomColor: 'white',
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.33,
+  },
+  firstTitleBack: {
+    fontFamily: 'FilsonSoft-Light',
   },
   firstLine: {
+    height: 1,
     width: '100%',
-    height: 1,
-    backgroundColor: '#000000',
-    marginTop: 2,
+    backgroundColor: '#ffffff',
+    marginTop: 1,
   },
-  secondTitle: {
-    fontSize: 50,
-    fontWeight: 'bold',
-
+  title: {
+    fontSize: 45,
+    paddingTop: 42,
+    whiteSpace: 'pre-line',
+    // lineHeight: 1,
+    // fontFamily: 'FilsonSoft-Bold',
   },
-  secondTitleBack: {
-    fontWeight: 'normal',
-    fontFamily: 'FilsonSoft-Light',
-
-  },
-  secondLine: {
-    width: 230,
-    height: 1,
-    backgroundColor: '#000000',
-  },
-  thirdTitle: {
-    fontSize: 18,
-    paddingTop: 10,
-    fontFamily: 'FilsonSoftRegular',
+  subTitle: {
+    fontSize: 20,
+    paddingTop: 16,
+    lineHeight: 1.6,
+    // fontFamily: 'FilsonSoft-Light',
   },
 }));
 
+
 export default (props) => {
   const {
-    firstTitle,
-    firsrtTitlePaddingTop,
-    secondTitle,
-    secondTitleBack,
-    secondTitleFontSize,
-    secondTitlePaddingTop,
-    lineDisplay,
-    secondLineMarginTop,
-    secondLineDisplay,  
-    thirdTitle,
     backgroundImage,
-    lineBackgroundColor,
-    color,
+    firstTitle,
+    firstTitleBack,
+    title,
+    subTitle,
     height,
-    thirdTitleFontFamily,
     children,
+    color,
+    lineColor,
+    titleFontFamily,
+    subtitleFontFamily,
+    buttonPosition,
   } = props;
 
   const classes = useStyles();
 
   return (
     <ImageContainer
-      image={backgroundImage}
       className={classes.root}
-      style={{ color, height, }}
+      image={backgroundImage}
+      style={{ height, color }}
     >
-      <div
-        style={{ position: 'absolute' }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.firstTitle} style={{ paddingTop: firsrtTitlePaddingTop, }}>
-            {firstTitle}
-            <div className={classes.firstLine} style={{ backgroundColor: lineBackgroundColor, display: lineDisplay, }} />
-          </div>
+      <div className={classes.section}>
+        <div className={classes.firstTitle}>
+          {firstTitle}
+          <span className={classes.firstTitleBack}>{firstTitleBack}</span>
+          <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
-
-        <div className={classes.secondTitle}>
-          <pre style={{
-            fontFamily: 'FilsonSoft-Bold',
-            fontSize: secondTitleFontSize,
-            marginBottom: 0,
-            marginTop: 0,
-            paddingTop: secondTitlePaddingTop,
-          }}
-          >
-            {secondTitle}
-            <a className={classes.secondTitleBack}>
-              {secondTitleBack}
-            </a></pre>
-        </div>
-
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: secondLineMarginTop,
-        }}
-        >
-          <div className={classes.secondLine} style={{
-            backgroundColor: lineBackgroundColor, display: secondLineDisplay,
-          }} />
-        </div>
-
-        <div className={classes.thirdTitle}>
-          <pre
-            style={{
-              fontFamily: thirdTitleFontFamily,
-              marginBottom: 0,
-              marginTop: 0,
-            }}
-          >
-            {thirdTitle}
-          </pre>
-        </div>
-        <div>
-          {children}
-        </div>
-
+        <Text family={titleFontFamily} className={classes.title}>{title}</Text>
+        <Text family={subtitleFontFamily} className={classes.subTitle}>{subTitle}</Text>
+        <div>{children}</div>
       </div>
     </ImageContainer>
   );

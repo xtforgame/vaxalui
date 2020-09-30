@@ -1,44 +1,58 @@
 import React from 'react';
+import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   button: {
-    width: 160,
+    cursor: 'pointer',
+    minWidth: 160,
     height: 50,
-    fontSize: 14,
-    color: '#ffffff',
-    fontWeight: 'bold',
+    textAlign: 'center',
     backgroundColor: '#64703f',
     border: 'none',
     borderRadius: 22,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    fontSize: 14,
+    color: '#ffffff',
+    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
+    '&:hover': {
+      backgroundColor: '#c0c823',
+    },
   },
+  disabledButton: {
+    color: '#ffffff',
+    cursor: 'not-allowed',
+    backgroundColor: '#444343',
+    '&:hover': {
+      backgroundColor: '#444343',
+    },
+  }
 };
 
-class ImageBox extends React.PureComponent {
+
+class GreenButton extends React.PureComponent {
   render() {
     const {
       classes,
-      marginTop,
-      width,
-      height,
       text,
-      onClick,
+      disabled = false,
+      onClick = () => {},
     } = this.props;
-
-
     return (
-      <div>
-        <button className={classes.button} style={{ marginTop: marginTop, width: width, height: height, }} onClick={onClick} >
-          {text}
-        </button>
-      </div>
+      <button
+        disabled
+        onClick={onClick}
+        className={clsx(classes.button, { [classes.disabledButton]: disabled })}
+      >
+        {text}
+      </button>
+
     );
   }
 }
 
 
-export default withStyles(styles)(ImageBox);
+export default withStyles(styles)(GreenButton);
