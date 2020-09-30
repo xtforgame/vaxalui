@@ -69,6 +69,7 @@ const useStyle = makeStyles(theme => ({
   },
   description: {
     fontSize: 14,
+    marginBottom: 80,
   },
   expandedArea: {
     overflow: 'hidden',
