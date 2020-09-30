@@ -130,7 +130,7 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.subtitle}
               >
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoft' }}>{subtitle}</BreakAllContentText>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
               </div>
               <div
                 className={classes.description}
