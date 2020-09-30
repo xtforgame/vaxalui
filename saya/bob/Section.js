@@ -38,12 +38,10 @@ const styles = {
   },
   firstLine: {
     height: 1,
-    border: '1px solid #FFFFFF',
     marginTop: 2
   },
   title: {
     width: 920,
-    color: '#FFFFFF',
     fontSize: 72,
     fontWeight: 300,
     fontStretch: 'normal',
@@ -53,7 +51,6 @@ const styles = {
     whiteSpace: 'pre-line'
   },
   subTitle: {
-    color: '#FFFFFF',
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 24
@@ -69,6 +66,7 @@ const styles = {
 class Section extends _react.default.PureComponent {
   render() {
     const {
+      color = '#FFFFFF',
       classes,
       backgroundImage,
       onClick,
@@ -82,14 +80,18 @@ class Section extends _react.default.PureComponent {
       className: classes.root,
       image: backgroundImage,
       style: {
-        height
+        height,
+        color
       }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
       className: classes.breadCrumbs
     }, breadCrumbs, _react.default.createElement("div", {
-      className: classes.firstLine
+      className: classes.firstLine,
+      style: {
+        backgroundColor: color
+      }
     })), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
     }, title), _react.default.createElement(_BreakAllContentText.default, {

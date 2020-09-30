@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AddCircle, RemoveCircle } from '@material-ui/icons';
 import CenteredContainer from '../CenteredContainer';
 import Text from './Text';
+import ImageContainer from '../ImageContainer';
 import clsx from 'clsx';
 
 const useStyle = makeStyles(theme => ({
@@ -78,6 +79,19 @@ const useStyle = makeStyles(theme => ({
   hide: {
     height: 0,
   },
+
+  topSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 350,
+    color: '#000000',
+  },
+  titleWhite: {
+    color: '#ffffff',
+    fontSize: 40,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+  },
 }));
 
 export default (props) => {
@@ -88,13 +102,28 @@ export default (props) => {
     image,
     expended: e,
     color = '#ffffff',
+    topTitle,
+    backgroundImage,
     backgroundColor = '#64703f',
     buttonColor = '#e3e3e3',
   } = props;
   const classes = useStyle();
   const [expended, setExpanded] = useState(!!e);
+
   return (
     <>
+      {
+        topTitle && (
+          <ImageContainer
+            image={backgroundImage}
+            className={classes.topSection}
+          >
+            <div>
+              <span className={classes.titleWhite}>{topTitle}</span>
+            </div>
+          </ImageContainer>
+        )
+      }
       <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>
         <div className={classes.container}>
           <Text className={classes.title} family="bold">{title}</Text>

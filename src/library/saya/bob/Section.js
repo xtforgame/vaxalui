@@ -25,12 +25,10 @@ const styles = {
   },
   firstLine: {
     height: 1,
-    border: '1px solid #FFFFFF',
     marginTop: 2,
   },
   title: {
     width: 920,
-    color: '#FFFFFF',
     fontSize: 72,
     fontWeight: 300,
     fontStretch: 'normal',
@@ -40,7 +38,6 @@ const styles = {
     whiteSpace: 'pre-line',
   },
   subTitle: {
-    color: '#FFFFFF',
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 24,
@@ -57,6 +54,7 @@ const styles = {
 class Section extends React.PureComponent {
   render() {
     const {
+      color = '#FFFFFF',
       classes,
       backgroundImage,
       onClick,
@@ -71,12 +69,12 @@ class Section extends React.PureComponent {
         <ImageContainer
           className={classes.root}
           image={backgroundImage}
-          style={{ height }}
+          style={{ height, color }}
         >
           <div className={classes.section}>
             <div className={classes.breadCrumbs}>
               {breadCrumbs}
-              <div className={classes.firstLine} />
+              <div className={classes.firstLine} style={{ backgroundColor: color }} />
             </div>
             <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
             <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>

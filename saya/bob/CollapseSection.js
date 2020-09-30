@@ -15,6 +15,8 @@ var _CenteredContainer = _interopRequireDefault(require("../CenteredContainer"))
 
 var _Text = _interopRequireDefault(require("./Text"));
 
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
+
 var _clsx = _interopRequireDefault(require("clsx"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -93,6 +95,18 @@ const useStyle = (0, _styles.makeStyles)(theme => ({
   },
   hide: {
     height: 0
+  },
+  topSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 350,
+    color: '#000000'
+  },
+  titleWhite: {
+    color: '#ffffff',
+    fontSize: 40,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold'
   }
 }));
 
@@ -104,12 +118,19 @@ var _default = props => {
     image,
     expended: e,
     color = '#ffffff',
+    topTitle,
+    backgroundImage,
     backgroundColor = '#64703f',
     buttonColor = '#e3e3e3'
   } = props;
   const classes = useStyle();
   const [expended, setExpanded] = (0, _react.useState)(!!e);
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_CenteredContainer.default, {
+  return _react.default.createElement(_react.default.Fragment, null, topTitle && _react.default.createElement(_ImageContainer.default, {
+    image: backgroundImage,
+    className: classes.topSection
+  }, _react.default.createElement("div", null, _react.default.createElement("span", {
+    className: classes.titleWhite
+  }, topTitle))), _react.default.createElement(_CenteredContainer.default, {
     className: classes.upperPart,
     style: {
       backgroundColor,
