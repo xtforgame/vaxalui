@@ -10,7 +10,7 @@ import GreenNumberSection from 'library/saya/Rick/GreenNumberSection';
 import TransparentSection from 'library/saya/Rick/TransparentSection';
 import TechnologyProjects from 'library/saya/Rick/TechnologyProjects';
 
-import Layout from '../../../shared/Layout';
+import MobileLayout from '../../../shared/MobileLayout';
 
 import background_TopSection1 from '../../../img/mobile/m_banner03.jpg';
 import background_TopSection2 from '../../../img/mobile/m_bg07.jpg';
@@ -26,7 +26,7 @@ storiesOf('saya|Pages/NewMobile', module)
   .add('Module1',
     () => (
       <div style={{ width: '100%' }}>
-        <Layout>
+        <MobileLayout>
           <TopSection
             height={550}
             firstTitle="RSCUW / SAYA"
@@ -161,7 +161,7 @@ These deadstock and overstock creates millions of yards of our industry’s unac
             description={'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'}
           />
 
-          <div style={{ marginTop: 26 }}>
+          <div style={{ marginTop: 6 }}>
             <TechnologyProjects
               title="Other Technology Projects"
               list={[
@@ -181,7 +181,7 @@ These deadstock and overstock creates millions of yards of our industry’s unac
               ]}
             />
           </div>
-        </Layout>
+        </MobileLayout>
       </div >
     )
   );

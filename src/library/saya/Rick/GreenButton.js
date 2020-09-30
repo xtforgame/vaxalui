@@ -37,15 +37,18 @@ class GreenButton extends React.PureComponent {
   render() {
     const {
       classes,
+      width,
+      height,
       text,
       disabled = false,
-      onClick = () => {},
+      onClick = () => { },
     } = this.props;
     return (
       <button
         disabled
         onClick={onClick}
         className={clsx(classes.button, { [classes.disabledButton]: disabled })}
+        style={{ width, height }}
       >
         {text}
       </button>

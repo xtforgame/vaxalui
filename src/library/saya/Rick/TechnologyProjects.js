@@ -48,7 +48,7 @@ class TechnologyProjects extends React.PureComponent {
             <div className={classes.title} >{title}</div>
             <div className={classes.line} />
             <div className={classes.listRoot}>
-              {list.map(l => (<Project {...l} />))}
+              {list.map(l => (<Project  {...l} />))}
             </div>
           </div>
         </div>

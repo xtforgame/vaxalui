@@ -13,6 +13,7 @@ const styles = {
     border: '1px solid #000000',
     backgroundColor: '#FFFFFF',
     marginBottom: 12,
+    justifyContent: 'space-evenly',
   },
   disabledBackground: {
     border: '0px solid #000000',
@@ -31,7 +32,7 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
   },
   button: {
-    marginTop: 23,
+    marginTop: 0,
   }
 };
 
@@ -56,7 +57,7 @@ class Project extends React.PureComponent {
           <span style={{ fontFamily: 'FilsonSoft-Light' }}>{typeBack}</span>
         </div>
         <div className={classes.button}>
-          <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
+          <GreenButton  disabled={disabled} text={buttonText} onClick={onClick} />
         </div>
       </div>
     );
