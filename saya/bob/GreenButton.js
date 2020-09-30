@@ -15,6 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   button: {
+    cursor: 'pointer',
     minWidth: 128,
     height: 44,
     paddingTop: 6,
@@ -35,6 +36,7 @@ const styles = {
   },
   disabledButton: {
     color: '#ffffff',
+    cursor: 'not-allowed',
     backgroundColor: '#444343',
     '&:hover': {
       backgroundColor: '#444343'

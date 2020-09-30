@@ -58,6 +58,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   emailInput: {
     width: 300,
+    height: 38,
     '&::placeholder': {
       color: '#FFFFFF'
     }
@@ -223,7 +224,8 @@ var _default = props => {
     }
   }), _react.default.createElement(_Select.default, {
     style: {
-      width: 300
+      width: 300,
+      height: 38
     },
     options: ['English', 'Traditional Chinese'],
     value: language,

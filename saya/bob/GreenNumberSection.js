@@ -20,7 +20,8 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     height: 350,
-    color: '#000000'
+    color: '#000000',
+    textAlign: 'center'
   },
   titleWhite: {
     color: '#ffffff',
@@ -36,7 +37,8 @@ const styles = {
   },
   leftColumn: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flexShrink: 0
   },
   rightColumn: {
     display: 'flex',

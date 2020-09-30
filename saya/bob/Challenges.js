@@ -72,8 +72,6 @@ const styles = {
     paddingLeft: 10
   },
   line: {
-    height: 2,
-    backgroundColor: '#000000',
     marginTop: 16
   },
   rightTitle: {
@@ -133,7 +131,7 @@ class Challenges extends _react.default.PureComponent {
     }, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
-        border: '1px solid #000000'
+        borderBottom: '1px solid #000000'
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle

@@ -20,7 +20,7 @@ const styles = {
     paddingTop: 80
   },
   container: {
-    width: '80%'
+    width: 940
   },
   title: {
     fontSize: 40,
@@ -83,7 +83,7 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftLight'
+        fontFamily: 'FilsonSoft-Bold'
       }
     }, title)), _react.default.createElement("div", {
       className: classes.line,
@@ -97,7 +97,7 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft-Bold'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description,

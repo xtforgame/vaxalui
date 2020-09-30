@@ -20,7 +20,7 @@ const styles = {
     paddingTop: 80
   },
   container: {
-    width: '80%'
+    width: 940
   },
   title: {
     fontSize: 40,
@@ -46,7 +46,7 @@ const styles = {
   bottomContent: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    marginTop: 32
+    marginTop: 80
   },
   space: {
     height: 12
@@ -96,7 +96,7 @@ class Methodology extends _react.default.PureComponent {
     }, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
-        border: lineBorder
+        borderBottom: lineBorder
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle,

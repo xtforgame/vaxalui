@@ -24,6 +24,7 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 4,
+    outline: 'none',
     '&:hover': {
       color: '#000000',
       backgroundColor: '#FFFFFF'

@@ -20,7 +20,7 @@ const styles = {
     paddingTop: 80
   },
   container: {
-    width: '80%'
+    width: 940
   },
   title: {
     fontSize: 40,

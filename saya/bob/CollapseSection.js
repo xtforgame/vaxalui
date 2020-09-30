@@ -69,8 +69,7 @@ const useStyle = (0, _styles.makeStyles)(theme => ({
     marginBottom: 20
   },
   leftContainer: {
-    width: 460,
-    paddingBottom: 48
+    width: 460
   },
   rightContainer: {
     width: 480,
@@ -79,7 +78,8 @@ const useStyle = (0, _styles.makeStyles)(theme => ({
     paddingBottom: 40
   },
   subtitle: {
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold'
   },
   button: {
     marginTop: 32,

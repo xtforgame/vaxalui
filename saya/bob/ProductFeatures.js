@@ -102,7 +102,7 @@ class ProductFeatures extends _react.default.PureComponent {
         fontSize: 28,
         fontFamily: 'FilsonSoftRegular'
       }
-    }, `* ${l}`))))), _react.default.createElement("div", {
+    }, `・ ${l}`))))), _react.default.createElement("div", {
       className: classes.blockRoot
     }, block.map(b => _react.default.createElement("div", {
       className: classes.block,
@@ -140,9 +140,7 @@ class ProductFeatures extends _react.default.PureComponent {
         color: b.color
       },
       className: classes.bottom
-    }, b.bottom)))))), _react.default.createElement("div", {
-      className: classes.space
-    }));
+    }, b.bottom)))))));
   }
 
 }
