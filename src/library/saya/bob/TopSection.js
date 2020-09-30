@@ -37,7 +37,7 @@ const styles = {
   thirdTitle: {
     marginTop: 16,
     fontSize: 20,
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoftLight',
     fontWeight: 300,
   },
   flex1: {
