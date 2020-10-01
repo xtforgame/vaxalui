@@ -13,3 +13,7 @@ import SolutionDyed from './SolutionDyed';
 import Stretch from './Stretch';
 import Fresh from './Fresh';
 import Microfiber from './Microfiber';
+import AboutSaya from './AboutSaya';
+import AboutNews from './News';
+import AboutNewsArticle from './NewsArticle';
+import AboutMedia from './Media';
