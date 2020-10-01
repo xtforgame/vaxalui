@@ -27,8 +27,8 @@ const styles = {
   subtitle: {
     fontSize: 20,
     fontFamily: 'FilsonSoftRegular',
-    marginTop: 40,
-    marginBottom: 60,
+    marginTop: 50,
+    marginBottom: 80,
   },
 };
 
@@ -53,7 +53,7 @@ class ProductFeatures extends React.PureComponent {
               {list.map(l => (
                 <div style={{ fontSize: 20, fontFamily: 'FilsonSoftRegular', display: 'flex', paddingBottom: 20 }}>
                   ・
-                  <span style={{ width: 300, fontSize: 20, fontFamily: 'FilsonSoftRegular', paddingLeft: 20, }}>{`${l}`}</span>
+                  <span style={{ width: 315, fontSize: 20, fontFamily: 'FilsonSoftRegular', paddingLeft: 0, }}>{`${l}`}</span>
                 </div>
               ))}
             </div>

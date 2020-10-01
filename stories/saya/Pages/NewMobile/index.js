@@ -8,3 +8,8 @@ import Bottles from './Bottles';
 import Rscuw from './Rscuw';
 import KnowledgeBase from './KnowledgeBase';
 import KnowledgeBaseArticle from './KnowledgeBaseArticle';
+import Saya365 from './Saya365';
+import SolutionDyed from './SolutionDyed';
+import Stretch from './Stretch';
+import Fresh from './Fresh';
+import Microfiber from './Microfiber';

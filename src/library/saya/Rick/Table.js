@@ -40,17 +40,17 @@ const useStyles = makeStyles(() => ({
     overflow: 'hidden',
     // border: '1px solid #979797',
     padding: 11,
-    height: 40,
+    height: 35,
   },
   itemTh: {
-    paddingLeft: 42,
-    paddingRight: 42,
-    textAlign: 'left',
+    paddingLeft: 0,
+    paddingRight: 0,
+    textAlign: 'center',
   },
   itemTd: {
     backgroundColor: '#d8d8d8',
-    paddingLeft: 42,
-    paddingRight: 42,
+    paddingLeft: 0,
+    paddingRight: 0,
   },
   typeTd: {
     textAlign: 'center',
@@ -206,8 +206,8 @@ export default (props) => {
       <table className={classes.table}>
         <tbody>
           <tr className={clsx(classes.tr)}>
-            <th width={264} className={clsx(classes.tdth, classes.itemTh)}>Item</th>
-            <th width={100} className={classes.tdth}>Type</th>
+            <th width={191} className={clsx(classes.tdth, classes.itemTh)}>Item</th>
+            <th width={80} className={classes.tdth}>Type</th>
             <th width={12} className={classes.tdth} />
             <th width={80} className={classes.tdth}>Denie</th>
             <th width={80} className={classes.tdth}>Filame</th>
