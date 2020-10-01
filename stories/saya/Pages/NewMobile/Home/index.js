@@ -13,7 +13,8 @@ import mobileBg2 from '../../../img/mobile/m_home01.jpg';
 import mobileBg3 from '../../../img/mobile/m_home02.jpg';
 
 import roundArrowImage from '../../../img/round_arrow.svg';
-import backgroundPartner from '../../../img/mobile/m_bg42.jpg';
+import backgroundPartner from '../../../img/mobile/m_home03.jpg';
+import bottleImage from '../../../img/mobile/m_home_bottle.svg';
 
 import icon1 from '../../../img/mobile/icon1.svg';
 import icon2 from '../../../img/mobile/icon2.svg';
@@ -82,6 +83,7 @@ storiesOf('saya|Pages/NewMobile', module)
           <div style={{ marginTop: 6 }}>
             <Partner
               backgroundImage={backgroundPartner}
+              bottleImage={bottleImage}
             />
           </div>
         </MobileLayout>

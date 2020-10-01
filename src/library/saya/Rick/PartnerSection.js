@@ -21,14 +21,30 @@ class PartnerSection extends React.PureComponent {
     } = this.props;
 
     return (
-      <ImageContainer>
-        <div className={classes.root}>
-          {partner.map(r => (
-            <IconBoxSection>
-              {r.map(cell => <IconBox imgUrl={cell} width="80px" />)}
-            </IconBoxSection>
-          ))}
+      <ImageContainer
+        className={classes.root}
+      >
+        {/* <div className={classes.section}>
+        <div className={classes.breadCrumbs}>
+          {breadCrumbs}
+          <div className={classes.firstLine} />
         </div>
+        <div className={classes.title}>{title}</div>
+        <div className={classes.subTitle}>{subTitle}</div>
+      </div> */}
+        {partner.map(r =>
+          <IconBoxSection>
+            {r.map(cell => <IconBox imgUrl={cell} width="80px" />)}
+          </IconBoxSection>
+        )}
+        {/* <div className={classes.section}>
+        <div className={classes.button}>
+          <GreenButton
+            text="Read More"
+            onClick={onClick}
+          />
+        </div>
+      </div> */}
       </ImageContainer>
     );
   }

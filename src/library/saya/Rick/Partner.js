@@ -6,14 +6,17 @@ import PartnerForm from './PartnerForm';
 const styles = {
   root: {
     height: 643,
-    paddingTop: 185,
+    paddingTop: 47,
   },
   bottle: {
+    width: 319,
+    height: 596,
     color: '#000000',
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-
+    alignItems: 'center',
+    paddingTop: 170,
   },
   title: {
     fontSize: 30,
@@ -29,19 +32,22 @@ class Partner extends React.PureComponent {
     const {
       classes,
       backgroundImage,
+      bottleImage,
     } = this.props;
     return (
       <ImageContainer
         className={classes.root}
         image={backgroundImage}
       >
-        <div className={classes.bottle}>
-          <pre className={classes.title} style={{ marginTop: 0, marginBottom: 0, }} >
-            {'Get Useful\nUpdates'}
-          </pre>
+        <ImageContainer className={classes.bottle} image={bottleImage}>
+          <div style={{ width: 245 }}>
+            <pre className={classes.title} style={{ marginTop: 0, marginBottom: 0, }} >
+              {'Get Useful\nUpdates'}
+            </pre>
 
-          <PartnerForm />
-        </div>
+            <PartnerForm />
+          </div>
+        </ImageContainer>
       </ImageContainer>
     );
   }

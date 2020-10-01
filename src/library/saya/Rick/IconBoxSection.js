@@ -5,7 +5,7 @@ const styles = {
   root: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'left',
+    justifyContent: 'center',
     borderTop: '1px solid #e8e8e8',
     borderBottom: '1px solid #e8e8e8',
     marginBottom: -1,

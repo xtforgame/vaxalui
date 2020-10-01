@@ -23,6 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   firstTitleBack: {
     fontFamily: 'FilsonSoft-Light',
+    fontWeight: 300,
   },
   firstLine: {
     height: 1,
@@ -80,8 +81,8 @@ export default (props) => {
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
         <div className={classes.title}>{title}</div>
-        <div className={classes.subTitle}>{subTitle}</div>
-        <div>{children}</div>
+        <div className={classes.subTitle}>{subTitle}</div>  </div>
+        <div style={{width:'100%'}}>{children}</div>
         {!hideButton && (
           <div className={classes.button} style={{ alignSelf: buttonPosition }}>
             <GreenButton
@@ -90,7 +91,7 @@ export default (props) => {
             />
           </div>
         )}
-      </div>
+    
     </ImageContainer>
 
   );

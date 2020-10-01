@@ -5,7 +5,7 @@ import ImageContainer from '../ImageContainer';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    height: 610,
+    height: 658,
     color: '#000000',
   },
   title: {
@@ -16,14 +16,22 @@ const useStyles = makeStyles(theme => ({
     fontSize: 45,
     color: '#ffffff',
     fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 'normal',
+  },
+  line: {
+    width: '100%',
+    height: 1,
+    marginTop: 19,
+    backgroundColor: '#ffffff',
   },
   subtitle: {
     color: '#ffffff',
     fontSize: 20,
     fontFamily: 'FilsonSoft-Light',
     textAlign: 'left',
-    paddingTop: 40,
-    paddingBottom: 32,
+    lineHeight: 1.6,
+    paddingTop: 19,
+    paddingBottom: 33,
   },
   roundArrow: {
     width: 50,
@@ -49,7 +57,7 @@ export default (props) => {
         <pre className={classes.titleWhite} style={{ margin: 0 }}>
           {'Innovating\nRenewal\nTechnologies'}
         </pre>
-
+        <div className={classes.line} />
         <pre className={classes.subtitle} style={{ margin: 0 }}>
           {'Recycling Solutions from Bottles\nto Garments and Beyond'}
         </pre>
