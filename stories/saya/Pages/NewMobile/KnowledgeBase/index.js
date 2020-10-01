@@ -2,110 +2,111 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TopSection from 'library/saya/Rick/TopSection';
-import ImageContainer from 'library/saya/ImageContainer';
-import GreenNumberSection from 'library/saya/Rick/GreenNumberSection';
-import SubtitleContent from 'library/saya/SubtitleContent';
-import TitleLineBox from 'library/saya/Rick/TitleLineBox';
-import ImageBoxSmall from 'library/saya/Rick/ImageBoxSmall';
+import AboutNews from 'library/saya/Rick/AboutNews';
+import TechnologyProjects from 'library/saya/Rick/TechnologyProjects';
 
-import MobileLayout from '../../shared/MobileLayout';
+import MobileLayout from '../../../shared/MobileLayout';
 
-import MobileBg1 from '../../img/mobile/m_bg47.jpg'
-import MobileBg2 from '../../img/mobile/m_bg48.jpg'
-import oceanCycle from '../../img/mobile/ocean-cycle-218x300.png'
-
-import leftBox from '../../img/mobile/m_bg45.jpg';
-import rightBox from '../../img/mobile/m_bg17.jpg';
+import background_TopSection from '../../../img/mobile/m_banner04.jpg';
 
 
-storiesOf('saya|Pages/Mobile/MobileTechnologies', module)
-  // .addParameters({
-  //   info: {
-  //     inline: true,
-  //     propTables: false,
-  //     header: false,
-  //     maxPropObjectKeys: 10,
-  //     maxPropArrayLength: 10,
-  //   },
-  // })
-  .add('NowCoastal',
+import background_Card1 from '../../../img/mobile/m_pic1.jpg';
+import background_Card2 from '../../../img/mobile/m_pic2.jpg';
+import background_Card3 from '../../../img/mobile/m_pic3.jpg';
+import background_Card4 from '../../../img/mobile/m_pic4.jpg';
+
+
+storiesOf('saya|Pages/NewMobile', module)
+  .add('KnowledgeBase',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
           <TopSection
-            firstTitle="SAYA Now Series"
-            secondTitle={'SAYA\n'}
-            secondTitleBack={'COASTAL'}
-            thirdTitle={'Recycled FIbers from\nOcean Prevented Plastic'}
-            backgroundImage={MobileBg1}
-            secondTitlePaddingTop={115}
-            secondLineMarginTop={106}
-            color="#ffffff"
-            lineBackgroundColor="#ffffff"
+            height={350}
+            firstTitle="KNOWLEDGE BASE"
+            title="Sustainable Innovations"
+            backgroundImage={background_TopSection}
+            titleFontFamily="light"
+            paddingTop={70}
+            titlePaddingTop={43}
+            titleFontSize={50}
           />
 
-          <GreenNumberSection
-            marginTop={80}
-            number="80"
-            topTile="ocean plastic"
-            bottomTitle="from coastal land"
-            height={591}
-            numberColor="#64703f"
-            percentDisplay="none"
-            subtitle={`Ocean Plastics Come from Our\nCoasts `}
-            content={`SAYA Coastal is a specialized recycling\nprogram that targets the clean-up and\nrenewal of discarded plastic bottles in coastal\nregions that would otherwise migrate out to\nsea. Study shows more than 80% of ocean\nplastics actually originated from coastal land.`}
-          />
-
-          <ImageContainer style={{ backgroundImage: `url(${MobileBg2})`, height: 575, }}>
-            <pre style={{
-              fontSize: 27,
-              fontWeight: 'bold',
-              fontFamily: 'FilsonSoft-Bold',
-              paddingTop: 20,
-              alignSelf: 'left'
-            }}
-            >
-              {'Upcycle Ocean Bound\nBottles Before They\nBecome Microplastics'}
-            </pre>
-          </ImageContainer>
-
-          <ImageContainer style={{ backgroundColor: '#e3e3e3', height: 516, }}>
-            <div style={{ width: '80%', alignItems: 'flex-start' }}>
-              <img
-                src={oceanCycle}
-                style={{ width: 109, height: 150, marginTop: 80, }}
-              />
-            </div>
-            <SubtitleContent
-              height={575}
-              fontColor="#000000"
-              subtitle={'Certified Ocean Plastic '}
-              content={`We work with OceanCycle’s network of\ncertified coastal recyclers. Treated with SAYA\nNow’s proprietary renewing technology, we\nturn potential microplastics into durable and\nluxurious performance microfibers.`}
-              paddingTop={55}
+          <div style={{ marginTop: 6, marginBottom: 20 }}>
+            <AboutNews
+              backgroundColor="#FFFFFF"
+              title={
+                <>
+                  <span style={{ fontSize: 12, fontFamily: 'FilsonSoftRegular', fontWeight: 300 }}>Technology /</span>
+                  <span style={{ fontSize: 12, fontFamily: 'FilsonSoft-Bold' }}>Knowledge Base</span>
+                </>
+              }
+              item={[
+                {
+                  height: 305,
+                  width: 310,
+                  title: 'What is Post-consumer Recycled Polyester',
+                  description: 'Recycled polyester (rPET) is obtained by melting down existing plastic and re-spinning it into new polyester fiber.',
+                  image: background_Card1,
+                  onClick: () => { }
+                },
+                {
+                  height: 305,
+                  width: 310,
+                  title: 'Recycled vs. Recyclable',
+                  description: 'Recycling is the process of collecting and processing materials that would otherwise be thrown away as trash...',
+                  image: background_Card2,
+                  onClick: () => { }
+                },
+                {
+                  height: 305,
+                  width: 310,
+                  title: 'Mechanical Recycling',
+                  description: 'Mechanical recycling transforms materials into "new" secondary raw materials without changing the base...',
+                  image: background_Card3,
+                  onClick: () => { }
+                },
+                {
+                  height: 305,
+                  width: 310,
+                  title: 'Chemical Recycling',
+                  description: 'Chemical recycling, also called advanced recycling,  is taking  plastic waste  and reducing it back to its...',
+                  image: background_Card4,
+                  onClick: () => { }
+                }
+              ]}
             />
-          </ImageContainer>
+          </div>
 
-          <TitleLineBox
-            title="Other SAYA Now Projects"
-            color="#000000"
-          >
-            <ImageBoxSmall
-              title={'SAYA'}
-              titleBack={'365'}
-              subtitle={'Certified Recycle PET\nFor Everyday Needs'}
-              backgroundImage={leftBox}
-              paddingTop={70}
-              fontColor="#000000"
+          <div style={{ marginTop: 6 }}>
+            <TechnologyProjects
+              height={806}
+              title="Explore More"
+              backgroundColor="#e3e3e3"
+              list={[
+                {
+                  title: "Upgrade Your Bottle Renewal Technology",
+                  buttonText: "Learn More",
+                  disabled: false,
+                  type: <span>BOTTLES</span>,
+                },
+                {
+                  title: "Cutting Scraps and Overstocks",
+                  buttonText: "Learn More",
+                  disabled: false,
+                  type: <span>RSCUW / SAYA</span>,
+                  typeBack: <span>NEXT</span>
+                },
+                {
+                  title: "Used Garment to Fiber Solution",
+                  buttonText: "Coming Soon",
+                  disabled: true,
+                  type: <span>GARMA / SAYA</span>,
+                  typeBack: <span>NEXT</span>
+                },
+              ]}
             />
-            <ImageBoxSmall
-              title="SAYA"
-              titleBack="USA"
-              subtitle={'Certified Recycled\nfrom our South Carolina Plant'}
-              backgroundImage={rightBox}
-              paddingTop={70}
-              fontColor="#ffffff"
-            />
-          </TitleLineBox>
+          </div>
         </MobileLayout>
       </div>
     )

@@ -6,3 +6,5 @@ import module5 from './module5';
 import module6 from './module6';
 import Bottles from './Bottles';
 import Rscuw from './Rscuw';
+import KnowledgeBase from './KnowledgeBase';
+import KnowledgeBaseArticle from './KnowledgeBaseArticle';

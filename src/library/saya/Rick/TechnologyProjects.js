@@ -32,6 +32,7 @@ class TechnologyProjects extends React.PureComponent {
   render() {
     const {
       classes,
+      height,
       title,
       list,
       backgroundColor,
@@ -41,7 +42,7 @@ class TechnologyProjects extends React.PureComponent {
         <div
           className={classes.root}
           style={{
-            backgroundColor,
+            backgroundColor, height
           }}
         >
           <div style={{ width: 320 }}>

@@ -20,7 +20,7 @@ const styles = {
     backgroundColor: '#c8c6c6',
   },
   title: {
-    width: 200,
+    width: 220,
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
     textAlign: 'center',

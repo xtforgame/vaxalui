@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import TopSection2 from 'library/saya/Rick/TopSection2';
+import TopSection from 'library/saya/Rick/TopSection';
 import AboutNews from 'library/saya/Rick/AboutNews';
 import TechnologyProjects from 'library/saya/Rick/TechnologyProjects';
 
@@ -21,7 +21,7 @@ storiesOf('saya|Pages/NewMobile', module)
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
-          <TopSection2
+          <TopSection
             height={350}
             firstTitle="ABOUT"
             title="News"
