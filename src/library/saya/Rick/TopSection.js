@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 92,
+    // paddingTop: 92,
   },
   firstTitle: {
     width: 'fit-content',
@@ -31,8 +31,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: 1,
   },
   title: {
+    width: '100%',
     fontSize: 45,
-    paddingTop: 43,
+    // paddingTop: 43,
     whiteSpace: 'pre-line',
     lineHeight: 'normal',
     fontStretch: 'normal',
@@ -40,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   },
   subtitle: {
     fontSize: 20,
-    paddingTop: 16,
+    // paddingTop: 16,
     lineHeight: 1.6,
     // fontFamily: 'FilsonSoft-Light',
   },
@@ -60,6 +61,10 @@ export default (props) => {
     lineColor,
     titleFontFamily,
     subtitleFontFamily,
+    paddingTop,
+    titlePaddingTop,
+    subtitlePaddingTop,
+    titleFontSize,
     buttonPosition,
   } = props;
 
@@ -69,7 +74,7 @@ export default (props) => {
     <ImageContainer
       className={classes.root}
       image={backgroundImage}
-      style={{ height, color }}
+      style={{ height, color, paddingTop }}
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>
@@ -77,8 +82,8 @@ export default (props) => {
           <span className={classes.firstTitleBack}>{firstTitleBack}</span>
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
-        <Text family={titleFontFamily} className={classes.title}>{title}</Text>
-        <Text family={subtitleFontFamily} className={classes.subtitle}>{subtitle}</Text>
+        <Text family={titleFontFamily} className={classes.title} style={{ paddingTop: titlePaddingTop, fontSize: titleFontSize }}>{title}</Text>
+        <Text family={subtitleFontFamily} className={classes.subtitle} style={{ paddingTop: subtitlePaddingTop }} >{subtitle}</Text>
         <div>{children}</div>
       </div>
     </ImageContainer>

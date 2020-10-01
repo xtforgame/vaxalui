@@ -1,5 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+
 import TopSection from 'library/saya/Rick/TopSection';
 import TopSection4 from 'library/saya/Rick/TopSection4';
 import TitleButton from 'library/saya/Rick/TitleButton';
@@ -9,7 +10,6 @@ import Introduction from 'library/saya/Rick/Introduction';
 import GreenNumberSection from 'library/saya/Rick/GreenNumberSection';
 import StageWithIcon from 'library/saya/Rick/StageWithIcon';
 import ImageContainer from 'library/saya/ImageContainer';
-import Section3 from 'library/saya/Rick/Section3';
 import SubtitleContent from 'library/saya/SubtitleContent';
 import TechnologyProjects from 'library/saya/Rick/TechnologyProjects';
 
@@ -40,6 +40,9 @@ storiesOf('saya|Pages/NewMobile', module)
             backgroundImage={background_TopSection1}
             titleFontFamily="bold"
             subtitleFontFamily="light"
+            paddingTop={92}
+            titlePaddingTop={43}
+            subtitlePaddingTop={16}
           />
 
           <div style={{ marginTop: 6 }}>
@@ -61,7 +64,7 @@ storiesOf('saya|Pages/NewMobile', module)
           />
 
           <div style={{ marginTop: 6 }}>
-            <Section3
+            <TopSection
               height={550}
               firstTitle="BOTTLES"
               title="Solid Backbone of our Sustainable Fibers"
@@ -70,6 +73,9 @@ storiesOf('saya|Pages/NewMobile', module)
               titleFontFamily="light"
               subtitleFontFamily="bold"
               paddingTop={87}
+              titlePaddingTop={43}
+              subtitlePaddingTop={8}
+              titleFontSize={50}
             />
           </div>
 
@@ -194,7 +200,7 @@ storiesOf('saya|Pages/NewMobile', module)
           </div>
 
           <div style={{ marginTop: 6 }}>
-            <Section3
+            <TopSection
               height={550}
               firstTitle="COASTAL"
               title="Preventing the biggest source of ocean plastic"
@@ -203,6 +209,9 @@ storiesOf('saya|Pages/NewMobile', module)
               titleFontFamily="light"
               subtitleFontFamily="bold"
               paddingTop={112}
+              titlePaddingTop={43}
+              subtitlePaddingTop={8}
+              titleFontSize={50}
             />
           </div>
 
@@ -233,7 +242,7 @@ storiesOf('saya|Pages/NewMobile', module)
           </ImageContainer>
 
           <div style={{ marginTop: 6 }}>
-            <Section3
+            <TopSection
               height={550}
               firstTitle="USA"
               title="Recycled Fibers Made in USA"
@@ -242,6 +251,9 @@ storiesOf('saya|Pages/NewMobile', module)
               titleFontFamily="light"
               subtitleFontFamily="bold"
               paddingTop={137}
+              titlePaddingTop={43}
+              subtitlePaddingTop={8}
+              titleFontSize={50}
             />
           </div>
 
@@ -250,9 +262,9 @@ storiesOf('saya|Pages/NewMobile', module)
             title="Turnkey Solution to Made in USA Strategy"
             subtitle="Facility in Lake City, South Carolina"
             // image={<div style={{ width: 340, height: 440, backgroundColor: 'black' }} />}
-            description="SAYA USA is a special collection of recycled polyester fibers made in our facility in South Carolina, USA. Here we provide the options to use locally or internationally recycled bottles and wastes. If you are looking for a USA-based fiber program, SAYA is here to help with not only quality, delivery, but also global traceability and transparency.  
+            description={`SAYA USA is a special collection of recycled polyester fibers made in our facility in South Carolina, USA. Here we provide the options to use locally or internationally recycled bottles and wastes. If you are looking for a USA-based fiber program, SAYA is here to help with not only quality, delivery, but also global traceability and transparency.  
 
-            We partner with mills and finishing facilities around the USA to provide turnkey solutions to complete your sustainable and circular design product needs."
+We partner with mills and finishing facilities around the USA to provide turnkey solutions to complete your sustainable and circular design product needs.`}
             backgroundColor="#c8c6c6"
             color="#000000"
             buttonColor="#64703f"

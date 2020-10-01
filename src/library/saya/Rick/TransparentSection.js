@@ -50,13 +50,13 @@ export default (props) => {
       />
       <ImageContainer style={{ backgroundColor: '#444343' }}>
         <div className={classes.root}>
-          <div className={classes.title}>SAYA’s advanced methods</div>
+          <div className={classes.title}>Type of Materials and Finishing</div>
           <BreakAllContentText className={classes.description}>
-            {'Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.\n\nWe aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021.'}
+            {'Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.\n\nWe aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.'}
           </BreakAllContentText>
           <div className={classes.title}>Content Percentage</div>
           <BreakAllContentText className={classes.description}>
-            {'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nRemoving colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics.'}
+            {'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nWe aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution. '}
           </BreakAllContentText>
         </div>
       </ImageContainer>

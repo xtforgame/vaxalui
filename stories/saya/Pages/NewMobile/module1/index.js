@@ -23,7 +23,7 @@ import TransparentSectionBG1 from '../../../img/mobile/m_bg06.jpg';
 import ProudlyImg from '../../../img/mobile/m_image03.png';
 
 storiesOf('saya|Pages/NewMobile', module)
-  .add('Module1',
+  .add('Rscuw',
     () => (
       <div style={{ width: '100%' }}>
         <MobileLayout>
@@ -31,9 +31,13 @@ storiesOf('saya|Pages/NewMobile', module)
             height={550}
             firstTitle="RSCUW / SAYA"
             firstTitleBack="NEXT"
-            title="Cutting Scraps and Overstocks"
-            subtitle="Addressing the Industry’s Real Elephant In the Room."
+            title={'Cutting\nScraps and\nOverstocks'}
+            subtitle="Recycling the Industry’s Elephant In the Room"
             backgroundImage={background_TopSection1}
+            subtitleFontFamily="light"
+            paddingTop={122}
+            titlePaddingTop={43}
+            subtitlePaddingTop={16}
           />
           <div style={{ marginTop: 6 }}>
             <CollapseSection
@@ -122,6 +126,10 @@ These deadstock and overstock creates millions of yards of our industry’s unac
               backgroundImage={background_TopSection2}
               titleFontFamily="light"
               subtitleFontFamily="bold"
+              paddingTop={106}
+              titlePaddingTop={43}
+              subtitlePaddingTop={16}
+              titleFontSize={50}
             />
           </div>
 

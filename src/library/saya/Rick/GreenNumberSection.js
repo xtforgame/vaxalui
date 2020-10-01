@@ -80,6 +80,7 @@ export default (props) => {
     percentDisplay,
     marginTop,
     sign = "%",
+    hideSign,
   } = props;
 
   const classes = useStyles();
@@ -109,13 +110,16 @@ export default (props) => {
             <div className={classes.numberUpTitle}> {numberUpTitle} </div>
             <div className={classes.number} style={{ color: numberColor, }} >
               {number}
-              <span
-                className={classes.percent}
-                style={{
-                  display: percentDisplay,
-                }}
-              >
-                {sign}</span>
+              {
+                !hideSign &&
+                (<span
+                  className={classes.percent}
+                  style={{
+                    display: percentDisplay,
+                  }}
+                >
+                  {sign}</span>)
+              }
             </div>
             <div style={{ paddingLeft: 0, }}>
               <div className={classes.topTile}> {topTile} </div>
