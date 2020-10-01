@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 92,
+    // paddingTop: 92,
   },
   firstTitle: {
     width: 'fit-content',
@@ -31,16 +31,17 @@ const useStyles = makeStyles(theme => ({
     marginTop: 1,
   },
   title: {
-    fontSize: 45,
+    fontSize: 50,
     paddingTop: 43,
     whiteSpace: 'pre-line',
+    fontWeight: 300,
     lineHeight: 'normal',
     fontStretch: 'normal',
     // fontFamily: 'FilsonSoft-Bold',
   },
   subtitle: {
     fontSize: 20,
-    paddingTop: 16,
+    paddingTop: 8,
     lineHeight: 1.6,
     // fontFamily: 'FilsonSoft-Light',
   },
@@ -50,6 +51,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const {
     backgroundImage,
+    paddingTop,
     firstTitle,
     firstTitleBack,
     title,
@@ -69,7 +71,7 @@ export default (props) => {
     <ImageContainer
       className={classes.root}
       image={backgroundImage}
-      style={{ height, color }}
+      style={{ height, color, paddingTop }}
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>

@@ -16,7 +16,7 @@ const styles = {
   },
   title: {
     width: 280,
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
     fontStretch: 'normal',
     fontFamily: 'FilsonSoft-Bold',

@@ -64,11 +64,12 @@ const useStyle = makeStyles(theme => ({
   },
   button: {
     marginTop: 16,
-    marginBottom: 60,
+    marginBottom: 16,
   },
   description: {
     fontSize: 13,
     marginBottom: 60,
+    lineHeight: 1.54,
   },
   expandedArea: {
     overflow: 'hidden',

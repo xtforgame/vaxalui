@@ -79,6 +79,7 @@ export default (props) => {
     backgroundColor,
     percentDisplay,
     marginTop,
+    sign = "%",
   } = props;
 
   const classes = useStyles();
@@ -114,7 +115,7 @@ export default (props) => {
                   display: percentDisplay,
                 }}
               >
-                %</span>
+                {sign}</span>
             </div>
             <div style={{ paddingLeft: 0, }}>
               <div className={classes.topTile}> {topTile} </div>

@@ -6,12 +6,13 @@ import ImageContainer from './ImageContainer';
 const useStyles = makeStyles(theme => ({
   subtitle: {
     textAlign: 'left',
-    fontSize: 18,
+    fontSize: 20,
   },
   content: {
     textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 7,
+    fontSize: 13,
+    lineHeight: 1.54,
+    paddingTop: 24,
   },
 }));
 
@@ -33,17 +34,17 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height,backgroundColor, width: '100%', paddingTop:paddingTop,}}
+      style={{ height, backgroundColor, width: '100%', paddingTop: paddingTop, }}
     >
       <div
-        style={{ position: 'absolute' ,color:fontColor,}}
+        style={{ position: 'absolute', color: fontColor,width: 320 }}
       >
-     
+
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0,marginTop:  0,  }}>{subtitle}</pre>
+          <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>{subtitle}</pre>
         </div>
         <div className={classes.content}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular',marginBottom: 0, }}>{content}</pre>
+          <pre style={{ fontFamily: 'FilsonSoftRegular', margin: 0, }}>{content}</pre>
         </div>
         <div>
           {children}

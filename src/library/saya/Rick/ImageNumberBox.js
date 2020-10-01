@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 70,
     fontFamily: 'FilsonSoftRegular',
     lineHeight: 0.96,
-    textAlign: 'center',
+    textAlign: 'left',
   },
   topTile: {
     fontSize: 13,
@@ -43,6 +43,7 @@ export default (props) => {
     backgroundColor,
     color,
     lineColor,
+    hidePercent,
   } = props;
 
   const classes = useStyles();
@@ -51,12 +52,14 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height: 187, width: '50%', backgroundColor, color }}
+      style={{ height: 194, width: '50%', backgroundColor, color }}
     >
       <div
-        style={{ position: 'absolute', width: 138, height: 115, marginTop: 36 }}
+        style={{ position: 'absolute', height: 115, marginTop: 36 }}
       >
-        <div className={classes.number}>{number}<span style={{ fontSize: 12 }}>%</span></div>
+        <div className={classes.number}>{number}
+          {!hidePercent && <span style={{ fontSize: 12, }}>%</span>}
+        </div>
         <div className={classes.topTile}> {topTile} </div>
         <div className={classes.line} style={{ backgroundColor: lineColor }} />
         <div className={classes.bottomTitle}> {bottomTitle} </div>

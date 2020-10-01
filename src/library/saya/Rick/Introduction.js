@@ -48,6 +48,7 @@ export default (props) => {
     lineColor,
     lineDisplay,
     children,
+    hideTitle,
   } = props;
 
   const classes = useStyles();
@@ -63,10 +64,12 @@ export default (props) => {
       <div
         style={{ position: 'absolute', width: 320, }}
       >
-        <div className={classes.title}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{title}</pre>
-        </div>
-
+        {
+          !hideTitle &&
+          <div className={classes.title}>
+            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{title}</pre>
+          </div>
+        }
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={classes.line} style={{ backgroundColor: lineColor, display: lineDisplay, }} />
         </div>
