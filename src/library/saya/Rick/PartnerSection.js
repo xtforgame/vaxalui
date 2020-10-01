@@ -17,6 +17,7 @@ class PartnerSection extends React.PureComponent {
   render() {
     const {
       classes,
+      borderColor,
       partner = [],
     } = this.props;
 
@@ -33,8 +34,8 @@ class PartnerSection extends React.PureComponent {
         <div className={classes.subTitle}>{subTitle}</div>
       </div> */}
         {partner.map(r =>
-          <IconBoxSection>
-            {r.map(cell => <IconBox imgUrl={cell} width="80px" />)}
+          <IconBoxSection borderColor={borderColor}>
+            {r.map(cell => <IconBox imgUrl={cell} width="80px" borderColor={borderColor} />)}
           </IconBoxSection>
         )}
         {/* <div className={classes.section}>

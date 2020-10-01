@@ -20,9 +20,10 @@ class IconBox extends React.PureComponent {
       imgUrl,
       width,
       onClick,
+      borderColor,
     } = this.props;
     return (
-      <div className={clsx(classes.root, { [classes.clickable]: !!onClick })}>
+      <div className={clsx(classes.root, { [classes.clickable]: !!onClick })} style={{ borderColor }}>
         <img
           src={imgUrl}
           style={{
