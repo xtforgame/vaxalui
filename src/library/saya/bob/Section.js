@@ -32,7 +32,7 @@ const styles = {
     fontSize: 72,
     fontWeight: 300,
     fontStretch: 'normal',
-    fontFamily: 'FilsonSoft',
+    fontFamily: 'FilsonSoft-Light',
     lineHeight: 1,
     paddingTop: 45,
     whiteSpace: 'pre-line',
