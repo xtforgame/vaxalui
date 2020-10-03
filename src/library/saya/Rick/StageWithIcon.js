@@ -7,32 +7,33 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    height:190,
+    height: 92,
+    marginTop: 40,
   },
   container: {
-    width: '90%',
+    width: '100%',
     position: "relative",
     display: 'flex',
     alignItems: 'center',
     overflow: 'scroll',
   },
-  circle: {
-    width: 106,
-    height: 106,
-    border: 'solid 1px #ffffff',
-    borderRadius: '50%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    fontSize: 15,
-    fontWeight: 'bold',
-    color: '#ffffff',
-    fontFamily: 'FilsonSoft-Bold',
-  },
+  // circle: {
+  //   width: 106,
+  //   height: 106,
+  //   border: 'solid 1px #ffffff',
+  //   borderRadius: '50%',
+  //   display: 'flex',
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   textAlign: 'center',
+  //   fontSize: 15,
+  //   fontWeight: 'bold',
+  //   color: '#ffffff',
+  //   fontFamily: 'FilsonSoft-Bold',
+  // },
   icon: {
-    marginLeft: 100,
-    height: '100%',
+    marginLeft: 0,
+    height: 92,
     position: "absolute",
   }
 }));
@@ -49,7 +50,6 @@ export default (props) => {
   return (
     <div className={classes.root} style={{ backgroundColor: backgroundColor }} >
       <div className={classes.container} >
-        <pre className={classes.circle}>{content}</pre>
         <img className={classes.icon} src={icon} />
       </div>
     </div>

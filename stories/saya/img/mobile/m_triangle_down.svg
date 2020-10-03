@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="14px" viewBox="0 0 24 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>m_triangle_down</title>
+    <g id="Navibar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m_navibar_technologies" transform="translate(-659.000000, -169.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="m_triangle_down" transform="translate(671.000000, 176.000000) rotate(90.000000) translate(-671.000000, -176.000000) translate(664.000000, 164.000000)">
+                <polygon id="Path" points="14 12 0 24 0 0"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,6 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import Text from './Text';
+import BreakAllContentText from '../BreakAllContentText';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -8,24 +12,25 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textAlign: 'left',
-    fontSize: 33,
-    paddingTop: 47,
+    fontSize: 30,
+    paddingTop: 60,
   },
   line: {
     width: '100%',
     height: 1,
-    marginTop: 23,
+    marginTop: 16,
   },
   subtitle: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 22,
+    fontSize: 20,
+    paddingTop: 27,
+    lineHeight: 'normal',
   },
-  content: {
+  description: {
     textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 23,
-    lineHeight: 1.5,
+    fontSize: 13,
+    paddingTop: 12,
+    lineHeight: 1.54,
   },
 }));
 
@@ -34,7 +39,8 @@ export default (props) => {
     title,
     titlePaddingTop,
     subtitle,
-    content,
+    subtitleFontFamily,
+    description,
     height,
     backgroundImage,
     backgroundColor,
@@ -42,6 +48,7 @@ export default (props) => {
     lineColor,
     lineDisplay,
     children,
+    hideTitle,
   } = props;
 
   const classes = useStyles();
@@ -51,25 +58,27 @@ export default (props) => {
       image={backgroundImage}
       className={classes.root}
       style={{
-        height, color, width: '100%', backgroundColor: backgroundColor
+        height, color, backgroundColor, width: '100%'
       }}
     >
       <div
-        style={{ position: 'absolute', }}
+        style={{ position: 'absolute', width: 320, }}
       >
-        <div className={classes.title}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, }}>{title}</pre>
-        </div>
-
+        {
+          !hideTitle &&
+          <div className={classes.title}>
+            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{title}</pre>
+          </div>
+        }
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className={classes.line} style={{ backgroundColor: lineColor, display: lineDisplay, }} />
         </div>
 
         <div className={classes.subtitle}>
-          <pre style={{ fontFamily: 'FilsonSoft-Bold', marginBottom: 0, marginTop: 0 }}>{subtitle}</pre>
+          <Text family={subtitleFontFamily} style={{ margin: 0 }}>{subtitle}</Text>
         </div>
-        <div className={classes.content}>
-          <pre style={{ fontFamily: 'FilsonSoftRegular', marginBottom: 0, marginTop: 0, }}>{content}</pre>
+        <div className={classes.description}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{description}</BreakAllContentText>
         </div>
         <div>
           {children}

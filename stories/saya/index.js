@@ -44,3 +44,5 @@ import './MobileAbout';
 import './MobilePartners';
 
 import './Pages/NewDesktop';
+
+import './Pages/NewMobile';

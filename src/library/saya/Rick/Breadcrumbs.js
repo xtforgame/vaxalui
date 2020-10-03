@@ -1,63 +1,51 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import { withStyles } from '@material-ui/core/styles';
+import { Breadcrumbs as MUIBreadcrumbs } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
+import ImageContainer from '../ImageContainer';
 
-const useStyles = makeStyles(theme => ({
-}));
+const styles = {
+  separator: {
+    fontSize: 12,
+    marginTop: -3,
+  },
+  ol: {
+    alignItems: 'baseline',
+  },
+  link: {
+    fontSize: 0,
+  }
+};
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+
+class Breadcrumbs extends React.PureComponent {
+  render() {
+    const {
+      classes,
+      color = '#FFFFFF',
+      bread = [],
+      separatorColor,
+    } = this.props;
+
+    return (
+      <div style={{ width: 310 }}>
+        <MUIBreadcrumbs
+          classes={{
+            ol: classes.ol,
+            separator: classes.separator,
+          }}
+          separator={<span style={{ color: separatorColor }}>/</span>}
+        >
+          {bread.map(b => (
+            <Link className={classes.link} style={{ color}} key={b.path} href={b.path} underline="none">
+              {b.name}
+            </Link>
+          ))}
+        </MUIBreadcrumbs>
+      </div>
+    );
+  }
 }
 
-export default (props) => {
-  const {
-    data = [],
-  } = props;
 
-  const classes = useStyles();
-
-  const renderBreadcrumb = (breadcrumb, index, breadcrumbs) => {
-    if (breadcrumb.link) {
-      return (
-        <Link key={index} color="inherit" href="/" onClick={handleClick}>
-          <span style={{ fontSize: 14, fontFamily: 'FilsonSoftRegular', color: 'black' }}>
-            {breadcrumb.label}
-          </span>
-        </Link>
-      );
-    } else if (index !== breadcrumbs.length - 1) {
-      return (
-        <Link key={index} color="inherit" href="/" onClick={handleClick}>
-          <span style={{ fontSize: 14, fontFamily: 'FilsonSoftRegular', color: 'black' }}>
-            {breadcrumb.label}
-          </span>
-        </Link>
-      );
-    }
-    // <Typography color="textPrimary">What is post-consumer recycled polyester</Typography>
-    return (
-      <span key={index} style={{ fontSize: 14, fontFamily: 'FilsonSoft-Bold', color: 'black' }}>
-        {breadcrumb.label}
-      </span>
-    );
-  };
-
-  return (
-    <React.Fragment>
-      {/* <div style={{ paddingTop: 40, fontSize: 14, textAlign: 'center' }}>
-        About / News /
-        <span style={{ fontFamily: 'FilsonSoft-Bold' }}>
-          What is post-consumer recycled polyester
-        </span>
-      </div> */}
-      <div style={{ paddingTop: 40, display: 'flex', justifyContent: 'center' }}>
-        <Breadcrumbs aria-label="breadcrumb">
-          {(data || []).map(renderBreadcrumb)}
-        </Breadcrumbs>
-      </div>
-    </React.Fragment>
-  );
-};
+export default withStyles(styles)(Breadcrumbs);

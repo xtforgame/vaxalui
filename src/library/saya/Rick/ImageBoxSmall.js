@@ -10,18 +10,20 @@ const styles = {
     // flexDirection: 'column',
     // alignItems: 'center',
     // flexWrap: 'wrap',
-    borderRadius: 30,
+    borderRadius: 0,
     marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
     position: 'relative',
     backgroundSize: 'cover',
   },
   title: {
-    fontSize: 27,
+    fontSize: 20,
     fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: 'bold',
     paddingTop: 4,
   },
@@ -91,7 +93,7 @@ class ImageBoxSmall extends React.PureComponent {
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
-            bottom: 50,
+            bottom: 40,
           }}
         >
           <button className={classes.button}>

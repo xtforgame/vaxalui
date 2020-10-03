@@ -11,9 +11,10 @@ const useStyles = makeStyles(theme => ({
   },
   root: {
     width: 310,
+    paddingTop: 60,
   },
   title: {
-    fontSize: 27,
+    fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
@@ -53,12 +54,12 @@ export default (props) => {
           <React.Fragment key={row.id}>
             <div style={{ width: '100%', height: 40, display: 'flex', justifyContent: 'start' }}>
               <div style={{ flex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 14 }}>
+                <BreakAllContentText style={{ width: 230, fontFamily: 'FilsonSoft-Bold', fontSize: 12 }}>
                   {row.name}
                 </BreakAllContentText>
               </div>
-              <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center',alignItems:'flex-end', paddingLeft: 8 }}>
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, color: '#64703f' }}>
+              <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', paddingLeft: 8 }}>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, color: '#64703f' }}>
                   {row.url ? (<u>{row.linkName}</u>) : row.linkName}
                 </BreakAllContentText>
               </div>

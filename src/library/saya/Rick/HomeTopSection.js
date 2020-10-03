@@ -4,39 +4,46 @@ import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    textAlign: 'center',
-    fontFamily: 'FilsonSoft-Bold',
+    display: 'flex',
+    height: 658,
     color: '#000000',
   },
-  firstTitle: {
-    fontSize: 50,
-    fontWeight: 'bold',
-    lineHeight: 1.18,
-    paddingTop: 112,
+  title: {
+    textAlign: 'left',
+    paddingTop: 140,
   },
-  secondTitle: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    paddingTop: 31,
+  titleWhite: {
+    fontSize: 45,
+    color: '#ffffff',
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 'normal',
   },
   line: {
-    width: 230,
+    width: '100%',
     height: 1,
-    backgroundColor: '#000000',
-    marginTop: 31,
+    marginTop: 19,
+    backgroundColor: '#ffffff',
   },
-  thirdTitle: {
-    fontSize: 17,
-    lineHeight: 1.35,
-    fontFamily: 'FilsonSoftRegular ',
-    paddingTop: 10,
+  subtitle: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontFamily: 'FilsonSoft-Light',
+    textAlign: 'left',
+    lineHeight: 1.6,
+    paddingTop: 19,
+    paddingBottom: 33,
+  },
+  roundArrow: {
+    width: 50,
+    height: 50,
   },
 }));
 
 export default (props) => {
   const {
     backgroundImage,
-    img,
+    roundArrowImage,
+    onClick,
   } = props;
 
   const classes = useStyles();
@@ -45,34 +52,17 @@ export default (props) => {
     <ImageContainer
       image={backgroundImage}
       className={classes.root}
-      style={{ height: 590 }}
     >
-      <div
-        style={{ position: 'absolute' }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <pre className={classes.firstTitle} style={{ marginBottom: 0, }}>
-            {'SAYA\nRSCUW\nProject'}
-          </pre>
-        </div>
-        <div className={classes.secondTitle} >
-          - Recycled Scrap & Cutting Waste -
-        </div>
+      <div className={classes.title}>
+        <pre className={classes.titleWhite} style={{ margin: 0 }}>
+          {'Innovating\nRenewal\nTechnologies'}
+        </pre>
+        <div className={classes.line} />
+        <pre className={classes.subtitle} style={{ margin: 0 }}>
+          {'Recycling Solutions from Bottles\nto Garments and Beyond'}
+        </pre>
 
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-        }}
-        >
-          <div className={classes.line} />
-        </div>
-
-        <div className={classes.thirdTitle} >
-          <pre style={{ marginBottom: 0, marginTop: 0, }}>
-            {'Addressing Garment\nIndustry Waste -\nA true and inconvenient reality'}
-          </pre>
-        </div>
-        <img src={img} style={{ width: 55, height: 55, marginTop: 24, }} />
+        <img className={classes.roundArrow} onClick={onClick} src={roundArrowImage} />
       </div>
     </ImageContainer>
   );

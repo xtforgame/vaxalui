@@ -12,17 +12,17 @@ import BreakAllContentText from './BreakAllContentText';
 const useStyles = makeStyles({
   root: {
     margin: 20,
-    borderRadius: 30,
+    borderRadius: 0,
   },
   media: {
     position: 'relative',
   },
-  mask: {
-    width: '100%',
-    height: '100%',
-    opacity: 0.5,
-    backgroundColor: '#000000',
-  },
+  // mask: {
+  //   width: '100%',
+  //   height: '100%',
+  //   opacity: 0.5,
+  //   backgroundColor: '#000000',
+  // },
   title: {
     width: '100%',
     height: '100%',
