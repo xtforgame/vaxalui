@@ -15,31 +15,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    color: '#ffffff',
-    paddingTop: 40
+    color: '#ffffff'
   },
   number: {
-    fontSize: 121,
+    fontSize: 70,
     fontFamily: 'FilsonSoftRegular',
-    lineHeight: 0.83,
-    textAlign: 'center'
+    lineHeight: 0.96,
+    textAlign: 'left'
   },
   topTile: {
-    fontSize: 18,
+    fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 16,
+    paddingTop: 11,
+    lineHeight: 1.54,
     textAlign: 'left'
   },
   line: {
-    width: 189,
+    width: '100%',
     height: 1,
-    border: '1px solid #ffffff',
-    marginTop: 8
+    backgroundColor: '#ffffff',
+    marginTop: 1
   },
   bottomTitle: {
-    fontSize: 18,
+    fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 9,
+    paddingTop: 1,
+    lineHeight: 1.54,
     textAlign: 'left'
   }
 }));
@@ -49,26 +50,41 @@ var _default = props => {
     number,
     topTile,
     bottomTitle,
-    backgroundImage
+    backgroundImage,
+    backgroundColor,
+    color,
+    lineColor,
+    hidePercent
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
     image: backgroundImage,
     className: classes.root,
     style: {
-      height: 260,
-      width: 260
+      height: 194,
+      width: '50%',
+      backgroundColor,
+      color
     }
   }, _react.default.createElement("div", {
     style: {
-      position: 'absolute'
+      position: 'absolute',
+      height: 115,
+      marginTop: 36
     }
   }, _react.default.createElement("div", {
     className: classes.number
-  }, " ", number, " "), _react.default.createElement("div", {
+  }, number, !hidePercent && _react.default.createElement("span", {
+    style: {
+      fontSize: 12
+    }
+  }, "%")), _react.default.createElement("div", {
     className: classes.topTile
   }, " ", topTile, " "), _react.default.createElement("div", {
-    className: classes.line
+    className: classes.line,
+    style: {
+      backgroundColor: lineColor
+    }
   }), _react.default.createElement("div", {
     className: classes.bottomTitle
   }, " ", bottomTitle, " ")));

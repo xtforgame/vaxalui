@@ -15,84 +15,69 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    textAlign: 'center',
-    fontFamily: 'FilsonSoft-Bold',
+    display: 'flex',
+    height: 658,
     color: '#000000'
   },
-  firstTitle: {
-    fontSize: 50,
-    fontWeight: 'bold',
-    lineHeight: 1.18,
-    paddingTop: 112
+  title: {
+    textAlign: 'left',
+    paddingTop: 140
   },
-  secondTitle: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    paddingTop: 31
+  titleWhite: {
+    fontSize: 45,
+    color: '#ffffff',
+    fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 'normal'
   },
   line: {
-    width: 230,
+    width: '100%',
     height: 1,
-    backgroundColor: '#000000',
-    marginTop: 31
+    marginTop: 19,
+    backgroundColor: '#ffffff'
   },
-  thirdTitle: {
-    fontSize: 17,
-    lineHeight: 1.35,
-    fontFamily: 'FilsonSoftRegular ',
-    paddingTop: 10
+  subtitle: {
+    color: '#ffffff',
+    fontSize: 20,
+    fontFamily: 'FilsonSoft-Light',
+    textAlign: 'left',
+    lineHeight: 1.6,
+    paddingTop: 19,
+    paddingBottom: 33
+  },
+  roundArrow: {
+    width: 50,
+    height: 50
   }
 }));
 
 var _default = props => {
   const {
     backgroundImage,
-    img
+    roundArrowImage,
+    onClick
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
     image: backgroundImage,
-    className: classes.root,
-    style: {
-      height: 590
-    }
+    className: classes.root
   }, _react.default.createElement("div", {
-    style: {
-      position: 'absolute'
-    }
-  }, _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
+    className: classes.title
   }, _react.default.createElement("pre", {
-    className: classes.firstTitle,
+    className: classes.titleWhite,
     style: {
-      marginBottom: 0
+      margin: 0
     }
-  }, 'SAYA\nRSCUW\nProject')), _react.default.createElement("div", {
-    className: classes.secondTitle
-  }, "- Recycled Scrap & Cutting Waste -"), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, _react.default.createElement("div", {
+  }, 'Innovating\nRenewal\nTechnologies'), _react.default.createElement("div", {
     className: classes.line
-  })), _react.default.createElement("div", {
-    className: classes.thirdTitle
-  }, _react.default.createElement("pre", {
+  }), _react.default.createElement("pre", {
+    className: classes.subtitle,
     style: {
-      marginBottom: 0,
-      marginTop: 0
+      margin: 0
     }
-  }, 'Addressing Garment\nIndustry Waste -\nA true and inconvenient reality')), _react.default.createElement("img", {
-    src: img,
-    style: {
-      width: 55,
-      height: 55,
-      marginTop: 24
-    }
+  }, 'Recycling Solutions from Bottles\nto Garments and Beyond'), _react.default.createElement("img", {
+    className: classes.roundArrow,
+    onClick: onClick,
+    src: roundArrowImage
   })));
 };
 

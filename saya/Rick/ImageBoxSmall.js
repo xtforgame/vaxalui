@@ -16,18 +16,19 @@ const styles = {
     width: 260,
     height: 325,
     textAlign: 'center',
-    borderRadius: 30,
+    borderRadius: 0,
     marginRight: 24,
     fontFamily: 'FilsonSoft-Bold',
     position: 'relative',
     backgroundSize: 'cover'
   },
   title: {
-    fontSize: 27,
-    fontWeight: 'bold'
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold'
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: 'bold',
     paddingTop: 4
   },
@@ -90,7 +91,7 @@ class ImageBoxSmall extends _react.default.PureComponent {
         display: 'flex',
         justifyContent: 'center',
         width: '100%',
-        bottom: 50
+        bottom: 40
       }
     }, _react.default.createElement("button", {
       className: classes.button

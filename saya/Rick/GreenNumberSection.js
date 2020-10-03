@@ -11,16 +11,33 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
+  topSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 175,
+    color: '#000000',
+    textAlign: 'center'
+  },
+  titleWhite: {
+    color: '#ffffff',
+    fontSize: 24,
+    fontWeight: 'bold',
+    fontFamily: 'FilsonSoft-Bold',
+    margin: 0
+  },
   root: {
-    color: '#000000'
+    color: '#000000',
+    paddingTop: 60
   },
   number: {
-    fontSize: 121,
+    fontSize: 180,
     fontFamily: 'FilsonSoftRegular',
-    lineHeight: 0.83,
+    lineHeight: 0.89,
     textAlign: 'left'
   },
   percent: {
@@ -28,52 +45,62 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     fontFamily: 'FilsonSoftRegular'
   },
   topTile: {
-    fontSize: 18,
-    fontFamily: 'FilsonSoftRegular',
-    paddingTop: 16,
+    fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold',
+    paddingTop: 0,
     textAlign: 'left'
   },
   line: {
-    width: 189,
+    width: 253,
     height: 1,
-    border: '1px solid #000000',
-    marginTop: 8,
+    backgroundColor: '#000000',
+    marginTop: 11,
     textAlign: 'left'
   },
   bottomTitle: {
-    fontSize: 18,
-    fontFamily: 'FilsonSoftRegular',
-    paddingTop: 9,
+    fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold',
+    paddingTop: 10,
     textAlign: 'left'
   },
   subtitle: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 37
+    fontSize: 20,
+    paddingTop: 80
   },
-  content: {
+  description: {
     textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 7
+    fontSize: 13,
+    paddingTop: 24
   }
 }));
 
 var _default = props => {
   const {
+    hideTop,
+    topTitle,
+    backgroundImage,
     numberUpTitle,
     number,
     numberColor,
     topTile,
     bottomTitle,
     subtitle,
-    content,
+    description,
     height,
     backgroundColor,
     percentDisplay,
-    marginTop
+    marginTop,
+    sign = "%",
+    hideSign
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_ImageContainer.default, {
+  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
+    image: backgroundImage,
+    className: classes.topSection
+  }, _react.default.createElement("div", null, _react.default.createElement("pre", {
+    className: classes.titleWhite
+  }, topTitle))), _react.default.createElement(_ImageContainer.default, {
     className: classes.root,
     style: {
       height,
@@ -83,8 +110,15 @@ var _default = props => {
   }, _react.default.createElement("div", {
     style: {
       position: 'absolute',
-      width: 310,
-      marginTop: marginTop
+      width: 320,
+      marginTop: marginTop,
+      alignSelf: 'center'
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      flexDirection: 'column'
     }
   }, _react.default.createElement("div", {
     className: classes.numberUpTitle
@@ -93,14 +127,14 @@ var _default = props => {
     style: {
       color: numberColor
     }
-  }, number, _react.default.createElement("span", {
+  }, number, !hideSign && _react.default.createElement("span", {
     className: classes.percent,
     style: {
       display: percentDisplay
     }
-  }, "%")), _react.default.createElement("div", {
+  }, sign)), _react.default.createElement("div", {
     style: {
-      paddingLeft: 10
+      paddingLeft: 0
     }
   }, _react.default.createElement("div", {
     className: classes.topTile
@@ -108,20 +142,20 @@ var _default = props => {
     className: classes.line
   }), _react.default.createElement("div", {
     className: classes.bottomTitle
-  }, " ", bottomTitle, " "), _react.default.createElement("div", {
+  }, " ", bottomTitle, " "))), _react.default.createElement("div", {
     className: classes.subtitle
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0
+      margin: 0
     }
   }, subtitle)), _react.default.createElement("div", {
-    className: classes.content
-  }, _react.default.createElement("pre", {
+    className: classes.description
+  }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular'
     }
-  }, content)))));
+  }, description)))));
 };
 
 exports.default = _default;

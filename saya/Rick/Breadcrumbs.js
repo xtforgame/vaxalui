@@ -9,75 +9,62 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _Typography = _interopRequireDefault(require("@material-ui/core/Typography"));
-
-var _Breadcrumbs = _interopRequireDefault(require("@material-ui/core/Breadcrumbs"));
+var _core = require("@material-ui/core");
 
 var _Link = _interopRequireDefault(require("@material-ui/core/Link"));
 
+var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const useStyles = (0, _styles.makeStyles)(theme => ({}));
+const styles = {
+  separator: {
+    fontSize: 12,
+    marginTop: -3
+  },
+  ol: {
+    alignItems: 'baseline'
+  },
+  link: {
+    fontSize: 0
+  }
+};
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+class Breadcrumbs extends _react.default.PureComponent {
+  render() {
+    const {
+      classes,
+      color = '#FFFFFF',
+      bread = [],
+      separatorColor
+    } = this.props;
+    return _react.default.createElement("div", {
+      style: {
+        width: 310
+      }
+    }, _react.default.createElement(_core.Breadcrumbs, {
+      classes: {
+        ol: classes.ol,
+        separator: classes.separator
+      },
+      separator: _react.default.createElement("span", {
+        style: {
+          color: separatorColor
+        }
+      }, "/")
+    }, bread.map(b => _react.default.createElement(_Link.default, {
+      className: classes.link,
+      style: {
+        color
+      },
+      key: b.path,
+      href: b.path,
+      underline: "none"
+    }, b.name))));
+  }
+
 }
 
-var _default = props => {
-  const {
-    data = []
-  } = props;
-  const classes = useStyles();
-
-  const renderBreadcrumb = (breadcrumb, index, breadcrumbs) => {
-    if (breadcrumb.link) {
-      return _react.default.createElement(_Link.default, {
-        key: index,
-        color: "inherit",
-        href: "/",
-        onClick: handleClick
-      }, _react.default.createElement("span", {
-        style: {
-          fontSize: 14,
-          fontFamily: 'FilsonSoftRegular',
-          color: 'black'
-        }
-      }, breadcrumb.label));
-    } else if (index !== breadcrumbs.length - 1) {
-      return _react.default.createElement(_Link.default, {
-        key: index,
-        color: "inherit",
-        href: "/",
-        onClick: handleClick
-      }, _react.default.createElement("span", {
-        style: {
-          fontSize: 14,
-          fontFamily: 'FilsonSoftRegular',
-          color: 'black'
-        }
-      }, breadcrumb.label));
-    }
-
-    return _react.default.createElement("span", {
-      key: index,
-      style: {
-        fontSize: 14,
-        fontFamily: 'FilsonSoft-Bold',
-        color: 'black'
-      }
-    }, breadcrumb.label);
-  };
-
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    style: {
-      paddingTop: 40,
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, _react.default.createElement(_Breadcrumbs.default, {
-    "aria-label": "breadcrumb"
-  }, (data || []).map(renderBreadcrumb))));
-};
+var _default = (0, _styles.withStyles)(styles)(Breadcrumbs);
 
 exports.default = _default;

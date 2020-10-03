@@ -52,7 +52,7 @@ const useStyles = (0, _styles.makeStyles)(() => ({
   itemTh: {
     paddingLeft: 42,
     paddingRight: 42,
-    textAlign: 'left'
+    textAlign: 'center'
   },
   itemTd: {
     backgroundColor: '#d8d8d8',

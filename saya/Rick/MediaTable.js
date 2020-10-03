@@ -24,10 +24,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)(theme => ({
   container: {},
   root: {
-    width: 310
+    width: 310,
+    paddingTop: 60
   },
   title: {
-    fontSize: 27,
+    fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
@@ -84,8 +85,9 @@ var _default = props => {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
+        width: 230,
         fontFamily: 'FilsonSoft-Bold',
-        fontSize: 14
+        fontSize: 12
       }
     }, row.name)), _react.default.createElement("div", {
       style: {
@@ -100,7 +102,7 @@ var _default = props => {
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoftRegular',
-        fontSize: 14,
+        fontSize: 12,
         color: '#64703f'
       }
     }, row.url ? _react.default.createElement("u", null, row.linkName) : row.linkName))), row.body, _react.default.createElement("div", {

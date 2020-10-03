@@ -11,6 +11,10 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _Text = _interopRequireDefault(require("./Text"));
+
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -19,24 +23,25 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   title: {
     textAlign: 'left',
-    fontSize: 33,
-    paddingTop: 47
+    fontSize: 30,
+    paddingTop: 60
   },
   line: {
     width: '100%',
     height: 1,
-    marginTop: 23
+    marginTop: 16
   },
   subtitle: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 22
+    fontSize: 20,
+    paddingTop: 27,
+    lineHeight: 'normal'
   },
-  content: {
+  description: {
     textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 23,
-    lineHeight: 1.5
+    fontSize: 13,
+    paddingTop: 12,
+    lineHeight: 1.54
   }
 }));
 
@@ -45,14 +50,16 @@ var _default = props => {
     title,
     titlePaddingTop,
     subtitle,
-    content,
+    subtitleFontFamily,
+    description,
     height,
     backgroundImage,
     backgroundColor,
     color,
     lineColor,
     lineDisplay,
-    children
+    children,
+    hideTitle
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
@@ -61,19 +68,20 @@ var _default = props => {
     style: {
       height,
       color,
-      width: '100%',
-      backgroundColor: backgroundColor
+      backgroundColor,
+      width: '100%'
     }
   }, _react.default.createElement("div", {
     style: {
-      position: 'absolute'
+      position: 'absolute',
+      width: 320
     }
-  }, _react.default.createElement("div", {
+  }, !hideTitle && _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0
+      margin: 0
     }
   }, title)), _react.default.createElement("div", {
     style: {
@@ -88,21 +96,19 @@ var _default = props => {
     }
   })), _react.default.createElement("div", {
     className: classes.subtitle
-  }, _react.default.createElement("pre", {
+  }, _react.default.createElement(_Text.default, {
+    family: subtitleFontFamily,
     style: {
-      fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0,
-      marginTop: 0
+      margin: 0
     }
   }, subtitle)), _react.default.createElement("div", {
-    className: classes.content
-  }, _react.default.createElement("pre", {
+    className: classes.description
+  }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0,
-      marginTop: 0
+      margin: 0
     }
-  }, content)), _react.default.createElement("div", null, children)));
+  }, description)), _react.default.createElement("div", null, children)));
 };
 
 exports.default = _default;

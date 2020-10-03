@@ -11,94 +11,64 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _Introduction = _interopRequireDefault(require("./Introduction"));
+
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    display: 'flex',
-    flexDirection: 'column',
+    height: 548,
     textAlign: 'left',
-    alignItems: 'left',
     color: '#ffffff',
-    width: '100%',
-    backgroundSize: 'cover'
+    width: 320
   },
   title: {
     textAlign: 'left',
-    fontSize: 33
+    fontSize: 20,
+    lineHeight: 1.6,
+    paddingTop: 40,
+    fontFamily: 'FilsonSoft-Light'
   },
-  line: {
-    width: 305,
-    backgroundColor: '#ffffff',
-    height: 1,
-    marginTop: 23
-  },
-  subtitle: {
+  description: {
     textAlign: 'left',
-    fontSize: 18,
-    paddingTop: 4
-  },
-  content: {
-    textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 10,
-    lineHeight: 1.5
+    fontSize: 13,
+    paddingTop: 12,
+    lineHeight: 1.54,
+    fontFamily: 'FilsonSoftRegular'
   }
 }));
 
 var _default = props => {
   const {
-    title,
-    titlePaddingTop,
-    marginTop,
-    subtitle,
-    content,
-    height,
-    backgroundImage,
-    children
+    backgroundImage
   } = props;
   const classes = useStyles();
-  return _react.default.createElement("div", {
-    className: classes.root,
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Introduction.default, {
+    height: 355,
+    title: 'Challenges and\nTransparency',
+    subtitle: 'Recruiting like-minded brands\nand garment manufacturers',
+    description: "SAYA is working on pilot projects with key brand partners to recover and recycle deadstock and cutting scrap from their mills and garment factories.",
+    color: "#ffffff",
+    lineColor: "#ffffff",
+    subtitleFontFamily: "bold",
+    backgroundImage: backgroundImage
+  }), _react.default.createElement(_ImageContainer.default, {
     style: {
-      height: height,
-      backgroundImage: `url(${backgroundImage})`,
-      paddingTop: titlePaddingTop,
-      marginTop: marginTop
+      backgroundColor: '#444343'
     }
   }, _react.default.createElement("div", {
-    style: {
-      alignSelf: 'center'
-    }
+    className: classes.root
   }, _react.default.createElement("div", {
     className: classes.title
-  }, _react.default.createElement("pre", {
-    style: {
-      fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0
-    }
-  }, title)), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, _react.default.createElement("div", {
-    className: classes.line
-  })), _react.default.createElement("div", {
-    className: classes.subtitle
-  }, _react.default.createElement("pre", {
-    style: {
-      fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0
-    }
-  }, subtitle)), _react.default.createElement("div", {
-    className: classes.content
-  }, _react.default.createElement("pre", {
-    style: {
-      fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0
-    }
-  }, content))), _react.default.createElement("div", null, children));
+  }, "Type of Materials and Finishing"), _react.default.createElement(_BreakAllContentText.default, {
+    className: classes.description
+  }, 'Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.\n\nWe aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.'), _react.default.createElement("div", {
+    className: classes.title
+  }, "Content Percentage"), _react.default.createElement(_BreakAllContentText.default, {
+    className: classes.description
+  }, 'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nWe aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution. '))));
 };
 
 exports.default = _default;

@@ -29,27 +29,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)({
   root: {
-    margin: 20,
+    margin: 24,
     borderRadius: 0
   },
   media: {
     position: 'relative'
   },
-  title: {
+  titleSection: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: '100%',
-    height: '100%',
-    position: 'absolute',
-    color: '#ffffff',
-    top: 0,
-    paddingTop: 60,
-    paddingRight: 30,
-    paddingLeft: 30
+    height: '100%'
+  },
+  title: {
+    display: 'flex',
+    alignItems: 'center',
+    textAlign: 'left',
+    width: 220,
+    height: 150,
+    color: '#ffffff'
   },
   cardAction: {
     paddingTop: 0,
-    paddingRight: 16,
-    paddingLeft: 16,
-    paddingBottom: 16
+    paddingRight: 0,
+    paddingLeft: 20,
+    paddingBottom: 0
   }
 });
 
@@ -67,7 +72,7 @@ var _default = ({
     style: {
       width
     },
-    elevation: 8
+    elevation: 0
   }, _react.default.createElement(_CardActionArea.default, {
     onClick: onClick
   }, _react.default.createElement(_CardMedia.default, {
@@ -77,21 +82,25 @@ var _default = ({
     },
     image: image
   }, _react.default.createElement("div", {
-    className: classes.mask
-  }), _react.default.createElement("div", {
+    className: classes.titleSection
+  }, _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      fontSize: 28
+      fontSize: 23
     }
-  }, title))), _react.default.createElement(_CardContent.default, null, _react.default.createElement(_BreakAllContentText.default, {
+  }, title)))), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      fontSize: 14,
-      lineHeight: 1.5
+      fontSize: 12,
+      lineHeight: 1.54,
+      paddingTop: 16,
+      paddingBottom: 10,
+      paddingLeft: 20,
+      paddingRight: 20
     }
-  }, description))), _react.default.createElement(_CardActions.default, {
+  }, description)), _react.default.createElement("div", {
     className: classes.cardAction
   }, _react.default.createElement("div", {
     style: {

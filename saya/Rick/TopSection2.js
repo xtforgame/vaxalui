@@ -23,14 +23,15 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     width: 320,
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 95
   },
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.33
+    lineHeight: 'normal'
   },
   firstTitleBack: {
     fontFamily: 'FilsonSoft-Light'
@@ -42,15 +43,10 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     marginTop: 1
   },
   title: {
-    width: '100%',
-    fontSize: 45,
+    fontSize: 50,
+    paddingTop: 40,
     whiteSpace: 'pre-line',
-    lineHeight: 'normal',
-    fontStretch: 'normal'
-  },
-  subtitle: {
-    fontSize: 20,
-    lineHeight: 1.6
+    lineHeight: 1
   }
 }));
 
@@ -60,17 +56,13 @@ var _default = props => {
     firstTitle,
     firstTitleBack,
     title,
-    subtitle,
+    subTitle,
     height,
     children,
     color,
     lineColor,
     titleFontFamily,
     subtitleFontFamily,
-    paddingTop,
-    titlePaddingTop,
-    subtitlePaddingTop,
-    titleFontSize,
     buttonPosition
   } = props;
   const classes = useStyles();
@@ -79,8 +71,7 @@ var _default = props => {
     image: backgroundImage,
     style: {
       height,
-      color,
-      paddingTop
+      color
     }
   }, _react.default.createElement("div", {
     className: classes.section
@@ -95,18 +86,8 @@ var _default = props => {
     }
   })), _react.default.createElement(_Text.default, {
     family: titleFontFamily,
-    className: classes.title,
-    style: {
-      paddingTop: titlePaddingTop,
-      fontSize: titleFontSize
-    }
-  }, title), _react.default.createElement(_Text.default, {
-    family: subtitleFontFamily,
-    className: classes.subtitle,
-    style: {
-      paddingTop: subtitlePaddingTop
-    }
-  }, subtitle), _react.default.createElement("div", null, children)));
+    className: classes.title
+  }, title), _react.default.createElement("div", null, children)));
 };
 
 exports.default = _default;

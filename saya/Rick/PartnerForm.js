@@ -22,37 +22,39 @@ const styles = {
     width: 280,
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 23
+    paddingTop: 22,
+    lineHeight: 1.54
   },
   email: {
     display: 'flex',
-    marginTop: 15
+    marginTop: 11
   },
   emailInput: {
     width: 280,
     fontSize: 12,
     color: '#000000',
-    borderColor: '#ffffff',
+    border: 'solid 1px #000000',
     backgroundColor: '#ffffff'
   },
   button: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 23
+    marginTop: 11
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 23
+    paddingTop: 11
   },
   box: {
     width: 25,
     height: 25
   },
   labelContent: {
-    width: 231,
-    fontSize: 10,
+    width: 235,
+    fontSize: 12,
     fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 18
+    paddingLeft: 20,
+    lineHeight: 'normal'
   }
 };
 
@@ -76,7 +78,8 @@ class Partner extends _react.default.PureComponent {
       email
     } = this.state;
     const {
-      classes
+      classes,
+      onClick
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("pre", {
       className: classes.subtitle,
@@ -84,7 +87,7 @@ class Partner extends _react.default.PureComponent {
         marginTop: 0,
         marginBottom: 0
       }
-    }, 'Sign up to stay in touch on the newest\nrenewal technologies, products, events, and\nnews from SAYA.'), _react.default.createElement("div", {
+    }, 'Sign up to stay in touch on the newest\nrenewal technologies, products,\nevents, and news from SAYA. '), _react.default.createElement("div", {
       className: classes.email
     }, _react.default.createElement(_TextField.default, {
       className: classes.emailInput,
@@ -99,12 +102,13 @@ class Partner extends _react.default.PureComponent {
       value: "checkbox"
     }), _react.default.createElement("div", {
       className: classes.labelContent
-    }, _react.default.createElement("label", null, "SAYA  may use my email address provided above to send me relevant marketing communications. I understand that I can unsubscribe from these communications at any time. "))), _react.default.createElement("div", {
+    }, _react.default.createElement("label", null, "SAYA  may use my email address provided above to send me relevant marketing communications. I understand that I can unsubscribe from these communications at any time."))), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "SUBMIT",
       width: 280,
-      height: 44
+      height: 44,
+      onClick: onClick
     })));
   }
 

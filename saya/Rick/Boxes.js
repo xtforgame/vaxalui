@@ -15,24 +15,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    height: 717,
+    height: 659,
     textAlign: 'center'
   },
   title: {
-    fontSize: 33,
-    paddingTop: 88
+    fontSize: 30,
+    paddingTop: 60
   },
   secondLine: {
     width: '100%',
     height: 1,
-    marginTop: 2
+    marginTop: 24
   },
   subtitle: {
-    fontSize: 18,
-    paddingTop: 10
+    fontSize: 13,
+    paddingTop: 15
   },
   content: {
-    fontSize: 18,
+    fontSize: 13,
     paddingTop: 22
   }
 }));

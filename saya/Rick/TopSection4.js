@@ -17,40 +17,46 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    color: '#ffffff'
+    color: '#000000',
+    backgroundColor: '#e3e3e3',
+    textAlign: 'center'
   },
   section: {
     width: 320,
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 60
   },
   firstTitle: {
-    width: 'fit-content',
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1.33
-  },
-  firstTitleBack: {
-    fontFamily: 'FilsonSoft-Light'
+    lineHeight: 'normal'
   },
   firstLine: {
     height: 1,
-    width: '100%',
-    backgroundColor: '#ffffff',
-    marginTop: 1
+    width: 306,
+    backgroundColor: '#000000',
+    marginTop: 12
   },
   title: {
-    width: '100%',
-    fontSize: 45,
-    whiteSpace: 'pre-line',
+    fontSize: 38,
+    paddingTop: 35,
     lineHeight: 'normal',
-    fontStretch: 'normal'
+    fontFamily: 'FilsonSoft-Bold'
   },
-  subtitle: {
-    fontSize: 20,
-    lineHeight: 1.6
+  topTitle: {
+    fontSize: 17,
+    paddingTop: 47,
+    lineHeight: 'normal',
+    fontFamily: 'FilsonSoft-Bold'
+  },
+  bottomTitle: {
+    fontSize: 17,
+    paddingTop: 12,
+    lineHeight: 'normal',
+    fontFamily: 'FilsonSoft-Bold'
   }
 }));
 
@@ -60,18 +66,12 @@ var _default = props => {
     firstTitle,
     firstTitleBack,
     title,
-    subtitle,
+    topTitle,
+    bottomTitle,
     height,
     children,
     color,
-    lineColor,
-    titleFontFamily,
-    subtitleFontFamily,
-    paddingTop,
-    titlePaddingTop,
-    subtitlePaddingTop,
-    titleFontSize,
-    buttonPosition
+    lineColor
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
@@ -79,34 +79,24 @@ var _default = props => {
     image: backgroundImage,
     style: {
       height,
-      color,
-      paddingTop
+      color
     }
   }, _react.default.createElement("div", {
     className: classes.section
   }, _react.default.createElement("div", {
     className: classes.firstTitle
-  }, firstTitle, _react.default.createElement("span", {
-    className: classes.firstTitleBack
-  }, firstTitleBack), _react.default.createElement("div", {
+  }, firstTitle), _react.default.createElement("div", {
+    className: classes.title
+  }, title), _react.default.createElement("div", {
+    className: classes.topTitle
+  }, topTitle), _react.default.createElement("div", {
     className: classes.firstLine,
     style: {
       backgroundColor: lineColor
     }
-  })), _react.default.createElement(_Text.default, {
-    family: titleFontFamily,
-    className: classes.title,
-    style: {
-      paddingTop: titlePaddingTop,
-      fontSize: titleFontSize
-    }
-  }, title), _react.default.createElement(_Text.default, {
-    family: subtitleFontFamily,
-    className: classes.subtitle,
-    style: {
-      paddingTop: subtitlePaddingTop
-    }
-  }, subtitle), _react.default.createElement("div", null, children)));
+  }), _react.default.createElement("div", {
+    className: classes.bottomTitle
+  }, bottomTitle), _react.default.createElement("div", null, children)));
 };
 
 exports.default = _default;

@@ -16,12 +16,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)(theme => ({
   subtitle: {
     textAlign: 'left',
-    fontSize: 18
+    fontSize: 20
   },
   content: {
     textAlign: 'left',
-    fontSize: 14,
-    paddingTop: 7
+    fontSize: 13,
+    lineHeight: 1.54,
+    paddingTop: 24
   }
 }));
 
@@ -49,22 +50,22 @@ var _default = props => {
   }, _react.default.createElement("div", {
     style: {
       position: 'absolute',
-      color: fontColor
+      color: fontColor,
+      width: 320
     }
   }, _react.default.createElement("div", {
     className: classes.subtitle
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      marginBottom: 0,
-      marginTop: 0
+      margin: 0
     }
   }, subtitle)), _react.default.createElement("div", {
     className: classes.content
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      marginBottom: 0
+      margin: 0
     }
   }, content)), _react.default.createElement("div", null, children)));
 };

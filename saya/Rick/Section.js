@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _Text = _interopRequireDefault(require("./Text"));
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,7 +23,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     width: 320,
     display: 'flex',
     flexDirection: 'column',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    paddingTop: 60
   },
   firstTitle: {
     width: 'fit-content',
@@ -33,7 +34,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     lineHeight: 1.33
   },
   firstTitleBack: {
-    fontFamily: 'FilsonSoft-Light'
+    fontFamily: 'FilsonSoft-Light',
+    fontWeight: 300
   },
   firstLine: {
     height: 1,
@@ -42,35 +44,36 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     marginTop: 1
   },
   title: {
-    width: '100%',
-    fontSize: 45,
+    fontSize: 50,
+    fontWeight: 300,
+    fontFamily: 'FilsonSoft-Light',
+    paddingTop: 32,
     whiteSpace: 'pre-line',
-    lineHeight: 'normal',
-    fontStretch: 'normal'
+    lineHeight: 1
   },
-  subtitle: {
+  subTitle: {
     fontSize: 20,
-    lineHeight: 1.6
+    fontFamily: 'FilsonSoft-Bold',
+    paddingTop: 24
+  },
+  button: {
+    marginTop: 32
   }
 }));
 
 var _default = props => {
   const {
     backgroundImage,
+    onClick,
+    hideButton,
     firstTitle,
     firstTitleBack,
     title,
-    subtitle,
+    subTitle,
     height,
     children,
     color,
     lineColor,
-    titleFontFamily,
-    subtitleFontFamily,
-    paddingTop,
-    titlePaddingTop,
-    subtitlePaddingTop,
-    titleFontSize,
     buttonPosition
   } = props;
   const classes = useStyles();
@@ -79,8 +82,7 @@ var _default = props => {
     image: backgroundImage,
     style: {
       height,
-      color,
-      paddingTop
+      color
     }
   }, _react.default.createElement("div", {
     className: classes.section
@@ -93,20 +95,23 @@ var _default = props => {
     style: {
       backgroundColor: lineColor
     }
-  })), _react.default.createElement(_Text.default, {
-    family: titleFontFamily,
-    className: classes.title,
+  })), _react.default.createElement("div", {
+    className: classes.title
+  }, title), _react.default.createElement("div", {
+    className: classes.subTitle
+  }, subTitle), "  "), _react.default.createElement("div", {
     style: {
-      paddingTop: titlePaddingTop,
-      fontSize: titleFontSize
+      width: '100%'
     }
-  }, title), _react.default.createElement(_Text.default, {
-    family: subtitleFontFamily,
-    className: classes.subtitle,
+  }, children), !hideButton && _react.default.createElement("div", {
+    className: classes.button,
     style: {
-      paddingTop: subtitlePaddingTop
+      alignSelf: buttonPosition
     }
-  }, subtitle), _react.default.createElement("div", null, children)));
+  }, _react.default.createElement(_GreenButton.default, {
+    text: "Learn More",
+    onClick: onClick
+  })));
 };
 
 exports.default = _default;

@@ -47,17 +47,17 @@ const useStyles = (0, _styles.makeStyles)(() => ({
   tdth: {
     overflow: 'hidden',
     padding: 11,
-    height: 40
+    height: 35
   },
   itemTh: {
-    paddingLeft: 42,
-    paddingRight: 42,
-    textAlign: 'left'
+    paddingLeft: 0,
+    paddingRight: 0,
+    textAlign: 'center'
   },
   itemTd: {
     backgroundColor: '#d8d8d8',
-    paddingLeft: 42,
-    paddingRight: 42
+    paddingLeft: 0,
+    paddingRight: 0
   },
   typeTd: {
     textAlign: 'center',
@@ -204,10 +204,10 @@ var _default = props => {
   }, _react.default.createElement("tbody", null, _react.default.createElement("tr", {
     className: (0, _clsx.default)(classes.tr)
   }, _react.default.createElement("th", {
-    width: 264,
+    width: 191,
     className: (0, _clsx.default)(classes.tdth, classes.itemTh)
   }, "Item"), _react.default.createElement("th", {
-    width: 100,
+    width: 80,
     className: classes.tdth
   }, "Type"), _react.default.createElement("th", {
     width: 12,

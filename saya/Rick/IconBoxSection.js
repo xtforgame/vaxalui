@@ -15,7 +15,10 @@ const styles = {
   root: {
     width: '100%',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderTop: '1px solid #e3e3e3',
+    borderBottom: '1px solid #e3e3e3',
+    marginBottom: -1
   }
 };
 
@@ -23,10 +26,14 @@ class IconBoxSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      children
+      children,
+      borderColor
     } = this.props;
     return _react.default.createElement("div", {
-      className: classes.root
+      className: classes.root,
+      style: {
+        borderColor
+      }
     }, children);
   }
 
