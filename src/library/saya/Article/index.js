@@ -4,6 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import Block from './Block';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,14 +21,6 @@ const useStyles = makeStyles(theme => ({
     marginTop: 10,
     marginBottom: 72,
   },
-  paragraph: {
-    textAlign: 'left',
-    fontSize: 14,
-    marginBottom: 72,
-  },
-  image: {
-    marginBottom: 72,
-  },
 }));
 
 export default (props) => {
@@ -37,39 +30,17 @@ export default (props) => {
 
   const classes = useStyles();
 
-  const renderContent = (content, key) => {
-    if (content.type === 'paragraph') {
-      return (
-        <div key={key} className={classes.paragraph}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', lineHeight: 2 }}>
-            {content.text}
-          </BreakAllContentText>
-        </div>
-      );
-    } else if (content.type === 'image') {
-      return (
-        <div className={classes.image}>
-          <img
-            width="100%"
-            src={content.src}
-          />
-        </div>
-      );
-    }
-    return null;
-  };
-
   return (
     <ImageContainer
       className={classes.root}
     >
       <div className={classes.container}>
         <div className={classes.title}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', lineHeight: 1 }}>
             {data.title}
           </BreakAllContentText>
         </div>
-        {(data.content || []).map(renderContent)}
+        {(data.content || []).map(c => (<Block data={c} />))}
       </div>
     </ImageContainer>
   );

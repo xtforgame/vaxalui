@@ -55,11 +55,13 @@ export default (props) => {
           <Text className={classes.title} family="bold">{title}</Text>
           {!expended && !hideButton && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
           {expended && !hideButton && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-          <div style={{  width: '100%' }}>
+          <div style={{ width: '100%' }}>
             <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
-<div style={{overflow: 'scroll',}}>
-              <Table rows={rows} />
-            </div></div></div>
+              <div style={{ overflow: 'scroll' }}>
+                <Table rows={rows} />
+              </div>
+            </div>
+          </div>
         </CenteredContainer>
       </ImageContainer>
     </>

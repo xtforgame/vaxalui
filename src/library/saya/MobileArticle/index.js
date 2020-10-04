@@ -4,6 +4,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import Block from '../Article/Block';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,17 +17,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textAlign: 'left',
-    fontSize: 55,
-  },
-  paragraph: {
-    textAlign: 'left',
-    fontSize: 16,
-    marginBottom: 0,
-  },
-  image: {
-    marginTop: 40,
+    fontSize: 32,
     marginBottom: 40,
-
   },
 }));
 
@@ -37,39 +29,17 @@ export default (props) => {
 
   const classes = useStyles();
 
-  const renderContent = (content, key) => {
-    if (content.type === 'paragraph') {
-      return (
-        <div key={key} className={classes.paragraph}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', lineHeight: 1.5 }}>
-            {content.text}
-          </BreakAllContentText>
-        </div>
-      );
-    } else if (content.type === 'image') {
-      return (
-        <div className={classes.image}>
-          <img
-            width="100%"
-            src={content.src}
-          />
-        </div>
-      );
-    }
-    return null;
-  };
-
   return (
     <ImageContainer
       className={classes.root}
     >
       <div className={classes.container}>
-        {/* <div className={classes.title}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>
+        <div className={classes.title}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', lineHeight: 1 }}>
             {data.title}
           </BreakAllContentText>
-        </div> */}
-        {(data.content || []).map(renderContent)}
+        </div>
+        {(data.content || []).map(c => (<Block data={c} />))}
       </div>
     </ImageContainer>
   );

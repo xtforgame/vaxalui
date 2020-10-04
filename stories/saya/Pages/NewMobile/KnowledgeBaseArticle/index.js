@@ -21,8 +21,10 @@ const article = {
   id: 1,
   title: 'What is post-consumer recycled polyester',
   content: [
+    { type: 'paragraph', variant: 'heading4', text: 'heading4heading4heading4heading4heading4' },
     { type: 'paragraph', text: 'Recycled polyester (rPET) is obtained by melting down existing plastic and re-spinning it into new polyester fiber. Often rPET is made from plastic bottles but it can also be derived from other post-industrial and post-consumer input materials including textiles or garments. If recycled content is labeled post-consumer some of the content has been derived from used items or garments as opposed to post-industrial recycled content which never reached the consumer such as cutting scraps from a manufacturing facility.' },
     { type: 'image', src: articlePic1 },
+    { type: 'paragraph', variant: 'subtitle', text: 'Subtitle' },
     { type: 'paragraph', text: 'Using rPET gives a second life to a material that’s not biodegradable and would otherwise end up in landfill or the ocean. The Environmental Protection Agency reported that US’s landfills receive over 26 million tons of plastic a year and Ocean Conservancy reports that 8 million metric tons of plastic enter the ocean every year.' },
     { type: 'paragraph', text: 'In addition, production of fiber or products using rPET over virgin plastic requires less energy and produces less CO2 and it contributes to reducing the extraction of crude oil and natural gas from the Earth to make more plastic.' },
   ],

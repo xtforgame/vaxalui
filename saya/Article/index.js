@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _Block = _interopRequireDefault(require("./Block"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -28,14 +30,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     fontSize: 40,
     marginTop: 10,
     marginBottom: 72
-  },
-  paragraph: {
-    textAlign: 'left',
-    fontSize: 14,
-    marginBottom: 72
-  },
-  image: {
-    marginBottom: 72
   }
 }));
 
@@ -44,30 +38,6 @@ var _default = props => {
     data
   } = props;
   const classes = useStyles();
-
-  const renderContent = (content, key) => {
-    if (content.type === 'paragraph') {
-      return _react.default.createElement("div", {
-        key: key,
-        className: classes.paragraph
-      }, _react.default.createElement(_BreakAllContentText.default, {
-        style: {
-          fontFamily: 'FilsonSoftRegular',
-          lineHeight: 2
-        }
-      }, content.text));
-    } else if (content.type === 'image') {
-      return _react.default.createElement("div", {
-        className: classes.image
-      }, _react.default.createElement("img", {
-        width: "100%",
-        src: content.src
-      }));
-    }
-
-    return null;
-  };
-
   return _react.default.createElement(_ImageContainer.default, {
     className: classes.root
   }, _react.default.createElement("div", {
@@ -76,9 +46,12 @@ var _default = props => {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
-      fontFamily: 'FilsonSoft-Bold'
+      fontFamily: 'FilsonSoft-Bold',
+      lineHeight: 1
     }
-  }, data.title)), (data.content || []).map(renderContent)));
+  }, data.title)), (data.content || []).map(c => _react.default.createElement(_Block.default, {
+    data: c
+  }))));
 };
 
 exports.default = _default;
