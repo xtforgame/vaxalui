@@ -42,7 +42,8 @@ class TechnologyProjects extends React.PureComponent {
         <div
           className={classes.root}
           style={{
-            backgroundColor, height
+            backgroundColor,
+            height,
           }}
         >
           <div style={{ width: 320 }}>
