@@ -11,12 +11,16 @@ const styles = {
   },
   ol: {
     alignItems: 'baseline',
+    justifyContent: 'center',
   },
   link: {
     fontSize: 0,
-  }
+  },
 };
 
+const handleClick = (e) => {
+  e.preventDefault();
+};
 
 class Breadcrumbs extends React.PureComponent {
   render() {
@@ -40,7 +44,7 @@ class Breadcrumbs extends React.PureComponent {
           style={breadcrumbsStyle}
         >
           {bread.map(b => (
-            <Link className={classes.link} style={{ color}} key={b.path} href={b.path} underline="none">
+            <Link className={classes.link} onClick={b.path ? (() => {}) : handleClick} style={{ color }} key={`${b.name}${b.path}`} href={b.path} underline="none">
               {b.name}
             </Link>
           ))}
