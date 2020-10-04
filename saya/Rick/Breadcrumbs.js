@@ -36,9 +36,13 @@ class Breadcrumbs extends _react.default.PureComponent {
       classes,
       color = '#FFFFFF',
       bread = [],
-      separatorColor
+      separatorColor,
+      styles,
+      breadcrumbsStyles
     } = this.props;
-    return _react.default.createElement("div", null, _react.default.createElement(_core.Breadcrumbs, {
+    return _react.default.createElement("div", {
+      styles: styles
+    }, _react.default.createElement(_core.Breadcrumbs, {
       classes: {
         ol: classes.ol,
         separator: classes.separator
@@ -47,7 +51,8 @@ class Breadcrumbs extends _react.default.PureComponent {
         style: {
           color: separatorColor
         }
-      }, "/")
+      }, "/"),
+      style: breadcrumbsStyles
     }, bread.map(b => _react.default.createElement(_Link.default, {
       className: classes.link,
       style: {
