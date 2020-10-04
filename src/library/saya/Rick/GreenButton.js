@@ -10,7 +10,7 @@ const styles = {
     textAlign: 'center',
     backgroundColor: '#64703f',
     border: 'none',
-    borderRadius: 22,
+    borderRadius: 50,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',

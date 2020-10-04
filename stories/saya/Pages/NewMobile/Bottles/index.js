@@ -111,8 +111,7 @@ storiesOf('saya|Pages/NewMobile', module)
             lineColor="#000000"
             backgroundColor="#e3e3e3"
             subtitleFontFamily="bold"
-          >
-          </Introduction>
+          />
           <img src={global} style={{ height: 280 }} />
 
           <GreenNumberSection
@@ -148,7 +147,7 @@ storiesOf('saya|Pages/NewMobile', module)
             <Introduction
               hideTitle
               height={388}
-              subtitle={'Performance Enhancing Process'}
+              subtitle="Performance Enhancing Process"
               description="The resulting flakes are then transported to in-house facilities where they are batch-optimized to control color and tenacity and transformed into pellets ready to be extruded into recycled yarns designated for a specific end-use."
               color="#ffffff"
               lineColor="#ffffff"

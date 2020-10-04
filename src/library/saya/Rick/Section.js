@@ -63,7 +63,6 @@ export default (props) => {
     children,
     color,
     lineColor,
-    buttonPosition,
   } = props;
 
   const classes = useStyles();
@@ -81,17 +80,18 @@ export default (props) => {
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
         <div className={classes.title}>{title}</div>
-        <div className={classes.subTitle}>{subTitle}</div>  </div>
-        <div style={{width:'100%'}}>{children}</div>
-        {!hideButton && (
-          <div className={classes.button} style={{ alignSelf: buttonPosition }}>
-            <GreenButton
-              text="Learn More"
-              onClick={onClick}
-            />
-          </div>
-        )}
-    
+        <div className={classes.subTitle}>{subTitle}</div>
+      </div>
+      <div style={{ width: '100%' }}>{children}</div>
+      {!hideButton && (
+        <div className={classes.button} style={{ width: 320 }}>
+          <GreenButton
+            text="Learn More"
+            onClick={onClick}
+          />
+        </div>
+      )}
+
     </ImageContainer>
 
   );
