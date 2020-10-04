@@ -28,7 +28,7 @@ class Breadcrumbs extends React.PureComponent {
     } = this.props;
 
     return (
-      <div style={{ width: 310 }}>
+      <div>
         <MUIBreadcrumbs
           classes={{
             ol: classes.ol,

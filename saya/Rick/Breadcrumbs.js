@@ -38,11 +38,7 @@ class Breadcrumbs extends _react.default.PureComponent {
       bread = [],
       separatorColor
     } = this.props;
-    return _react.default.createElement("div", {
-      style: {
-        width: 310
-      }
-    }, _react.default.createElement(_core.Breadcrumbs, {
+    return _react.default.createElement("div", null, _react.default.createElement(_core.Breadcrumbs, {
       classes: {
         ol: classes.ol,
         separator: classes.separator

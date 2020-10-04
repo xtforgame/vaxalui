@@ -11,7 +11,7 @@ import BreakAllContentText from './BreakAllContentText';
 
 const useStyles = makeStyles({
   root: {
-    margin: 24,
+    margin: 12,
     borderRadius: 0,
   },
   media: {

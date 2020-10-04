@@ -25,7 +25,7 @@ import icon1 from '../../../img/mobile/m_fig02.svg';
 import icon2 from '../../../img/mobile/m_fig03.svg';
 import icon3 from '../../../img/mobile/m_fig04.svg';
 import blackRectangle from '../../../img/mobile/fig05.svg';
-import oceanCycle from '../../../img/mobile/ocean-cycle-218x300.png'
+import oceanCycle from '../../../img/mobile/ocean-cycle-218x300.png';
 
 storiesOf('saya|Pages/NewMobile', module)
   .add('Bottles',
