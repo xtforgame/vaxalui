@@ -15,6 +15,7 @@ const styles = {
     fontSize: 20,
     fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1,
   },
   firstLine: {
     height: 1,
@@ -26,6 +27,7 @@ const styles = {
     fontWeight: 300,
     fontFamily: 'FilsonSoftLight',
     marginTop: 34,
+    lineHeight: 1,
   },
   secondLine: {
     width: 420,
