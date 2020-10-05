@@ -27,21 +27,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 52,
     paddingLeft: 110
-  },
-  title: {
-    width: 'fit-content',
-    borderBottom: '3px solid #000000',
-    paddingBottom: 2,
-    textShadow: `2px 2px white,
-      2px -2px white,
-      -2px 2px white,
-      -2px -2px white`,
-    fontSize: 40,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 0.6
   },
   line: {
     width: 468,
@@ -69,9 +55,7 @@ class Partner extends _react.default.PureComponent {
       style: {
         backgroundImage: `url(${bottleImage})`
       }
-    }, _react.default.createElement("div", {
-      className: classes.title
-    }, "Become our partner"), _react.default.createElement(_PartnerForm.default, null)));
+    }, _react.default.createElement(_PartnerForm.default, null)));
   }
 
 }
