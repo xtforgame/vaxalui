@@ -5,8 +5,9 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = {
   button: {
     cursor: 'pointer',
-    minWidth: 160,
-    height: 50,
+    minWidth: 128,
+    height: 44,
+    paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
     border: 'none',
@@ -37,18 +38,15 @@ class GreenButton extends React.PureComponent {
   render() {
     const {
       classes,
-      width,
-      height,
       text,
       disabled = false,
-      onClick = () => { },
+      onClick = () => {},
     } = this.props;
     return (
       <button
-        disabled
+        // disabled
         onClick={onClick}
         className={clsx(classes.button, { [classes.disabledButton]: disabled })}
-        style={{ width, height }}
       >
         {text}
       </button>

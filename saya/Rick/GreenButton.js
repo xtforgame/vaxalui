@@ -16,8 +16,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const styles = {
   button: {
     cursor: 'pointer',
-    minWidth: 160,
-    height: 50,
+    minWidth: 128,
+    height: 44,
+    paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
     border: 'none',
@@ -47,22 +48,15 @@ class GreenButton extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      width,
-      height,
       text,
       disabled = false,
       onClick = () => {}
     } = this.props;
     return _react.default.createElement("button", {
-      disabled: true,
       onClick: onClick,
       className: (0, _clsx.default)(classes.button, {
         [classes.disabledButton]: disabled
-      }),
-      style: {
-        width,
-        height
-      }
+      })
     }, text);
   }
 
