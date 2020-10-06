@@ -72,11 +72,28 @@ storiesOf('saya|Pages/NewMobile', module)
             >
               <PartnerSection
                 partner={[
-                  [icon1, icon2, icon3, icon4],
-                  [icon5, icon6, icon7, icon8],
-                  [icon9, icon10, icon11, icon12],
-                  [icon13, icon14, null, null]]
-                }
+                  [
+                    { imgUrl: icon1, url: 'http://google.com' },
+                    { imgUrl: icon2, url: 'http://google.com' },
+                    { imgUrl: icon3, url: 'http://google.com' },
+                    { imgUrl: icon4, url: 'http://google.com' },
+                    { imgUrl: icon5, url: 'http://google.com' },
+                  ],
+                  [
+                    { imgUrl: icon5, url: 'http://google.com' },
+                    { imgUrl: icon4, url: 'http://google.com' },
+                    { imgUrl: icon2, url: 'http://google.com' },
+                    { imgUrl: icon3, url: 'http://google.com' },
+                    { imgUrl: icon1, url: 'http://google.com' },
+                  ],
+                  [
+                    { imgUrl: icon3, url: 'http://google.com' },
+                    { imgUrl: icon1, url: 'http://google.com' },
+                    { imgUrl: icon4, url: 'http://google.com' },
+                    { imgUrl: icon5, url: 'http://google.com' },
+                    { imgUrl: icon2, url: 'http://google.com' },
+                  ],
+                ]}
               />
             </Section>
           </div>

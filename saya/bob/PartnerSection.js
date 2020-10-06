@@ -98,7 +98,7 @@ class PartnerSection extends _react.default.PureComponent {
       color: color
     }, r.map(cell => _react.default.createElement(_IconBox.default, {
       color: color,
-      imgUrl: cell,
+      cell: cell,
       width: "140px"
     })))), _react.default.createElement("div", {
       className: classes.section

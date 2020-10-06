@@ -34,14 +34,25 @@ class IconBox extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      imgUrl,
+      cell: {
+        imgUrl,
+        url,
+        onClick
+      } = {},
       width,
-      onClick,
       color = '#e8e8e8'
     } = this.props;
+    let oc = onClick;
+
+    if (!oc && url) {
+      oc = () => {
+        window.open(url, '_blank');
+      };
+    }
+
     return _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.root, {
-        [classes.clickable]: !!onClick
+        [classes.clickable]: !!(oc || url)
       }),
       style: {
         borderLeftColor: color,
@@ -52,7 +63,7 @@ class IconBox extends _react.default.PureComponent {
       style: {
         width
       },
-      onClick: onClick
+      onClick: oc
     }));
   }
 

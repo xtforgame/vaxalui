@@ -87,10 +87,28 @@ storiesOf('saya|Pages/NewDesktop', module)
               />
             }
             partner={[
-              [icon1, icon2, icon3, icon4, icon5],
-              [icon5, icon4, icon2, icon3, icon1],
-              [icon3, icon1, icon4, icon5, icon2]]
-            }
+              [
+                { imgUrl: icon1, url: 'http://google.com' },
+                { imgUrl: icon2, url: 'http://google.com' },
+                { imgUrl: icon3, url: 'http://google.com' },
+                { imgUrl: icon4, url: 'http://google.com' },
+                { imgUrl: icon5, url: 'http://google.com' },
+              ],
+              [
+                { imgUrl: icon5, url: 'http://google.com' },
+                { imgUrl: icon4, url: 'http://google.com' },
+                { imgUrl: icon2, url: 'http://google.com' },
+                { imgUrl: icon3, url: 'http://google.com' },
+                { imgUrl: icon1, url: 'http://google.com' },
+              ],
+              [
+                { imgUrl: icon3, url: 'http://google.com' },
+                { imgUrl: icon1, url: 'http://google.com' },
+                { imgUrl: icon4, url: 'http://google.com' },
+                { imgUrl: icon5, url: 'http://google.com' },
+                { imgUrl: icon2, url: 'http://google.com' },
+              ],
+            ]}
             title={'Partners in Sustainability'}
             subTitle="It takes a village to achieve sustainability"
             onClick={() => { console.log('read More') }}
