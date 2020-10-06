@@ -50,8 +50,8 @@ class Project extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      title = "Backbone of our sustainable textile business",
-      buttonText = "Learn More",
+      title = 'Backbone of our sustainable textile business',
+      buttonText = 'Learn More',
       disabled,
       type,
       onClick
@@ -64,7 +64,7 @@ class Project extends _react.default.PureComponent {
       className: classes.left
     }, _react.default.createElement("div", {
       className: classes.title
-    }, title), _react.default.createElement("div", {
+    }, title), type && _react.default.createElement("div", {
       className: classes.type
     }, type)), _react.default.createElement(_GreenButton.default, {
       disabled: disabled,

@@ -69,6 +69,7 @@ class PartnerSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      color,
       backgroundImage,
       onClick,
       breadCrumbs,
@@ -89,7 +90,10 @@ class PartnerSection extends _react.default.PureComponent {
       className: classes.title
     }, title), _react.default.createElement("div", {
       className: classes.subTitle
-    }, subTitle)), partner.map(r => _react.default.createElement(_IconBoxSection.default, null, r.map(cell => _react.default.createElement(_IconBox.default, {
+    }, subTitle)), partner.map(r => _react.default.createElement(_IconBoxSection.default, {
+      color: color
+    }, r.map(cell => _react.default.createElement(_IconBox.default, {
+      color: color,
       imgUrl: cell,
       width: "140px"
     })))), _react.default.createElement("div", {

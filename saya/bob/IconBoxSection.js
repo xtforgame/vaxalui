@@ -11,30 +11,32 @@ var _styles = require("@material-ui/core/styles");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const styles = {
+const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    borderTop: '1px solid #e8e8e8',
-    borderBottom: '1px solid #e8e8e8',
+    borderTopStyle: 'solid',
+    borderTopWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomWidth: 1,
     marginBottom: -1
   }
+}));
+
+var _default = props => {
+  const {
+    children,
+    color = '#e8e8e8'
+  } = props;
+  const classes = useStyles();
+  return _react.default.createElement("div", {
+    className: classes.root,
+    style: {
+      borderTopColor: color,
+      borderBottomColor: color
+    }
+  }, children);
 };
-
-class IconBoxSection extends _react.default.PureComponent {
-  render() {
-    const {
-      classes,
-      children
-    } = this.props;
-    return _react.default.createElement("div", {
-      className: classes.root
-    }, children);
-  }
-
-}
-
-var _default = (0, _styles.withStyles)(styles)(IconBoxSection);
 
 exports.default = _default;

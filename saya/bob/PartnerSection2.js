@@ -63,7 +63,7 @@ class PartnerSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
-      color = '#000000',
+      color,
       backgroundImage,
       backgroundColor,
       onClick,
@@ -75,10 +75,7 @@ class PartnerSection extends _react.default.PureComponent {
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage,
-      style: {
-        color
-      }
+      image: backgroundImage
     }, _react.default.createElement("div", {
       className: classes.title
     }, title)), _react.default.createElement(_ImageContainer.default, {
@@ -86,7 +83,10 @@ class PartnerSection extends _react.default.PureComponent {
       style: {
         backgroundColor
       }
-    }, partner.map(r => _react.default.createElement(_IconBoxSection.default, null, r.map(cell => _react.default.createElement(_IconBox.default, {
+    }, partner.map(r => _react.default.createElement(_IconBoxSection.default, {
+      color: color
+    }, r.map(cell => _react.default.createElement(_IconBox.default, {
+      color: color,
       imgUrl: cell,
       width: "140px"
     }))))), _react.default.createElement("div", {
