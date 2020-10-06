@@ -56,6 +56,7 @@ class PartnerSection extends React.PureComponent {
   render() {
     const {
       classes,
+      color,
       backgroundImage,
       onClick,
       breadCrumbs,
@@ -79,8 +80,8 @@ class PartnerSection extends React.PureComponent {
             <div className={classes.subTitle}>{subTitle}</div>
           </div>
           {partner.map(r => 
-            <IconBoxSection>
-              {r.map(cell => <IconBox imgUrl={cell} width="140px" />)}
+            <IconBoxSection color={color}>
+              {r.map(cell => <IconBox color={color} imgUrl={cell} width="140px" />)}
             </IconBoxSection>
           )}
           <div className={classes.section}>

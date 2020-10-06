@@ -14,7 +14,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 88,
+    paddingTop: 80,
   },
   breadCrumbs: {
     color: '#FFFFFF',
@@ -37,7 +37,6 @@ const styles = {
     fontStretch: 'normal',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1,
-    paddingTop: 45,
     whiteSpace: 'pre-line',
   },
   subTitle: {

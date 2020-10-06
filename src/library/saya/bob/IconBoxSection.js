@@ -1,29 +1,35 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    borderTop: '1px solid #e8e8e8',
-    borderBottom: '1px solid #e8e8e8',
+    borderTopStyle: 'solid',
+    borderTopWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomWidth: 1,
     marginBottom: -1,
   },
-};
-class IconBoxSection extends React.PureComponent {
-  render() {
-    const {
-      classes,
-      children,
-    } = this.props;
-    return (
-      <div className={classes.root}>
-        {children}
-      </div>
-    );
-  }
+}));
+
+export default (props) => {
+  const {
+    children,
+    color = '#e8e8e8',
+  } = props;
+
+  const classes = useStyles();
+  return (
+    <div
+      className={classes.root}
+      style={{
+        borderTopColor: color,
+        borderBottomColor: color,
+      }}
+    >
+      {children}
+    </div>
+  );
 }
-
-
-export default withStyles(styles)(IconBoxSection);

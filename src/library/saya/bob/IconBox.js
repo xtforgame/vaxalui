@@ -6,8 +6,10 @@ const styles = {
   root: {
     width: 140,
     height: 140,
-    borderLeft: 'solid 1px #e3e3e3',
-    borderRight: 'solid 1px #e3e3e3',
+    borderLeftStyle: 'solid',
+    borderLeftWidth: 1,
+    borderRightStyle: 'solid',
+    borderRightWidth: 1,
     marginLeft: -1,
     borderBottom: 0,
     borderTop: 0,
@@ -23,9 +25,16 @@ class IconBox extends React.PureComponent {
       imgUrl,
       width,
       onClick,
+      color = '#e8e8e8',
     } = this.props;
     return (
-      <div className={clsx(classes.root, { [classes.clickable]: !!onClick })}>
+      <div
+        className={clsx(classes.root, { [classes.clickable]: !!onClick })}
+        style={{
+          borderLeftColor: color,
+          borderRightColor: color,
+        }}
+      >
         {imgUrl && (
           <img
             src={imgUrl}

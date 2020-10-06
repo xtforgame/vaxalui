@@ -31,15 +31,15 @@ const styles = {
     fontSize: 12,
     marginTop: 20,
     fontFamily: 'FilsonSoft-Bold',
-  }
+  },
 };
 
 class Project extends React.PureComponent {
   render() {
     const {
       classes,
-      title = "Backbone of our sustainable textile business",
-      buttonText = "Learn More",
+      title = 'Backbone of our sustainable textile business',
+      buttonText = 'Learn More',
       disabled,
       type,
       onClick,
@@ -50,7 +50,7 @@ class Project extends React.PureComponent {
       >
         <div className={classes.left}>
           <div className={classes.title}>{title}</div>
-          <div className={classes.type}>{type}</div>
+          {type && <div className={classes.type}>{type}</div>}
         </div>
         <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
       </div>

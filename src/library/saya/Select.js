@@ -7,7 +7,7 @@ import InputBase from '@material-ui/core/InputBase';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
 
-const BootstrapInput = withStyles((theme) => ({
+const BootstrapInput = withStyles(theme => ({
   root: {
     'label + &': {
       marginTop: theme.spacing(3),
@@ -24,7 +24,6 @@ const BootstrapInput = withStyles((theme) => ({
     // paddingRight: theme.spacing(1.5),
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
-    width: 220,
   },
 }))(InputBase);
 
@@ -48,7 +47,7 @@ const styles = theme => ({
   icon: {
     color: 'white',
     marginRight: 10,
-  }
+  },
 });
 
 class Select extends React.PureComponent {
@@ -59,6 +58,7 @@ class Select extends React.PureComponent {
       value,
       onChange,
       options,
+      style,
       ...others
     } = this.props;
     return (
@@ -68,12 +68,12 @@ class Select extends React.PureComponent {
           id="demo-customized-select"
           value={value}
           onChange={onChange}
-          input={<BootstrapInput />}
+          input={<BootstrapInput style={style} />}
           inputProps={{
             classes: {
-                icon: classes.icon,
+              icon: classes.icon,
             },
-        }}
+          }}
         >
           {options.map(o => (
             <MenuItem
@@ -86,14 +86,8 @@ class Select extends React.PureComponent {
           ))}
         </MUISelect>
       </FormControl>
-    )
+    );
   }
 }
-
-Select.propTypes = {
-};
-
-Select.defaultProps = {
-};
 
 export default withStyles(styles)(Select);
