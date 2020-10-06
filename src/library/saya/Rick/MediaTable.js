@@ -60,7 +60,7 @@ export default (props) => {
               </div>
               <div style={{ flex: 1, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-end', paddingLeft: 8 }}>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, color: '#64703f' }}>
-                  {row.url ? (<u>{row.linkName}</u>) : row.linkName}
+                  {row.url ? (<a href={row.url} target="_blank" style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, color: '#64703f' }}><u>{row.linkName}</u></a>) : row.linkName}
                 </BreakAllContentText>
               </div>
             </div>

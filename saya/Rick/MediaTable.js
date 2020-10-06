@@ -105,7 +105,15 @@ var _default = props => {
         fontSize: 12,
         color: '#64703f'
       }
-    }, row.url ? _react.default.createElement("u", null, row.linkName) : row.linkName))), row.body, _react.default.createElement("div", {
+    }, row.url ? _react.default.createElement("a", {
+      href: row.url,
+      target: "_blank",
+      style: {
+        fontFamily: 'FilsonSoftRegular',
+        fontSize: 12,
+        color: '#64703f'
+      }
+    }, _react.default.createElement("u", null, row.linkName)) : row.linkName))), row.body, _react.default.createElement("div", {
       className: classes.divider2
     }));
   }), _react.default.createElement("div", {
