@@ -20,13 +20,13 @@ const styles = theme => ({
     transitionProperty: 'color',
     transitionDuration: '0.2s',
     transitionDelay: '0s',
-    '&:hover': {
-      color: '808080',
-      // backgroundColor: 'aqua',
-      // transitionProperty: 'background-color',
-      // transitionDuration: '0.1s',
-      // transitionDelay: '0s',
-    },
+    // '&:hover': {
+    //   color: '808080',
+    //   // backgroundColor: 'aqua',
+    //   // transitionProperty: 'background-color',
+    //   // transitionDuration: '0.1s',
+    //   // transitionDelay: '0s',
+    // },
   },
 });
 
@@ -53,6 +53,7 @@ class ItemList extends React.PureComponent {
     let body;
 
     if (link) {
+      const dark = (!this.allClosed && path !== currentPath) || !!item.disabled;
       body = (
         <Item
           path={path}
@@ -62,12 +63,13 @@ class ItemList extends React.PureComponent {
             name={name}
             disabled={item.disabled}
             className={clsx({
-              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
+              [classes.darkItem]: dark,
             })}
           />
         </Item>
       );
     } else if (items) {
+      const dark = (!this.allClosed && !isExpanded(path, currentPath)) || !!item.disabled;
       body = (
         <Item
           path={path}
@@ -77,8 +79,9 @@ class ItemList extends React.PureComponent {
             path={path}
             items={items}
             listDirection={listDirection}
+            dark={dark}
             className={clsx({
-              [classes.darkItem]: (!this.allClosed && !isExpanded(path, currentPath)) || item.disabled,
+              [classes.darkItem]: dark,
             })}
           />
         </Item>
@@ -103,7 +106,12 @@ class ItemList extends React.PureComponent {
       currentPath,
     } = this.context;
     this.allClosed = items.every(
-      (item, index) => item.link || !isExpanded(`${root}/${index}`, currentPath)
+      (item, index) => {
+        if (item.link) {
+          return `${root}/${index}` !== currentPath;
+        }
+        return !isExpanded(`${root}/${index}`, currentPath);
+      }
     );
     return items.filter(i => i.name).map(this.renderItem);
   }

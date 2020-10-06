@@ -20,13 +20,22 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     // paddingRight: theme.spacing(3),
   },
+  darkArrow: {
+    borderLeftColor: '#808080',
+  },
   rightArrow: {
     width: 0,
     height: 0,
     borderTop: '4px solid transparent',
     borderBottom: '4px solid transparent',
-    borderLeft: '4px solid #ffffff',
     // backgroundColor: '#ffffff',
+    borderLeftStyle: 'solid',
+    borderLeftWidth: '4px',
+    // borderLeftColor: '#ffffff',
+
+    transitionProperty: 'border-left-color',
+    transitionDuration: '0.2s',
+    transitionDelay: '0s',
   },
   space: {
     width: 8,
@@ -47,8 +56,11 @@ export default (props) => {
     listDirection,
     items,
     theme,
+    dark,
     className,
   } = props;
+
+  console.log('dark :', dark);
 
   const {
     currentPath,
@@ -78,7 +90,7 @@ export default (props) => {
           <div>{inName}</div>
           <div className={classes.space} />
           <div
-            className={classes.rightArrow}
+            className={clsx(classes.rightArrow, { [classes.darkArrow]: dark })}
           />
         </div>
       );
