@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from './GreenButton';
-import TextField from './TextField';
+import TextField from '../bob/TextField';
 import Checkbox from '../Checkbox';
 
 const styles = {

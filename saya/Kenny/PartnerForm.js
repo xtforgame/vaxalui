@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
-var _TextField = _interopRequireDefault(require("./TextField"));
+var _TextField = _interopRequireDefault(require("../bob/TextField"));
 
 var _Checkbox = _interopRequireDefault(require("../Checkbox"));
 
