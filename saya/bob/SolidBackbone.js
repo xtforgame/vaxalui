@@ -42,7 +42,7 @@ const styles = {
     width: 780,
     fontSize: 72,
     fontWeight: 300,
-    fontFamily: 'FilsonSoftLight',
+    fontFamily: 'FilsonSoft-Light',
     lineHeight: 1,
     marginTop: 30
   },
@@ -131,43 +131,53 @@ class SolidBackbone extends _react.default.PureComponent {
       className: classes.thirdTitle
     }, thirdTitle)))), _react.default.createElement("div", {
       className: classes.blockRoot
-    }, block.map(b => _react.default.createElement("div", {
-      className: classes.block,
-      style: {
-        backgroundSize: 'cover',
-        backgroundColor: b.bg,
-        backgroundImage: `url(${b.bg})`
+    }, block.map(b => {
+      let surffix = '%';
+
+      if (b.surffix != null) {
+        ({
+          surffix
+        } = b);
       }
-    }, _react.default.createElement("div", {
-      className: classes.blockContent
-    }, _react.default.createElement("div", {
-      style: {
-        color: b.color
-      },
-      className: classes.num
-    }, b.num, _react.default.createElement("span", {
-      style: {
-        fontSize: 20,
-        color: b.color
-      }
-    }, "%"), _react.default.createElement("div", {
-      style: {
-        color: b.color
-      },
-      className: classes.top
-    }, b.top), _react.default.createElement("div", {
-      style: {
-        margin: '12px 0',
-        color: b.color,
-        width: '100%',
-        border: `1px solid ${b.color}`
-      }
-    }), _react.default.createElement("div", {
-      style: {
-        color: b.color
-      },
-      className: classes.bottom
-    }, b.bottom)))))));
+
+      return _react.default.createElement("div", {
+        className: classes.block,
+        style: {
+          backgroundSize: 'cover',
+          backgroundColor: b.bg,
+          backgroundImage: `url(${b.bg})`
+        }
+      }, _react.default.createElement("div", {
+        className: classes.blockContent
+      }, _react.default.createElement("div", {
+        style: {
+          color: b.color
+        },
+        className: classes.num
+      }, b.num, surffix && _react.default.createElement("span", {
+        style: {
+          fontSize: 20,
+          color: b.color
+        }
+      }, "%"), _react.default.createElement("div", {
+        style: {
+          color: b.color
+        },
+        className: classes.top
+      }, b.top), _react.default.createElement("div", {
+        style: {
+          margin: '12px 0',
+          color: b.color,
+          width: '100%',
+          border: `1px solid ${b.color}`
+        }
+      }), _react.default.createElement("div", {
+        style: {
+          color: b.color
+        },
+        className: classes.bottom
+      }, b.bottom))));
+    })));
   }
 
 }

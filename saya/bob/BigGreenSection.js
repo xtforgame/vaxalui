@@ -98,8 +98,7 @@ class BigGreenSection extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoft',
-        fontWeight: 300
+        fontFamily: 'FilsonSoft-Light'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description,

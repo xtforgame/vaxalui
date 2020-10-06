@@ -89,7 +89,7 @@ class BigGreenSection extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
             </div>
             <div
               className={classes.description}

@@ -35,8 +35,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoft',
-    fontWeight: 300,
+    fontFamily: 'FilsonSoft-Light',
     marginTop: 40
   },
   description: {

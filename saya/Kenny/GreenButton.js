@@ -32,6 +32,9 @@ const styles = {
     fontFamily: 'FilsonSoft-Bold',
     '&:hover': {
       backgroundColor: '#c0c823'
+    },
+    '&:focus': {
+      outline: 0
     }
   },
   disabledButton: {
@@ -40,6 +43,9 @@ const styles = {
     backgroundColor: '#444343',
     '&:hover': {
       backgroundColor: '#444343'
+    },
+    '&:focus': {
+      outline: 0
     }
   }
 };

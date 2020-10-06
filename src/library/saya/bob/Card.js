@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   root: {
     marginBottom: 72,
     display: 'inline-block',
+    borderRadius: 0,
   },
   media: {
     position: 'relative',
@@ -35,6 +36,10 @@ const useStyles = makeStyles({
     color: '#ffffff',
     top: 0,
     padding: 15,
+  },
+  content: {
+    paddingLeft: 0,
+    paddingRight: 0,
   },
   cardAction: {
     paddingTop: 0,
@@ -68,7 +73,7 @@ export default ({
             </BreakAllContentText>
           </div>
         </CardMedia>
-        <CardContent>
+        <CardContent className={classes.content}>
           <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
             {description}
           </BreakAllContentText>

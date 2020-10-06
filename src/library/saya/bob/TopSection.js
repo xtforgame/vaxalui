@@ -78,13 +78,7 @@ class TopSection extends React.PureComponent {
             <div className={classes.secondTitle}>
               {secondTitle}
             </div>
-            <BreakAllContentText
-              className={classes.thirdTitle}
-              style={{
-                width: thirdTitleWidth,
-                margin: 0,
-              }}
-            >
+            <BreakAllContentText className={classes.thirdTitle}>
               {thirdTitle}
             </BreakAllContentText>
           </div>

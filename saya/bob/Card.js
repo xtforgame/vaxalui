@@ -30,7 +30,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)({
   root: {
     marginBottom: 72,
-    display: 'inline-block'
+    display: 'inline-block',
+    borderRadius: 0
   },
   media: {
     position: 'relative'
@@ -45,6 +46,10 @@ const useStyles = (0, _styles.makeStyles)({
     color: '#ffffff',
     top: 0,
     padding: 15
+  },
+  content: {
+    paddingLeft: 0,
+    paddingRight: 0
   },
   cardAction: {
     paddingTop: 0,
@@ -85,7 +90,9 @@ var _default = ({
       fontSize: 28,
       textAlign: 'left'
     }
-  }, title))), _react.default.createElement(_CardContent.default, null, _react.default.createElement(_BreakAllContentText.default, {
+  }, title))), _react.default.createElement(_CardContent.default, {
+    className: classes.content
+  }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,

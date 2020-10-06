@@ -30,7 +30,7 @@ const styles = {
     width: 780,
     fontSize: 72,
     fontWeight: 300,
-    fontFamily: 'FilsonSoftLight',
+    fontFamily: 'FilsonSoft-Light',
     lineHeight: 1,
     marginTop: 30,
   },
@@ -130,22 +130,28 @@ class SolidBackbone extends React.PureComponent {
           </div>
         </ImageContainer>
         <div className={classes.blockRoot}>
-          {block.map(b => (
-            <div
-              className={classes.block}
-              style={{ backgroundSize: 'cover', backgroundColor: b.bg, backgroundImage: `url(${b.bg})` }}
-            >
-              <div className={classes.blockContent}>
-                <div style={{ color: b.color }} className={classes.num}>
-                  {b.num}
-                  <span style={{ fontSize: 20, color: b.color }}>%</span>
-                  <div style={{ color: b.color }} className={classes.top}>{b.top}</div>
-                  <div style={{ margin: '12px 0', color: b.color, width: '100%', border: `1px solid ${b.color}` }} />
-                  <div style={{ color: b.color }} className={classes.bottom}>{b.bottom}</div>
+          {block.map((b) => {
+            let surffix = '%';
+            if (b.surffix != null) {
+              ({ surffix } = b);
+            }
+            return (
+              <div
+                className={classes.block}
+                style={{ backgroundSize: 'cover', backgroundColor: b.bg, backgroundImage: `url(${b.bg})` }}
+              >
+                <div className={classes.blockContent}>
+                  <div style={{ color: b.color }} className={classes.num}>
+                    {b.num}
+                    {surffix && <span style={{ fontSize: 20, color: b.color }}>%</span>}
+                    <div style={{ color: b.color }} className={classes.top}>{b.top}</div>
+                    <div style={{ margin: '12px 0', color: b.color, width: '100%', border: `1px solid ${b.color}` }} />
+                    <div style={{ color: b.color }} className={classes.bottom}>{b.bottom}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </>
     );

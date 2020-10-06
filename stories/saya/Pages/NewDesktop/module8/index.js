@@ -22,6 +22,7 @@ storiesOf('saya|Pages/NewDesktop', module)
               {
                 color: '#000000',
                 num: '13',
+                surffix: '',
                 top: 'bottle recycling facilities ',
                 bottom: 'worldwide',
                 bg: '#c8c6c6',
@@ -29,6 +30,7 @@ storiesOf('saya|Pages/NewDesktop', module)
               {
                 color: '#000000',
                 num: '75',
+                surffix: '',
                 top: 'billion bottles ',
                 bottom: 'every year',
                 bg: '#FFFFFF',

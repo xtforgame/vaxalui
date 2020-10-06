@@ -34,7 +34,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftLight',
+    fontFamily: 'FilsonSoft-Light',
     fontWeight: 300,
     paddingTop: 22
   },

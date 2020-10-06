@@ -89,11 +89,7 @@ class TopSection extends _react.default.PureComponent {
     })), _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle
     }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
-      className: classes.thirdTitle,
-      style: {
-        width: thirdTitleWidth,
-        margin: 0
-      }
+      className: classes.thirdTitle
     }, thirdTitle))), _react.default.createElement("div", {
       className: classes.space
     }));

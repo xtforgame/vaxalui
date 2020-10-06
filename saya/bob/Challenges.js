@@ -24,8 +24,7 @@ const styles = {
   subtitle: {
     fontSize: 20,
     marginTop: 40,
-    fontFamily: 'FilsonSoft',
-    fontWeight: 300
+    fontFamily: 'FilsonSoft-Light'
   },
   titleWhite: {
     color: '#ffffff',

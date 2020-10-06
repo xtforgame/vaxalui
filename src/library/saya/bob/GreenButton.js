@@ -22,6 +22,9 @@ const styles = {
     '&:hover': {
       backgroundColor: '#c0c823',
     },
+    '&:focus': {
+      outline: 0,
+    },
   },
   disabledButton: {
     color: '#ffffff',
@@ -30,7 +33,10 @@ const styles = {
     '&:hover': {
       backgroundColor: '#444343',
     },
-  }
+    '&:focus': {
+      outline: 0,
+    },
+  },
 };
 
 
