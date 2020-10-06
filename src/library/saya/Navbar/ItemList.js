@@ -105,7 +105,7 @@ class ItemList extends React.PureComponent {
     this.allClosed = items.every(
       (item, index) => item.link || !isExpanded(`${root}/${index}`, currentPath)
     );
-    return items.map(this.renderItem);
+    return items.filter(i => i.name).map(this.renderItem);
   }
 
   render() {

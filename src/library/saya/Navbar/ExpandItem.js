@@ -64,7 +64,12 @@ export default (props) => {
   const renderName = () => {
     let name;
     if (listDirection === 'bottom') {
-      name = inName;
+      name = (
+        <div>
+          <div>{inName}</div>
+          <div className={classes.space} />
+        </div>
+      );
     } else if (listDirection === 'right') {
       name = (
         <div
