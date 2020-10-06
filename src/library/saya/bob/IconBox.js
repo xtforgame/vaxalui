@@ -22,14 +22,16 @@ class IconBox extends React.PureComponent {
   render() {
     const {
       classes,
-      cell: {
-        imgUrl,
-        url,
-        onClick,
-      } = {},
+      cell,
       width,
       color = '#e8e8e8',
     } = this.props;
+
+    const {
+      imgUrl,
+      url,
+      onClick,
+    } = cell || {};
 
     let oc = onClick;
     if (!oc && url) {
