@@ -57,6 +57,7 @@ class PartnerSection extends React.PureComponent {
     const {
       classes,
       color,
+      fontColor = '#ffffff',
       backgroundImage,
       onClick,
       breadCrumbs,
@@ -70,6 +71,9 @@ class PartnerSection extends React.PureComponent {
         <ImageContainer
           className={classes.root}
           image={backgroundImage}
+          style={{
+            color: fontColor,
+          }}
         >
           <div className={classes.section}>
             <div className={classes.breadCrumbs}>

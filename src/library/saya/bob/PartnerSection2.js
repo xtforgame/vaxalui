@@ -50,6 +50,7 @@ class PartnerSection extends React.PureComponent {
   render() {
     const {
       classes,
+      fontColor = '#ffffff',
       color,
       backgroundImage,
       backgroundColor,
@@ -67,6 +68,9 @@ class PartnerSection extends React.PureComponent {
           <ImageContainer
             className={classes.root}
             image={backgroundImage}
+            style={{
+              color: fontColor,
+            }}
           >
             <div className={classes.title}>{title}</div>
           </ImageContainer>

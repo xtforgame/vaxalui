@@ -70,6 +70,7 @@ class PartnerSection extends _react.default.PureComponent {
     const {
       classes,
       color,
+      fontColor = '#ffffff',
       backgroundImage,
       onClick,
       breadCrumbs,
@@ -79,7 +80,10 @@ class PartnerSection extends _react.default.PureComponent {
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage
+      image: backgroundImage,
+      style: {
+        color: fontColor
+      }
     }, _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {

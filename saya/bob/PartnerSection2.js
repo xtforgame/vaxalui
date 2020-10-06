@@ -63,6 +63,7 @@ class PartnerSection extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      fontColor = '#ffffff',
       color,
       backgroundImage,
       backgroundColor,
@@ -75,7 +76,10 @@ class PartnerSection extends _react.default.PureComponent {
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage
+      image: backgroundImage,
+      style: {
+        color: fontColor
+      }
     }, _react.default.createElement("div", {
       className: classes.title
     }, title)), _react.default.createElement(_ImageContainer.default, {
