@@ -18,7 +18,7 @@ const MobileLayout = ({
       // height: '100%',
       overflow: 'hidden',
       fontFamily: 'FilsonSoftRegular',
-      lineHeight: 1,
+      // lineHeight: 1,
     }}
   >
     <Helmet title="SAYA homepage" />
