@@ -23,13 +23,19 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    paddingTop: (theme.spacing(8) - theme.spacing(2)) / 2,
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     whiteSpace: 'pre',
   },
   logo: {
+    height: 64,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     marginRight: 'auto', // TODO make a global style covering this
+  },
+  menu: {
+    paddingTop: (theme.spacing(8) - theme.spacing(2)) / 2,
   },
   closing: {
     // TODO maybe height is relevant to list item size
@@ -42,7 +48,7 @@ const styles = theme => ({
     // TODO maybe height is relevant to list item size
     height: theme.spacing(8) * 4,
     transitionProperty: 'height',
-    transitionDuration: '0.33s',
+    transitionDuration: '0.15s',
     transitionDelay: '0s',
   },
 });
@@ -124,7 +130,7 @@ class Navbar extends React.PureComponent {
           >
             {children}
           </div>
-          <div>
+          <div className={classes.menu}>
             <MenuContext.Provider
               value={{
                 ...this.state,
