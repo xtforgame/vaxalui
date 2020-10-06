@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _clsx = _interopRequireDefault(require("clsx"));
 
-var _TextField = _interopRequireDefault(require("./TextField"));
+var _TextField = _interopRequireDefault(require("./bob/TextField"));
 
 var _Select = _interopRequireDefault(require("./Select"));
 
@@ -107,6 +107,7 @@ var _default = props => {
       height: 8
     }
   }), _react.default.createElement(_TextField.default, {
+    darkTheme: true,
     className: classes.emailInput,
     value: email,
     onChange: e => setEmail(e.target.value),

@@ -36,12 +36,19 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center'
   },
+  darkArrow: {
+    borderLeftColor: '#808080'
+  },
   rightArrow: {
     width: 0,
     height: 0,
     borderTop: '4px solid transparent',
     borderBottom: '4px solid transparent',
-    borderLeft: '4px solid #ffffff'
+    borderLeftStyle: 'solid',
+    borderLeftWidth: '4px',
+    transitionProperty: 'border-left-color',
+    transitionDuration: '0.2s',
+    transitionDelay: '0s'
   },
   space: {
     width: 8,
@@ -64,8 +71,10 @@ var _default = props => {
     listDirection,
     items,
     theme,
+    dark,
     className
   } = props;
+  console.log('dark :', dark);
   const {
     currentPath
   } = (0, _react.useContext)(_MenuContext.MenuContext);
@@ -77,14 +86,18 @@ var _default = props => {
     let name;
 
     if (listDirection === 'bottom') {
-      name = inName;
+      name = _react.default.createElement("div", null, _react.default.createElement("div", null, inName), _react.default.createElement("div", {
+        className: classes.space
+      }));
     } else if (listDirection === 'right') {
       name = _react.default.createElement("div", {
         className: classes.specialNameRoot
       }, _react.default.createElement("div", null, inName), _react.default.createElement("div", {
         className: classes.space
       }), _react.default.createElement("div", {
-        className: classes.rightArrow
+        className: (0, _clsx.default)(classes.rightArrow, {
+          [classes.darkArrow]: dark
+        })
       }));
     }
 

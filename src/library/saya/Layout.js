@@ -18,6 +18,7 @@ const Layout = ({
       // height: '100%',
       overflow: 'hidden',
       fontFamily: 'FilsonSoftRegular',
+      lineHeight: 1,
     }}
   >
     <Helmet title="SAYA homepage" />

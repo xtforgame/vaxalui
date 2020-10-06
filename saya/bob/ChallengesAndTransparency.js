@@ -35,7 +35,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
+    fontFamily: 'FilsonSoft-Light',
     marginTop: 40
   },
   description: {
@@ -135,7 +135,7 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoftRegular'
+        fontFamily: 'FilsonSoft-Light'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description,

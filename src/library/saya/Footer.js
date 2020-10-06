@@ -42,9 +42,6 @@ const useStyles = makeStyles(theme => ({
   emailInput: {
     width: 300,
     height: 38,
-    '&::placeholder': {
-      color: '#FFFFFF',
-    },
   },
 
   checkbox: {
@@ -63,7 +60,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   labelContent: {
-    width: 400,
+    width: 270,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 10,
@@ -136,6 +133,7 @@ export default (props) => {
               }}
             >
               <TextField
+                darkTheme
                 className={classes.emailInput}
                 value={email}
                 onChange={e => setEmail(e.target.value)}

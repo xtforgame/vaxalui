@@ -58,10 +58,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   emailInput: {
     width: 300,
-    height: 38,
-    '&::placeholder': {
-      color: '#FFFFFF'
-    }
+    height: 38
   },
   checkbox: {
     display: 'flex',
@@ -79,7 +76,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     }
   },
   labelContent: {
-    width: 400,
+    width: 270,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 10
@@ -190,6 +187,7 @@ var _default = props => {
       display: 'flex'
     }
   }, _react.default.createElement(_TextField.default, {
+    darkTheme: true,
     className: classes.emailInput,
     value: email,
     onChange: e => setEmail(e.target.value),

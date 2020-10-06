@@ -24,13 +24,14 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     width: 30,
     height: 30,
     borderStyle: 'solid',
-    borderWidth: 2,
-    borderRadius: 2,
+    borderWidth: 1,
+    borderRadius: 0,
     color: 'transparent',
     borderColor: 'black',
     backgroundColor: 'transparent'
   },
   darkTheme: {
+    borderWidth: 2,
     color: '#000000',
     borderColor: '#FFFFFF',
     backgroundColor: '#000000'

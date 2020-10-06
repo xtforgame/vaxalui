@@ -63,13 +63,14 @@ const useStyles = makeStyles(theme => ({
     width: 380,
     fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 30,
+    paddingLeft: 10,
   },
 }));
 
 
 export default (props) => {
   const {
+    title = 'Get Useful Updates',
     subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
     labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
     emailTextInputWidth = 420,
@@ -85,7 +86,7 @@ export default (props) => {
   return (
     <div className={classes.flexContainer}>
       <div className={classes.title}>
-        Become our partner
+        {title}
       </div>
       <div className={classes.subtitle}>
         {subtitle}

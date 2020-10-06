@@ -23,7 +23,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoftRegular',
+    fontFamily: 'FilsonSoft-Light',
     marginTop: 40,
   },
   description: {
@@ -126,7 +126,7 @@ class ChallengesAndTransparency extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
             </div>
             <div
               className={classes.description}

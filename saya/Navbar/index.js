@@ -43,13 +43,19 @@ const styles = theme => ({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    paddingTop: (theme.spacing(8) - theme.spacing(2)) / 2,
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     whiteSpace: 'pre'
   },
   logo: {
+    height: 64,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     marginRight: 'auto'
+  },
+  menu: {
+    paddingTop: (theme.spacing(8) - theme.spacing(2)) / 2
   },
   closing: {
     height: theme.spacing(8),
@@ -60,7 +66,7 @@ const styles = theme => ({
   opening: {
     height: theme.spacing(8) * 4,
     transitionProperty: 'height',
-    transitionDuration: '0.33s',
+    transitionDuration: '0.15s',
     transitionDelay: '0s'
   }
 });
@@ -137,7 +143,9 @@ class Navbar extends _react.default.PureComponent {
       className: classes.body
     }, _react.default.createElement("div", {
       className: classes.logo
-    }, children), _react.default.createElement("div", null, _react.default.createElement(_MenuContext.MenuContext.Provider, {
+    }, children), _react.default.createElement("div", {
+      className: classes.menu
+    }, _react.default.createElement(_MenuContext.MenuContext.Provider, {
       value: _objectSpread({}, this.state, {
         onLinkClick: onLinkClick || (path => {
           console.warn('default onLinkClick', path);

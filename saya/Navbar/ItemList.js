@@ -39,10 +39,7 @@ const styles = theme => ({
     color: '#808080',
     transitionProperty: 'color',
     transitionDuration: '0.2s',
-    transitionDelay: '0s',
-    '&:hover': {
-      color: '808080'
-    }
+    transitionDelay: '0s'
   }
 });
 
@@ -68,6 +65,7 @@ class ItemList extends _react.default.PureComponent {
       let body;
 
       if (link) {
+        const dark = !this.allClosed && path !== currentPath || !!item.disabled;
         body = _react.default.createElement(_Item.default, {
           path: path
         }, _react.default.createElement(_LinkItem.default, {
@@ -75,10 +73,11 @@ class ItemList extends _react.default.PureComponent {
           name: name,
           disabled: item.disabled,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
+            [classes.darkItem]: dark
           })
         }));
       } else if (items) {
+        const dark = !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || !!item.disabled;
         body = _react.default.createElement(_Item.default, {
           path: path
         }, _react.default.createElement(_ExpandItem.default, {
@@ -86,8 +85,9 @@ class ItemList extends _react.default.PureComponent {
           path: path,
           items: items,
           listDirection: listDirection,
+          dark: dark,
           className: (0, _clsx.default)({
-            [classes.darkItem]: !this.allClosed && !(0, _ExpandItem.isOpened)(path, currentPath) || item.disabled
+            [classes.darkItem]: dark
           })
         }));
       }
@@ -106,8 +106,14 @@ class ItemList extends _react.default.PureComponent {
       const {
         currentPath
       } = this.context;
-      this.allClosed = items.every((item, index) => item.link || !(0, _ExpandItem.isOpened)(`${root}/${index}`, currentPath));
-      return items.map(this.renderItem);
+      this.allClosed = items.every((item, index) => {
+        if (item.link) {
+          return `${root}/${index}` !== currentPath;
+        }
+
+        return !(0, _ExpandItem.isOpened)(`${root}/${index}`, currentPath);
+      });
+      return items.filter(i => i.name).map(this.renderItem);
     });
   }
 

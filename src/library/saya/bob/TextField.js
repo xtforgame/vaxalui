@@ -11,18 +11,28 @@ const styles = theme => ({
     backgroundColor: 'transparent',
     padding: theme.spacing(1.5),
     borderStyle: 'solid',
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: 'white',
     outline: 'none',
     '&::placeholder': {
       color: '#000000',
-    }
+    },
+  },
+  darkTheme: {
+    borderWidth: 2,
+    color: '#000000',
+    borderColor: '#FFFFFF',
+    backgroundColor: '#000000',
+    '&::placeholder': {
+      color: '#FFFFFF',
+    },
   },
 });
 
 class TextField extends React.PureComponent {
   render() {
     const {
+      darkTheme,
       classes,
       className,
       value,
@@ -31,7 +41,7 @@ class TextField extends React.PureComponent {
     } = this.props;
     return (
       <input
-        className={clsx(classes.root, className)}
+        className={clsx(classes.root, { [classes.darkTheme]: darkTheme }, className)}
         value={value}
         onChange={onChange}
         {...others}

@@ -59,12 +59,6 @@ const styles = {
     width: 30,
     height: 30,
   },
-  labelContent: {
-    width: 440,
-    fontSize: 10,
-    fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 10,
-  },
 };
 
 

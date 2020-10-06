@@ -10,7 +10,7 @@ const styles = theme => ({
     backgroundColor: 'transparent',
     padding: theme.spacing(1.5),
     borderStyle: 'solid',
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: 'white',
     outline: 'none',
   },

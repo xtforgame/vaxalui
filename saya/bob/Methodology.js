@@ -105,7 +105,7 @@ class Methodology extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoft'
+        fontFamily: 'FilsonSoft-Light'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description

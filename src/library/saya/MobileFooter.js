@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
-import TextField from './TextField';
+import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
 
@@ -94,6 +94,7 @@ export default (props) => {
         <div>Sign up to newsletter</div>
         <div style={{ width: 10, height: 8 }} />
         <TextField
+          darkTheme
           className={classes.emailInput}
           value={email}
           onChange={e => setEmail(e.target.value)}
