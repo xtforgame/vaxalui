@@ -30,10 +30,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)({
   root: {
     margin: 12,
-    borderRadius: 0
+    borderRadius: 0,
+    width: 260
   },
   media: {
-    position: 'relative'
+    position: 'relative',
+    width: 205
   },
   titleSection: {
     display: 'flex',
@@ -53,33 +55,28 @@ const useStyles = (0, _styles.makeStyles)({
   cardAction: {
     paddingTop: 0,
     paddingRight: 0,
-    paddingLeft: 20,
+    paddingLeft: 0,
     paddingBottom: 0
   }
 });
 
 var _default = ({
-  height,
-  width,
   title,
   description,
   image,
-  onClick
+  onClick,
+  elevation = 0,
+  style
 }) => {
   const classes = useStyles();
   return _react.default.createElement(_Card.default, {
     className: classes.root,
-    style: {
-      width
-    },
-    elevation: 0
+    style: style,
+    elevation: elevation
   }, _react.default.createElement(_CardActionArea.default, {
     onClick: onClick
   }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
-    style: {
-      height
-    },
     image: image
   }, _react.default.createElement("div", {
     className: classes.titleSection

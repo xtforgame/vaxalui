@@ -30,10 +30,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const useStyles = (0, _styles.makeStyles)({
   root: {
     marginBottom: 40,
-    borderRadius: 0
+    borderRadius: 0,
+    width: 310
   },
   media: {
-    position: 'relative'
+    position: 'relative',
+    height: 305
   },
   titleSection: {
     display: 'flex',
@@ -47,7 +49,7 @@ const useStyles = (0, _styles.makeStyles)({
     alignItems: 'center',
     textAlign: 'left',
     width: 260,
-    height: 200,
+    height: 250,
     color: '#ffffff'
   },
   cardAction: {
@@ -59,25 +61,20 @@ const useStyles = (0, _styles.makeStyles)({
 });
 
 var _default = ({
-  height,
-  width,
   title,
   description,
   image,
-  onClick
+  onClick,
+  elevation = 0,
+  style
 }) => {
   const classes = useStyles();
   return _react.default.createElement(_Card.default, {
     className: classes.root,
-    style: {
-      width
-    },
-    elevation: 0
+    style: style,
+    elevation: elevation
   }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
-    style: {
-      height
-    },
     image: image
   }, _react.default.createElement("div", {
     className: classes.titleSection
@@ -86,15 +83,14 @@ var _default = ({
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      fontSize: 28
+      fontSize: 24
     }
   }, title)))), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 13,
       lineHeight: 1.54,
-      paddingTop: 16,
-      paddingBottom: 10
+      paddingTop: 16
     }
   }, description), _react.default.createElement("div", {
     className: classes.cardAction

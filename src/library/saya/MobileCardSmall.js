@@ -13,9 +13,11 @@ const useStyles = makeStyles({
   root: {
     margin: 12,
     borderRadius: 0,
+    width: 260,
   },
   media: {
     position: 'relative',
+    width: 205,
   },
   // mask: {
   //   width: '100%',
@@ -41,27 +43,26 @@ const useStyles = makeStyles({
   cardAction: {
     paddingTop: 0,
     paddingRight: 0,
-    paddingLeft: 20,
+    paddingLeft: 0,
     paddingBottom: 0,
   },
 });
 
 export default ({
-  height,
-  width,
   title,
   description,
   image,
   onClick,
+  elevation = 0,
+  style,
 }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{ width }} elevation={0}>
+    <Card className={classes.root} style={style} elevation={elevation}>
       <CardActionArea onClick={onClick}>
         <CardMedia
           className={classes.media}
-          style={{ height }}
           image={image}
         // title="Contemplative Reptile"
         >

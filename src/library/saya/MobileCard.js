@@ -13,9 +13,11 @@ const useStyles = makeStyles({
   root: {
     marginBottom: 40,
     borderRadius: 0,
+    width: 310,
   },
   media: {
     position: 'relative',
+    height: 305,
   },
   // mask: {
   //   width: '100%',
@@ -35,7 +37,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     textAlign: 'left',
     width: 260,
-    height: 200,
+    height: 250,
     color: '#ffffff',
   },
   cardAction: {
@@ -47,26 +49,25 @@ const useStyles = makeStyles({
 });
 
 export default ({
-  height,
-  width,
   title,
   description,
   image,
   onClick,
+  elevation = 0,
+  style,
 }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root} style={{ width }} elevation={0}>
+    <Card className={classes.root} style={style} elevation={elevation}>
       <CardMedia
         className={classes.media}
-        style={{ height }}
         image={image}
       // title="Contemplative Reptile"
       >
         <div className={classes.titleSection}>
           <div className={classes.title}>
-            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 24 }}>
               {title}
             </BreakAllContentText>
           </div>
@@ -79,7 +80,7 @@ export default ({
           Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
           across all continents except Antarctica
         </Typography> */}
-      <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 13, lineHeight: 1.54, paddingTop: 16, paddingBottom: 10, }}>
+      <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 13, lineHeight: 1.54, paddingTop: 16 }}>
         {description}
       </BreakAllContentText>
       <div className={classes.cardAction}>
