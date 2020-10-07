@@ -69,6 +69,7 @@ class IconBox extends _react.default.PureComponent {
       }
     }, imgUrl && _react.default.createElement("img", {
       src: imgUrl,
+      width: width,
       style: {
         width
       },

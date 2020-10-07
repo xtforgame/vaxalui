@@ -59,6 +59,7 @@ class IconBox extends React.PureComponent {
         {imgUrl && (
           <img
             src={imgUrl}
+            width={width}
             style={{
               width,
             }}
