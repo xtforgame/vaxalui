@@ -20,6 +20,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: 15,
     lineHeight: 1.33,
   },
+  firstTitleText: {
+    display: 'flex',
+  },
   firstTitleBack: {
     fontFamily: 'FilsonSoft-Light',
   },
@@ -33,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     fontSize: 45,
     paddingTop: 42,
+    lineHeight: 1.2,
     // whiteSpace: 'pre-line',
     // fontFamily: 'FilsonSoft-Bold',
   },
@@ -71,8 +75,10 @@ export default (props) => {
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>
-          <Text family="bold">{firstTitle}</Text>
-          <span className={classes.firstTitleBack}>{firstTitleBack}</span>
+          <div className={classes.firstTitleText}>
+            <Text family="bold">{firstTitle}</Text>
+            <Text className={classes.firstTitleBack} family="light">{firstTitleBack}</Text>
+          </div>
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
         <Text family={titleFontFamily} className={classes.title} style={{ fontSize: titleFontSize }}>{title}</Text>

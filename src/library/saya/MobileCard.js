@@ -58,35 +58,33 @@ export default ({
 
   return (
     <Card className={classes.root} style={{ width }} elevation={0}>
-      <CardActionArea onClick={onClick}>
-        <CardMedia
-          className={classes.media}
-          style={{ height }}
-          image={image}
-        // title="Contemplative Reptile"
-        >
-          <div className={classes.titleSection}>
-            <div className={classes.title}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
-                {title}
-              </BreakAllContentText>
-            </div>
+      <CardMedia
+        className={classes.media}
+        style={{ height }}
+        image={image}
+      // title="Contemplative Reptile"
+      >
+        <div className={classes.titleSection}>
+          <div className={classes.title}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28 }}>
+              {title}
+            </BreakAllContentText>
           </div>
-        </CardMedia>
-        {/* <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography> */}
-        {/* <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography> */}
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 13, lineHeight: 1.54, paddingTop: 16, paddingBottom: 10, }}>
-          {description}
-        </BreakAllContentText>
-      </CardActionArea>
+        </div>
+      </CardMedia>
+      {/* <Typography gutterBottom variant="h5" component="h2">
+          Lizard
+        </Typography> */}
+      {/* <Typography variant="body2" color="textSecondary" component="p">
+          Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+          across all continents except Antarctica
+        </Typography> */}
+      <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 13, lineHeight: 1.54, paddingTop: 16, paddingBottom: 10, }}>
+        {description}
+      </BreakAllContentText>
       <div className={classes.cardAction}>
         <div style={{ flex: 1 }} />
-        <Button size="small" color="primary" style={{ color: '#c0c823' }} onClick={onClick}>
+        <Button size="small" color="primary" style={{ color: '#c0c823', padding: 0 }} onClick={onClick}>
           <u>Read More</u>
         </Button>
       </div>

@@ -52,17 +52,16 @@ class AboutNews extends React.PureComponent {
               <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
             </div>
             <div className={classes.boxRoot}>
-            {item.map(i => (
-              <MobileCard
-            
-                height={i.height}
-                width={i.width}
-                title={i.title}
-                description={i.description}
-                image={i.image}
-                onClick={i.onClick}
-              />
-            ))}
+              {item.map(i => (
+                <MobileCard
+                  height={i.height}
+                  width={i.width}
+                  title={i.title}
+                  description={i.description}
+                  image={i.image}
+                  onClick={i.onClick}
+                />
+              ))}
             </div>
           </div>
         </ImageContainer>

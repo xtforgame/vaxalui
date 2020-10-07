@@ -31,6 +31,9 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     fontSize: 15,
     lineHeight: 1.33
   },
+  firstTitleText: {
+    display: 'flex'
+  },
   firstTitleBack: {
     fontFamily: 'FilsonSoft-Light'
   },
@@ -43,7 +46,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   title: {
     width: '100%',
     fontSize: 45,
-    paddingTop: 42
+    paddingTop: 42,
+    lineHeight: 1.2
   },
   subtitle: {
     fontSize: 20,
@@ -79,11 +83,14 @@ var _default = props => {
     className: classes.section
   }, _react.default.createElement("div", {
     className: classes.firstTitle
+  }, _react.default.createElement("div", {
+    className: classes.firstTitleText
   }, _react.default.createElement(_Text.default, {
     family: "bold"
-  }, firstTitle), _react.default.createElement("span", {
-    className: classes.firstTitleBack
-  }, firstTitleBack), _react.default.createElement("div", {
+  }, firstTitle), _react.default.createElement(_Text.default, {
+    className: classes.firstTitleBack,
+    family: "light"
+  }, firstTitleBack)), _react.default.createElement("div", {
     className: classes.firstLine,
     style: {
       backgroundColor: lineColor

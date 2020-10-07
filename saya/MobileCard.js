@@ -73,8 +73,6 @@ var _default = ({
       width
     },
     elevation: 0
-  }, _react.default.createElement(_CardActionArea.default, {
-    onClick: onClick
   }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
     style: {
@@ -98,7 +96,7 @@ var _default = ({
       paddingTop: 16,
       paddingBottom: 10
     }
-  }, description)), _react.default.createElement("div", {
+  }, description), _react.default.createElement("div", {
     className: classes.cardAction
   }, _react.default.createElement("div", {
     style: {
@@ -108,7 +106,8 @@ var _default = ({
     size: "small",
     color: "primary",
     style: {
-      color: '#c0c823'
+      color: '#c0c823',
+      padding: 0
     },
     onClick: onClick
   }, _react.default.createElement("u", null, "Read More"))));
