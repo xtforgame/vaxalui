@@ -11,32 +11,25 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
+
+var _Text = _interopRequireDefault(require("./Text"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
-  root: {
-    height: 273
-  },
-  section: {
-    width: 320,
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    height: '100%'
-  },
+  root: {},
   title: {
     width: 280,
-    fontSize: 20,
-    fontWeight: 'bold',
-    fontStretch: 'normal',
-    fontFamily: 'FilsonSoft-Bold',
-    whiteSpace: 'pre-line',
+    fontSize: 24,
     textAlign: 'center',
     paddingTop: 60
   },
   button: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    marginTop: 40,
     marginBottom: 60
   }
 };
@@ -48,7 +41,6 @@ class TitleButton extends _react.default.PureComponent {
       background,
       title,
       color,
-      height,
       label = 'Learn More',
       onClick
     } = this.props;
@@ -56,18 +48,20 @@ class TitleButton extends _react.default.PureComponent {
       className: classes.root,
       image: background,
       style: {
-        height,
         color,
         backgroundColor: background
       }
     }, _react.default.createElement("div", {
       className: classes.section
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement(_Text.default, {
+      family: "bold",
       className: classes.title
-    }, title), _react.default.createElement(_GreenButton.default, {
+    }, title), _react.default.createElement("div", {
+      className: classes.button
+    }, _react.default.createElement(_GreenButton.default, {
       text: label,
       onClick: onClick
-    }))));
+    })))));
   }
 
 }

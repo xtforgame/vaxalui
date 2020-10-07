@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 
 const useStyles = makeStyles(theme => ({
   root: {

@@ -15,19 +15,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    color: '#ffffff'
+    color: '#ffffff',
+    justifyContent: 'center'
+  },
+  container: {
+    position: 'relative',
+    height: 115
   },
   number: {
     fontSize: 70,
     fontFamily: 'FilsonSoftRegular',
-    lineHeight: 0.96,
+    lineHeight: 0.95,
     textAlign: 'left'
   },
   topTile: {
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 11,
-    lineHeight: 1.54,
     textAlign: 'left'
   },
   line: {
@@ -67,11 +70,7 @@ var _default = props => {
       color
     }
   }, _react.default.createElement("div", {
-    style: {
-      position: 'absolute',
-      height: 115,
-      marginTop: 36
-    }
+    className: classes.container
   }, _react.default.createElement("div", {
     className: classes.number
   }, number, !hidePercent && _react.default.createElement("span", {

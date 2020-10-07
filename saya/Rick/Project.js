@@ -11,7 +11,7 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

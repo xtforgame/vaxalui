@@ -3,7 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import IconBoxSection from '../bob/IconBoxSection';
 import IconBox from '../bob/IconBox';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 
 const styles = {
   root: {

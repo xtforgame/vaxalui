@@ -6,6 +6,7 @@ import Text from './Text';
 const useStyles = makeStyles(theme => ({
   root: {
     color: '#ffffff',
+    justifyContent: 'center',
   },
   section: {
     width: 320,
@@ -17,8 +18,6 @@ const useStyles = makeStyles(theme => ({
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.33,
   },
   firstTitleBack: {
@@ -33,15 +32,13 @@ const useStyles = makeStyles(theme => ({
   title: {
     width: '100%',
     fontSize: 45,
-    // paddingTop: 43,
-    whiteSpace: 'pre-line',
-    lineHeight: 'normal',
-    fontStretch: 'normal',
+    paddingTop: 42,
+    // whiteSpace: 'pre-line',
     // fontFamily: 'FilsonSoft-Bold',
   },
   subtitle: {
     fontSize: 20,
-    // paddingTop: 16,
+    paddingTop: 16,
     lineHeight: 1.6,
     // fontFamily: 'FilsonSoft-Light',
   },
@@ -59,13 +56,9 @@ export default (props) => {
     children,
     color,
     lineColor,
-    titleFontFamily,
-    subtitleFontFamily,
-    paddingTop,
-    titlePaddingTop,
-    subtitlePaddingTop,
+    titleFontFamily = 'bold',
+    subtitleFontFamily = 'light',
     titleFontSize,
-    buttonPosition,
   } = props;
 
   const classes = useStyles();
@@ -74,16 +67,16 @@ export default (props) => {
     <ImageContainer
       className={classes.root}
       image={backgroundImage}
-      style={{ height, color, paddingTop }}
+      style={{ height, color }}
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>
-          {firstTitle}
+          <Text family="bold">{firstTitle}</Text>
           <span className={classes.firstTitleBack}>{firstTitleBack}</span>
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
-        <Text family={titleFontFamily} className={classes.title} style={{ paddingTop: titlePaddingTop, fontSize: titleFontSize }}>{title}</Text>
-        <Text family={subtitleFontFamily} className={classes.subtitle} style={{ paddingTop: subtitlePaddingTop }} >{subtitle}</Text>
+        <Text family={titleFontFamily} className={classes.title} style={{ fontSize: titleFontSize }}>{title}</Text>
+        <Text family={subtitleFontFamily} className={classes.subtitle}>{subtitle}</Text>
         <div>{children}</div>
       </div>
     </ImageContainer>

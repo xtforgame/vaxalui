@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {

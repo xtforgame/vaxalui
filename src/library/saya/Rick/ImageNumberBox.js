@@ -5,18 +5,23 @@ import ImageContainer from '../ImageContainer';
 const useStyles = makeStyles(theme => ({
   root: {
     color: '#ffffff',
+    justifyContent: 'center',
+  },
+  container: {
+    position: 'relative',
+    height: 115,
   },
   number: {
     fontSize: 70,
     fontFamily: 'FilsonSoftRegular',
-    lineHeight: 0.96,
+    lineHeight: 0.95,
     textAlign: 'left',
   },
   topTile: {
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 11,
-    lineHeight: 1.54,
+    // paddingTop: 11,
+    // lineHeight: '67px',
     textAlign: 'left',
   },
   line: {
@@ -54,10 +59,9 @@ export default (props) => {
       className={classes.root}
       style={{ height: 194, width: '50%', backgroundColor, color }}
     >
-      <div
-        style={{ position: 'absolute', height: 115, marginTop: 36 }}
-      >
-        <div className={classes.number}>{number}
+      <div className={classes.container}>
+        <div className={classes.number}>
+          {number}
           {!hidePercent && <span style={{ fontSize: 12, }}>%</span>}
         </div>
         <div className={classes.topTile}> {topTile} </div>

@@ -17,7 +17,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    color: '#ffffff'
+    color: '#ffffff',
+    justifyContent: 'center'
   },
   section: {
     width: 320,
@@ -28,8 +29,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
-    fontWeight: 'bold',
-    fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.33
   },
   firstTitleBack: {
@@ -44,12 +43,11 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   title: {
     width: '100%',
     fontSize: 45,
-    whiteSpace: 'pre-line',
-    lineHeight: 'normal',
-    fontStretch: 'normal'
+    paddingTop: 42
   },
   subtitle: {
     fontSize: 20,
+    paddingTop: 16,
     lineHeight: 1.6
   }
 }));
@@ -65,13 +63,9 @@ var _default = props => {
     children,
     color,
     lineColor,
-    titleFontFamily,
-    subtitleFontFamily,
-    paddingTop,
-    titlePaddingTop,
-    subtitlePaddingTop,
-    titleFontSize,
-    buttonPosition
+    titleFontFamily = 'bold',
+    subtitleFontFamily = 'light',
+    titleFontSize
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
@@ -79,14 +73,15 @@ var _default = props => {
     image: backgroundImage,
     style: {
       height,
-      color,
-      paddingTop
+      color
     }
   }, _react.default.createElement("div", {
     className: classes.section
   }, _react.default.createElement("div", {
     className: classes.firstTitle
-  }, firstTitle, _react.default.createElement("span", {
+  }, _react.default.createElement(_Text.default, {
+    family: "bold"
+  }, firstTitle), _react.default.createElement("span", {
     className: classes.firstTitleBack
   }, firstTitleBack), _react.default.createElement("div", {
     className: classes.firstLine,
@@ -97,15 +92,11 @@ var _default = props => {
     family: titleFontFamily,
     className: classes.title,
     style: {
-      paddingTop: titlePaddingTop,
       fontSize: titleFontSize
     }
   }, title), _react.default.createElement(_Text.default, {
     family: subtitleFontFamily,
-    className: classes.subtitle,
-    style: {
-      paddingTop: subtitlePaddingTop
-    }
+    className: classes.subtitle
   }, subtitle), _react.default.createElement("div", null, children)));
 };
 
