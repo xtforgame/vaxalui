@@ -55,6 +55,8 @@ class Partner extends React.PureComponent {
 
   render() {
     const {
+      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+      labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
       email,
     } = this.state;
     const {
@@ -64,7 +66,7 @@ class Partner extends React.PureComponent {
     return (
       <React.Fragment>
         <pre className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
-          {'Sign up to stay in touch on the newest\nrenewal technologies, products,\nevents, and news from SAYA. '}
+          {subtitle}
         </pre>
         <div className={classes.email}>
           <TextField
@@ -78,7 +80,7 @@ class Partner extends React.PureComponent {
         <div className={classes.checkbox}>
           <Checkbox />
           <div className={classes.labelContent}>
-            <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
+            <label>{labelContent}</label>
           </div>
         </div>
         <div className={classes.button}>

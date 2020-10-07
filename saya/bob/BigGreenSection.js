@@ -89,7 +89,7 @@ class BigGreenSection extends _react.default.PureComponent {
     }, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
-        border: lineBorder
+        backgroundColor: fontColor
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle,

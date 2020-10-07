@@ -64,10 +64,10 @@ class ClassicFibers extends _react.default.PureComponent {
     return _react.default.createElement("div", {
       className: classes.root,
       style: {
-        height: height,
-        backgroundColor: backgroundColor,
+        height,
+        backgroundColor,
         color: fontColor,
-        marginTop: marginTop
+        marginTop
       }
     }, _react.default.createElement("div", {
       className: classes.title
@@ -76,7 +76,7 @@ class ClassicFibers extends _react.default.PureComponent {
     }, titleBack)), _react.default.createElement("div", {
       className: classes.line,
       style: {
-        border: borderStyle
+        backgroundColor: fontColor
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle

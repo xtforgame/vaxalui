@@ -83,7 +83,7 @@ class HomeTopSection extends _react.default.PureComponent {
       className: classes.line
     }), _react.default.createElement("div", {
       className: classes.subtitle
-    }, "With the next generation of recycled fibers"), _react.default.createElement("div", {
+    }, "Recycling Solutions from Bottles to Garments and Beyond"), _react.default.createElement("div", {
       className: classes.roundArrow,
       onClick: onClick
     }, _react.default.createElement("img", {

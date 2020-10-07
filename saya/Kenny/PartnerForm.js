@@ -84,6 +84,8 @@ class Partner extends _react.default.PureComponent {
 
   render() {
     const {
+      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+      labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
       email
     } = this.state;
     const {
@@ -91,7 +93,7 @@ class Partner extends _react.default.PureComponent {
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
       className: classes.subtitle
-    }, "Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology."), _react.default.createElement("div", {
+    }, subtitle), _react.default.createElement("div", {
       className: classes.email
     }, _react.default.createElement(_TextField.default, {
       className: classes.emailInput,
@@ -106,7 +108,7 @@ class Partner extends _react.default.PureComponent {
       className: classes.checkbox
     }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
       className: classes.labelContent
-    }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))));
+    }, _react.default.createElement("label", null, labelContent))));
   }
 
 }

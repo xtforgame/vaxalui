@@ -35,6 +35,11 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 40
+  },
+  subtitle2: {
+    fontSize: 20,
     fontFamily: 'FilsonSoft-Light',
     marginTop: 40
   },
@@ -64,20 +69,14 @@ const styles = {
     width: 352,
     margin: 24,
     height: '100%',
-    '& > .title': {
-      fontSize: 20,
-      marginTop: 80
-    }
+    fontSize: 14
   },
   right: {
     color: '#ffffff',
     width: 352,
     margin: 24,
     height: '100%',
-    '& > .title': {
-      fontSize: 20,
-      marginTop: 80
-    }
+    fontSize: 14
   },
   space: {
     height: 12
@@ -135,7 +134,7 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       }
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        fontFamily: 'FilsonSoft-Light'
+        fontFamily: 'FilsonSoft-Bold'
       }
     }, subtitle)), _react.default.createElement("div", {
       className: classes.description,
@@ -152,29 +151,35 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       className: classes.extended
     }, _react.default.createElement("div", {
       className: classes.left
-    }, _react.default.createElement("div", {
-      className: "title"
-    }, "Type of Materials and Finishing"), _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        whiteSpace: 'pre-line',
-        marginTop: 22,
-        fontSize: 14
+        fontFamily: 'FilsonSoft-Light',
+        fontSize: 20,
+        marginTop: 80
+      }
+    }, "Type of Materials and Finishing"), _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular',
+        marginTop: 22
       }
     }, `Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
 
-                We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021.`)), _react.default.createElement("div", {
+We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.`)), _react.default.createElement("div", {
       className: classes.right
-    }, _react.default.createElement("div", {
-      className: "title"
-    }, "Content Percentage"), _react.default.createElement("div", {
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
-        whiteSpace: 'pre-line',
-        marginTop: 22,
-        fontSize: 14
+        fontFamily: 'FilsonSoft-Light',
+        fontSize: 20,
+        marginTop: 80
+      }
+    }, "Content Percentage"), _react.default.createElement(_BreakAllContentText.default, {
+      style: {
+        fontFamily: 'FilsonSoftRegular',
+        marginTop: 22
       }
     }, `SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
 
-                Removing colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics.`)))), _react.default.createElement("div", {
+We aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution.`)))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

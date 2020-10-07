@@ -23,6 +23,11 @@ const styles = {
   },
   subtitle: {
     fontSize: 20,
+    fontFamily: 'FilsonSoft-Bold',
+    marginTop: 40,
+  },
+  subtitle2: {
+    fontSize: 20,
     fontFamily: 'FilsonSoft-Light',
     marginTop: 40,
   },
@@ -52,20 +57,14 @@ const styles = {
     width: 352,
     margin: 24,
     height: '100%',
-    '& > .title': {
-      fontSize: 20,
-      marginTop: 80,
-    }
+    fontSize: 14,
   },
   right: {
     color: '#ffffff',
     width: 352,
     margin: 24,
     height: '100%',
-    '& > .title': {
-      fontSize: 20,
-      marginTop: 80,
-    }
+    fontSize: 14,
   },
   space: {
     height: 12,
@@ -126,7 +125,7 @@ class ChallengesAndTransparency extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</BreakAllContentText>
             </div>
             <div
               className={classes.description}
@@ -143,20 +142,16 @@ class ChallengesAndTransparency extends React.PureComponent {
             className={ classes.extended }
           >
             <div className={classes.left}>
-              <div className="title">Type of Materials and Finishing</div>
-              <div style={{ whiteSpace: 'pre-line', marginTop: 22, fontSize: 14 }}>
-                {`Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Type of Materials and Finishing</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
 
-                We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing by 1H 2021.`}
-              </div>
+We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.`}</BreakAllContentText>
             </div>
             <div className={classes.right}>
-              <div className="title">Content Percentage</div>
-              <div style={{ whiteSpace: 'pre-line', marginTop: 22, fontSize: 14 }}>
-                {`SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Content Percentage</BreakAllContentText>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
 
-                Removing colors and pigments We aim to continuously increase the percentage of garment cutting scrap and overstock fabrics.`}
-              </div>
+We aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution.`}</BreakAllContentText>
             </div>
           </div>
         </div>

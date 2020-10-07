@@ -76,7 +76,7 @@ export default (props) => {
   const classes = useStyles();
 
   const [email, setEmail] = useState('');
-  const [language, setLanguage] = useState('');
+  const [language, setLanguage] = useState('English');
 
   return (
     <div className={clsx(classes.rowFlex)}>
@@ -170,7 +170,9 @@ export default (props) => {
           </div>
           <div style={{ width: 10, height: 8 }} />
           <Select
-            style={{ width: 300, height: 38 }}
+            formControlStyle={{ width: 300 }}
+            selectStyle={{ width: 300 }}
+            style={{ width: 300 }}
             options={['English', 'Traditional Chinese']}
             value={language}
             onChange={e => setLanguage(e.target.value)}

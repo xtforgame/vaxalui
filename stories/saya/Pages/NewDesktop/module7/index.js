@@ -37,7 +37,7 @@ storiesOf('saya|Pages/NewDesktop', module)
                   topImg={topImg}
                   bottomImg={bottomImg}
                 />
-                <div style={{ width: 461, height: 1, marginTop: 120, border: '1px solid #FFFFFF' }} />
+                <div style={{ width: 461, height: 1, marginTop: 120, backgroundColor: '#FFFFFF' }} />
                 <div style={{ fontFamily: 'FilsonSoftLight', fontWeight: 300, fontSize: 20, width: 460, marginTop: 40, color: '#ffffff' }}>
                   Enhanced Process
                 </div>

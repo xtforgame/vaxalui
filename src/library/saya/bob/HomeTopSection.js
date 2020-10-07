@@ -76,7 +76,7 @@ class HomeTopSection extends React.PureComponent {
         <div className={classes.line} />
 
         <div className={classes.subtitle}>
-          With the next generation of recycled fibers
+          Recycling Solutions from Bottles to Garments and Beyond
         </div>
 
         <div className={classes.roundArrow} onClick={onClick}>

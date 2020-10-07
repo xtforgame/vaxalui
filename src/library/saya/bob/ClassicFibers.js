@@ -55,10 +55,10 @@ class ClassicFibers extends React.PureComponent {
       <div
         className={classes.root}
         style={{
-          height: height,
-          backgroundColor: backgroundColor,
+          height,
+          backgroundColor,
           color: fontColor,
-          marginTop: marginTop,
+          marginTop,
         }}
       >
         <div className={classes.title}>
@@ -71,7 +71,7 @@ class ClassicFibers extends React.PureComponent {
         <div
           className={classes.line}
           style={{
-            border: borderStyle,
+            backgroundColor: fontColor,
           }}
         />
 
@@ -79,11 +79,11 @@ class ClassicFibers extends React.PureComponent {
           {subtitle}
         </div>
 
-        <div 
-        className={classes.box} 
-        style={{
-          width: boxWidth,
-        }}
+        <div
+          className={classes.box}
+          style={{
+            width: boxWidth,
+          }}
         >
           {children}
         </div>

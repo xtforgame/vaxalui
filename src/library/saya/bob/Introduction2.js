@@ -84,7 +84,7 @@ class Introduction extends React.PureComponent {
             <div
               className={classes.line}
               style={{
-                border: lineBorder,
+                backgroundColor: fontColor,
               }}
             />
             <div

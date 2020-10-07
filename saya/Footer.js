@@ -90,7 +90,7 @@ var _default = props => {
   } = props;
   const classes = useStyles();
   const [email, setEmail] = (0, _react.useState)('');
-  const [language, setLanguage] = (0, _react.useState)('');
+  const [language, setLanguage] = (0, _react.useState)('English');
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.rowFlex)
   }, _react.default.createElement("div", {
@@ -221,9 +221,14 @@ var _default = props => {
       height: 8
     }
   }), _react.default.createElement(_Select.default, {
+    formControlStyle: {
+      width: 300
+    },
+    selectStyle: {
+      width: 300
+    },
     style: {
-      width: 300,
-      height: 38
+      width: 300
     },
     options: ['English', 'Traditional Chinese'],
     value: language,
