@@ -15,6 +15,8 @@ var _TextField = _interopRequireDefault(require("./TextField"));
 
 var _Checkbox = _interopRequireDefault(require("../Checkbox"));
 
+var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -73,7 +75,7 @@ class Partner extends _react.default.PureComponent {
 
   render() {
     const {
-      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+      subtitle = 'Sign up to stay in touch on the newest renewal technologies, products, events, and news from SAYA.',
       labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
       email
     } = this.state;
@@ -81,7 +83,7 @@ class Partner extends _react.default.PureComponent {
       classes,
       onClick
     } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("pre", {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subtitle,
       style: {
         marginTop: 0,

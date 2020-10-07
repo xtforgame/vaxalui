@@ -21,7 +21,7 @@ const styles = {
   root: {},
   title: {
     width: 280,
-    fontSize: 24,
+    fontSize: 20,
     textAlign: 'center',
     paddingTop: 60
   },

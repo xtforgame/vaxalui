@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import Checkbox from '../Checkbox';
+import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
   subtitle: {
@@ -55,7 +56,7 @@ class Partner extends React.PureComponent {
 
   render() {
     const {
-      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+      subtitle = 'Sign up to stay in touch on the newest renewal technologies, products, events, and news from SAYA.',
       labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
       email,
     } = this.state;
@@ -65,9 +66,9 @@ class Partner extends React.PureComponent {
     } = this.props;
     return (
       <React.Fragment>
-        <pre className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
+        <BreakAllContentText className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
           {subtitle}
-        </pre>
+        </BreakAllContentText>
         <div className={classes.email}>
           <TextField
             className={classes.emailInput}

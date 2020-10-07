@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 45,
     color: '#ffffff',
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 'normal',
+    // lineHeight: 'normal',
   },
   line: {
     width: '100%',

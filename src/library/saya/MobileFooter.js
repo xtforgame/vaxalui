@@ -63,7 +63,7 @@ export default (props) => {
   const classes = useStyles();
 
   const [email, setEmail] = useState('');
-  const [language, setLanguage] = useState('');
+  const [language, setLanguage] = useState('English');
 
   return (
     <div className={clsx(classes.root)}>
@@ -125,6 +125,12 @@ export default (props) => {
           onClick={this.signUpNewsletter}
         /> */}
         <div style={{ width: 10, height: 12 }} />
+        <Button
+          width={'100%'}
+        >
+          SUBMIT
+        </Button>
+        <div style={{ width: 10, height: 20 }} />
         <div>Select language</div>
         <div style={{ width: 10, height: 10 }} />
         <Select
@@ -135,12 +141,6 @@ export default (props) => {
           value={language}
           onChange={e => setLanguage(e.target.value)}
         />
-        <div style={{ width: 10, height: 20 }} />
-        <Button
-          width={'100%'}
-        >
-          SUBMIT
-        </Button>
         <div style={{ width: 10, height: 32 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
         <div style={{ fontSize: 18 }}><u>change@sayarenew.com</u></div>

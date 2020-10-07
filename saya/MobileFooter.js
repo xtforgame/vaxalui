@@ -78,7 +78,7 @@ var _default = props => {
   } = props;
   const classes = useStyles();
   const [email, setEmail] = (0, _react.useState)('');
-  const [language, setLanguage] = (0, _react.useState)('');
+  const [language, setLanguage] = (0, _react.useState)('English');
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.root)
   }, _react.default.createElement("div", {
@@ -134,6 +134,13 @@ var _default = props => {
       width: 10,
       height: 12
     }
+  }), _react.default.createElement(_Button.default, {
+    width: '100%'
+  }, "SUBMIT"), _react.default.createElement("div", {
+    style: {
+      width: 10,
+      height: 20
+    }
   }), _react.default.createElement("div", null, "Select language"), _react.default.createElement("div", {
     style: {
       width: 10,
@@ -153,13 +160,6 @@ var _default = props => {
     value: language,
     onChange: e => setLanguage(e.target.value)
   }), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 20
-    }
-  }), _react.default.createElement(_Button.default, {
-    width: '100%'
-  }, "SUBMIT"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 32
