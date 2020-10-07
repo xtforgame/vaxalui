@@ -44,6 +44,7 @@ class GreenButton extends React.PureComponent {
   render() {
     const {
       classes,
+      className,
       text,
       disabled = false,
       style,
@@ -54,7 +55,7 @@ class GreenButton extends React.PureComponent {
         // disabled
         onClick={onClick}
         style={style}
-        className={clsx(classes.button, { [classes.disabledButton]: disabled })}
+        className={clsx(classes.button, className, { [classes.disabledButton]: disabled })}
       >
         {text}
       </button>

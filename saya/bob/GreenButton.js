@@ -54,6 +54,7 @@ class GreenButton extends _react.default.PureComponent {
   render() {
     const {
       classes,
+      className,
       text,
       disabled = false,
       style,
@@ -62,7 +63,7 @@ class GreenButton extends _react.default.PureComponent {
     return _react.default.createElement("button", {
       onClick: onClick,
       style: style,
-      className: (0, _clsx.default)(classes.button, {
+      className: (0, _clsx.default)(classes.button, className, {
         [classes.disabledButton]: disabled
       })
     }, text);

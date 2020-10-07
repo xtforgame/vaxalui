@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import GreenButton from '../bob/GreenButton';
 
 const styles = {
   root: {
@@ -29,18 +30,6 @@ const styles = {
   },
   button: {
     width: 160,
-    height: 50,
-    fontSize: 15,
-    color: '#ffffff',
-    fontWeight: 'bold',
-    backgroundColor: '#64703f',
-    border: 'none',
-    borderRadius: 25,
-    marginTop: 97,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontFamily: 'FilsonSoft-Bold',
   },
 };
 
@@ -55,6 +44,7 @@ class ImageBoxSmall extends React.PureComponent {
       subtitleFontFamily,
       fontColor,
       paddingTop,
+      onClick,
     } = this.props;
 
 
@@ -96,9 +86,7 @@ class ImageBoxSmall extends React.PureComponent {
             bottom: 40,
           }}
         >
-          <button className={classes.button}>
-            Learn More
-          </button>
+          <GreenButton className={classes.button} onClick={onClick} text="Learn More" />
         </div>
       </div>
 

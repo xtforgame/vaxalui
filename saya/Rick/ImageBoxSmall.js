@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -33,19 +35,7 @@ const styles = {
     paddingTop: 4
   },
   button: {
-    width: 160,
-    height: 50,
-    fontSize: 15,
-    color: '#ffffff',
-    fontWeight: 'bold',
-    backgroundColor: '#64703f',
-    border: 'none',
-    borderRadius: 25,
-    marginTop: 97,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontFamily: 'FilsonSoft-Bold'
+    width: 160
   }
 };
 
@@ -59,7 +49,8 @@ class ImageBoxSmall extends _react.default.PureComponent {
       backgroundImage,
       subtitleFontFamily,
       fontColor,
-      paddingTop
+      paddingTop,
+      onClick
     } = this.props;
     return _react.default.createElement("div", {
       className: classes.root,
@@ -93,9 +84,11 @@ class ImageBoxSmall extends _react.default.PureComponent {
         width: '100%',
         bottom: 40
       }
-    }, _react.default.createElement("button", {
-      className: classes.button
-    }, "Learn More")));
+    }, _react.default.createElement(_GreenButton.default, {
+      className: classes.button,
+      onClick: onClick,
+      text: "Learn More"
+    })));
   }
 
 }
