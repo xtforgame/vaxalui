@@ -108,6 +108,8 @@ export default (props) => {
         <div>Select language</div>
         <div style={{ width: 10, height: 8 }} />
         <Select
+          formControlStyle={{ width: '100%' }}
+          selectStyle={{ width: '100%' }}
           style={{ width: '100%' }}
           options={['English', 'Traditional Chinese']}
           value={language}

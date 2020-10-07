@@ -58,12 +58,15 @@ class Select extends React.PureComponent {
       value,
       onChange,
       options,
+      formControlStyle,
+      selectStyle,
       style,
       ...others
     } = this.props;
     return (
-      <FormControl className={classes.margin}>
+      <FormControl className={classes.margin} style={formControlStyle}>
         <MUISelect
+          style={selectStyle}
           labelId="demo-customized-select-label"
           id="demo-customized-select"
           value={value}

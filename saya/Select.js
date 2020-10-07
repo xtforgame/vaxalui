@@ -76,13 +76,17 @@ class Select extends _react.default.PureComponent {
       value,
       onChange,
       options,
+      formControlStyle,
+      selectStyle,
       style
     } = _this$props,
-          others = _objectWithoutProperties(_this$props, ["classes", "className", "value", "onChange", "options", "style"]);
+          others = _objectWithoutProperties(_this$props, ["classes", "className", "value", "onChange", "options", "formControlStyle", "selectStyle", "style"]);
 
     return _react.default.createElement(_FormControl.default, {
-      className: classes.margin
+      className: classes.margin,
+      style: formControlStyle
     }, _react.default.createElement(_Select.default, {
+      style: selectStyle,
       labelId: "demo-customized-select-label",
       id: "demo-customized-select",
       value: value,

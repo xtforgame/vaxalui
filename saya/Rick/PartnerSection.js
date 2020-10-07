@@ -11,9 +11,9 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _IconBoxSection = _interopRequireDefault(require("./IconBoxSection"));
+var _IconBoxSection = _interopRequireDefault(require("../bob/IconBoxSection"));
 
-var _IconBox = _interopRequireDefault(require("./IconBox"));
+var _IconBox = _interopRequireDefault(require("../bob/IconBox"));
 
 var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
@@ -36,11 +36,11 @@ class PartnerSection extends _react.default.PureComponent {
     return _react.default.createElement(_ImageContainer.default, {
       className: classes.root
     }, partner.map(r => _react.default.createElement(_IconBoxSection.default, {
-      borderColor: borderColor
+      color: borderColor
     }, r.map(cell => _react.default.createElement(_IconBox.default, {
-      imgUrl: cell,
-      width: "80px",
-      borderColor: borderColor
+      cell: cell,
+      size: "small",
+      color: borderColor
     })))));
   }
 

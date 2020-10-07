@@ -1,8 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
-import IconBoxSection from './IconBoxSection';
-import IconBox from './IconBox';
+import IconBoxSection from '../bob/IconBoxSection';
+import IconBox from '../bob/IconBox';
 import GreenButton from './GreenButton';
 
 const styles = {
@@ -34,8 +34,8 @@ class PartnerSection extends React.PureComponent {
         <div className={classes.subTitle}>{subTitle}</div>
       </div> */}
         {partner.map(r =>
-          <IconBoxSection borderColor={borderColor}>
-            {r.map(cell => <IconBox imgUrl={cell} width="80px" borderColor={borderColor} />)}
+          <IconBoxSection color={borderColor}>
+            {r.map(cell => <IconBox cell={cell} size="small" color={borderColor} />)}
           </IconBoxSection>
         )}
         {/* <div className={classes.section}>

@@ -123,6 +123,12 @@ var _default = props => {
       height: 8
     }
   }), _react.default.createElement(_Select.default, {
+    formControlStyle: {
+      width: '100%'
+    },
+    selectStyle: {
+      width: '100%'
+    },
     style: {
       width: '100%'
     },

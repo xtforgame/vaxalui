@@ -71,27 +71,32 @@ storiesOf('saya|Pages/NewMobile', module)
               buttonPosition="center"
             >
               <PartnerSection
+                borderColor="#e3e3e3"
                 partner={[
                   [
                     { imgUrl: icon1, url: 'http://google.com' },
                     { imgUrl: icon2, url: 'http://google.com' },
                     { imgUrl: icon3, url: 'http://google.com' },
                     { imgUrl: icon4, url: 'http://google.com' },
-                    { imgUrl: icon5, url: 'http://google.com' },
                   ],
                   [
                     { imgUrl: icon5, url: 'http://google.com' },
-                    { imgUrl: icon4, url: 'http://google.com' },
-                    { imgUrl: icon2, url: 'http://google.com' },
-                    { imgUrl: icon3, url: 'http://google.com' },
-                    { imgUrl: icon1, url: 'http://google.com' },
+                    { imgUrl: icon6, url: 'http://google.com' },
+                    { imgUrl: icon7, url: 'http://google.com' },
+                    { imgUrl: icon8, url: 'http://google.com' },
+
                   ],
                   [
-                    { imgUrl: icon3, url: 'http://google.com' },
-                    { imgUrl: icon1, url: 'http://google.com' },
-                    { imgUrl: icon4, url: 'http://google.com' },
-                    { imgUrl: icon5, url: 'http://google.com' },
-                    { imgUrl: icon2, url: 'http://google.com' },
+                    { imgUrl: icon9, url: 'http://google.com' },
+                    { imgUrl: icon10, url: 'http://google.com' },
+                    { imgUrl: icon11, url: 'http://google.com' },
+                    { imgUrl: icon12, url: 'http://google.com' },
+                  ],
+                  [
+                    { imgUrl: icon13, url: 'http://google.com' },
+                    { imgUrl: icon14, url: 'http://google.com' },
+                    null,
+                    null,
                   ],
                 ]}
               />

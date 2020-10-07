@@ -26,6 +26,12 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     flexWrap: 'wrap',
     paddingTop: 60
   },
+  section2: {
+    width: 320,
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap'
+  },
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
@@ -74,7 +80,7 @@ var _default = props => {
     children,
     color,
     lineColor,
-    buttonPosition
+    buttonPosition = 'flex-start'
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
@@ -99,11 +105,13 @@ var _default = props => {
     className: classes.title
   }, title), _react.default.createElement("div", {
     className: classes.subTitle
-  }, subTitle), "  "), _react.default.createElement("div", {
+  }, subTitle), ' '), _react.default.createElement("div", {
     style: {
       width: '100%'
     }
-  }, children), !hideButton && _react.default.createElement("div", {
+  }, children), _react.default.createElement("div", {
+    className: classes.section2
+  }, !hideButton && _react.default.createElement("div", {
     className: classes.button,
     style: {
       alignSelf: buttonPosition
@@ -111,7 +119,7 @@ var _default = props => {
   }, _react.default.createElement(_GreenButton.default, {
     text: "Learn More",
     onClick: onClick
-  })));
+  }))));
 };
 
 exports.default = _default;

@@ -14,6 +14,12 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     paddingTop: 60,
   },
+  section2: {
+    width: 320,
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+  },
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
@@ -63,7 +69,7 @@ export default (props) => {
     children,
     color,
     lineColor,
-    buttonPosition,
+    buttonPosition = 'flex-start',
   } = props;
 
   const classes = useStyles();
@@ -81,8 +87,11 @@ export default (props) => {
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
         </div>
         <div className={classes.title}>{title}</div>
-        <div className={classes.subTitle}>{subTitle}</div>  </div>
-        <div style={{width:'100%'}}>{children}</div>
+        <div className={classes.subTitle}>{subTitle}</div>
+        {' '}
+      </div>
+      <div style={{ width: '100%' }}>{children}</div>
+      <div className={classes.section2}>
         {!hideButton && (
           <div className={classes.button} style={{ alignSelf: buttonPosition }}>
             <GreenButton
@@ -91,7 +100,7 @@ export default (props) => {
             />
           </div>
         )}
-    
+      </div>
     </ImageContainer>
 
   );

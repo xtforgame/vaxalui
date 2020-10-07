@@ -4,8 +4,6 @@ import clsx from 'clsx';
 
 const styles = {
   root: {
-    width: 140,
-    height: 140,
     borderLeftStyle: 'solid',
     borderLeftWidth: 1,
     borderRightStyle: 'solid',
@@ -13,6 +11,14 @@ const styles = {
     marginLeft: -1,
     borderBottom: 0,
     borderTop: 0,
+  },
+  normalSize: {
+    width: 140,
+    height: 140,
+  },
+  smallSize: {
+    width: 80,
+    height: 80,
   },
   clickable: {
     cursor: 'pointer',
@@ -25,7 +31,10 @@ class IconBox extends React.PureComponent {
       cell,
       width,
       color = '#e8e8e8',
+      size = 'normal',
     } = this.props;
+
+    const sizeClass = classes[`${size}Size`] || '';
 
     const {
       imgUrl,
@@ -41,7 +50,7 @@ class IconBox extends React.PureComponent {
     }
     return (
       <div
-        className={clsx(classes.root, { [classes.clickable]: !!(oc || url) })}
+        className={clsx(classes.root, sizeClass, { [classes.clickable]: !!(oc || url) })}
         style={{
           borderLeftColor: color,
           borderRightColor: color,
