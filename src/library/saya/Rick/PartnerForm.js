@@ -2,21 +2,22 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
+import Checkbox from '../Checkbox';
 
 const styles = {
   subtitle: {
-    width: 280,
+    width: '100%',
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 22,
-    lineHeight:1.54,
+    lineHeight: 1.54,
   },
   email: {
     display: 'flex',
     marginTop: 11,
+    width: '100%',
   },
   emailInput: {
-    width: 280,
+    width: '100%',
     fontSize: 12,
     color: '#000000',
     border: 'solid 1px #000000',
@@ -26,21 +27,17 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     marginTop: 11,
+    width: '100%',
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 11,
-  },
-  box: {
-    width: 25,
-    height: 25,
+    paddingTop: 20,
   },
   labelContent: {
-    width: 235,
-    fontSize: 12,
+    flex: 1,
+    fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 20,
-    lineHeight:'normal',
   },
 };
 
@@ -79,17 +76,17 @@ class Partner extends React.PureComponent {
         </div>
 
         <div className={classes.checkbox}>
-          <input className={classes.box} type="checkbox" value="checkbox" />
+          <Checkbox />
           <div className={classes.labelContent}>
-            <label>SAYA  may use my email address provided above to send me relevant marketing communications. I understand that I can unsubscribe from these communications at any time.</label>
+            <label>SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.</label>
           </div>
-
         </div>
         <div className={classes.button}>
           <GreenButton
             text="SUBMIT"
-            width={280}
-            height={44}
+            style={{
+              width: '100%',
+            }}
             onClick={onClick}
           />
         </div>

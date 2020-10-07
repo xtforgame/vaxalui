@@ -16,7 +16,7 @@ const styles = {
     flexDirection: 'column',
     flexWrap: 'wrap',
     alignItems: 'center',
-    paddingTop: 170,
+    paddingTop: 160,
   },
   title: {
     fontSize: 30,
@@ -40,8 +40,8 @@ class Partner extends React.PureComponent {
         image={backgroundImage}
       >
         <ImageContainer className={classes.bottle} image={bottleImage}>
-          <div style={{ width: 245 }}>
-            <pre className={classes.title} style={{ marginTop: 0, marginBottom: 0, }} >
+          <div style={{ width: 240 }}>
+            <pre className={classes.title} style={{ marginTop: 0, marginBottom: 32 }} >
               {'Get Useful\nUpdates'}
             </pre>
 

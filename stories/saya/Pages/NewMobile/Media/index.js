@@ -35,8 +35,22 @@ storiesOf('saya|Pages/NewMobile', module)
                       <div>
                         <div style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, color: '#64703f', }}>
                           Please subscribe our newsletter to download
-                      </div>
-                        <div style={{ height: 300, marginTop: 11, backgroundColor: '#e5e5e5', textAlign: 'left', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+                        </div>
+                        <div
+                          style={{
+                            height: 300,
+                            marginTop: 11,
+                            paddingTop: 22,
+                            paddingBottom: 22,
+                            paddingLeft: 20,
+                            paddingRight: 20,
+                            backgroundColor: '#e5e5e5',
+                            textAlign: 'left',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                          }}
+                        >
                           <PartnerForm />
                         </div>
                         <div style={{ height: 11, width: '100%' }} />

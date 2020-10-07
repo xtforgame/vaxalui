@@ -56,10 +56,12 @@ class GreenButton extends _react.default.PureComponent {
       classes,
       text,
       disabled = false,
+      style,
       onClick = () => {}
     } = this.props;
     return _react.default.createElement("button", {
       onClick: onClick,
+      style: style,
       className: (0, _clsx.default)(classes.button, {
         [classes.disabledButton]: disabled
       })

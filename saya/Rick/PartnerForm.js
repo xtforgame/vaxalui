@@ -13,24 +13,26 @@ var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
 var _TextField = _interopRequireDefault(require("./TextField"));
 
+var _Checkbox = _interopRequireDefault(require("../Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 const styles = {
   subtitle: {
-    width: 280,
+    width: '100%',
     fontSize: 13,
     fontFamily: 'FilsonSoftRegular',
-    paddingTop: 22,
     lineHeight: 1.54
   },
   email: {
     display: 'flex',
-    marginTop: 11
+    marginTop: 11,
+    width: '100%'
   },
   emailInput: {
-    width: 280,
+    width: '100%',
     fontSize: 12,
     color: '#000000',
     border: 'solid 1px #000000',
@@ -39,22 +41,18 @@ const styles = {
   button: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: 11
+    marginTop: 11,
+    width: '100%'
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 11
-  },
-  box: {
-    width: 25,
-    height: 25
+    paddingTop: 20
   },
   labelContent: {
-    width: 235,
-    fontSize: 12,
+    flex: 1,
+    fontSize: 10,
     fontFamily: 'FilsonSoftRegular',
-    paddingLeft: 20,
-    lineHeight: 'normal'
+    paddingLeft: 20
   }
 };
 
@@ -96,18 +94,15 @@ class Partner extends _react.default.PureComponent {
       placeholder: "Your email address"
     })), _react.default.createElement("div", {
       className: classes.checkbox
-    }, _react.default.createElement("input", {
-      className: classes.box,
-      type: "checkbox",
-      value: "checkbox"
-    }), _react.default.createElement("div", {
+    }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
       className: classes.labelContent
-    }, _react.default.createElement("label", null, "SAYA  may use my email address provided above to send me relevant marketing communications. I understand that I can unsubscribe from these communications at any time."))), _react.default.createElement("div", {
+    }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "SUBMIT",
-      width: 280,
-      height: 44,
+      style: {
+        width: '100%'
+      },
       onClick: onClick
     })));
   }
