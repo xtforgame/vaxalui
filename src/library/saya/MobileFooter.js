@@ -85,9 +85,13 @@ export default (props) => {
             justifyContent: 'center',
           }}
         >
-          {fbIcon}
+          <a href="https://www.facebook.com/sayarenew" target="_blank" style={{ color: '#ffffff' }}>
+            {fbIcon}
+          </a>
           <div style={{ width: 10, height: 1 }} />
-          {igIcon}
+          <a href="https://www.instagram.com/sayafibers" target="_blank" style={{ color: '#ffffff' }}>
+            {igIcon}
+          </a>
         </pre>
       </div>
       {/* <div className={classes.leftColumn}>
@@ -143,10 +147,10 @@ export default (props) => {
         />
         <div style={{ width: 10, height: 32 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
-        <div style={{ fontSize: 18 }}><u>change@sayarenew.com</u></div>
+        <div style={{ fontSize: 18 }}><a href="mailto:change@sayarenew.com" style={{ color: '#ffffff' }}><u>change@sayarenew.com</u></a></div>
         <div style={{ width: 10, height: 18 }} />
         <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
-        <div style={{ fontSize: 18 }}><u>https://www.npc.com.tw/</u></div>
+        <div style={{ fontSize: 18 }}><a href="https://www.npc.com.tw" target="_blank" style={{ color: '#ffffff' }}><u>https://www.npc.com.tw</u></a></div>
         <div style={{ width: 10, height: 75 }} />
         <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
         <div style={{ width: 10, height: 20 }} />

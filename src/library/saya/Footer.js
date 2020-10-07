@@ -99,18 +99,22 @@ export default (props) => {
               display: 'flex',
             }}
           >
-            {fbIcon}
+            <a href="https://www.facebook.com/sayarenew" target="_blank" style={{ color: '#ffffff' }}>
+              {fbIcon}
+            </a>
             <div style={{ width: 20, height: 1 }} />
-            {igIcon}
+            <a href="https://www.instagram.com/sayafibers" target="_blank" style={{ color: '#ffffff' }}>
+              {igIcon}
+            </a>
           </div>
         </div>
         <div style={{ textAlign: 'left' }}>
           <div style={{ width: 10, height: 50 }} />
           <div style={{ display: 'inline', fontSize: 12, marginRight: 4 }}>Contact:</div>
-          <div style={{ display: 'inline', fontSize: 12 }}><u>change@sayarenew.com</u></div>
+          <div style={{ display: 'inline', fontSize: 12 }}><a href="mailto:change@sayarenew.com" style={{ color: '#ffffff' }}><u>change@sayarenew.com</u></a></div>
           <div style={{ width: 10, height: 0 }} />
           <div style={{ display: 'inline', fontSize: 12, marginRight: 4 }}>Also visit Nan Ya Plastic:</div>
-          <div style={{ display: 'inline', fontSize: 12 }}><u>https://www.npc.com.tw/</u></div>
+          <div style={{ display: 'inline', fontSize: 12 }}><a href="https://www.npc.com.tw" target="_blank" style={{ color: '#ffffff' }}><u>https://www.npc.com.tw</u></a></div>
           <div style={{ width: 10, height: 72 }} />
           <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
         </div>

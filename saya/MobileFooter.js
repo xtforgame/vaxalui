@@ -98,12 +98,24 @@ var _default = props => {
       display: 'flex',
       justifyContent: 'center'
     }
-  }, fbIcon, _react.default.createElement("div", {
+  }, _react.default.createElement("a", {
+    href: "https://www.facebook.com/sayarenew",
+    target: "_blank",
+    style: {
+      color: '#ffffff'
+    }
+  }, fbIcon), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 1
     }
-  }), igIcon)), _react.default.createElement("div", {
+  }), _react.default.createElement("a", {
+    href: "https://www.instagram.com/sayafibers",
+    target: "_blank",
+    style: {
+      color: '#ffffff'
+    }
+  }, igIcon))), _react.default.createElement("div", {
     style: {
       textAlign: 'left'
     }
@@ -172,7 +184,12 @@ var _default = props => {
     style: {
       fontSize: 18
     }
-  }, _react.default.createElement("u", null, "change@sayarenew.com")), _react.default.createElement("div", {
+  }, _react.default.createElement("a", {
+    href: "mailto:change@sayarenew.com",
+    style: {
+      color: '#ffffff'
+    }
+  }, _react.default.createElement("u", null, "change@sayarenew.com"))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 18
@@ -185,7 +202,13 @@ var _default = props => {
     style: {
       fontSize: 18
     }
-  }, _react.default.createElement("u", null, "https://www.npc.com.tw/")), _react.default.createElement("div", {
+  }, _react.default.createElement("a", {
+    href: "https://www.npc.com.tw",
+    target: "_blank",
+    style: {
+      color: '#ffffff'
+    }
+  }, _react.default.createElement("u", null, "https://www.npc.com.tw"))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 75
