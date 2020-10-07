@@ -1,9 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   root: {
     width: 320,
     height: 200,
@@ -31,38 +31,39 @@ const styles = {
     paddingTop: 8,
     fontFamily: 'FilsonSoftRegular',
   },
+  flex1: {
+    flex: 1,
+  },
   button: {
-    marginTop: 0,
-  }
-};
+    marginBottom: 20,
+  },
+}));
 
-class Project extends React.PureComponent {
-  render() {
-    const {
-      classes,
-      title = "Backbone of our sustainable textile business",
-      buttonText = "Learn More",
-      disabled,
-      type,
-      typeBack,
-      onClick,
-    } = this.props;
-    return (
-      <div
-        className={clsx(classes.root, { [classes.disabledBackground]: disabled })}
-      >
-        <div className={classes.title}>{title}</div>
-        <div className={classes.type}>
-          {type}
-          <span style={{ fontFamily: 'FilsonSoft-Light' }}>{typeBack}</span>
-        </div>
-        <div className={classes.button}>
-          <GreenButton  disabled={disabled} text={buttonText} onClick={onClick} />
-        </div>
+export default (props) => {
+  const {
+    title = 'Backbone of our sustainable textile business',
+    buttonText = 'Learn More',
+    disabled,
+    type,
+    typeBack,
+    onClick,
+  } = props;
+
+  const classes = useStyles();
+
+  return (
+    <div
+      className={clsx(classes.root, { [classes.disabledBackground]: disabled })}
+    >
+      <div className={classes.title}>{title}</div>
+      <div className={classes.type}>
+        {type}
+        <span style={{ fontFamily: 'FilsonSoft-Light' }}>{typeBack}</span>
       </div>
-    );
-  }
-}
-
-
-export default withStyles(styles)(Project);
+      <div className={classes.flex1} />
+      <div className={classes.button}>
+        <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
+      </div>
+    </div>
+  );
+};

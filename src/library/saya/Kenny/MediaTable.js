@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import BreakAllContentText from '../BreakAllContentText';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import ImageContainer from '../ImageContainer';
 import PartnerForm from './PartnerForm';

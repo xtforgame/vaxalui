@@ -71,7 +71,8 @@ var _default = props => {
     }, _react.default.createElement("div", {
       style: {
         width: '100%',
-        height: 40,
+        paddingTop: 11,
+        paddingBottom: 11,
         display: 'flex',
         justifyContent: 'start'
       }

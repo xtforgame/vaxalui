@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 
 const styles = {
   root: {

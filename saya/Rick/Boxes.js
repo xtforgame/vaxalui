@@ -9,18 +9,30 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _CenteredContainer = _interopRequireDefault(require("../CenteredContainer"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
-    height: 659,
     textAlign: 'center'
   },
   title: {
     fontSize: 30,
     paddingTop: 60
+  },
+  outerContainer: {
+    width: '100%',
+    overflow: 'hidden',
+    marginTop: 6,
+    paddingLeft: 'calc(50% - 160px)',
+    paddingTop: 60,
+    textAlign: 'center'
+  },
+  innerContainer: {
+    paddingRight: 'calc(100% - 320px)'
   },
   secondLine: {
     width: '100%',
@@ -48,19 +60,15 @@ var _default = props => {
     children
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
-    className: classes.root,
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_CenteredContainer.default, {
     style: {
-      width: '100%',
       color,
-      backgroundColor,
-      overflow: 'scroll'
+      backgroundColor
     }
   }, _react.default.createElement("div", {
-    style: {
-      position: 'absolute',
-      width: '80%'
-    }
+    className: classes.outerContainer
+  }, _react.default.createElement("div", {
+    className: classes.innerContainer
   }, _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement("pre", {
@@ -80,30 +88,30 @@ var _default = props => {
       margin: 0
     }
   }, subtitle)), _react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      justifyContent: 'center'
-    }
-  }, _react.default.createElement("div", {
     className: classes.secondLine,
     style: {
       backgroundColor: color
     }
-  })), _react.default.createElement("div", {
+  }), _react.default.createElement("div", {
     className: classes.content
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoftRegular',
       margin: 0
     }
-  }, content)), _react.default.createElement("div", {
+  }, content))), _react.default.createElement("div", {
     style: {
       display: 'flex',
-      position: 'absolute',
-      backgroundColor,
-      marginTop: 57
+      width: '100%',
+      overflow: 'scroll',
+      marginTop: 40,
+      marginBottom: 95
     }
-  }, children))));
+  }, _react.default.createElement("div", {
+    style: {
+      display: 'flex'
+    }
+  }, children)))));
 };
 
 exports.default = _default;

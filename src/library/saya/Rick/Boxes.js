@@ -1,15 +1,26 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import CenteredContainer from '../CenteredContainer';
 import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 659,
     textAlign: 'center',
   },
   title: {
     fontSize: 30,
     paddingTop: 60,
+  },
+  outerContainer: {
+    width: '100%',
+    overflow: 'hidden',
+    marginTop: 6,
+    paddingLeft: 'calc(50% - 160px)',
+    paddingTop: 60,
+    textAlign: 'center',
+  },
+  innerContainer: {
+    paddingRight: 'calc(100% - 320px)',
   },
   secondLine: {
     width: '100%',
@@ -41,43 +52,39 @@ export default (props) => {
 
   return (
     <React.Fragment>
-      <ImageContainer
-        className={classes.root}
+      <CenteredContainer
         style={{
-          width: '100%', color, backgroundColor, overflow: 'scroll',
+          color,
+          backgroundColor,
         }}
       >
-        <div
-          style={{ position: 'absolute', width: '80%', }}
-        >
-          <div className={classes.title}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>
-              {title}
-              <span style={{ fontFamily: 'FilsonSoft-Light', }}>{titleBack}</span>
-            </pre>
-          </div>
+        <div className={classes.outerContainer}>
+          <div className={classes.innerContainer}>
+            <div className={classes.title}>
+              <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>
+                {title}
+                <span style={{ fontFamily: 'FilsonSoft-Light', }}>{titleBack}</span>
+              </pre>
+            </div>
 
-          <div className={classes.subtitle}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>{subtitle}</pre>
-          </div>
+            <div className={classes.subtitle}>
+              <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0 }}>{subtitle}</pre>
+            </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div className={classes.secondLine} style={{ backgroundColor: color }} />
+
+            {/* <div style={{ flex: 0, height: 40, width: '100%' }} /> */}
+            <div className={classes.content}>
+              <pre style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{content}</pre>
+            </div>
           </div>
-
-          {/* <div style={{ flex: 0, height: 40, width: '100%' }} /> */}
-          <div className={classes.content}>
-            <pre style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{content}</pre>
-          </div>
-
-
-          <div style={{
-            display: 'flex', position: 'absolute', backgroundColor, marginTop: 57,
-          }}>
-            {children}
+          <div style={{ display: 'flex', width: '100%', overflow: 'scroll', marginTop: 40, marginBottom: 95 }}>
+            <div style={{ display: 'flex' }}>
+              {children}
+            </div>
           </div>
         </div>
-      </ImageContainer>
-    </React.Fragment >
+      </CenteredContainer>
+    </React.Fragment>
   );
 };

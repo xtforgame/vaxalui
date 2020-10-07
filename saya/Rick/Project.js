@@ -15,7 +15,7 @@ var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-const styles = {
+const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
     width: 320,
     height: 200,
@@ -43,45 +43,45 @@ const styles = {
     paddingTop: 8,
     fontFamily: 'FilsonSoftRegular'
   },
+  flex1: {
+    flex: 1
+  },
   button: {
-    marginTop: 0
+    marginBottom: 20
   }
+}));
+
+var _default = props => {
+  const {
+    title = 'Backbone of our sustainable textile business',
+    buttonText = 'Learn More',
+    disabled,
+    type,
+    typeBack,
+    onClick
+  } = props;
+  const classes = useStyles();
+  return _react.default.createElement("div", {
+    className: (0, _clsx.default)(classes.root, {
+      [classes.disabledBackground]: disabled
+    })
+  }, _react.default.createElement("div", {
+    className: classes.title
+  }, title), _react.default.createElement("div", {
+    className: classes.type
+  }, type, _react.default.createElement("span", {
+    style: {
+      fontFamily: 'FilsonSoft-Light'
+    }
+  }, typeBack)), _react.default.createElement("div", {
+    className: classes.flex1
+  }), _react.default.createElement("div", {
+    className: classes.button
+  }, _react.default.createElement(_GreenButton.default, {
+    disabled: disabled,
+    text: buttonText,
+    onClick: onClick
+  })));
 };
-
-class Project extends _react.default.PureComponent {
-  render() {
-    const {
-      classes,
-      title = "Backbone of our sustainable textile business",
-      buttonText = "Learn More",
-      disabled,
-      type,
-      typeBack,
-      onClick
-    } = this.props;
-    return _react.default.createElement("div", {
-      className: (0, _clsx.default)(classes.root, {
-        [classes.disabledBackground]: disabled
-      })
-    }, _react.default.createElement("div", {
-      className: classes.title
-    }, title), _react.default.createElement("div", {
-      className: classes.type
-    }, type, _react.default.createElement("span", {
-      style: {
-        fontFamily: 'FilsonSoft-Light'
-      }
-    }, typeBack)), _react.default.createElement("div", {
-      className: classes.button
-    }, _react.default.createElement(_GreenButton.default, {
-      disabled: disabled,
-      text: buttonText,
-      onClick: onClick
-    })));
-  }
-
-}
-
-var _default = (0, _styles.withStyles)(styles)(Project);
 
 exports.default = _default;

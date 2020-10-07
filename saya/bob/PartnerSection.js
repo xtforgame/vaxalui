@@ -15,7 +15,7 @@ var _IconBoxSection = _interopRequireDefault(require("./IconBoxSection"));
 
 var _IconBox = _interopRequireDefault(require("./IconBox"));
 
-var _GreenButton = _interopRequireDefault(require("./GreenButton"));
+var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

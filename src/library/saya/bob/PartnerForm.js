@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import GreenButton from './GreenButton';
+import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import Checkbox from '../Checkbox';
 

@@ -5,14 +5,15 @@ import clsx from 'clsx';
 import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
+import Checkbox from './Checkbox';
 
 const useStyles = makeStyles(theme => ({
   root: {
     paddingLeft: 32,
     paddingRight: 32,
-    paddingTop: 47,
+    paddingTop: 51,
     width: '100%',
-    height: 630,
+    // height: 630,
     flexDirection: 'column',
     alignItems: 'center',
     flexWrap: 'wrap',
@@ -21,6 +22,16 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     backgroundColor: 'black',
     color: 'white',
+  },
+  checkbox: {
+    display: 'flex',
+    paddingTop: 12,
+  },
+  labelContent: {
+    width: 270,
+    fontSize: 10,
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10,
   },
   rowFlex: { // TODO use global class, maybe?
     display: 'flex',
@@ -90,9 +101,9 @@ export default (props) => {
         <div>Copyright 2020</div>
       </div> */}
       <div style={{ textAlign: 'left' }}>
-        <div style={{ width: 10, height: 40 }} />
+        <div style={{ width: 10, height: 60 }} />
         <div>Sign up to newsletter</div>
-        <div style={{ width: 10, height: 8 }} />
+        <div style={{ width: 10, height: 10 }} />
         <TextField
           darkTheme
           className={classes.emailInput}
@@ -100,13 +111,22 @@ export default (props) => {
           onChange={e => setEmail(e.target.value)}
           placeholder="Your email address"
         />
+        <div className={classes.checkbox}>
+          <Checkbox darkTheme />
+          {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
+          <div className={classes.labelContent}>
+            <label>
+              SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.
+            </label>
+          </div>
+        </div>
         {/* <Button
           text="SUBMIT"
           onClick={this.signUpNewsletter}
         /> */}
-        <div style={{ width: 10, height: 20 }} />
+        <div style={{ width: 10, height: 12 }} />
         <div>Select language</div>
-        <div style={{ width: 10, height: 8 }} />
+        <div style={{ width: 10, height: 10 }} />
         <Select
           formControlStyle={{ width: '100%' }}
           selectStyle={{ width: '100%' }}
@@ -117,18 +137,19 @@ export default (props) => {
         />
         <div style={{ width: 10, height: 20 }} />
         <Button
-          width={310}
+          width={'100%'}
         >
           SUBMIT
         </Button>
-        <div style={{ width: 10, height: 80 }} />
+        <div style={{ width: 10, height: 32 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
         <div style={{ fontSize: 18 }}><u>change@sayarenew.com</u></div>
-        <div style={{ width: 10, height: 10 }} />
+        <div style={{ width: 10, height: 18 }} />
         <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
         <div style={{ fontSize: 18 }}><u>https://www.npc.com.tw/</u></div>
-        <div style={{ width: 10, height: 40 }} />
+        <div style={{ width: 10, height: 75 }} />
         <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
+        <div style={{ width: 10, height: 20 }} />
       </div>
     </div>
   );

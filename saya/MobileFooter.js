@@ -17,6 +17,8 @@ var _Select = _interopRequireDefault(require("./Select"));
 
 var _Button = _interopRequireDefault(require("./Button"));
 
+var _Checkbox = _interopRequireDefault(require("./Checkbox"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -27,9 +29,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   root: {
     paddingLeft: 32,
     paddingRight: 32,
-    paddingTop: 47,
+    paddingTop: 51,
     width: '100%',
-    height: 630,
     flexDirection: 'column',
     alignItems: 'center',
     flexWrap: 'wrap',
@@ -38,6 +39,16 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     position: 'relative',
     backgroundColor: 'black',
     color: 'white'
+  },
+  checkbox: {
+    display: 'flex',
+    paddingTop: 12
+  },
+  labelContent: {
+    width: 270,
+    fontSize: 10,
+    fontFamily: 'FilsonSoftRegular',
+    paddingLeft: 10
   },
   rowFlex: {
     display: 'flex',
@@ -99,12 +110,12 @@ var _default = props => {
   }, _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 40
+      height: 60
     }
   }), _react.default.createElement("div", null, "Sign up to newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 8
+      height: 10
     }
   }), _react.default.createElement(_TextField.default, {
     darkTheme: true,
@@ -113,14 +124,20 @@ var _default = props => {
     onChange: e => setEmail(e.target.value),
     placeholder: "Your email address"
   }), _react.default.createElement("div", {
+    className: classes.checkbox
+  }, _react.default.createElement(_Checkbox.default, {
+    darkTheme: true
+  }), _react.default.createElement("div", {
+    className: classes.labelContent
+  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 20
+      height: 12
     }
   }), _react.default.createElement("div", null, "Select language"), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 8
+      height: 10
     }
   }), _react.default.createElement(_Select.default, {
     formControlStyle: {
@@ -141,11 +158,11 @@ var _default = props => {
       height: 20
     }
   }), _react.default.createElement(_Button.default, {
-    width: 310
+    width: '100%'
   }, "SUBMIT"), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 80
+      height: 32
     }
   }), _react.default.createElement("div", {
     style: {
@@ -158,7 +175,7 @@ var _default = props => {
   }, _react.default.createElement("u", null, "change@sayarenew.com")), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 10
+      height: 18
     }
   }), _react.default.createElement("div", {
     style: {
@@ -171,13 +188,18 @@ var _default = props => {
   }, _react.default.createElement("u", null, "https://www.npc.com.tw/")), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 40
+      height: 75
     }
   }), _react.default.createElement("div", {
     style: {
       fontSize: 12
     }
-  }, "Copyright \xA9 2020 SAYA All Rights Reserved")));
+  }, "Copyright \xA9 2020 SAYA All Rights Reserved"), _react.default.createElement("div", {
+    style: {
+      width: 10,
+      height: 20
+    }
+  })));
 };
 
 exports.default = _default;
