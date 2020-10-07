@@ -7,6 +7,7 @@ import Breadcrumbs from 'library/saya/bob/Breadcrumbs';
 import Introduction from 'library/saya/bob/Introduction';
 import CollapseSection from 'library/saya/bob/CollapseSection';
 import GreenNumberSection from 'library/saya/bob/GreenNumberSection';
+import GreenNumberSection2 from 'library/saya/bob/GreenNumberSection2';
 import Challenges from 'library/saya/bob/Challenges';
 import Methodology from 'library/saya/bob/Methodology';
 import ChallengesAndTransparency from 'library/saya/bob/ChallengesAndTransparency';
@@ -22,6 +23,8 @@ import SectionBG from '../../../img/bg07.jpg';
 import ChallengeImg from '../../../img/image01.png';
 import ChallengesAndTransparencyBG from '../../../img/bg43.jpg';
 import ProudlyImg from '../../../img/image03.png';
+import OceanCycleImg from '../../../img/image04.png';
+
 
 storiesOf('saya|Pages/NewDesktop', module)
   .add('Module1',
@@ -117,6 +120,18 @@ These deadstock and overstock creates millions of yards of our industry’s unac
             percentDisplay="inline-block"
             numberColor="#000000"
             percentColor="#000000"
+          />
+          <GreenNumberSection2
+            image={<img width={178} height={244} src={OceanCycleImg} />}
+            leftColumnStyle={{ width: 340 }}
+            backgroundColor="#ffffff"
+            rightTitle="Cutting Scrap"
+            description="Fabric cutting scrap is an inevitable part of garment manufacturing that results in up to 20% wastage per yard. In the past most of these scraps are downcycled, end up in landfills or incinerators as there are no commercially effective methods of recycling them. As a leader in the renewal fiber industry, SAYA is committed to finding a solution. Working together with our global network of brands and garment manufacturers worldwide, SAYA is tackling the issue head on."
+            height="450px"
+            lineWidth="220px"
+            rightPaddingLeft="80px"
+            descriptionPaddingTop="22px"
+            percentDisplay="inline-block"
           />
           <Challenges
             title="Challenges"
