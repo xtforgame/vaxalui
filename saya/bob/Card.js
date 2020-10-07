@@ -53,9 +53,9 @@ const useStyles = (0, _styles.makeStyles)({
   },
   cardAction: {
     paddingTop: 0,
-    paddingRight: 16,
-    paddingLeft: 16,
-    paddingBottom: 16
+    paddingRight: 0,
+    paddingLeft: 0,
+    paddingBottom: 0
   }
 });
 
@@ -74,8 +74,6 @@ var _default = ({
       width
     },
     elevation: 0
-  }, _react.default.createElement(_CardActionArea.default, {
-    onClick: onClick
   }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
     style: {
@@ -98,7 +96,7 @@ var _default = ({
       fontSize: 14,
       lineHeight: 1.5
     }
-  }, description))), _react.default.createElement(_CardActions.default, {
+  }, description)), _react.default.createElement(_CardActions.default, {
     className: classes.cardAction
   }, _react.default.createElement(_Button.default, {
     size: "small",
@@ -106,7 +104,8 @@ var _default = ({
     style: {
       textDecoration: 'underline',
       color: '#c0c823',
-      textTransform: 'none'
+      textTransform: 'none',
+      padding: 0
     },
     onClick: onClick
   }, _react.default.createElement("span", null, "Read More"))));

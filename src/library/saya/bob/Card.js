@@ -43,9 +43,9 @@ const useStyles = makeStyles({
   },
   cardAction: {
     paddingTop: 0,
-    paddingRight: 16,
-    paddingLeft: 16,
-    paddingBottom: 16,
+    paddingRight: 0,
+    paddingLeft: 0,
+    paddingBottom: 0,
   },
 });
 
@@ -61,26 +61,26 @@ export default ({
 
   return (
     <Card className={classes.root} style={{ width }} elevation={0}>
-      <CardActionArea onClick={onClick}>
-        <CardMedia
-          className={classes.media}
-          style={{ height }}
-          image={image}
-        >
-          <div className={classes.title}>
-            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28, textAlign: 'left' }}>
-              {title}
-            </BreakAllContentText>
-          </div>
-        </CardMedia>
-        <CardContent className={classes.content}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
-            {description}
+      {/* <CardActionArea onClick={onClick}> */}
+      <CardMedia
+        className={classes.media}
+        style={{ height }}
+        image={image}
+      >
+        <div className={classes.title}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28, textAlign: 'left' }}>
+            {title}
           </BreakAllContentText>
-        </CardContent>
-      </CardActionArea>
+        </div>
+      </CardMedia>
+      <CardContent className={classes.content}>
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
+          {description}
+        </BreakAllContentText>
+      </CardContent>
+      {/* </CardActionArea> */}
       <CardActions className={classes.cardAction}>
-        <Button size="small" color="primary" style={{ textDecoration: 'underline', color: '#c0c823', textTransform: 'none' }} onClick={onClick}>
+        <Button size="small" color="primary" style={{ textDecoration: 'underline', color: '#c0c823', textTransform: 'none', padding: 0 }} onClick={onClick}>
           <span>Read More</span>
         </Button>
       </CardActions>
