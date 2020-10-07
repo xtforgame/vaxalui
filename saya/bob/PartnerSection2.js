@@ -92,7 +92,7 @@ class PartnerSection extends _react.default.PureComponent {
     }, r.map(cell => _react.default.createElement(_IconBox.default, {
       color: color,
       cell: cell,
-      width: "140px"
+      width: 140
     }))))), _react.default.createElement("div", {
       className: classes.space
     }));

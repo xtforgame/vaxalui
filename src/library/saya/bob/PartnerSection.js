@@ -85,7 +85,7 @@ class PartnerSection extends React.PureComponent {
           </div>
           {partner.map(r => 
             <IconBoxSection color={color}>
-              {r.map(cell => <IconBox color={color} cell={cell} width="140px" />)}
+              {r.map(cell => <IconBox color={color} cell={cell} width={140} />)}
             </IconBoxSection>
           )}
           <div className={classes.section}>

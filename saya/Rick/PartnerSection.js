@@ -40,6 +40,7 @@ class PartnerSection extends _react.default.PureComponent {
     }, r.map(cell => _react.default.createElement(_IconBox.default, {
       cell: cell,
       size: "small",
+      width: 80,
       color: borderColor
     })))));
   }
