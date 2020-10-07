@@ -26,7 +26,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     display: 'flex',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    paddingTop: 60
+    paddingTop: 60,
+    alignItems: 'center'
   },
   firstTitle: {
     fontSize: 20,

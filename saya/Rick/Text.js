@@ -23,16 +23,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 const useStyles = (0, _styles.makeStyles)({
   light: {
-    fontFamily: 'FilsonSoft-Light',
-    lineHeight: 1
+    fontFamily: 'FilsonSoft-Light'
   },
   regular: {
-    fontFamily: 'FilsonSoftRegular',
-    lineHeight: 1
+    fontFamily: 'FilsonSoftRegular'
   },
   bold: {
-    fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1
+    fontFamily: 'FilsonSoft-Bold'
   }
 });
 

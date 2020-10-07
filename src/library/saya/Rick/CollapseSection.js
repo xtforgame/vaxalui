@@ -40,7 +40,7 @@ const useStyle = makeStyles(theme => ({
   title: {
     width: 320,
     fontSize: 30,
-    lineHeight: 'normal',
+    lineHeight: 1.54,
   },
   line: {
     width: '100%',
@@ -61,6 +61,7 @@ const useStyle = makeStyles(theme => ({
   subtitle: {
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold',
+    lineHeight: 1.54,
   },
   button: {
     marginTop: 16,

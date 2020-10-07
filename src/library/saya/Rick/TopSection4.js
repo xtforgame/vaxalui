@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     color: '#000000',
     backgroundColor: '#e3e3e3',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   section: {
     width: 320,
@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     flexWrap: 'wrap',
     paddingTop: 60,
+    alignItems: 'center',
   },
   firstTitle: {
     fontSize: 20,

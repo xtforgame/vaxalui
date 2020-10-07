@@ -6,15 +6,15 @@ import BreakAllContentText from '../BreakAllContentText';
 const useStyles = makeStyles({
   light: {
     fontFamily: 'FilsonSoft-Light',
-    lineHeight: 1,
+    // lineHeight: 1,
   },
   regular: {
     fontFamily: 'FilsonSoftRegular',
-    lineHeight: 1,
+    // lineHeight: 1,
   },
   bold: {
     fontFamily: 'FilsonSoft-Bold',
-    lineHeight: 1,
+    // lineHeight: 1,
   },
 });
 
