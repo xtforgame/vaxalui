@@ -35,7 +35,7 @@ const useStyles = (0, _styles.makeStyles)({
   },
   media: {
     position: 'relative',
-    width: 205
+    height: 205
   },
   titleSection: {
     display: 'flex',

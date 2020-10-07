@@ -17,7 +17,7 @@ const useStyles = makeStyles({
   },
   media: {
     position: 'relative',
-    width: 205,
+    height: 205,
   },
   // mask: {
   //   width: '100%',
