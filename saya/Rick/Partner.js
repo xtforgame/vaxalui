@@ -32,7 +32,6 @@ const styles = {
   },
   title: {
     fontSize: 30,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     textAlign: 'center'
   }

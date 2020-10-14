@@ -4,7 +4,6 @@ import Project from './Project';
 
 const styles = {
   root: {
-    height: 595,
     paddingTop: 60,
     display: 'flex',
     justifyContent: 'center',

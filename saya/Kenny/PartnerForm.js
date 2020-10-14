@@ -22,7 +22,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 const styles = {
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 0.6
   },

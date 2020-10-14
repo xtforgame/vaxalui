@@ -35,7 +35,6 @@ const styles = {
   },
   title: {
     width: '100%',
-    height: 52,
     fontSize: 20,
     fontFamily: 'FilsonSoft-Bold'
   },

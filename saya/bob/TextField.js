@@ -24,12 +24,13 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 const styles = theme => ({
   root: {
     height: theme.spacing(5.5),
-    color: 'white',
+    color: '#000000',
     backgroundColor: 'transparent',
     padding: theme.spacing(1.5),
     borderStyle: 'solid',
+    borderRadius: 0,
     borderWidth: 1,
-    borderColor: 'white',
+    borderColor: '#000000',
     outline: 'none',
     '&::placeholder': {
       color: '#000000'
@@ -37,7 +38,7 @@ const styles = theme => ({
   },
   darkTheme: {
     borderWidth: 2,
-    color: '#000000',
+    color: '#FFFFFF',
     borderColor: '#FFFFFF',
     backgroundColor: '#000000',
     '&::placeholder': {

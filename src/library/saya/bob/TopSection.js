@@ -13,7 +13,6 @@ const styles = {
   },
   firstTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   firstLine: {
@@ -25,7 +24,6 @@ const styles = {
     width: 780,
     fontSize: 72,
     lineHeight: 1.11,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     marginTop: 38,
   },

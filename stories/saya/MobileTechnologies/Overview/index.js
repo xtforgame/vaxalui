@@ -63,7 +63,7 @@ storiesOf('saya|Pages/Mobile/MobileTechnologies', module)
               >
                 10,000,000,000
             </div>
-              <div style={{ paddingTop: 14, }}>single us plastic bottles per year</div>
+              <div style={{ paddingTop: 14, }}>single-use plastic bottles per year</div>
               <div style={{ width: '100%', height: 1, marginTop: 10, backgroundColor: '#000000' }} />
               <div style={{ paddingTop: 10, }}>into functional and recyclable fibers</div>
             </div>

@@ -31,7 +31,7 @@ storiesOf('saya|Pages/NewDesktop', module)
               <span style={{ fontFamily: 'FilsonSoft-Bold' }}>SAYA recycles over</span>
             }
             secondTitle="10,000,000,000"
-            topTitle="single us plastic bottles per year "
+            topTitle="single-use plastic bottles per year "
             bottomTitle="into functional and recyclable fibers"
           />
           <ProductFeatures

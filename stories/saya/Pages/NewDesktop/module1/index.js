@@ -237,13 +237,13 @@ These deadstock and overstock creates millions of yards of our industry’s unac
                 type: <span>BOTTLES</span>,
               },
               {
-                title:"One Stop Used Garment to Fiber Solution",
+                title:"Used Garment to  Fiber Solution",
                 buttonText: "Learn More",
                 disabled: false,
                 type: <span>GARMA / SAYANEXT</span>,
               },
               {
-                title: "One Stop Used Garment to Fiber Solution",
+                title: "Used Garment to  Fiber Solution",
                 buttonText: "Coming Soon",
                 disabled: true,
                 type: <span>GARMA / SAYANEXT</span>,

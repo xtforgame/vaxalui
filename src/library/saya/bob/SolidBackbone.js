@@ -14,7 +14,6 @@ const styles = {
   firstTitle: {
     width: 'fit-content',
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     textAlign: 'left',
   },
@@ -48,7 +47,6 @@ const styles = {
     width: 'fit-content',
     fontSize: 20,
     lineHeight: 1.2,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   line: {

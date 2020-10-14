@@ -59,7 +59,6 @@ storiesOf('saya|Pages/Mobile/MobileTechnologies', module)
           <ImageContainer style={{ backgroundImage: `url(${MobileBg2})`, height: 575, }}>
             <pre style={{
               fontSize: 27,
-              fontWeight: 'bold',
               fontFamily: 'FilsonSoft-Bold',
               paddingTop: 20,
               alignSelf: 'left'

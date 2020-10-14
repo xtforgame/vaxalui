@@ -31,7 +31,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   firstTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 'normal'
   },

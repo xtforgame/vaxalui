@@ -17,7 +17,6 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     fontSize: 18,
-    fontWeight: 'bold',
     color: '#ffffff',
     fontFamily: 'FilsonSoft-Bold',
   },

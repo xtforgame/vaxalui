@@ -26,7 +26,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   titleWhite: {
     color: '#ffffff',
     fontSize: 24,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     margin: 0
   },

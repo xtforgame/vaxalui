@@ -101,6 +101,7 @@ var _default = props => {
   }, _react.default.createElement("a", {
     href: "https://www.facebook.com/sayarenew",
     target: "_blank",
+    rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
@@ -112,6 +113,7 @@ var _default = props => {
   }), _react.default.createElement("a", {
     href: "https://www.instagram.com/sayafibers",
     target: "_blank",
+    rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
@@ -124,7 +126,7 @@ var _default = props => {
       width: 10,
       height: 60
     }
-  }), _react.default.createElement("div", null, "Sign up to newsletter"), _react.default.createElement("div", {
+  }), _react.default.createElement("div", null, "Sing up to receive our newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 10

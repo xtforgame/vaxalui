@@ -28,7 +28,6 @@ const styles = {
   },
   firstTitle: {
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1
   },

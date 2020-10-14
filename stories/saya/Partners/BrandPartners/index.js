@@ -66,7 +66,6 @@ storiesOf('saya|Pages/Desktop/Partners', module)
               backgroundColor: ' #c0c823',
               color: '#000000',
               fontSize: 40,
-              fontWeight: 'bold',
               fontFamily: 'FilsonSoft-Bold',
               marginTop: 35,
               justifyContent: 'center',

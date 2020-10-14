@@ -85,11 +85,11 @@ export default (props) => {
             justifyContent: 'center',
           }}
         >
-          <a href="https://www.facebook.com/sayarenew" target="_blank" style={{ color: '#ffffff' }}>
+          <a href="https://www.facebook.com/sayarenew" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
             {fbIcon}
           </a>
           <div style={{ width: 10, height: 1 }} />
-          <a href="https://www.instagram.com/sayafibers" target="_blank" style={{ color: '#ffffff' }}>
+          <a href="https://www.instagram.com/sayafibers" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}>
             {igIcon}
           </a>
         </pre>
@@ -106,7 +106,7 @@ export default (props) => {
       </div> */}
       <div style={{ textAlign: 'left' }}>
         <div style={{ width: 10, height: 60 }} />
-        <div>Sign up to newsletter</div>
+        <div>Sing up to receive our newsletter</div>
         <div style={{ width: 10, height: 10 }} />
         <TextField
           darkTheme

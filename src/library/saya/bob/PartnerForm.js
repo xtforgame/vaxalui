@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
       -2px 2px white,
       -2px -2px white`,
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 0.6,
   },

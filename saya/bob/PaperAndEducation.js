@@ -30,7 +30,6 @@ const styles = {
     marginTop: 80,
     marginBottom: 22,
     fontSize: 32,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 0.6
   },

@@ -115,6 +115,7 @@ var _default = props => {
   }, _react.default.createElement("a", {
     href: "https://www.facebook.com/sayarenew",
     target: "_blank",
+    rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
@@ -126,6 +127,7 @@ var _default = props => {
   }), _react.default.createElement("a", {
     href: "https://www.instagram.com/sayafibers",
     target: "_blank",
+    rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
@@ -173,6 +175,7 @@ var _default = props => {
   }, _react.default.createElement("a", {
     href: "https://www.npc.com.tw",
     target: "_blank",
+    rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
@@ -196,7 +199,7 @@ var _default = props => {
       fontSize: 14,
       fontFamily: 'FilsonSoft-Bold'
     }
-  }, "Sign up to newsletter"), _react.default.createElement("div", {
+  }, "Sing up to receive our newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 8

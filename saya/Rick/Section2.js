@@ -32,7 +32,6 @@ const styles = {
     width: 320,
     color: '#FFFFFF',
     fontSize: 30,
-    fontWeight: 'bold',
     fontStretch: 'normal',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 'normal',

@@ -27,7 +27,6 @@ const styles = {
   },
   title: {
     lineHeight: 1.2,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   boxRoot: {

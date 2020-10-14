@@ -21,7 +21,6 @@ const styles = {
     justifyContent: 'center',
     fontSize: 12,
     color: '#ffffff',
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 4,
     outline: 'none',

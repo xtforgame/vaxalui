@@ -29,7 +29,6 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   firstTitle: {
     width: 'fit-content',
     fontSize: 15,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 'normal'
   },

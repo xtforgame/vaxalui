@@ -28,7 +28,6 @@ const styles = {
     width: 'fit-content',
     fontSize: 15,
     lineHeight: 'normal',
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   line: {

@@ -15,7 +15,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = {
   root: {
-    height: 595,
     paddingTop: 60,
     display: 'flex',
     justifyContent: 'center'

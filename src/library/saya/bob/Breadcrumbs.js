@@ -15,6 +15,7 @@ const styles = {
   link: {
     color: '#FFFFFF',
     fontSize: 20,
+    textAlign: 'center',
   }
 };
 

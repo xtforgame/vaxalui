@@ -254,7 +254,6 @@ storiesOf('saya|Pages/Desktop/Technologies/Next', module)
               <div
                 style={{
                   fontSize: 14,
-                  fontWeight: 'bold',
                   fontFamily: 'FilsonSoft-Bold',
                   marginTop: 175,
                 }}

@@ -19,7 +19,6 @@ const styles = {
     paddingTop: 30,
   },
   titleBack: {
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   line: {

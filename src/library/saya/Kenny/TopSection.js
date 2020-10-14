@@ -11,7 +11,6 @@ const styles = {
   },
   firstTitle: {
     fontSize: 15,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1,
   },
@@ -21,7 +20,6 @@ const styles = {
   },
   secondTitle: {
     fontSize: 55,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     paddingTop: 10,
   },

@@ -57,7 +57,7 @@ storiesOf('saya|Pages/NewMobile', module)
 
           <div style={{ marginTop: 6 }}>
             <ImageContainer >
-              <div style={{ backgroundSize: 'cover', width: '100%', height: 175, color: '#ffffff', textAlign: 'center', fontSize: 24, fontWeight: 'bold', fontFamily: 'FilsonSoft-Bold', backgroundImage: `url(${Background})`, paddingTop: 56, margin: 0 }}>
+              <div style={{ backgroundSize: 'cover', width: '100%', height: 175, color: '#ffffff', textAlign: 'center', fontSize: 24, fontFamily: 'FilsonSoft-Bold', backgroundImage: `url(${Background})`, paddingTop: 56, margin: 0 }}>
                 Brands Running on SAYA
               </div>
             </ImageContainer>

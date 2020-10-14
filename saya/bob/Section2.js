@@ -33,7 +33,6 @@ const styles = {
     color: '#FFFFFF',
     width: 'fit-content',
     fontSize: 16,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.31
   },

@@ -31,7 +31,6 @@ const styles = {
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     alignSelf: 'flex-start'
   },

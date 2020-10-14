@@ -24,7 +24,6 @@ const styles = {
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     color: '#000000',
     paddingTop: 110

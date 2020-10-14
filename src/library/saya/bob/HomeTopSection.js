@@ -20,12 +20,10 @@ const styles = {
     textAlign: 'center',
   },
   titleBack: {
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   titleWhite: {
     color: '#ffffff',
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   line: {

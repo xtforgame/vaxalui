@@ -35,7 +35,6 @@ const styles = {
     height: 45,
     fontSize: 14,
     color: '#ffffff',
-    fontWeight: 'bold',
     backgroundColor: '#64703f',
     border: 'none',
     borderRadius: 22,

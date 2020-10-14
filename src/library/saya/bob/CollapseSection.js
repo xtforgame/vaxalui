@@ -90,7 +90,6 @@ const useStyle = makeStyles(theme => ({
   titleWhite: {
     color: '#ffffff',
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
 }));

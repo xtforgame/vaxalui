@@ -28,7 +28,6 @@ const styles = {
     justifyContent: 'center',
     fontSize: 14,
     color: '#ffffff',
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     '&:hover': {
       backgroundColor: '#c0c823'

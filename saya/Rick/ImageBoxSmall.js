@@ -26,7 +26,6 @@ const styles = {
   },
   title: {
     fontSize: 20,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   subtitle: {

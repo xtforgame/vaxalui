@@ -15,7 +15,6 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   divider1: {

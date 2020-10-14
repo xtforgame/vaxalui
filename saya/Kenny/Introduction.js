@@ -30,7 +30,6 @@ const styles = {
   },
   title: {
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   line: {

@@ -26,7 +26,6 @@ const styles = {
   titleWhite: {
     color: '#ffffff',
     fontSize: 40,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold'
   },
   root: {

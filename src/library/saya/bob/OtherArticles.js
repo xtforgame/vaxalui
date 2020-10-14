@@ -14,7 +14,6 @@ const styles = {
   title: {
     fontSize: 20,
     lineHeight: 1.2,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
   },
   line: {

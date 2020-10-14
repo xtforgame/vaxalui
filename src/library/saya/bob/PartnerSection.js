@@ -19,7 +19,6 @@ const styles = {
   breadCrumbs: {
     width: 'fit-content',
     fontSize: 16,
-    fontWeight: 'bold',
     fontFamily: 'FilsonSoft-Bold',
     lineHeight: 1.31,
   },
@@ -39,7 +38,7 @@ const styles = {
   },
   subTitle: {
     fontSize: 20,
-    fontFamily: 'FilsonSoft-Bold',
+    fontFamily: 'FilsonSoft-Light',
     paddingTop: 24,
     marginBottom: 80,
   },

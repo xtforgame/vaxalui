@@ -63,7 +63,6 @@ storiesOf('saya|Pages/Mobile/MobilePartners', module)
               height: 165,
               backgroundColor: '#c0c823',
               fontSize: 27,
-              fontWeight: 'bold',
               fontFamily: 'FilsonSoft-Bold',
               color: '#ffffff',
               justifyContnet: 'center',

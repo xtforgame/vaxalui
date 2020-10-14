@@ -167,7 +167,6 @@ storiesOf('saya|Pages/Mobile/MobileTechnologies', module)
               height: 378,
               backgroundColor: '#333333',
               fontSize: 27,
-              fontWeight: 'bold',
               fontFamily: 'FilsonSoft-Bold',
               color: '#ffffff',
               textAlign: 'center',
