@@ -44,6 +44,9 @@ const styles = theme => ({
     '&::placeholder': {
       color: '#FFFFFF'
     }
+  },
+  error: {
+    backgroundColor: '#ffdada'
   }
 });
 
@@ -55,13 +58,15 @@ class TextField extends _react.default.PureComponent {
       classes,
       className,
       value,
-      onChange
+      onChange,
+      error
     } = _this$props,
-          others = _objectWithoutProperties(_this$props, ["darkTheme", "classes", "className", "value", "onChange"]);
+          others = _objectWithoutProperties(_this$props, ["darkTheme", "classes", "className", "value", "onChange", "error"]);
 
     return _react.default.createElement("input", _extends({
       className: (0, _clsx.default)(classes.root, {
-        [classes.darkTheme]: darkTheme
+        [classes.darkTheme]: darkTheme,
+        [classes.error]: error
       }, className),
       value: value,
       onChange: onChange

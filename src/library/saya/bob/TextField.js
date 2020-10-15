@@ -28,6 +28,9 @@ const styles = theme => ({
       color: '#FFFFFF',
     },
   },
+  error: {
+    backgroundColor: '#ffdada',
+  },
 });
 
 class TextField extends React.PureComponent {
@@ -38,11 +41,12 @@ class TextField extends React.PureComponent {
       className,
       value,
       onChange,
+      error,
       ...others
     } = this.props;
     return (
       <input
-        className={clsx(classes.root, { [classes.darkTheme]: darkTheme }, className)}
+        className={clsx(classes.root, { [classes.darkTheme]: darkTheme, [classes.error]: error }, className)}
         value={value}
         onChange={onChange}
         {...others}

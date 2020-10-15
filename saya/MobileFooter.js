@@ -19,6 +19,8 @@ var _Button = _interopRequireDefault(require("./Button"));
 
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 
+var _validators = require("../utils/validators");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -72,13 +74,23 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 }));
 
 var _default = props => {
-  const {
+  let {
     fbIcon,
-    igIcon
+    igIcon,
+    email = '',
+    setEmail = () => {},
+    successMessage,
+    errorMessage,
+    onSubmit,
+    emailError
   } = props;
   const classes = useStyles();
-  const [email, setEmail] = (0, _react.useState)('');
   const [language, setLanguage] = (0, _react.useState)('English');
+
+  if (emailError == null) {
+    emailError = !(0, _validators.isValidEmail)(email);
+  }
+
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.root)
   }, _react.default.createElement("div", {
@@ -136,8 +148,31 @@ var _default = props => {
     className: classes.emailInput,
     value: email,
     onChange: e => setEmail(e.target.value),
+    error: emailError,
     placeholder: "Your email address"
-  }), _react.default.createElement("div", {
+  }), successMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    style: {
+      fontSize: 14,
+      fontFamily: 'FilsonSoftRegular',
+      color: 'green'
+    }
+  }, successMessage), _react.default.createElement("div", {
+    style: {
+      width: 10,
+      height: 8
+    }
+  })), errorMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    style: {
+      fontSize: 14,
+      fontFamily: 'FilsonSoftRegular',
+      color: 'green'
+    }
+  }, errorMessage), _react.default.createElement("div", {
+    style: {
+      width: 10,
+      height: 8
+    }
+  })), _react.default.createElement("div", {
     className: classes.checkbox
   }, _react.default.createElement(_Checkbox.default, {
     darkTheme: true
@@ -149,7 +184,8 @@ var _default = props => {
       height: 12
     }
   }), _react.default.createElement(_Button.default, {
-    width: '100%'
+    width: '100%',
+    onClick: onSubmit
   }, "SUBMIT"), _react.default.createElement("div", {
     style: {
       width: 10,

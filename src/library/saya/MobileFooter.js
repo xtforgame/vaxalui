@@ -6,6 +6,7 @@ import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
 import Checkbox from './Checkbox';
+import { isValidEmail } from '../utils/validators';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -55,15 +56,23 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default (props) => {
-  const {
+  let {
     fbIcon,
     igIcon,
+    email = '',
+    setEmail = () => {},
+    successMessage,
+    errorMessage,
+    onSubmit,
+    emailError,
   } = props;
 
   const classes = useStyles();
-
-  const [email, setEmail] = useState('');
   const [language, setLanguage] = useState('English');
+
+  if (emailError == null) {
+    emailError = !isValidEmail(email);
+  }
 
   return (
     <div className={clsx(classes.root)}>
@@ -113,8 +122,41 @@ export default (props) => {
           className={classes.emailInput}
           value={email}
           onChange={e => setEmail(e.target.value)}
+          error={emailError}
           placeholder="Your email address"
         />
+        {
+          successMessage && (
+            <React.Fragment>
+              <div
+                style={{
+                  fontSize: 14,
+                  fontFamily: 'FilsonSoftRegular',
+                  color: 'green',
+                }}
+              >
+                {successMessage}
+              </div>
+              <div style={{ width: 10, height: 8 }} />
+            </React.Fragment>
+          )
+        }
+        {
+          errorMessage && (
+            <React.Fragment>
+              <div
+                style={{
+                  fontSize: 14,
+                  fontFamily: 'FilsonSoftRegular',
+                  color: 'green',
+                }}
+              >
+                {errorMessage}
+              </div>
+              <div style={{ width: 10, height: 8 }} />
+            </React.Fragment>
+          )
+        }
         <div className={classes.checkbox}>
           <Checkbox darkTheme />
           {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
@@ -131,6 +173,7 @@ export default (props) => {
         <div style={{ width: 10, height: 12 }} />
         <Button
           width={'100%'}
+          onClick={onSubmit}
         >
           SUBMIT
         </Button>

@@ -6,6 +6,7 @@ import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
 import Checkbox from './Checkbox';
+import { isValidEmail } from '../utils/validators';
 
 const useStyles = makeStyles(theme => ({
   rowFlex: {
@@ -68,15 +69,23 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default (props) => {
-  const {
+  let {
     fbIcon,
     igIcon,
+    email = '',
+    setEmail = () => {},
+    errorMessage,
+    successMessage,
+    onSubmit,
+    emailError,
   } = props;
 
   const classes = useStyles();
-
-  const [email, setEmail] = useState('');
   const [language, setLanguage] = useState('English');
+
+  if (emailError == null) {
+    emailError = !isValidEmail(email);
+  }
 
   return (
     <div className={clsx(classes.rowFlex)}>
@@ -142,14 +151,46 @@ export default (props) => {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Your email address"
+                error={emailError}
               />
               <div style={{ width: 20, height: 20 }} />
-              <Button width={100}>
+              <Button width={100} onClick={onSubmit}>
                 SUBMIT
               </Button>
             </div>
           </div>
-
+          {
+            successMessage && (
+              <React.Fragment>
+                <div
+                  style={{
+                    fontSize: 14,
+                    fontFamily: 'FilsonSoftRegular',
+                    color: 'green',
+                  }}
+                >
+                  {successMessage}
+                </div>
+                <div style={{ width: 10, height: 8 }} />
+              </React.Fragment>
+            )
+          }
+          {
+            errorMessage && (
+              <React.Fragment>
+                <div
+                  style={{
+                    fontSize: 14,
+                    fontFamily: 'FilsonSoftRegular',
+                    color: 'green',
+                  }}
+                >
+                  {errorMessage}
+                </div>
+                <div style={{ width: 10, height: 8 }} />
+              </React.Fragment>
+            )
+          }
           <div className={classes.checkbox}>
             <Checkbox darkTheme />
             {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
@@ -159,10 +200,6 @@ export default (props) => {
               </label>
             </div>
           </div>
-          {/* <Button
-            text="SUBMIT"
-            onClick={this.signUpNewsletter}
-          /> */}
           <div style={{ width: 10, height: 20 }} />
           <div
             style={{
