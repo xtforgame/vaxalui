@@ -11,6 +11,13 @@ const Layout = ({
   logo,
   fbIcon,
   igIcon,
+
+  email,
+  setEmail,
+  errorMessage,
+  successMessage,
+  onSubmit,
+  emailError,
 }) => (
   <div
     style={{
@@ -44,6 +51,13 @@ const Layout = ({
     <Footer
       fbIcon={fbIcon}
       igIcon={igIcon}
+
+      email={email}
+      setEmail={setEmail}
+      errorMessage={errorMessage}
+      successMessage={successMessage}
+      onSubmit={onSubmit}
+      emailError={emailError}
     />
   </div>
 );
