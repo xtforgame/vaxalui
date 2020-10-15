@@ -79,6 +79,8 @@ var _default = props => {
     igIcon,
     email = '',
     setEmail = () => {},
+    checked,
+    setChecked,
     successMessage,
     errorMessage,
     onSubmit,
@@ -175,7 +177,9 @@ var _default = props => {
   })), _react.default.createElement("div", {
     className: classes.checkbox
   }, _react.default.createElement(_Checkbox.default, {
-    darkTheme: true
+    darkTheme: true,
+    checked: checked,
+    setChecked: setChecked
   }), _react.default.createElement("div", {
     className: classes.labelContent
   }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {

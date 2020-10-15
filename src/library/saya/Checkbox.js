@@ -30,14 +30,12 @@ const useStyles = makeStyles(theme => ({
 
 export default (props) => {
   const {
-    checked: c,
-    onChecked = (() => {}),
+    checked = false,
+    setChecked = (() => {}),
     darkTheme,
   } = props;
 
   const classes = useStyles();
-
-  const [checked, setChecked] = useState(c || false);
 
   return (
     <div
@@ -52,7 +50,6 @@ export default (props) => {
       }
       onClick={() => {
         setChecked(!checked);
-        onChecked(!checked);
       }}
     >
       <DoneIcon />

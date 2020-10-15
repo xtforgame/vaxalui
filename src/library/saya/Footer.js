@@ -74,6 +74,8 @@ export default (props) => {
     igIcon,
     email = '',
     setEmail = () => {},
+    checked,
+    setChecked,
     errorMessage,
     successMessage,
     onSubmit,
@@ -192,7 +194,11 @@ export default (props) => {
             )
           }
           <div className={classes.checkbox}>
-            <Checkbox darkTheme />
+            <Checkbox
+              darkTheme
+              checked={checked}
+              setChecked={setChecked}
+            />
             {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
             <div className={classes.labelContent}>
               <label>

@@ -46,12 +46,11 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 var _default = props => {
   const {
-    checked: c,
-    onChecked = () => {},
+    checked = false,
+    setChecked = () => {},
     darkTheme
   } = props;
   const classes = useStyles();
-  const [checked, setChecked] = (0, _react.useState)(c || false);
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.checkbox, {
       [classes.checked]: !darkTheme && checked,
@@ -60,7 +59,6 @@ var _default = props => {
     }),
     onClick: () => {
       setChecked(!checked);
-      onChecked(!checked);
     }
   }, _react.default.createElement(_Done.default, null));
 };
