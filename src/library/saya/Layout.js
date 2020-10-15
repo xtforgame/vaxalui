@@ -14,6 +14,8 @@ const Layout = ({
 
   email,
   setEmail,
+  checked,
+  setChecked,
   errorMessage,
   successMessage,
   onSubmit,
@@ -54,6 +56,8 @@ const Layout = ({
 
       email={email}
       setEmail={setEmail}
+      checked={checked}
+      setChecked={setChecked}
       errorMessage={errorMessage}
       successMessage={successMessage}
       onSubmit={onSubmit}
