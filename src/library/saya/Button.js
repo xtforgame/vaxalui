@@ -32,6 +32,7 @@ class Button extends React.PureComponent {
       children,
       width,
       height = 40,
+      onClick,
     } = this.props;
     return (
       <button
@@ -41,6 +42,7 @@ class Button extends React.PureComponent {
           height,
           borderRadius: height / 2,
         }}
+        onClick={onClick}
       >
         {children}
       </button>

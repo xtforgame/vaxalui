@@ -37,7 +37,8 @@ class Button extends _react.default.PureComponent {
       classes,
       children,
       width,
-      height = 40
+      height = 40,
+      onClick
     } = this.props;
     return _react.default.createElement("button", {
       className: classes.button,
@@ -45,7 +46,8 @@ class Button extends _react.default.PureComponent {
         width,
         height,
         borderRadius: height / 2
-      }
+      },
+      onClick: onClick
     }, children);
   }
 
