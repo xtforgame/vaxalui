@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import AnimatedNumber from 'animated-number-react';
+import VisibilitySensor from 'react-visibility-sensor';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
 
@@ -87,6 +88,10 @@ const styles = {
   },
 };
 
+const C = ({ isVisible, visibilityRect }) => <div>{`${isVisible}`}</div>;
+
+
+
 
 const GreenNumberSection = (props) => {
   const {
@@ -162,12 +167,21 @@ const GreenNumberSection = (props) => {
             }}
           >
             <div style={{ width: 235, textAlign: 'right' }}>
-              <Fade duration={1000} onReveal={() => setCurrentNumber(number)}>
-                <AnimatedNumber
-                  duration={600}
-                  value={currentNumber}
-                  formatValue={formatValue}
-                />
+              <Fade triggerOnce duration={1000}>
+                <VisibilitySensor
+                  partialVisibility
+                  onChange={(visible) => {
+                    if (visible) {
+                      setCurrentNumber(number);
+                    }
+                  }}
+                >
+                  <AnimatedNumber
+                    duration={600}
+                    value={currentNumber}
+                    formatValue={formatValue}
+                  />
+                </VisibilitySensor>
               </Fade>
             </div>
             <span

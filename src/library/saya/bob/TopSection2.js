@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -66,7 +66,7 @@ class TopSection2 extends React.PureComponent {
           className={classes.root}
           style={{ color }}
         >
-          <Fade>
+          <Fade triggerOnce>
             <BreakAllContentText className={classes.firstTitle}>
               {firstTitle}
               <div
@@ -76,12 +76,12 @@ class TopSection2 extends React.PureComponent {
             </BreakAllContentText>
           </Fade>
           <div>
-            <Fade>
+            <Fade triggerOnce>
               <BreakAllContentText className={classes.secondTitle}>
                 {secondTitle}
               </BreakAllContentText>
             </Fade>
-            <Fade>
+            <Fade triggerOnce>
               <BreakAllContentText
                 className={classes.thirdTitle}
                 style={{

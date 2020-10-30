@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+var _reactAwesomeReveal = require("react-awesome-reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
@@ -83,7 +83,9 @@ class Introduction extends _react.default.PureComponent {
         width: titleWidth,
         marginTop: titlMarginTop
       }
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
@@ -97,7 +99,9 @@ class Introduction extends _react.default.PureComponent {
       style: {
         width: subtitleWidth
       }
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
@@ -106,7 +110,9 @@ class Introduction extends _react.default.PureComponent {
       style: {
         width: descriptionWidth
       }
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }

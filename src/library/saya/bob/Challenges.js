@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
@@ -118,7 +118,7 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.title}
               >
-                <Fade>
+                <Fade triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
                 </Fade>
               </div>
@@ -131,14 +131,14 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.subtitle}
               >
-                <Fade>
+                <Fade triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
                 </Fade>
               </div>
               <div
                 className={classes.description}
               >
-                <Fade>
+                <Fade triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
                 </Fade>
               </div>
@@ -147,7 +147,7 @@ class Challenges extends React.PureComponent {
           <div
             className={classes.rightColumn}
           >
-            <Fade>
+            <Fade triggerOnce>
               <Avatar className={classes.Avatar} src={image} />
             </Fade>
           </div>

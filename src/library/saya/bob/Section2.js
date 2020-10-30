@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import ImageContainer from '../ImageContainer';
 import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
@@ -71,7 +71,7 @@ class Section2 extends React.PureComponent {
           style={{ height }}
         >
           <div className={classes.section}>
-            <Fade>
+            <Fade triggerOnce>
               <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
             </Fade>
           </div>

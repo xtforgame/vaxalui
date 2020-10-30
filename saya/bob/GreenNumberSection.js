@@ -9,9 +9,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+var _reactAwesomeReveal = require("react-awesome-reveal");
 
 var _animatedNumberReact = _interopRequireDefault(require("animated-number-react"));
+
+var _reactVisibilitySensor = _interopRequireDefault(require("react-visibility-sensor"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
@@ -105,6 +107,11 @@ const styles = {
   }
 };
 
+const C = ({
+  isVisible,
+  visibilityRect
+}) => _react.default.createElement("div", null, `${isVisible}`);
+
 const GreenNumberSection = props => {
   const {
     classes,
@@ -166,14 +173,21 @@ const GreenNumberSection = props => {
       width: 235,
       textAlign: 'right'
     }
-  }, _react.default.createElement(_Fade.default, {
-    duration: 1000,
-    onReveal: () => setCurrentNumber(number)
+  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    triggerOnce: true,
+    duration: 1000
+  }, _react.default.createElement(_reactVisibilitySensor.default, {
+    partialVisibility: true,
+    onChange: visible => {
+      if (visible) {
+        setCurrentNumber(number);
+      }
+    }
   }, _react.default.createElement(_animatedNumberReact.default, {
     duration: 600,
     value: currentNumber,
     formatValue: formatValue
-  }))), _react.default.createElement("span", {
+  })))), _react.default.createElement("span", {
     className: classes.percent,
     style: {
       display: percentDisplay,

@@ -1,6 +1,6 @@
 {
   "name": "vaxalui",
-  "version": "0.1.110",
+  "version": "0.1.111",
   "description": "Vaxal ui",
   "main": "index.js",
   "repository": {
@@ -34,8 +34,9 @@
   "dependencies": {
     "animated-number-react": "^0.1.1",
     "clsx": "^1.1.1",
+    "react-awesome-reveal": "^3.3.1",
     "react-helmet": "^6.1.0",
-    "react-reveal": "^1.2.2",
+    "react-visibility-sensor": "^5.1.1",
     "uuid": "^8.3.0"
   },
   "peerDependencies": {

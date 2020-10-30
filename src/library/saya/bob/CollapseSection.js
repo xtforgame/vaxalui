@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { AddCircle, RemoveCircle } from '@material-ui/icons';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import CenteredContainer from '../CenteredContainer';
 import Text from './Text';
 import ImageContainer from '../ImageContainer';
@@ -127,7 +127,7 @@ export default (props) => {
       }
       <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>
         <div className={classes.container}>
-          <Fade>
+          <Fade triggerOnce>
             <Text className={classes.title} family="bold">{title}</Text>
           </Fade>
           <div className={classes.leftContainer}>
@@ -139,13 +139,13 @@ export default (props) => {
         <div className={classes.lowerLeft} style={{ backgroundColor }}>
           <div className={classes.container2}>
             <div className={classes.leftContainer}>
-              <Fade>
+              <Fade triggerOnce>
                 <Text className={classes.subtitle}>{subtitle}</Text>
               </Fade>
               {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
               {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
               <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
-                <Fade>
+                <Fade triggerOnce>
                   <Text className={classes.description}>{description}</Text>
                 </Fade>
               </div>
@@ -153,7 +153,7 @@ export default (props) => {
           </div>
         </div>
         <div className={classes.lowerRight}>
-          <Fade>
+          <Fade triggerOnce>
             <div className={classes.rightContainer}>
               {image}
             </div>

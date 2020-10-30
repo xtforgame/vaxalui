@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+var _reactAwesomeReveal = require("react-awesome-reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
@@ -98,7 +98,9 @@ class ProductFeatures extends _react.default.PureComponent {
       className: classes.line
     })), _react.default.createElement("div", {
       className: classes.subtitle
-    }, list.map(l => _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, list.map(l => _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontSize: 28,
         fontFamily: 'FilsonSoftRegular'

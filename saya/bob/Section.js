@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+var _reactAwesomeReveal = require("react-awesome-reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
@@ -93,9 +93,13 @@ class Section extends _react.default.PureComponent {
       style: {
         backgroundColor: color
       }
-    })), _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    })), _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
-    }, title)), _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, title)), _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subTitle
     }, subTitle)), showButton && _react.default.createElement("div", {
       className: classes.button

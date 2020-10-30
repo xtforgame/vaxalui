@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _Avatar = _interopRequireDefault(require("@material-ui/core/Avatar"));
 
-var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+var _reactAwesomeReveal = require("react-awesome-reveal");
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
@@ -124,7 +124,9 @@ class Challenges extends _react.default.PureComponent {
       className: classes.container
     }, _react.default.createElement("div", {
       className: classes.title
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
@@ -135,20 +137,26 @@ class Challenges extends _react.default.PureComponent {
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Light',
         fontWeight: 300
       }
     }, subtitle))), _react.default.createElement("div", {
       className: classes.description
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
     }, description))))), _react.default.createElement("div", {
       className: classes.rightColumn
-    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_Avatar.default, {
+    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+      triggerOnce: true
+    }, _react.default.createElement(_Avatar.default, {
       className: classes.Avatar,
       src: image
     })))), _react.default.createElement("div", {

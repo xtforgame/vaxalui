@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import ImageContainer from '../ImageContainer';
 import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
@@ -76,10 +76,10 @@ class Section extends React.PureComponent {
               {breadCrumbs}
               <div className={classes.firstLine} style={{ backgroundColor: color }} />
             </div>
-            <Fade>
+            <Fade triggerOnce>
               <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
             </Fade>
-            <Fade>
+            <Fade triggerOnce>
               <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
             </Fade>
             {showButton && <div className={classes.button}>
