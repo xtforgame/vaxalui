@@ -114,7 +114,7 @@ const GreenNumberSection = (props) => {
     hideTop,
   } = props;
 
-  const [currentNumber, setCurrentNumber] = useState(10 + Math.round(Math.random() * 5));
+  const [currentNumber, setCurrentNumber] = useState(Math.round(Math.random() * 5));
 
   const formatValue = value => value.toFixed(0);
 
@@ -162,8 +162,9 @@ const GreenNumberSection = (props) => {
             }}
           >
             <div style={{ width: 235, textAlign: 'right' }}>
-              <Fade duration={0} onReveal={() => setCurrentNumber(number)}>
+              <Fade duration={1000} onReveal={() => setCurrentNumber(number)}>
                 <AnimatedNumber
+                  duration={600}
                   value={currentNumber}
                   formatValue={formatValue}
                 />

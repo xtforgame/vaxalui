@@ -130,7 +130,7 @@ const GreenNumberSection = props => {
     topTitle,
     hideTop
   } = props;
-  const [currentNumber, setCurrentNumber] = (0, _react.useState)(10 + Math.round(Math.random() * 5));
+  const [currentNumber, setCurrentNumber] = (0, _react.useState)(Math.round(Math.random() * 5));
 
   const formatValue = value => value.toFixed(0);
 
@@ -167,9 +167,10 @@ const GreenNumberSection = props => {
       textAlign: 'right'
     }
   }, _react.default.createElement(_Fade.default, {
-    duration: 0,
+    duration: 1000,
     onReveal: () => setCurrentNumber(number)
   }, _react.default.createElement(_animatedNumberReact.default, {
+    duration: 600,
     value: currentNumber,
     formatValue: formatValue
   }))), _react.default.createElement("span", {
