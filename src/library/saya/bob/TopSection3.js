@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -65,23 +66,29 @@ class TopSection3 extends React.PureComponent {
           className={classes.root}
           style={{ color }}
         >
-          <BreakAllContentText className={classes.firstTitle}>
-            {firstTitle}
-          </BreakAllContentText>
-          <div>
-            <div className={classes.secondTitle}>
-              {secondTitle}
-            </div>
-            <BreakAllContentText
-              className={classes.thirdTitle}
-              style={{
-                width: thirdTitleWidth,
-              }}
-            >
-              <div style={{ marginTop: 24 }}>{topTitle}</div>
-              <div className={classes.firstLine} style={{ backgroundColor: color }} />
-              <div>{bottomTitle}</div>
+          <Fade>
+            <BreakAllContentText className={classes.firstTitle}>
+              {firstTitle}
             </BreakAllContentText>
+          </Fade>
+          <div>
+            <Fade>
+              <div className={classes.secondTitle}>
+                {secondTitle}
+              </div>
+            </Fade>
+            <Fade>
+              <BreakAllContentText
+                className={classes.thirdTitle}
+                style={{
+                  width: thirdTitleWidth,
+                }}
+              >
+                <div style={{ marginTop: 24 }}>{topTitle}</div>
+                <div className={classes.firstLine} style={{ backgroundColor: color }} />
+                <div>{bottomTitle}</div>
+              </BreakAllContentText>
+            </Fade>
           </div>
         </ImageContainer>
         <div className={classes.space} />

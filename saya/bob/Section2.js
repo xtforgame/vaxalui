@@ -9,9 +9,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
+var _GreenButton = _interopRequireDefault(require("./GreenButton"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
@@ -82,9 +84,9 @@ class Section2 extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.section
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
-    }, title))), _react.default.createElement("div", {
+    }, title)))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

@@ -5,15 +5,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
+
+var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+
+var _animatedNumberReact = _interopRequireDefault(require("animated-number-react"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 const styles = {
   topSection: {
@@ -97,94 +105,108 @@ const styles = {
   }
 };
 
-class GreenNumberSection extends _react.default.PureComponent {
-  render() {
-    const {
-      classes,
-      numberUpTitle,
-      number,
-      suffix = '%',
-      topTile,
-      bottomTitle,
-      rightTitle,
-      description,
-      lineWidth,
-      height,
-      numberPaddingTop,
-      leftPaddingTop,
-      leftPaddingRight,
-      rightPaddingLeft,
-      descriptionPaddingTop,
-      percentDisplay,
-      backgroundColor,
-      numberColor,
-      percentColor,
-      backgroundImage,
-      topTitle,
-      hideTop
-    } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
-      image: backgroundImage,
-      className: classes.topSection
-    }, _react.default.createElement("div", null, _react.default.createElement("span", {
-      className: classes.titleWhite
-    }, topTitle))), _react.default.createElement("div", {
-      className: classes.root,
-      style: {
-        height: height,
-        backgroundColor: backgroundColor
-      }
-    }, _react.default.createElement("div", {
-      className: classes.leftColumn,
-      style: {
-        paddingTop: leftPaddingTop,
-        paddingRight: leftPaddingRight
-      }
-    }, _react.default.createElement("div", {
-      className: classes.numberUpTitle
-    }, " ", numberUpTitle, " "), _react.default.createElement("div", {
-      className: classes.number,
-      style: {
-        paddingtTop: numberPaddingTop,
-        color: numberColor
-      }
-    }, number, _react.default.createElement("span", {
-      className: classes.percent,
-      style: {
-        display: percentDisplay,
-        color: percentColor
-      }
-    }, suffix)), _react.default.createElement("div", {
-      className: classes.topTile
-    }, topTile), _react.default.createElement("div", {
-      className: classes.line,
-      style: {
-        width: lineWidth
-      }
-    }), _react.default.createElement("div", {
-      className: classes.bottomTitle
-    }, bottomTitle)), _react.default.createElement("div", {
-      className: classes.rightColumn,
-      style: {
-        paddingLeft: rightPaddingLeft
-      }
-    }, _react.default.createElement("div", {
-      className: classes.rightTitle
-    }, rightTitle), _react.default.createElement("div", {
-      className: classes.description,
-      style: {
-        paddingTop: descriptionPaddingTop
-      }
-    }, _react.default.createElement(_BreakAllContentText.default, {
-      style: {
-        fontFamily: 'FilsonSoftRegular'
-      }
-    }, description)))), _react.default.createElement("div", {
-      className: classes.space
-    }));
-  }
+const GreenNumberSection = props => {
+  const {
+    classes,
+    numberUpTitle,
+    number,
+    suffix = '%',
+    topTile,
+    bottomTitle,
+    rightTitle,
+    description,
+    lineWidth,
+    height,
+    numberPaddingTop,
+    leftPaddingTop,
+    leftPaddingRight,
+    rightPaddingLeft,
+    descriptionPaddingTop,
+    percentDisplay,
+    backgroundColor,
+    numberColor,
+    percentColor,
+    backgroundImage,
+    topTitle,
+    hideTop
+  } = props;
+  const [currentNumber, setCurrentNumber] = (0, _react.useState)(10 + Math.round(Math.random() * 5));
 
-}
+  const formatValue = value => value.toFixed(0);
+
+  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
+    image: backgroundImage,
+    className: classes.topSection
+  }, _react.default.createElement("div", null, _react.default.createElement("span", {
+    className: classes.titleWhite
+  }, topTitle))), _react.default.createElement("div", {
+    className: classes.root,
+    style: {
+      height,
+      backgroundColor
+    }
+  }, _react.default.createElement("div", {
+    className: classes.leftColumn,
+    style: {
+      paddingTop: leftPaddingTop,
+      paddingRight: leftPaddingRight
+    }
+  }, _react.default.createElement("div", {
+    className: classes.numberUpTitle
+  }, ' ', numberUpTitle, ' '), _react.default.createElement("div", {
+    className: classes.number,
+    style: {
+      paddingtTop: numberPaddingTop,
+      color: numberColor,
+      display: 'flex',
+      alignItems: 'flex-end'
+    }
+  }, _react.default.createElement("div", {
+    style: {
+      width: 235,
+      textAlign: 'right'
+    }
+  }, _react.default.createElement(_Fade.default, {
+    duration: 0,
+    onReveal: () => setCurrentNumber(number)
+  }, _react.default.createElement(_animatedNumberReact.default, {
+    value: currentNumber,
+    formatValue: formatValue
+  }))), _react.default.createElement("span", {
+    className: classes.percent,
+    style: {
+      display: percentDisplay,
+      color: percentColor
+    }
+  }, suffix)), _react.default.createElement("div", {
+    className: classes.topTile
+  }, topTile), _react.default.createElement("div", {
+    className: classes.line,
+    style: {
+      width: lineWidth
+    }
+  }), _react.default.createElement("div", {
+    className: classes.bottomTitle
+  }, bottomTitle)), _react.default.createElement("div", {
+    className: classes.rightColumn,
+    style: {
+      paddingLeft: rightPaddingLeft
+    }
+  }, _react.default.createElement("div", {
+    className: classes.rightTitle
+  }, rightTitle), _react.default.createElement("div", {
+    className: classes.description,
+    style: {
+      paddingTop: descriptionPaddingTop
+    }
+  }, _react.default.createElement(_BreakAllContentText.default, {
+    style: {
+      fontFamily: 'FilsonSoftRegular'
+    }
+  }, description)))), _react.default.createElement("div", {
+    className: classes.space
+  }));
+};
 
 var _default = (0, _styles.withStyles)(styles)(GreenNumberSection);
 

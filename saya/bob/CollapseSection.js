@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _icons = require("@material-ui/icons");
 
+var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+
 var _CenteredContainer = _interopRequireDefault(require("../CenteredContainer"));
 
 var _Text = _interopRequireDefault(require("./Text"));
@@ -138,10 +140,10 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.container
-  }, _react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_Text.default, {
     className: classes.title,
     family: "bold"
-  }, title), _react.default.createElement("div", {
+  }, title)), _react.default.createElement("div", {
     className: classes.leftContainer
   }, _react.default.createElement("div", {
     className: classes.line,
@@ -162,9 +164,9 @@ var _default = props => {
     className: classes.container2
   }, _react.default.createElement("div", {
     className: classes.leftContainer
-  }, _react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_Text.default, {
     className: classes.subtitle
-  }, subtitle), !expended && _react.default.createElement(_icons.AddCircle, {
+  }, subtitle)), !expended && _react.default.createElement(_icons.AddCircle, {
     className: classes.button,
     onClick: () => {
       setExpanded(true);
@@ -188,13 +190,13 @@ var _default = props => {
     className: (0, _clsx.default)(classes.expandedArea, {
       [classes.hide]: !expended
     })
-  }, _react.default.createElement(_Text.default, {
+  }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_Text.default, {
     className: classes.description
-  }, description))))), _react.default.createElement("div", {
+  }, description)))))), _react.default.createElement("div", {
     className: classes.lowerRight
-  }, _react.default.createElement("div", {
+  }, _react.default.createElement(_Fade.default, null, _react.default.createElement("div", {
     className: classes.rightContainer
-  }, image))));
+  }, image)))));
 };
 
 exports.default = _default;

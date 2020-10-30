@@ -1,7 +1,8 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 import ImageContainer from '../ImageContainer';
-import GreenButton from '../bob/GreenButton';
+import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
@@ -70,7 +71,9 @@ class Section2 extends React.PureComponent {
           style={{ height }}
         >
           <div className={classes.section}>
-            <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>    
+            <Fade>
+              <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
+            </Fade>
           </div>
         </ImageContainer>
         <div className={classes.space} />

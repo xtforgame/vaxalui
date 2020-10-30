@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
@@ -80,32 +82,32 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
-    }, _react.default.createElement("div", {
+    }, _react.default.createElement(_Fade.default, null, _react.default.createElement("div", {
       className: classes.title,
       style: {
         width: titleWidth,
         marginTop: titlMarginTop
       }
-    }, title), _react.default.createElement("div", {
+    }, title)), _react.default.createElement("div", {
       className: classes.line,
       style: {
         backgroundColor: fontColor
       }
-    }), _react.default.createElement("div", {
+    }), _react.default.createElement(_Fade.default, null, _react.default.createElement("div", {
       className: classes.subtitle,
       style: {
         width: subtitleWidth
       }
-    }, subtitle), _react.default.createElement("div", {
+    }, subtitle)), _react.default.createElement("div", {
       className: classes.description,
       style: {
         width: descriptionWidth
       }
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description)))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
+    }, description))))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
       className: classes.space
     }));
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -82,7 +83,9 @@ class ProductFeatures extends React.PureComponent {
             </div>
             <div className={classes.subtitle}>
               {list.map(l => (
-                <BreakAllContentText style={{ fontSize: 28, fontFamily: 'FilsonSoftRegular' }}>{`・ ${l}`}</BreakAllContentText>
+                <Fade>
+                  <BreakAllContentText style={{ fontSize: 28, fontFamily: 'FilsonSoftRegular' }}>{`・ ${l}`}</BreakAllContentText>
+                </Fade>
               ))}
             </div>
           </div>

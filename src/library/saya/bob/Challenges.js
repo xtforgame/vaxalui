@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import Fade from 'react-reveal/Fade';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
@@ -117,7 +118,9 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.title}
               >
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+                <Fade>
+                  <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+                </Fade>
               </div>
               <div
                 className={classes.line}
@@ -128,19 +131,25 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.subtitle}
               >
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
+                <Fade>
+                  <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
+                </Fade>
               </div>
               <div
                 className={classes.description}
               >
-                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+                <Fade>
+                  <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+                </Fade>
               </div>
             </div>
           </div>
           <div
             className={classes.rightColumn}
           >
-            <Avatar className={classes.Avatar} src={image} />
+            <Fade>
+              <Avatar className={classes.Avatar} src={image} />
+            </Fade>
           </div>
         </div>
         <div className={classes.space} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -72,36 +73,42 @@ class Introduction extends React.PureComponent {
           <div
             className={classes.container}
           >
-            <div
-              className={classes.title}
-              style={{
-                width: titleWidth,
-                marginTop: titlMarginTop,
-              }}
-            >
-              {title}
-            </div>
+            <Fade>
+              <div
+                className={classes.title}
+                style={{
+                  width: titleWidth,
+                  marginTop: titlMarginTop,
+                }}
+              >
+                {title}
+              </div>
+            </Fade>
             <div
               className={classes.line}
               style={{
                 backgroundColor: fontColor,
               }}
             />
-            <div
-              className={classes.subtitle}
-              style={{
-                width: subtitleWidth,
-              }}
-            >
-              {subtitle}
-            </div>
+            <Fade>
+              <div
+                className={classes.subtitle}
+                style={{
+                  width: subtitleWidth,
+                }}
+              >
+                {subtitle}
+              </div>
+            </Fade>
             <div
               className={classes.description}
               style={{
                 width: descriptionWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              <Fade>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              </Fade>
             </div>
           </div>
         </ImageContainer>

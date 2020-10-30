@@ -9,6 +9,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _Fade = _interopRequireDefault(require("react-reveal/Fade"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
@@ -77,11 +79,11 @@ class TopSection3 extends _react.default.PureComponent {
       style: {
         color
       }
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    }, _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
-    }, firstTitle), _react.default.createElement("div", null, _react.default.createElement("div", {
+    }, firstTitle)), _react.default.createElement("div", null, _react.default.createElement(_Fade.default, null, _react.default.createElement("div", {
       className: classes.secondTitle
-    }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
+    }, secondTitle)), _react.default.createElement(_Fade.default, null, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle,
       style: {
         width: thirdTitleWidth
@@ -95,7 +97,7 @@ class TopSection3 extends _react.default.PureComponent {
       style: {
         backgroundColor: color
       }
-    }), _react.default.createElement("div", null, bottomTitle)))), _react.default.createElement("div", {
+    }), _react.default.createElement("div", null, bottomTitle))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

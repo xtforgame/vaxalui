@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import Fade from 'react-reveal/Fade';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -80,7 +81,9 @@ class Methodology extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              <Fade>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              </Fade>
             </div>
             <div
               className={classes.line}
@@ -94,7 +97,9 @@ class Methodology extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
+              <Fade>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
+              </Fade>
             </div>
             <div className={classes.description}>
               <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
@@ -105,7 +110,9 @@ class Methodology extends React.PureComponent {
                 width: descriptionWidth,
               }}
             >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{bottomContent}</BreakAllContentText>
+              <Fade>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{bottomContent}</BreakAllContentText>
+              </Fade>
             </div>
             <div>
               {children}
