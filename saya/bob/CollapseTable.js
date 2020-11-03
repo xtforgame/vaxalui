@@ -15,6 +15,8 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _CenteredContainer = _interopRequireDefault(require("../CenteredContainer"));
 
+var _reveal = require("../reveal");
+
 var _Text = _interopRequireDefault(require("./Text"));
 
 var _Table = _interopRequireDefault(require("./Table"));
@@ -71,10 +73,14 @@ var _default = props => {
       backgroundColor,
       color
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true,
+    duration: 1000
   }, _react.default.createElement(_Text.default, {
     className: classes.title,
     family: "bold"
-  }, title), !expended && !hideButton && _react.default.createElement(_icons.AddCircle, {
+  }, title), _react.default.createElement("div", null, !expended && !hideButton && _react.default.createElement(_icons.AddCircle, {
     className: classes.button,
     onClick: () => {
       setExpanded(true);
@@ -94,13 +100,13 @@ var _default = props => {
       height: 46,
       color: buttonColor
     }
-  }), _react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.expandedArea, {
       [classes.hide]: !expended
     })
   }, _react.default.createElement(_Table.default, {
     rows: rows
-  }))));
+  })))));
 };
 
 exports.default = _default;

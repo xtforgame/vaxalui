@@ -9,11 +9,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
-
 var _animatedNumberReact = _interopRequireDefault(require("animated-number-react"));
 
 var _reactVisibilitySensor = _interopRequireDefault(require("react-visibility-sensor"));
+
+var _AnimatedNumber = _interopRequireDefault(require("./AnimatedNumber"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
@@ -107,11 +107,6 @@ const styles = {
   }
 };
 
-const C = ({
-  isVisible,
-  visibilityRect
-}) => _react.default.createElement("div", null, `${isVisible}`);
-
 const GreenNumberSection = props => {
   const {
     classes,
@@ -137,10 +132,6 @@ const GreenNumberSection = props => {
     topTitle,
     hideTop
   } = props;
-  const [currentNumber, setCurrentNumber] = (0, _react.useState)(Math.round(Math.random() * 5));
-
-  const formatValue = value => value.toFixed(0);
-
   return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
     image: backgroundImage,
     className: classes.topSection
@@ -160,40 +151,14 @@ const GreenNumberSection = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.numberUpTitle
-  }, ' ', numberUpTitle, ' '), _react.default.createElement("div", {
-    className: classes.number,
-    style: {
-      paddingtTop: numberPaddingTop,
-      color: numberColor,
-      display: 'flex',
-      alignItems: 'flex-end'
-    }
-  }, _react.default.createElement("div", {
-    style: {
-      width: 235,
-      textAlign: 'right'
-    }
-  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
-    triggerOnce: true,
-    duration: 1000
-  }, _react.default.createElement(_reactVisibilitySensor.default, {
-    partialVisibility: true,
-    onChange: visible => {
-      if (visible) {
-        setCurrentNumber(number);
-      }
-    }
-  }, _react.default.createElement(_animatedNumberReact.default, {
-    duration: 600,
-    value: currentNumber,
-    formatValue: formatValue
-  })))), _react.default.createElement("span", {
-    className: classes.percent,
-    style: {
-      display: percentDisplay,
-      color: percentColor
-    }
-  }, suffix)), _react.default.createElement("div", {
+  }, ' ', numberUpTitle, ' '), _react.default.createElement(_AnimatedNumber.default, {
+    number: number,
+    suffix: suffix,
+    numberPaddingTop: numberPaddingTop,
+    numberColor: numberColor,
+    percentDisplay: percentDisplay,
+    percentColor: percentColor
+  }), _react.default.createElement("div", {
     className: classes.topTile
   }, topTile), _react.default.createElement("div", {
     className: classes.line,

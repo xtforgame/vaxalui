@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _Avatar = _interopRequireDefault(require("@material-ui/core/Avatar"));
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
+var _reveal = require("../reveal");
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
@@ -124,7 +124,8 @@ class Challenges extends _react.default.PureComponent {
       className: classes.container
     }, _react.default.createElement("div", {
       className: classes.title
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -137,7 +138,8 @@ class Challenges extends _react.default.PureComponent {
       }
     }), _react.default.createElement("div", {
       className: classes.subtitle
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -146,7 +148,8 @@ class Challenges extends _react.default.PureComponent {
       }
     }, subtitle))), _react.default.createElement("div", {
       className: classes.description
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -154,7 +157,8 @@ class Challenges extends _react.default.PureComponent {
       }
     }, description))))), _react.default.createElement("div", {
       className: classes.rightColumn
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_Avatar.default, {
       className: classes.Avatar,

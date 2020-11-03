@@ -11,7 +11,7 @@ var _styles = require("@material-ui/core/styles");
 
 var _icons = require("@material-ui/icons");
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
+var _reveal = require("../reveal");
 
 var _CenteredContainer = _interopRequireDefault(require("../CenteredContainer"));
 
@@ -140,7 +140,8 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.container
-  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
     triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.title,
@@ -166,7 +167,8 @@ var _default = props => {
     className: classes.container2
   }, _react.default.createElement("div", {
     className: classes.leftContainer
-  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
     triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.subtitle
@@ -194,13 +196,15 @@ var _default = props => {
     className: (0, _clsx.default)(classes.expandedArea, {
       [classes.hide]: !expended
     })
-  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
     triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.description
   }, description)))))), _react.default.createElement("div", {
     className: classes.lowerRight
-  }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
     triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.rightContainer

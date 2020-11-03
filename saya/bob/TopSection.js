@@ -9,7 +9,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
+var _reveal = require("../reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
@@ -79,7 +79,8 @@ class TopSection extends _react.default.PureComponent {
       style: {
         color
       }
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
@@ -88,7 +89,8 @@ class TopSection extends _react.default.PureComponent {
       style: {
         backgroundColor: color
       }
-    }))), _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }))), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle

@@ -9,11 +9,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
+var _reveal = require("../reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
+
+var _AnimatedNumber = _interopRequireDefault(require("./AnimatedNumber"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -98,7 +100,8 @@ class ProductFeatures extends _react.default.PureComponent {
       className: classes.line
     })), _react.default.createElement("div", {
       className: classes.subtitle
-    }, list.map(l => _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, list.map(l => _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
@@ -121,12 +124,12 @@ class ProductFeatures extends _react.default.PureComponent {
         color: b.color
       },
       className: classes.num
-    }, b.num, _react.default.createElement("span", {
-      style: {
-        fontSize: 20,
-        color: b.color
-      }
-    }, "%"), _react.default.createElement("div", {
+    }, _react.default.createElement(_AnimatedNumber.default, {
+      width: b.width,
+      number: b.num,
+      numberColor: b.color,
+      percentColor: b.color
+    }), _react.default.createElement("div", {
       style: {
         color: b.color
       },

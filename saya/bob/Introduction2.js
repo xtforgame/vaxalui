@@ -9,7 +9,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _reactAwesomeReveal = require("react-awesome-reveal");
+var _reveal = require("../reveal");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
@@ -82,7 +82,8 @@ class Introduction extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.title,
@@ -95,7 +96,8 @@ class Introduction extends _react.default.PureComponent {
       style: {
         backgroundColor: fontColor
       }
-    }), _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.subtitle,
@@ -107,7 +109,8 @@ class Introduction extends _react.default.PureComponent {
       style: {
         width: descriptionWidth
       }
-    }, _react.default.createElement(_reactAwesomeReveal.Fade, {
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {

@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _Project = _interopRequireDefault(require("./Project"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -59,7 +61,11 @@ class TechnologyProjects extends _react.default.PureComponent {
       className: classes.line
     }), _react.default.createElement("div", {
       className: classes.listRoot
-    }, list.map(l => _react.default.createElement(_Project.default, l))))));
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true,
+      duration: 1000
+    }, list.map(l => _react.default.createElement(_Project.default, l)))))));
   }
 
 }
