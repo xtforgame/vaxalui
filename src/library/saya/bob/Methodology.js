@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -81,9 +81,9 @@ class Methodology extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
             <div
               className={classes.line}
@@ -97,9 +97,9 @@ class Methodology extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
             <div className={classes.description}>
               <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
@@ -110,9 +110,9 @@ class Methodology extends React.PureComponent {
                 width: descriptionWidth,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{bottomContent}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
             <div>
               {children}

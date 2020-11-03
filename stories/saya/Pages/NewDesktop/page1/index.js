@@ -39,6 +39,7 @@ storiesOf('saya|Pages/NewDesktop', module)
               {
                 color: '#000000',
                 num: '100',
+                width: 315,
                 top: 'Post Consumer',
                 bottom: 'Recycled Fiber',
                 bg: '#d8d8d8',

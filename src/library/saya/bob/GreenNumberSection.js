@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Fade } from 'react-awesome-reveal';
-import AnimatedNumber from 'animated-number-react';
+import AN from 'animated-number-react';
 import VisibilitySensor from 'react-visibility-sensor';
+import AnimatedNumber from './AnimatedNumber';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
 
@@ -88,11 +88,6 @@ const styles = {
   },
 };
 
-const C = ({ isVisible, visibilityRect }) => <div>{`${isVisible}`}</div>;
-
-
-
-
 const GreenNumberSection = (props) => {
   const {
     classes,
@@ -119,9 +114,6 @@ const GreenNumberSection = (props) => {
     hideTop,
   } = props;
 
-  const [currentNumber, setCurrentNumber] = useState(Math.round(Math.random() * 5));
-
-  const formatValue = value => value.toFixed(0);
 
   return (
     <React.Fragment>
@@ -156,44 +148,14 @@ const GreenNumberSection = (props) => {
             {numberUpTitle}
             {' '}
           </div>
-
-          <div
-            className={classes.number}
-            style={{
-              paddingtTop: numberPaddingTop,
-              color: numberColor,
-              display: 'flex',
-              alignItems: 'flex-end',
-            }}
-          >
-            <div style={{ width: 235, textAlign: 'right' }}>
-              <Fade triggerOnce duration={1000}>
-                <VisibilitySensor
-                  partialVisibility
-                  onChange={(visible) => {
-                    if (visible) {
-                      setCurrentNumber(number);
-                    }
-                  }}
-                >
-                  <AnimatedNumber
-                    duration={600}
-                    value={currentNumber}
-                    formatValue={formatValue}
-                  />
-                </VisibilitySensor>
-              </Fade>
-            </div>
-            <span
-              className={classes.percent}
-              style={{
-                display: percentDisplay,
-                color: percentColor,
-              }}
-            >
-              {suffix}
-            </span>
-          </div>
+          <AnimatedNumber
+            number={number}
+            suffix={suffix}
+            numberPaddingTop={numberPaddingTop}
+            numberColor={numberColor}
+            percentDisplay={percentDisplay}
+            percentColor={percentColor}
+          />
           <div className={classes.topTile}>{topTile}</div>
           <div
             className={classes.line}

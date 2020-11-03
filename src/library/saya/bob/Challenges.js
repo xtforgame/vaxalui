@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from '../reveal';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
@@ -118,9 +118,9 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.title}
               >
-                <Fade triggerOnce>
+                <Slide direction="up" triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-                </Fade>
+                </Slide>
               </div>
               <div
                 className={classes.line}
@@ -131,25 +131,25 @@ class Challenges extends React.PureComponent {
               <div
                 className={classes.subtitle}
               >
-                <Fade triggerOnce>
+                <Slide direction="up" triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontWeight: 300 }}>{subtitle}</BreakAllContentText>
-                </Fade>
+                </Slide>
               </div>
               <div
                 className={classes.description}
               >
-                <Fade triggerOnce>
+                <Slide direction="up" triggerOnce>
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-                </Fade>
+                </Slide>
               </div>
             </div>
           </div>
           <div
             className={classes.rightColumn}
           >
-            <Fade triggerOnce>
+            <Slide direction="up" triggerOnce>
               <Avatar className={classes.Avatar} src={image} />
-            </Fade>
+            </Slide>
           </div>
         </div>
         <div className={classes.space} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Project from './Project';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -48,7 +49,9 @@ class TechnologyProjects extends React.PureComponent {
             <div>{title}</div>
             <div className={classes.line} />
             <div className={classes.listRoot}>
-              {list.map(l => (<Project {...l} />))}
+              <Slide direction="up" triggerOnce duration={1000}>
+                {list.map(l => (<Project {...l} />))}
+              </Slide>
             </div>
           </div>
         </div>

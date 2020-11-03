@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 
@@ -75,9 +75,9 @@ class Introduction extends React.PureComponent {
                 marginTop: titlMarginTop,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
             <div
               className={classes.line}
@@ -91,9 +91,9 @@ class Introduction extends React.PureComponent {
                 width: subtitleWidth,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
             <div
               className={classes.description}
@@ -101,9 +101,9 @@ class Introduction extends React.PureComponent {
                 width: descriptionWidth,
               }}
             >
-              <Fade triggerOnce>
+              <Slide direction="up" triggerOnce>
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-              </Fade>
+              </Slide>
             </div>
           </div>
         </ImageContainer>

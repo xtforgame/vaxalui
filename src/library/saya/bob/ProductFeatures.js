@@ -1,8 +1,9 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { Fade } from 'react-awesome-reveal';
+import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import AnimatedNumber from './AnimatedNumber';
 
 const styles = {
   root: {
@@ -83,9 +84,9 @@ class ProductFeatures extends React.PureComponent {
             </div>
             <div className={classes.subtitle}>
               {list.map(l => (
-                <Fade triggerOnce>
+                <Slide direction="up" triggerOnce>
                   <BreakAllContentText style={{ fontSize: 28, fontFamily: 'FilsonSoftRegular' }}>{`・ ${l}`}</BreakAllContentText>
-                </Fade>
+                </Slide>
               ))}
             </div>
           </div>
@@ -98,8 +99,15 @@ class ProductFeatures extends React.PureComponent {
             >
               <div className={classes.blockContent}>
                 <div style={{ color: b.color }} className={classes.num}>
-                  {b.num}
-                  <span style={{ fontSize: 20, color: b.color }}>%</span>
+                  <AnimatedNumber
+                    width={b.width}
+                    number={b.num}
+                    // suffix={suffix}
+                    // numberPaddingTop={numberPaddingTop}
+                    numberColor={b.color}
+                    // percentDisplay={percentDisplay}
+                    percentColor={b.color}
+                  />
                   <div style={{ color: b.color }} className={classes.top}>{b.top}</div>
                   <div style={{ margin: '12px 0', color: b.color, width: '100%', border: `1px solid ${b.color}` }} />
                   <div style={{ color: b.color }} className={classes.bottom}>{b.bottom}</div>

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AddCircle, RemoveCircle } from '@material-ui/icons';
 import clsx from 'clsx';
 import CenteredContainer from '../CenteredContainer';
+import { Slide } from '../reveal';
 import Text from './Text';
 import Table from './Table';
 
@@ -50,12 +51,16 @@ export default (props) => {
   return (
     <>
       <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>
-        <Text className={classes.title} family="bold">{title}</Text>
-        {!expended && !hideButton && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-        {expended && !hideButton && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-        <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
-          <Table rows={rows} />
-        </div>
+        <Slide direction="up" triggerOnce duration={1000}>
+          <Text className={classes.title} family="bold">{title}</Text>
+          <div>
+            {!expended && !hideButton && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
+            {expended && !hideButton && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
+          </div>
+          <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
+            <Table rows={rows} />
+          </div>
+        </Slide>
       </CenteredContainer>
     </>
   );
