@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import TweenMove from './TweenMove';
 
 const styles = {
   root: {
@@ -61,33 +62,38 @@ class TopSection2 extends React.PureComponent {
     } = this.props;
     return (
       <React.Fragment>
-        <ImageContainer
+        <TweenMove
+          height={500}
           image={backgroundImage}
-          className={classes.root}
-          style={{ color }}
         >
-          <BreakAllContentText className={classes.firstTitle}>
-            {firstTitle}
-            <div
-              className={classes.firstLine}
-              style={{ backgroundColor: color }}
-            />
-          </BreakAllContentText>
-          <div>
-            <BreakAllContentText className={classes.secondTitle}>
-              {secondTitle}
+          <ImageContainer
+            image={backgroundImage}
+            className={classes.root}
+            style={{ color }}
+          >
+            <BreakAllContentText className={classes.firstTitle}>
+              {firstTitle}
+              <div
+                className={classes.firstLine}
+                style={{ backgroundColor: color }}
+              />
             </BreakAllContentText>
-            <BreakAllContentText
-              className={classes.thirdTitle}
-              style={{
-                width: thirdTitleWidth,
-                margin: 0,
-              }}
-            >
-              {thirdTitle}
-            </BreakAllContentText>
-          </div>
-        </ImageContainer>
+            <div>
+              <BreakAllContentText className={classes.secondTitle}>
+                {secondTitle}
+              </BreakAllContentText>
+              <BreakAllContentText
+                className={classes.thirdTitle}
+                style={{
+                  width: thirdTitleWidth,
+                  margin: 0,
+                }}
+              >
+                {thirdTitle}
+              </BreakAllContentText>
+            </div>
+          </ImageContainer>
+        </TweenMove>
         <div className={classes.space} />
       </React.Fragment>
     );

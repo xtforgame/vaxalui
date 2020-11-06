@@ -15,6 +15,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _TweenMove = _interopRequireDefault(require("./TweenMove"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -74,7 +76,10 @@ class TopSection2 extends _react.default.PureComponent {
       thirdTitleWidth,
       color = '#ffffff'
     } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
+    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_TweenMove.default, {
+      height: 500,
+      image: backgroundImage
+    }, _react.default.createElement(_ImageContainer.default, {
       image: backgroundImage,
       className: classes.root,
       style: {
@@ -95,7 +100,7 @@ class TopSection2 extends _react.default.PureComponent {
         width: thirdTitleWidth,
         margin: 0
       }
-    }, thirdTitle))), _react.default.createElement("div", {
+    }, thirdTitle)))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

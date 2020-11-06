@@ -118,18 +118,18 @@ class GreenNumberSection extends React.PureComponent {
             backgroundColor: backgroundColor,
           }}
         >
-          <Slide direction="up" triggerOnce>
-            <div
-              className={classes.leftColumn}
-              style={{
-                paddingTop: leftPaddingTop,
-                paddingRight: leftPaddingRight,
-                ...leftColumnStyle,
-              }}
-            >
+          <div
+            className={classes.leftColumn}
+            style={{
+              paddingTop: leftPaddingTop,
+              paddingRight: leftPaddingRight,
+              ...leftColumnStyle,
+            }}
+          >
+            <Slide direction="up" triggerOnce>
               {image}
-            </div>
-          </Slide>
+            </Slide>
+          </div>
           <div
             className={classes.rightColumn}
             style={{

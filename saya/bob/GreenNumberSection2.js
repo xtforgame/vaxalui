@@ -133,15 +133,15 @@ class GreenNumberSection extends _react.default.PureComponent {
         height: height,
         backgroundColor: backgroundColor
       }
-    }, _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.leftColumn,
       style: _objectSpread({
         paddingTop: leftPaddingTop,
         paddingRight: leftPaddingRight
       }, leftColumnStyle)
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, image)), _react.default.createElement("div", {
       className: classes.rightColumn,
       style: {
