@@ -19,6 +19,8 @@ var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentTex
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -172,6 +174,9 @@ const GreenNumberSection = props => {
     style: {
       paddingLeft: rightPaddingLeft
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.rightTitle
   }, rightTitle), _react.default.createElement("div", {
@@ -183,7 +188,7 @@ const GreenNumberSection = props => {
     style: {
       fontFamily: 'FilsonSoftRegular'
     }
-  }, description)))), _react.default.createElement("div", {
+  }, description))))), _react.default.createElement("div", {
     className: classes.space
   }));
 };

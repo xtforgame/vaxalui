@@ -13,6 +13,10 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _AnimatedNumber = _interopRequireDefault(require("./AnimatedNumber"));
+
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -121,20 +125,26 @@ class SolidBackbone extends _react.default.PureComponent {
       className: classes.container
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, firstTitle, _react.default.createElement("div", {
       className: classes.firstLine
-    })), _react.default.createElement("div", null, _react.default.createElement("div", {
+    }))), _react.default.createElement("div", null, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", {
       className: classes.secondTitle
     }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle
-    }, thirdTitle)))), _react.default.createElement("div", {
+    }, thirdTitle))))), _react.default.createElement("div", {
       className: classes.blockRoot
     }, block.map(b => {
-      let surffix = '%';
+      let suffix = '%';
 
-      if (b.surffix != null) {
+      if (b.suffix != null) {
         ({
-          surffix
+          suffix
         } = b);
       }
 
@@ -152,14 +162,17 @@ class SolidBackbone extends _react.default.PureComponent {
           color: b.color
         },
         className: classes.num
-      }, b.num, surffix && _react.default.createElement("span", {
+      }, _react.default.createElement(_AnimatedNumber.default, {
+        width: 200,
+        number: b.num,
+        suffix: suffix,
+        numberColor: b.color,
+        percentDisplay: !!suffix,
+        percentColor: b.color
+      }), _react.default.createElement("div", {
         style: {
-          fontSize: 20,
-          color: b.color
-        }
-      }, "%"), _react.default.createElement("div", {
-        style: {
-          color: b.color
+          color: b.color,
+          marginTop: 8
         },
         className: classes.top
       }, b.top), _react.default.createElement("div", {

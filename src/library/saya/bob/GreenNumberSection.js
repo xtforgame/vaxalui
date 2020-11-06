@@ -5,6 +5,7 @@ import VisibilitySensor from 'react-visibility-sensor';
 import AnimatedNumber from './AnimatedNumber';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const styles = {
   topSection: {
@@ -171,15 +172,17 @@ const GreenNumberSection = (props) => {
             paddingLeft: rightPaddingLeft,
           }}
         >
-          <div className={classes.rightTitle}>{rightTitle}</div>
-          <div
-            className={classes.description}
-            style={{
-              paddingTop: descriptionPaddingTop,
-            }}
-          >
-            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.rightTitle}>{rightTitle}</div>
+            <div
+              className={classes.description}
+              style={{
+                paddingTop: descriptionPaddingTop,
+              }}
+            >
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+            </div>
+          </Slide>
         </div>
       </div>
       <div className={classes.space} />

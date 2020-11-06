@@ -83,14 +83,12 @@ class Introduction extends React.PureComponent {
               >
                 {title}
               </div>
-            </Slide>
-            <div
-              className={classes.line}
-              style={{
-                backgroundColor: fontColor,
-              }}
-            />
-            <Slide direction="up" triggerOnce>
+              <div
+                className={classes.line}
+                style={{
+                  backgroundColor: fontColor,
+                }}
+              />
               <div
                 className={classes.subtitle}
                 style={{
@@ -112,9 +110,11 @@ class Introduction extends React.PureComponent {
             </div>
           </div>
         </ImageContainer>
-        <div>
-          {children}
-        </div>
+        <Slide direction="up" triggerOnce>
+          <div>
+            {children}
+          </div>
+        </Slide>
         <div className={classes.space} />
       </>
     );

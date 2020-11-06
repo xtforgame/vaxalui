@@ -22,6 +22,9 @@ const AnimatedNumber = ({ isVisible, number }) => {
   useEffect(() => {
     if (isVisible) {
       setCurrentNumber(number);
+      setTimeout(() => {
+        setCurrentNumber(number);
+      }, 601);
     }
   }, [isVisible]);
 

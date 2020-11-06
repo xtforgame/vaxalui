@@ -91,15 +91,12 @@ class Introduction extends _react.default.PureComponent {
         width: titleWidth,
         marginTop: titlMarginTop
       }
-    }, title)), _react.default.createElement("div", {
+    }, title), _react.default.createElement("div", {
       className: classes.line,
       style: {
         backgroundColor: fontColor
       }
-    }), _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
-    }, _react.default.createElement("div", {
+    }), _react.default.createElement("div", {
       className: classes.subtitle,
       style: {
         width: subtitleWidth
@@ -116,7 +113,10 @@ class Introduction extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description))))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
+    }, description))))), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", null, children)), _react.default.createElement("div", {
       className: classes.space
     }));
   }

@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -75,6 +77,9 @@ class BigGreenSection extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.title,
       style: {
@@ -108,7 +113,10 @@ class BigGreenSection extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description)))), _react.default.createElement("div", null, children), _react.default.createElement("div", {
+    }, description))))), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", null, children)), _react.default.createElement("div", {
       className: classes.space
     }));
   }

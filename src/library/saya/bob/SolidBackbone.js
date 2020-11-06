@@ -2,6 +2,8 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import AnimatedNumber from './AnimatedNumber';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -112,26 +114,30 @@ class SolidBackbone extends React.PureComponent {
         >
           <div className={classes.container}>
             <BreakAllContentText className={classes.firstTitle}>
-              {firstTitle}
-              <div className={classes.firstLine} />
+              <Slide direction="up" triggerOnce>
+                {firstTitle}
+                <div className={classes.firstLine} />
+              </Slide>
             </BreakAllContentText>
             <div>
-            <div className={classes.secondTitle}>
-              {secondTitle}
+              <Slide direction="up" triggerOnce>
+                <div className={classes.secondTitle}>
+                  {secondTitle}
+                </div>
+                <BreakAllContentText
+                  className={classes.thirdTitle}
+                >
+                  {thirdTitle}
+                </BreakAllContentText>
+              </Slide>
             </div>
-            <BreakAllContentText
-              className={classes.thirdTitle}
-            >
-              {thirdTitle}
-            </BreakAllContentText>
-          </div>
           </div>
         </ImageContainer>
         <div className={classes.blockRoot}>
           {block.map((b) => {
-            let surffix = '%';
-            if (b.surffix != null) {
-              ({ surffix } = b);
+            let suffix = '%';
+            if (b.suffix != null) {
+              ({ suffix } = b);
             }
             return (
               <div
@@ -140,9 +146,18 @@ class SolidBackbone extends React.PureComponent {
               >
                 <div className={classes.blockContent}>
                   <div style={{ color: b.color }} className={classes.num}>
-                    {b.num}
-                    {surffix && <span style={{ fontSize: 20, color: b.color }}>%</span>}
-                    <div style={{ color: b.color }} className={classes.top}>{b.top}</div>
+                    {/* {b.num}
+                    {suffix && <span style={{ fontSize: 20, color: b.color }}>%</span>} */}
+                    <AnimatedNumber
+                      width={200}
+                      number={b.num}
+                      suffix={suffix}
+                      // numberPaddingTop={numberPaddingTop}
+                      numberColor={b.color}
+                      percentDisplay={!!suffix}
+                      percentColor={b.color}
+                    />
+                    <div style={{ color: b.color, marginTop: 8 }} className={classes.top}>{b.top}</div>
                     <div style={{ margin: '12px 0', color: b.color, width: '100%', border: `1px solid ${b.color}` }} />
                     <div style={{ color: b.color }} className={classes.bottom}>{b.bottom}</div>
                   </div>

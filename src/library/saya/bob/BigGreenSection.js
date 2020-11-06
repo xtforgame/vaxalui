@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -67,44 +68,48 @@ class BigGreenSection extends React.PureComponent {
           <div
             className={classes.container}
           >
-            <div
-              className={classes.title}
-              style={{
-                width: titleWidth,
-                marginTop: titlMarginTop,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-            </div>
-            <div
-              className={classes.line}
-              style={{
-                backgroundColor: fontColor,
-              }}
-            />
-            <div
-              className={classes.subtitle}
-              style={{
-                width: subtitleWidth,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
-            </div>
-            <div
-              className={classes.description}
-              style={{
-                width: descriptionWidth,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>
-                {description}
-              </BreakAllContentText>
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div
+                className={classes.title}
+                style={{
+                  width: titleWidth,
+                  marginTop: titlMarginTop,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              </div>
+              <div
+                className={classes.line}
+                style={{
+                  backgroundColor: fontColor,
+                }}
+              />
+              <div
+                className={classes.subtitle}
+                style={{
+                  width: subtitleWidth,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
+              </div>
+              <div
+                className={classes.description}
+                style={{
+                  width: descriptionWidth,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>
+                  {description}
+                </BreakAllContentText>
+              </div>
+            </Slide>
           </div>
         </ImageContainer>
-        <div>
-          {children}
-        </div>
+        <Slide direction="up" triggerOnce>
+          <div>
+            {children}
+          </div>
+        </Slide>
         <div className={classes.space} />
       </>
     );

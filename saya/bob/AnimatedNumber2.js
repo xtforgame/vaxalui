@@ -40,6 +40,9 @@ const AnimatedNumber = ({
   (0, _react.useEffect)(() => {
     if (isVisible) {
       setCurrentNumber(number);
+      setTimeout(() => {
+        setCurrentNumber(number);
+      }, 601);
     }
   }, [isVisible]);
   return _react.default.createElement(_animatedNumberReact.default, {
