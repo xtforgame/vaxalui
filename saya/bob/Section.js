@@ -100,12 +100,12 @@ class Section extends _react.default.PureComponent {
       className: classes.title
     }, title), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subTitle
-    }, subTitle), showButton && _react.default.createElement("div", {
+    }, subTitle), _react.default.createElement("div", null, showButton && _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Read More",
       onClick: onClick
-    }))))), _react.default.createElement("div", {
+    })))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

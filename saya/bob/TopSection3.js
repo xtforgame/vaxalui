@@ -15,6 +15,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _AnimatedNumber = _interopRequireDefault(require("./AnimatedNumber2"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -89,7 +91,11 @@ class TopSection3 extends _react.default.PureComponent {
       triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.secondTitle
-    }, secondTitle)), _react.default.createElement(_reveal.Slide, {
+    }, _react.default.createElement(_AnimatedNumber.default, {
+      number: 75000000000,
+      numberPaddingTop: 12,
+      numberColor: 'white'
+    }))), _react.default.createElement(_reveal.Slide, {
       direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {

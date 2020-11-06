@@ -79,9 +79,6 @@ class TopSection extends _react.default.PureComponent {
       style: {
         color
       }
-    }, _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
     }, firstTitle, _react.default.createElement("div", {
@@ -89,14 +86,11 @@ class TopSection extends _react.default.PureComponent {
       style: {
         backgroundColor: color
       }
-    }))), _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
-    }, _react.default.createElement("div", null, _react.default.createElement("div", {
+    })), _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle
     }, secondTitle), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.thirdTitle
-    }, thirdTitle)))), _react.default.createElement("div", {
+    }, thirdTitle))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

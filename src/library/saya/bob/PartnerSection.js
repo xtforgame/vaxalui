@@ -17,6 +17,12 @@ const styles = {
     flexWrap: 'wrap',
     paddingTop: 88,
   },
+  section2: {
+    width: 940,
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+  },
   breadCrumbs: {
     width: 'fit-content',
     fontSize: 16,
@@ -93,7 +99,7 @@ class PartnerSection extends React.PureComponent {
                 </IconBoxSection>
               )}
             </div>
-            <div className={classes.section}>
+            <div className={classes.section2}>
               <div className={classes.button}>
                 <GreenButton
                   text="Read More"

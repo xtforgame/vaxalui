@@ -32,6 +32,12 @@ const styles = {
     flexWrap: 'wrap',
     paddingTop: 88
   },
+  section2: {
+    width: 940,
+    display: 'flex',
+    flexDirection: 'column',
+    flexWrap: 'wrap'
+  },
   breadCrumbs: {
     width: 'fit-content',
     fontSize: 16,
@@ -108,7 +114,7 @@ class PartnerSection extends _react.default.PureComponent {
       cell: cell,
       width: 140
     }))))), _react.default.createElement("div", {
-      className: classes.section
+      className: classes.section2
     }, _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {

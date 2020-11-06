@@ -79,14 +79,16 @@ class Section extends React.PureComponent {
               </div>
               <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
               <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
-              {showButton && (
-                <div className={classes.button}>
-                  <GreenButton
-                    text="Read More"
-                    onClick={onClick}
-                  />
-                </div>
-              )}
+              <div>
+                {showButton && (
+                  <div className={classes.button}>
+                    <GreenButton
+                      text="Read More"
+                      onClick={onClick}
+                    />
+                  </div>
+                )}
+              </div>
             </Slide>
           </div>
         </ImageContainer>

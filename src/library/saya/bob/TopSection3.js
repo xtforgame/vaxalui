@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import AnimatedNumber2 from './AnimatedNumber2';
 
 
 const styles = {
@@ -74,7 +75,11 @@ class TopSection3 extends React.PureComponent {
           <div>
             <Slide direction="up" triggerOnce>
               <div className={classes.secondTitle}>
-                {secondTitle}
+                <AnimatedNumber2
+                  number={75000000000}
+                  numberPaddingTop={12}
+                  numberColor={'white'}
+                />
               </div>
             </Slide>
             <Slide direction="up" triggerOnce>
