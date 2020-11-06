@@ -2,8 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import IconBoxSection from './IconBoxSection';
-import IconBox from './IconBox'
+import IconBox from './IconBox';
 import GreenButton from '../bob/GreenButton';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -75,26 +76,32 @@ class PartnerSection extends React.PureComponent {
           }}
         >
           <div className={classes.section}>
-            <div className={classes.breadCrumbs}>
-              {breadCrumbs}
-              <div className={classes.firstLine} />
-            </div>
-            <div className={classes.title}>{title}</div>
-            <div className={classes.subTitle}>{subTitle}</div>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.breadCrumbs}>
+                {breadCrumbs}
+                <div className={classes.firstLine} />
+              </div>
+              <div className={classes.title}>{title}</div>
+              <div className={classes.subTitle}>{subTitle}</div>
+            </Slide>
           </div>
-          {partner.map(r => 
-            <IconBoxSection color={color}>
-              {r.map(cell => <IconBox color={color} cell={cell} width={140} />)}
-            </IconBoxSection>
-          )}
-          <div className={classes.section}>
-            <div className={classes.button}>
-              <GreenButton
-                text="Read More"
-                onClick={onClick}
-              />
+          <Slide direction="up" triggerOnce>
+            <div>
+              {partner.map(r => 
+                <IconBoxSection color={color}>
+                  {r.map(cell => <IconBox color={color} cell={cell} width={140} />)}
+                </IconBoxSection>
+              )}
             </div>
-          </div>
+            <div className={classes.section}>
+              <div className={classes.button}>
+                <GreenButton
+                  text="Read More"
+                  onClick={onClick}
+                />
+              </div>
+            </div>
+          </Slide>
         </ImageContainer>
         <div className={classes.space} />
       </>

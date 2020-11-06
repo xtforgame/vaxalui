@@ -17,6 +17,8 @@ var _IconBox = _interopRequireDefault(require("./IconBox"));
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -85,6 +87,9 @@ class PartnerSection extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.section
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.breadCrumbs
     }, breadCrumbs, _react.default.createElement("div", {
@@ -93,20 +98,23 @@ class PartnerSection extends _react.default.PureComponent {
       className: classes.title
     }, title), _react.default.createElement("div", {
       className: classes.subTitle
-    }, subTitle)), partner.map(r => _react.default.createElement(_IconBoxSection.default, {
+    }, subTitle))), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", null, partner.map(r => _react.default.createElement(_IconBoxSection.default, {
       color: color
     }, r.map(cell => _react.default.createElement(_IconBox.default, {
       color: color,
       cell: cell,
       width: 140
-    })))), _react.default.createElement("div", {
+    }))))), _react.default.createElement("div", {
       className: classes.section
     }, _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Read More",
       onClick: onClick
-    })))), _react.default.createElement("div", {
+    }))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }
