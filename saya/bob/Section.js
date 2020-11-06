@@ -86,6 +86,9 @@ class Section extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.section
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.breadCrumbs
     }, breadCrumbs, _react.default.createElement("div", {
@@ -93,22 +96,16 @@ class Section extends _react.default.PureComponent {
       style: {
         backgroundColor: color
       }
-    })), _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    })), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.title
-    }, title)), _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
-    }, _react.default.createElement(_BreakAllContentText.default, {
+    }, title), _react.default.createElement(_BreakAllContentText.default, {
       className: classes.subTitle
-    }, subTitle)), showButton && _react.default.createElement("div", {
+    }, subTitle), showButton && _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: "Read More",
       onClick: onClick
-    })))), _react.default.createElement("div", {
+    }))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

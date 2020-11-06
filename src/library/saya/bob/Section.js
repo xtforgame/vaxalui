@@ -72,22 +72,22 @@ class Section extends React.PureComponent {
           style={{ height, color }}
         >
           <div className={classes.section}>
-            <div className={classes.breadCrumbs}>
-              {breadCrumbs}
-              <div className={classes.firstLine} style={{ backgroundColor: color }} />
-            </div>
             <Slide direction="up" triggerOnce>
+              <div className={classes.breadCrumbs}>
+                {breadCrumbs}
+                <div className={classes.firstLine} style={{ backgroundColor: color }} />
+              </div>
               <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
-            </Slide>
-            <Slide direction="up" triggerOnce>
               <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
+              {showButton && (
+                <div className={classes.button}>
+                  <GreenButton
+                    text="Read More"
+                    onClick={onClick}
+                  />
+                </div>
+              )}
             </Slide>
-            {showButton && <div className={classes.button}>
-              <GreenButton
-                text="Read More"
-                onClick={onClick}
-              />
-            </div>}
           </div>
         </ImageContainer>
         <div className={classes.space} />
