@@ -66,32 +66,26 @@ class TopSection2 extends React.PureComponent {
           className={classes.root}
           style={{ color }}
         >
-          <Slide direction="up" triggerOnce>
-            <BreakAllContentText className={classes.firstTitle}>
-              {firstTitle}
-              <div
-                className={classes.firstLine}
-                style={{ backgroundColor: color }}
-              />
-            </BreakAllContentText>
-          </Slide>
+          <BreakAllContentText className={classes.firstTitle}>
+            {firstTitle}
+            <div
+              className={classes.firstLine}
+              style={{ backgroundColor: color }}
+            />
+          </BreakAllContentText>
           <div>
-            <Slide direction="up" triggerOnce>
-              <BreakAllContentText className={classes.secondTitle}>
-                {secondTitle}
-              </BreakAllContentText>
-            </Slide>
-            <Slide direction="up" triggerOnce>
-              <BreakAllContentText
-                className={classes.thirdTitle}
-                style={{
-                  width: thirdTitleWidth,
-                  margin: 0,
-                }}
-              >
-                {thirdTitle}
-              </BreakAllContentText>
-            </Slide>
+            <BreakAllContentText className={classes.secondTitle}>
+              {secondTitle}
+            </BreakAllContentText>
+            <BreakAllContentText
+              className={classes.thirdTitle}
+              style={{
+                width: thirdTitleWidth,
+                margin: 0,
+              }}
+            >
+              {thirdTitle}
+            </BreakAllContentText>
           </div>
         </ImageContainer>
         <div className={classes.space} />

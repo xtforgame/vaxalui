@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -103,30 +104,31 @@ class ChallengesAndTransparency extends React.PureComponent {
           <div
             className={classes.container}
           >
-            <div
-              className={classes.title}
-              style={{
-                width: titleWidth,
-                marginTop: titlMarginTop,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-            </div>
-            <div
-              className={classes.line}
-              style={{
-                border: lineBorder,
-              }}
-            />
-            <div
-              className={classes.subtitle}
-              style={{
-                width: subtitleWidth,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</BreakAllContentText>
-            </div>
-            <div
+            <Slide direction="up" triggerOnce>
+              <div
+                className={classes.title}
+                style={{
+                  width: titleWidth,
+                  marginTop: titlMarginTop,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              </div>
+              <div
+                className={classes.line}
+                style={{
+                  border: lineBorder,
+                }}
+              />
+              <div
+                className={classes.subtitle}
+                style={{
+                  width: subtitleWidth,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{subtitle}</BreakAllContentText>
+              </div>
+              <div
               className={classes.description}
               style={{
                 width: descriptionWidth,
@@ -134,6 +136,7 @@ class ChallengesAndTransparency extends React.PureComponent {
             >
               <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
             </div>
+            </Slide>
           </div>
         </ImageContainer>
         <div className={classes.extendedRoot}>
@@ -141,16 +144,20 @@ class ChallengesAndTransparency extends React.PureComponent {
             className={ classes.extended }
           >
             <div className={classes.left}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Type of Materials and Finishing</BreakAllContentText>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
+              <Slide direction="up" triggerOnce>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Type of Materials and Finishing</BreakAllContentText>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
 
 We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.`}</BreakAllContentText>
+              </Slide>
             </div>
             <div className={classes.right}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Content Percentage</BreakAllContentText>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
+              <Slide direction="up" triggerOnce>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light', fontSize: 20, marginTop: 80 }}>Content Percentage</BreakAllContentText>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', marginTop: 22 }}>{`SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
 
 We aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution.`}</BreakAllContentText>
+              </Slide>
             </div>
           </div>
         </div>

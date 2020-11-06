@@ -85,12 +85,14 @@ class Methodology extends React.PureComponent {
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
               </Slide>
             </div>
-            <div
-              className={classes.line}
-              style={{
-                borderBottom: lineBorder,
-              }}
-            />
+            <Slide direction="up" triggerOnce>
+              <div
+                className={classes.line}
+                style={{
+                  borderBottom: lineBorder,
+                }}
+              />
+            </Slide>
             <div
               className={classes.subtitle}
               style={{
@@ -101,9 +103,11 @@ class Methodology extends React.PureComponent {
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Light' }}>{subtitle}</BreakAllContentText>
               </Slide>
             </div>
-            <div className={classes.description}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.description}>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              </div>
+            </Slide>
             <div
               className={classes.bottomContent}
               style={{
@@ -114,9 +118,11 @@ class Methodology extends React.PureComponent {
                 <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{bottomContent}</BreakAllContentText>
               </Slide>
             </div>
-            <div>
-              {children}
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div>
+                {children}
+              </div>
+            </Slide>
           </div>
         </ImageContainer>
         <div className={classes.space} />

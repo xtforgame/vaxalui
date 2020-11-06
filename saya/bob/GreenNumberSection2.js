@@ -13,6 +13,8 @@ var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentTex
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -131,17 +133,23 @@ class GreenNumberSection extends _react.default.PureComponent {
         height: height,
         backgroundColor: backgroundColor
       }
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.leftColumn,
       style: _objectSpread({
         paddingTop: leftPaddingTop,
         paddingRight: leftPaddingRight
       }, leftColumnStyle)
-    }, image), _react.default.createElement("div", {
+    }, image)), _react.default.createElement("div", {
       className: classes.rightColumn,
       style: {
         paddingLeft: rightPaddingLeft
       }
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.rightTitle
     }, rightTitle), _react.default.createElement("div", {
@@ -153,7 +161,7 @@ class GreenNumberSection extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description)))), _react.default.createElement("div", {
+    }, description))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

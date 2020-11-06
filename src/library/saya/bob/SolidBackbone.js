@@ -115,7 +115,7 @@ class SolidBackbone extends React.PureComponent {
           <div className={classes.container}>
             <BreakAllContentText className={classes.firstTitle}>
               <Slide direction="up" triggerOnce>
-                {firstTitle}
+                <div>{firstTitle}</div>
                 <div className={classes.firstLine} />
               </Slide>
             </BreakAllContentText>

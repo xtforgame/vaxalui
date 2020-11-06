@@ -122,12 +122,14 @@ class Challenges extends React.PureComponent {
                   <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
                 </Slide>
               </div>
-              <div
-                className={classes.line}
-                style={{
-                  borderBottom: '1px solid #000000',
-                }}
-              />
+              <Slide direction="up" triggerOnce>
+                <div
+                  className={classes.line}
+                  style={{
+                    borderBottom: '1px solid #000000',
+                  }}
+                />
+              </Slide>
               <div
                 className={classes.subtitle}
               >

@@ -131,12 +131,15 @@ class Challenges extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
-    }, title))), _react.default.createElement("div", {
+    }, title))), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", {
       className: classes.line,
       style: {
         borderBottom: '1px solid #000000'
       }
-    }), _react.default.createElement("div", {
+    })), _react.default.createElement("div", {
       className: classes.subtitle
     }, _react.default.createElement(_reveal.Slide, {
       direction: "up",

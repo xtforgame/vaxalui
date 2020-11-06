@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -111,6 +113,9 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.title,
       style: {
@@ -144,12 +149,15 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       style: {
         fontFamily: 'FilsonSoftRegular'
       }
-    }, description)))), _react.default.createElement("div", {
+    }, description))))), _react.default.createElement("div", {
       className: classes.extendedRoot
     }, _react.default.createElement("div", {
       className: classes.extended
     }, _react.default.createElement("div", {
       className: classes.left
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Light',
@@ -163,8 +171,11 @@ class ChallengesAndTransparency extends _react.default.PureComponent {
       }
     }, `Right now we are limited to 100% Polyester fabric cutting scraps without coating nor finishing, including water repellent.
 
-We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.`)), _react.default.createElement("div", {
+We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR or DWR finishing in 2021.`))), _react.default.createElement("div", {
       className: classes.right
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Light',
@@ -178,7 +189,7 @@ We aim to start recovering and recycling uncoated 100% Polyester fabrics with WR
       }
     }, `SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.
 
-We aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution.`)))), _react.default.createElement("div", {
+We aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution.`))))), _react.default.createElement("div", {
       className: classes.space
     }));
   }

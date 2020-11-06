@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -69,6 +71,9 @@ class ClassicFibers extends _react.default.PureComponent {
         color: fontColor,
         marginTop
       }
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.title
     }, title, _react.default.createElement("span", {
@@ -85,7 +90,7 @@ class ClassicFibers extends _react.default.PureComponent {
       style: {
         width: boxWidth
       }
-    }, children));
+    }, children)));
   }
 
 }

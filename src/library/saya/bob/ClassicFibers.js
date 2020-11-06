@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -61,32 +62,34 @@ class ClassicFibers extends React.PureComponent {
           marginTop,
         }}
       >
-        <div className={classes.title}>
-          {title}
-          <span className={classes.titleBack}>
-            {titleBack}
-          </span>
-        </div>
+        <Slide direction="up" triggerOnce>
+          <div className={classes.title}>
+            {title}
+            <span className={classes.titleBack}>
+              {titleBack}
+            </span>
+          </div>
 
-        <div
-          className={classes.line}
-          style={{
-            backgroundColor: fontColor,
-          }}
-        />
+          <div
+            className={classes.line}
+            style={{
+              backgroundColor: fontColor,
+            }}
+          />
 
-        <div className={classes.subtitle}>
-          {subtitle}
-        </div>
+          <div className={classes.subtitle}>
+            {subtitle}
+          </div>
 
-        <div
-          className={classes.box}
-          style={{
-            width: boxWidth,
-          }}
-        >
-          {children}
-        </div>
+          <div
+            className={classes.box}
+            style={{
+              width: boxWidth,
+            }}
+          >
+            {children}
+          </div>
+        </Slide>
       </div>
     );
   }

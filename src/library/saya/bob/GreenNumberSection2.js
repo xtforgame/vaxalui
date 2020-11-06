@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const styles = {
   topSection: {
@@ -117,30 +118,35 @@ class GreenNumberSection extends React.PureComponent {
             backgroundColor: backgroundColor,
           }}
         >
-          <div
-            className={classes.leftColumn}
-            style={{
-              paddingTop: leftPaddingTop,
-              paddingRight: leftPaddingRight,
-              ...leftColumnStyle,
-            }}
-          >
-            {image}
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div
+              className={classes.leftColumn}
+              style={{
+                paddingTop: leftPaddingTop,
+                paddingRight: leftPaddingRight,
+                ...leftColumnStyle,
+              }}
+            >
+              {image}
+            </div>
+          </Slide>
           <div
             className={classes.rightColumn}
             style={{
               paddingLeft: rightPaddingLeft,
             }}
           >
-            <div className={classes.rightTitle}>{rightTitle}</div>
-            <div
-              className={classes.description}
-              style={{
-                paddingTop: descriptionPaddingTop,
-              }}
-            >
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText></div>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.rightTitle}>{rightTitle}</div>
+              <div
+                className={classes.description}
+                style={{
+                  paddingTop: descriptionPaddingTop,
+                }}
+              >
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+              </div>
+            </Slide>
           </div>
         </div>
         <div className={classes.space} />

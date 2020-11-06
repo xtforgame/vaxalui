@@ -128,7 +128,7 @@ class SolidBackbone extends _react.default.PureComponent {
     }, _react.default.createElement(_reveal.Slide, {
       direction: "up",
       triggerOnce: true
-    }, firstTitle, _react.default.createElement("div", {
+    }, _react.default.createElement("div", null, firstTitle), _react.default.createElement("div", {
       className: classes.firstLine
     }))), _react.default.createElement("div", null, _react.default.createElement(_reveal.Slide, {
       direction: "up",
