@@ -80,7 +80,6 @@ class TopSection2 extends _react.default.PureComponent {
       height: 500,
       image: backgroundImage
     }, _react.default.createElement(_ImageContainer.default, {
-      image: backgroundImage,
       className: classes.root,
       style: {
         color

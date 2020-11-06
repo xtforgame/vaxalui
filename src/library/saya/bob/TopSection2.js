@@ -67,7 +67,7 @@ class TopSection2 extends React.PureComponent {
           image={backgroundImage}
         >
           <ImageContainer
-            image={backgroundImage}
+            // image={backgroundImage}
             className={classes.root}
             style={{ color }}
           >
