@@ -86,16 +86,12 @@ class TopSection3 extends _react.default.PureComponent {
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {
       className: classes.firstTitle
-    }, firstTitle)), _react.default.createElement("div", null, _react.default.createElement(_reveal.Slide, {
-      direction: "up",
-      triggerOnce: true
-    }, _react.default.createElement("div", {
+    }, firstTitle)), _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle
     }, _react.default.createElement(_AnimatedNumber.default, {
       number: 75000000000,
-      numberPaddingTop: 12,
-      numberColor: 'white'
-    }))), _react.default.createElement(_reveal.Slide, {
+      numberPaddingTop: 12
+    })), _react.default.createElement(_reveal.Slide, {
       direction: "up",
       triggerOnce: true
     }, _react.default.createElement(_BreakAllContentText.default, {

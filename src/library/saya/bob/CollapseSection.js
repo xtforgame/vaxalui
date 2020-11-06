@@ -129,10 +129,10 @@ export default (props) => {
         <div className={classes.container}>
           <Slide direction="up" triggerOnce>
             <Text className={classes.title} family="bold">{title}</Text>
+            <div className={classes.leftContainer}>
+              <div className={classes.line} style={{ backgroundColor: color }} />
+            </div>
           </Slide>
-          <div className={classes.leftContainer}>
-            <div className={classes.line} style={{ backgroundColor: color }} />
-          </div>
         </div>
       </CenteredContainer>
       <div className={classes.lowerPart} style={{ color }}>
@@ -141,14 +141,12 @@ export default (props) => {
             <div className={classes.leftContainer}>
               <Slide direction="up" triggerOnce>
                 <Text className={classes.subtitle}>{subtitle}</Text>
-              </Slide>
-              {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-              {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-              <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
-                <Slide direction="up" triggerOnce>
+                <div>{!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}</div>
+                <div>{expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}</div>
+                <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
                   <Text className={classes.description}>{description}</Text>
-                </Slide>
-              </div>
+                </div>
+              </Slide>
             </div>
           </div>
         </div>

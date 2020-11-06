@@ -11,7 +11,7 @@ import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles({
   number: {
-    fontFamily: 'FilsonSoftRegular',
+    // fontFamily: 'FilsonSoftRegular',
   },
 });
 
@@ -38,7 +38,6 @@ const AnimatedNumber = ({ isVisible, number }) => {
 export default ({
   number,
   numberPaddingTop,
-  numberColor,
 }) => {
   const classes = useStyles();
   return (
@@ -46,7 +45,6 @@ export default ({
       className={classes.number}
       style={{
         paddingtTop: numberPaddingTop,
-        color: numberColor,
         display: 'flex',
         alignItems: 'flex-end',
       }}

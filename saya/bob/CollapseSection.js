@@ -146,14 +146,14 @@ var _default = props => {
   }, _react.default.createElement(_Text.default, {
     className: classes.title,
     family: "bold"
-  }, title)), _react.default.createElement("div", {
+  }, title), _react.default.createElement("div", {
     className: classes.leftContainer
   }, _react.default.createElement("div", {
     className: classes.line,
     style: {
       backgroundColor: color
     }
-  })))), _react.default.createElement("div", {
+  }))))), _react.default.createElement("div", {
     className: classes.lowerPart,
     style: {
       color
@@ -172,7 +172,7 @@ var _default = props => {
     triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.subtitle
-  }, subtitle)), !expended && _react.default.createElement(_icons.AddCircle, {
+  }, subtitle), _react.default.createElement("div", null, !expended && _react.default.createElement(_icons.AddCircle, {
     className: classes.button,
     onClick: () => {
       setExpanded(true);
@@ -182,7 +182,7 @@ var _default = props => {
       height: 46,
       color: buttonColor
     }
-  }), expended && _react.default.createElement(_icons.RemoveCircle, {
+  })), _react.default.createElement("div", null, expended && _react.default.createElement(_icons.RemoveCircle, {
     className: classes.button,
     onClick: () => {
       setExpanded(false);
@@ -192,13 +192,10 @@ var _default = props => {
       height: 46,
       color: buttonColor
     }
-  }), _react.default.createElement("div", {
+  })), _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.expandedArea, {
       [classes.hide]: !expended
     })
-  }, _react.default.createElement(_reveal.Slide, {
-    direction: "up",
-    triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.description
   }, description)))))), _react.default.createElement("div", {

@@ -73,15 +73,12 @@ class TopSection3 extends React.PureComponent {
             </BreakAllContentText>
           </Slide>
           <div>
-            <Slide direction="up" triggerOnce>
-              <div className={classes.secondTitle}>
-                <AnimatedNumber2
-                  number={75000000000}
-                  numberPaddingTop={12}
-                  numberColor={'white'}
-                />
-              </div>
-            </Slide>
+            <div className={classes.secondTitle}>
+              <AnimatedNumber2
+                number={75000000000}
+                numberPaddingTop={12}
+              />
+            </div>
             <Slide direction="up" triggerOnce>
               <BreakAllContentText
                 className={classes.thirdTitle}
