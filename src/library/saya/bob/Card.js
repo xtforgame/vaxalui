@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -29,13 +30,6 @@ const useStyles = makeStyles({
   title: {
     display: 'flex',
     alignItems: 'center',
-    fontSize: 26,
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    color: '#ffffff',
-    top: 0,
-    padding: 15,
   },
   content: {
     paddingLeft: 0,
@@ -53,6 +47,7 @@ export default ({
   height,
   width,
   title,
+  timestamp = new Date(),
   description,
   image,
   onClick,
@@ -66,21 +61,30 @@ export default ({
         className={classes.media}
         style={{ height }}
         image={image}
-      >
-        <div className={classes.title}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 28, textAlign: 'left' }}>
-            {title}
-          </BreakAllContentText>
-        </div>
-      </CardMedia>
+      />
       <CardContent className={classes.content}>
+        {timestamp && (
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5, marginBottom: 4 }}>
+            {moment(timestamp).format('LL')}
+          </BreakAllContentText>
+        )}
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 24, textAlign: 'left', marginBottom: 12 }}>
+          {title}
+        </BreakAllContentText>
         <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
           {description}
         </BreakAllContentText>
       </CardContent>
       {/* </CardActionArea> */}
       <CardActions className={classes.cardAction}>
-        <Button size="small" color="primary" style={{ textDecoration: 'underline', color: '#c0c823', textTransform: 'none', padding: 0 }} onClick={onClick}>
+        <Button
+          size="small"
+          color="primary"
+          style={{
+            textDecoration: 'underline', color: '#c0c823', textTransform: 'none', padding: 0,
+          }}
+          onClick={onClick}
+        >
           <span>Read More</span>
         </Button>
       </CardActions>

@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _moment = _interopRequireDefault(require("moment"));
+
 var _styles = require("@material-ui/core/styles");
 
 var _Card = _interopRequireDefault(require("@material-ui/core/Card"));
@@ -38,14 +40,7 @@ const useStyles = (0, _styles.makeStyles)({
   },
   title: {
     display: 'flex',
-    alignItems: 'center',
-    fontSize: 26,
-    width: '100%',
-    height: '100%',
-    position: 'absolute',
-    color: '#ffffff',
-    top: 0,
-    padding: 15
+    alignItems: 'center'
   },
   content: {
     paddingLeft: 0,
@@ -63,6 +58,7 @@ var _default = ({
   height,
   width,
   title,
+  timestamp = new Date(),
   description,
   image,
   onClick
@@ -80,17 +76,23 @@ var _default = ({
       height
     },
     image: image
-  }, _react.default.createElement("div", {
-    className: classes.title
-  }, _react.default.createElement(_BreakAllContentText.default, {
+  }), _react.default.createElement(_CardContent.default, {
+    className: classes.content
+  }, timestamp && _react.default.createElement(_BreakAllContentText.default, {
+    style: {
+      fontFamily: 'FilsonSoftRegular',
+      fontSize: 14,
+      lineHeight: 1.5,
+      marginBottom: 4
+    }
+  }, (0, _moment.default)(timestamp).format('LL')), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      fontSize: 28,
-      textAlign: 'left'
+      fontSize: 24,
+      textAlign: 'left',
+      marginBottom: 12
     }
-  }, title))), _react.default.createElement(_CardContent.default, {
-    className: classes.content
-  }, _react.default.createElement(_BreakAllContentText.default, {
+  }, title), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,
