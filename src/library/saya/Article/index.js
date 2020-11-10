@@ -35,9 +35,9 @@ export default (props) => {
       className={classes.root}
     >
       <div className={classes.container}>
-        {data.timestamp && (
+        {data.date && (
           <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5, marginTop: 10, marginBottom: 20 }}>
-            {moment(data.timestamp).format('LL')}
+            {moment(data.date).format('LL')}
           </BreakAllContentText>
         )}
         <div className={classes.title}>

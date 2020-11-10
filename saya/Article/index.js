@@ -43,7 +43,7 @@ var _default = props => {
     className: classes.root
   }, _react.default.createElement("div", {
     className: classes.container
-  }, data.timestamp && _react.default.createElement(_BreakAllContentText.default, {
+  }, data.date && _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,
@@ -51,7 +51,7 @@ var _default = props => {
       marginTop: 10,
       marginBottom: 20
     }
-  }, (0, _moment.default)(data.timestamp).format('LL')), _react.default.createElement("div", {
+  }, (0, _moment.default)(data.date).format('LL')), _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
