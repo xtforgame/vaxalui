@@ -89,10 +89,11 @@ var _default = ({
     style: {
       fontFamily: 'FilsonSoft-Bold',
       fontSize: 24,
+      lineHeight: 1.1,
       textAlign: 'left',
       marginBottom: 12
     }
-  }, title), _react.default.createElement(_BreakAllContentText.default, {
+  }, title, title, title, title), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,
