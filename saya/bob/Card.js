@@ -93,7 +93,7 @@ var _default = ({
       textAlign: 'left',
       marginBottom: 12
     }
-  }, title, title, title, title), _react.default.createElement(_BreakAllContentText.default, {
+  }, title), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,

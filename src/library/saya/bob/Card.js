@@ -69,7 +69,7 @@ export default ({
           </BreakAllContentText>
         )}
         <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 24, lineHeight: 1.1, textAlign: 'left', marginBottom: 12 }}>
-          {title}{title}{title}{title}
+          {title}
         </BreakAllContentText>
         <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
           {description}
