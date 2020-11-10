@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 
 import React from 'react';
+import moment from 'moment';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
@@ -18,7 +19,6 @@ const useStyles = makeStyles(theme => ({
   title: {
     textAlign: 'left',
     fontSize: 40,
-    marginTop: 10,
     marginBottom: 72,
   },
 }));
@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const {
     data,
+    timestamp = new Date(),
   } = props;
 
   const classes = useStyles();
@@ -35,6 +36,11 @@ export default (props) => {
       className={classes.root}
     >
       <div className={classes.container}>
+        {timestamp && (
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5, marginTop: 10, marginBottom: 20 }}>
+            {moment(timestamp).format('LL')}
+          </BreakAllContentText>
+        )}
         <div className={classes.title}>
           <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', lineHeight: 1 }}>
             {data.title}

@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _moment = _interopRequireDefault(require("moment"));
+
 var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
@@ -28,21 +30,29 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   title: {
     textAlign: 'left',
     fontSize: 40,
-    marginTop: 10,
     marginBottom: 72
   }
 }));
 
 var _default = props => {
   const {
-    data
+    data,
+    timestamp = new Date()
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
     className: classes.root
   }, _react.default.createElement("div", {
     className: classes.container
-  }, _react.default.createElement("div", {
+  }, timestamp && _react.default.createElement(_BreakAllContentText.default, {
+    style: {
+      fontFamily: 'FilsonSoftRegular',
+      fontSize: 14,
+      lineHeight: 1.5,
+      marginTop: 10,
+      marginBottom: 20
+    }
+  }, (0, _moment.default)(timestamp).format('LL')), _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {
