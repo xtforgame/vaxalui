@@ -36,15 +36,14 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 
 var _default = props => {
   const {
-    data,
-    timestamp = new Date()
+    data
   } = props;
   const classes = useStyles();
   return _react.default.createElement(_ImageContainer.default, {
     className: classes.root
   }, _react.default.createElement("div", {
     className: classes.container
-  }, timestamp && _react.default.createElement(_BreakAllContentText.default, {
+  }, data.timestamp && _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,
@@ -52,7 +51,7 @@ var _default = props => {
       marginTop: 10,
       marginBottom: 20
     }
-  }, (0, _moment.default)(timestamp).format('LL')), _react.default.createElement("div", {
+  }, (0, _moment.default)(data.timestamp).format('LL')), _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_BreakAllContentText.default, {
     style: {

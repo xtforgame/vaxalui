@@ -26,7 +26,6 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const {
     data,
-    timestamp = new Date(),
   } = props;
 
   const classes = useStyles();
@@ -36,9 +35,9 @@ export default (props) => {
       className={classes.root}
     >
       <div className={classes.container}>
-        {timestamp && (
+        {data.timestamp && (
           <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5, marginTop: 10, marginBottom: 20 }}>
-            {moment(timestamp).format('LL')}
+            {moment(data.timestamp).format('LL')}
           </BreakAllContentText>
         )}
         <div className={classes.title}>
