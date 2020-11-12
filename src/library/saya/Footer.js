@@ -206,7 +206,7 @@ export default (props) => {
               </label>
             </div>
           </div>
-          <div style={{ width: 10, height: 20 }} />
+          {/* <div style={{ width: 10, height: 20 }} />
           <div
             style={{
               fontSize: 14,
@@ -223,7 +223,7 @@ export default (props) => {
             options={['English', 'Traditional Chinese']}
             value={language}
             onChange={e => setLanguage(e.target.value)}
-          />
+          /> */}
         </div>
       </div>
     </div>

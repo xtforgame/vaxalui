@@ -193,29 +193,6 @@ var _default = props => {
   }, "SUBMIT"), _react.default.createElement("div", {
     style: {
       width: 10,
-      height: 20
-    }
-  }), _react.default.createElement("div", null, "Select language"), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 10
-    }
-  }), _react.default.createElement(_Select.default, {
-    formControlStyle: {
-      width: '100%'
-    },
-    selectStyle: {
-      width: '100%'
-    },
-    style: {
-      width: '100%'
-    },
-    options: ['English', 'Traditional Chinese'],
-    value: language,
-    onChange: e => setLanguage(e.target.value)
-  }), _react.default.createElement("div", {
-    style: {
-      width: 10,
       height: 32
     }
   }), _react.default.createElement("div", {

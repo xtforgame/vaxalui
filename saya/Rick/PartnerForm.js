@@ -75,7 +75,7 @@ class Partner extends _react.default.PureComponent {
 
   render() {
     const {
-      subtitle = 'Sign up to stay in touch on the newest renewal technologies, products, events, and news from SAYA.',
+      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
       labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
       email
     } = this.state;

@@ -271,35 +271,7 @@ var _default = props => {
     setChecked: setChecked
   }), _react.default.createElement("div", {
     className: classes.labelContent
-  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 20
-    }
-  }), _react.default.createElement("div", {
-    style: {
-      fontSize: 14,
-      fontFamily: 'FilsonSoft-Bold'
-    }
-  }, "Select language"), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 8
-    }
-  }), _react.default.createElement(_Select.default, {
-    formControlStyle: {
-      width: 300
-    },
-    selectStyle: {
-      width: 300
-    },
-    style: {
-      width: 300
-    },
-    options: ['English', 'Traditional Chinese'],
-    value: language,
-    onChange: e => setLanguage(e.target.value)
-  }))));
+  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))))));
 };
 
 exports.default = _default;

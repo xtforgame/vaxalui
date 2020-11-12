@@ -183,7 +183,7 @@ export default (props) => {
         >
           SUBMIT
         </Button>
-        <div style={{ width: 10, height: 20 }} />
+        {/* <div style={{ width: 10, height: 20 }} />
         <div>Select language</div>
         <div style={{ width: 10, height: 10 }} />
         <Select
@@ -193,7 +193,7 @@ export default (props) => {
           options={['English', 'Traditional Chinese']}
           value={language}
           onChange={e => setLanguage(e.target.value)}
-        />
+        /> */}
         <div style={{ width: 10, height: 32 }} />
         <div style={{ fontSize: 18 }}>Contact:</div>
         <div style={{ fontSize: 18 }}><a href="mailto:change@sayarenew.com" style={{ color: '#ffffff' }}><u>change@sayarenew.com</u></a></div>
