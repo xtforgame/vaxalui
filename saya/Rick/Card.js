@@ -92,7 +92,7 @@ var _default = ({
     style: {
       fontFamily: 'FilsonSoft-Bold',
       fontSize: 22,
-      lineHeight: '24px',
+      lineHeight: '26px',
       textAlign: 'left',
       marginBottom: 8
     }

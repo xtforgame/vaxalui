@@ -71,7 +71,7 @@ export default ({
             {moment(timestamp).format('LL')}
           </BreakAllContentText>
         )}
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 8 }}>
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '26px', textAlign: 'left', marginBottom: 8 }}>
           {title}
         </BreakAllContentText>
         <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
