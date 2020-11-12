@@ -40,7 +40,7 @@ const styles = {
   },
   box: {
     display: 'flex',
-    marginTop: 90,
+    marginTop: 72,
     justifyContent: 'space-between',
     flexWrap: 'wrap'
   }

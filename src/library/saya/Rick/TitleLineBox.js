@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     height: 631,
     textAlign: 'left',
-    paddingTop: 70,
+    paddingTop: 60,
   },
   title: {
     fontSize: 18,
