@@ -45,6 +45,7 @@ const useStyles = makeStyles({
     paddingRight: 0,
     paddingLeft: 0,
     paddingBottom: 0,
+    marginBottom: 24,
   },
 });
 

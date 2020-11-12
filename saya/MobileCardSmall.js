@@ -56,7 +56,8 @@ const useStyles = (0, _styles.makeStyles)({
     paddingTop: 0,
     paddingRight: 0,
     paddingLeft: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
+    marginBottom: 24
   }
 });
 
