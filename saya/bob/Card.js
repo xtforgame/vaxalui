@@ -98,7 +98,7 @@ var _default = ({
     style: {
       fontFamily: 'FilsonSoftRegular',
       fontSize: 14,
-      lineHeight: 1.5
+      lineHeight: 1.4
     }
   }, description)), _react.default.createElement(_CardActions.default, {
     className: classes.cardAction

@@ -72,7 +72,7 @@ export default ({
         <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 12 }}>
           {title}
         </BreakAllContentText>
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5 }}>
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
           {description}
         </BreakAllContentText>
       </CardContent>
