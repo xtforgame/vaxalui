@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   content: {
-    paddingTop: 0,
+    paddingTop: 16,
     paddingBottom: 20,
     paddingLeft: 0,
     paddingRight: 0,
@@ -67,11 +67,11 @@ export default ({
       />
       <CardContent className={classes.content}>
         {timestamp && (
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 12, lineHeight: 1.5, marginBottom: 3 }}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 12, lineHeight: 1.5, marginBottom: 8 }}>
             {moment(timestamp).format('LL')}
           </BreakAllContentText>
         )}
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 3 }}>
+        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 8 }}>
           {title}
         </BreakAllContentText>
         <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>

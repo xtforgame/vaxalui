@@ -43,7 +43,7 @@ const useStyles = (0, _styles.makeStyles)({
     alignItems: 'center'
   },
   content: {
-    paddingTop: 0,
+    paddingTop: 16,
     paddingBottom: 20,
     paddingLeft: 0,
     paddingRight: 0
@@ -86,7 +86,7 @@ var _default = ({
       fontFamily: 'FilsonSoft-Bold',
       fontSize: 12,
       lineHeight: 1.5,
-      marginBottom: 3
+      marginBottom: 8
     }
   }, (0, _moment.default)(timestamp).format('LL')), _react.default.createElement(_BreakAllContentText.default, {
     style: {
@@ -94,7 +94,7 @@ var _default = ({
       fontSize: 22,
       lineHeight: '24px',
       textAlign: 'left',
-      marginBottom: 3
+      marginBottom: 8
     }
   }, title), _react.default.createElement(_BreakAllContentText.default, {
     style: {
