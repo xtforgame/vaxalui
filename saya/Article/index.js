@@ -29,8 +29,8 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   title: {
     textAlign: 'left',
-    fontSize: 40,
-    marginBottom: 72
+    fontSize: 32,
+    marginBottom: 40
   }
 }));
 
@@ -46,7 +46,7 @@ var _default = props => {
   }, data.date && _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      fontSize: 14,
+      fontSize: 12,
       lineHeight: 1.5,
       marginTop: 10,
       marginBottom: 20

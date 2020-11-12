@@ -18,8 +18,8 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textAlign: 'left',
-    fontSize: 40,
-    marginBottom: 72,
+    fontSize: 32,
+    marginBottom: 40,
   },
 }));
 
@@ -36,7 +36,7 @@ export default (props) => {
     >
       <div className={classes.container}>
         {data.date && (
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.5, marginTop: 10, marginBottom: 20 }}>
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, lineHeight: 1.5, marginTop: 10, marginBottom: 20 }}>
             {moment(data.date).format('LL')}
           </BreakAllContentText>
         )}

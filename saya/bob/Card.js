@@ -50,7 +50,8 @@ const useStyles = (0, _styles.makeStyles)({
     paddingTop: 0,
     paddingRight: 0,
     paddingLeft: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
+    marginBottom: 24
   }
 });
 
@@ -81,15 +82,15 @@ var _default = ({
   }, timestamp && _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoftRegular',
-      fontSize: 14,
+      fontSize: 12,
       lineHeight: 1.5,
       marginBottom: 4
     }
   }, (0, _moment.default)(timestamp).format('LL')), _react.default.createElement(_BreakAllContentText.default, {
     style: {
       fontFamily: 'FilsonSoft-Bold',
-      fontSize: 24,
-      lineHeight: 1.1,
+      fontSize: 22,
+      lineHeight: '24px',
       textAlign: 'left',
       marginBottom: 12
     }
