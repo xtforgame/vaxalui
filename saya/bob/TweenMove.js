@@ -33,47 +33,19 @@ const useStyle = (0, _styles.makeStyles)({
 
 var _default = props => {
   const {
-    height = 620,
     children,
     image
   } = props;
   const classes = useStyle();
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
     style: {
-      position: 'relative'
+      position: 'relative',
+      backgroundSize: 'cover',
+      backgroundImage: `url(${image})`,
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center'
     }
-  }, _react.default.createElement(_reactScrollmagic.Controller, null, _react.default.createElement(_reactScrollmagic.Scene, {
-    duration: height,
-    triggerHook: 0
-  }, _react.default.createElement(_reactGsap.Timeline, {
-    wrapper: _react.default.createElement("div", {
-      style: {
-        height
-      },
-      className: classes.parallax
-    })
-  }, _react.default.createElement(_reactGsap.Tween, {
-    position: "0",
-    from: {
-      top: 0
-    },
-    to: {
-      top: height - 200
-    },
-    ease: "none"
-  }, _react.default.createElement("img", {
-    className: classes.img,
-    src: image,
-    alt: ""
-  })))), _react.default.createElement("div", {
-    className: "section"
-  })), _react.default.createElement("div", {
-    style: {
-      position: 'absolute',
-      width: '100%',
-      top: 0
-    }
-  }, children)));
+  }, children));
 };
 
 exports.default = _default;
