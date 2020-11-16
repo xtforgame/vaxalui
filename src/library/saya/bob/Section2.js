@@ -6,6 +6,11 @@ import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
 
 const styles = {
+  outerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#000000',
+  },
   root: {
     height: 590,
     color: '#000000',
@@ -62,13 +67,14 @@ class Section2 extends React.PureComponent {
       title,
       color,
       height = 586,
+      maxWidth = 1024,
     } = this.props;
     return (
-      <>
+      <div className={classes.outerContainer}>
         <ImageContainer
           className={classes.root}
           image={backgroundImage}
-          style={{ height }}
+          style={{ height, maxWidth }}
         >
           <div className={classes.section}>
             <Slide direction="up" triggerOnce>
@@ -77,7 +83,7 @@ class Section2 extends React.PureComponent {
           </div>
         </ImageContainer>
         <div className={classes.space} />
-      </>
+      </div>
     );
   }
 }

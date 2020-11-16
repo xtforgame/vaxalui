@@ -20,6 +20,11 @@ var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentTex
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
+  outerContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    backgroundColor: '#000000'
+  },
   root: {
     height: 590,
     color: '#000000'
@@ -74,13 +79,17 @@ class Section2 extends _react.default.PureComponent {
       backgroundImage,
       title,
       color,
-      height = 586
+      height = 586,
+      maxWidth = 1024
     } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_ImageContainer.default, {
+    return _react.default.createElement("div", {
+      className: classes.outerContainer
+    }, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
       image: backgroundImage,
       style: {
-        height
+        height,
+        maxWidth
       }
     }, _react.default.createElement("div", {
       className: classes.section
