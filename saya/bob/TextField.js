@@ -46,7 +46,7 @@ const styles = theme => ({
     }
   },
   error: {
-    backgroundColor: '#ffdada'
+    borderColor: '#ff3a53'
   }
 });
 

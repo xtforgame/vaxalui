@@ -184,7 +184,7 @@ export default (props) => {
                   style={{
                     fontSize: 14,
                     fontFamily: 'FilsonSoftRegular',
-                    color: 'green',
+                    color: '#ff3a53',
                   }}
                 >
                   {errorMessage}

@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 0,
-    color: 'transparent',
+    color: '#000000',
     borderColor: 'black',
     backgroundColor: 'transparent',
   },
