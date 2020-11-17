@@ -1,5 +1,5 @@
 import React from 'react';
-import { keyframes } from "@emotion/core";
+import { keyframes } from "@emotion/react";
 import Reveal, { Slide } from 'react-awesome-reveal';
 
 const customAnimation = keyframes`
