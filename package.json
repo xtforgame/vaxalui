@@ -1,6 +1,6 @@
 {
   "name": "vaxalui",
-  "version": "0.1.137",
+  "version": "0.1.138",
   "description": "Vaxal ui",
   "main": "index.js",
   "repository": {
@@ -35,7 +35,7 @@
     "animated-number-react": "^0.1.1",
     "clsx": "^1.1.1",
     "gsap": "^3.5.1",
-    "react-awesome-reveal": "^3.3.1",
+    "react-awesome-reveal": "3.3.1",
     "react-gsap": "^2.2.1",
     "react-helmet": "^6.1.0",
     "react-scrollmagic": "^2.2.0",
