@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import Checkbox from '../Checkbox';
+import HelperText from '../HelperText';
+import subscriptionContext from '../contexts/subscriptionContext';
 
 const useStyles = makeStyles(theme => ({
   flexContainer: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'start',
     height: 320,
     width: 440,
     // overflowX: 'hidden',
@@ -44,15 +46,13 @@ const useStyles = makeStyles(theme => ({
   emailInput: {
     width: 440,
     fontSize: 12,
-    color: '#000000',
-    borderColor: '#000000',
   },
   button: {
     marginLeft: 32,
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 16,
+    paddingTop: 6,
   },
   box: {
     width: 30,
@@ -75,15 +75,23 @@ export default (props) => {
     emailTextInputWidth = 420,
   } = props;
 
-  const [email, setEmail] = useState('');
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
   const classes = useStyles();
+
+  const {
+    email = '',
+    setEmail = () => {},
+    checked,
+    setChecked,
+    errorMessage,
+    successMessage,
+    onSubmit,
+    emailErrorMessage,
+    checkErrorMessage,
+  } = useContext(subscriptionContext);
 
   return (
     <div className={classes.flexContainer}>
+      <div style={{ height: 50 }} />
       <div className={classes.title}>
         {title}
       </div>
@@ -95,26 +103,64 @@ export default (props) => {
           <TextField
             className={classes.emailInput}
             value={email}
-            onChange={handleEmailChange}
+            onChange={e => setEmail(e.target.value)}
             placeholder="Your email address"
-            style={{ width: emailTextInputWidth }}
+            error={!!emailErrorMessage}
           />
           <div className={classes.button}>
             <GreenButton
               text="SUBMIT"
+              onClick={onSubmit}
             />
           </div>
         </div>
       </div>
+      {
+        emailErrorMessage && (
+          <HelperText style={{ }} error>
+            {emailErrorMessage}
+          </HelperText>
+        )
+      }
+      {
+        !emailErrorMessage && (
+          <div style={{ height: 10 }} />
+        )
+      }
 
       <div className={classes.checkbox}>
-        <Checkbox />
+        <Checkbox
+          checked={checked}
+          setChecked={setChecked}
+          error={!!checkErrorMessage}
+        />
         <div className={classes.labelContent}>
           <label>
             {labelContent}
           </label>
         </div>
       </div>
+      {
+        checkErrorMessage && (
+          <HelperText style={{ }} error>
+            {checkErrorMessage}
+          </HelperText>
+        )
+      }
+      {
+        successMessage && (
+          <HelperText style={{ }}>
+            {successMessage}
+          </HelperText>
+        )
+      }
+      {
+        errorMessage && (
+          <HelperText style={{ }} error>
+            {errorMessage}
+          </HelperText>
+        )
+      }
     </div>
   );
 };

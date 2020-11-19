@@ -37,9 +37,10 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
   text: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'FilsonSoftRegular',
-    color: '#c0c823'
+    color: '#c0c823',
+    paddingTop: 2
   },
   error: {
     color: '#ff3a53'

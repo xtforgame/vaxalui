@@ -45,10 +45,13 @@ export default (props) => {
     <div
       className={
         clsx(
-          classes.checkbox, {
+          classes.checkbox,
+          {
             [classes.checked]: !darkTheme && checked,
             [classes.darkThemeChecked]: darkTheme && checked,
             [classes.darkTheme]: darkTheme,
+          },
+          {
             [classes.error]: error,
           }
         )

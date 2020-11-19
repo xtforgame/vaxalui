@@ -15,6 +15,10 @@ var _TextField = _interopRequireDefault(require("./TextField"));
 
 var _Checkbox = _interopRequireDefault(require("../Checkbox"));
 
+var _HelperText = _interopRequireDefault(require("../HelperText"));
+
+var _subscriptionContext = _interopRequireDefault(require("../contexts/subscriptionContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -25,7 +29,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   flexContainer: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'start',
     height: 320,
     width: 440
   },
@@ -58,16 +62,14 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   emailInput: {
     width: 440,
-    fontSize: 12,
-    color: '#000000',
-    borderColor: '#000000'
+    fontSize: 12
   },
   button: {
     marginLeft: 32
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 16
+    paddingTop: 6
   },
   box: {
     width: 30,
@@ -88,16 +90,25 @@ var _default = props => {
     labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
     emailTextInputWidth = 420
   } = props;
-  const [email, setEmail] = (0, _react.useState)('');
-
-  const handleEmailChange = e => {
-    setEmail(e.target.value);
-  };
-
   const classes = useStyles();
+  const {
+    email = '',
+    setEmail = () => {},
+    checked,
+    setChecked,
+    errorMessage,
+    successMessage,
+    onSubmit,
+    emailErrorMessage,
+    checkErrorMessage
+  } = (0, _react.useContext)(_subscriptionContext.default);
   return _react.default.createElement("div", {
     className: classes.flexContainer
   }, _react.default.createElement("div", {
+    style: {
+      height: 50
+    }
+  }), _react.default.createElement("div", {
     className: classes.title
   }, title), _react.default.createElement("div", {
     className: classes.subtitle
@@ -108,20 +119,38 @@ var _default = props => {
   }, _react.default.createElement(_TextField.default, {
     className: classes.emailInput,
     value: email,
-    onChange: handleEmailChange,
+    onChange: e => setEmail(e.target.value),
     placeholder: "Your email address",
-    style: {
-      width: emailTextInputWidth
-    }
+    error: !!emailErrorMessage
   }), _react.default.createElement("div", {
     className: classes.button
   }, _react.default.createElement(_GreenButton.default, {
-    text: "SUBMIT"
-  })))), _react.default.createElement("div", {
+    text: "SUBMIT",
+    onClick: onSubmit
+  })))), emailErrorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, emailErrorMessage), !emailErrorMessage && _react.default.createElement("div", {
+    style: {
+      height: 10
+    }
+  }), _react.default.createElement("div", {
     className: classes.checkbox
-  }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
+  }, _react.default.createElement(_Checkbox.default, {
+    checked: checked,
+    setChecked: setChecked,
+    error: !!checkErrorMessage
+  }), _react.default.createElement("div", {
     className: classes.labelContent
-  }, _react.default.createElement("label", null, labelContent))));
+  }, _react.default.createElement("label", null, labelContent))), checkErrorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, checkErrorMessage), successMessage && _react.default.createElement(_HelperText.default, {
+    style: {}
+  }, successMessage), errorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, errorMessage));
 };
 
 exports.default = _default;

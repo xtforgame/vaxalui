@@ -53,7 +53,9 @@ class Partner extends _react.default.PureComponent {
     }, _react.default.createElement("div", {
       className: classes.bottle,
       style: {
-        backgroundImage: `url(${bottleImage})`
+        backgroundImage: `url(${bottleImage})`,
+        height: 320,
+        overflowY: 'hidden'
       }
     }, _react.default.createElement(_PartnerForm.default, null)));
   }

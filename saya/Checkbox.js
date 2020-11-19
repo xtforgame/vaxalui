@@ -59,7 +59,8 @@ var _default = props => {
     className: (0, _clsx.default)(classes.checkbox, {
       [classes.checked]: !darkTheme && checked,
       [classes.darkThemeChecked]: darkTheme && checked,
-      [classes.darkTheme]: darkTheme,
+      [classes.darkTheme]: darkTheme
+    }, {
       [classes.error]: error
     }),
     onClick: () => {
