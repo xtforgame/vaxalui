@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
+import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { AddCircle, RemoveCircle } from '@material-ui/icons';
 import { Slide } from '../reveal';
 import CenteredContainer from '../CenteredContainer';
 import Text from './Text';
 import ImageContainer from '../ImageContainer';
-import clsx from 'clsx';
+import TweenMove from './TweenMove';
+
 
 const useStyle = makeStyles(theme => ({
   upperPart: {
@@ -115,14 +117,17 @@ export default (props) => {
     <>
       {
         topTitle && (
-          <ImageContainer
+          <TweenMove
             image={backgroundImage}
-            className={classes.topSection}
           >
-            <div>
-              <span className={classes.titleWhite}>{topTitle}</span>
-            </div>
-          </ImageContainer>
+            <ImageContainer
+              className={classes.topSection}
+            >
+              <div>
+                <span className={classes.titleWhite}>{topTitle}</span>
+              </div>
+            </ImageContainer>
+          </TweenMove>
         )
       }
       <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>

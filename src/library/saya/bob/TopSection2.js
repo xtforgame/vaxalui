@@ -63,7 +63,6 @@ class TopSection2 extends React.PureComponent {
     return (
       <React.Fragment>
         <TweenMove
-          height={500}
           image={backgroundImage}
         >
           <ImageContainer

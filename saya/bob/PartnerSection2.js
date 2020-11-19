@@ -17,6 +17,8 @@ var _IconBox = _interopRequireDefault(require("./IconBox"));
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
+var _TweenMove = _interopRequireDefault(require("./TweenMove"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -73,15 +75,16 @@ class PartnerSection extends _react.default.PureComponent {
       partner = [],
       hideTop
     } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
+    return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_TweenMove.default, {
+      image: backgroundImage
+    }, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,
-      image: backgroundImage,
       style: {
         color: fontColor
       }
     }, _react.default.createElement("div", {
       className: classes.title
-    }, title)), _react.default.createElement(_ImageContainer.default, {
+    }, title))), _react.default.createElement(_ImageContainer.default, {
       className: classes.root2,
       style: {
         backgroundColor

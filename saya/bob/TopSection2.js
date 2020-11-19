@@ -77,7 +77,6 @@ class TopSection2 extends _react.default.PureComponent {
       color = '#ffffff'
     } = this.props;
     return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_TweenMove.default, {
-      height: 500,
       image: backgroundImage
     }, _react.default.createElement(_ImageContainer.default, {
       className: classes.root,

@@ -2,8 +2,9 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import IconBoxSection from './IconBoxSection';
-import IconBox from './IconBox'
+import IconBox from './IconBox';
 import GreenButton from '../bob/GreenButton';
+import TweenMove from './TweenMove';
 
 const styles = {
   root: {
@@ -64,15 +65,18 @@ class PartnerSection extends React.PureComponent {
     return (
       <>
         {!hideTop && (
-          <ImageContainer
-            className={classes.root}
+          <TweenMove
             image={backgroundImage}
-            style={{
-              color: fontColor,
-            }}
           >
-            <div className={classes.title}>{title}</div>
-          </ImageContainer>
+            <ImageContainer
+              className={classes.root}
+              style={{
+                color: fontColor,
+              }}
+            >
+              <div className={classes.title}>{title}</div>
+            </ImageContainer>
+          </TweenMove>
         )}
         <ImageContainer
           className={classes.root2}

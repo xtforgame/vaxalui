@@ -7,6 +7,8 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _clsx = _interopRequireDefault(require("clsx"));
+
 var _styles = require("@material-ui/core/styles");
 
 var _icons = require("@material-ui/icons");
@@ -19,7 +21,7 @@ var _Text = _interopRequireDefault(require("./Text"));
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _clsx = _interopRequireDefault(require("clsx"));
+var _TweenMove = _interopRequireDefault(require("./TweenMove"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -127,12 +129,13 @@ var _default = props => {
   } = props;
   const classes = useStyle();
   const [expended, setExpanded] = (0, _react.useState)(!!e);
-  return _react.default.createElement(_react.default.Fragment, null, topTitle && _react.default.createElement(_ImageContainer.default, {
-    image: backgroundImage,
+  return _react.default.createElement(_react.default.Fragment, null, topTitle && _react.default.createElement(_TweenMove.default, {
+    image: backgroundImage
+  }, _react.default.createElement(_ImageContainer.default, {
     className: classes.topSection
   }, _react.default.createElement("div", null, _react.default.createElement("span", {
     className: classes.titleWhite
-  }, topTitle))), _react.default.createElement(_CenteredContainer.default, {
+  }, topTitle)))), _react.default.createElement(_CenteredContainer.default, {
     className: classes.upperPart,
     style: {
       backgroundColor,
