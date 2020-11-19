@@ -6,6 +6,7 @@ import AnimatedNumber from './AnimatedNumber';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
 import { Slide } from '../reveal';
+import TweenMove from './TweenMove';
 
 const styles = {
   topSection: {
@@ -120,14 +121,17 @@ const GreenNumberSection = (props) => {
     <React.Fragment>
       {
         !hideTop && (
-          <ImageContainer
+          <TweenMove
             image={backgroundImage}
-            className={classes.topSection}
           >
-            <div>
-              <span className={classes.titleWhite}>{topTitle}</span>
-            </div>
-          </ImageContainer>
+            <ImageContainer
+              className={classes.topSection}
+            >
+              <div>
+                <span className={classes.titleWhite}>{topTitle}</span>
+              </div>
+            </ImageContainer>
+          </TweenMove>
         )
       }
       <div

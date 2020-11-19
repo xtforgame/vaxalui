@@ -21,6 +21,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _reveal = require("../reveal");
 
+var _TweenMove = _interopRequireDefault(require("./TweenMove"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -134,12 +136,13 @@ const GreenNumberSection = props => {
     topTitle,
     hideTop
   } = props;
-  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
-    image: backgroundImage,
+  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_TweenMove.default, {
+    image: backgroundImage
+  }, _react.default.createElement(_ImageContainer.default, {
     className: classes.topSection
   }, _react.default.createElement("div", null, _react.default.createElement("span", {
     className: classes.titleWhite
-  }, topTitle))), _react.default.createElement("div", {
+  }, topTitle)))), _react.default.createElement("div", {
     className: classes.root,
     style: {
       height,
