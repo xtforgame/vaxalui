@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import GreenButton from '../bob/GreenButton';
 import Text from './Text';
@@ -40,10 +41,14 @@ class TitleButton extends React.PureComponent {
           style={{ color, backgroundColor: background }}
         >
           <div className={classes.section}>
-            <Text family="bold" className={classes.title}>{title}</Text>
-            <div className={classes.button}>
-              <GreenButton text={label} onClick={onClick} />
-            </div>
+            <Slide direction="up" triggerOnce>
+              <Text family="bold" className={classes.title}>{title}</Text>
+            </Slide>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.button}>
+                <GreenButton text={label} onClick={onClick} />
+              </div>
+            </Slide>
           </div>
         </ImageContainer>
       </>

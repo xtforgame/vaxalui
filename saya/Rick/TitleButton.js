@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _reveal = require("../reveal");
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
@@ -53,15 +55,21 @@ class TitleButton extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.section
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement(_Text.default, {
       family: "bold",
       className: classes.title
-    }, title), _react.default.createElement("div", {
+    }, title)), _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", {
       className: classes.button
     }, _react.default.createElement(_GreenButton.default, {
       text: label,
       onClick: onClick
-    })))));
+    }))))));
   }
 
 }
