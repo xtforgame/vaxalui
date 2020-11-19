@@ -23,15 +23,7 @@ const Layout = ({
   navBarItems,
   logo,
   fbIcon,
-  igIcon,
-  email,
-  setEmail,
-  checked,
-  setChecked,
-  errorMessage,
-  successMessage,
-  onSubmit,
-  emailError
+  igIcon
 }) => _react.default.createElement("div", {
   style: {
     width: '100%',
@@ -56,15 +48,7 @@ const Layout = ({
   }
 }, children), _react.default.createElement(_Footer.default, {
   fbIcon: fbIcon,
-  igIcon: igIcon,
-  email: email,
-  setEmail: setEmail,
-  checked: checked,
-  setChecked: setChecked,
-  errorMessage: errorMessage,
-  successMessage: successMessage,
-  onSubmit: onSubmit,
-  emailError: emailError
+  igIcon: igIcon
 }));
 
 var _default = Layout;

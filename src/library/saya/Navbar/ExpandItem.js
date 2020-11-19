@@ -60,7 +60,7 @@ export default (props) => {
     className,
   } = props;
 
-  console.log('dark :', dark);
+  // console.log('dark :', dark);
 
   const {
     currentPath,

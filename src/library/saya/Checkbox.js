@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
   darkThemeChecked: {
     color: '#FFFFFF',
   },
+  error: {
+    borderColor: '#ff3a53',
+  },
 }));
 
 export default (props) => {
@@ -33,6 +36,7 @@ export default (props) => {
     checked = false,
     setChecked = (() => {}),
     darkTheme,
+    error,
   } = props;
 
   const classes = useStyles();
@@ -45,6 +49,7 @@ export default (props) => {
             [classes.checked]: !darkTheme && checked,
             [classes.darkThemeChecked]: darkTheme && checked,
             [classes.darkTheme]: darkTheme,
+            [classes.error]: error,
           }
         )
       }

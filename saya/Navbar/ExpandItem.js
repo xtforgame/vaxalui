@@ -74,7 +74,6 @@ var _default = props => {
     dark,
     className
   } = props;
-  console.log('dark :', dark);
   const {
     currentPath
   } = (0, _react.useContext)(_MenuContext.MenuContext);

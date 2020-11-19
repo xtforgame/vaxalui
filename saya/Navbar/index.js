@@ -129,7 +129,6 @@ class Navbar extends _react.default.PureComponent {
     const {
       isOpen
     } = this.state;
-    console.log('isOpen :', isOpen);
     return _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.root, {
         [classes.closing]: !isOpen,

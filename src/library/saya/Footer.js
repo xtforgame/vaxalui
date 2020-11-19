@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
@@ -6,7 +6,8 @@ import TextField from './bob/TextField';
 import Select from './Select';
 import Button from './Button';
 import Checkbox from './Checkbox';
-import { isValidEmail } from '../utils/validators';
+import HelperText from './HelperText';
+import subscriptionContext from './contexts/subscriptionContext';
 
 const useStyles = makeStyles(theme => ({
   rowFlex: {
@@ -72,6 +73,12 @@ export default (props) => {
   let {
     fbIcon,
     igIcon,
+  } = props;
+
+  const classes = useStyles();
+  const [language, setLanguage] = useState('English');
+
+  const {
     email = '',
     setEmail = () => {},
     checked,
@@ -79,15 +86,9 @@ export default (props) => {
     errorMessage,
     successMessage,
     onSubmit,
-    emailError,
-  } = props;
-
-  const classes = useStyles();
-  const [language, setLanguage] = useState('English');
-
-  if (emailError == null) {
-    emailError = !isValidEmail(email);
-  }
+    emailErrorMessage,
+    checkErrorMessage,
+  } = useContext(subscriptionContext);
 
   return (
     <div className={clsx(classes.rowFlex)}>
@@ -153,7 +154,7 @@ export default (props) => {
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Your email address"
-                error={emailError}
+                error={!!emailErrorMessage}
               />
               <div style={{ width: 20, height: 20 }} />
               <Button width={100} onClick={onSubmit}>
@@ -162,35 +163,10 @@ export default (props) => {
             </div>
           </div>
           {
-            successMessage && (
-              <React.Fragment>
-                <div
-                  style={{
-                    fontSize: 14,
-                    fontFamily: 'FilsonSoftRegular',
-                    color: 'green',
-                  }}
-                >
-                  {successMessage}
-                </div>
-                <div style={{ width: 10, height: 8 }} />
-              </React.Fragment>
-            )
-          }
-          {
-            errorMessage && (
-              <React.Fragment>
-                <div
-                  style={{
-                    fontSize: 14,
-                    fontFamily: 'FilsonSoftRegular',
-                    color: '#ff3a53',
-                  }}
-                >
-                  {errorMessage}
-                </div>
-                <div style={{ width: 10, height: 8 }} />
-              </React.Fragment>
+            emailErrorMessage && (
+              <HelperText style={{ marginBottom: 8 }} error>
+                {emailErrorMessage}
+              </HelperText>
             )
           }
           <div className={classes.checkbox}>
@@ -198,6 +174,7 @@ export default (props) => {
               darkTheme
               checked={checked}
               setChecked={setChecked}
+              error={!!checkErrorMessage}
             />
             {/* <input className={classes.box} type="checkbox" value="checkbox" /> */}
             <div className={classes.labelContent}>
@@ -206,6 +183,27 @@ export default (props) => {
               </label>
             </div>
           </div>
+          {
+            checkErrorMessage && (
+              <HelperText style={{ marginBottom: 8 }} error>
+                {checkErrorMessage}
+              </HelperText>
+            )
+          }
+          {
+            successMessage && (
+              <HelperText style={{ marginBottom: 8 }}>
+                {successMessage}
+              </HelperText>
+            )
+          }
+          {
+            errorMessage && (
+              <HelperText style={{ marginBottom: 8 }} error>
+                {errorMessage}
+              </HelperText>
+            )
+          }
           {/* <div style={{ width: 10, height: 20 }} />
           <div
             style={{

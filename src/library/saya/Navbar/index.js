@@ -110,7 +110,7 @@ class Navbar extends React.PureComponent {
     const {
       isOpen,
     } = this.state;
-    console.log('isOpen :', isOpen);
+    // console.log('isOpen :', isOpen);
     return (
       <div
         className={clsx(classes.root, {

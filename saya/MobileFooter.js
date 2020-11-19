@@ -19,7 +19,9 @@ var _Button = _interopRequireDefault(require("./Button"));
 
 var _Checkbox = _interopRequireDefault(require("./Checkbox"));
 
-var _validators = require("../utils/validators");
+var _HelperText = _interopRequireDefault(require("./HelperText"));
+
+var _subscriptionContext = _interopRequireDefault(require("./contexts/subscriptionContext"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -76,23 +78,21 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
 var _default = props => {
   let {
     fbIcon,
-    igIcon,
+    igIcon
+  } = props;
+  const classes = useStyles();
+  const [language, setLanguage] = (0, _react.useState)('English');
+  const {
     email = '',
     setEmail = () => {},
     checked,
     setChecked,
-    successMessage,
     errorMessage,
+    successMessage,
     onSubmit,
-    emailError
-  } = props;
-  const classes = useStyles();
-  const [language, setLanguage] = (0, _react.useState)('English');
-
-  if (emailError == null) {
-    emailError = !(0, _validators.isValidEmail)(email);
-  }
-
+    emailErrorMessage,
+    checkErrorMessage
+  } = (0, _react.useContext)(_subscriptionContext.default);
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.root)
   }, _react.default.createElement("div", {
@@ -150,39 +150,37 @@ var _default = props => {
     className: classes.emailInput,
     value: email,
     onChange: e => setEmail(e.target.value),
-    error: emailError,
+    error: !!emailErrorMessage,
     placeholder: "Your email address"
-  }), successMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  }), emailErrorMessage && _react.default.createElement(_HelperText.default, {
     style: {
-      fontSize: 14,
-      fontFamily: 'FilsonSoftRegular',
-      color: 'green'
-    }
-  }, successMessage), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 8
-    }
-  })), errorMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
-    style: {
-      fontSize: 14,
-      fontFamily: 'FilsonSoftRegular',
-      color: 'ff3a53'
-    }
-  }, errorMessage), _react.default.createElement("div", {
-    style: {
-      width: 10,
-      height: 8
-    }
-  })), _react.default.createElement("div", {
+      marginBottom: 8
+    },
+    error: true
+  }, emailErrorMessage), _react.default.createElement("div", {
     className: classes.checkbox
   }, _react.default.createElement(_Checkbox.default, {
     darkTheme: true,
     checked: checked,
-    setChecked: setChecked
+    setChecked: setChecked,
+    error: !!checkErrorMessage
   }), _react.default.createElement("div", {
     className: classes.labelContent
-  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), _react.default.createElement("div", {
+  }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), checkErrorMessage && _react.default.createElement(_HelperText.default, {
+    style: {
+      marginBottom: 8
+    },
+    error: true
+  }, checkErrorMessage), successMessage && _react.default.createElement(_HelperText.default, {
+    style: {
+      marginBottom: 8
+    }
+  }, successMessage), errorMessage && _react.default.createElement(_HelperText.default, {
+    style: {
+      marginBottom: 8
+    },
+    error: true
+  }, errorMessage), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 12

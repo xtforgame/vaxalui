@@ -11,15 +11,6 @@ const Layout = ({
   logo,
   fbIcon,
   igIcon,
-
-  email,
-  setEmail,
-  checked,
-  setChecked,
-  errorMessage,
-  successMessage,
-  onSubmit,
-  emailError,
 }) => (
   <div
     style={{
@@ -53,15 +44,6 @@ const Layout = ({
     <Footer
       fbIcon={fbIcon}
       igIcon={igIcon}
-
-      email={email}
-      setEmail={setEmail}
-      checked={checked}
-      setChecked={setChecked}
-      errorMessage={errorMessage}
-      successMessage={successMessage}
-      onSubmit={onSubmit}
-      emailError={emailError}
     />
   </div>
 );
