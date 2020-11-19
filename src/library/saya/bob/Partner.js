@@ -41,7 +41,7 @@ class Partner extends React.PureComponent {
         className={classes.root}
         image={backgroundImage}
       >
-        <div className={classes.bottle} style={{ backgroundImage: `url(${bottleImage})` }}>
+        <div className={classes.bottle} style={{ backgroundImage: `url(${bottleImage})`, height: 320, overflowY: 'hidden' }}>
           <PartnerForm />
         </div>
       </ImageContainer>

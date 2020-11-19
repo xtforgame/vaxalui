@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
 
   checkbox: {
     display: 'flex',
-    paddingTop: 12,
+    paddingTop: 6,
   },
   box: {
     width: 30,
@@ -164,9 +164,14 @@ export default (props) => {
           </div>
           {
             emailErrorMessage && (
-              <HelperText style={{ marginBottom: 8 }} error>
+              <HelperText style={{ }} error>
                 {emailErrorMessage}
               </HelperText>
+            )
+          }
+          {
+            !emailErrorMessage && (
+              <div style={{ height: 10 }} />
             )
           }
           <div className={classes.checkbox}>
@@ -185,21 +190,21 @@ export default (props) => {
           </div>
           {
             checkErrorMessage && (
-              <HelperText style={{ marginBottom: 8 }} error>
+              <HelperText style={{ }} error>
                 {checkErrorMessage}
               </HelperText>
             )
           }
           {
             successMessage && (
-              <HelperText style={{ marginBottom: 8 }}>
+              <HelperText style={{ }}>
                 {successMessage}
               </HelperText>
             )
           }
           {
             errorMessage && (
-              <HelperText style={{ marginBottom: 8 }} error>
+              <HelperText style={{ }} error>
                 {errorMessage}
               </HelperText>
             )

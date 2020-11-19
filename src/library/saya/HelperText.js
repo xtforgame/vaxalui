@@ -11,9 +11,10 @@ import subscriptionContext from './contexts/subscriptionContext';
 
 const useStyles = makeStyles(theme => ({
   text: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'FilsonSoftRegular',
     color: '#c0c823',
+    paddingTop: 2,
   },
   error: {
     color: '#ff3a53',

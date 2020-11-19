@@ -66,7 +66,7 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
   },
   checkbox: {
     display: 'flex',
-    paddingTop: 12
+    paddingTop: 6
   },
   box: {
     width: 30,
@@ -242,11 +242,13 @@ var _default = props => {
     width: 100,
     onClick: onSubmit
   }, "SUBMIT"))), emailErrorMessage && _react.default.createElement(_HelperText.default, {
-    style: {
-      marginBottom: 8
-    },
+    style: {},
     error: true
-  }, emailErrorMessage), _react.default.createElement("div", {
+  }, emailErrorMessage), !emailErrorMessage && _react.default.createElement("div", {
+    style: {
+      height: 10
+    }
+  }), _react.default.createElement("div", {
     className: classes.checkbox
   }, _react.default.createElement(_Checkbox.default, {
     darkTheme: true,
@@ -256,18 +258,12 @@ var _default = props => {
   }), _react.default.createElement("div", {
     className: classes.labelContent
   }, _react.default.createElement("label", null, "SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime."))), checkErrorMessage && _react.default.createElement(_HelperText.default, {
-    style: {
-      marginBottom: 8
-    },
+    style: {},
     error: true
   }, checkErrorMessage), successMessage && _react.default.createElement(_HelperText.default, {
-    style: {
-      marginBottom: 8
-    }
+    style: {}
   }, successMessage), errorMessage && _react.default.createElement(_HelperText.default, {
-    style: {
-      marginBottom: 8
-    },
+    style: {},
     error: true
   }, errorMessage))));
 };

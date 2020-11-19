@@ -65,7 +65,8 @@ class TextField extends _react.default.PureComponent {
 
     return _react.default.createElement("input", _extends({
       className: (0, _clsx.default)(classes.root, {
-        [classes.darkTheme]: darkTheme,
+        [classes.darkTheme]: darkTheme
+      }, {
         [classes.error]: error
       }, className),
       value: value,

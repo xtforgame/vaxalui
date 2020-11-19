@@ -46,7 +46,7 @@ class TextField extends React.PureComponent {
     } = this.props;
     return (
       <input
-        className={clsx(classes.root, { [classes.darkTheme]: darkTheme, [classes.error]: error }, className)}
+        className={clsx(classes.root, { [classes.darkTheme]: darkTheme }, { [classes.error]: error }, className)}
         value={value}
         onChange={onChange}
         {...others}
