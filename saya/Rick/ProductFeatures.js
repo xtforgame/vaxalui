@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -58,15 +60,21 @@ class ProductFeatures extends _react.default.PureComponent {
       className: classes.container
     }, _react.default.createElement("div", {
       className: classes.title
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
     }, title), _react.default.createElement("div", {
       className: classes.line
-    })), _react.default.createElement("div", {
+    }))), _react.default.createElement("div", {
       className: classes.subtitle
-    }, list.map(l => _react.default.createElement("div", {
+    }, list.map(l => _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement("div", {
       style: {
         fontSize: 20,
         fontFamily: 'FilsonSoftRegular',
@@ -80,7 +88,7 @@ class ProductFeatures extends _react.default.PureComponent {
         fontFamily: 'FilsonSoftRegular',
         paddingLeft: 0
       }
-    }, `${l}`)))))));
+    }, `${l}`))))))));
   }
 
 }

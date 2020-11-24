@@ -17,6 +17,8 @@ var _IconBox = _interopRequireDefault(require("../bob/IconBox"));
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {

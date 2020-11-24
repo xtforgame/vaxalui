@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -93,24 +95,33 @@ var _default = props => {
     className: classes.section
   }, _react.default.createElement("div", {
     className: classes.firstTitle
-  }, firstTitle, _react.default.createElement("span", {
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", null, firstTitle), _react.default.createElement("span", {
     className: classes.firstTitleBack
   }, firstTitleBack), _react.default.createElement("div", {
     className: classes.firstLine,
     style: {
       backgroundColor: lineColor
     }
-  })), _react.default.createElement("div", {
+  }))), _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", {
     className: classes.title
   }, title), _react.default.createElement("div", {
     className: classes.subTitle
-  }, subTitle), ' '), _react.default.createElement("div", {
+  }, subTitle))), _react.default.createElement("div", {
     style: {
       width: '100%'
     }
   }, children), _react.default.createElement("div", {
     className: classes.section2
-  }, !hideButton && _react.default.createElement("div", {
+  }, !hideButton && _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", {
     className: classes.button,
     style: {
       alignSelf: buttonPosition
@@ -118,7 +129,7 @@ var _default = props => {
   }, _react.default.createElement(_GreenButton.default, {
     text: "Learn More",
     onClick: onClick
-  }))));
+  })))));
 };
 
 exports.default = _default;

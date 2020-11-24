@@ -15,6 +15,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {
@@ -58,22 +60,28 @@ class AboutNews extends _react.default.PureComponent {
       }
     }, _react.default.createElement("div", {
       className: classes.container
+    }, _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
     }, _react.default.createElement("div", {
       className: classes.title
     }, _react.default.createElement(_BreakAllContentText.default, {
       style: {
         fontFamily: 'FilsonSoft-Bold'
       }
-    }, title)), _react.default.createElement("div", {
+    }, title))), _react.default.createElement("div", {
       className: classes.boxRoot
-    }, item.map(i => _react.default.createElement(_MobileCard.default, {
+    }, item.map(i => _react.default.createElement(_reveal.Slide, {
+      direction: "up",
+      triggerOnce: true
+    }, _react.default.createElement(_MobileCard.default, {
       height: i.height,
       width: i.width,
       title: i.title,
       description: i.description,
       image: i.image,
       onClick: i.onClick
-    }))))));
+    })))))));
   }
 
 }

@@ -11,6 +11,8 @@ var _clsx = _interopRequireDefault(require("clsx"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {

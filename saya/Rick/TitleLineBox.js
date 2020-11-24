@@ -11,6 +11,8 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -50,6 +52,9 @@ var _default = props => {
       position: 'absolute',
       width: '80%'
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement("pre", {
@@ -65,7 +70,7 @@ var _default = props => {
     style: {
       backgroundColor: color
     }
-  })), _react.default.createElement("div", {
+  }))), _react.default.createElement("div", {
     style: {
       position: 'absolute',
       display: 'flex',

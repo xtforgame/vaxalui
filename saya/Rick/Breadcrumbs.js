@@ -15,6 +15,8 @@ var _Link = _interopRequireDefault(require("@material-ui/core/Link"));
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const styles = {

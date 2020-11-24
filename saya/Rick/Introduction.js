@@ -15,6 +15,8 @@ var _Text = _interopRequireDefault(require("./Text"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -76,14 +78,20 @@ var _default = props => {
       position: 'absolute',
       width: 320
     }
-  }, !hideTitle && _react.default.createElement("div", {
+  }, !hideTitle && _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement("pre", {
     style: {
       fontFamily: 'FilsonSoft-Bold',
       margin: 0
     }
-  }, title)), _react.default.createElement("div", {
+  }, title))), _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'center'
@@ -108,7 +116,7 @@ var _default = props => {
       fontFamily: 'FilsonSoftRegular',
       margin: 0
     }
-  }, description)), _react.default.createElement("div", null, children)));
+  }, description))), _react.default.createElement("div", null, children)));
 };
 
 exports.default = _default;

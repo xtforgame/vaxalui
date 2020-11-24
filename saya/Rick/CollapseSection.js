@@ -19,6 +19,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _clsx = _interopRequireDefault(require("clsx"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -129,9 +131,12 @@ var _default = props => {
   return _react.default.createElement(_react.default.Fragment, null, topTitle && _react.default.createElement(_ImageContainer.default, {
     image: backgroundImage,
     className: classes.topSection
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", null, _react.default.createElement("span", {
     className: classes.titleWhite
-  }, topTitle))), _react.default.createElement(_CenteredContainer.default, {
+  }, topTitle)))), _react.default.createElement(_CenteredContainer.default, {
     className: classes.upperPart,
     style: {
       backgroundColor,
@@ -139,6 +144,9 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.container
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement(_Text.default, {
     className: classes.title,
     family: "bold"
@@ -149,7 +157,7 @@ var _default = props => {
     style: {
       backgroundColor: color
     }
-  })))), _react.default.createElement("div", {
+  }))))), _react.default.createElement("div", {
     className: classes.lowerPart,
     style: {
       color
@@ -161,6 +169,9 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.container2
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.leftContainer
   }, _react.default.createElement(_Text.default, {
@@ -191,7 +202,7 @@ var _default = props => {
     })
   }, _react.default.createElement(_Text.default, {
     className: classes.description
-  }, description))))), _react.default.createElement("div", {
+  }, description)))))), _react.default.createElement("div", {
     className: classes.lowerRight
   }, _react.default.createElement("div", {
     className: classes.rightContainer

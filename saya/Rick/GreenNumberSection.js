@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -119,6 +121,9 @@ var _default = props => {
       alignItems: 'center',
       flexDirection: 'column'
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.numberUpTitle
   }, " ", numberUpTitle, " "), _react.default.createElement("div", {
@@ -131,17 +136,23 @@ var _default = props => {
     style: {
       display: percentDisplay
     }
-  }, sign)), _react.default.createElement("div", {
+  }, sign))), _react.default.createElement("div", {
     style: {
       paddingLeft: 0
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.topTile
   }, " ", topTile, " "), _react.default.createElement("div", {
     className: classes.line
   }), _react.default.createElement("div", {
     className: classes.bottomTitle
-  }, " ", bottomTitle, " "))), _react.default.createElement("div", {
+  }, " ", bottomTitle, " ")))), _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement("div", {
     className: classes.subtitle
   }, _react.default.createElement("pre", {
     style: {
@@ -154,7 +165,7 @@ var _default = props => {
     style: {
       fontFamily: 'FilsonSoftRegular'
     }
-  }, description)))));
+  }, description))))));
 };
 
 exports.default = _default;

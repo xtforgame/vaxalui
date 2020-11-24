@@ -15,6 +15,8 @@ var _Introduction = _interopRequireDefault(require("./Introduction"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -60,6 +62,9 @@ var _default = props => {
     }
   }, _react.default.createElement("div", {
     className: classes.root
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.title
   }, "Type of Materials and Finishing"), _react.default.createElement(_BreakAllContentText.default, {
@@ -68,7 +73,7 @@ var _default = props => {
     className: classes.title
   }, "Content Percentage"), _react.default.createElement(_BreakAllContentText.default, {
     className: classes.description
-  }, 'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nWe aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution. '))));
+  }, 'SAYA RSCUW Fibers consist of 3 types of recycled components. Garment cutting scrap, overstock fabric, waste yarn, and post-consumer PET bottles. Post industrial wastes make up a minimum of 15%, and post consumer bottles about 80-85%.\n\nWe aim to continuously increase the percentage of garment and overstock waste as well as the types of coatings and finishings for a more inclusive solution. ')))));
 };
 
 exports.default = _default;

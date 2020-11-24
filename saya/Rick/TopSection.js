@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _Text = _interopRequireDefault(require("./Text"));
 
+var _reveal = require("../reveal");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -83,6 +85,9 @@ var _default = props => {
     className: classes.section
   }, _react.default.createElement("div", {
     className: classes.firstTitle
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement("div", {
     className: classes.firstTitleText
   }, _react.default.createElement(_Text.default, {
@@ -95,7 +100,10 @@ var _default = props => {
     style: {
       backgroundColor: lineColor
     }
-  })), _react.default.createElement(_Text.default, {
+  }))), _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
+  }, _react.default.createElement(_Text.default, {
     family: titleFontFamily,
     className: classes.title,
     style: {
@@ -104,7 +112,7 @@ var _default = props => {
   }, title), _react.default.createElement(_Text.default, {
     family: subtitleFontFamily,
     className: classes.subtitle
-  }, subtitle), _react.default.createElement("div", null, children)));
+  }, subtitle)), _react.default.createElement("div", null, children)));
 };
 
 exports.default = _default;
