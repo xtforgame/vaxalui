@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles({
   light: {

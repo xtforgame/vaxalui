@@ -5,6 +5,7 @@ import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import ImageContainer from '../ImageContainer';
 import PartnerForm from './PartnerForm';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   container: {

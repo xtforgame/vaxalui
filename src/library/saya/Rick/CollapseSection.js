@@ -5,6 +5,7 @@ import CenteredContainer from '../CenteredContainer';
 import Text from './Text';
 import ImageContainer from '../ImageContainer';
 import clsx from 'clsx';
+import { Slide } from '../reveal';
 
 const useStyle = makeStyles(theme => ({
   upperPart: {
@@ -119,31 +120,37 @@ export default (props) => {
             image={backgroundImage}
             className={classes.topSection}
           >
-            <div>
-              <span className={classes.titleWhite}>{topTitle}</span>
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div>
+                <span className={classes.titleWhite}>{topTitle}</span>
+              </div>
+            </Slide>
           </ImageContainer>
         )
       }
       <CenteredContainer className={classes.upperPart} style={{ backgroundColor, color }}>
         <div className={classes.container}>
-          <Text className={classes.title} family="bold">{title}</Text>
-          <div className={classes.leftContainer}>
-            <div className={classes.line} style={{ backgroundColor: color }} />
-          </div>
+          <Slide direction="up" triggerOnce>
+            <Text className={classes.title} family="bold">{title}</Text>
+            <div className={classes.leftContainer}>
+              <div className={classes.line} style={{ backgroundColor: color }} />
+            </div>
+          </Slide>
         </div>
       </CenteredContainer>
       <div className={classes.lowerPart} style={{ color }}>
         <div className={classes.lowerLeft} style={{ backgroundColor }}>
           <div className={classes.container2}>
-            <div className={classes.leftContainer}>
-              <Text className={classes.subtitle}>{subtitle}</Text>
-              {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-              {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
-              <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
-                <Text className={classes.description}>{description}</Text>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.leftContainer}>
+                <Text className={classes.subtitle}>{subtitle}</Text>
+                {!expended && <AddCircle className={classes.button} onClick={() => { setExpanded(true); }} style={{ width: 46, height: 46, color: buttonColor }} />}
+                {expended && <RemoveCircle className={classes.button} onClick={() => { setExpanded(false); }} style={{ width: 46, height: 46, color: buttonColor }} />}
+                <div className={clsx(classes.expandedArea, { [classes.hide]: !expended })}>
+                  <Text className={classes.description}>{description}</Text>
+                </div>
               </div>
-            </div>
+            </Slide>
           </div>
         </div>
         <div className={classes.lowerRight}>

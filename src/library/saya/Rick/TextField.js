@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 // import { graphql } from 'gatsby';
+import { Slide } from '../reveal';
 
 const styles = theme => ({
   root: {

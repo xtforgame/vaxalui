@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {

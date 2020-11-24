@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import Text from './Text';
 import BreakAllContentText from '../BreakAllContentText';
-
+import { Slide } from '../reveal';
 
 
 const useStyles = makeStyles(theme => ({
@@ -66,20 +66,24 @@ export default (props) => {
       >
         {
           !hideTitle &&
-          <div className={classes.title}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{title}</pre>
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.title}>
+              <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{title}</pre>
+            </div>
+          </Slide>
         }
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div className={classes.line} style={{ backgroundColor: lineColor, display: lineDisplay, }} />
-        </div>
+        <Slide direction="up" triggerOnce>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className={classes.line} style={{ backgroundColor: lineColor, display: lineDisplay, }} />
+          </div>
 
-        <div className={classes.subtitle}>
-          <Text family={subtitleFontFamily} style={{ margin: 0 }}>{subtitle}</Text>
-        </div>
-        <div className={classes.description}>
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{description}</BreakAllContentText>
-        </div>
+          <div className={classes.subtitle}>
+            <Text family={subtitleFontFamily} style={{ margin: 0 }}>{subtitle}</Text>
+          </div>
+          <div className={classes.description}>
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', margin: 0 }}>{description}</BreakAllContentText>
+          </div>
+        </Slide>
         <div>
           {children}
         </div>

@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Breadcrumbs as MUIBreadcrumbs } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const styles = {
   separator: {

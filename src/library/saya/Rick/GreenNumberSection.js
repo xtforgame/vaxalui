@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   topSection: {
@@ -106,33 +107,38 @@ export default (props) => {
           style={{ position: 'absolute', width: 320, marginTop: marginTop, alignSelf: 'center' }}
         >
           <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
-            <div className={classes.numberUpTitle}> {numberUpTitle} </div>
-            <div className={classes.number} style={{ color: numberColor, }} >
-              {number}
-              {
-                !hideSign &&
-                (<span
-                  className={classes.percent}
-                  style={{
-                    display: percentDisplay,
-                  }}
-                >
-                  {sign}</span>)
-              }
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.numberUpTitle}> {numberUpTitle} </div>
+              <div className={classes.number} style={{ color: numberColor, }} >
+                {number}
+                {
+                  !hideSign &&
+                  (<span
+                    className={classes.percent}
+                    style={{
+                      display: percentDisplay,
+                    }}
+                  >
+                    {sign}</span>)
+                }
+              </div>
+            </Slide>
             <div style={{ paddingLeft: 0, }}>
-              <div className={classes.topTile}> {topTile} </div>
-              <div className={classes.line} />
-              <div className={classes.bottomTitle}> {bottomTitle} </div>
+              <Slide direction="up" triggerOnce>
+                <div className={classes.topTile}> {topTile} </div>
+                <div className={classes.line} />
+                <div className={classes.bottomTitle}> {bottomTitle} </div>
+              </Slide>
             </div>
           </div>
-          <div className={classes.subtitle}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{subtitle}</pre>
-          </div>
-          <div className={classes.description}>
-            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
-          </div>
-
+          <Slide direction="up" triggerOnce>
+            <div className={classes.subtitle}>
+              <pre style={{ fontFamily: 'FilsonSoft-Bold', margin: 0, }}>{subtitle}</pre>
+            </div>
+            <div className={classes.description}>
+              <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular' }}>{description}</BreakAllContentText>
+            </div>
+          </Slide>
         </div>
       </ImageContainer>
     </>

@@ -6,6 +6,7 @@ import CenteredContainer from '../CenteredContainer';
 import Text from './Text';
 import Table from './Table';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const useStyle = makeStyles(theme => ({
   upperPart: {

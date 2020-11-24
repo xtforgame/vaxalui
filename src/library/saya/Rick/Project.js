@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   root: {

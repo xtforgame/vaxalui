@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import GreenButton from '../bob/GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -44,9 +45,11 @@ class Section2 extends React.PureComponent {
           image={backgroundImage}
           style={{ height }}
         >
-          <div className={classes.section}>
-            <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.section}>
+              <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
+            </div>
+          </Slide>
         </ImageContainer>
         <div className={classes.space} />
       </>

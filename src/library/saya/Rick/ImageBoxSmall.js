@@ -1,6 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {

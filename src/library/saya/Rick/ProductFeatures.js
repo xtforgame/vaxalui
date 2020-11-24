@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -45,15 +46,19 @@ class ProductFeatures extends React.PureComponent {
         <ImageContainer className={classes.root}>
           <div className={classes.container}>
             <div className={classes.title}>
-              <div style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</div>
-              <div className={classes.line} />
+              <Slide direction="up" triggerOnce>
+                <div style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</div>
+                <div className={classes.line} />
+              </Slide>
             </div>
             <div className={classes.subtitle}>
               {list.map(l => (
-                <div style={{ fontSize: 20, fontFamily: 'FilsonSoftRegular', display: 'flex', paddingBottom: 20 }}>
-                  ・
-                  <span style={{ width: 315, fontSize: 20, fontFamily: 'FilsonSoftRegular', paddingLeft: 0, }}>{`${l}`}</span>
-                </div>
+                <Slide direction="up" triggerOnce>
+                  <div style={{ fontSize: 20, fontFamily: 'FilsonSoftRegular', display: 'flex', paddingBottom: 20 }}>
+                    ・
+                    <span style={{ width: 315, fontSize: 20, fontFamily: 'FilsonSoftRegular', paddingLeft: 0, }}>{`${l}`}</span>
+                  </div>
+                </Slide>
               ))}
             </div>
           </div>

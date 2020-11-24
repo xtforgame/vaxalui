@@ -4,6 +4,7 @@ import ImageContainer from '../ImageContainer';
 import IconBoxSection from '../bob/IconBoxSection';
 import IconBox from '../bob/IconBox';
 import GreenButton from '../bob/GreenButton';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {

@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import GreenButton from '../bob/GreenButton';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,23 +82,28 @@ export default (props) => {
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>
-          {firstTitle}
-          <span className={classes.firstTitleBack}>{firstTitleBack}</span>
-          <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
+          <Slide direction="up" triggerOnce>
+            <div>{firstTitle}</div>
+            <span className={classes.firstTitleBack}>{firstTitleBack}</span>
+            <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
+          </Slide>
         </div>
-        <div className={classes.title}>{title}</div>
-        <div className={classes.subTitle}>{subTitle}</div>
-        {' '}
+        <Slide direction="up" triggerOnce>
+          <div className={classes.title}>{title}</div>
+          <div className={classes.subTitle}>{subTitle}</div>
+        </Slide>
       </div>
       <div style={{ width: '100%' }}>{children}</div>
       <div className={classes.section2}>
         {!hideButton && (
-          <div className={classes.button} style={{ alignSelf: buttonPosition }}>
-            <GreenButton
-              text="Learn More"
-              onClick={onClick}
-            />
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.button} style={{ alignSelf: buttonPosition }}>
+              <GreenButton
+                text="Learn More"
+                onClick={onClick}
+              />
+            </div>
+          </Slide>
         )}
       </div>
     </ImageContainer>

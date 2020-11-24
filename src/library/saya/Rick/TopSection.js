@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import Text from './Text';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -75,14 +76,18 @@ export default (props) => {
     >
       <div className={classes.section}>
         <div className={classes.firstTitle}>
-          <div className={classes.firstTitleText}>
-            <Text family="bold">{firstTitle}</Text>
-            <Text className={classes.firstTitleBack} family="light">{firstTitleBack}</Text>
-          </div>
-          <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
+          <Slide direction="up" triggerOnce>
+            <div className={classes.firstTitleText}>
+              <Text family="bold">{firstTitle}</Text>
+              <Text className={classes.firstTitleBack} family="light">{firstTitleBack}</Text>
+            </div>
+            <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
+          </Slide>
         </div>
-        <Text family={titleFontFamily} className={classes.title} style={{ fontSize: titleFontSize }}>{title}</Text>
-        <Text family={subtitleFontFamily} className={classes.subtitle}>{subtitle}</Text>
+        <Slide direction="up" triggerOnce>
+          <Text family={titleFontFamily} className={classes.title} style={{ fontSize: titleFontSize }}>{title}</Text>
+          <Text family={subtitleFontFamily} className={classes.subtitle}>{subtitle}</Text>
+        </Slide>
         <div>{children}</div>
       </div>
     </ImageContainer>

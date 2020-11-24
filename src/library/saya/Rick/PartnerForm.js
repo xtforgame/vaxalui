@@ -4,6 +4,7 @@ import GreenButton from '../bob/GreenButton';
 import TextField from './TextField';
 import Checkbox from '../Checkbox';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   subtitle: {

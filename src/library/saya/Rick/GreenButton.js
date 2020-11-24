@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
+import { Slide } from '../reveal';
 
 const styles = {
   button: {

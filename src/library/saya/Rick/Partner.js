@@ -2,6 +2,7 @@ import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import PartnerForm from './PartnerForm';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {

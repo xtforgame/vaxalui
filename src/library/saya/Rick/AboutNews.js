@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MobileCard from '../MobileCard';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import { Slide } from '../reveal';
 
 const styles = {
   root: {
@@ -47,19 +48,23 @@ class AboutNews extends React.PureComponent {
           }}
         >
           <div className={classes.container}>
-            <div className={classes.title}>
-              <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
-            </div>
+            <Slide direction="up" triggerOnce>
+              <div className={classes.title}>
+                <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold' }}>{title}</BreakAllContentText>
+              </div>
+            </Slide>
             <div className={classes.boxRoot}>
               {item.map(i => (
-                <MobileCard
-                  height={i.height}
-                  width={i.width}
-                  title={i.title}
-                  description={i.description}
-                  image={i.image}
-                  onClick={i.onClick}
-                />
+                <Slide direction="up" triggerOnce>
+                  <MobileCard
+                    height={i.height}
+                    width={i.width}
+                    title={i.title}
+                    description={i.description}
+                    image={i.image}
+                    onClick={i.onClick}
+                  />
+                </Slide>
               ))}
             </div>
           </div>

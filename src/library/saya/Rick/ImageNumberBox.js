@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   root: {

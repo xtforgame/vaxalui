@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -40,14 +41,15 @@ export default (props) => {
         <div
           style={{ position: 'absolute', width: '80%', }}
         >
-          <div className={classes.title}>
-            <pre style={{ fontFamily: 'FilsonSoft-Bold', }}>{title}</pre>
-          </div>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.title}>
+              <pre style={{ fontFamily: 'FilsonSoft-Bold', }}>{title}</pre>
+            </div>
 
-          <div style={{ display: 'flex', }}>
-            <div className={classes.line} style={{ backgroundColor: color }} />
-          </div>
-
+            <div style={{ display: 'flex', }}>
+              <div className={classes.line} style={{ backgroundColor: color }} />
+            </div>
+          </Slide>
           <div style={{
             position: 'absolute',
             display: 'flex',
