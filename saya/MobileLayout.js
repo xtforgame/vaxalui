@@ -20,6 +20,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const MobileLayout = ({
   children,
   onLinkClick,
+  noJsLink,
+  LinkComponent,
   navBarItems,
   logo,
   fbIcon,
@@ -34,7 +36,9 @@ const MobileLayout = ({
   title: "SAYA homepage"
 }), _react.default.createElement(_MobileNavbar.default, {
   onLinkClick: onLinkClick,
-  items: navBarItems
+  items: navBarItems,
+  noJsLink: noJsLink,
+  LinkComponent: LinkComponent
 }, logo), _react.default.createElement("div", {
   style: {
     width: '100%',

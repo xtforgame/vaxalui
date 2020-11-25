@@ -7,6 +7,8 @@ import MobileFooter from './MobileFooter';
 const MobileLayout = ({
   children,
   onLinkClick,
+  noJsLink,
+  LinkComponent,
   navBarItems,
   logo,
   fbIcon,
@@ -22,7 +24,12 @@ const MobileLayout = ({
     }}
   >
     <Helmet title="SAYA homepage" />
-    <MobileNavbar onLinkClick={onLinkClick} items={navBarItems}>
+    <MobileNavbar
+      onLinkClick={onLinkClick}
+      items={navBarItems}
+      noJsLink={noJsLink}
+      LinkComponent={LinkComponent}
+    >
       {logo}
     </MobileNavbar>
     <div

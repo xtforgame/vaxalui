@@ -7,6 +7,8 @@ import Footer from './Footer';
 const Layout = ({
   children,
   onLinkClick,
+  noJsLink,
+  LinkComponent,
   navBarItems,
   logo,
   fbIcon,
@@ -22,7 +24,12 @@ const Layout = ({
     }}
   >
     <Helmet title="SAYA homepage" />
-    <Navbar onLinkClick={onLinkClick} items={navBarItems}>
+    <Navbar
+      onLinkClick={onLinkClick}
+      items={navBarItems}
+      noJsLink={noJsLink}
+      LinkComponent={LinkComponent}
+    >
       {logo}
     </Navbar>
     <div
