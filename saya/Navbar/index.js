@@ -121,6 +121,8 @@ class Navbar extends _react.default.PureComponent {
 
   render() {
     const {
+      noJsLink,
+      LinkComponent,
       onLinkClick,
       classes,
       items,
@@ -148,7 +150,9 @@ class Navbar extends _react.default.PureComponent {
       value: _objectSpread({}, this.state, {
         onLinkClick: onLinkClick || (path => {
           console.warn('default onLinkClick', path);
-        })
+        }),
+        noJsLink,
+        LinkComponent
       })
     }, _react.default.createElement(_Menu.default, {
       items: items || _navigation.default

@@ -101,6 +101,8 @@ class Menu extends React.PureComponent {
       classes,
       className,
       onLinkClick,
+      noJsLink,
+      LinkComponent,
     } = this.props;
     return (
       <MenuContext.Provider
@@ -109,6 +111,8 @@ class Menu extends React.PureComponent {
           onLinkClick: onLinkClick || ((path) => {
             console.warn('default onLinkClick', path);
           }),
+          noJsLink,
+          LinkComponent,
         }}
       >
         <div

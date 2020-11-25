@@ -117,13 +117,17 @@ class Menu extends _react.default.PureComponent {
     const {
       classes,
       className,
-      onLinkClick
+      onLinkClick,
+      noJsLink,
+      LinkComponent
     } = this.props;
     return _react.default.createElement(_MenuContext.MenuContext.Provider, {
       value: _objectSpread({}, this.state, {
         onLinkClick: onLinkClick || (path => {
           console.warn('default onLinkClick', path);
-        })
+        }),
+        noJsLink,
+        LinkComponent
       })
     }, _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.menuRoot, className)

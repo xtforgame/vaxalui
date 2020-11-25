@@ -53,6 +53,8 @@ class MobileNavbar extends React.PureComponent {
 
   render() {
     const {
+      noJsLink,
+      LinkComponent,
       onLinkClick,
       classes,
       items,
@@ -83,6 +85,8 @@ class MobileNavbar extends React.PureComponent {
             })}
             items={items || navItems}
             onLinkClick={onLinkClick}
+            noJsLink={noJsLink}
+            LinkComponent={LinkComponent}
             onChange={this.handleMenuChange}
           />
         </div>

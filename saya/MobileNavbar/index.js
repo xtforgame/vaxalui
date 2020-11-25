@@ -74,6 +74,8 @@ class MobileNavbar extends _react.default.PureComponent {
 
   render() {
     const {
+      noJsLink,
+      LinkComponent,
       onLinkClick,
       classes,
       items,
@@ -107,6 +109,8 @@ class MobileNavbar extends _react.default.PureComponent {
       }),
       items: items || _navigation.default,
       onLinkClick: onLinkClick,
+      noJsLink: noJsLink,
+      LinkComponent: LinkComponent,
       onChange: this.handleMenuChange
     })));
   }
