@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import Text from './Text';
 import { Slide } from '../reveal';
+import AnimatedNumber2 from '../bob/AnimatedNumber2';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -76,7 +77,12 @@ export default (props) => {
       <div className={classes.section}>
         <Slide direction="up" triggerOnce>
           <div className={classes.firstTitle}>{firstTitle}</div>
-          <div className={classes.title}>{title}</div>
+          <div className={classes.title}>
+            <AnimatedNumber2
+              number={75000000000}
+              // numberPaddingTop={12}
+            />
+          </div>
           <div className={classes.topTitle}>{topTitle}</div>
           <div className={classes.firstLine} style={{ backgroundColor: lineColor }} />
           <div className={classes.bottomTitle}>{bottomTitle}</div>

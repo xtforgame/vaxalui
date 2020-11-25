@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import { Slide } from '../reveal';
+import AnimatedNumber from '../bob/AnimatedNumber';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -62,8 +63,16 @@ export default (props) => {
     >
       <div className={classes.container}>
         <div className={classes.number}>
-          {number}
-          {!hidePercent && <span style={{ fontSize: 12, }}>%</span>}
+          <AnimatedNumber
+            width="auto"
+            number={number}
+            numberFontSize={70}
+            suffix={!hidePercent && <span style={{ fontSize: 12, }}>%</span>}
+            // numberPaddingTop={numberPaddingTop}
+            // numberColor={numberColor}
+            // percentDisplay={percentDisplay}
+            // percentColor={percentColor}
+          />
         </div>
         <div className={classes.topTile}> {topTile} </div>
         <div className={classes.line} style={{ backgroundColor: lineColor }} />

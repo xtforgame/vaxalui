@@ -27,12 +27,10 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 const useStyles = (0, _styles.makeStyles)({
   number: {
-    fontSize: 180,
     lineHeight: 0.74,
     fontFamily: 'FilsonSoftRegular'
   },
   percent: {
-    fontSize: 20,
     fontFamily: 'FilsonSoftRegular'
   }
 });
@@ -63,16 +61,19 @@ const AnimatedNumber = ({
 var _default = ({
   width = 235,
   number,
+  numberFontSize = 180,
   suffix = '%',
   numberPaddingTop,
   numberColor,
   percentDisplay,
-  percentColor
+  percentColor,
+  percentFontSize = 20
 }) => {
   const classes = useStyles();
   return _react.default.createElement("div", {
     className: classes.number,
     style: {
+      fontSize: numberFontSize,
       paddingtTop: numberPaddingTop,
       color: numberColor,
       display: 'flex',
@@ -94,7 +95,8 @@ var _default = ({
     className: classes.percent,
     style: {
       display: percentDisplay,
-      color: percentColor
+      color: percentColor,
+      fontSize: percentFontSize
     }
   }, suffix));
 };

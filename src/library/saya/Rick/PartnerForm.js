@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import GreenButton from '../bob/GreenButton';
-import TextField from './TextField';
+import TextField from '../bob/TextField';
 import Checkbox from '../Checkbox';
+import HelperText from '../HelperText';
 import BreakAllContentText from '../BreakAllContentText';
 import { Slide } from '../reveal';
+import subscriptionContext from '../contexts/subscriptionContext';
 
-const styles = {
+const useStyles = makeStyles(theme => ({
   subtitle: {
     width: '100%',
     fontSize: 13,
@@ -22,7 +25,6 @@ const styles = {
     width: '100%',
     fontSize: 12,
     color: '#000000',
-    border: 'solid 1px #000000',
     backgroundColor: '#ffffff',
   },
   button: {
@@ -41,63 +43,95 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 20,
   },
+}));
+
+
+export default (props) => {
+  const classes = useStyles();
+
+  const {
+    subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+    labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
+  } = props;
+
+  const {
+    email = '',
+    setEmail = () => {},
+    checked,
+    setChecked,
+    errorMessage,
+    successMessage,
+    onSubmit,
+    emailErrorMessage,
+    checkErrorMessage,
+  } = useContext(subscriptionContext);
+
+  return (
+    <React.Fragment>
+      <BreakAllContentText className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
+        {subtitle}
+      </BreakAllContentText>
+      <div className={classes.email}>
+        <TextField
+          className={classes.emailInput}
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          placeholder="Your email address"
+          error={!!emailErrorMessage}
+        />
+      </div>
+      {
+        emailErrorMessage && (
+          <HelperText style={{ }} error>
+            {emailErrorMessage}
+          </HelperText>
+        )
+      }
+      {
+        !emailErrorMessage && (
+          <div style={{ height: 10 }} />
+        )
+      }
+      <div className={classes.checkbox}>
+        <Checkbox
+          checked={checked}
+          setChecked={setChecked}
+          error={!!checkErrorMessage}
+        />
+        <div className={classes.labelContent}>
+          <label>{labelContent}</label>
+        </div>
+      </div>
+      {
+        checkErrorMessage && (
+          <HelperText style={{ }} error>
+            {checkErrorMessage}
+          </HelperText>
+        )
+      }
+      {
+        successMessage && (
+          <HelperText style={{ }}>
+            {successMessage}
+          </HelperText>
+        )
+      }
+      {
+        errorMessage && (
+          <HelperText style={{ }} error>
+            {errorMessage}
+          </HelperText>
+        )
+      }
+      <div className={classes.button}>
+        <GreenButton
+          text="SUBMIT"
+          style={{
+            width: '100%',
+          }}
+          onClick={onSubmit}
+        />
+      </div>
+    </React.Fragment>
+  );
 };
-
-
-class Partner extends React.PureComponent {
-  state = {
-    email: '',
-  }
-
-  handleEmailChange = (e) => {
-    this.setState({
-      email: e.target.value,
-    });
-  }
-
-  render() {
-    const {
-      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
-      labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
-      email,
-    } = this.state;
-    const {
-      classes,
-      onClick,
-    } = this.props;
-    return (
-      <React.Fragment>
-        <BreakAllContentText className={classes.subtitle} style={{ marginTop: 0, marginBottom: 0 }}>
-          {subtitle}
-        </BreakAllContentText>
-        <div className={classes.email}>
-          <TextField
-            className={classes.emailInput}
-            value={email}
-            onChange={this.handleEmailChange}
-            placeholder="Your email address"
-          />
-        </div>
-
-        <div className={classes.checkbox}>
-          <Checkbox />
-          <div className={classes.labelContent}>
-            <label>{labelContent}</label>
-          </div>
-        </div>
-        <div className={classes.button}>
-          <GreenButton
-            text="SUBMIT"
-            style={{
-              width: '100%',
-            }}
-            onClick={onClick}
-          />
-        </div>
-      </React.Fragment>
-    );
-  }
-}
-
-
-export default withStyles(styles)(Partner);

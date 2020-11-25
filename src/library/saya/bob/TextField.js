@@ -44,6 +44,7 @@ class TextField extends React.PureComponent {
       error,
       ...others
     } = this.props;
+    console.log('error :', error);
     return (
       <input
         className={clsx(classes.root, { [classes.darkTheme]: darkTheme }, { [classes.error]: error }, className)}

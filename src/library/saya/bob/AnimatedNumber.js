@@ -11,12 +11,10 @@ import ImageContainer from '../ImageContainer';
 
 const useStyles = makeStyles({
   number: {
-    fontSize: 180,
     lineHeight: 0.74,
     fontFamily: 'FilsonSoftRegular',
   },
   percent: {
-    fontSize: 20,
     fontFamily: 'FilsonSoftRegular',
   },
 });
@@ -47,17 +45,20 @@ const AnimatedNumber = ({ isVisible, number }) => {
 export default ({
   width = 235,
   number,
+  numberFontSize = 180,
   suffix = '%',
   numberPaddingTop,
   numberColor,
   percentDisplay,
   percentColor,
+  percentFontSize = 20,
 }) => {
   const classes = useStyles();
   return (
     <div
       className={classes.number}
       style={{
+        fontSize: numberFontSize,
         paddingtTop: numberPaddingTop,
         color: numberColor,
         display: 'flex',
@@ -81,6 +82,7 @@ export default ({
         style={{
           display: percentDisplay,
           color: percentColor,
+          fontSize: percentFontSize,
         }}
       >
         {suffix}

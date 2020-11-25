@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _reveal = require("../reveal");
 
+var _AnimatedNumber = _interopRequireDefault(require("../bob/AnimatedNumber"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -75,11 +77,16 @@ var _default = props => {
     className: classes.container
   }, _react.default.createElement("div", {
     className: classes.number
-  }, number, !hidePercent && _react.default.createElement("span", {
-    style: {
-      fontSize: 12
-    }
-  }, "%")), _react.default.createElement("div", {
+  }, _react.default.createElement(_AnimatedNumber.default, {
+    width: "auto",
+    number: number,
+    numberFontSize: 70,
+    suffix: !hidePercent && _react.default.createElement("span", {
+      style: {
+        fontSize: 12
+      }
+    }, "%")
+  })), _react.default.createElement("div", {
     className: classes.topTile
   }, " ", topTile, " "), _react.default.createElement("div", {
     className: classes.line,

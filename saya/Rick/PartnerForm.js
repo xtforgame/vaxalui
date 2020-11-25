@@ -5,25 +5,31 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
 var _GreenButton = _interopRequireDefault(require("../bob/GreenButton"));
 
-var _TextField = _interopRequireDefault(require("./TextField"));
+var _TextField = _interopRequireDefault(require("../bob/TextField"));
 
 var _Checkbox = _interopRequireDefault(require("../Checkbox"));
+
+var _HelperText = _interopRequireDefault(require("../HelperText"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
 var _reveal = require("../reveal");
 
+var _subscriptionContext = _interopRequireDefault(require("../contexts/subscriptionContext"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
-const styles = {
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const useStyles = (0, _styles.makeStyles)(theme => ({
   subtitle: {
     width: '100%',
     fontSize: 13,
@@ -39,7 +45,6 @@ const styles = {
     width: '100%',
     fontSize: 12,
     color: '#000000',
-    border: 'solid 1px #000000',
     backgroundColor: '#ffffff'
   },
   button: {
@@ -58,63 +63,71 @@ const styles = {
     fontFamily: 'FilsonSoftRegular',
     paddingLeft: 20
   }
+}));
+
+var _default = props => {
+  const classes = useStyles();
+  const {
+    subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
+    labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.'
+  } = props;
+  const {
+    email = '',
+    setEmail = () => {},
+    checked,
+    setChecked,
+    errorMessage,
+    successMessage,
+    onSubmit,
+    emailErrorMessage,
+    checkErrorMessage
+  } = (0, _react.useContext)(_subscriptionContext.default);
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BreakAllContentText.default, {
+    className: classes.subtitle,
+    style: {
+      marginTop: 0,
+      marginBottom: 0
+    }
+  }, subtitle), _react.default.createElement("div", {
+    className: classes.email
+  }, _react.default.createElement(_TextField.default, {
+    className: classes.emailInput,
+    value: email,
+    onChange: e => setEmail(e.target.value),
+    placeholder: "Your email address",
+    error: !!emailErrorMessage
+  })), emailErrorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, emailErrorMessage), !emailErrorMessage && _react.default.createElement("div", {
+    style: {
+      height: 10
+    }
+  }), _react.default.createElement("div", {
+    className: classes.checkbox
+  }, _react.default.createElement(_Checkbox.default, {
+    checked: checked,
+    setChecked: setChecked,
+    error: !!checkErrorMessage
+  }), _react.default.createElement("div", {
+    className: classes.labelContent
+  }, _react.default.createElement("label", null, labelContent))), checkErrorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, checkErrorMessage), successMessage && _react.default.createElement(_HelperText.default, {
+    style: {}
+  }, successMessage), errorMessage && _react.default.createElement(_HelperText.default, {
+    style: {},
+    error: true
+  }, errorMessage), _react.default.createElement("div", {
+    className: classes.button
+  }, _react.default.createElement(_GreenButton.default, {
+    text: "SUBMIT",
+    style: {
+      width: '100%'
+    },
+    onClick: onSubmit
+  })));
 };
-
-class Partner extends _react.default.PureComponent {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "state", {
-      email: ''
-    });
-
-    _defineProperty(this, "handleEmailChange", e => {
-      this.setState({
-        email: e.target.value
-      });
-    });
-  }
-
-  render() {
-    const {
-      subtitle = 'Stay connected for only meaningful and useful updates on sustainable fibers and recycling technology.',
-      labelContent = 'SAYA Brand may use my email address to provide relevant marketing updates. I can unsubscribe these communications at anytime.',
-      email
-    } = this.state;
-    const {
-      classes,
-      onClick
-    } = this.props;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_BreakAllContentText.default, {
-      className: classes.subtitle,
-      style: {
-        marginTop: 0,
-        marginBottom: 0
-      }
-    }, subtitle), _react.default.createElement("div", {
-      className: classes.email
-    }, _react.default.createElement(_TextField.default, {
-      className: classes.emailInput,
-      value: email,
-      onChange: this.handleEmailChange,
-      placeholder: "Your email address"
-    })), _react.default.createElement("div", {
-      className: classes.checkbox
-    }, _react.default.createElement(_Checkbox.default, null), _react.default.createElement("div", {
-      className: classes.labelContent
-    }, _react.default.createElement("label", null, labelContent))), _react.default.createElement("div", {
-      className: classes.button
-    }, _react.default.createElement(_GreenButton.default, {
-      text: "SUBMIT",
-      style: {
-        width: '100%'
-      },
-      onClick: onClick
-    })));
-  }
-
-}
-
-var _default = (0, _styles.withStyles)(styles)(Partner);
 
 exports.default = _default;

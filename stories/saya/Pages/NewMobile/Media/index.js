@@ -38,7 +38,6 @@ storiesOf('saya|Pages/NewMobile', module)
                         </div>
                         <div
                           style={{
-                            height: 300,
                             marginTop: 11,
                             paddingTop: 22,
                             paddingBottom: 22,

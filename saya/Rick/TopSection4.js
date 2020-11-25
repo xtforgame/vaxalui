@@ -15,6 +15,8 @@ var _Text = _interopRequireDefault(require("./Text"));
 
 var _reveal = require("../reveal");
 
+var _AnimatedNumber = _interopRequireDefault(require("../bob/AnimatedNumber2"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -92,7 +94,9 @@ var _default = props => {
     className: classes.firstTitle
   }, firstTitle), _react.default.createElement("div", {
     className: classes.title
-  }, title), _react.default.createElement("div", {
+  }, _react.default.createElement(_AnimatedNumber.default, {
+    number: 75000000000
+  })), _react.default.createElement("div", {
     className: classes.topTitle
   }, topTitle), _react.default.createElement("div", {
     className: classes.firstLine,
