@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import AnimatedNumber from '../bob/AnimatedNumber';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
 import { Slide } from '../reveal';
@@ -110,17 +111,14 @@ export default (props) => {
             <Slide direction="up" triggerOnce>
               <div className={classes.numberUpTitle}> {numberUpTitle} </div>
               <div className={classes.number} style={{ color: numberColor, }} >
-                {number}
-                {
-                  !hideSign &&
-                  (<span
-                    className={classes.percent}
-                    style={{
-                      display: percentDisplay,
-                    }}
-                  >
-                    {sign}</span>)
-                }
+                <AnimatedNumber
+                  number={number}
+                  suffix={hideSign ? '' : sign}
+                  numberPaddingTop={0}
+                  numberColor={numberColor}
+                  percentDisplay={percentDisplay}
+                  percentColor={numberColor}
+                />
               </div>
             </Slide>
             <div style={{ paddingLeft: 0, }}>

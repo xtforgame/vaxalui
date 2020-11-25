@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
+var _AnimatedNumber = _interopRequireDefault(require("../bob/AnimatedNumber"));
+
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
@@ -131,12 +133,14 @@ var _default = props => {
     style: {
       color: numberColor
     }
-  }, number, !hideSign && _react.default.createElement("span", {
-    className: classes.percent,
-    style: {
-      display: percentDisplay
-    }
-  }, sign))), _react.default.createElement("div", {
+  }, _react.default.createElement(_AnimatedNumber.default, {
+    number: number,
+    suffix: hideSign ? '' : sign,
+    numberPaddingTop: 0,
+    numberColor: numberColor,
+    percentDisplay: percentDisplay,
+    percentColor: numberColor
+  }))), _react.default.createElement("div", {
     style: {
       paddingLeft: 0
     }

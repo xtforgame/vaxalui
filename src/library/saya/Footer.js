@@ -126,7 +126,7 @@ export default (props) => {
           <div style={{ display: 'inline', fontSize: 12 }}><a href="mailto:change@sayarenew.com" style={{ color: '#ffffff' }}><u>change@sayarenew.com</u></a></div>
           <div style={{ width: 10, height: 0 }} />
           <div style={{ display: 'inline', fontSize: 12, marginRight: 4 }}>Also visit Nan Ya Plastic:</div>
-          <div style={{ display: 'inline', fontSize: 12 }}><a href="https://www.npc.com.tw" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}><u>https://www.npc.com.tw</u></a></div>
+          <div style={{ display: 'inline', fontSize: 12 }}><a href="http://npc.com.tw" target="_blank" rel="noopener noreferrer" style={{ color: '#ffffff' }}><u>http://npc.com.tw</u></a></div>
           <div style={{ width: 10, height: 72 }} />
           <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>
         </div>
@@ -139,7 +139,7 @@ export default (props) => {
               fontFamily: 'FilsonSoft-Bold',
             }}
           >
-            Sing up to receive our newsletter
+            Sign up to receive our newsletter
           </div>
           <div style={{ width: 10, height: 8 }} />
           <div style={{ width: '100%' }}>

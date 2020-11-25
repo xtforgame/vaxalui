@@ -77,9 +77,9 @@ class HomeTopSection extends React.PureComponent {
           Recycling Solutions from Bottles to Garments and Beyond
         </div>
 
-        <div className={classes.roundArrow} onClick={onClick}>
+        {/* <div className={classes.roundArrow} onClick={onClick}>
           <img src={roundArrowImage} />
-        </div>
+        </div> */}
       </ImageContainer>
       <div className={classes.space} />
       </>

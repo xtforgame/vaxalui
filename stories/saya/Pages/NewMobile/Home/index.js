@@ -46,7 +46,7 @@ storiesOf('saya|Pages/NewMobile', module)
               height={700}
               firstTitle="RSCUW / SAYA"
               firstTitleBack="NEXT"
-              title="The industry’s most advanced mix content recycling project yet."
+              title="The industry’s most advanced mixed content recycling project yet."
               subTitle="The SAYA RSCUW Project"
               backgroundImage={mobileBg2}
             />

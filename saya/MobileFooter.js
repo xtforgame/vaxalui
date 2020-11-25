@@ -140,7 +140,7 @@ var _default = props => {
       width: 10,
       height: 60
     }
-  }), _react.default.createElement("div", null, "Sing up to receive our newsletter"), _react.default.createElement("div", {
+  }), _react.default.createElement("div", null, "Sign up to receive our newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 10
@@ -220,12 +220,12 @@ var _default = props => {
       fontSize: 18
     }
   }, _react.default.createElement("a", {
-    href: "https://www.npc.com.tw",
+    href: "http://npc.com.tw",
     target: "_blank",
     style: {
       color: '#ffffff'
     }
-  }, _react.default.createElement("u", null, "https://www.npc.com.tw"))), _react.default.createElement("div", {
+  }, _react.default.createElement("u", null, "http://npc.com.tw"))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 75

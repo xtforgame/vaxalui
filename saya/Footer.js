@@ -187,13 +187,13 @@ var _default = props => {
       fontSize: 12
     }
   }, _react.default.createElement("a", {
-    href: "https://www.npc.com.tw",
+    href: "http://npc.com.tw",
     target: "_blank",
     rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
-  }, _react.default.createElement("u", null, "https://www.npc.com.tw"))), _react.default.createElement("div", {
+  }, _react.default.createElement("u", null, "http://npc.com.tw"))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 72
@@ -213,7 +213,7 @@ var _default = props => {
       fontSize: 14,
       fontFamily: 'FilsonSoft-Bold'
     }
-  }, "Sing up to receive our newsletter"), _react.default.createElement("div", {
+  }, "Sign up to receive our newsletter"), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 8

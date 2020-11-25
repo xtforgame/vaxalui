@@ -63,9 +63,6 @@ var _default = props => {
     className: classes.root
   }, _react.default.createElement("div", {
     className: classes.title
-  }, _react.default.createElement(_reveal.Slide, {
-    direction: "up",
-    triggerOnce: true
   }, _react.default.createElement("pre", {
     className: classes.titleWhite,
     style: {
@@ -78,11 +75,7 @@ var _default = props => {
     style: {
       margin: 0
     }
-  }, 'Recycling Solutions from Bottles\nto Garments and Beyond'), _react.default.createElement("img", {
-    className: classes.roundArrow,
-    onClick: onClick,
-    src: roundArrowImage
-  }))));
+  }, 'Recycling Solutions from Bottles\nto Garments and Beyond')));
 };
 
 exports.default = _default;

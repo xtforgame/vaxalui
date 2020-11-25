@@ -58,7 +58,7 @@ storiesOf('saya|Pages/NewDesktop', module)
                 ]}
               />
             }
-            title="The industry’s most advanced mix content recycling project yet."
+            title="The industry’s most advanced mixed content recycling project yet."
             subTitle="The SAYA RSCUW Project"
             backgroundImage={backgroundMacroChanges}
             onClick={() => { console.log('read More') }}

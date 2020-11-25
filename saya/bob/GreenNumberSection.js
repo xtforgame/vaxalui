@@ -9,10 +9,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styles = require("@material-ui/core/styles");
 
-var _animatedNumberReact = _interopRequireDefault(require("animated-number-react"));
-
-var _reactVisibilitySensor = _interopRequireDefault(require("react-visibility-sensor"));
-
 var _AnimatedNumber = _interopRequireDefault(require("./AnimatedNumber"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));

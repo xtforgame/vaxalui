@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import AN from 'animated-number-react';
-import VisibilitySensor from 'react-visibility-sensor';
 import AnimatedNumber from './AnimatedNumber';
 import BreakAllContentText from '../BreakAllContentText';
 import ImageContainer from '../ImageContainer';
