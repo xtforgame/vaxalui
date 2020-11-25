@@ -104,7 +104,8 @@ export default (props) => {
   };
 
   const renderItemList = () => {
-    if (!isOpened(path, currentPath)) return null;
+    const isOpenedFlag = isOpened(path, currentPath);
+    // if (!isOpened(path, currentPath)) return null;
 
     const listAtRight = {
       left: (textItem.current && textItem.current.offsetWidth),
@@ -112,6 +113,9 @@ export default (props) => {
       paddingLeft: 8,
     };
     const style = (listDirection === 'right') ? listAtRight : {};
+    if (!isOpenedFlag) {
+      style.display = 'none';
+    }
     return (
       <div
         className={classes.itemListRoot}

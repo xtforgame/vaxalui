@@ -1,13 +1,18 @@
 import React, { useContext } from 'react';
 import { MenuContext } from './MenuContext';
 
-export default ({ to, disabled, ...props }) => {
-  const { onLinkClick } = useContext(MenuContext);
+export default ({ to, disabled, children, ...props }) => {
+  const { onLinkClick, noJsLink, LinkComponent = ({ children }) => children } = useContext(MenuContext);
   const style = { cursor: 'pointer' };
   if (disabled) {
     delete style.cursor;
   }
+  const A = LinkComponent;
   return (
-    <div {...props} style={style} onClick={e => !disabled && onLinkClick(to)} />
+    <div {...props} style={style} onClick={e => !disabled && !noJsLink && onLinkClick(to)}>
+      <A path={to}>
+        {children}
+      </A>
+    </div>
   );
 };

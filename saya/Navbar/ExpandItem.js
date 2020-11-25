@@ -106,13 +106,18 @@ var _default = props => {
   };
 
   const renderItemList = () => {
-    if (!isOpened(path, currentPath)) return null;
+    const isOpenedFlag = isOpened(path, currentPath);
     const listAtRight = {
       left: textItem.current && textItem.current.offsetWidth,
       top: -4,
       paddingLeft: 8
     };
     const style = listDirection === 'right' ? listAtRight : {};
+
+    if (!isOpenedFlag) {
+      style.display = 'none';
+    }
+
     return _react.default.createElement("div", {
       className: classes.itemListRoot,
       style: style

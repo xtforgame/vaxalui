@@ -143,7 +143,7 @@ class ExpandItem extends _react.default.PureComponent {
           [classes.openedOpacity]: this.isOpened(),
           [classes.closedOpacity]: !this.isOpened()
         })
-      }, this.isOpened() && _react.default.createElement(_ItemList.default, {
+      }, _react.default.createElement(_ItemList.default, {
         items: items,
         root: path
       }));

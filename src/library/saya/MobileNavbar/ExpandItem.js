@@ -127,17 +127,18 @@ class ExpandItem extends React.PureComponent {
 
     return (
       <div
-        className={clsx(classes.itemListRoot, {
-          [classes.openedOpacity]: this.isOpened(),
-          [classes.closedOpacity]: !this.isOpened(),
-        })}
-      >
-        {this.isOpened() && (
-          <ItemList
-            items={items}
-            root={path}
-          />
+        className={clsx(
+          classes.itemListRoot,
+          {
+            [classes.openedOpacity]: this.isOpened(),
+            [classes.closedOpacity]: !this.isOpened(),
+          },
         )}
+      >
+        <ItemList
+          items={items}
+          root={path}
+        />
       </div>
     );
   }
