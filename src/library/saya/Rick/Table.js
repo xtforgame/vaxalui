@@ -52,6 +52,9 @@ const useStyles = makeStyles(() => ({
     paddingLeft: 0,
     paddingRight: 0,
   },
+  itemTdLast: {
+    borderBottom: '1px solid #434343',
+  },
   typeTd: {
     textAlign: 'center',
     paddingLeft: 25,
@@ -149,8 +152,8 @@ export default (props) => {
 
   const columnOrder = ['denie', 'filame', 'luster'];
 
-  const renderItemTd = row => (
-    <td className={clsx(classes.tdth, classes.itemTd)} rowSpan={row.types.length}>
+  const renderItemTd = (row, i, rows) => (
+    <td className={clsx(classes.tdth, classes.itemTd, { [classes.itemTdLast]: i === rows.length - 1 })} rowSpan={row.types.length}>
       <pre style={{ fontFamily: 'FilsonSoft-Bold' }}>
         {row.item}
       </pre>
@@ -170,9 +173,9 @@ export default (props) => {
     return classes.tr2base;
   };
 
-  const renderRow = (row, i1) => row.types.map((typeData, i2, types) => (
+  const renderRow = (row, i1, rows) => row.types.map((typeData, i2, types) => (
     <tr className={getTrClass(types, i2)} key={`${i1}-${i2}`}>
-      {i2 === 0 && renderItemTd(row)}
+      {i2 === 0 && renderItemTd(row, i1, rows)}
       <td className={clsx(classes.tdth, classes.typeTd)} style={{ borderRight: '1px solid #d8d8d8' }}>
         {typeData.type}
       </td>

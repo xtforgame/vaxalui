@@ -71,6 +71,25 @@ storiesOf('saya|Pages/NewMobile', module)
 
           <CollapseTable
             title={'STRETCH\nProduct Specs'}
+            rows={[
+              {
+                item: 'STRETCH - Carefree\n(PTT/PET)',
+                types: [
+                  {
+                    type: 'DTY',
+                    denie: [30, 50, 75, 80, 100, 150],
+                    filame: [36, 36, 36, 84, 108, 72],
+                    luster: ['SD', 'SD', 'SD', 'FD', 'FD', 'SD'],
+                  },
+                  {
+                    type: 'FDY',
+                    denie: [30, 40, 50, 75],
+                    filame: [24, 36, 36, 36],
+                    luster: ['SD', 'SD', 'SD', 'SD'],
+                  },
+                ],
+              },
+            ]}
           />
           <TechnologyProjects
             height={1018}

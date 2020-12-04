@@ -59,6 +59,9 @@ const useStyles = (0, _styles.makeStyles)(() => ({
     paddingLeft: 42,
     paddingRight: 42
   },
+  itemTdLast: {
+    borderBottom: '1px solid #434343'
+  },
   typeTd: {
     textAlign: 'center',
     paddingLeft: 25,
@@ -140,8 +143,10 @@ var _default = props => {
   } = props;
   const columnOrder = ['denie', 'filame', 'luster'];
 
-  const renderItemTd = row => _react.default.createElement("td", {
-    className: (0, _clsx.default)(classes.tdth, classes.itemTd),
+  const renderItemTd = (row, i, rows) => _react.default.createElement("td", {
+    className: (0, _clsx.default)(classes.tdth, classes.itemTd, {
+      [classes.itemTdLast]: i === rows.length - 1
+    }),
     rowSpan: row.types.length
   }, _react.default.createElement("pre", {
     style: {
@@ -165,10 +170,10 @@ var _default = props => {
     return classes.tr2base;
   };
 
-  const renderRow = (row, i1) => row.types.map((typeData, i2, types) => _react.default.createElement("tr", {
+  const renderRow = (row, i1, rows) => row.types.map((typeData, i2, types) => _react.default.createElement("tr", {
     className: getTrClass(types, i2),
     key: `${i1}-${i2}`
-  }, i2 === 0 && renderItemTd(row), _react.default.createElement("td", {
+  }, i2 === 0 && renderItemTd(row, i1, rows), _react.default.createElement("td", {
     className: (0, _clsx.default)(classes.tdth, classes.typeTd),
     style: {
       borderRight: '1px solid #d8d8d8'
