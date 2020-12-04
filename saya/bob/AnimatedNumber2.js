@@ -68,6 +68,9 @@ var _default = ({
     style: {
       width: '100%'
     }
+  }, _react.default.createElement(_reveal.Slide, {
+    direction: "up",
+    triggerOnce: true
   }, _react.default.createElement(_reactVisibilitySensor.default, {
     partialVisibility: true
   }, ({
@@ -75,7 +78,7 @@ var _default = ({
   }) => _react.default.createElement(AnimatedNumber, {
     isVisible: isVisible,
     number: number
-  }))));
+  })))));
 };
 
 exports.default = _default;

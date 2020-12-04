@@ -53,16 +53,18 @@ export default ({
       }}
     >
       <div style={{ width: '100%' }}>
-        <VisibilitySensor
-          partialVisibility
-        >
-          {({ isVisible }) => (
-            <AnimatedNumber
-              isVisible={isVisible}
-              number={number}
-            />
-          )}
-        </VisibilitySensor>
+        <Slide direction="up" triggerOnce>
+          <VisibilitySensor
+            partialVisibility
+          >
+            {({ isVisible }) => (
+              <AnimatedNumber
+                isVisible={isVisible}
+                number={number}
+              />
+            )}
+          </VisibilitySensor>
+        </Slide>
       </div>
     </div>
   );
