@@ -15,6 +15,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
+var _TweenMove = _interopRequireDefault(require("../bob/TweenMove"));
+
 var _reveal = require("../reveal");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -98,12 +100,13 @@ var _default = props => {
     hideSign
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_ImageContainer.default, {
-    image: backgroundImage,
+  return _react.default.createElement(_react.default.Fragment, null, !hideTop && _react.default.createElement(_TweenMove.default, {
+    image: backgroundImage
+  }, _react.default.createElement(_ImageContainer.default, {
     className: classes.topSection
   }, _react.default.createElement("div", null, _react.default.createElement("pre", {
     className: classes.titleWhite
-  }, topTitle))), _react.default.createElement(_ImageContainer.default, {
+  }, topTitle)))), _react.default.createElement(_ImageContainer.default, {
     className: classes.root,
     style: {
       height,

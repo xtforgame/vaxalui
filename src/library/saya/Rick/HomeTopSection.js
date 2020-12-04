@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
+import TweenMove from '../bob/TweenMove';
 import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
@@ -50,21 +51,24 @@ export default (props) => {
   const classes = useStyles();
 
   return (
-    <ImageContainer
+    <TweenMove
       image={backgroundImage}
-      className={classes.root}
     >
-      <div className={classes.title}>
-        <pre className={classes.titleWhite} style={{ margin: 0 }}>
-          {'Innovating\nRenewal\nTechnologies'}
-        </pre>
-        <div className={classes.line} />
-        <pre className={classes.subtitle} style={{ margin: 0 }}>
-          {'Recycling Solutions from Bottles\nto Garments and Beyond'}
-        </pre>
+      <ImageContainer
+        className={classes.root}
+      >
+        <div className={classes.title}>
+          <pre className={classes.titleWhite} style={{ margin: 0 }}>
+            {'Innovating\nRenewal\nTechnologies'}
+          </pre>
+          <div className={classes.line} />
+          <pre className={classes.subtitle} style={{ margin: 0 }}>
+            {'Recycling Solutions from Bottles\nto Garments and Beyond'}
+          </pre>
 
-        {/* <img className={classes.roundArrow} onClick={onClick} src={roundArrowImage} /> */}
-      </div>
-    </ImageContainer>
+          {/* <img className={classes.roundArrow} onClick={onClick} src={roundArrowImage} /> */}
+        </div>
+      </ImageContainer>
+    </TweenMove>
   );
 };

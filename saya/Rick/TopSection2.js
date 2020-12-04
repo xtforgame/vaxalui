@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _Text = _interopRequireDefault(require("./Text"));
 
+var _TweenMove = _interopRequireDefault(require("../bob/TweenMove"));
+
 var _reveal = require("../reveal");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -67,9 +69,10 @@ var _default = props => {
     buttonPosition
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_ImageContainer.default, {
+  return _react.default.createElement(_TweenMove.default, {
+    image: backgroundImage
+  }, _react.default.createElement(_ImageContainer.default, {
     className: classes.root,
-    image: backgroundImage,
     style: {
       height,
       color
@@ -94,7 +97,7 @@ var _default = props => {
   }, _react.default.createElement(_Text.default, {
     family: titleFontFamily,
     className: classes.title
-  }, title)), _react.default.createElement("div", null, children)));
+  }, title)), _react.default.createElement("div", null, children))));
 };
 
 exports.default = _default;

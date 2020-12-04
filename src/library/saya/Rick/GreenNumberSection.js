@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AnimatedNumber from '../bob/AnimatedNumber';
 import ImageContainer from '../ImageContainer';
 import BreakAllContentText from '../BreakAllContentText';
+import TweenMove from '../bob/TweenMove';
 import { Slide } from '../reveal';
 
 const useStyles = makeStyles(theme => ({
@@ -90,14 +91,17 @@ export default (props) => {
     <>
       {
         !hideTop && (
-          <ImageContainer
+          <TweenMove
             image={backgroundImage}
-            className={classes.topSection}
           >
-            <div>
-              <pre className={classes.titleWhite}>{topTitle}</pre>
-            </div>
-          </ImageContainer>
+            <ImageContainer
+              className={classes.topSection}
+            >
+              <div>
+                <pre className={classes.titleWhite}>{topTitle}</pre>
+              </div>
+            </ImageContainer>
+          </TweenMove>
         )
       }
       <ImageContainer

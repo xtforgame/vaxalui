@@ -13,6 +13,8 @@ var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
 var _PartnerForm = _interopRequireDefault(require("./PartnerForm"));
 
+var _TweenMove = _interopRequireDefault(require("../bob/TweenMove"));
+
 var _reveal = require("../reveal");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -46,9 +48,10 @@ class Partner extends _react.default.PureComponent {
       backgroundImage,
       bottleImage
     } = this.props;
-    return _react.default.createElement(_ImageContainer.default, {
-      className: classes.root,
+    return _react.default.createElement(_TweenMove.default, {
       image: backgroundImage
+    }, _react.default.createElement(_ImageContainer.default, {
+      className: classes.root
     }, _react.default.createElement(_ImageContainer.default, {
       className: classes.bottle,
       image: bottleImage
@@ -62,7 +65,7 @@ class Partner extends _react.default.PureComponent {
         marginTop: 0,
         marginBottom: 32
       }
-    }, 'Get Useful\nUpdates'), _react.default.createElement(_PartnerForm.default, null))));
+    }, 'Get Useful\nUpdates'), _react.default.createElement(_PartnerForm.default, null)))));
   }
 
 }
