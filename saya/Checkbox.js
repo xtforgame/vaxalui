@@ -26,9 +26,9 @@ const useStyles = (0, _styles.makeStyles)(theme => ({
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 0,
-    color: 'transparent',
-    borderColor: 'black',
-    backgroundColor: 'transparent'
+    color: '#FFFFFF',
+    borderColor: '#000000',
+    backgroundColor: '#FFFFFF'
   },
   darkTheme: {
     borderWidth: 2,

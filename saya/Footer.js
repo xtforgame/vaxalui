@@ -181,7 +181,7 @@ var _default = props => {
       fontSize: 12,
       marginRight: 4
     }
-  }, "Also visit Nan Ya Plastic:"), _react.default.createElement("div", {
+  }, "Saya is a brand of Nan Ya plastic Corp. :"), _react.default.createElement("div", {
     style: {
       display: 'inline',
       fontSize: 12

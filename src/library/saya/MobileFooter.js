@@ -196,7 +196,7 @@ export default (props) => {
         <div style={{ fontSize: 18 }}>Contact:</div>
         <div style={{ fontSize: 18 }}><a href="mailto:change@sayarenew.com" style={{ color: '#ffffff' }}><u>change@sayarenew.com</u></a></div>
         <div style={{ width: 10, height: 18 }} />
-        <div style={{ fontSize: 18 }}>Also visit Nan Ya Plastic:</div>
+        <div style={{ fontSize: 18 }}>Saya is a brand of Nan Ya plastic Corp. :</div>
         <div style={{ fontSize: 18 }}><a href="http://npc.com.tw" target="_blank" style={{ color: '#ffffff' }}><u>http://npc.com.tw</u></a></div>
         <div style={{ width: 10, height: 75 }} />
         <div style={{ fontSize: 12 }}>Copyright © 2020 SAYA All Rights Reserved</div>

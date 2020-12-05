@@ -215,7 +215,7 @@ var _default = props => {
     style: {
       fontSize: 18
     }
-  }, "Also visit Nan Ya Plastic:"), _react.default.createElement("div", {
+  }, "Saya is a brand of Nan Ya plastic Corp. :"), _react.default.createElement("div", {
     style: {
       fontSize: 18
     }
