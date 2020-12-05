@@ -8,7 +8,7 @@ const styles = theme => ({
   root: {
     height: theme.spacing(5.5),
     color: '#000000',
-    backgroundColor: 'transparent',
+    backgroundColor: '#FFFFFF',
     padding: theme.spacing(1.5),
     borderStyle: 'solid',
     borderRadius: 0,
