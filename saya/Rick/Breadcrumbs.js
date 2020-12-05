@@ -60,16 +60,7 @@ class Breadcrumbs extends _react.default.PureComponent {
         }
       }, "/"),
       style: breadcrumbsStyle
-    }, bread.map(b => _react.default.createElement(_Link.default, {
-      className: classes.link,
-      onClick: b.path ? () => {} : handleClick,
-      style: {
-        color
-      },
-      key: `${b.name}${b.path}`,
-      href: b.path,
-      underline: "none"
-    }, b.name))));
+    }, bread.map(b => b.name)));
   }
 
 }

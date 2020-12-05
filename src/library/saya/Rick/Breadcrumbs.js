@@ -44,11 +44,7 @@ class Breadcrumbs extends React.PureComponent {
           separator={<span style={{ color: separatorColor }}>/</span>}
           style={breadcrumbsStyle}
         >
-          {bread.map(b => (
-            <Link className={classes.link} onClick={b.path ? (() => {}) : handleClick} style={{ color }} key={`${b.name}${b.path}`} href={b.path} underline="none">
-              {b.name}
-            </Link>
-          ))}
+          {bread.map(b => b.name)}
         </MUIBreadcrumbs>
       </div>
     );
