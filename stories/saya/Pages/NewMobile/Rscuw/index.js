@@ -175,7 +175,7 @@ These deadstock and overstock creates millions of yards of our industry’s unac
             description="RSCUW Raw fiber colors can vary depending on the sources of recycled content. It usually comes in shades of silver grey to light copper. Be creative in fabric design with heather, stripes, or ripstops. Wear your recycled efforts with pride with Rscuw Raw fibers."
           />
 
-          <div style={{ marginTop: 6 }}>
+          <div style={{ marginTop: 6, marginBottom: 40 }}>
             <TechnologyProjects
               title="Explore More"
               list={[

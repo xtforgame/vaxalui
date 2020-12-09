@@ -59,6 +59,7 @@ export default ({
       className={classes.number}
       style={{
         fontSize: numberFontSize,
+        height: numberFontSize,
         paddingtTop: numberPaddingTop,
         color: numberColor,
         display: 'flex',

@@ -11,10 +11,6 @@ var _styles = require("@material-ui/core/styles");
 
 var _ImageContainer = _interopRequireDefault(require("../ImageContainer"));
 
-var _TweenMove = _interopRequireDefault(require("../bob/TweenMove"));
-
-var _reveal = require("../reveal");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)(theme => ({
@@ -60,9 +56,7 @@ var _default = props => {
     onClick
   } = props;
   const classes = useStyles();
-  return _react.default.createElement(_TweenMove.default, {
-    image: backgroundImage
-  }, _react.default.createElement(_ImageContainer.default, {
+  return _react.default.createElement(_ImageContainer.default, {
     className: classes.root
   }, _react.default.createElement("div", {
     className: classes.title
@@ -78,7 +72,7 @@ var _default = props => {
     style: {
       margin: 0
     }
-  }, 'Recycling Solutions from Bottles\nto Garments and Beyond'))));
+  }, 'Recycling Solutions from Bottles\nto Garments and Beyond')));
 };
 
 exports.default = _default;
