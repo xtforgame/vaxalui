@@ -17,7 +17,6 @@ const useStyle = makeStyles({
     left: 0,
     width: '100%',
     height: '100%',
-    zIndex: -1,
   },
 
   bg: {
@@ -31,6 +30,9 @@ const useStyle = makeStyles({
     backgroundPosition: 'center center',
     transform: 'translateZ(0)',
     willChange: 'transform',
+  },
+  main: {
+    zIndex: 1,
   },
 });
 
@@ -50,7 +52,9 @@ export default (props) => {
             style={{ backgroundImage: `url(${image})` }}
           />
         </div>
-        {children}
+        <div className={classes.main}>
+          {children}
+        </div>
       </section>
       {/* <div
         style={{

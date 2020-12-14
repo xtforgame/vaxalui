@@ -27,8 +27,7 @@ const useStyle = (0, _styles.makeStyles)({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%',
-    zIndex: -1
+    height: '100%'
   },
   bg: {
     position: 'fixed',
@@ -41,6 +40,9 @@ const useStyle = (0, _styles.makeStyles)({
     backgroundPosition: 'center center',
     transform: 'translateZ(0)',
     willChange: 'transform'
+  },
+  main: {
+    zIndex: 1
   }
 });
 
@@ -59,7 +61,9 @@ var _default = props => {
     style: {
       backgroundImage: `url(${image})`
     }
-  })), children));
+  })), _react.default.createElement("div", {
+    className: classes.main
+  }, children)));
 };
 
 exports.default = _default;
