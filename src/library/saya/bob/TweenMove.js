@@ -5,19 +5,31 @@ import { Tween, Timeline } from 'react-gsap';
 
 const useStyle = makeStyles({
   section: {
-    height: '100vh',
-  },
-
-  parallax: {
     position: 'relative',
-    overflow: 'hidden',
+    width: '100%',
+    height: '100%',
   },
 
-  img: {
-    width: '100%',
-    height: 'auto',
+  bgWrap: {
+    clip: 'rect(0, auto, auto, 0)',
     position: 'absolute',
-    transition: 'top 0s',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+  },
+
+  bg: {
+    position: 'fixed',
+    display: 'block',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    transform: 'translateZ(0)',
+    willChange: 'transform',
   },
 });
 
@@ -30,7 +42,16 @@ export default (props) => {
   const classes = useStyle();
   return (
     <React.Fragment>
-      <div
+      <section className={classes.section}>
+        <div className={classes.bgWrap}>
+          <div
+            className={classes.bg}
+            style={{ backgroundImage: `url(${image})` }}
+          />
+        </div>
+        {children}
+      </section>
+      {/* <div
         style={{
           position: 'relative',
 
@@ -42,7 +63,7 @@ export default (props) => {
         }}
       >
         {children}
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

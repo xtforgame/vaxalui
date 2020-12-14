@@ -17,17 +17,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const useStyle = (0, _styles.makeStyles)({
   section: {
-    height: '100vh'
-  },
-  parallax: {
     position: 'relative',
-    overflow: 'hidden'
-  },
-  img: {
     width: '100%',
-    height: 'auto',
+    height: '100%'
+  },
+  bgWrap: {
+    clip: 'rect(0, auto, auto, 0)',
     position: 'absolute',
-    transition: 'top 0s'
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%'
+  },
+  bg: {
+    position: 'fixed',
+    display: 'block',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    transform: 'translateZ(0)',
+    willChange: 'transform'
   }
 });
 
@@ -37,15 +49,16 @@ var _default = props => {
     image
   } = props;
   const classes = useStyle();
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("section", {
+    className: classes.section
+  }, _react.default.createElement("div", {
+    className: classes.bgWrap
+  }, _react.default.createElement("div", {
+    className: classes.bg,
     style: {
-      position: 'relative',
-      backgroundSize: 'cover',
-      backgroundImage: `url(${image})`,
-      backgroundAttachment: 'fixed',
-      backgroundPosition: 'center'
+      backgroundImage: `url(${image})`
     }
-  }, children));
+  })), children));
 };
 
 exports.default = _default;
