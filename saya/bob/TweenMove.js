@@ -19,8 +19,7 @@ const useStyle = (0, _styles.makeStyles)({
   section: {
     position: 'relative',
     width: '100%',
-    height: '100%',
-    zIndex: -1
+    height: '100%'
   },
   bgWrap: {
     clip: 'rect(0, auto, auto, 0)',
@@ -28,7 +27,8 @@ const useStyle = (0, _styles.makeStyles)({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100%'
+    height: '100%',
+    zIndex: -1
   },
   bg: {
     position: 'fixed',
