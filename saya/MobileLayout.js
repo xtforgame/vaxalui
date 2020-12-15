@@ -32,9 +32,7 @@ const MobileLayout = ({
     overflow: 'hidden',
     fontFamily: 'FilsonSoftRegular'
   }
-}, _react.default.createElement(_reactHelmet.default, {
-  title: "SAYA homepage"
-}), _react.default.createElement(_MobileNavbar.default, {
+}, _react.default.createElement(_MobileNavbar.default, {
   onLinkClick: onLinkClick,
   items: navBarItems,
   noJsLink: noJsLink,

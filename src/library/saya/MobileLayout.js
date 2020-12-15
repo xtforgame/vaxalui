@@ -23,7 +23,6 @@ const MobileLayout = ({
       // lineHeight: 1,
     }}
   >
-    <Helmet title="SAYA homepage" />
     <MobileNavbar
       onLinkClick={onLinkClick}
       items={navBarItems}

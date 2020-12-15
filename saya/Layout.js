@@ -32,9 +32,7 @@ const Layout = ({
     overflow: 'hidden',
     fontFamily: 'FilsonSoftRegular'
   }
-}, _react.default.createElement(_reactHelmet.default, {
-  title: "SAYA homepage"
-}), _react.default.createElement(_Navbar.default, {
+}, _react.default.createElement(_Navbar.default, {
   onLinkClick: onLinkClick,
   items: navBarItems,
   noJsLink: noJsLink,

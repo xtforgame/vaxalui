@@ -23,7 +23,6 @@ const Layout = ({
       // lineHeight: 1,
     }}
   >
-    <Helmet title="SAYA homepage" />
     <Navbar
       onLinkClick={onLinkClick}
       items={navBarItems}
