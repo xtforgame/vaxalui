@@ -1,11 +1,16 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import IconButton from '@material-ui/core/IconButton';
+import ClearIcon from '@material-ui/icons/Clear';
+import useDialogState, { Cancel } from '../YoutubeDialog/useDialogState';
 import { Slide } from '../reveal';
 import ImageContainer from '../ImageContainer';
 import GreenButton from './GreenButton';
 import BreakAllContentText from '../BreakAllContentText';
+import YoutubeDialog from '../YoutubeDialog';
 
-const styles = {
+const useStyles = makeStyles(() => ({
   root: {
     height: 590,
     color: '#000000',
@@ -16,6 +21,12 @@ const styles = {
     flexDirection: 'column',
     flexWrap: 'wrap',
     paddingTop: 88,
+  },
+  section2: {
+    width: 320,
+    display: 'flex',
+    // flexDirection: 'column',
+    // flexWrap: 'wrap',
   },
   breadCrumbs: {
     width: 'fit-content',
@@ -47,56 +58,89 @@ const styles = {
   },
   space: {
     height: 12,
-  }
-};
+  },
+}));
 
+export default (props) => {
+  const {
+    color = '#FFFFFF',
+    backgroundImage,
+    onClick,
+    showButton = true,
+    // showVideoButton,
+    videoId,
+    // onVideoButtonClick,
+    breadCrumbs,
+    title,
+    subTitle,
+    height = 590,
+  } = props;
+  const classes = useStyles();
 
-class Section extends React.PureComponent {
-  render() {
-    const {
-      color = '#FFFFFF',
-      classes,
-      backgroundImage,
-      onClick,
-      showButton = true,
-      breadCrumbs,
-      title,
-      subTitle,
-      height = 590,
-    } = this.props;
-    return (
-      <>
-        <ImageContainer
-          className={classes.root}
-          image={backgroundImage}
-          style={{ height, color }}
-        >
-          <div className={classes.section}>
-            <Slide direction="up" triggerOnce>
-              <div className={classes.breadCrumbs}>
-                {breadCrumbs}
-                <div className={classes.firstLine} style={{ backgroundColor: color }} />
-              </div>
-              <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
-              <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
-              <div>
-                {showButton && (
+  const [{
+    // open,
+    exited,
+    dialogProps,
+  }, {
+    handleOpen,
+    handleClose,
+    // handleExited,
+  }] = useDialogState({
+    open: (t) => {
+    },
+    close: (v) => {
+    },
+  });
+
+  return (
+    <>
+      <ImageContainer
+        className={classes.root}
+        image={backgroundImage}
+        style={{ height, color }}
+      >
+        <div className={classes.section}>
+          <Slide direction="up" triggerOnce>
+            <div className={classes.breadCrumbs}>
+              {breadCrumbs}
+              <div className={classes.firstLine} style={{ backgroundColor: color }} />
+            </div>
+            <BreakAllContentText className={classes.title}>{title}</BreakAllContentText>
+            <BreakAllContentText className={classes.subTitle}>{subTitle}</BreakAllContentText>
+            <div className={classes.section2}>
+              {showButton && (
+                <Slide direction="up" triggerOnce>
                   <div className={classes.button}>
                     <GreenButton
                       text="Read More"
                       onClick={onClick}
                     />
                   </div>
-                )}
-              </div>
-            </Slide>
-          </div>
-        </ImageContainer>
-        <div className={classes.space} />
-      </>
-    );
-  }
-}
-
-
-export default withStyles(styles)(Section);
+                </Slide>
+              )}
+              {videoId && (
+                <Slide direction="up" triggerOnce>
+                  <div className={classes.button} style={{ marginLeft: 12 }}>
+                    <GreenButton
+                      text="Video"
+                      onClick={handleOpen}
+                    />
+                  </div>
+                </Slide>
+              )}
+            </div>
+          </Slide>
+        </div>
+        {
+          !exited && (
+            <YoutubeDialog
+              videoId={videoId}
+              {...dialogProps}
+            />
+          )
+        }
+      </ImageContainer>
+      <div className={classes.space} />
+    </>
+  );
+};

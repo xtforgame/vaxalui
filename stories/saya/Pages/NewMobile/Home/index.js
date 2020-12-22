@@ -43,6 +43,7 @@ storiesOf('saya|Pages/NewMobile', module)
           />
           <div style={{ marginTop: 6 }}>
             <Section
+              videoId="dIdb9GOEwXA"
               height={700}
               firstTitle="RSCUW / SAYA"
               firstTitleBack="NEXT"

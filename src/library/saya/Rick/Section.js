@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageContainer from '../ImageContainer';
 import GreenButton from '../bob/GreenButton';
 import { Slide } from '../reveal';
+import useDialogState, { Cancel } from '../YoutubeDialog/useDialogState';
+import YoutubeDialog from '../YoutubeDialog';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,8 +20,8 @@ const useStyles = makeStyles(theme => ({
   section2: {
     width: 320,
     display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
+    // flexDirection: 'column',
+    // flexWrap: 'wrap',
   },
   firstTitle: {
     width: 'fit-content',
@@ -61,6 +63,9 @@ export default (props) => {
     backgroundImage,
     onClick,
     hideButton,
+    showVideoButton,
+    videoId,
+    onVideoButtonClick,
     firstTitle,
     firstTitleBack,
     title,
@@ -73,6 +78,20 @@ export default (props) => {
   } = props;
 
   const classes = useStyles();
+  const [{
+    // open,
+    exited,
+    dialogProps,
+  }, {
+    handleOpen,
+    handleClose,
+    // handleExited,
+  }] = useDialogState({
+    open: (t) => {
+    },
+    close: (v) => {
+    },
+  });
 
   return (
     <ImageContainer
@@ -105,8 +124,25 @@ export default (props) => {
             </div>
           </Slide>
         )}
+        {videoId && (
+          <Slide direction="up" triggerOnce>
+            <div className={classes.button} style={{ marginLeft: 13, alignSelf: buttonPosition }}>
+              <GreenButton
+                text="Video"
+                onClick={handleOpen}
+              />
+            </div>
+          </Slide>
+        )}
+        {
+          !exited && (
+            <YoutubeDialog
+              videoId={videoId}
+              {...dialogProps}
+            />
+          )
+        }
       </div>
     </ImageContainer>
-
   );
 };
