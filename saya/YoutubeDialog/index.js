@@ -28,6 +28,9 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 const styles = {
   container: {
     height: '100%'
+  },
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, 0.65)'
   }
 };
 
@@ -44,6 +47,9 @@ class Section extends _react.default.PureComponent {
 
     return _react.default.createElement(_Dialog.default, _extends({
       fullWidth: true,
+      BackdropProps: {
+        className: classes.root
+      },
       PaperProps: {
         style: {
           borderRadius: 0,

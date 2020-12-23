@@ -9,6 +9,9 @@ const styles = {
   container: {
     height: '100%',
   },
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, 0.65)',
+  },
 };
 
 
@@ -24,6 +27,9 @@ class Section extends React.PureComponent {
     return (
       <Dialog
         fullWidth
+        BackdropProps={{
+          className: classes.root,
+        }}
         PaperProps={{
           style: {
             borderRadius: 0,
