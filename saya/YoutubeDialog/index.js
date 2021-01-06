@@ -30,7 +30,7 @@ const styles = {
     height: '100%'
   },
   root: {
-    backgroundColor: 'rgba(0, 0, 0, 0.65)'
+    backgroundColor: 'rgba(0, 0, 0, 0.9)'
   }
 };
 
