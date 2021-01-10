@@ -42,6 +42,21 @@ const useStyles = makeStyles({
     paddingBottom: 0,
     marginBottom: 24,
   },
+  bottonRoot: {
+    '&:hover': {
+      textDecoration: 'none',
+      backgroundColor: 'transparent',
+    },
+    '&:hover $focusHighlight': {
+      opacity: 0,
+    },
+    '&$focusVisible $focusHighlight': {
+      opacity: 0,
+    },
+  },
+  focusHighlight: {
+    opacity: 0,
+  },
 });
 
 export default ({
@@ -57,30 +72,33 @@ export default ({
 
   return (
     <Card className={classes.root} style={{ width }} elevation={0}>
-      {/* <CardActionArea onClick={onClick}> */}
-      <CardMedia
-        className={classes.media}
-        style={{ height }}
-        image={image}
-      />
-      <CardContent className={classes.content}>
-        {timestamp && (
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, lineHeight: 1.5, marginBottom: 4 }}>
-            {moment(timestamp).format('LL')}
+      <CardActionArea disableRipple disableFocusRipple classes={{ root: classes.bottonRoot, focusHighlight: classes.focusHighlight }} onClick={onClick}>
+        <CardMedia
+          className={classes.media}
+          style={{ height }}
+          image={image}
+        />
+        <CardContent className={classes.content}>
+          {timestamp && (
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 12, lineHeight: 1.5, marginBottom: 4 }}>
+              {moment(timestamp).format('LL')}
+            </BreakAllContentText>
+          )}
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 12 }}>
+            {title}
           </BreakAllContentText>
-        )}
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '24px', textAlign: 'left', marginBottom: 12 }}>
-          {title}
-        </BreakAllContentText>
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
-          {description}
-        </BreakAllContentText>
-      </CardContent>
-      {/* </CardActionArea> */}
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
+            {description}
+          </BreakAllContentText>
+        </CardContent>
+      </CardActionArea>
       <CardActions className={classes.cardAction}>
         <Button
+          disableRipple
+          disableFocusRipple
           size="small"
           color="primary"
+          classes={{ root: classes.bottonRoot }}
           style={{
             textDecoration: 'underline', color: '#c0c823', textTransform: 'none', padding: 0,
           }}

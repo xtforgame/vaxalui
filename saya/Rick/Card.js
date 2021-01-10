@@ -27,8 +27,6 @@ var _Typography = _interopRequireDefault(require("@material-ui/core/Typography")
 
 var _BreakAllContentText = _interopRequireDefault(require("../BreakAllContentText"));
 
-var _reveal = require("../reveal");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const useStyles = (0, _styles.makeStyles)({
@@ -45,8 +43,6 @@ const useStyles = (0, _styles.makeStyles)({
     alignItems: 'center'
   },
   content: {
-    paddingTop: 16,
-    paddingBottom: 20,
     paddingLeft: 0,
     paddingRight: 0
   },
@@ -56,6 +52,21 @@ const useStyles = (0, _styles.makeStyles)({
     paddingLeft: 0,
     paddingBottom: 0,
     marginBottom: 20
+  },
+  bottonRoot: {
+    '&:hover': {
+      textDecoration: 'none',
+      backgroundColor: 'transparent'
+    },
+    '&:hover $focusHighlight': {
+      opacity: 0
+    },
+    '&$focusVisible $focusHighlight': {
+      opacity: 0
+    }
+  },
+  focusHighlight: {
+    opacity: 0
   }
 });
 
@@ -75,6 +86,14 @@ var _default = ({
       width
     },
     elevation: 0
+  }, _react.default.createElement(_CardActionArea.default, {
+    disableRipple: true,
+    disableFocusRipple: true,
+    classes: {
+      root: classes.bottonRoot,
+      focusHighlight: classes.focusHighlight
+    },
+    onClick: onClick
   }, _react.default.createElement(_CardMedia.default, {
     className: classes.media,
     style: {
@@ -104,11 +123,16 @@ var _default = ({
       fontSize: 14,
       lineHeight: 1.4
     }
-  }, description)), _react.default.createElement(_CardActions.default, {
+  }, description))), _react.default.createElement(_CardActions.default, {
     className: classes.cardAction
   }, _react.default.createElement(_Button.default, {
+    disableRipple: true,
+    disableFocusRipple: true,
     size: "small",
     color: "primary",
+    classes: {
+      root: classes.bottonRoot
+    },
     style: {
       textDecoration: 'underline',
       color: '#c0c823',

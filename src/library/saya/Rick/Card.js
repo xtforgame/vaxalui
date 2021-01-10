@@ -9,7 +9,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import BreakAllContentText from '../BreakAllContentText';
-import { Slide } from '../reveal';
 
 const useStyles = makeStyles({
   root: {
@@ -33,8 +32,6 @@ const useStyles = makeStyles({
     alignItems: 'center',
   },
   content: {
-    paddingTop: 16,
-    paddingBottom: 20,
     paddingLeft: 0,
     paddingRight: 0,
   },
@@ -44,6 +41,21 @@ const useStyles = makeStyles({
     paddingLeft: 0,
     paddingBottom: 0,
     marginBottom: 20,
+  },
+  bottonRoot: {
+    '&:hover': {
+      textDecoration: 'none',
+      backgroundColor: 'transparent',
+    },
+    '&:hover $focusHighlight': {
+      opacity: 0,
+    },
+    '&$focusVisible $focusHighlight': {
+      opacity: 0,
+    },
+  },
+  focusHighlight: {
+    opacity: 0,
   },
 });
 
@@ -60,30 +72,33 @@ export default ({
 
   return (
     <Card className={classes.root} style={{ width }} elevation={0}>
-      {/* <CardActionArea onClick={onClick}> */}
-      <CardMedia
-        className={classes.media}
-        style={{ height }}
-        image={image}
-      />
-      <CardContent className={classes.content}>
-        {timestamp && (
-          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 12, lineHeight: 1.5, marginBottom: 8 }}>
-            {moment(timestamp).format('LL')}
+      <CardActionArea disableRipple disableFocusRipple classes={{ root: classes.bottonRoot, focusHighlight: classes.focusHighlight }} onClick={onClick}>
+        <CardMedia
+          className={classes.media}
+          style={{ height }}
+          image={image}
+        />
+        <CardContent className={classes.content}>
+          {timestamp && (
+            <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 12, lineHeight: 1.5, marginBottom: 8 }}>
+              {moment(timestamp).format('LL')}
+            </BreakAllContentText>
+          )}
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '26px', textAlign: 'left', marginBottom: 8 }}>
+            {title}
           </BreakAllContentText>
-        )}
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoft-Bold', fontSize: 22, lineHeight: '26px', textAlign: 'left', marginBottom: 8 }}>
-          {title}
-        </BreakAllContentText>
-        <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
-          {description}
-        </BreakAllContentText>
-      </CardContent>
-      {/* </CardActionArea> */}
+          <BreakAllContentText style={{ fontFamily: 'FilsonSoftRegular', fontSize: 14, lineHeight: 1.4 }}>
+            {description}
+          </BreakAllContentText>
+        </CardContent>
+      </CardActionArea>
       <CardActions className={classes.cardAction}>
         <Button
+          disableRipple
+          disableFocusRipple
           size="small"
           color="primary"
+          classes={{ root: classes.bottonRoot }}
           style={{
             textDecoration: 'underline', color: '#c0c823', textTransform: 'none', padding: 0,
           }}
