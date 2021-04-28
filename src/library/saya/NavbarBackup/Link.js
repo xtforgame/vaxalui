@@ -8,6 +8,11 @@ export default ({ to, disabled, ...props }) => {
     delete style.cursor;
   }
   return (
-    <div {...props} style={style} onClick={e => !disabled && onLinkClick(to)} />
+    <div {...props} style={style} onClick={e => {
+      if (disabled) {
+        e.preventDefault();
+      }
+      !disabled && onLinkClick(to)
+    }} />
   );
 };

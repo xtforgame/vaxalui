@@ -9,7 +9,12 @@ export default ({ to, disabled, children, ...props }) => {
   }
   const A = LinkComponent;
   return (
-    <div {...props} style={style} onClick={e => !disabled && !noJsLink && onLinkClick(to)}>
+    <div {...props} style={style} onClick={e => {
+      if (disabled) {
+        e.preventDefault();
+      }
+      !disabled && !noJsLink && onLinkClick(to);
+    }}>
       <A path={to}>
         {children}
       </A>

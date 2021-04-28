@@ -39,7 +39,13 @@ var _default = (_ref) => {
 
   return _react.default.createElement("div", _extends({}, props, {
     style: style,
-    onClick: e => !disabled && onLinkClick(to)
+    onClick: e => {
+      if (disabled) {
+        e.preventDefault();
+      }
+
+      !disabled && onLinkClick(to);
+    }
   }));
 };
 

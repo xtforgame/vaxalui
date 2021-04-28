@@ -45,7 +45,13 @@ var _default = (_ref) => {
   const A = LinkComponent;
   return _react.default.createElement("div", _extends({}, props, {
     style: style,
-    onClick: e => !disabled && !noJsLink && onLinkClick(to)
+    onClick: e => {
+      if (disabled) {
+        e.preventDefault();
+      }
+
+      !disabled && !noJsLink && onLinkClick(to);
+    }
   }), _react.default.createElement(A, {
     path: to
   }, children));
