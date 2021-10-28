@@ -95,7 +95,7 @@ var _default = props => {
   }, firstTitle), _react.default.createElement("div", {
     className: classes.title
   }, _react.default.createElement(_AnimatedNumber.default, {
-    number: 75000000000
+    number: 8000000000
   })), _react.default.createElement("div", {
     className: classes.topTitle
   }, topTitle), _react.default.createElement("div", {

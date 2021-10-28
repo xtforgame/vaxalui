@@ -89,7 +89,7 @@ class TopSection3 extends _react.default.PureComponent {
     }, firstTitle)), _react.default.createElement("div", null, _react.default.createElement("div", {
       className: classes.secondTitle
     }, _react.default.createElement(_AnimatedNumber.default, {
-      number: 75000000000,
+      number: 8000000000,
       numberPaddingTop: 12
     })), _react.default.createElement(_reveal.Slide, {
       direction: "up",

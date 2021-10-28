@@ -75,7 +75,7 @@ class TopSection3 extends React.PureComponent {
           <div>
             <div className={classes.secondTitle}>
               <AnimatedNumber2
-                number={75000000000}
+                number={8000000000}
                 numberPaddingTop={12}
               />
             </div>
