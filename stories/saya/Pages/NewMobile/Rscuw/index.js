@@ -29,7 +29,7 @@ storiesOf('saya|Pages/NewMobile', module)
         <MobileLayout>
           <TopSection
             height={550}
-            firstTitle="RSCUW / SAYA"
+            firstTitle="RSCUW PROJECTS / SAYA"
             firstTitleBack="NEXT"
             title={'Cutting\nScraps and\nOverstocks'}
             subtitle="Recycling the Industry’s Elephant In the Room"

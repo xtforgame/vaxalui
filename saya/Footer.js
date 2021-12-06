@@ -187,13 +187,13 @@ var _default = props => {
       fontSize: 12
     }
   }, _react.default.createElement("a", {
-    href: "http://npc.com.tw",
+    href: "http://www.npc.com.tw",
     target: "_blank",
     rel: "noopener noreferrer",
     style: {
       color: '#ffffff'
     }
-  }, _react.default.createElement("u", null, "http://npc.com.tw"))), _react.default.createElement("div", {
+  }, _react.default.createElement("u", null, "http://www.npc.com.tw"))), _react.default.createElement("div", {
     style: {
       width: 10,
       height: 72

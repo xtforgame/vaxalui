@@ -45,7 +45,7 @@ storiesOf('saya|Pages/NewMobile', module)
             <Section
               videoId="dIdb9GOEwXA"
               height={700}
-              firstTitle="RSCUW / SAYA"
+              firstTitle="RSCUW PROJECTS / SAYA"
               firstTitleBack="NEXT"
               title="The industry’s most advanced mixed content recycling project yet."
               subTitle="The SAYA RSCUW Project"

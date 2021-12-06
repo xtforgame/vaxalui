@@ -128,7 +128,7 @@ storiesOf('saya|Pages/NewMobile', module)
                   title: "Cutting Scraps and Overstocks",
                   buttonText: "Learn More",
                   disabled: false,
-                  type: <span>RSCUW / SAYA</span>,
+                  type: <span>RSCUW PROJECTS / SAYA</span>,
                   typeBack: <span>NEXT</span>
                 },
                 {

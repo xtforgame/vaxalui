@@ -34,7 +34,7 @@ storiesOf('saya|Pages/NewDesktop', module)
           <TopSection
             firstTitle={
               <>
-                <span style={{ fontFamily: 'FilsonSoft-Bold' }}>RSCUW</span>
+                <span style={{ fontFamily: 'FilsonSoft-Bold' }}>RSCUW PROJECTS</span>
                 <span> / </span>
                 <span style={{ fontFamily: 'FilsonSoft-Bold' }}>SAYA</span>
                 <span style={{ fontFamily: 'FilsonSoft-light' }}>NEXT</span>
