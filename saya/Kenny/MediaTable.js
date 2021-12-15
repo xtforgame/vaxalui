@@ -99,7 +99,8 @@ var _default = props => {
       style: {
         fontFamily: 'FilsonSoftRegular',
         fontSize: 14,
-        color: '#64703f'
+        color: '#64703f',
+        textAlign: 'right'
       }
     }, row.url ? _react.default.createElement("a", {
       href: row.url,

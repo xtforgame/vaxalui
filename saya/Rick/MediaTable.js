@@ -75,7 +75,8 @@ var _default = props => {
         paddingTop: 11,
         paddingBottom: 11,
         display: 'flex',
-        justifyContent: 'start'
+        justifyContent: 'start',
+        alignItems: 'center'
       }
     }, _react.default.createElement("div", {
       style: {

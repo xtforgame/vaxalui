@@ -52,7 +52,7 @@ export default (props) => {
       {rows.map((row) => {
         return (
           <React.Fragment key={row.id}>
-            <div style={{ width: '100%', paddingTop: 11, paddingBottom: 11, display: 'flex', justifyContent: 'start' }}>
+            <div style={{ width: '100%', paddingTop: 11, paddingBottom: 11, display: 'flex', justifyContent: 'start', alignItems: 'center' }}>
               <div style={{ flex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <BreakAllContentText style={{ width: 230, fontFamily: 'FilsonSoft-Bold', fontSize: 12 }}>
                   {row.name}
