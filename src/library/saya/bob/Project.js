@@ -42,10 +42,12 @@ class Project extends React.PureComponent {
       disabled,
       type,
       onClick,
+      style,
     } = this.props;
     return (
       <div
         className={clsx(classes.root, { [classes.disabledBackground]: disabled })}
+        style={style}
       >
         <div className={classes.left}>
           <div className={classes.title}>{title}</div>

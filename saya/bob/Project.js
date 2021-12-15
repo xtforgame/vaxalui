@@ -53,12 +53,14 @@ class Project extends _react.default.PureComponent {
       buttonText = 'Learn More',
       disabled,
       type,
-      onClick
+      onClick,
+      style
     } = this.props;
     return _react.default.createElement("div", {
       className: (0, _clsx.default)(classes.root, {
         [classes.disabledBackground]: disabled
-      })
+      }),
+      style: style
     }, _react.default.createElement("div", {
       className: classes.left
     }, _react.default.createElement("div", {

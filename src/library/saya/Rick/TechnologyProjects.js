@@ -52,7 +52,7 @@ class TechnologyProjects extends React.PureComponent {
             </Slide>
             <div className={classes.listRoot}>
               <Slide direction="up" triggerOnce>
-                {list.map(l => (<Project  {...l} />))}
+                {list.map(l => (<Project {...l} />))}
               </Slide>
             </div>
           </div>

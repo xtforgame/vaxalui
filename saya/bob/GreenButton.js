@@ -21,7 +21,7 @@ const styles = {
     paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
-    border: 'none',
+    border: 'solid 2px #FFFFFF',
     borderRadius: 22,
     display: 'flex',
     alignItems: 'center',

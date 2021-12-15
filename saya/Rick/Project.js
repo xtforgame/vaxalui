@@ -60,13 +60,15 @@ var _default = props => {
     disabled,
     type,
     typeBack,
-    onClick
+    onClick,
+    style
   } = props;
   const classes = useStyles();
   return _react.default.createElement("div", {
     className: (0, _clsx.default)(classes.root, {
       [classes.disabledBackground]: disabled
-    })
+    }),
+    style: style
   }, _react.default.createElement("div", {
     className: classes.title
   }, title), _react.default.createElement("div", {

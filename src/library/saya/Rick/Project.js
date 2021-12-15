@@ -48,6 +48,7 @@ export default (props) => {
     type,
     typeBack,
     onClick,
+    style,
   } = props;
 
   const classes = useStyles();
@@ -55,6 +56,7 @@ export default (props) => {
   return (
     <div
       className={clsx(classes.root, { [classes.disabledBackground]: disabled })}
+      style={style}
     >
       <div className={classes.title}>{title}</div>
       <div className={classes.type}>
