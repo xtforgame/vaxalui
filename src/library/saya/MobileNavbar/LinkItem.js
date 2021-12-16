@@ -7,7 +7,7 @@ import { getSize } from './Item';
 
 const styles = theme => ({
   root: {
-    width: getSize(theme).width,
+    // width: getSize(theme).width,
     height: getSize(theme).height,
     position: 'relative',
     color: 'white',

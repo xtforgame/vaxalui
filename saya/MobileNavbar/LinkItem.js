@@ -21,7 +21,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 const styles = theme => ({
   root: {
-    width: (0, _Item.getSize)(theme).width,
     height: (0, _Item.getSize)(theme).height,
     position: 'relative',
     color: 'white',
