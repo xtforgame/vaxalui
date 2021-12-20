@@ -41,7 +41,7 @@ const styles = {
   description: {
     fontSize: 14,
     fontFamily: 'FilsonSoftRegular',
-    marginTop: 32
+    marginTop: 8
   },
   space: {
     height: 12
