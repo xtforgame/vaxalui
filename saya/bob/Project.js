@@ -52,6 +52,7 @@ class Project extends _react.default.PureComponent {
       title = 'Backbone of our sustainable textile business',
       buttonText = 'Learn More',
       disabled,
+      outlined,
       type,
       onClick,
       style
@@ -69,6 +70,7 @@ class Project extends _react.default.PureComponent {
       className: classes.type
     }, type)), _react.default.createElement(_GreenButton.default, {
       disabled: disabled,
+      outlined: outlined,
       text: buttonText,
       onClick: onClick
     }));

@@ -45,6 +45,7 @@ export default (props) => {
     title = 'Backbone of our sustainable textile business',
     buttonText = 'Learn More',
     disabled,
+    outlined,
     type,
     typeBack,
     onClick,
@@ -65,7 +66,7 @@ export default (props) => {
       </div>
       <div className={classes.flex1} />
       <div className={classes.button}>
-        <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
+        <GreenButton disabled={disabled} outlined={outlined} text={buttonText} onClick={onClick} />
       </div>
     </div>
   );

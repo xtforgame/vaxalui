@@ -40,6 +40,7 @@ class Project extends React.PureComponent {
       title = 'Backbone of our sustainable textile business',
       buttonText = 'Learn More',
       disabled,
+      outlined,
       type,
       onClick,
       style,
@@ -53,7 +54,7 @@ class Project extends React.PureComponent {
           <div className={classes.title}>{title}</div>
           {type && <div className={classes.type}>{type}</div>}
         </div>
-        <GreenButton disabled={disabled} text={buttonText} onClick={onClick} />
+        <GreenButton disabled={disabled} outlined={outlined} text={buttonText} onClick={onClick} />
       </div>
     );
   }

@@ -10,7 +10,7 @@ const styles = {
     paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
-    border: 'solid 2px #FFFFFF',
+    border: 'none',
     borderRadius: 22,
     display: 'flex',
     alignItems: 'center',
@@ -36,6 +36,9 @@ const styles = {
       outline: 0,
     },
   },
+  outlinedButton: {
+    border: 'solid 2px #FFFFFF',
+  },
 };
 
 
@@ -46,6 +49,7 @@ class GreenButton extends React.PureComponent {
       className,
       text,
       disabled = false,
+      outlined = false,
       style,
       onClick = () => {},
     } = this.props;
@@ -54,7 +58,7 @@ class GreenButton extends React.PureComponent {
         // disabled
         onClick={onClick}
         style={style}
-        className={clsx(classes.button, className, { [classes.disabledButton]: disabled })}
+        className={clsx(classes.button, className, { [classes.disabledButton]: disabled, [classes.outlinedButton]: outlined })}
       >
         {text}
       </button>

@@ -21,7 +21,7 @@ const styles = {
     paddingTop: 6,
     textAlign: 'center',
     backgroundColor: '#64703f',
-    border: 'solid 2px #FFFFFF',
+    border: 'none',
     borderRadius: 22,
     display: 'flex',
     alignItems: 'center',
@@ -46,6 +46,9 @@ const styles = {
     '&:focus': {
       outline: 0
     }
+  },
+  outlinedButton: {
+    border: 'solid 2px #FFFFFF'
   }
 };
 
@@ -56,6 +59,7 @@ class GreenButton extends _react.default.PureComponent {
       className,
       text,
       disabled = false,
+      outlined = false,
       style,
       onClick = () => {}
     } = this.props;
@@ -63,7 +67,8 @@ class GreenButton extends _react.default.PureComponent {
       onClick: onClick,
       style: style,
       className: (0, _clsx.default)(classes.button, className, {
-        [classes.disabledButton]: disabled
+        [classes.disabledButton]: disabled,
+        [classes.outlinedButton]: outlined
       })
     }, text);
   }

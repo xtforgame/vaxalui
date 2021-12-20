@@ -58,6 +58,7 @@ var _default = props => {
     title = 'Backbone of our sustainable textile business',
     buttonText = 'Learn More',
     disabled,
+    outlined,
     type,
     typeBack,
     onClick,
@@ -83,6 +84,7 @@ var _default = props => {
     className: classes.button
   }, _react.default.createElement(_GreenButton.default, {
     disabled: disabled,
+    outlined: outlined,
     text: buttonText,
     onClick: onClick
   })));
